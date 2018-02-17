@@ -1,0 +1,750 @@
+<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Rim World Conflict (Empire)	******-->
+<!--******************************************************-->
+
+<Story>
+	
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="Reveal_All_Planets">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REVEAL_ALL_PLANETS</Reward_Type>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+   
+	
+<!--******************************************************-->
+<!--***************	Faction Determiners	******************-->
+<!--******************************************************-->
+
+	
+	<Event Name="Faction_Branch_Disabler_NewRep">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_NewRep</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Disabler_Remnant">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Remnant</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Disabler_EotH">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_EotH</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Disabler_Eriadu">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Eriadu</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Disabler_Zsinj">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Zsinj</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Disabler_Teradoc">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Teradoc</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Disabler_Pentastar">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Pentastar</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Disabler_Yevetha">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Yevetha</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Determine_Faction_LUA">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	
+	<Event Name="Faction_Branch_Enabler_NewRep">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_NEWREP_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_NewRep</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Enabler_Remnant">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_EMPIRE_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Remnant</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Enabler_EotH">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_EOTH_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_EotH</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Enabler_Eriadu">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_ERIADU_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Eriadu</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Enabler_Zsinj">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_ZSINJ_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Zsinj</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Enabler_Teradoc">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_TERADOC_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Teradoc</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Enabler_Pentastar">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_PENTASTAR_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Pentastar</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>	
+	
+	<Event Name="Faction_Branch_Enabler_Yevetha">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_YEVETHA_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Yevetha</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+	<!--******************* IMPERIAL STORYLINE ********************-->
+	<!--***********************************************************-->	
+	<!--***********************************************************-->	
+	
+	<Event Name="Intro_Welcome_Empire">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_WARLORDS_IR_INTRO_PESTAGE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Pestage_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Pestage_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
+		<Branch>Faction_Branch_Remnant</Branch>
+	</Event>
+	
+	<Event Name="Intro_Welcome_Empire_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Remnant_EndorAftermath</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag_Empire</Story_Tag>
+		<Prereq>Intro_Welcome_Empire</Prereq>
+		<Branch>Faction_Branch_Remnant</Branch>
+	</Event>
+   	
+	<Event Name="Project_Ambition">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>200</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_EVENT_IR_YSANNE_COUP</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Isard_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Isard_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
+		<Branch>Faction_Branch_Remnant</Branch>
+	</Event>
+	
+	<Event Name="Project_Ambition_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Project_Ambition</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Isard_Tag</Story_Tag>
+		<Prereq>Project_Ambition</Prereq>
+		<Branch>Faction_Branch_Remnant</Branch>
+	</Event>
+	
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+	<!--***************** New Republic Storyline ******************-->
+	<!--***********************************************************-->	
+	<!--***********************************************************-->	
+	
+	<Event Name="Intro_Welcome_NewRep">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_WARLORDS_NR_INTRO_MOTHMA</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Mothma_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
+	</Event>
+	
+	<Event Name="Intro_Welcome_NewRep_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_NewRep_EndorAftermath</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_NewRep</Prereq>
+		<Branch>Faction_Branch_Newrep</Branch>
+	</Event>
+	
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+	<!--***************** Pentastar Alignment Story ******************-->
+	<!--***********************************************************-->	
+	<!--***********************************************************-->	
+
+	<Event Name="Intro_Welcome_Pentastar">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_KAINE_TSA_INTRO_ONE</Reward_Param1>
+		<Reward_Param2>22</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Kaine_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_Pentastar</Prereq>
+		<Branch>Faction_Branch_Pentastar</Branch>
+	</Event>
+  
+	<Event Name="Pentastar_Welcome_Dialog">
+		<Event_Type>STORY_GENERIC</Event_Type>
+		<Event_Param1>CLICK</Event_Param1>
+		<Story_Dialog>Dialog_PSA_Align</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_Pentastar</Prereq>
+		<Branch>Faction_Branch_Pentastar</Branch>
+	</Event>
+	
+
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+	<!--***************** Eriadu Authority Story ******************-->
+	<!--***********************************************************-->	
+	<!--***********************************************************-->	
+	
+	<Event Name="Intro_Welcome_Eriadu">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_ERIADU_WARLORDS_INTRO</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Mothma_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Delvardus_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_Eriadu</Prereq>
+		<Branch>Faction_Branch_Eriadu</Branch>
+	</Event>
+	
+	<Event Name="Intro_Welcome_Eriadu_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Eriadu_Sandbox</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_Eriadu</Prereq>
+		<Branch>Faction_Branch_Eriadu</Branch>
+	</Event>
+	
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+	<!--***************** Greater Maldrood Story ******************-->
+	<!--***********************************************************-->	
+	<!--***********************************************************-->	
+	
+	<Event Name="Intro_Welcome_Teradoc">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_TERADOC_WARLORDS_INTRO</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Teradoc_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Teradoc_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_Teradoc</Prereq>
+		<Branch>Faction_Branch_Teradoc</Branch>
+	</Event>
+	
+	<Event Name="Intro_Welcome_Teradoc_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Maldrood_EndorAftermath</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_Teradoc</Prereq>
+		<Branch>Faction_Branch_Teradoc</Branch>
+	</Event>
+	
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+	<!--***************** Warlord Zsinj Story ******************-->
+	<!--***********************************************************-->	
+	<!--***********************************************************-->	
+	
+	<Event Name="Intro_Welcome_Zsinj">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_ZSINJ_WARLORDS_INTRO</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Teradoc_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Teradoc_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_Zsinj</Prereq>
+		<Branch>Faction_Branch_Zsinj</Branch>
+	</Event>
+	
+	<Event Name="Intro_Welcome_Zsinj_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Zsinj_EndorAftermath</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_Zsinj</Prereq>
+		<Branch>Faction_Branch_Zsinj</Branch>
+	</Event>
+   
+
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+	<!--******************** UNIVERSAL EVENTS *********************-->
+	<!--***********************************************************-->	
+	<!--***********************************************************-->	
+	
+	<!--******************** Sub-Era Change - Isard *********************-->
+	
+	<Event Name="Trigger_Isard_Lusankya_Construct">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Project_Ambition_Dummy</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+	</Event>
+	
+	<Event Name="Trigger_Isard_Coruscant_Falls">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Coruscant</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+	</Event>
+	
+	<Event Name="Trigger_Isard_Pestage_Death">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Pestage_Team</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		
+	</Event>
+	
+	<Event Name="Set_Subera_Isard">
+  		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Prereq>Trigger_Isard_Lusankya_Construct</Prereq>
+		<Prereq>Trigger_Isard_Coruscant_Falls</Prereq>
+		<Prereq>Trigger_Isard_Pestage_Death</Prereq>
+	</Event>
+
+	<!--******************** Talks End: Pentastar *********************-->
+	
+	<Event Name="Talks_End">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>760</Event_Param1>
+	</Event>
+
+	<Event Name="Kaine_Return_Speech">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>KAINE_JOINS_SPEECH</Event_Param2>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_ALIGN_KAINE_RETURNS</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Kaine_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Talks_End</Prereq>
+		<Branch>Faction_Branch_Pentastar</Branch>
+	</Event>
+
+	<Event Name="Talks_end_Dialogue">
+		<Event_Type>STORY_GENERIC</Event_Type>
+		<Event_Param1>CLICK</Event_Param1>
+		<Story_Dialog>Dialog_PSA_Align</Story_Dialog>
+		<Story_Chapter>1</Story_Chapter>
+		<Story_Tag>Talks_End</Story_Tag>	
+		<Prereq>Kaine_Return_Speech</Prereq>
+		<Branch>Faction_Branch_Pentastar</Branch>
+	</Event>
+	
+	
+	<!--******************** CSA Emerges Indie *********************-->
+
+
+	<Event Name="Zsinj_Death">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Iron_Fist</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+	</Event>	 
+ 
+	<!--**************** Warlord Groups Captured ******************-->
+ 
+    <Event Name="Maldrood_Antem">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>Antem</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
+	</Event>
+	
+	<Event Name="Getelles_Joins">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>GETELLES_JOINS_SPEECH</Event_Param2>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_GENERIC_GETELLES_JOINS</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Teradoc_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<!--<Prereq>Maldrood_Antem</Prereq>-->
+	</Event>
+	 
+    <Event Name="Maldrood_Commenor">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>Commenor</Event_Param1>
+		<Event_Param3>Teradoc</Event_Param3>
+	 </Event>
+	
+	<Event Name="Gendarr_Joins">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>GENDARR_JOINS_SPEECH</Event_Param2>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_GENERIC_GENDARR_JOINS</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Teradoc_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<!--<Prereq>Maldrood_Commenor</Prereq>-->
+		<Perpetual>true</Perpetual>
+    </Event>
+	
+	<Event Name="Maldrood_Kashyyyk">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>Kashyyyk</Event_Param1>
+		<Event_Param3>Teradoc</Event_Param3>
+		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
+	</Event>
+	
+	<Event Name="Syn_Joins">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>SYN_JOINS_SPEECH</Event_Param2>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_GENERIC_SYN_JOINS</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Teradoc_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<!--<Prereq>Maldrood_Antem</Prereq>-->
+	</Event>
+	 
+	 
+	<Event Name="Eriadu_Elrood">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>Elrood</Event_Param1>
+		<Event_Param3>Hutts</Event_Param3>
+	 </Event>
+	 
+	 <Event Name="Elrood_Joins">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ELROOD_JOINS_SPEECH</Event_Param2>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_GENERIC_ELROOD_JOINS</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Delvardus_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Eriadu_Elrood</Prereq>
+	</Event>
+	
+	
+	<!--**********************************************************-->
+	<!--***********	Empire of the Hand Events	******************-->
+	<!--**********************************************************-->
+	
+	 
+	 <Event Name="Faction_Present_Disabler_EotH">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Branch_EotH_Present</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Hand_Is_Here">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_EOTH_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Branch_EotH_Present</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	
+	<Event Name="Phalanx_Research_Begin">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>600</Event_Param1>
+		<Branch>Faction_Branch_EotH</Branch>
+	</Event>
+
+	<Event Name="Unlock_Phalanx_Speech">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_EOTH_RESEARCH_PHALANX</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9></Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Phalanx_Research_Begin</Prereq>
+	</Event>
+
+ 	<Event Name="Unlock_Phalanx_Rsearch">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Dummy_Research_Phalanx</Reward_Param1>
+		<Prereq>Unlock_Phalanx_Speech</Prereq>
+	</Event>
+	
+	
+	<Event Name="Unlock_Phalanx_AI">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Phalanx_Destroyer</Reward_Param1>
+		<Prereq>Faction_Branch_Enabler_Pentastar</Prereq>
+		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
+		<Prereq>Faction_Branch_Enabler_Eriadu</Prereq>
+		<Prereq>Faction_Branch_Enabler_Zsinj</Prereq>
+		<Prereq>Faction_Branch_Enabler_Teradoc</Prereq>
+		<Prereq>Faction_Branch_Enabler_Yevetha</Prereq>
+	</Event>
+	
+	<Event Name="Unlock_Phalanx">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Dummy_Research_Phalanx</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>Underworld</Event_Param3>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Phalanx_Destroyer</Reward_Param1>
+		<Prereq>Faction_Branch_Enabler_EotH</Prereq>
+		<Branch>Faction_Branch_EotH</Branch>
+	</Event>
+			
+	<Event Name="Research_Phalanx_Remove">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DESTROY_OBJECT</Reward_Type>
+		<Reward_Param1>Dummy_Research_Phalanx</Reward_Param1>
+		<Prereq>Unlock_Phalanx</Prereq>
+	</Event>
+	
+		
+<!-- Hero spawns -->
+<!-- Hero spawns -->
+<!-- Hero spawns -->
+<!-- Hero spawns -->
+<!-- Hero spawns -->
+	
+	<Event Name="Underworld_Enters_Tech_01">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>1</Event_Param1>
+	</Event>
+
+	<Event Name="Spawn_Thrawn">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Grey_Wolf</Reward_Param1>
+		<Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Soontir">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Soontir_Fel_Squadron</Reward_Param1>
+		<Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Aralani">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>Aralani_Frontier</Reward_Param1>
+        <Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Niriz">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>Niriz_Admonitor</Reward_Param1>
+        <Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Voss">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>Parck_Strikefast</Reward_Param1>
+        <Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Stent">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>Stent_Thrawns_Hand</Reward_Param1>
+        <Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_HoJ">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Hand_of_Judgement_Team</Reward_Param1>
+		<Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+	
+	<Event Name="Intro_Welcome_Hand">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_THRAWN_EOTH_INTRO_ONE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Thrawn_Intro_Speech2</Reward_Param8>
+		<Reward_Param9>Thrawn_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_EotH</Prereq>
+		<Branch>Faction_Branch_EotH</Branch>
+  </Event>
+	
+	<Event Name="Intro_Welcome_Hand_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Hand_EndorAftermath</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_Hand</Prereq>
+		<Branch>Faction_Branch_EotH</Branch>
+	</Event>
+	
+</Story>

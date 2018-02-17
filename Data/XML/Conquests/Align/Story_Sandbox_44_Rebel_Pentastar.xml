@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" ?>
+
+
+
+<!--***************************************************-->
+<!--***** CAMPAIGN: Fractured Empire (Rebel Version) *****-->
+<!--***************************************************-->
+
+
+
+<Story>
+			
+	
+ 
+
+<Event Name="Intro_Welcome">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+    <Reward_Type>MULTIMEDIA</Reward_Type>
+      <Reward_Param1>TEXT_CONQUEST_KAINE_TSA_INTRO_ONE</Reward_Param1>
+    <Reward_Param2>22</Reward_Param2>
+    <Reward_Param3 />
+    <Reward_Param4 />
+    <Reward_Param5 />
+    <Reward_Param6 />
+    <Reward_Param7 />
+     <Reward_Param8></Reward_Param8>
+    <Reward_Param9>Kaine_Loop</Reward_Param9>
+    <Reward_Param10>0</Reward_Param10>
+  </Event>
+  
+   <Event Name="Universal_Story_Start">
+		<Event_Type>STORY_GENERIC</Event_Type>
+		<Event_Param1>CLICK</Event_Param1>
+		<Story_Dialog>Dialog_PSA_Align</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Intro_Tag</Story_Tag>
+ </Event>
+  
+
+ 
+	<Event Name="Talks_End">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>760</Event_Param1>
+		 <Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Pentastar</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>
+	</Event>
+
+	<Event Name="Kaine_Return_Speech">
+    <Event_Type>STORY_ELAPSED</Event_Type>
+	<Event_Param1>0</Event_Param1>
+    <Reward_Type>MULTIMEDIA</Reward_Type>
+    <Reward_Param1>TEXT_CONQUEST_ALIGN_KAINE_RETURNS</Reward_Param1>
+    <Reward_Param2>15</Reward_Param2>
+    <Reward_Param3 />
+    <Reward_Param4 />
+    <Reward_Param5 />
+    <Reward_Param6 />
+    <Reward_Param7 />
+     <Reward_Param8></Reward_Param8>
+    <Reward_Param9>Kaine_Loop</Reward_Param9>
+    <Reward_Param10>0</Reward_Param10>
+	<Prereq>Talks_End</Prereq>
+  </Event>
+
+   <Event Name="Talks_end_Dialogue">
+		<Event_Type>STORY_GENERIC</Event_Type>
+		<Event_Param1>CLICK</Event_Param1>
+		<Story_Dialog>Dialog_PSA_Align</Story_Dialog>
+		<Story_Chapter>1</Story_Chapter>
+		<Story_Tag>Talks_End</Story_Tag>	
+		<Prereq>Talks_End</Prereq>
+ </Event>
+
+	<!-- Spawn Starting Heroes -->
+
+	<Event Name="Spawn_Mon_mothma">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Mon_Mothma_Team</Reward_Param1>
+		<Reward_Param2>Brentaal</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Han_Solo">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Han_Solo_Team</Reward_Param1>
+		<Reward_Param2>Generis</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Iillor">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Iillor_Corusca</Reward_Param1>
+		<Reward_Param2>Ithor</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Spawn_Ackbar">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+       		 <Reward_Type>UNIQUE_UNIT</Reward_Type>
+        	<Reward_Param1>Home_One</Reward_Param1>
+        	<Reward_Param2>Brentaal</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Luke_Jedi">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Luke_Skywalker_Jedi_Team</Reward_Param1>
+		<Reward_Param2>Brentaal</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	
+	<Event Name="Spawn_Lando">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Lando_Calrissian_Team</Reward_Param1>
+		<Reward_Param2>Levian</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Airen">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Airen_Cracken_Team</Reward_Param1>
+		<Reward_Param2>Generis</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Katarn">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Katarn_Team</Reward_Param1>
+		<Reward_Param2>Farrfin</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+
+
+</Story>

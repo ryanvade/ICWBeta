@@ -1,0 +1,948 @@
+<?xml version="1.0"?>
+<StarBases>
+
+	<StarBase Name="NR_Star_Base_1">
+
+		<Variant_Of_Existing_Type>Generic_Star_Base_1</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Prev_Level_Base />
+		<Next_Level_Base>NR_Star_Base_2</Next_Level_Base>
+		<Tech_Level>0</Tech_Level>
+		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Tactical_Buildable_Objects_Campaign> 
+			Rebel,
+				RS_Enhanced_Shielding_L1_Upgrade,
+				RS_Improved_Weapons_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+
+	</StarBase>
+
+	<StarBase Name="NR_Star_Base_2">
+
+		<Variant_Of_Existing_Type>Generic_Star_Base_2</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Prev_Level_Base>NR_Star_Base_1</Prev_Level_Base>
+		<Next_Level_Base>NR_Star_Base_3</Next_Level_Base>
+
+		<Tactical_Buildable_Objects_Campaign> 
+			Rebel,
+				RS_Enhanced_Shielding_L1_Upgrade,
+				RS_Improved_Weapons_L1_Upgrade,
+				RS_Reinforced_Armor_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+
+			<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Corellian_Corvette, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Corellian_Corvette, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_4>K-Wing_Squadron, 2</Starting_Spawned_Units_Tech_4> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_4>K-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_4> <!-- -1 == no limit -->
+	
+	</StarBase>
+
+	<StarBase Name="NR_Star_Base_3">
+
+		<Variant_Of_Existing_Type>Generic_Star_Base_3</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Prev_Level_Base>NR_Star_Base_2</Prev_Level_Base>
+
+	<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Corellian_Corvette, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Corellian_Corvette, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_4>K-Wing_Squadron, 2</Starting_Spawned_Units_Tech_4> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_4>K-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_4> <!-- -1 == no limit -->
+	
+		<Starting_Spawned_Units_Tech_0>Alliance_Assault_Frigate, 4</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Alliance_Assault_Frigate, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Tactical_Buildable_Objects_Campaign> 
+			Rebel,
+				RS_Enhanced_Shielding_L1_Upgrade,
+				RS_Enhanced_Shielding_L2_Upgrade,
+				RS_Improved_Weapons_L1_Upgrade,
+				RS_Improved_Weapons_L2_Upgrade,
+				RS_Reinforced_Armor_L1_Upgrade,
+				RS_Improved_Defenses_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+
+	</StarBase>
+
+	<StarBase Name="Remnant_Star_Base_1">
+
+		<Variant_Of_Existing_Type>Generic_Star_Base_1</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Prev_Level_Base />
+		<Next_Level_Base>Remnant_Star_Base_2</Next_Level_Base>
+
+		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+
+		<Tactical_Buildable_Objects_Campaign> 
+			Empire,
+				ES_Enhanced_Reactors_L1_Upgrade,
+				ES_Reinforced_Armor_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+		
+	</StarBase>
+
+	<StarBase Name="Remnant_Star_Base_2">
+
+		<Variant_Of_Existing_Type>Generic_Star_Base_2</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Prev_Level_Base>Remnant_Star_Base_1</Prev_Level_Base>
+		<Next_Level_Base>Remnant_Star_Base_3</Next_Level_Base>
+
+		<Tactical_Buildable_Objects_Campaign>
+			Empire,
+				ES_Enhanced_Reactors_L1_Upgrade,
+				ES_Reinforced_Armor_L1_Upgrade,
+				ES_Improved_Weapons_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+
+		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Lancer_Frigate, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Lancer_Frigate, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Carrack_Cruiser, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Carrack_Cruiser, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+	</StarBase>
+
+	<StarBase Name="Remnant_Star_Base_3">
+
+		<Variant_Of_Existing_Type>Generic_Star_Base_3</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Prev_Level_Base>Remnant_Star_Base_2</Prev_Level_Base>
+
+		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Lancer_Frigate, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Lancer_Frigate, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Carrack_Cruiser, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Carrack_Cruiser, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+	
+		<Starting_Spawned_Units_Tech_0>Dreadnaught_Empire, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Dreadnaught_Empire, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+
+		<Tactical_Buildable_Objects_Campaign>
+			Empire,
+				ES_Enhanced_Reactors_L1_Upgrade,
+				ES_Enhanced_Reactors_L2_Upgrade,
+				ES_Reinforced_Armor_L1_Upgrade,
+				ES_Reinforced_Armor_L2_Upgrade,
+				ES_Improved_Weapons_L1_Upgrade,
+				ES_Improved_Weapons_L2_Upgrade,
+				ES_Improved_Defenses_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+
+	</StarBase>
+
+	<StarBase Name="Hutt_Asteroid_Base">
+		<Text_ID>TEXT_HUTT_STAR_BASE_1</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_NB_APBase.tga</Icon_Name>
+
+		<Space_Model_Name>NB_APBase.ALO</Space_Model_Name>
+		<Galactic_Model_Name>i_Pirate_station.alo</Galactic_Model_Name>
+		<Select_Box_Scale>1200</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-50</Select_Box_Z_Adjust>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Is_Dummy>No</Is_Dummy>
+		<Affiliation>Hutt_Cartels</Affiliation>
+		<IsBuildable>No</IsBuildable>
+		<AI_Combat_Power>6000</AI_Combat_Power>
+		<Size_Value>10</Size_Value>
+		<Tech_Level>9</Tech_Level>
+		<Base_Level>1</Base_Level>
+		<CategoryMask> Capital </CategoryMask>
+		<Reinforcement_Prevention_Radius> 2000 </Reinforcement_Prevention_Radius>
+
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, SPAWN_SQUADRON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
+		
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+
+		<!--<Starting_Spawned_Units_Tech_0>Hutt_VWing_Squadron, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hutt_VWing_Squadron, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Hutt_IPV1_Craft, 1</Starting_Spawned_Units_Tech_0>	
+		<Reserve_Spawned_Units_Tech_0>Hutt_IPV1_Craft, -1</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>Hutt_Marauder, 1</Starting_Spawned_Units_Tech_0>	
+		<Reserve_Spawned_Units_Tech_0>Hutt_Marauder, -1</Reserve_Spawned_Units_Tech_0>-->
+
+		<Spawned_Squadron_Delay_Seconds>20</Spawned_Squadron_Delay_Seconds>
+
+		<Autoresolve_Health>750</Autoresolve_Health>
+		<Tactical_Health>1600</Tactical_Health>
+		<Shield_Points>300</Shield_Points>
+		<Shield_Refresh_Rate>50</Shield_Refresh_Rate>
+		<Energy_Capacity>5000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
+		<Damage>35</Damage>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
+
+		<HardPoints>
+			HP_Pirate_Base_Fighter_Bay_00,
+			HP_Pirate_Base_Shield_Gen_00,
+			HP_Pirate_Base_Heavy_Turret_00,
+			HP_Pirate_Base_Heavy_Turret_01,
+			HP_Pirate_Base_Turbolaser_00,
+			HP_Pirate_Base_Turbolaser_01,
+			HP_Pirate_Base_Turbolaser_02,
+			HP_Pirate_Base_Turbolaser_03,
+			HP_Pirate_Base_Laser_Cannon_00,
+			HP_Pirate_Base_Laser_Cannon_01
+		</HardPoints>
+
+		<SFXEvent_Ambient_Loop>Unit_Starbase_Engine_Loop</SFXEvent_Ambient_Loop>
+		<SFXEvent_Fire>Unit_Turbo_Fire</SFXEvent_Fire>
+		<SFXEvent_Barrage>Unit_Barrage_Rebel_Space_Station</SFXEvent_Barrage>
+		<Death_SFXEvent_Start_Die>Unit_Space_Station_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<Death_Clone>Damage_Normal, Asteroid_Field_Large_Death</Death_Clone>
+		<Death_Explosions>Huge_Explosion_Space</Death_Explosions>
+		
+		<Has_Space_Evaluator>True</Has_Space_Evaluator>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Custom_Soft_Footprint_Radius> 300 </Custom_Soft_Footprint_Radius>
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset> 
+		<Space_Layer> StaticObject </Space_Layer>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+        <Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Radar_Icon_Size>0.12  0.12</Radar_Icon_Size>
+		<Radar_Icon_Name>i_radar_station1_p.tga</Radar_Icon_Name>
+		<Score_Cost_Credits> 1500</Score_Cost_Credits>
+	</StarBase>
+
+	<!-- SKIRMISH SPECIFIC STARBASES DEFINED BELOW -->
+
+	<!-- Rebel Skirmish Starbases -->
+	<StarBase Name="Skirmish_NR_Star_Base_1">
+		<Variant_Of_Existing_Type>NR_Star_Base_3</Variant_Of_Existing_Type>
+		<Is_Community_Property>Yes</Is_Community_Property>
+
+	
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Rebel,
+				Rebel_X-Wing_Squadron, 
+				Y-Wing_Squadron, 
+				A-Wing_Squadron,
+				B-Wing_Squadron,
+				K-Wing_Squadron,
+				E-Wing_Squadron,
+				Skirmish_CR90,
+				Skirmish_DP20,
+				Skirmish_Sacheen,
+				Skirmish_Corona,
+				Skirmish_Generic_Nebulon_B,
+				Skirmish_Nebulon-B2,
+				Skirmish_Quasar,
+				Skirmish_MC40a,
+				Skirmish_BAC,
+				Skirmish_Alliance_Assault_Frigate,
+				Skirmish_Dauntless,
+				Skirmish_Majestic,
+				Skirmish_MC80B,
+				Skirmish_MC80,
+				Skirmish_MC90,
+				Skirmish_Nebula,
+				Skirmish_Endurance,
+				Skirmish_Home_One_Type,
+				Wild_Karrde,
+				Luke_Skywalker_Jedi_Team,
+				Rogue_Squadron_Space,
+				Iblis_Peregrine,
+				Galactic_Voyager,
+				Han_Solo_Team_Space_MP,
+				RS_Ion_Cannon_Use_Upgrade,
+				RC_Level_Two_Tech_Upgrade,
+				RC_Level_Three_Tech_Upgrade,
+				RS_Enhanced_Shielding_L1_Upgrade,
+				RS_Enhanced_Shielding_L2_Upgrade,
+				RS_Enhanced_Shielding_L3_Upgrade,
+				RS_Improved_Weapons_L1_Upgrade,
+				RS_Improved_Weapons_L2_Upgrade,
+				RS_Improved_Weapons_L3_Upgrade,
+				RS_Improved_Defenses_L1_Upgrade,
+				RS_Improved_Defenses_L2_Upgrade,
+				RS_Improved_Defenses_L3_Upgrade,
+		</Tactical_Buildable_Objects_Multiplayer>
+			<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+	
+	
+	
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+		<HardPoints>
+			HP_Empire_Station_One_Supply_Dock,
+			HP_Empire_Station_One_Comm_Array,
+			HP_Golan_One_One,
+			HP_Golan_One_Two,
+			HP_Golan_Two_One,
+			HP_Golan_Two_Two,
+			HP_Golan_One_Five,
+			HP_Golan_One_Six,
+			HP_Golan_Two_Three,
+			HP_Golan_Two_Four,
+			HP_Golan_Two_Five,
+			HP_Golan_Two_Six,
+			HP_Golan_Two_Seven,
+			HP_Golan_Two_Eight,
+			HP_Golan_Two_Nine,
+			HP_Golan_Two_Ten,
+			HP_Golan_Two_Eleven,
+			HP_Golan_Two_Twelve,
+			HP_Golan_Three_Twelve
+			HP_Golan_Three_Eleven,
+			HP_Golan_Three_Ten,
+			HP_Golan_Three_Nine,
+			HP_Golan_Three_Eight,
+			HP_Golan_Three_Seven,
+			HP_Golan_Three_Six,
+			HP_Golan_Three_Five,
+			HP_Golan_Three_Four,
+			HP_Golan_Three_Three,
+			HP_Golan_Three_Two,
+			HP_Golan_Three_One,
+			HP_Golan_One_Fighter_Bay,
+			HP_Golan_One_Shield_Generator
+		</HardPoints>
+		<Scale_Factor>15.3</Scale_Factor>
+		<Space_Model_Name>GE_GOLAN_THREE.alo</Space_Model_Name>
+				<Shield_Points>10010</Shield_Points>
+		<Shield_Refresh_Rate>40</Shield_Refresh_Rate>
+<Select_Box_Scale>90</Select_Box_Scale>
+		
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="R_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>55</Base_Income_Value>
+				<Base_Interval_In_Secs>18</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="R_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>			<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>45</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_NR_Star_Base_1</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+ 			<Enable_Radar_Ability Name="R_Comm_Array_Enable_Radar">
+ 				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>			<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+ 				<Affects_All_Allies>True</Affects_All_Allies>
+ 			</Enable_Radar_Ability>
+		</Abilities>
+		
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+	</StarBase>
+
+	<StarBase Name="Skirmish_NR_Star_Base_5">
+		<Variant_Of_Existing_Type>NR_Star_Base_3</Variant_Of_Existing_Type>
+		<Is_Community_Property>Yes</Is_Community_Property>
+
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+
+		
+			<Tactical_Buildable_Objects_Multiplayer> 
+			Rebel,
+				RS_Corellian_Corvette,
+				RS_Nebulon_B_Frigate,
+				RS_Calamari_Cruiser,
+				RS_Corona,
+				RS_Majestic,
+				RS_MC40A,
+				RS_Quaser,
+				RS_BAC,
+				RS_MC80B,
+				RS_Nebula,
+				RS_Endurance,
+				RS_MC90,
+				RS_Sacheen,
+				RS_CORELLIAN_GUNBOAT,
+		</Tactical_Buildable_Objects_Multiplayer>
+
+	<Tactical_Buildable_Objects_Campaign> 
+			Rebel,
+				RS_Corellian_Corvette,
+				RS_Nebulon_B_Frigate,
+				RS_Calamari_Cruiser,
+				RS_Corona,
+				RS_Majestic,
+				RS_MC40A,
+				RS_Quaser,
+				RS_BAC,
+				RS_MC80B,
+				RS_Nebula,
+				RS_Endurance,
+				RS_MC90,
+				RS_Sacheen,
+				RS_CORELLIAN_GUNBOAT,
+		</Tactical_Buildable_Objects_Campaign>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+	
+	
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+		<HardPoints>
+			HP_Empire_Station_One_Supply_Dock,
+			HP_Empire_Station_One_Comm_Array,
+			Shipyard_Hangar
+		</HardPoints>
+		
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="R_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>55</Base_Income_Value>
+				<Base_Interval_In_Secs>18</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="R_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>			<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>45</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_NR_Star_Base_5</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+ 			<Enable_Radar_Ability Name="R_Comm_Array_Enable_Radar">
+ 				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>			<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+ 				<Affects_All_Allies>True</Affects_All_Allies>
+ 			</Enable_Radar_Ability>
+		</Abilities>
+		
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+	</StarBase>
+	<!-- Empire Skirmish Starbases -->
+	<StarBase Name="Skirmish_Remnant_Star_Base_1">
+		<Variant_Of_Existing_Type>Remnant_Star_Base_3</Variant_Of_Existing_Type>
+		<Is_Community_Property>Yes</Is_Community_Property>
+
+		
+		
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Empire,
+				TIE_Fighter_Squadron_Buildable,
+				TIE_Interceptor_Squadron_Buildable,
+				TIE_Defender_Squadron_Buildable,
+				TIE_Bomber_Squadron_Buildable,
+				Skirmish_Lancer_Frigate,
+				Skirmish_Carrack_Cruiser,
+				Escort_Carrier,
+				MTC_Sensor,
+				Skirmish_Vindicator_Cruiser,
+				Skirmish_Interdictor_Cruiser,
+				Skirmish_Acclamator_Assault_Ship,
+				Skirmish_Dreadnaught_Empire,
+				Skirmish_Strike_Cruiser,
+				Skirmish_Victory_Destroyer,
+				Skirmish_Victory_Destroyer_Two,
+				Skirmish_Star_Destroyer_Two,
+				Skirmish_World_Devastator,
+				Scylla,
+				Rogriss_Aurora,
+				Chimera_Pellaeon_Grand,
+				Elite_Squadron,
+				EC_Level_Two_Tech_Upgrade,
+				EC_Level_Three_Tech_Upgrade,
+				ES_Enhanced_Reactors_L1_Upgrade,
+				ES_Enhanced_Reactors_L2_Upgrade,
+				ES_Enhanced_Reactors_L3_Upgrade,
+				ES_Reinforced_Armor_L1_Upgrade,
+				ES_Reinforced_Armor_L2_Upgrade,
+				ES_Reinforced_Armor_L3_Upgrade,
+				ES_Improved_Weapons_L1_Upgrade,
+				ES_Improved_Weapons_L2_Upgrade,
+				ES_Improved_Weapons_L3_Upgrade,
+				ES_Improved_Defenses_L1_Upgrade,
+				ES_Improved_Defenses_L2_Upgrade,
+				ES_Improved_Defenses_L3_Upgrade,
+				ES_Hypervelocity_Gun_Use_Upgrade,
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+	
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+
+		<HardPoints>
+			HP_Empire_Station_One_Supply_Dock,
+			HP_Empire_Station_One_Comm_Array,
+			HP_Golan_One_One,
+			HP_Golan_One_Two,
+			HP_Golan_Two_One,
+			HP_Golan_Two_Two,
+			HP_Golan_One_Five,
+			HP_Golan_One_Six,
+			HP_Golan_Two_Three,
+			HP_Golan_Two_Four,
+			HP_Golan_Two_Five,
+			HP_Golan_Two_Six,
+			HP_Golan_Two_Seven,
+			HP_Golan_Two_Eight,
+			HP_Golan_Two_Nine,
+			HP_Golan_Two_Ten,
+			HP_Golan_Two_Eleven,
+			HP_Golan_Two_Twelve,
+			HP_Golan_Three_Twelve
+			HP_Golan_Three_Eleven,
+			HP_Golan_Three_Ten,
+			HP_Golan_Three_Nine,
+			HP_Golan_Three_Eight,
+			HP_Golan_Three_Seven,
+			HP_Golan_Three_Six,
+			HP_Golan_Three_Five,
+			HP_Golan_Three_Four,
+			HP_Golan_Three_Three,
+			HP_Golan_Three_Two,
+			HP_Golan_Three_One,
+			HP_Golan_One_Fighter_Bay,
+			HP_Golan_One_Shield_Generator
+		</HardPoints>
+		<Scale_Factor>15.3</Scale_Factor>
+		<Space_Model_Name>GE_GOLAN_THREE.alo</Space_Model_Name>
+				<Shield_Points>10010</Shield_Points>
+		<Shield_Refresh_Rate>40</Shield_Refresh_Rate>
+		<Select_Box_Scale>90</Select_Box_Scale>
+		
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="E_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>55</Base_Income_Value>
+				<Base_Interval_In_Secs>18</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="E_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>			<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>45</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Remnant_Star_Base_1</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+ 			<Enable_Radar_Ability Name="E_Comm_Array_Enable_Radar">
+ 				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>			<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+ 				<Affects_All_Allies>True</Affects_All_Allies>
+ 			</Enable_Radar_Ability>
+		</Abilities>
+		
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+	</StarBase>
+	
+	<StarBase Name="Skirmish_Remnant_Star_Base_5">
+		<Variant_Of_Existing_Type>Remnant_Star_Base_3</Variant_Of_Existing_Type>
+		<Is_Community_Property>Yes</Is_Community_Property>
+
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+
+		
+			<Tactical_Buildable_Objects_Multiplayer> 
+			Empire,
+				ES_LANCER_FRIGATE,
+				ES_CARRACK_CRUISER,
+				ES_GENERIC_STAR_DESTROYER_TWO,
+				ES_GENERIC_TECTOR,
+				ES_GENERIC_STAR_DESTROYER,
+				ES_GENERIC_ACCLAMATOR_ASSAULT_SHIP,
+				ES_STRIKE_CRUISER,
+				ES_GENERIC_VICTORY_DESTROYER,
+				ES_GENERIC_VICTORY_DESTROYER_TWO,
+				ES_GENERIC_VENATOR,
+				ES_MTC_SENSOR,
+				ES_DREADNAUGHT_EMPIRE,
+				ES_VINDICATOR_CRUISER
+		</Tactical_Buildable_Objects_Multiplayer>
+
+	<Tactical_Buildable_Objects_Campaign> 
+			Empire,
+				ES_LANCER_FRIGATE,
+				ES_CARRACK_CRUISER,
+				ES_GENERIC_STAR_DESTROYER_TWO,
+				ES_GENERIC_TECTOR,
+				ES_GENERIC_STAR_DESTROYER,
+				ES_GENERIC_ACCLAMATOR_ASSAULT_SHIP,
+				ES_STRIKE_CRUISER,
+				ES_GENERIC_VICTORY_DESTROYER,
+				ES_GENERIC_VICTORY_DESTROYER_TWO,
+				ES_GENERIC_VENATOR,
+				ES_MTC_SENSOR,
+				ES_DREADNAUGHT_EMPIRE,
+				ES_VINDICATOR_CRUISER
+		</Tactical_Buildable_Objects_Campaign>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+	
+	
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+		<HardPoints>
+			HP_Empire_Station_One_Supply_Dock,
+			HP_Empire_Station_One_Comm_Array,
+			Shipyard_Hangar
+		</HardPoints>
+		
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="E_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>55</Base_Income_Value>
+				<Base_Interval_In_Secs>18</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="E_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>			<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>45</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Remnant_Star_Base_5</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+ 			<Enable_Radar_Ability Name="E_Comm_Array_Enable_Radar">
+ 				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>			<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+ 				<Affects_All_Allies>True</Affects_All_Allies>
+ 			</Enable_Radar_Ability>
+		</Abilities>
+		
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+	</StarBase>
+	
+	<StarBase Name="Skirmish_EotH_Star_Base_5">
+		<Variant_Of_Existing_Type>EotH_Star_Base_3</Variant_Of_Existing_Type>
+		<Is_Community_Property>Yes</Is_Community_Property>
+
+		<Starting_Spawned_Units_Tech_0>Clawcraft_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Clawcraft_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Syca_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Syca_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+
+		
+			<Tactical_Buildable_Objects_Multiplayer> 
+			Underworld,
+				US_ASDONI,
+				US_NURUODO,
+				US_KARIEK_SHIELDSHIP,
+				US_AURIETTE_CARRIER,
+				US_WARLORD,
+				US_VIGILANCE_GUNSHIP,
+				US_BUDIRECH,
+				US_CHAF_DESTROYER,
+				US_PHALANX_DESTROYER,
+				US_SYNDIC_DESTROYER,
+				US_CHISS_STAR_DESTROYER
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Tactical_Buildable_Objects_Campaign> 
+			Underworld,
+				US_ASDONI,
+				US_NURUODO,
+				US_KARIEK_SHIELDSHIP,
+				US_AURIETTE_CARRIER,
+				US_WARLORD,
+				US_VIGILANCE_GUNSHIP,
+				US_CHAF_DESTROYER,
+				US_BUDIRECH,
+				US_PHALANX_DESTROYER,
+				US_SYNDIC_DESTROYER,
+				US_CHISS_STAR_DESTROYER
+		</Tactical_Buildable_Objects_Campaign>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+	
+	
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+		<HardPoints>
+			HP_Empire_Station_One_Supply_Dock,
+			HP_Empire_Station_One_Comm_Array,
+			Shipyard_Hangar
+		</HardPoints>
+		
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="U_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>55</Base_Income_Value>
+				<Base_Interval_In_Secs>18</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="U_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>			<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>45</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_EotH_Star_Base_5</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+ 			<Enable_Radar_Ability Name="U_Comm_Array_Enable_Radar">
+ 				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>			<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+ 				<Affects_All_Allies>True</Affects_All_Allies>
+ 			</Enable_Radar_Ability>
+		</Abilities>
+		
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+	</StarBase>
+	
+	<StarBase Name="Skirmish_Pentastar_Star_Base_5">
+		<Variant_Of_Existing_Type>Pentastar_Star_Base_3</Variant_Of_Existing_Type>
+		<Is_Community_Property>Yes</Is_Community_Property>
+
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+
+		
+			<Tactical_Buildable_Objects_Multiplayer> 
+			Pentastar,
+				ES_LANCER_FRIGATE,
+				ES_CARRACK_CRUISER,
+				ES_GENERIC_STAR_DESTROYER_TWO,
+				ES_GENERIC_TECTOR,
+				ES_GENERIC_STAR_DESTROYER,
+				ES_GENERIC_ACCLAMATOR_ASSAULT_SHIP,
+				ES_STRIKE_CRUISER,
+				ES_GENERIC_VICTORY_DESTROYER,
+				ES_GENERIC_VICTORY_DESTROYER_TWO,
+				ES_GENERIC_VENATOR,
+				ES_MTC_SENSOR,
+				ES_DREADNAUGHT_EMPIRE,
+				ES_VINDICATOR_CRUISER
+		</Tactical_Buildable_Objects_Multiplayer>
+
+	<Tactical_Buildable_Objects_Campaign> 
+			Pentastar,
+				ES_LANCER_FRIGATE,
+				ES_CARRACK_CRUISER,
+				ES_GENERIC_STAR_DESTROYER_TWO,
+				ES_GENERIC_TECTOR,
+				ES_GENERIC_STAR_DESTROYER,
+				ES_GENERIC_ACCLAMATOR_ASSAULT_SHIP,
+				ES_STRIKE_CRUISER,
+				ES_GENERIC_VICTORY_DESTROYER,
+				ES_GENERIC_VICTORY_DESTROYER_TWO,
+				ES_GENERIC_VENATOR,
+				ES_MTC_SENSOR,
+				ES_DREADNAUGHT_EMPIRE,
+				ES_VINDICATOR_CRUISER
+		</Tactical_Buildable_Objects_Campaign>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+	
+	
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+		<HardPoints>
+			HP_Empire_Station_One_Supply_Dock,
+			HP_Empire_Station_One_Comm_Array,
+			Shipyard_Hangar
+		</HardPoints>
+		
+		
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="E_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>55</Base_Income_Value>
+				<Base_Interval_In_Secs>18</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="E_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>			<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>45</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Pentastar_Star_Base_5</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+ 			<Enable_Radar_Ability Name="E_Comm_Array_Enable_Radar">
+ 				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>			<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+ 				<Affects_All_Allies>True</Affects_All_Allies>
+ 			</Enable_Radar_Ability>
+		</Abilities>
+		
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+	</StarBase>
+
+</StarBases>

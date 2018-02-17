@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Rim World Conflict (Empire)	******-->
+<!--******************************************************-->
+
+
+
+<Story>
+	
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+			<Event Name="Eclipse_Lock">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Dummy_Eclipse</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+
+
+	<Event Name="Zsinj_Death">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Iron_Fist</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Event_Param4>Pentastar, Yevetha, Rebel, Pirates, Underworld, Sarlacc, Hutts, Teradoc</Event_Param4>
+	 </Event>
+	 
+ <Event Name="Emerge_Etti_Corporate">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>CORPORATE_EMERGE_Etti</Event_Param2>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Etti_IV</Reward_Param1>
+		<Reward_Param2>Corporate_Sector</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+ </Event> 
+ <Event Name="Emerge_Ession_Corporate">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>CORPORATE_EMERGE_Ession</Event_Param2>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Ession</Reward_Param1>
+		<Reward_Param2>Corporate_Sector</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+ </Event> 
+ <Event Name="Emerge_Bonadan_Corporate">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>CORPORATE_EMERGE_Ession</Event_Param2>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Bonadan</Reward_Param1>
+		<Reward_Param2>Corporate_Sector</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+ </Event>
+ 
+    <Event Name="Maldrood_Antem">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>Antem</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
+	</Event>
+	
+	 <Event Name="Getelles_Joins">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>GETELLES_JOINS_SPEECH</Event_Param2>
+    <Reward_Type>MULTIMEDIA</Reward_Type>
+    <Reward_Param1>TEXT_CONQUEST_GENERIC_GETELLES_JOINS</Reward_Param1>
+    <Reward_Param2>15</Reward_Param2>
+    <Reward_Param3 />
+    <Reward_Param4 />
+    <Reward_Param5 />
+    <Reward_Param6 />
+    <Reward_Param7 />
+     <Reward_Param8></Reward_Param8>
+    <Reward_Param9>Teradoc_Loop</Reward_Param9>
+    <Reward_Param10>0</Reward_Param10>
+	<Prereq>Maldrood_Antem</Prereq>
+  </Event>
+	 
+    <Event Name="Maldrood_Commenor">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>Commenor</Event_Param1>
+		<Event_Param3>Teradoc</Event_Param3>
+	 </Event>
+	
+	<Event Name="Gendarr_Joins">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>GENDARR_JOINS_SPEECH</Event_Param2>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_GENERIC_GENDARR_JOINS</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Teradoc_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Maldrood_Commenor</Prereq>
+		<Perpetual>true</Perpetual>
+    </Event>
+	 
+ 
+
+	
+</Story>
