@@ -103,15 +103,6 @@
 		<Prereq>Devastator_Unlock</Prereq>
 	</Event>
 	
-		
-	<Event Name="Eclipse_Dummy_Lock">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>0</Event_Param1>
-		<Reward_Type>LOCK_UNIT</Reward_Type>
-		<Reward_Param1>Dummy_Eclipse</Reward_Param1>
-				<Prereq>Intro_Welcome</Prereq>
-	</Event>
-	
 	<Event Name="Devastator_Lock">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
@@ -132,7 +123,7 @@
 		<Event_Param1>700</Event_Param1>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Reaper_Kaine</Reward_Param1>
-		<Prereq>Intro_Welcome</Prereq>
+		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 	
 
