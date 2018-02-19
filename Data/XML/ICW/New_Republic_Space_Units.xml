@@ -1160,8 +1160,25 @@
 		<Variant_Of_Existing_Type>Generic_Star_Destroyer</Variant_Of_Existing_Type>
 		<Tech_Level>99</Tech_Level>
 		<Affiliation>Rebel</Affiliation>
-			<Lua_Script>GenericGameObject</Lua_Script>
-			<CategoryMask> Capital | AntiFrigate | Boardable </CategoryMask>
+		<Lua_Script>GenericGameObject</Lua_Script>
+		<CategoryMask> Capital | AntiFrigate | Boardable </CategoryMask>
+			
+		<Abilities SubObjectList="Yes">
+
+			<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>2</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			
+		</Abilities>
 
 	</SpaceUnit>
 
@@ -1997,16 +2014,22 @@
 		<CategoryMask> Capital | AntiFrigate | Boardable </CategoryMask>
 
 		<HardPoints>
+			HP_MC80B_FM,
 			HP_MC80B_FL,
 			HP_MC80B_FR,
+			HP_MC80B_FL2,
+			HP_MC80B_FR2,
 			HP_MC80B_FMR,
 			HP_MC80B_FML,
 			HP_MC80B_MR,
 			HP_MC80B_ML,
 			HP_MC80B_BL,
 			HP_MC80B_BR,
+			HP_MC80B_BL2,
+			HP_MC80B_BR2,
 			MC80B_Fighter_Bay,
-			MC80B_Engines
+			MC80B_Engines,
+			MC80B_Shield
 		</HardPoints>
 
 		<Icon_Name>i_button_monremonda.tga</Icon_Name>

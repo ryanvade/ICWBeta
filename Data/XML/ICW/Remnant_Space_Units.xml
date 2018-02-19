@@ -85,7 +85,7 @@
 
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
-		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Death_Explosion_Particles> Medium_Explosion_Space_Trails </Death_Explosion_Particles>
 		<Death_Leave_Hulk_Behind> No </Death_Leave_Hulk_Behind>
 
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
@@ -183,7 +183,7 @@
 
 		<Lua_Script>GenericGameObject</Lua_Script>
 
-		<Death_Clone>Damage_Normal, Lancer_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Normal, Medium_Explosion_Space_Trails</Death_Clone>
 
 
 		<Encyclopedia_Text> TEXT_TOOLTIP_LANCER</Encyclopedia_Text>
@@ -559,7 +559,8 @@
 			HP_WorldDev_Engines01,
 			HP_WorldDev_Engines02,
 			HP_WorldDev_Engines03,
-			HP_WorldDev_Engines04
+			HP_WorldDev_Engines04,
+			HP_WorldDev_Hangar
 		</HardPoints>
 
 		<SFXEvent_Select>Unit_Select_Praetor</SFXEvent_Select>
@@ -1104,7 +1105,7 @@
 		<Tech_Level>0</Tech_Level>
 		<Lua_Script>GenericGameObject</Lua_Script>
 		<Required_Special_Structures></Required_Special_Structures>
-		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<!--<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>-->
 		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 
 

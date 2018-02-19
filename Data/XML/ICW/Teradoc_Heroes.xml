@@ -10,7 +10,7 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
 		
-				<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		
 		<Text_ID>TEXT_HERO_TERADOC</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND2 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_TERADOC TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_13X </Encyclopedia_Text>
@@ -22,13 +22,13 @@
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 2</Starting_Spawned_Units_Tech_1>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
-	
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>5200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
 
 		<Unit_Abilities_Data SubObjectList="Yes">
 			
@@ -107,15 +107,15 @@
 		<Icon_Name>i_button_kosh.tga</Icon_Name>
 		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
 	
-			<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		
-				<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
 		
 		<Text_ID>TEXT_HERO_KOSH</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND2 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_KOSH TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_LANCET </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_GRAND_ADMIRAL </Encyclopedia_Unit_Class>
 
-				<Lua_Script>MultiLayer</Lua_Script>
+		<Lua_Script>MultiLayer</Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -126,22 +126,32 @@
 		<Reserve_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 2</Reserve_Spawned_Units_Tech_1>
 		<Reserve_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_1>
 		
-		
-
-	  
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>6500</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Abilities SubObjectList="Yes">
+
+			<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>2</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			
 			<Combat_Bonus_Ability Name="Kosh_Self_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category />
@@ -188,15 +198,15 @@
 		<Icon_Name>i_button_tavira.tga</Icon_Name>
 		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
 		
-				<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 				
-				<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
 		
 		<Text_ID>TEXT_HERO_TAVIRA</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_TAVIRA TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_INVIDIOUS </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_MOFF </Encyclopedia_Unit_Class>
 
-				<Lua_Script>MultiLayer</Lua_Script>
+		<Lua_Script>MultiLayer</Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -207,21 +217,32 @@
 		<Reserve_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 2</Reserve_Spawned_Units_Tech_1>
 		<Reserve_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_1>
 		
-		
-  
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>6500</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Abilities SubObjectList="Yes">
+
+			<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>2</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			
 			<Combat_Bonus_Ability Name="Tavira_Self_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category />
@@ -260,15 +281,13 @@
 		
 		<Icon_Name>i_button_syn.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		
-				<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 	
 		<Text_ID>TEXT_HERO_SYN</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_SYN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_SILOOTH </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 
-		
-				<Lua_Script>MultiLayer</Lua_Script>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<Lua_Script>MultiLayer</Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -280,14 +299,36 @@
 		<Reserve_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_1>
 		
 		
-				<Affiliation>Teradoc</Affiliation>
+		<Affiliation>Teradoc</Affiliation>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures></Required_Special_Structures>
 		<Required_Planets>Kashyyyk</Required_Planets>
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>6200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
 		<Abilities SubObjectList="Yes">
+
+			<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>2</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			
 			<Combat_Bonus_Ability Name="Syn_Self_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category />
@@ -318,14 +359,12 @@
 			</Combat_Bonus_Ability>
 	
 		</Abilities>
-		
-		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+
 	</UniqueUnit>
 	
 	<!-- Antemeridian Sector -->
 	
-		<HeroUnit Name="Getelles">
+	<HeroUnit Name="Getelles">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_GETELLES</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_GETELLES </Encyclopedia_Text>
@@ -374,7 +413,7 @@
 		
 	</HeroUnit>
 
-		<HeroCompany Name="Getelles_Team">
+	<HeroCompany Name="Getelles_Team">
 		<Text_ID>TEXT_HERO_GETELLES</Text_ID>
 		<Icon_Name>i_button_getelles.tga</Icon_Name>
 		<Is_Dummy>Yes</Is_Dummy>
@@ -416,12 +455,19 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 
 		<Tech_Level>99</Tech_Level>
-				<Affiliation>Teradoc</Affiliation>
+		<Affiliation>Teradoc</Affiliation>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures></Required_Special_Structures>
 		<Required_Planets>Kashyyyk</Required_Planets>
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 			<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Larm_Self_Bonus">
@@ -469,9 +515,9 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GENDARR TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_RELIANCE </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 		
-				<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 
-				<Lua_Script>MultiLayer</Lua_Script>
+		<Lua_Script>MultiLayer</Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -483,14 +529,36 @@
 		<Reserve_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_1>
 		
 		
-				<Affiliation>Teradoc</Affiliation>
+		<Affiliation>Teradoc</Affiliation>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures></Required_Special_Structures>
 		<Required_Planets>Commenor</Required_Planets>
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 		
-			<Abilities SubObjectList="Yes">
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>6200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+		<Abilities SubObjectList="Yes">
+
+			<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>2</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			
 			<Combat_Bonus_Ability Name="Gendarr_Self_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category />
@@ -519,13 +587,12 @@
 				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
+			
 		</Abilities>
-		
-		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+
 	</UniqueUnit>
 	
-		<UniqueUnit Name="Lott_Walker">
+	<UniqueUnit Name="Lott_Walker">
 		<Variant_Of_Existing_Type>AT_AT_Walker</Variant_Of_Existing_Type>
 		<LOD_Bias>0.5</LOD_Bias>
 		<Text_ID>TEXT_HERO_LOTT</Text_ID>
@@ -563,7 +630,7 @@
 		<Close_Enough_Angle_For_Move_Start> 30 </Close_Enough_Angle_For_Move_Start>        
 	</UniqueUnit>
 
-		<HeroUnit Name="Lott">
+	<HeroUnit Name="Lott">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_LOTT</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_LOTT </Encyclopedia_Text>
@@ -659,7 +726,7 @@
 
 	</HeroUnit>
 
-		<HeroCompany Name="Lott_Team">
+	<HeroCompany Name="Lott_Team">
 		<Text_ID>TEXT_HERO_LOTT</Text_ID>
 		<Icon_Name>i_button_lott.tga</Icon_Name>
 		<Is_Dummy>Yes</Is_Dummy>
@@ -720,13 +787,13 @@
 		<Population_Value>1</Population_Value>
 	</HeroCompany>
 
-		<UniqueUnit Name="13X_Pellaeon">
+	<UniqueUnit Name="13X_Pellaeon">
 		<Variant_Of_Existing_Type>Crimson_Victory</Variant_Of_Existing_Type>
 		<Icon_Name>i_button_gilad_pellaeon.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
 		
-				<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Lua_Script>MultiLayer</Lua_Script>
 
 		<Text_ID>TEXT_HERO_GILAD_PELLAEON</Text_ID>
@@ -739,8 +806,10 @@
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 	
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>5200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
@@ -804,7 +873,7 @@
 	<UniqueUnit Name="Trier_Secutor">
 		<Variant_Of_Existing_Type>Generic_Secutor</Variant_Of_Existing_Type>
 		
-				<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		
 		<Icon_Name>i_button_trier.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
@@ -813,7 +882,7 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_TRIER TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_SECUTOR </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 
-				<Lua_Script>MultiLayer</Lua_Script>
+		<Lua_Script>MultiLayer</Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
 	<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_0>
@@ -823,12 +892,17 @@
 		<Reserve_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 10</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 10</Reserve_Spawned_Units_Tech_0>
 		
-		
-		
 		<Affiliation>Teradoc</Affiliation>
 		
-		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>6300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>115</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Trier_Self_Bonus">
@@ -862,8 +936,6 @@
 
 		</Abilities>
 		
-		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 	</UniqueUnit>
 	
 	<UniqueUnit Name="Okins_Allegiance">
@@ -881,6 +953,14 @@
 		<Lua_Script>MultiLayer</Lua_Script>
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>17000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>115</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Okins_Self_Bonus">
@@ -913,9 +993,7 @@
 			</Combat_Bonus_Ability>
 
 		</Abilities>
-		
-		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+
 	</UniqueUnit>
 	
 	<HeroUnit Name="Ramier">
@@ -1149,7 +1227,6 @@
 		</Unit_Abilities_Data>
 		<Lua_Script>Slave_I</Lua_Script>
 	</UniqueUnit>
-
 
 	<UniqueUnit Name="Slave_I_Death_Clone">
 		<Text_ID>TEXT_UNIT_SLAVE_I</Text_ID>
@@ -1391,7 +1468,7 @@
 		<Is_Dummy>Yes</Is_Dummy>
 		<Damage>80</Damage>
 		<Affiliation>Teradoc</Affiliation>
-
+		<GUI_Row> 1 </GUI_Row>
 		
 		<Combat_Power_Value>0</Combat_Power_Value>
 		
@@ -1405,6 +1482,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Structure_Category_Dummy</Required_Special_Structures>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Required_Special_Structures></Required_Special_Structures>
@@ -1452,7 +1530,6 @@
 		<Population_Value>1</Population_Value>
 	</HeroCompany>
 	
-
 	<HeroCompany Name="Boba_Fett_Team_Land_MP">
 		<Variant_Of_Existing_Type>Boba_Fett_Team</Variant_Of_Existing_Type>
 		<Tech_Level>99</Tech_Level>

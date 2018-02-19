@@ -1478,6 +1478,22 @@
     </HardPoint>
 <!-- World Devastator -->
 
+	<HardPoint Name="HP_WorldDev_Hangar">
+		<Type> HARD_POINT_FIGHTER_BAY </Type>
+		<Is_Targetable>Yes</Is_Targetable>
+		<Is_Destroyable>Yes</Is_Destroyable>
+		<Attachment_Bone>Root</Attachment_Bone>
+		<Collision_Mesh>SPAWN_01</Collision_Mesh>
+		
+		     <Damage_Decal>Hangar</Damage_Decal>
+            <Damage_Particles>Hangar</Damage_Particles>
+		<Tooltip_Text>TEXT_FIGHTER_BAY_HARDPOINT</Tooltip_Text>
+		<Health>250.0</Health>
+		<Death_Explosion_Particles> Large_Explosion_Space_Empire </Death_Explosion_Particles>  <!-- STUBBED PLACEHOLDER -->
+		<Death_Explosion_SFXEvent>Unit_Hardpoint_Bay_Death</Death_Explosion_SFXEvent> <!-- STUBBED PLACEHOLDER -->
+	</HardPoint>
+
+
    <HardPoint Name="HP_WorldDev_Engines01">
 			<Type> HARD_POINT_ENGINE </Type>
             <Is_Targetable>Yes</Is_Targetable>

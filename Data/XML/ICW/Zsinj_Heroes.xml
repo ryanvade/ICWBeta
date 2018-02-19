@@ -3,10 +3,11 @@
 
 	<SpaceUnit Name="Razors_Kiss">
 		<Variant_Of_Existing_Type>Generic_Executor</Variant_Of_Existing_Type>
+		
 		<Text_ID>TEXT_HERO_RASLAN</Text_ID>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<GUI_Row>0</GUI_Row>
-				<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		
 		<Affiliation>Pirates</Affiliation>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
@@ -30,17 +31,17 @@
 		<Icon_Name>i_button_raslan.tga</Icon_Name>
 	
 	
-			<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_RASLAN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_RAZORSKISS </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPTAIN </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 42500 </Score_Cost_Credits>
-
-					<!-- Hero abilities for Captain Thrawn added to ship; Hero "moveable" unit removed -->
 		
 		<Abilities SubObjectList="Yes">
+		
 		<Combat_Bonus_Ability Name="Raslan_Self_Bonus">
+		
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
 				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
@@ -53,6 +54,7 @@
 				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>1</Stacking_Category>
 			</Combat_Bonus_Ability>
+			
 			<Combat_Bonus_Ability Name="Raslan_Combat_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
@@ -66,7 +68,6 @@
 				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
-
 
 		</Abilities>
 	
@@ -129,7 +130,6 @@
 		<Population_Value>1</Population_Value>
 	</HeroCompany>
 
-	
 	<HeroUnit Name="Lanu">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
@@ -394,6 +394,7 @@
 
 	<SpaceUnit Name="Banjeer">
 		<Variant_Of_Existing_Type>Quaser</Variant_Of_Existing_Type>
+		
 		<Text_ID>TEXT_HERO_BANJEER</Text_ID>
 		<Lua_Script>MultiLayer</Lua_Script>
 		
@@ -401,10 +402,7 @@
 		<Starting_Spawned_Units_Tech_0>TIE_Raptor_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
-				<Icon_Name>i_button_banjeer.tga</Icon_Name>
-		
-		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Icon_Name>i_button_banjeer.tga</Icon_Name>
 		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Behavior>DUMMY_STARSHIP, SELECTABLE, POWERED, SHIELDED</Behavior>
@@ -415,6 +413,13 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 
 		<Required_Planets>Columex</Required_Planets>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>21</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Banjeer_Self_Bonus">
@@ -450,20 +455,25 @@
 
 	</SpaceUnit>
 
-<SpaceUnit Name="Night_Caller">
-
+	<SpaceUnit Name="Night_Caller">
 		<Variant_Of_Existing_Type>Corellian_Corvette</Variant_Of_Existing_Type>
+		
 		<Text_ID>TEXT_UNIT_CR90N</Text_ID>
+		
 		<Starting_Spawned_Units_Tech_1>CR90N_TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_2>CR90N_TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_2>
 		<Starting_Spawned_Units_Tech_3>CR90N_TIE_Raptor_Squadron, 1</Starting_Spawned_Units_Tech_3>
 		<Starting_Spawned_Units_Tech_4>CR90N_TIE_Raptor_Squadron, 1</Starting_Spawned_Units_Tech_4>
 		<Starting_Spawned_Units_Tech_5>CR90N_TIE_Raptor_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		
 		<HardPoints> 
 		HP_Corellian_Corvette_01, HP_Corellian_Corvette_02, HP_Corellian_Corvette_03, HP_Corellian_Corvette_04, HP_Corellian_Corvette_05, HP_CR90_Hangar, HP_CR90_Tractor_Beam
 		</HardPoints>
+		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		
 		<Behavior>DUMMY_STARSHIP, SELECTABLE, POWERED, SHIELDED</Behavior>
+		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, SPAWN_SQUADRON, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON</SpaceBehavior>
 		<Affiliation>Pirates</Affiliation>
 		<Tech_Level>99</Tech_Level>
@@ -474,6 +484,14 @@
 
 		<Shield_Points>1500</Shield_Points>
 		<Tactical_Health>1500</Tactical_Health>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>2000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>17</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
 		<Unit_Abilities_Data SubObjectList="Yes">
 	      <!-- Primary ability -->
 	      <Unit_Ability>
@@ -510,16 +528,16 @@
 	            <Activation_Min_Range>10</Activation_Min_Range>
 	            <Activation_Max_Range>600</Activation_Max_Range>
 
-
 	            <!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
 	            <Target_Speed_Decrease_Percent>0.40</Target_Speed_Decrease_Percent>
 	            <Stacking_Category>0</Stacking_Category>            
 	      </Tractor_Beam_Attack_Ability>
 
 	   </Abilities>
+	   
 	</SpaceUnit>
 
-<SpaceUnit Name="181_Cowall_Fighter">
+	<SpaceUnit Name="181_Cowall_Fighter">
 		<Variant_of_Existing_Type>181st_TIE_Interceptor</Variant_of_Existing_Type>
 		<Text_ID>TEXT_UNIT_COWALL</Text_ID>
 		<Shield_Points>0</Shield_Points>
@@ -531,8 +549,8 @@
 		<Icon_Name>i_button_fel_soontir.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 	
-		
  	</SpaceUnit>
+	
 	<Squadron Name="181st_Cowall">
 		<Text_ID>TEXT_UNIT_COWALL</Text_ID>
 		<GUI_Row> 1 </GUI_Row>
@@ -602,10 +620,11 @@
 
 	<UniqueUnit Name="Iron_Fist">
 		<Variant_Of_Existing_Type>Generic_Executor</Variant_Of_Existing_Type>
+		
 		<Text_ID>TEXT_HERO_ZSINJ</Text_ID>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 
-					<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		
 		<Lua_Script></Lua_Script>
 		
@@ -649,8 +668,6 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND2 TEXT_TOOLTIP_TRAIT_COMMERCIAL TEXT_TOOLTIP_TRAIT_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ZSINJ TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_IRONFIST </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_WARLORD </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 42500 </Score_Cost_Credits>
-
-					<!-- Hero abilities for Captain Thrawn added to ship; Hero "moveable" unit removed -->
 		
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Zsinj_Self_Bonus">
@@ -705,7 +722,7 @@
 	<UniqueUnit Name="Krin_Lucrehulk">
 		<Variant_Of_Existing_Type>Lucrehulk</Variant_Of_Existing_Type>
 		
-				<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		
 		<Icon_Name>i_button_krin.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
@@ -714,9 +731,7 @@
 		<Text_ID>TEXT_HERO_KRIN</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_KRIN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_LUCREHULK</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
-	<Required_Planets>Etti_IV</Required_Planets>
-		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Required_Planets>Etti_IV</Required_Planets>
 		<Lua_Script>MultiLayer</Lua_Script>
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_0>
@@ -727,6 +742,14 @@
 		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 10</Reserve_Spawned_Units_Tech_0>
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>6300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>115</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Krin_Self_Bonus">
@@ -851,6 +874,7 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_TRIGIT TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_IMPLACABLE </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script>MultiLayer</Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
@@ -863,13 +887,31 @@
 		<Reserve_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_1>
 	  
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>6500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 	<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-		
-		</Unit_Abilities_Data>
-
 		<Abilities SubObjectList="Yes">
+
+			<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>2</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			
 			<Combat_Bonus_Ability Name="Trigit_Self_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category />
@@ -903,10 +945,10 @@
 		
 	</UniqueUnit>
 	
-		<UniqueUnit Name="Demolisher">
+	<UniqueUnit Name="Demolisher">
 		<Variant_Of_Existing_Type>Generic_Gladiator</Variant_Of_Existing_Type>
 		
-				<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		
 		<Icon_Name>i_button_screed.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
@@ -922,6 +964,14 @@
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Screed_Self_Bonus">
@@ -1422,7 +1472,6 @@
 		</Unit_Abilities_Data>
 		
 	</HeroUnit>
-	
 	
 	
 </Remnant_Space_Units>

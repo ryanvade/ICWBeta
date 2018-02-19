@@ -509,6 +509,7 @@
 		<Event_Param3>1</Event_Param3>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
 		<Reward_Param1>Save_Luke_Branch</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
 	</Event>
 	
 	 <Event Name="Luke_Complete_Failure">
@@ -649,6 +650,26 @@
 		<Reward_Param9>Teradoc_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<!--<Prereq>Maldrood_Antem</Prereq>-->
+	</Event>
+	
+	<Event Name="Battle_of_Coruscant">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>16</Event_Param1>
+		<Reward_Type>LINK_TACTICAL</Reward_Type>
+		<Reward_Param1>Coruscant</Reward_Param1> <!-- the planet -->
+		<Reward_Param2>SPACE</Reward_Param2> <!-- LAND or SPACE, MUST be capitalized -->
+		<Reward_Param3>Hostile</Reward_Param3> <!-- attacking faction -->
+		<Reward_Param4>Space_Coruscant.ted</Reward_Param4> <!-- the map you want to load for your mission -->
+		<Reward_Param5>Rebel</Reward_Param5> <!-- defending faction -->
+		<Reward_Param7>Battle_of_Coruscant.xml</Reward_Param7> <!-- the story plot file -->
+		<Reward_Param8>1</Reward_Param8> <!-- explained below -->
+		<Reward_Param13>1</Reward_Param13> <!-- 1: displays the "Launch Battle" dialog before battle; 0: skips the dialog and launches battle without asking the player -->
+		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
+	</Event>
+	
+	<Event Name="Empire_wins_Coruscant">  <!-- This exists to trigger Lua events -->
+		<Event_Type>STORY_MISSION_LOST</Event_Type>
+		<Event_Param1>Battle_of_Coruscant.xml</Event_Param1>
 	</Event>
 
 </Story>
