@@ -77,9 +77,17 @@ function MainForce_Thread()
 		if faction_name == "EMPIRE" then
 			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)
 		elseif faction_name == "REBEL" then
-			MainForce.Build("UC_Rebel_Mineral_Extractor", good_pad)
+			MainForce.Build("UC_Rebel_Mineral_Extractor", good_pad)		
+		elseif faction_name == "PENTASTAR" then
+			MainForce.Build("UC_Pentastar_Mineral_Extractor", good_pad)
 		elseif faction_name == "UNDERWORLD" then
-			MainForce.Build("UC_Underworld_Mineral_Extractor", good_pad)			
+			MainForce.Build("UC_Underworld_Mineral_Extractor", good_pad)
+		elseif faction_name == "PIRATES" then
+			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)
+		elseif faction_name == "HUTTS" then
+			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)
+		elseif faction_name == "TERADOC" then
+			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)					
 		else
 			MessageBox("unexpected faction name: %s", faction_name)
 		end
@@ -88,7 +96,7 @@ function MainForce_Thread()
 		MainForce.Set_As_Goal_System_Removable(false)
 	
 		-- If it survives X seconds, consider it a successful plan
-		Sleep(30)
+		Sleep(1)
 		if TestValid(good_pad) then
 			refinery = good_pad.Get_Build_Pad_Contents()
 			if TestValid(refinery) then

@@ -49,14 +49,14 @@ function Definitions()
 	TaskForce = {
 		{
 		"ReserveForce"
-		,"RC_Level_Two_Tech_Upgrade | RC_Level_Three_Tech_Upgrade | RC_Level_Four_Tech_Upgrade = 0,1"
-		,"EC_Level_Two_Tech_Upgrade | EC_Level_Three_Tech_Upgrade | EC_Level_Four_Tech_Upgrade = 0,1"
-		,"UC_Level_Two_Tech_Upgrade | UC_Level_Three_Tech_Upgrade | PC_Level_Four_Tech_Upgrade = 0,1"
-		,"PC_Level_Two_Tech_Upgrade | PC_Level_Three_Tech_Upgrade | PC_Level_Four_Tech_Upgrade = 0,1"
-		,"Fighter | Bomber | Corvette | Frigate | Capital | SpaceHero | Upgrade = 0,9"
+		,"RC_Level_Two_Tech_Upgrade | RC_Level_Three_Tech_Upgrade = 0,1"
+		,"EC_Level_Two_Tech_Upgrade | EC_Level_Three_Tech_Upgrade = 0,1"
+		,"UC_Level_Two_Tech_Upgrade | UC_Level_Three_Tech_Upgrade = 0,1"
+		,"PC_Level_Two_Tech_Upgrade | PC_Level_Three_Tech_Upgrade = 0,1"
+		,"Fighter | Bomber | Corvette | Frigate | Capital | SpaceHero = 0,1"
 		}
 	}
-	RequiredCategories = {"Fighter | Bomber | Corvette | Frigate | Capital | SpaceHero | Upgrade"}
+	RequiredCategories = {"Fighter | Bomber | Corvette | Frigate | Capital"}
 	AllowFreeStoreUnits = false
 
 end

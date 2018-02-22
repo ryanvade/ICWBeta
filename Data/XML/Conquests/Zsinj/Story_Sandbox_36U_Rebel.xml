@@ -227,54 +227,32 @@
 	<Branch>Dont_Invade_Hapes</Branch>
   </Event>
   
-  <Event Name="Leia_Mission_Travel">
+  <Event Name="Leia_Mission_Travel_Trigger_01">
     <Event_Type>STORY_MOVE</Event_Type>
 	<Event_Param1>Princess_Leia</Event_Param1>
 	<Event_Param2>MistOne</Event_Param2>
-    <Reward_Type>MULTIMEDIA</Reward_Type>
-    <Reward_Param1>TEXT_CONQUEST_ZSINJ_NR_HAPES_TWO</Reward_Param1>
-    <Reward_Param2>15</Reward_Param2>
-    <Reward_Param3 />
-    <Reward_Param4 />
-    <Reward_Param5 />
-    <Reward_Param6 />
-    <Reward_Param7 />
-    <Reward_Param8 />
-    <Reward_Param9>Leia_Loop</Reward_Param9>
-    <Reward_Param10>0</Reward_Param10>
-	<Story_Dialog>Dialog_NewRep_HFZ</Story_Dialog>
-		<Story_Chapter>4</Story_Chapter>
-		<Story_Tag>Hapes_Tag</Story_Tag>
-	<Prereq>Universal_Story_Start</Prereq>
+  	<Prereq>Universal_Story_Start</Prereq>
 	<Branch>Dont_Invade_Hapes</Branch>
   </Event>
   
-    <Event Name="Leia_Mission_Travel_Two">
+    <Event Name="Leia_Mission_Travel_Trigger_02">
     <Event_Type>STORY_MOVE</Event_Type>
 	<Event_Param1>Princess_Leia</Event_Param1>
 	<Event_Param2>MistTwo</Event_Param2>
-    <Reward_Type>MULTIMEDIA</Reward_Type>
-    <Reward_Param1>TEXT_CONQUEST_ZSINJ_NR_HAPES_TWO</Reward_Param1>
-    <Reward_Param2>15</Reward_Param2>
-    <Reward_Param3 />
-    <Reward_Param4 />
-    <Reward_Param5 />
-    <Reward_Param6 />
-    <Reward_Param7 />
-    <Reward_Param8 />
-    <Reward_Param9>Leia_Loop</Reward_Param9>
-    <Reward_Param10>0</Reward_Param10>
-	<Story_Dialog>Dialog_NewRep_HFZ</Story_Dialog>
-		<Story_Chapter>4</Story_Chapter>
-		<Story_Tag>Hapes_Tag</Story_Tag>
-	<Prereq>Universal_Story_Start</Prereq>
+  	<Prereq>Universal_Story_Start</Prereq>
 	<Branch>Dont_Invade_Hapes</Branch>
   </Event>
   
-    <Event Name="Leia_Mission_Travel_Three">
+    <Event Name="Leia_Mission_Travel_Trigger_03">
     <Event_Type>STORY_MOVE</Event_Type>
 	<Event_Param1>Princess_Leia</Event_Param1>
 	<Event_Param2>MistThree</Event_Param2>
+  	<Prereq>Universal_Story_Start</Prereq>
+	<Branch>Dont_Invade_Hapes</Branch>
+  </Event>
+  
+  <Event Name="Leia_Mission_Travel">
+    <Event_Type>STORY_TRIGGER</Event_Type>
     <Reward_Type>MULTIMEDIA</Reward_Type>
     <Reward_Param1>TEXT_CONQUEST_ZSINJ_NR_HAPES_TWO</Reward_Param1>
     <Reward_Param2>15</Reward_Param2>
@@ -289,17 +267,18 @@
 	<Story_Dialog>Dialog_NewRep_HFZ</Story_Dialog>
 		<Story_Chapter>4</Story_Chapter>
 		<Story_Tag>Hapes_Tag</Story_Tag>
-	<Prereq>Universal_Story_Start</Prereq>
+	<Prereq>Leia_Mission_Travel_Trigger_01</Prereq>
+	<Prereq>Leia_Mission_Travel_Trigger_02</Prereq>
+	<Prereq>Leia_Mission_Travel_Trigger_03</Prereq>
 	<Branch>Dont_Invade_Hapes</Branch>
   </Event>
   
+   
   		<Event Name="Leia_Begin_Negotiations">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Princess_Leia_Team</Reward_Param1>
 		<Prereq>Leia_Mission_Travel</Prereq>
-		<Prereq>Leia_Mission_Travel_Two</Prereq>
-		<Prereq>Leia_Mission_Travel_Three</Prereq>
 	</Event>
 	
 	
