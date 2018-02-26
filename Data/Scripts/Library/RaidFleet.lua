@@ -27,13 +27,13 @@ function MakeRaidFleet(chance)
   RaidFleet.completedListener = nil
 
   RaidFleet.factions = {"Rebel", "Empire", "Underworld", "Pirates", "Pentastar", "Teradoc", "Hutts", "Sarlacc"}
-  RaidFleet.unit_types = {{"Corellian_Corvette", "MC80b", "MC40a", "Dreadnaught_Rebel"},
-    {"Lancer_Frigate", "Carrack_Cruiser", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer"},
-    {"Asdoni", "Kariek_Shieldship", "Warlord", "Chiss_Star_Destroyer"},
-    {"Generic_Star_Destroyer", "Nebulon_B_Zsinj", "CR90_Zsinj", "Generic_Star_Destroyer_Two"},
-    {"Enforcer", "Generic_Venator", "Munificent", "Generic_Star_Destroyer"},
-    {"Lancer_Frigate", "Carrack_Cruiser", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer"},
-    {"Lancer_Frigate", "Carrack_Cruiser", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer"},
+  RaidFleet.unit_types = {{"Skirmish_CR90", "Skirmish_MC80B", "Skirmish_MC40a", "Skirmish_Alliance_Assault_Frigate"},
+    {"Skirmish_Lancer_Frigate", "Skirmish_Carrack_Cruiser", "Skirmish_Star_Destroyer_Two", "Skirmish_Victory_Destroyer_Two"},
+    {"Skirmish_Vigilance_Gunship", "Skirmish_Auriette_Carrier", "Skirmish_Warlord", "Skirmish_Chiss_Star_Destroyer"},
+     {"Skirmish_Lancer_Frigate", "Skirmish_Neutron_Star", "Skirmish_Star_Destroyer_Two", "Skirmish_Victory_Destroyer_Two"},
+    {"Skirmish_Enforcer", "Skirmish_Raider_Pentastar", "Skirmish_Procursator", "Skirmish_Secutor"},
+    {"Skirmish_IPV1_Teradoc", "Skirmish_Carrack_Cruiser", "Skirmish_Star_Destroyer_Two", "Skirmish_Crimson_Victory"},
+    {"Skirmish_Tartan_Patrol_Cruiser", "Skirmish_Carrack_Cruiser", "Skirmish_Tector", "Skirmish_Victory_Destroyer_Two"},
     {"Nova_Cruiser", "BattleDragon"}
   }
   RaidFleet.starbases = {{"NR_Star_Base_1", "NR_Star_Base_2", "NR_Star_Base_3"},

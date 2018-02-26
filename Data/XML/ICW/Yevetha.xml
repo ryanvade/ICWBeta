@@ -328,19 +328,12 @@
 		<Required_Special_Structures />
 		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
 		<Squadron_Units>Trifoil, Trifoil, Trifoil, Trifoil</Squadron_Units>
-		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
- 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
+
   		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
-		<Max_Squad_Size> 12 </Max_Squad_Size>
+		<Max_Squad_Size> 4 </Max_Squad_Size>
 		<GUI_Model_Name>TRIFOIL.ALO</GUI_Model_Name>
 		<GUI_Distance>95</GUI_Distance>
 		<GUI_Offset>0 0 0</GUI_Offset>
@@ -595,7 +588,19 @@
 
 		</Unit_Abilities_Data>
 
-
+	
+					<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-30</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_ARMADIA</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
@@ -721,6 +726,20 @@
 			</Tractor_Beam_Attack_Ability>
 			
 		</Abilities>
+		
+				<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-60</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+
 
 	</SpaceUnit>
 
@@ -788,6 +807,18 @@
 				<Supports_Autofire>False</Supports_Autofire>
 			</Unit_Ability>
 		</Unit_Abilities_Data>
+		
+		<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-40</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+
     </SpaceUnit>
 
 	<SpaceUnit Name="Yevetha_Victory_Two">
@@ -830,6 +861,18 @@
 				<Supports_Autofire>False</Supports_Autofire>
 			</Unit_Ability>
 		</Unit_Abilities_Data>
+		
+		<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-40</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+
     </SpaceUnit>
 
 	<SpaceUnit Name="Yevetha_Interdictor_Cruiser">
@@ -839,6 +882,18 @@
 		<Lua_Script>GenericGameObject</Lua_Script>
 
 		<CategoryMask> Frigate | AntiCorvette | Boardable </CategoryMask>
+		
+		<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-40</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+
     </SpaceUnit>
 
 	<SpaceUnit Name="Yevetha_Allegiance">
@@ -851,6 +906,17 @@
 
 		<Lua_Script>GenericGameObject</Lua_Script>
 		<Tech_Level>2</Tech_Level>
+		
+				<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-120</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
 	</SpaceUnit>
 
 
@@ -863,8 +929,19 @@
 
 		<Affiliation>Yevetha</Affiliation>
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Tech_Level>99</Tech_Level>
-		<Lua_Script>GenericGameObject</Lua_Script>
+		<Lua_Script></Lua_Script>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
+        <Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
+        <Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 5</Starting_Spawned_Units_Tech_0>
+        <Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+        <Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 8</Reserve_Spawned_Units_Tech_0> 
+        <Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 8</Reserve_Spawned_Units_Tech_0>
+        <Reserve_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+		
 
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Bille_Self_Bonus">
@@ -931,7 +1008,7 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_TRAIT_RUTHLESS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_NIL_SPAAR TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ARAMADIA </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_POLITICIAN </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 4000 </Score_Cost_Credits>
-		<Lua_Script>GenericGameObject</Lua_Script>
+		<Lua_Script></Lua_Script>
 
 		<Icon_Name>i_button_nil_spaar.tga</Icon_Name>
 
@@ -952,8 +1029,15 @@
 		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Ship_Attack_Yevetha </SFXEvent_Attack_Hardpoint>
 		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Ship_Attack_Yevetha </SFXEvent_Attack_Hardpoint>
 
-
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Tech_Level>99</Tech_Level>
+		<Lua_Script></Lua_Script>
+		
+		<Starting_Spawned_Units_Tech_0>Trifoil_Squadron, 2</Starting_Spawned_Units_Tech_0>
+        <Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+        
+		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
@@ -1022,11 +1106,16 @@
 
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_DEVOTION </Text_ID>
-		<Lua_Script>GenericGameObject</Lua_Script>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_DEVOTION TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_DEVOTION </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PRIMATE </Encyclopedia_Unit_Class>
 
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<Lua_Script>MultiLayer</Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		
+		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Toorr_Self_Bonus">
@@ -1066,13 +1155,19 @@
 	<SpaceUnit Name="Voota_Splendor">
 		<Variant_Of_Existing_Type>Generic_Interdictor_Cruiser</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_HERO_SPLENDER</Text_ID>
-		<Lua_Script>GenericGameObject</Lua_Script>
 		<!--<Encyclopedia_Good_Against> Marauder_Missile_Cruiser </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Calamari_Cruiser Y-wing </Encyclopedia_Vulnerable_To>-->
 
 		<Affiliation>Yevetha</Affiliation>
 		<Tech_Level>99</Tech_Level>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<Lua_Script>MultiLayer</Lua_Script>
+		<Tech_Level>99</Tech_Level>
+		
+		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Voota_Self_Bonus">
@@ -2523,254 +2618,7 @@
 		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
-	<HeroUnit Name="Yevethan_Hijacker">
-		<Text_ID>TEXT_UNIT_YEVETHAN_HIJACKER</Text_ID>
-		<Land_Model_Name>NI_Yevetha.ALO</Land_Model_Name>
-		<Icon_Name>i_button_yevetha.tga</Icon_Name>
-        <GUI_Bracket_Size>0</GUI_Bracket_Size>
-
-		<GalacticBehavior>SELECTABLE</GalacticBehavior>
-		<LandBehavior>SELECTABLE, STUNNABLE, VEHICLE_THIEF, ABILITY_COUNTDOWN, SURFACE_FX, WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
-
-		<Garrison_Category> Infantry </Garrison_Category>
-		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
-		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
-		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
-		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
-		<CanCellStack>yes</CanCellStack>
-		<Mass>1.0</Mass>
-		<Movement_Animation_Speed> 0.9 </Movement_Animation_Speed>
-		<Max_Speed>2.2</Max_Speed>
-		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
-		<Custom_Soft_Footprint_Radius> 6.5 </Custom_Soft_Footprint_Radius>
-		<Custom_Hard_XExtent> 5.0 </Custom_Hard_XExtent>
-		<Custom_Hard_YExtent> 5.0 </Custom_Hard_YExtent>
-		<Space_Layer> Land </Space_Layer>
-		<UnitCollisionClass> Infantry </UnitCollisionClass>
-		<FormationSpacing> .5 </FormationSpacing>
-		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
-		<Min_Speed> .1 </Min_Speed>
-		<OverrideAcceleration> .1 </OverrideAcceleration>
-		<OverrideDeceleration> .25 </OverrideDeceleration>
-		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
-		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
-		<Scale_Factor>1.6</Scale_Factor>
-		<Affiliation>Yevetha</Affiliation>
-		<Required_Timeline>2</Required_Timeline>
-		<IsBuildable>No</IsBuildable>
-		<Size_Value>10</Size_Value>
-
-		<Armor_Type> Armor_Infantry </Armor_Type>
-		<Damage>8</Damage>
-		<Sensor_Range>20</Sensor_Range>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>40</Tactical_Health>
-		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
-		<Energy_Capacity>0</Energy_Capacity>
-		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
-		<Stealth_Capable>No</Stealth_Capable>
-		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
-		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
-		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
-		<Victory_Relevant>yes</Victory_Relevant>
-
-		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
-		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
-		<Targeting_Max_Attack_Distance>250.0</Targeting_Max_Attack_Distance>
-		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
-
-		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
-		<Projectile_Fire_Recharge_Seconds>0.2</Projectile_Fire_Recharge_Seconds>
-		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
-		<Projectile_Fire_Pulse_Delay_Seconds>0.17</Projectile_Fire_Pulse_Delay_Seconds>
-
-		<Targeting_Fire_Inaccuracy> Infantry, 3.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
-
-		<SFXEvent_Select>Unit_Attack_Yevetha</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Yevetha</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Move_Yevetha</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Yevetha</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Move_Yevetha</SFXEvent_Guard>
-
-
-		<SFXEvent_Fire>Unit_Rebel_Pistol_Fire</SFXEvent_Fire>
-
-
-		<Death_SFXEvent_Start_Die>Unit_Die_Yevetha</Death_SFXEvent_Start_Die>
-		<SFXEvent_Assist_Move> Unit_Attack_Yevetha </SFXEvent_Assist_Move>
-		<SFXEvent_Assist_Attack> Unit_Attack_Yevetha </SFXEvent_Assist_Attack>
-		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
-		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
-		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
-
-
-		<CategoryMask> Infantry </CategoryMask>
-		<Ranking_In_Category> 4 </Ranking_In_Category>
-		<MovementClass>Infantry</MovementClass>
-		<OccupationStyle>1x1</OccupationStyle>
-		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
-		<Blob_Shadow_Scale>5.0, 5.0</Blob_Shadow_Scale>
-		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
-		<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
-		<Is_Squashable> Yes </Is_Squashable>
-		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
-		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
-		<Spawn_Planet>Tatooine</Spawn_Planet>
-
-		<Select_Box_Scale>27</Select_Box_Scale>
-		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
-
-		<Has_Land_Evaluator>True</Has_Land_Evaluator>
-		<AI_Combat_Power>250</AI_Combat_Power>
-		<Idle_Chase_Range>100.0</Idle_Chase_Range>
-		<Guard_Chase_Range>200.0</Guard_Chase_Range>
-		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
-		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
-		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
-		<Autonomous_Move_Extension_Vs_Attacker>200.0</Autonomous_Move_Extension_Vs_Attacker>
-
-		<Neutralization_Cost>1500.0</Neutralization_Cost>
-		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
-		<Can_Be_Neutralized_By_Minor_Heroes>Yes</Can_Be_Neutralized_By_Minor_Heroes>
-
-		<Always_Spawn_In_Orbit>No</Always_Spawn_In_Orbit>
-
-		<Encyclopedia_Text> TEXT_TOOLTIP_YEVETHAN_HIJACKER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COMMANDO </Encyclopedia_Unit_Class>
-		<Score_Cost_Credits>120</Score_Cost_Credits>
-
-		<Death_Fade_Time>0.25</Death_Fade_Time>
-		<Death_Persistence_Duration>1.0</Death_Persistence_Duration>
-
-		<!-- Chewbacca can Steal Vehicles and Sprint -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>CAPTURE_VEHICLE</Type>
-				<Recharge_Seconds> 55.0 </Recharge_Seconds>
-				<GUI_Activated_Ability_Name> Chewbacca_Vehicle_Thief </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-		  </Unit_Ability>
-
-		  <Unit_Ability>
-				<Type>SPRINT</Type>
-				<Expiration_Seconds> 7.0 </Expiration_Seconds>
-				<Recharge_Seconds> 45.0 </Recharge_Seconds>
-				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
-				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-		<Abilities SubObjectList="Yes">
-  			<Vehicle_Thief_Ability Name="Chewbacca_Vehicle_Thief">
-  				<Activation_Style> User_Input </Activation_Style>
-  				<Applicable_Unit_Categories />
-
-  				<!-- MAKE SURE to add a "_Captured" clone to any unit that you add in this list!!!! -->
-
-  				<Applicable_Unit_Types>
-  						AT_ST_Walker,
-  						AT_AA_Walker,
-						AT_ST_Duskhan,
-  						SPMAT_Walker,
-  						TIE_Crawler,
-  						M1_Repulsor_Tank,
-  						M1_Repulsor_Tank_00,
-  						Pirate_Skiff,
-  						Swamp_Speeder_E,
-  						Swamp_Speeder_P
-  						Pod_Walker_Empire,
-  						Pod_Walker_Pirate,
-  						MPTL,
-  						T2B_Tank,
-  						T4B_Tank,
-						Pentastar_Walker,
-						Pentastar_Speeder,
-						Pentastar_Skiff,
-						IFX_Fighter_tank_Empire_Armor,
-						AT_PT_Walker,
-						Century_Tank,
-						T1B_Tank,
-						T3B_Tank,
-						Freerunner,
-						ULAV
-  				</Applicable_Unit_Types>
-
-  				<Activation_Min_Range>0.0</Activation_Min_Range>
-  				<Activation_Max_Range>50.0</Activation_Max_Range>
-  				<Activation_Chance>1.0</Activation_Chance>
-  			</Vehicle_Thief_Ability>
-		</Abilities>
-	</HeroUnit>
-
-
-
-	<GroundCompany Name="Yevethan_Hijacker_Squad">
-		<Text_ID>TEXT_UNIT_YEVETHAN_HIJACKER</Text_ID>
-		<Encyclopedia_Text>TEXT_TOOLTIP_YEVETHAN_HIJACKER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
-
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>15</Damage>
-		<Autoresolve_Health>175</Autoresolve_Health>
-		<Affiliation>Yevetha</Affiliation>
-		<Build_Cost_Credits>250</Build_Cost_Credits>
-		<Piracy_Value_Credits>250</Piracy_Value_Credits>
-		<Build_Time_Seconds>10</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Build_Initially_Locked>No</Build_Initially_Locked>
-		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Tech_Level>0</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>Y_Ground_Barracks</Required_Special_Structures>
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>1</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Shuttle_Tyderium_Commando</Company_Transport_Unit>
-
-		<Company_Units> Yevethan_Hijacker </Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_yevetha.tga</Icon_Name>
-		<GUI_Model_Name>NI_Yevetha.ALO</GUI_Model_Name>
-		<Land_Model_Name>NI_Yevetha.ALO</Land_Model_Name>
-		<Scale_Factor>5.0</Scale_Factor>
-		<GUI_Offset>0 0 5</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<SFXEvent_Build_Started>RHD_Build_Troops</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>RHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Attack_Yevetha</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Attack_Yevetha</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>45</Score_Cost_Credits>
-
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<Unit_Ability>
-				<Type>CAPTURE_VEHICLE</Type>
-				<Recharge_Seconds> 20.0 </Recharge_Seconds>
-				<GUI_Activated_Ability_Name> Hijacker_Vehicle_Thief </GUI_Activated_Ability_Name>
-			</Unit_Ability>
-
-			<Unit_Ability>
-				<Type>SPRINT</Type>
-				<Expiration_Seconds> 7.0 </Expiration_Seconds>
-				<Recharge_Seconds> 45.0 </Recharge_Seconds>
-				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
-				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Chewie</SFXEvent_GUI_Unit_Ability_Activated>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-		<Population_Value>1</Population_Value>
-
-	</GroundCompany>
-
-   <!-- Light Factory Unirs -->
+	 <!-- Light Factory Unirs -->
 
 	<GroundVehicle Name="AT_ST_Duskhan">
 		<Variant_Of_Existing_Type> AT_ST_Walker </Variant_Of_Existing_Type>

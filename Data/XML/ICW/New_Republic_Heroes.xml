@@ -708,7 +708,6 @@
 		
 		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron_Run, 0</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
@@ -2992,11 +2991,13 @@
 		<Icon_Name>i_button_booster.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
-		<Lua_Script>GenericGameObject</Lua_Script>
+		<Lua_Script>MultiLayer</Lua_Script>
 		
-		<!--<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>-->
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<!--<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_2>
 		<Starting_Spawned_Units_Tech_2>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_2>
@@ -3006,7 +3007,7 @@
 		<Starting_Spawned_Units_Tech_4>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
 		<Starting_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_5>
 		<Starting_Spawned_Units_Tech_5>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>-->
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 		<Text_ID>TEXT_HERO_BOOSTER</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMERCIAL TEXT_TOOLTIP_BIO TEXT_TOOLTIP_BOOSTER TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ERRANTVENTURE </Encyclopedia_Text>
@@ -3087,11 +3088,14 @@
 		<Icon_Name>i_button_booster.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
-		<Lua_Script>GenericGameObject</Lua_Script>
+		<Lua_Script>MultiLayer</Lua_Script>
 		
-		<!--<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>-->
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<!--<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_2>
 		<Starting_Spawned_Units_Tech_2>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_2>
@@ -3101,7 +3105,7 @@
 		<Starting_Spawned_Units_Tech_4>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
 		<Starting_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_5>
 		<Starting_Spawned_Units_Tech_5>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>-->
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 		<Text_ID>TEXT_HERO_BOOSTER</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMERCIAL TEXT_TOOLTIP_BIO TEXT_TOOLTIP_BOOSTER TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ERRANTVENTURE </Encyclopedia_Text>
@@ -3221,7 +3225,9 @@
 		<Icon_Name>i_button_booster.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
-		<Lua_Script>GenericGameObject</Lua_Script>
+		<Lua_Script>MultiLayer</Lua_Script>
+		
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 
 		<Text_ID>TEXT_HERO_BOOSTER</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMERCIAL TEXT_TOOLTIP_BIO TEXT_TOOLTIP_BOOSTER TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ERRANTVENTURE </Encyclopedia_Text>
@@ -3229,9 +3235,9 @@
 
 		<Space_Model_Name>EV_Red.ALO</Space_Model_Name>
 
-		<!--<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>-->
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<!--<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_2>
 		<Starting_Spawned_Units_Tech_2>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_2>
@@ -3241,7 +3247,7 @@
 		<Starting_Spawned_Units_Tech_4>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
 		<Starting_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_5>
 		<Starting_Spawned_Units_Tech_5>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>-->
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 	
 		<Select_Box_Scale>100</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-50</Select_Box_Z_Adjust>
@@ -3319,7 +3325,17 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Icon_Name>i_button_wedge_Antilles.tga</Icon_Name>
 		<Space_Model_Name>RV_LUSANKYA.ALO</Space_Model_Name>
-		<Lua_Script>GenericGameObject</Lua_Script>
+		<Lua_Script></Lua_Script>
+		
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+
+			<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+        <Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+        <Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 5</Starting_Spawned_Units_Tech_0>
+        <Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+        <Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_0> 
+        <Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_0>
+        <Reserve_Spawned_Units_Tech_0>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
 		
 		<HardPoints>
      		HP_Lusankya_Turbo_1, HP_Lusankya_Turbo_2, HP_Lusankya_Turbo_3, HP_Lusankya_Turbo_4, HP_Lusankya_Turbo_5, HP_Lusankya_Turbo_6, HP_Lusankya_Turbo_7, HP_Lusankya_Turbo_8, HP_Lusankya_Turbo_9, HP_Lusankya_Turbo_10, HP_Lusankya_Turbo_11, HP_Lusankya_Turbo_12, HP_Lusankya_Turbo_13, HP_Lusankya_Turbo_14, HP_Lusankya_Turbo_15, HP_Lusankya_Turbo_16, HP_Lusankya_Turbo_17, HP_Lusankya_Turbo_18, HP_Lusankya_Turbo_19, HP_Lusankya_Turbo_20, HP_Lusankya_Turbo_21, HP_Lusankya_Turbo_22, HP_Lusankya_Turbo_23, HP_Lusankya_Turbo_24, HP_Lusankya_Turbo_25, HP_Lusankya_Turbo_26, HP_Lusankya_Turbo_27, HP_Lusankya_Turbo_28, HP_Lusankya_Turbo_29, HP_Lusankya_Turbo_30, HP_Lusankya_Turbo_31, HP_Lusankya_Turbo_32, HP_Lusankya_Turbo_33, HP_Lusankya_Turbo_34, HP_Lusankya_Turbo_35, HP_Lusankya_Turbo_36, HP_Lusankya_Turbo_37, HP_Lusankya_Turbo_38, HP_Lusankya_Turbo_39, HP_Lusankya_Turbo_40, HP_Lusankya_Turbo_41, HP_Lusankya_Turbo_42, HP_Lusankya_Turbo_43, HP_Lusankya_Turbo_44, HP_Lusankya_Turbo_45, HP_Lusankya_Turbo_46,

@@ -1079,9 +1079,9 @@
         <Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
         <Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
         <Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
-        <Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+        <Death_Explosions>Medium_Explosion_Space</Death_Explosions>
 
-        <Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
+        <Death_Clone>Damage_Normal, Munificent_Death_Clone</Death_Clone>
 
         <HardPoints>
 		HP_Munificent_Dual_One, HP_Munificent_Dual_Two, HP_Munificent_Dual_Three, HP_Munificent_Dual_Four, HP_Munificent_Medium_One, HP_Munificent_Medium_Two, 	HP_Munificent_Medium_Three, HP_Munificent_Medium_Four, HP_Munificent_Heavy, HP_Munificent_Ion, Munificent_Bay, Munificent_Engines
@@ -1183,6 +1183,26 @@
 
 	   </Unit_Abilities_Data>
     </SpaceUnit>
+
+		<UniqueUnit Name="Munificent_Death_Clone">
+			<Space_Model_Name>CIS_munificent_d.alo</Space_Model_Name>
+			<xxxSpace_Model_Name>CIS_Providence_d.alo</xxxSpace_Model_Name>
+			<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+			<Scale_Factor>1.2</Scale_Factor>
+
+			<Max_Speed>1.9</Max_Speed>
+			<Max_Rate_Of_Turn>0.5</Max_Rate_Of_Turn>
+			<MovementClass> Space </MovementClass>
+			<Space_Layer> Frigate </Space_Layer>
+			<Layer_Z_Adjust>-50.0</Layer_Z_Adjust>
+			<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
+			<Bank_Turn_Angle>8</Bank_Turn_Angle>
+			<Max_Thrust>1.5</Max_Thrust>
+			<Affiliation>Pentastar</Affiliation>
+			<Ship_Class>Frigate</Ship_Class>
+			<Remove_Upon_Death>true</Remove_Upon_Death>
+
+		</UniqueUnit>
 
 
 
