@@ -12,8 +12,8 @@
 --*   @Date:                2018-01-13T11:47:17+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            CategoryFilter.lua
--- @Last modified by:
--- @Last modified time: 2018-01-24T01:27:41+01:00
+--*   @Last modified by:    Pox
+--*   @Last modified time:  2018-02-27T20:36:57+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -66,7 +66,7 @@ CategoryFilter = Class {
 
 
             local allPlanets = GLOBALS.ALL_PLANETS
-            for i, planet in pairs(allPlanets) do
+            for _, planet in pairs(allPlanets) do
                 self:SpawnAiDummies(planet)
             end
 
@@ -79,7 +79,7 @@ CategoryFilter = Class {
         end,
 
         HandleFilterChange = function (self)
-            for categoryFlag, dummyType in pairs(self.CategoryFlags) do
+            for categoryFlag, _ in pairs(self.CategoryFlags) do
                 if Check_Story_Flag(GLOBALS.PLAYER, categoryFlag, nil, true) then
                     if self.ActiveFilter == categoryFlag then
                         break
@@ -111,7 +111,7 @@ CategoryFilter = Class {
                 return
             end
 
-            for i, planet in pairs(FindPlanet.Get_All_Planets()) do
+            for _, planet in pairs(FindPlanet.Get_All_Planets()) do
                 if not planet.Get_Owner().Is_Human() then
                     self:CreateAiEntry(planet)
                     self:RemoveInvalidEntries(self.SpawnedAiDummies[planet])
@@ -182,16 +182,16 @@ CategoryFilter = Class {
             }
 
             local dummies = SpawnList(typeList, planet, planet.Get_Owner(), false, false)
-            for _, dummyType in pairs(dummies) do
+            for _, dummy in pairs(dummies) do
                 table.insert(self.SpawnedAiDummies[planet], dummy)
             end
         end,
 
         ClearDummies = function(self)
             local dummies = nil
-            for i, dummyType in pairs(self.CategoryFlags) do
+            for _, dummyType in pairs(self.CategoryFlags) do
                 dummies = Find_All_Objects_Of_Type(dummyType)
-                for j, dummy in pairs(dummies) do
+                for _, dummy in pairs(dummies) do
                     if TestValid(dummy) and dummy.Get_Owner().Is_Human() then
                         dummy.Despawn()
                     end
@@ -199,7 +199,7 @@ CategoryFilter = Class {
             end
 
             dummies = Find_All_Objects_Of_Type(self.Placeholder)
-            for j, dummy in pairs(dummies) do
+            for _, dummy in pairs(dummies) do
                 if TestValid(dummy) and dummy.Get_Owner().Is_Human() then
                     dummy.Despawn()
                 end
@@ -219,3 +219,5 @@ CategoryFilter = Class {
             end
         end
 }
+
+return CategoryFilter

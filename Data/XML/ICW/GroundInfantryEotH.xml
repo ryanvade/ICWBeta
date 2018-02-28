@@ -11,7 +11,7 @@
 		<Land_Model_Name>phailcommando.alo</Land_Model_Name>
 		<Behavior>SELECTABLE</Behavior>
 		
-		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, IDLE</LandBehavior>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, IDLE, GARRISON_UNIT</LandBehavior>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<CanCellStack>yes</CanCellStack>
@@ -192,7 +192,7 @@
 		<Required_Special_Structures>U_Ground_Barracks</Required_Special_Structures>
 		<Required_Planets />
 
-		<Behavior>DUMMY_GROUND_COMPANY, GARRISON_UNIT</Behavior>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 
 		<Company_Units> Phalanx_Commando, Phalanx_Commando </Company_Units>
 		<Max_Squad_Size> 1 </Max_Squad_Size>
@@ -239,7 +239,7 @@
         <Land_Model_Name>phailcommando.alo</Land_Model_Name>
         <Icon_Name>i_button_shial.tga</Icon_Name>
              <GalacticBehavior> SELECTABLE  </GalacticBehavior>
-        <LandBehavior> SELECTABLE, SURFACE_FX, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, REVEAL, HIDE_WHEN_FOGGED, DAMAGE_TRACKING, UNIT_AI, ABILITY_COUNTDOWN </LandBehavior>
+        <LandBehavior> SELECTABLE, SURFACE_FX, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, REVEAL, HIDE_WHEN_FOGGED, DAMAGE_TRACKING, UNIT_AI, ABILITY_COUNTDOWN, GARRISON_UNIT </LandBehavior>
 
         <Uses_Multiple_Locomotors> Yes </Uses_Multiple_Locomotors>
         <Hover_Offset>16.0</Hover_Offset>
@@ -377,7 +377,7 @@
 		<Required_Special_Structures>U_Ground_Barracks</Required_Special_Structures>
 		<Required_Planets>Amrac</Required_Planets>
 
-		<Behavior>DUMMY_GROUND_COMPANY, GARRISON_UNIT</Behavior>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 
 		<Company_Units>Shial</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>

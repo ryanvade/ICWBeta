@@ -3212,6 +3212,10 @@
 		<Lua_Script>MultiLayer</Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
+		
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 3</Starting_Spawned_Units_Tech_0>
@@ -5081,7 +5085,7 @@
 		<Required_Planet>Naboo</Required_Planet>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<Behavior>DUMMY_GROUND_COMPANY, GARRISON_UNIT</Behavior>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Can_Be_Only_One>true</Can_Be_Only_One>
 		<Land_Override_Population_Value>1</Land_Override_Population_Value>
 		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
@@ -5228,7 +5232,7 @@
 		<Tactical_Health>400</Tactical_Health>
 
 		<GalacticBehavior>SELECTABLE</GalacticBehavior>
-		<LandBehavior>SELECTABLE, ABILITY_COUNTDOWN, SURFACE_FX, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI</LandBehavior>
+		<LandBehavior>SELECTABLE, ABILITY_COUNTDOWN, SURFACE_FX, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
 		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
 		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>

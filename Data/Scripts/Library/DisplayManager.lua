@@ -12,8 +12,8 @@
 --*   @Date:                2017-12-22T10:19:56+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            DisplayManager.lua
--- @Last modified by:
--- @Last modified time: 2018-01-23T23:58:45+01:00
+-- @Last modified by:   marcus
+-- @Last modified time: 2018-02-27T20:15:35+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -63,8 +63,10 @@ OrbitalStructureDisplay = Class {
     end,
 
     Clear = function(self)
-        for i, text in pairs(self.CurrentText) do
+        for _, text in pairs(self.CurrentText) do
             GLOBALS.RemoveScreenText(text)
         end
     end
 }
+
+return OrbitalStructureDisplay

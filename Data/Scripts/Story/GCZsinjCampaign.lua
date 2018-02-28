@@ -59,9 +59,11 @@ function On_Zsinj_Death(message)
 
     --Post-Zsinj, Kosh merges with Treutan
     start_planet = FindPlanet("Centares")
-    spawn_list_kosh = { "Lancet_Kosh" }
-    KoshSpawn = SpawnList(spawn_list_kosh, start_planet, p_maldrood, false, false)
-
+	if start_planet.Get_Owner() == p_maldrood then
+		spawn_list_kosh = { "Lancet_Kosh" }
+		KoshSpawn = SpawnList(spawn_list_kosh, start_planet, p_maldrood, false, false)
+	end
+	
     --Corporate Sector Spawns
 
     start_planet = FindPlanet("Etti_IV")

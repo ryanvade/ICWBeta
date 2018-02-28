@@ -35,7 +35,6 @@ function Definitions()
   {
     Universal_Story_Start = Begin_GC,
     Determine_Faction_LUA = Find_Faction,
-    Zsinj_Death = On_Zsinj_Death,
     Maldrood_Antem = Antem_Maldrood,
     Maldrood_Kashyyyk = Kashyyyk_Maldrood,
     Maldrood_Commenor = Commenor_Maldrood,
@@ -75,55 +74,6 @@ function Find_Faction(message)
 	elseif p_yevetha.Is_Human() then
 		Story_Event("ENABLE_BRANCH_YEVETHA_FLAG")
 	end
-
-  end
-end
-
-function On_Zsinj_Death(message)
-  if message == OnEnter then
-
-    p_empire = Find_Player("Empire")
-    p_maldrood = Find_Player("Teradoc")
-    p_corporate = Find_Player("Corporate_Sector")
-    p_zsinj = Find_Player("Pirates")
-
-    --Post-Zsinj, Kosh merges with Treutan
-    start_planet = FindPlanet("Centares")
-    spawn_list_kosh = { "Lancet_Kosh" }
-    KoshSpawn = SpawnList(spawn_list_kosh, start_planet, p_maldrood, false, false)
-
-    --Corporate Sector Spawns
-
-    start_planet = FindPlanet("Etti_IV")
-    if start_planet.Get_Owner() == p_zsinj then
---			Story_Event("CORPORATE_EMERGE_Etti")
-      ChangePlanetOwnerAndRetreat(start_planet, p_corporate)
-
-      spawn_list = { "Lucrehulk", "Lucrehulk" }
-
-      ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, false, false)
-    end
-
-
-    start_planet = FindPlanet("Ession")
-    if start_planet.Get_Owner() == p_zsinj then
---			Story_Event("CORPORATE_EMERGE_Ession")
-      ChangePlanetOwnerAndRetreat(start_planet, p_corporate)
-
-      spawn_list = { "Lucrehulk", "Lucrehulk" }
-      ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, false, false)
-    end
-
-
-    start_planet = FindPlanet("Bonadan")
-    if start_planet.Get_Owner() == p_zsinj then
---			Story_Event("CORPORATE_EMERGE_Bonadan")
-      ChangePlanetOwnerAndRetreat(start_planet, p_corporate)
-
-      spawn_list = { "Lucrehulk", "Lucrehulk" }
-      ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, false, false)
-    end
-  elseif message == OnUpdate then
 
   end
 end
@@ -227,7 +177,7 @@ function SubEra_Change(message)
 		end
 	end
 
-	spawn_list_isard = { "Lusankya" }
+	spawn_list_isard = { "Lusankya" , "Implacable_Star_Destroyer" }
 	IsardSpawn = SpawnList(spawn_list_isard, start_planet, p_empire,false,false)
 
 	local checkPestage = Find_First_Object("Sate_Pestage")

@@ -260,8 +260,8 @@
 		<Build_Time_Seconds>45</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
-		<Behavior>DUMMY_STARSHIP, SELECTABLE, POWERED, SHIELDED</Behavior>
-		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
@@ -629,7 +629,7 @@
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		
-		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 		
@@ -2203,8 +2203,8 @@
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
 		<Size_Value>120</Size_Value>
 		<Damage>5</Damage>
-		<Behavior>DUMMY_STARSHIP, TRANSPORT, POWERED, SHIELDED </Behavior>
-		<SpaceBehavior>ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, TARGETING, WEAPON, REVEAL, HIDE_WHEN_FOGGED, AMBIENT_SFX, UNIT_AI, NEBULA, SELECTABLE </SpaceBehavior>
+		<Behavior>DUMMY_STARSHIP, TRANSPORT </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, TARGETING, POWERED, SHIELDED, WEAPON, REVEAL, HIDE_WHEN_FOGGED, AMBIENT_SFX, UNIT_AI, NEBULA, SELECTABLE </SpaceBehavior>
 		<LandBehavior>REVEAL, HIDE_WHEN_FOGGED, IDLE</LandBehavior> 
 		<Victory_Relevant>yes</Victory_Relevant>
 		<Hover_Offset>30.0</Hover_Offset>
@@ -4006,6 +4006,8 @@
 		<Neutralization_Cost>3000.0</Neutralization_Cost>
 		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
 		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 
 	<!-- Non-Hero unit abilities description -->
 		<Abilities SubObjectList="Yes">
@@ -4060,6 +4062,14 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Icon_Name>i_button_yonka.tga</Icon_Name>
+		
+		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+			<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script>GenericGameObject</Lua_Script>
@@ -4121,6 +4131,14 @@
 		
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script>GenericGameObject</Lua_Script>
+		
+		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+			<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		
 		<Abilities SubObjectList="Yes">
 
