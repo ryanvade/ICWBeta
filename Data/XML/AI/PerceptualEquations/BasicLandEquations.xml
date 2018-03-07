@@ -156,8 +156,7 @@
 															Parameter_Type = "Empire_Buildable_Repair_Facility",
 															Parameter_Type = "Rebel_Buildable_Repair_Facility",
 															Parameter_Type = "Underworld_Buildable_Repair_Facility",
-															Parameter_Type = "Underworld_Mass_Driver_Turret",
-															Parameter_Type = "Underworld_Torpedo_Turret"})
+															Parameter_Type = "Underworld_Mass_Driver_Turret"})
 			+
 			(10 * Variable_Target.Type.IsType { Parameter_Type = "E_Ground_Base_Shield",
 												Parameter_Type = "R_Ground_Base_Shield",
@@ -430,13 +429,11 @@
 			50 * (0 == Variable_Self.TacticalBuiltStructureCount {Parameter_Type = "Empire_Anti_Vehicle_Turret",
 																	Parameter_Type = "Rebel_Anti_Vehicle_Turret",
 																	Parameter_Type = "Pirate_Anti_Vehicle_Turret",
-																	Parameter_Type = "Underworld_Torpedo_Turret",
 																	Parameter_Type = "Hutt_Grenade_Mortar"})
 			+
 			5 * (0.7 - Variable_Self.TacticalBuiltStructureCount {Parameter_Type = "Empire_Anti_Vehicle_Turret",
 																	Parameter_Type = "Rebel_Anti_Vehicle_Turret",
 																	Parameter_Type = "Pirate_Anti_Vehicle_Turret",
-																	Parameter_Type = "Underworld_Torpedo_Turret",
 																	Parameter_Type = "Hutt_Grenade_Mortar"} / Function_Build_Pad_Count.Evaluate)
 			+
 			2 * (200 > Variable_Target.DistanceToNearestFriendly {Parameter_Category = GameObjectCategoryType[Structure]})
@@ -600,21 +597,13 @@
 								,Parameter_Type = "Han_Solo"
 								,Parameter_Type = "Chewbacca"
 								,Parameter_Type = "Mara_Jade"
-								,Parameter_Type = "Obi_Wan_Kenobi"
-								,Parameter_Type = "Darth_Vader"
-								,Parameter_Type = "Darth_Vader_Expansion"
 								,Parameter_Type = "Kyle_Katarn"
-								,Parameter_Type = "Tyber_Zann"
-								,Parameter_Type = "Silri"
-								,Parameter_Type = "Urai_Fen"
 								,Parameter_Type = "Bossk"
-								,Parameter_Type = "Luke_Skywalker_Jedi"
-								,Parameter_Type = "Yoda"}
+								,Parameter_Type = "Luke_Skywalker_Jedi" }
 	</Has_Infantry_Hero>
 
 	<Has_Vehicle_Hero>
-		Variable_Self.HasUnit { Parameter_Type = "General_Veers"
-								,Parameter_Type = "Tactical_R2_3PO_Team" }
+		Variable_Self.HasUnit { Parameter_Type = "General_Veers" }
 	</Has_Vehicle_Hero>
 	<!-- 
 	Do we have a use for this
@@ -891,8 +880,7 @@
 		(
 			Variable_Target.HasBuiltObject {Parameter_Type = "Empire_Anti_Vehicle_Turret", 
 											Parameter_Type = "Rebel_Anti_Vehicle_Turret",
-											Parameter_Type = "Pirate_Anti_Vehicle_Turret",
-											Parameter_Type = "Underworld_Torpedo_Turret"}
+											Parameter_Type = "Pirate_Anti_Vehicle_Turret"}
 			*
 			(5 > Function_Need_AntiVehicle_Turret.Evaluate)
 			+

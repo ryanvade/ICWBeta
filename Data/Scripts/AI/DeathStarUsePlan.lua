@@ -45,7 +45,7 @@ require("pgevents")
 
 function Definitions()
 	
-	Category = "Death_Star_Use"
+	Category = "AlwaysOff"
 	MinContrastScale = 0.75
 	MaxContrastScale = 1.75
 	TaskForce = {

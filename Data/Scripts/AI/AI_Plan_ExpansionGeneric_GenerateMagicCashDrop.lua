@@ -43,7 +43,7 @@ require("pgevents")
 
 
 function Definitions()	
-	Category = "Generate_Magic_Cash_Drop | Skirmish_Generate_Magic_Cash_Drop_Space | Skirmish_Generate_Magic_Cash_Drop_Land"
+	Category = "Skirmish_Generate_Magic_Cash_Drop_Space | Skirmish_Generate_Magic_Cash_Drop_Land"
 	IgnoreTarget = true
 	
 	TaskForce = {

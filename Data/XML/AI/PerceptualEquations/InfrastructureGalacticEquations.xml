@@ -109,29 +109,13 @@
 		+
 		10 * ((0.25 - (Variable_Self.NumStarbaseOfLevel {Parameter_Level = 3} / Variable_Self.PlanetsControlledUnnormalized)) > 0) *
 		(Variable_Target.StarbaseLevelUnnormalized == 2.0)
-		+
-		5 * ((0.15 - (Variable_Self.NumStarbaseOfLevel {Parameter_Level = 4} / Variable_Self.PlanetsControlledUnnormalized)) > 0) *
-		(Variable_Target.StarbaseLevelUnnormalized == 3.0)
-		+
-		3 * ((0.06 - (Variable_Self.NumStarbaseOfLevel {Parameter_Level = 5} / Variable_Self.PlanetsControlledUnnormalized)) > 0) *
-		(Variable_Target.StarbaseLevelUnnormalized == 4.0)
 	</Needs_Better_Buying_Capability_Space>
 
 	<!-- Currently, the Empire has steep requirements before it can build a single
 	offensive space unit.
 	-->
 	<Can_Build_Offensive_Space>
-		(Variable_Self.IsFaction {Parameter_Faction = "Rebel"})
-		+
-		(Variable_Self.IsFaction {Parameter_Faction = "Empire"})
-		*
-		(
-			(Variable_Self.HasStarbaseOfLevel {Parameter_Level = 3, Parameter_Count = 1}
-			+
-			Variable_Self.HasStarbaseOfLevel {Parameter_Level = 2, Parameter_Count = 1} *
-			(Variable_Self.TechLevel >= 2))
-			>= 1
-		)
+		Variable_Self.HasStarbaseOfLevel {Parameter_Level = 1, Parameter_Count = 1}
 	</Can_Build_Offensive_Space>
 
 	<!-- SCALE DOWN as we improve to the desired ratio of structures per planet
@@ -141,6 +125,9 @@
 	<Need_Light_Vehicle_Factory>
 		20 * clamp(0.5 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
 													Parameter_Type = "R_Ground_Light_Vehicle_Factory",
+													Parameter_Type = "C_Ground_Light_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Light_Vehicle_Factory",
+													Parameter_Type = "Y_Ground_Light_Vehicle_Factory",
 													Parameter_Only_Consider_Complete = 1.0} /
 													Variable_Self.PlanetsControlledUnnormalized), 0.1, 0.5)
 		*
@@ -149,14 +136,18 @@
 			+
 			(3.0 * Variable_Target.StructureCount {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
 													Parameter_Type = "R_Ground_Light_Vehicle_Factory",
+													Parameter_Type = "C_Ground_Light_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Light_Vehicle_Factory",
+													Parameter_Type = "Y_Ground_Light_Vehicle_Factory",
 													Parameter_Only_Consider_Complete = 1.0})
 		)
 		*
 		(3 > Variable_Target.StructureCount {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
 													Parameter_Type = "R_Ground_Light_Vehicle_Factory",
+													Parameter_Type = "C_Ground_Light_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Light_Vehicle_Factory",
+													Parameter_Type = "Y_Ground_Light_Vehicle_Factory",
 													Parameter_Only_Consider_Complete = 1.0})
-		*
-		(1.0 - Function_Need_Tech_Upgrade_Unblocked.Evaluate)
 		*
 		(Function_Should_Save_For_Desirable_Structures.Evaluate == 0)
 	</Need_Light_Vehicle_Factory>
@@ -165,6 +156,7 @@
 	<Need_Barracks>
 		20 * clamp(0.5 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Barracks",
 														Parameter_Type = "R_Ground_Barracks",
+														Parameter_Type = "P_Ground_Barracks",
 														Parameter_Only_Consider_Complete = 1.0} /
 														Variable_Self.PlanetsControlledUnnormalized), 0.1, 0.5)
 		*
@@ -173,14 +165,14 @@
 			+
 			(3.0 * Variable_Target.StructureCount {Parameter_Type = "E_Ground_Barracks",
 													Parameter_Type = "R_Ground_Barracks",
+													Parameter_Type = "P_Ground_Barracks",
 													Parameter_Only_Consider_Complete = 1.0})
 		)
 		*
 		(2 > Variable_Target.StructureCount {Parameter_Type = "E_Ground_Barracks",
 													Parameter_Type = "R_Ground_Barracks",
+													Parameter_Type = "P_Ground_Barracks",
 													Parameter_Only_Consider_Complete = 1.0})
-		*
-		(1.0 - Function_Need_Tech_Upgrade_Unblocked.Evaluate)
 		*
 		(Function_Should_Save_For_Desirable_Structures.Evaluate == 0)
 	</Need_Barracks>
@@ -195,6 +187,7 @@
 		(
 			25 * clamp(0.4 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Heavy_Vehicle_Factory",
 														Parameter_Type = "R_Ground_Heavy_Vehicle_Factory",
+														Parameter_Type = "P_Ground_Heavy_Vehicle_Factory",
 														Parameter_Only_Consider_Complete = 1.0} /
 														Variable_Self.PlanetsControlledUnnormalized), 0.1, 0.4)
 			+
@@ -202,14 +195,14 @@
 			+
 			(5.0 * Variable_Target.StructureCount {Parameter_Type = "E_Ground_Heavy_Vehicle_Factory",
 													Parameter_Type = "R_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Heavy_Vehicle_Factory",
 													Parameter_Only_Consider_Complete = 1.0})
 		)
 		*
 		(3 > Variable_Target.StructureCount {Parameter_Type = "E_Ground_Heavy_Vehicle_Factory",
 													Parameter_Type = "R_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Heavy_Vehicle_Factory",
 													Parameter_Only_Consider_Complete = 1.0})
-		*
-		(1.0 - Function_Need_Tech_Upgrade_Unblocked.Evaluate)
 	</Need_Heavy_Vehicle_Factory>
 
 	<!-- Provided we're the Empire faction
@@ -224,17 +217,23 @@
 		*
 		(
 			25 * clamp(0.4 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Advanced_Vehicle_Factory",
+															Parameter_Type = "P_Ground_Advanced_Vehicle_Factory",
+															Parameter_Type = "Y_Ground_Advanced_Vehicle_Factory",
 														Parameter_Only_Consider_Complete = 1.0} /
 														Variable_Self.PlanetsControlledUnnormalized), 0.1, 0.4)
 			+
 			5 * Function_Needs_Groundbase_Upgrade.Evaluate
 			+
-			(5.0 * Variable_Target.StructureCount {Parameter_Type = "E_Ground_Advanced_Vehicle_Factory", Parameter_Only_Consider_Complete = 1.0})
+			(5.0 * Variable_Target.StructureCount {Parameter_Type = "E_Ground_Advanced_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Advanced_Vehicle_Factory",
+													Parameter_Type = "Y_Ground_Advanced_Vehicle_Factory", 
+													Parameter_Only_Consider_Complete = 1.0})
 		)
 		*
-		(3 > Variable_Target.StructureCount {Parameter_Type = "E_Ground_Advanced_Vehicle_Factory", Parameter_Only_Consider_Complete = 1.0})
-		*
-		(1.0 - Function_Need_Tech_Upgrade_Unblocked.Evaluate)
+		(3 > Variable_Target.StructureCount {Parameter_Type = "E_Ground_Advanced_Vehicle_Factory",
+											Parameter_Type = "P_Ground_Advanced_Vehicle_Factory",
+											Parameter_Type = "Y_Ground_Advanced_Vehicle_Factory", 
+											Parameter_Only_Consider_Complete = 1.0})
 	</Need_Advanced_Vehicle_Factory>
 
 
@@ -245,21 +244,7 @@
 	otherwise, choose a planet with decent defenses that can max the starbase at a decent level
 	-->
 	<Need_First_Research_Facility>
-		(1 - Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility", Parameter_Count = 1})
-		*
-		(
-			1
-			+
-			Function_Defense_Level.Evaluate
-			+
-			(Function_Is_Connected_To_Enemy.Evaluate == 0)
-			+
-			Function_Is_Home_Planet.Evaluate
-			+
-			Variable_Target.FriendlyForce.SpaceTotal
-			+
-			Variable_Target.FriendlyForce.GroundTotal
-		)
+		0.0
 	</Need_First_Research_Facility>
 
 
@@ -274,24 +259,7 @@
 		PLUS Boost if we need to upgrade the base
 	-->
 	<Need_Research_Facility>
-		Variable_Self.IsFaction {Parameter_Faction = "Empire"}
-		*
-		(1 - Variable_Target.HasStructure {Parameter_Type = "E_Ground_Research_Facility"})
-		*
-		Function_Has_Enough_Bases_For_Tech.Evaluate
-		*
-		(Variable_Target.MaxStarbaseLevel == 5)
-		*
-		(
-			20 * (1 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Research_Facility", Parameter_Only_Consider_Complete = 1.0} / 2))
-			+
-			10 * Function_Empire_Should_Upgrade_Tech.Evaluate *
-			(1 - Variable_Self.HasStructure {Parameter_Type = "E_Ground_Research_Facility", Parameter_Count = 1})
-			+
-			3 * Function_Defense_Level.Evaluate
-			+
-			3 * Function_Needs_Groundbase_Upgrade.Evaluate
-		)
+	 0.0
 	</Need_Research_Facility>
 
 
@@ -352,7 +320,7 @@
 		(Variable_Self.PlanetsControlled >= 0.25)
 			-->
 	<No_Level_5_Starbase>
-		(Variable_Self.HasStarbaseOfLevel {Parameter_Level = 5, Parameter_Count = 1} == 0.0)
+		(Variable_Self.HasStarbaseOfLevel {Parameter_Level = 3, Parameter_Count = 1} == 0.0)
 	</No_Level_5_Starbase>
 
 	<!-- Does this planet have a starbase already? -->
@@ -417,23 +385,30 @@
 			(
 				10.0
 				*
-				(1.0 + Variable_Target.IncomeUnnormalized * Variable_Target.IncomeUnnormalized / 250000.0)
+				(1.0 + Variable_Target.IncomeUnnormalized * Variable_Target.IncomeUnnormalized / 2500.0)
 				+
-				10 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility", Parameter_Type = "Rebel_Ground_Mining_Facility", Parameter_Only_Consider_Complete = 1.0} / Variable_Self.PlanetsControlledUnnormalized))
+				10 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility", 
+															Parameter_Type = "Pentastar_Ground_Mining_Facility", 
+															Parameter_Type = "Rebel_Ground_Mining_Facility",
+															Parameter_Type = "U_Ground_Mining_Facility",
+															Parameter_Type = "Prison",
+															Parameter_Only_Consider_Complete = 1.0} / Variable_Self.PlanetsControlledUnnormalized))
 			)
 			*
-			clamp(Function_Defense_Level.Evaluate - 1, 0.0, 2.0)
+			clamp(Function_Defense_Level.Evaluate - 1, 0.5, 2.0)
 			*
 			((Variable_Target.MaxStructureSlotsUnnormalized / 2.0) > Variable_Target.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility",
 																										Parameter_Type = "Rebel_Ground_Mining_Facility",
+																										Parameter_Type = "Pentastar_Ground_Mining_Facility",
+																										Parameter_Type = "U_Ground_Mining_Facility",
+																										Parameter_Type = "Prison",
 																										Parameter_Only_Consider_Complete = 1.0})
-			*
-			Variable_Self.HasStructure {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
-											Parameter_Type = "R_Ground_Light_Vehicle_Factory",
-											Parameter_Only_Consider_Complete = 1.0}
 			*
 			Variable_Self.HasStructure {Parameter_Type = "E_Ground_Barracks",
 											Parameter_Type = "R_Ground_Barracks",
+											Parameter_Type = "P_Ground_Barracks",
+											Parameter_Type = "C_Ground_Barracks",
+											Parameter_Type = "Y_Ground_Barracks",
 											Parameter_Only_Consider_Complete = 1.0}
 			*
 			(Function_Should_Save_For_Desirable_Structures.Evaluate == 0)
@@ -442,6 +417,9 @@
 			*
 			(Variable_Self.HasStructure {Parameter_Type = "Empire_Ground_Mining_Facility",
 											Parameter_Type = "Rebel_Ground_Mining_Facility",
+											Parameter_Type = "Pentastar_Ground_Mining_Facility",
+											Parameter_Type = "U_Ground_Mining_Facility",
+											Parameter_Type = "Prison",
 											Parameter_Only_Consider_Complete = 1.0} == 0.0)
 		)
 		*
@@ -573,44 +551,7 @@
 		 Game.FriendlyForce.SpaceTotalUnnormalized - Game.EnemyForce.SpaceTotalUnnormalized
 		 -->
 	<Empire_Should_Upgrade_Tech>
-		(Variable_Self.IsFaction {Parameter_Faction = "Empire"})
-		*
-		(1.0 - Variable_Self.HasUnit{Parameter_Type = "Death_Star", Parameter_Count = 1, Parameter_Only_Consider_Complete = 1.0})
-		*
-		Function_Has_Enough_Bases_For_Tech.Evaluate
-		*
-		(
-			clamp(Function_Has_Enough_Space_Force_Globally.Evaluate +
-					(Game.Timeline > Variable_Self.TechLevel) * (Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility"}) ,
-					0.0, 1.0)
-			*
-			(
-				(1 - Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility"}) *
-				((0.7 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "E_Ground_Research_Facility"}) +
-				(0.9 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "E_Ground_Research_Facility", Parameter_Category = AIGoalCategoryType[MajorItem]}) >= 1.0)
-				+
-				Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility"} *
-				(Variable_Self.TechLevel == 1) *
-				((0.7 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Primary_Hyperdrive"}) +
-				(0.9 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Primary_Hyperdrive", Parameter_Category = AIGoalCategoryType[MajorItem]}) >= 1.0)
-				+
-				(Variable_Self.TechLevel == 2) *
-				((0.7 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Shield_Gen"}) +
-				(0.9 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Shield_Gen", Parameter_Category = AIGoalCategoryType[MajorItem]}) >= 1.0)
-				+
-				(Variable_Self.TechLevel == 3) *
-				((0.7 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Superlaser_Core"}) +
-				(0.9 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Superlaser_Core", Parameter_Category = AIGoalCategoryType[MajorItem]}) >= 1.0)
-				+
-				(Variable_Self.TechLevel == 4) *
-				((0.7 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Durasteel"}) +
-				(0.9 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Durasteel", Parameter_Category = AIGoalCategoryType[MajorItem]}) >= 1.0)
-			)
-			+
-			(Variable_Self.TechLevel == 5) *
-			((0.7 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "Death_Star"}) +
-			(0.9 >= Variable_Self.BudgetFractionToBuild{Parameter_Type = "Death_Star", Parameter_Category = AIGoalCategoryType[MajorItem]}) >= 1.0)
-		)
+		0.0
 	</Empire_Should_Upgrade_Tech>
 
 
@@ -632,8 +573,6 @@
 				(1 - Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility"})
 				+
 				Variable_Self.CanAdvanceTech
-				+
-				(Variable_Self.TechLevel == 5) * (1.0 - Variable_Self.HasUnit{Parameter_Type = "Death_Star"})
 			)
 			>= 1.0
 		)
@@ -657,29 +596,7 @@
 		(
 			(1 - Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility", Parameter_Only_Consider_Complete = 1}) *
 			(Variable_Self.BudgetFractionToBuild{Parameter_Type = "E_Ground_Research_Facility"} >= 0.8)
-			+
-			Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility", Parameter_Only_Consider_Complete = 1} *
-			(Variable_Self.TechLevel == 1) *
-			(Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Primary_Hyperdrive"} >= 0.8)
-			+
-			Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility", Parameter_Only_Consider_Complete = 1} *
-			(Variable_Self.TechLevel == 2) *
-			(Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Shield_Gen"} >= 0.8)
-			+
-			Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility", Parameter_Only_Consider_Complete = 1} *
-			(Variable_Self.TechLevel == 3) *
-			(Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Superlaser_Core"} >= 0.8)
-			+
-			Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility", Parameter_Only_Consider_Complete = 1} *
-			(Variable_Self.TechLevel == 4) *
-			(Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Durasteel"} >= 0.8)
-			+
-			Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility", Parameter_Only_Consider_Complete = 1} *
-			(Variable_Self.TechLevel == 5) *
-			(Variable_Self.BudgetFractionToBuild{Parameter_Type = "Death_Star"} >= 0.80)
 		)
-		+
-		Variable_Self.HasUnit{Parameter_Type = "Death_Star", Parameter_Only_Consider_Complete = 1}
 	</Empire_Tech_Untrigger>
 
 	<Can_Reclaim_Excess_MajorItem_Budget>
@@ -696,23 +613,23 @@
 		(Variable_Target.GroundBaseLevelUnnormalized > 1.0)
 		*
 		(
-			(Variable_Self.HasTechToProduce {Parameter_Type = "E_Ground_Heavy_Vehicle_Factory", Parameter_Type = "R_Ground_Heavy_Vehicle_Factory"})
+			(Variable_Self.HasTechToProduce {Parameter_Type = "E_Ground_Heavy_Vehicle_Factory", Parameter_Type = "R_Ground_Heavy_Vehicle_Factory", Parameter_Type = "P_Ground_Heavy_Vehicle_Factory"})
 			*
 			(Function_Need_Heavy_Vehicle_Factory.Evaluate > 10.0)
 			+
-			(Variable_Self.HasTechToProduce {Parameter_Type = "E_Ground_Advanced_Vehicle_Factory"})
+			(Variable_Self.HasTechToProduce {Parameter_Type = "E_Ground_Advanced_Vehicle_Factory", Parameter_Type = "P_Ground_Advanced_Vehicle_Factory"})
 			*
 			(Function_Need_Advanced_Vehicle_Factory.Evaluate > 10.0)
 			+
-			(Variable_Self.HasTechToProduce {Parameter_Type = "Ground_Empire_Hypervelocity_Gun", Parameter_Type = "Ground_Ion_Cannon"})
+			(Variable_Self.HasTechToProduce {Parameter_Type = "Ground_Empire_Hypervelocity_Gun", Parameter_Type = "Ground_Pentastar_Hypervelocity_Gun", Parameter_Type = "Ground_Ion_Cannon"})
 			*
 			(Function_Needs_Weapon.Evaluate > 15.0)
 			+
-			(Variable_Self.HasTechToProduce {Parameter_Type = "E_Ground_Base_Shield", Parameter_Type = "R_Ground_Base_Shield"})
+			(Variable_Self.HasTechToProduce {Parameter_Type = "E_Ground_Base_Shield", Parameter_Type = "R_Ground_Base_Shield", Parameter_Type = "P_Ground_Base_Shield", Parameter_Type = "U_Ground_Base_Shield"})
 			*
 			(Function_Needs_Base_Shield.Evaluate > 15.0)
 			+
-			(Variable_Self.HasTechToProduce {Parameter_Type = "E_Galactic_Turbolaser_Tower_Defenses", Parameter_Type = "R_Galactic_Turbolaser_Tower_Defenses"})
+			(Variable_Self.HasTechToProduce {Parameter_Type = "E_Galactic_Turbolaser_Tower_Defenses", Parameter_Type = "R_Galactic_Turbolaser_Tower_Defenses", Parameter_Type = "U_Galactic_Turbolaser_Tower_Defenses", Parameter_Type = "Y_Galactic_Turbolaser_Tower_Defenses"})
 			*
 			(Function_Needs_Turbolasers.Evaluate > 15.0)
 		)

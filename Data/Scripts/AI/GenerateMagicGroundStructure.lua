@@ -43,7 +43,7 @@ require("pgevents")
 
 
 function Definitions()	
-	Category = "Generate_Magic_Ground_Structure"
+	Category = "AlwaysOff"
 	IgnoreTarget = true
 	
 	TaskForce = {

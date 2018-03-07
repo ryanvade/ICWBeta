@@ -9,6 +9,24 @@
 <!-- =============================================  IMPERIAL SPACE UNITS ============================================= -->
 <!-- =============================================                       ============================================= -->
 
+<HardPoint Name="HP_Asteroid_Dummy">
+		<Type> HARD_POINT_SHIELD_GENERATOR </Type>
+					<Is_Targetable>No</Is_Targetable>
+					<Is_Destroyable>No</Is_Destroyable>
+					<Tooltip_Text>TEXT_SHIELD_GENERATOR_HARDPOINT</Tooltip_Text>
+					<Health>250.0</Health>
+
+		<Death_Explosion_Particles> Large_Asteroid_Explosion </Death_Explosion_Particles>
+
+		<Death_Breakoff_Prop> </Death_Breakoff_Prop>
+
+					<Model_To_Attach></Model_To_Attach>
+					<Attachment_Bone>Root</Attachment_Bone>
+					<Collision_Mesh></Collision_Mesh>
+					<Damage_Decal></Damage_Decal>
+					<Damage_Particles></Damage_Particles>
+	</HardPoint>
+
 <!-- Tartan -->
 
 <HardPoint Name="HP_Tartan_Cruiser_00">
@@ -3762,7 +3780,7 @@
             <Attachment_Bone>Engines</Attachment_Bone> <!-- This is an attachment bone for the HUD reticle centering, even though no model is attached -->
             <Collision_Mesh>Engines_Coll</Collision_Mesh>
             <Damage_Decal />
-            <Damage_Particles>HP_E_EMITDAMAGE</Damage_Particles>
+            <Damage_Particles>Engines</Damage_Particles>
             <Engine_Particles>HP_E_MAINENGINES</Engine_Particles>
     </HardPoint>
 
@@ -3806,7 +3824,7 @@
             <Attachment_Bone>Shield</Attachment_Bone>
             <Collision_Mesh>Shield_Coll</Collision_Mesh>
             <Damage_Decal>HP_M-C_BLAST</Damage_Decal>
-            <Damage_Particles>Shield_emit</Damage_Particles>
+            <Damage_Particles>Shield</Damage_Particles>
     </HardPoint>
 
 	<HardPoint Name="HP_Lucrehulk_Turbo01">
@@ -3821,15 +3839,15 @@
 
 
             <Model_To_Attach></Model_To_Attach>
-            <Attachment_Bone>Turbo1</Attachment_Bone>
-            <Collision_Mesh>Turbo1</Collision_Mesh>
-            <Damage_Decal>Turbo1</Damage_Decal>
-            <Damage_Particles>Turbo1</Damage_Particles>
+            <Attachment_Bone>Turbo01</Attachment_Bone>
+            <Collision_Mesh>Turbo01</Collision_Mesh>
+            <Damage_Decal>Turbo01</Damage_Decal>
+            <Damage_Particles>Turbo01</Damage_Particles>
 
 			<Death_Breakoff_Prop>  </Death_Breakoff_Prop>
 
-            <Fire_Bone_A>Turbo1</Fire_Bone_A>
-            <Fire_Bone_B>Turbo1</Fire_Bone_B>
+            <Fire_Bone_A>Turbo01_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Turbo01_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
            <Fire_Projectile_Type>Proj_Ship_Turbolaser_Green</Fire_Projectile_Type>
@@ -3868,8 +3886,8 @@
 
 			<Death_Breakoff_Prop>  </Death_Breakoff_Prop>
 
-            <Fire_Bone_A>Turbo02</Fire_Bone_A>
-            <Fire_Bone_B>Turbo02</Fire_Bone_B>
+            <Fire_Bone_A>Turbo02_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Turbo02_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
            <Fire_Projectile_Type>Proj_Ship_Turbolaser_Green</Fire_Projectile_Type>
@@ -3908,8 +3926,8 @@
 
 			<Death_Breakoff_Prop>  </Death_Breakoff_Prop>
 
-            <Fire_Bone_A>Turbo03</Fire_Bone_A>
-            <Fire_Bone_B>Turbo03</Fire_Bone_B>
+            <Fire_Bone_A>Turbo03_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Turbo03_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
            <Fire_Projectile_Type>Proj_Ship_Turbolaser_Green</Fire_Projectile_Type>
@@ -3948,8 +3966,8 @@
 
 			<Death_Breakoff_Prop>  </Death_Breakoff_Prop>
 
-            <Fire_Bone_A>Turbo04</Fire_Bone_A>
-            <Fire_Bone_B>Turbo04</Fire_Bone_B>
+            <Fire_Bone_A>Turbo04_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Turbo04_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
            <Fire_Projectile_Type>Proj_Ship_Turbolaser_Green</Fire_Projectile_Type>
@@ -3988,8 +4006,8 @@
 			<Death_Breakoff_Prop> </Death_Breakoff_Prop>
 
 
-            <Fire_Bone_A>Laser01</Fire_Bone_A>
-            <Fire_Bone_B>Laser01</Fire_Bone_B>
+            <Fire_Bone_A>Laser01_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Laser01_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Small_Laser_Cannon_Green</Fire_Projectile_Type>
@@ -4029,8 +4047,8 @@
 			<Death_Breakoff_Prop> </Death_Breakoff_Prop>
 
 
-            <Fire_Bone_A>Laser02</Fire_Bone_A>
-            <Fire_Bone_B>Laser02</Fire_Bone_B>
+            <Fire_Bone_A>Laser02_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Laser02_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Small_Laser_Cannon_Green</Fire_Projectile_Type>
@@ -4070,8 +4088,8 @@
 			<Death_Breakoff_Prop> </Death_Breakoff_Prop>
 
 
-            <Fire_Bone_A>Laser03</Fire_Bone_A>
-            <Fire_Bone_B>Laser03</Fire_Bone_B>
+            <Fire_Bone_A>Laser03_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Laser03_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Small_Laser_Cannon_Green</Fire_Projectile_Type>
@@ -4111,8 +4129,8 @@
 			<Death_Breakoff_Prop> </Death_Breakoff_Prop>
 
 
-            <Fire_Bone_A>Laser04</Fire_Bone_A>
-            <Fire_Bone_B>Laser04</Fire_Bone_B>
+            <Fire_Bone_A>Laser04_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Laser04_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Small_Laser_Cannon_Green</Fire_Projectile_Type>
@@ -4152,8 +4170,8 @@
 			<Death_Breakoff_Prop> </Death_Breakoff_Prop>
 
 
-            <Fire_Bone_A>Laser05</Fire_Bone_A>
-            <Fire_Bone_B>Laser05</Fire_Bone_B>
+            <Fire_Bone_A>Laser05_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Laser05_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Small_Laser_Cannon_Green</Fire_Projectile_Type>
@@ -4193,8 +4211,8 @@
 			<Death_Breakoff_Prop> </Death_Breakoff_Prop>
 
 
-            <Fire_Bone_A>Laser06</Fire_Bone_A>
-            <Fire_Bone_B>Laser06</Fire_Bone_B>
+            <Fire_Bone_A>Laser06_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Laser06_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Small_Laser_Cannon_Green</Fire_Projectile_Type>
@@ -4234,8 +4252,8 @@
 			<Death_Breakoff_Prop> </Death_Breakoff_Prop>
 
 
-            <Fire_Bone_A>Laser07</Fire_Bone_A>
-            <Fire_Bone_B>Laser07</Fire_Bone_B>
+            <Fire_Bone_A>Laser07_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Laser07_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Small_Laser_Cannon_Green</Fire_Projectile_Type>
@@ -4275,8 +4293,8 @@
 			<Death_Breakoff_Prop> </Death_Breakoff_Prop>
 
 
-            <Fire_Bone_A>Laser08</Fire_Bone_A>
-            <Fire_Bone_B>Laser08</Fire_Bone_B>
+            <Fire_Bone_A>Laser08_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Laser08_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Small_Laser_Cannon_Green</Fire_Projectile_Type>
@@ -4316,8 +4334,8 @@
 			<Death_Breakoff_Prop> </Death_Breakoff_Prop>
 
 
-            <Fire_Bone_A>Laser09</Fire_Bone_A>
-            <Fire_Bone_B>Laser09</Fire_Bone_B>
+            <Fire_Bone_A>Laser09_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Laser09_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Small_Laser_Cannon_Green</Fire_Projectile_Type>
@@ -4357,8 +4375,8 @@
 			<Death_Breakoff_Prop> </Death_Breakoff_Prop>
 
 
-            <Fire_Bone_A>Laser10</Fire_Bone_A>
-            <Fire_Bone_B>Laser10</Fire_Bone_B>
+            <Fire_Bone_A>Laser10_FP01</Fire_Bone_A>
+            <Fire_Bone_B>Laser10_FP02</Fire_Bone_B>
             <Fire_Cone_Width>180</Fire_Cone_Width>
             <Fire_Cone_Height>180.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Small_Laser_Cannon_Green</Fire_Projectile_Type>
@@ -8366,8 +8384,8 @@
 
 			<Death_Breakoff_Prop>  </Death_Breakoff_Prop>
 
-            <Fire_Bone_A>HP04</Fire_Bone_A>
-            <Fire_Bone_B>HP04</Fire_Bone_B>
+            <Fire_Bone_A>HP04_FP01</Fire_Bone_A>
+            <Fire_Bone_B>HP04_FP02</Fire_Bone_B>
             <Fire_Cone_Width>160.0</Fire_Cone_Width>
             <Fire_Cone_Height>130.0</Fire_Cone_Height>
            <Fire_Projectile_Type>Proj_Ship_Ion_Cannon</Fire_Projectile_Type>
@@ -8409,8 +8427,8 @@
 
 			<Death_Breakoff_Prop>  </Death_Breakoff_Prop>
 
-            <Fire_Bone_A>HP05</Fire_Bone_A>
-            <Fire_Bone_B>HP05</Fire_Bone_B>
+            <Fire_Bone_A>HP05_FP01</Fire_Bone_A>
+            <Fire_Bone_B>HP05_FP02</Fire_Bone_B>
             <Fire_Cone_Width>160.0</Fire_Cone_Width>
             <Fire_Cone_Height>130.0</Fire_Cone_Height>
            <Fire_Projectile_Type>Proj_Ship_Ion_Cannon</Fire_Projectile_Type>
@@ -8452,8 +8470,8 @@
 
 			<Death_Breakoff_Prop>  </Death_Breakoff_Prop>
 
-            <Fire_Bone_A>HP07</Fire_Bone_A>
-            <Fire_Bone_B>HP07</Fire_Bone_B>
+            <Fire_Bone_A>HP07_FP01</Fire_Bone_A>
+            <Fire_Bone_B>HP07_FP02</Fire_Bone_B>
             <Fire_Cone_Width>160</Fire_Cone_Width>
             <Fire_Cone_Height>130.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Turbolaser_Green</Fire_Projectile_Type>
@@ -8493,8 +8511,8 @@
 
 			<Death_Breakoff_Prop>  </Death_Breakoff_Prop>
 
-            <Fire_Bone_A>HP06</Fire_Bone_A>
-            <Fire_Bone_B>HP06</Fire_Bone_B>
+            <Fire_Bone_A>HP06_FP01</Fire_Bone_A>
+            <Fire_Bone_B>HP06_FP02</Fire_Bone_B>
             <Fire_Cone_Width>160</Fire_Cone_Width>
             <Fire_Cone_Height>130.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Turbolaser_Green</Fire_Projectile_Type>
@@ -8534,8 +8552,8 @@
 
 			<Death_Breakoff_Prop>  </Death_Breakoff_Prop>
 
-            <Fire_Bone_A>HP03</Fire_Bone_A>
-            <Fire_Bone_B>HP03</Fire_Bone_B>
+            <Fire_Bone_A>HP03_FP01</Fire_Bone_A>
+            <Fire_Bone_B>HP03_FP02</Fire_Bone_B>
             <Fire_Cone_Width>160</Fire_Cone_Width>
             <Fire_Cone_Height>130.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Turbolaser_Green</Fire_Projectile_Type>
@@ -8570,13 +8588,13 @@
             <Model_To_Attach></Model_To_Attach>
             <Attachment_Bone>HP02</Attachment_Bone>
             <Collision_Mesh>HP02_Coll</Collision_Mesh>
-            <Damage_Decal>HP_F-L_BLAST</Damage_Decal>
+            <Damage_Decal>HP02</Damage_Decal>
             <Damage_Particles>HP02</Damage_Particles>
 
 			<Death_Breakoff_Prop>  </Death_Breakoff_Prop>
 
-            <Fire_Bone_A>HP02</Fire_Bone_A>
-            <Fire_Bone_B>HP02</Fire_Bone_B>
+            <Fire_Bone_A>HP02_FP01</Fire_Bone_A>
+            <Fire_Bone_B>HP02_FP01</Fire_Bone_B>
             <Fire_Cone_Width>160</Fire_Cone_Width>
             <Fire_Cone_Height>130.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Turbolaser_Green</Fire_Projectile_Type>
@@ -8610,11 +8628,11 @@
             <Model_To_Attach></Model_To_Attach>
             <Attachment_Bone>HP01</Attachment_Bone>
             <Collision_Mesh>HP01_Coll</Collision_Mesh>
-            <Damage_Decal>HP_M-R_BLAST</Damage_Decal>
+            <Damage_Decal>HP01</Damage_Decal>
             <Damage_Particles>HP01</Damage_Particles>
 
-            <Fire_Bone_A>HP01</Fire_Bone_A>
-            <Fire_Bone_B>HP01</Fire_Bone_B>
+            <Fire_Bone_A>HP01_FP01</Fire_Bone_A>
+            <Fire_Bone_B>HP01_FP02</Fire_Bone_B>
             <Fire_Cone_Width>120.0</Fire_Cone_Width>
             <Fire_Cone_Height>70.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Turbolaser_Green_Dual_Heavy</Fire_Projectile_Type>
@@ -8679,7 +8697,7 @@
             <Attachment_Bone>Grav</Attachment_Bone>
             <Collision_Mesh>Gravity_Well_Coll</Collision_Mesh>
             <Damage_Decal>HP_C-M_BLAST</Damage_Decal>
-            <Damage_Particles>Grav_Emit</Damage_Particles>
+            <Damage_Particles>Grav</Damage_Particles>
     </HardPoint>
 
     <HardPoint Name="HP_DSD_Shields">
@@ -8698,7 +8716,7 @@
             <Attachment_Bone>Shield</Attachment_Bone>
             <Collision_Mesh>Shield_Coll</Collision_Mesh>
             <Damage_Decal>HP_M-C_BLAST</Damage_Decal>
-            <Damage_Particles>Shield_emit</Damage_Particles>
+            <Damage_Particles>Shield</Damage_Particles>
     </HardPoint>
 
 	<!-- Escort Carrier -->
@@ -8789,39 +8807,39 @@
 
 	<HardPoint Name="HP_Escort_Shields">
 			<Type> HARD_POINT_SHIELD_GENERATOR </Type>
-            <Is_Targetable>Yes</Is_Targetable>
-            <Is_Destroyable>Yes</Is_Destroyable>
-            <Tooltip_Text>TEXT_SHIELD_GENERATOR_HARDPOINT</Tooltip_Text>
-            <Health>100.0</Health>
+      <Is_Targetable>Yes</Is_Targetable>
+      <Is_Destroyable>Yes</Is_Destroyable>
+      <Tooltip_Text>TEXT_SHIELD_GENERATOR_HARDPOINT</Tooltip_Text>
+      <Health>100.0</Health>
 
 			<Death_Explosion_Particles> Large_Explosion_Space_Empire </Death_Explosion_Particles>
 			<Death_Explosion_SFXEvent>Unit_Hardpoint_Shields_Death</Death_Explosion_SFXEvent>
 
-			<Death_Breakoff_Prop> Hardpoint_Breakoff_Victory_Shield_Gen </Death_Breakoff_Prop>
+			<Death_Breakoff_Prop> </Death_Breakoff_Prop>
 
-            <Model_To_Attach />
-            <Attachment_Bone>Shieldgen</Attachment_Bone>
-            <Collision_Mesh>Shield_Coll</Collision_Mesh>
-            <Damage_Decal />
-            <Damage_Particles>HP_C-B_EMITDAMAGE</Damage_Particles>
+      <Model_To_Attach />
+			<Attachment_Bone>Shieldgen</Attachment_Bone>
+      <Collision_Mesh>Shield_Coll</Collision_Mesh>
+      <Damage_Decal />
+      <Damage_Particles>Shieldgen</Damage_Particles>
     </HardPoint>
 
     <HardPoint Name="HP_Escort_Engines">
 			<Type> HARD_POINT_ENGINE </Type>
-            <Is_Targetable>Yes</Is_Targetable>
-            <Is_Destroyable>Yes</Is_Destroyable>
-            <Tooltip_Text>TEXT_ENGINE_HARDPOINT</Tooltip_Text>
-            <Health>100.0</Health>
+      <Is_Targetable>Yes</Is_Targetable>
+      <Is_Destroyable>Yes</Is_Destroyable>
+      <Tooltip_Text>TEXT_ENGINE_HARDPOINT</Tooltip_Text>
+      <Health>100.0</Health>
 
-				<Death_Explosion_Particles> Large_Explosion_Space_Empire </Death_Explosion_Particles>
-				<Death_Explosion_SFXEvent>Unit_Hardpoint_Engines_Death</Death_Explosion_SFXEvent>
+			<Death_Explosion_Particles> Large_Explosion_Space_Empire </Death_Explosion_Particles>
+			<Death_Explosion_SFXEvent>Unit_Hardpoint_Engines_Death</Death_Explosion_SFXEvent>
 
-            <Model_To_Attach />
-            <Attachment_Bone>Engines</Attachment_Bone> <!-- This is an attachment bone for the HUD reticle centering, even though no model is attached -->
-            <Collision_Mesh>Engines_Coll</Collision_Mesh>
-            <Damage_Decal />
-            <Damage_Particles>HP_E_EMITDAMAGE</Damage_Particles>
-            <Engine_Particles>HP_E_MAINENGINES</Engine_Particles>
+      <Model_To_Attach />
+      <Attachment_Bone>Engines</Attachment_Bone> <!-- This is an attachment bone for the HUD reticle centering, even though no model is attached -->
+      <Collision_Mesh>Engines_Coll</Collision_Mesh>
+      <Damage_Decal />
+      <Damage_Particles>Engines</Damage_Particles>
+      <Engine_Particles></Engine_Particles>
     </HardPoint>
 
 	<HardPoint Name="HP_Escort_Hangar">
@@ -8830,6 +8848,7 @@
 		<Is_Destroyable>Yes</Is_Destroyable>
 		<Attachment_Bone>Hangar</Attachment_Bone>
 		<Collision_Mesh>Hangar</Collision_Mesh>
+		<Damage_Particles>Hangar</Damage_Particles>
 		<Tooltip_Text>TEXT_FIGHTER_BAY_HARDPOINT</Tooltip_Text>
 		<Health>100.0</Health>
 		<Death_Explosion_Particles> Large_Explosion_Space_Empire </Death_Explosion_Particles>  <!-- STUBBED PLACEHOLDER -->

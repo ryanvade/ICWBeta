@@ -12,8 +12,8 @@
 --*   @Date:                2017-11-24T12:43:51+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            TRCommands.lua
---*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2017-12-21T12:31:30+01:00
+--*   @Last modified by:    svenmarcus
+--*   @Last modified time:  2018-03-01T15:22:09+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -94,7 +94,7 @@ function UseTurboIfAllowed(units)
   if Is_A_Taskforce(units) then
     unitList = MainForce.Get_Unit_Table()
   elseif type(units) == "userdata" then
-    unitList = { unit }
+    unitList = { units }
   end
 
   if not unitList then

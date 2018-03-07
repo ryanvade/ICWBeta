@@ -45,7 +45,7 @@ require("pgevents")
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
-	Category = "Build_Scanner"
+	Category = "AlwaysOff"
 	IgnoreTarget = true
 	TaskForce = {
 	{

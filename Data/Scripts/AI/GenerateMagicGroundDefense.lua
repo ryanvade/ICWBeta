@@ -43,7 +43,7 @@ require("pgevents")
 
 
 function Definitions()	
-	Category = "Generate_Magic_Ground_Defense"
+	Category = "AlwaysOff"
 	IgnoreTarget = true
 	
 	TaskForce = {
@@ -53,7 +53,6 @@ function Definitions()
 		,"Infantry = 3"
 		,"Vehicle = 2"
 		,"Vehicle = 1"
-		,"-F9TZ_Cloaking_Transport_Company"
 		,"-HAV_Juggernaut_Company"
 		,"-Gallofree_HTT_Company"	
 	}

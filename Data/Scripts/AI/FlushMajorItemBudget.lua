@@ -47,7 +47,7 @@ require("pgevents")
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
-	Category = "Flush_MajorItem_Budget | Reclaim_Excess_MajorItem_Budget"
+	Category = "AlwaysOff"
 	IgnoreTarget = true
 	TaskForce = {
 	-- First Task Force

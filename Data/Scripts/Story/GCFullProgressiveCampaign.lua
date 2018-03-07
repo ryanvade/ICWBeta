@@ -385,42 +385,42 @@ function PellaeonSpawns(message)
     start_planet = FindPlanet("Nzoth")
     if start_planet then
       ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-      spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Yevetha_Star_Destroyer_Two", "Yevetha_Star_Destroyer_Two", "Yevetha_Victory_One", "Yevetha_Victory_Two", "Spaar_Aramadia", "Toorr_Devotion", "Voota_Splendor", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
+      spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Yevetha_Victory_Two", "Spaar_Aramadia", "Toorr_Devotion", "Voota_Splendor", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
       Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,false,false)
     end
 
 	start_planet = FindPlanet("Doornik")
   if start_planet then
   ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-	spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Yevetha_Star_Destroyer_Two", "Yevetha_Star_Destroyer_Two", "Yevetha_Victory_One", "Yevetha_Victory_One", "Attan_Beauty", "Noorr_Purity", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
+	spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Attan_Beauty", "Noorr_Purity", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
     Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,false,false)
   end
 
 	start_planet = FindPlanet("Zfell")
   if start_planet then
   ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-	spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Yevetha_Star_Destroyer_Two", "Yevetha_Star_Destroyer_Two", "Yevetha_Victory_One", "Yevetha_Victory_One", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
+	spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
     Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,false,false)
   end
 
 	start_planet = FindPlanet("ILC905")
   if start_planet then
   ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-     spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Yevetha_Star_Destroyer_Two", "Yevetha_Star_Destroyer_Two", "Yevetha_Victory_One", "Yevetha_Victory_One", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
+     spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
     Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,false,false)
   end
 
 	start_planet = FindPlanet("Polneye")
   if start_planet then
   ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-	spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Yevetha_Star_Destroyer_Two", "Yevetha_Star_Destroyer_Two", "Yevetha_Victory_One", "Yevetha_Victory_One", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
+	spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
     Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,false,false)
   end
 
 	start_planet = FindPlanet("Jtptan")
   if start_planet then
   ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-	spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Yevetha_Star_Destroyer_Two", "Yevetha_Star_Destroyer_Two", "Yevetha_Victory_One", "Yevetha_Victory_One", "Bille_Pride", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
+	spawn_list_Yevethans = { "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Armadia", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Bille_Pride", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
     Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,false,false)
   end
 

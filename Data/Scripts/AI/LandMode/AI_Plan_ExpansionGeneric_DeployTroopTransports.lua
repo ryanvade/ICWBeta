@@ -50,7 +50,7 @@ function Definitions()
 	{
 		{
 			"MainForce"
-			,"HAV_Juggernaut | F9TZ_Cloaking_Transport | Gallofree_HTT_Transport = 1,5"
+			,"HAV_Juggernaut | Gallofree_HTT_Transport = 1,5"
 		}
 	}
 

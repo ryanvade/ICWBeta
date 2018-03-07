@@ -77,19 +77,14 @@
 	<BasicEmpireInfrastructureBudgetAllocation>
 		1.1 
 		* 
-		(2 + 0.5 * (Variable_Self.TechLevel) - Variable_Self.MaxedStarbases - Variable_Self.MaxedGroundbases) 
-		* 
-		(1.0 + Variable_Self.Maintenance)
+		(2.5 - Variable_Self.MaxedStarbases - Variable_Self.MaxedGroundbases) 
 		*
-		(1.0 + 2.0 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility"} / Variable_Self.PlanetsControlledUnnormalized)))
+		(1.0 + 2.0 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility", 
+															Parameter_Type = "Pentastar_Ground_Mining_Facility",
+															Parameter_Type = "U_Ground_Mining_Facility",
+															Parameter_Type = "Generic_Tradestation"} / Variable_Self.PlanetsControlledUnnormalized)))
 		+
 		6 * (1 - Function_Can_Build_Offensive_Space.Evaluate)
-		+
-		10 * Function_Need_Tech_Upgrade_Unblocked.Evaluate
-		+
-		10 * ((Variable_Self.HasStructure {Parameter_Type = "E_Ground_Light_Vehicle_Factory"} == 0) +
-				(Variable_Self.HasStructure {Parameter_Type = "E_Ground_Barracks"} == 0) +
-				(Variable_Self.HasStructure {Parameter_Type = "Empire_Ground_Mining_Facility"} == 0))
 	</BasicEmpireInfrastructureBudgetAllocation>
 
 	<!-- Based on average age of scouted information -->
@@ -230,15 +225,13 @@
 	<BasicRebelInfrastructureBudgetAllocation>
 		1.1 
 		* 
-		(2 + 0.5 * (Variable_Self.TechLevel) - Variable_Self.MaxedStarbases - Variable_Self.MaxedGroundbases) 
-		* 
-		(1.0 + Variable_Self.Maintenance)
+		(2.5 - Variable_Self.MaxedStarbases - Variable_Self.MaxedGroundbases) 
 		*
-		(1.0 + 2.0 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Rebel_Ground_Mining_Facility"} / Variable_Self.PlanetsControlledUnnormalized)))
-		+
-		10 * ((Variable_Self.HasStructure {Parameter_Type = "R_Ground_Light_Vehicle_Factory"} == 0) +
-				(Variable_Self.HasStructure {Parameter_Type = "R_Ground_Barracks"} == 0) +
-				(Variable_Self.HasStructure {Parameter_Type = "Rebel_Ground_Mining_Facility"} == 0))	
+		(1.0 + 2.0 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Rebel_Ground_Mining_Facility", 
+															Parameter_Type = "Empire_Ground_Mining_Facility", 
+															Parameter_Type = "Pentastar_Ground_Mining_Facility",
+															Parameter_Type = "U_Ground_Mining_Facility",
+															Parameter_Type = "Generic_Tradestation" } / Variable_Self.PlanetsControlledUnnormalized)))
 	</BasicRebelInfrastructureBudgetAllocation>
 	
 	<!-- Based on average age of scouted information -->

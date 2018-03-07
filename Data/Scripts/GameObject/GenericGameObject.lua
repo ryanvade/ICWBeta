@@ -40,7 +40,7 @@ function State_Init(message)
             ScriptExit()
         end
 
-        GLOBALS = require("GameGlobals")
+        
         TM = require("TRGameModeTransactions")
         TypeLibrary = require("GameObjectLibrary")
 
@@ -49,6 +49,8 @@ function State_Init(message)
             ScriptExit()
         end
 
+		GLOBALS = require("GameGlobals")
+		
         GLOBALS.Init()
 
         local scripts = typeEntry.Scripts

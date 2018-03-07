@@ -52,7 +52,6 @@ function Definitions()
 		,"Infantry = 0,3"
 		,"Vehicle = 0,3"
 		,"Air = 0,2"
-		,"-F9TZ_Cloaking_Transport_Company"
 		,"-HAV_Juggernaut_Company"
 		,"-Gallofree_HTT_Company"		
 		,"-Field_Com_Rebel_Team"

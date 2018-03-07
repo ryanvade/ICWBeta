@@ -45,7 +45,7 @@ require("pgevents")
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
-	Category = "Remove_Smuggler"
+	Category = "AlwaysOff"
 	IgnoreTarget = true
 	TaskForce = {
 	{

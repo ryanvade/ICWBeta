@@ -1,4 +1,4 @@
-<?xml version="1.0">
+<?xml version="1.0" ?>
 <AITemplates>
 
 <None_Template>
@@ -158,44 +158,10 @@
 			<Goal_Type>Conquer_To_Reconnect</Goal_Type>
 			<Goal_Type>Lift_Blockade</Goal_Type>
 			<Goal_Type>Conquer_Opponent</Goal_Type>
-			<Goal_Type>Raid</Goal_Type>
-			<Goal_Type>Death_Star_Use</Goal_Type>
 			<Goal_Type>Unrestricted_Grab_Space</Goal_Type>
 			<Goal_Type>Unrestricted_Grab_Land</Goal_Type>
 		</Goals>
 	</Turn_Off>
 </Shutdown_Offense>
-
-<Remove_Corruption_Only_Template>
-	<Priority>1</Priority>
-	
-	<Trigger>One</Trigger>
-	
-	<Budget>
-		<Offensive>One</Offensive>
-		<Defensive>Zero</Defensive>
-	</Budget>
-	
- 
-	<Tactical_Budget_Allowance>
-		<Offensive>0.0</Offensive>
-		<Defensive>0.0</Defensive>
-	</Tactical_Budget_Allowance>
-
-	 <Turn_Off>
-		<Goals>
-			<Category>Hero</Category>
-			<Category>Infrastructure</Category>
-			<Category>Defensive</Category>
-			<Category>Offensive</Category>
-		</Goals>
-	 </Turn_Off>	
-	 
-	 <Turn_On>
-		<Goals>
-			<Goal_Type>Remove_Corruption</Goal_Type>
-		</Goals>
-	 </Turn_On>
-</Remove_Corruption_Only_Template>
 
 </AITemplates>

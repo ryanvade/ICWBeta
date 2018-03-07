@@ -15,6 +15,24 @@
 		<Event_Param1>0</Event_Param1>
 	</Event>
 
+		<Event Name="NR_Level_Two">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>	
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="IR_Level_Two">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>		
+	</Event>
+
 	
 	
 <!-- Move to hitgher tech, lock units not available to thrawn -->

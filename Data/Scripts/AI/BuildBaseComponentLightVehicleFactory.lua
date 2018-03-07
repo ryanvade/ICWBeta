@@ -52,7 +52,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"BaseForce",
-		"E_Ground_Light_Vehicle_Factory | R_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | Y_Ground_Light_Vehicle_Factory | Hapan_Ground_Factory | U_Ground_Research_Facility = 1"
+		"E_Ground_Light_Vehicle_Factory | R_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | Y_Ground_Light_Vehicle_Factory | Hapan_Ground_Factory = 1"
 	}
 	}
 

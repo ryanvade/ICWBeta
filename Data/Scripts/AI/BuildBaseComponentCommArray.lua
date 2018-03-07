@@ -45,7 +45,7 @@ require("pgevents")
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 
-	Category = "Build_Base_Component_Comm_Array"
+	Category = "AlwaysOff"
 	IgnoreTarget = true
 	TaskForce = {
 	{

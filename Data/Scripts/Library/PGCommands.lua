@@ -479,18 +479,10 @@ function Get_Special_Healer_Property_Flag(unit)
 		special_healer_table["HAN_SOLO"] = "HealsInfantry"
 		special_healer_table["CHEWBACCA"] = "HealsInfantry"
 		special_healer_table["MARA_JADE"] = "HealsInfantry"
-		special_healer_table["OBI_WAN_KENOBI"] = "HealsInfantry"
-		special_healer_table["DARTH_VADER"] = "HealsInfantry"
 		special_healer_table["KYLE_KATARN"] = "HealsInfantry"
 		special_healer_table["TACTICAL_R2_3PO_TEAM"] = "HealsVehicles"
-		special_healer_table["GARGANTUAN_BATTLE_PLATFORM"] = "HealsVehicles"
 		special_healer_table["LUKE_SKYWALKER_JEDI"] = "HealsInfantry"
-		special_healer_table["YODA"] = "HealsInfantry"
-		special_healer_table["BOSSK"] = "HealsInfantry"
 		special_healer_table["IG-88"] = "HealsVehicles"
-		special_healer_table["SILRI"] = "HealsInfantry"
-		special_healer_table["TYBER_ZANN"] = "HealsInfantry"
-		special_healer_table["URAI_FEN"] = "HealsInfantry"
 		special_healer_table["MPTL_SPOTTER"] = "HealsVehicles"
 		special_healer_table["SCOUT_TROOPER"] = "HealsVehicles"
 	end
@@ -509,14 +501,11 @@ function Set_Land_AI_Targeting_Priorities(tf)
 	
 	--Now for some more specific stuff
 	tf.Set_Targeting_Priorities("Rocket_Infantry_Attack_Move", "Plex_Soldier_Team")
-	tf.Set_Targeting_Priorities("Rocket_Infantry_Attack_Move", "Pirate_Plex_Soldier_Team")
 	tf.Set_Targeting_Priorities("Light_Vehicle_Attack_Move", "TIE_Crawler")
 	tf.Set_Targeting_Priorities("Light_Vehicle_Attack_Move", "AT_ST_Walker")
 	tf.Set_Targeting_Priorities("Light_Vehicle_Attack_Move", "T2B_Tank")
-	tf.Set_Targeting_Priorities("Light_Vehicle_Attack_Move", "Dark_Trooper_PhaseI")
 	tf.Set_Targeting_Priorities("Artillery_Attack_Move", "MPTL")
 	tf.Set_Targeting_Priorities("Artillery_Attack_Move", "SPMAT_Walker")
-	tf.Set_Targeting_Priorities("Artillery_Attack_Move", "MAL_Rocket_Vehicle")
 end
 
 function Try_Weapon_Switch(object, target)
@@ -527,7 +516,6 @@ function Try_Weapon_Switch(object, target)
 		lib_t4b_type = Find_Object_Type("T4B_TANK")
 		lib_bossk_type = Find_Object_Type("BOSSK")
 		lib_destroyer_droid_type = Find_Object_Type("DESTROYER_DROID")
-		lib_mal_type = Find_Object_Type("MAL_ROCKET_VEHICLE")
 	end
 
 	if lib_switcher_type == lib_t4b_type then

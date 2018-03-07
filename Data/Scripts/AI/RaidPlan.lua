@@ -43,7 +43,7 @@ require("pgevents")
 
 function Definitions()	
 
-	Category = "Raid"
+	Category = "AlwaysOff"
 	
 	TaskForce = {
 	{

@@ -46,8 +46,8 @@ function Base_Definitions()
 	DebugMessage("%s -- In Base_Definitions", tostring(Script))
 
 	-- how often does this script get serviced?
-	ServiceRate = 2
-	UnitServciceRate = 2
+	ServiceRate = 10
+	UnitServiceRate = 10
 	
 	Common_Base_Definitions()
 	

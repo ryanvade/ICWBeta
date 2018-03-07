@@ -53,7 +53,6 @@ function Definitions()
 		,"Infantry | Air | LandHero = 3,10"
 		,"-Gallofree_HTT_Company"
 		,"-HAV_Juggernaut_Company"
-		,"-F9TZ_Cloaking_Transport_Company"	
 		,"-AT_AA_Walker"	
 	},
 	{

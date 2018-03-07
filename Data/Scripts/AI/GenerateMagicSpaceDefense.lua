@@ -43,7 +43,7 @@ require("pgevents")
 
 
 function Definitions()	
-	Category = "Generate_Magic_Space_Defense"
+	Category = "AlwaysOff"
 	IgnoreTarget = true
 	
 	TaskForce = {

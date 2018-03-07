@@ -236,7 +236,8 @@ PlanetLibrary = {
   ["UTAPAU"] = {Structures = {}},
   ["CLAKDOR"] = {Structures = {}},
   ["VONDARC"] = {Structures = {}},
-  ["EIATTU"] = {Structures = {}}
+  ["EIATTU"] = {Structures = {}},
+  ["IPHIGIN"] = {Structures = {}}
 }
 
 return PlanetLibrary

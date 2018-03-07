@@ -42,12 +42,12 @@
 require("pgevents")
 
 -- Tell the script pooling system to pre-cache this number of scripts.
-ScriptPoolCount = 4
+ScriptPoolCount = 0
 
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
-	Category = "Build_Cantina"
+	Category = "AlwaysOff"
 	IgnoreTarget = true
 	TaskForce = {
 	{

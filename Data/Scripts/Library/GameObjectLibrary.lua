@@ -31,7 +31,6 @@ GameObjectLibrary = {
         "Generic_Dominator",
         "Phulik_Binder",
         "Iillor_Corusca",
-        "Yevetha_Interdictor_Cruiser",
 		"CC7700"
     },
     Numbers={
@@ -575,98 +574,6 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=1
                     }
-                },
-                ["TRIFOIL_SQUADRON"]={
-                    ["YEVETHA"] = {
-                        Reserve=3,
-                        Initial=3
-                    }
-                },
-                ["Y-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
-                ["A-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=0,
-                        Initial=1
-                    }
-                },
-                ["REBEL_X-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
-                ["SHIELDED_TIE_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=0,
-                        Initial=1
-                    }
-                }
-            }
-        },
-        ["YEVETHA_STAR_DESTROYER"]={
-            Scripts={
-                "MultiLayer",
-                "FighterSpawn"
-            },
-            Fighters={
-                ["TIE_FIGHTER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=1,
-                        Initial=1,
-                    }
-                },
-                ["TIE_BOMBER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
-                ["SCIMMY_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(2)
-                    }
-                },
-                ["SHIELDED_INTERCEPTOR_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(2)
-                    }
-                },
-                ["A9_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2,
-                        TechLevel=EqualTo(4)
-                    }
-                },
-                ["PREYBIRD_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(5)
-                    }
-                },
-                ["HOWLRUNNER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(4)
-                    }
-                },
-                ["TIE_INTERCEPTOR_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2,
-                        TechLevel=IsOneOf({1,3})
-                    },
                 },
                 ["TRIFOIL_SQUADRON"]={
                     ["YEVETHA"] = {
@@ -1248,21 +1155,6 @@ GameObjectLibrary = {
                 }
             }
         },
-        ["YEVETHA_VICTORY_TWO"]={
-            Scripts={
-                "MultiLayer",
-                "FighterSpawn",
-                "SingleUnitRetreat"
-            },
-            Fighters={
-                ["TRIFOIL_SQUADRON"]={
-                    ["DEFAULT"] = {
-                        Reserve=0,
-                        Initial=2
-                    }
-                }
-            }
-        },
         ["BUDIRECH"]={
             Scripts={
                 "MultiLayer",
@@ -1755,21 +1647,6 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=2,
                         Initial=1
-                    }
-                }
-            }
-        },
-        ["YEVETHA_VICTORY_ONE"]={
-            Scripts={
-                "MultiLayer",
-                "FighterSpawn",
-                "SingleUnitRetreat"
-            },
-            Fighters={
-                ["TRIFOIL_SQUADRON"]={
-                    ["DEFAULT"] = {
-                        Reserve=0,
-                        Initial=2
                     }
                 }
             }
@@ -2314,13 +2191,6 @@ GameObjectLibrary = {
                 }
             }
         },
-		["YEVETHA_NEBULON_B-2_FRIGATE"]={
-            Scripts={
-                "MultiLayer"
-            },
-            Fighters={
-            }
-        },
         ["EMPIRE_GOLAN_THREE_STRATEGIC"]={
             Scripts={
                 "TurnStation",
@@ -2331,98 +2201,6 @@ GameObjectLibrary = {
                     ["DEFAULT"] = {
                         Reserve=0,
                         Initial=2
-                    }
-                }
-            }
-        },
-        ["YEVETHA_STAR_DESTROYER_TWO"]={
-            Scripts={
-                "MultiLayer",
-                "FighterSpawn"
-            },
-            Fighters={
-                ["TIE_FIGHTER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=1,
-                        Initial=1,
-                    }
-                },
-                ["TIE_BOMBER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
-                ["SCIMMY_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(2)
-                    }
-                },
-                ["SHIELDED_INTERCEPTOR_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(2)
-                    }
-                },
-                ["A9_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2,
-                        TechLevel=EqualTo(4)
-                    }
-                },
-                ["PREYBIRD_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(5)
-                    }
-                },
-                ["HOWLRUNNER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(4)
-                    }
-                },
-                ["TIE_INTERCEPTOR_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2,
-                        TechLevel=IsOneOf({1,3})
-                    },
-                },
-                ["TRIFOIL_SQUADRON"]={
-                    ["YEVETHA"] = {
-                        Reserve=3,
-                        Initial=3
-                    }
-                },
-                ["Y-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
-                ["A-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=0,
-                        Initial=1
-                    }
-                },
-                ["REBEL_X-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
-                ["SHIELDED_TIE_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=0,
-                        Initial=1
                     }
                 }
             }
@@ -2820,13 +2598,6 @@ GameObjectLibrary = {
                         Initial=2
                     }
                 }
-            }
-        },
-        ["YEVETHA_CORELLIAN_CORVETTE"]={
-            Scripts={
-                "MultiLayer"
-            },
-            Fighters={
             }
         },
 		["KATANA_DREADNAUGHT_EMPIRE"]={
@@ -3259,22 +3030,6 @@ GameObjectLibrary = {
 					["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
-                    }
-                }
-            }
-        },
-		["YEVETHA_INTERDICTOR_CRUISER"]={
-            Scripts={
-                "MultiLayer",
-                "FighterSpawn",
-                "SingleUnitRetreat",
-				"Interdictor"
-            },
-            Fighters={
-                ["TRIFOIL_SQUADRON"]={
-                    ["DEFAULT"] = {
-                        Reserve=1,
-                        Initial=2
                     }
                 }
             }

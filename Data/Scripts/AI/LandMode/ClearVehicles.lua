@@ -58,7 +58,6 @@ function Definitions()
 		,"LandHero = 0,3"
 		,"-Gallofree_HTT_Company"
 		,"-HAV_Juggernaut_Company"
-		,"-F9TZ_Cloaking_Transport_Company"
 		,"-AT_AA_Walker"
 	}
 	}

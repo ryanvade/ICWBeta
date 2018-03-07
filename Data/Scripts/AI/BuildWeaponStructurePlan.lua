@@ -50,7 +50,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"StructureForce",
-		"Structure = 1"
+		"Ground_Ion_Cannon | Ground_Empire_Hypervelocity_Gun | Ground_Pentastar_Hypervelocity_Gun = 1"
 	}
 	}
 

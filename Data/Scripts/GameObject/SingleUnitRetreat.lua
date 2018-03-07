@@ -12,8 +12,8 @@
 --*   @Date:                2017-12-17T14:11:19+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            SingleUnitRetreat.lua
---*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2017-12-21T12:33:27+01:00
+--*   @Last modified by:    svenmarcus
+--*   @Last modified time:  2018-03-01T15:29:51+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -91,7 +91,8 @@ end
 function SingleUnitRetreat:RestoreFighters(globals)
     local fighterTable = TypeLibrary.Units[Object.Get_Type().Get_Name()].Fighters
     for squadronTable, amount in pairs(self.restoreTable) do
-        fighterTable[squadronTable.TypeString].Reserve = fighterTable[squadronTable.TypeString].Reserve + amount
+        local fighterEntry = fighterTable[squadronTable.TypeString][Object.Get_Owner()]
+        fighterEntry.Reserve = fighterEntry.Reserve + amount
         table.insert(globals.Fighters, squadronTable)
         self.restoreTable[squadronTable] = nil
     end

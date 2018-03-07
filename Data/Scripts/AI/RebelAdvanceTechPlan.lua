@@ -45,7 +45,7 @@ require("pgevents")
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
-	Category = "Advance_Tech_Rebel"
+	Category = "AlwaysOff"
 	IgnoreTarget = true
 	TaskForce = {
 	{

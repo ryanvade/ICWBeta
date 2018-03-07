@@ -263,7 +263,6 @@ function Service_Guard(object)
         return true
     end
 
-    space_station = object.Get_Owner().Get_Space_Station()
     closest_friendly_structure = Find_Nearest(object, "Structure", object.Get_Owner(), true)
     if TestValid(closest_friendly_structure) then
         object.Guard_Target(closest_friendly_structure)
@@ -271,9 +270,14 @@ function Service_Guard(object)
     elseif TestValid(friendly_location) then
         object.Attack_Move(friendly_location)
         return true
-    elseif TestValid(space_station) then
-        object.Guard_Target(space_station)
-        return true
+	end
+	
+    if Get_Game_Mode() == "Space" then
+		space_station = object.Get_Owner().Get_Space_Station()
+		if TestValid(space_station) then
+			object.Guard_Target(space_station)
+			return true
+		end
     end
 
     return false

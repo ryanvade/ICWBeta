@@ -45,7 +45,7 @@ function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
 	IgnoreTarget = true;
-	Category = "Weaken_Planet"
+	Category = "AlwaysOff"
 	TaskForce = {
 	{
 		"SmugglerForce",						

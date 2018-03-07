@@ -127,7 +127,7 @@ function FundBases(player, target)
 
 	--Prefer starbases since they block enemy movement
 	DebugMessage("%s -- giving desire bonus to build starbase", tostring(Script))
-	BlockOnCommand(GiveDesireBonus(player, "Build_Initial_Starbase_Only | Upgrade_Starbase", target, 15, 5)) 
+	BlockOnCommand(GiveDesireBonus(player, "Build_Initial_Starbase_Only", target, 15, 5)) 
 	DebugMessage("%s -- waiting for starbase", tostring(Script))
 	BlockOnCommand(WaitForStarbase(Target, 1))
 	DebugMessage("%s -- giving desire bonus to build groundbase", tostring(Script))
