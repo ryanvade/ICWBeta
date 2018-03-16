@@ -12,8 +12,8 @@
 --*   @Date:                2017-12-14T10:54:01+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            FighterSpawn.lua
--- @Last modified by:
--- @Last modified time: 2018-01-19T11:21:05+01:00
+--*   @Last modified by:    svenmarcus
+--*   @Last modified time:  2018-03-09T12:20:53+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -87,7 +87,12 @@ function FighterSpawn:GetFighterEntry(tab)
 end
 
 function FighterSpawn:HasHangar()
-    return EvaluatePerception("Has_Hangar", Object.Get_Owner(), Object) == 1
+    local hasHangarFlag = false
+    local typeName = Object.Get_Type().Get_Name()
+    if TypeLibrary.Units[typeName].Flags then
+        hasHangarFlag = TypeLibrary.Units[typeName].Flags.HANGAR
+    end
+    return hasHangarFlag or EvaluatePerception("Has_Hangar", Object.Get_Owner(), Object) == 1
 end
 
 function FighterSpawn:CheckFighters(globals)
@@ -103,7 +108,6 @@ function FighterSpawn.Spawn(wrapper)
     local self = wrapper[1]
     local data = wrapper[2]
     local objectType = data.ObjectType
-    local ownerName = Object.Get_Owner().Get_Faction_Name()
     local tab = self.fighterData[objectType.Get_Name()]
     local entry = self:GetFighterEntry(tab)
 

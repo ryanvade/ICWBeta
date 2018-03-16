@@ -55,7 +55,7 @@ function Definitions()
 		"SpaceForce"						
 		,"MinimumTotalSize = 4"
 		,"MinimumTotalForce = 2500"					
-		,"Frigate | Capital | Corvette | Bomber | Fighter = 100%"
+		,"Frigate | Capital | Corvette = 100%"
 	},
 	{
 		"GroundForce"
@@ -64,7 +64,7 @@ function Definitions()
 		,"Vehicle | Infantry | Air = 100%"
 	}
 	}
-	RequiredCategories = { "Infantry", "Corvette | Frigate | Capital | Super" }		--Must have at least one ground unit, also make sure space force is reasonable
+	RequiredCategories = { "Infantry", "Corvette | Frigate | Capital" }		--Must have at least one ground unit, also make sure space force is reasonable
 
 	PerFailureContrastAdjust = 0.5
 	

@@ -44,35 +44,16 @@ require("pgevents")
 
 function Definitions()	
 	Category = "AlwaysOff"
-	IgnoreTarget = true
-	
+
 	TaskForce = {
 	{
 		"ReserveForce"
 		,"DenyHeroAttach"
-		,"Infantry = 2"
-		,"Vehicle = 4"
-		,"Structure = 3"
-		,"-HAV_Juggernaut_Company"
-		,"-Gallofree_HTT_Company"			
+		,"TaskForceRequired"			
 	}
 	}
-	AllowFreeStoreUnits = false
-	MagicPlan = true
-	MagicPlanStealing = false
 end
 
 function ReserveForce_Thread()		
-	ReserveForce.Set_As_Goal_System_Removable(false)
-	BlockOnCommand(ReserveForce.Produce_Force(Target))
-	LandUnits(ReserveForce)
-	ReserveForce.Set_Plan_Result(true)	
-	Sleep(20)
-	wait_start_time = GetCurrentTime()
-	wait_duration = Determine_Magic_Wait_Duration()
-	while (GetCurrentTime() - wait_start_time < wait_duration) and 
-			(EvaluatePerception("Needs_Magic_Ground_Defense_Hard", PlayerObject, Target) == 0.0) do
-		Sleep(1)
-	end
 	ScriptExit()
 end

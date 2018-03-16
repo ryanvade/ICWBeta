@@ -52,7 +52,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"BaseForce",
-		"E_Ground_Barracks | R_Ground_Barracks | U_Ground_Barracks | P_Ground_Barracks | Y_Ground_Barracks | Hapan_Ground_Barracks = 1"
+		"E_Ground_Barracks | R_Ground_Barracks | U_Ground_Barracks | P_Ground_Barracks | Hapan_Ground_Barracks = 1"
 	}
 	}
 

@@ -41,27 +41,19 @@
 
 require("pgevents")
 
--- Tell the script pooling system to pre-cache this number of scripts.
-ScriptPoolCount = 4
-
 function Definitions()
 
-	Category = "Build_Initial_Groundbase_Only | Build_Underworld_Palace"
+	Category = "AlwaysOff"
 	IgnoreTarget = true
 	TaskForce = {
 	{
 		"BaseForce",
-		"U_Ground_Palace = 1"
+		"TaskForceRequired"
 	}
 	}
 
 end
 
 function BaseForce_Thread()
-	AssembleForce(BaseForce)
-	BaseForce.Set_Plan_Result(true)
-end
-
-function BaseForce_Production_Failed(tf, failed_object_type)
 	ScriptExit()
 end

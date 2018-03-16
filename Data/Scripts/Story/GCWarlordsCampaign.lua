@@ -90,7 +90,7 @@ function Commenor_Maldrood(message)
 			Story_Event("GENDARR_JOINS_SPEECH")
 		end
       spawn_list_commenor = { "Lott_Team" , "Gendarr_Reliance" }
-      CommenorSpawn = SpawnList(spawn_list_commenor, start_planet, p_maldrood,false,false)
+      CommenorSpawn = SpawnList(spawn_list_commenor, start_planet, p_maldrood,true, false)
     end
 
   elseif message == OnUpdate then
@@ -109,7 +109,7 @@ function Antem_Maldrood(message)
 			Story_Event("GETELLES_JOINS_SPEECH")
 		end
       spawn_list_kosh = { "Getelles_Team" , "Larm_Carrack" }
-      KoshSpawn = SpawnList(spawn_list_kosh, start_planet, p_maldrood,false,false)
+      KoshSpawn = SpawnList(spawn_list_kosh, start_planet, p_maldrood,true, false)
       --end
     end
 
@@ -130,7 +130,7 @@ function Kashyyyk_Maldrood(message)
 			Story_Event("SYN_JOINS_SPEECH")
 		end
       spawn_list_syn = { "Syn_Silooth" }
-      SynSpawn = SpawnList(spawn_list_syn, start_planet, p_maldrood,false,false)
+      SynSpawn = SpawnList(spawn_list_syn, start_planet, p_maldrood,true, false)
       --end
     end
 
@@ -150,7 +150,7 @@ function Elrood_Eriadu(message)
 			Story_Event("ELROOD_JOINS_SPEECH")
 		end
 		spawn_list_elrood = { "Andal_Team" , "Zed_Stalker" , "Pryl_Thunderflare" }
-		ElroodSpawn = SpawnList(spawn_list_elrood, start_planet, p_eriadu,false,false)
+		ElroodSpawn = SpawnList(spawn_list_elrood, start_planet, p_eriadu,true, false)
     end
 
   elseif message == OnUpdate then
@@ -178,7 +178,7 @@ function SubEra_Change(message)
 	end
 
 	spawn_list_isard = { "Lusankya" , "Implacable_Star_Destroyer" }
-	IsardSpawn = SpawnList(spawn_list_isard, start_planet, p_empire,false,false)
+	IsardSpawn = SpawnList(spawn_list_isard, start_planet, p_empire,true, false)
 
 	local checkPestage = Find_First_Object("Sate_Pestage")
   if TestValid(checkPestage) then
@@ -193,7 +193,7 @@ function SubEra_Change(message)
 	ProjectAmbition = Find_First_Object("Project_Ambition_Dummy")
 	if ProjectAmbition then
 		spawn_list_ambition = { "Makati_Steadfast" , "Takel_MagicDragon" , "Corrupter_Star_Destroyer" }
-		AmbitionRewards = SpawnList(spawn_list_ambition, start_planet, p_empire,false,false)
+		AmbitionRewards = SpawnList(spawn_list_ambition, start_planet, p_empire,true, false)
 		ProjectAmbition.Despawn()
 	end
 
@@ -231,7 +231,7 @@ function Pentastar_Talks(message)
 			Story_Event("KAINE_JOINS_SPEECH")
 		end
 		spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
-		ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,false,false)
+		ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true, false)
 	end
 
 

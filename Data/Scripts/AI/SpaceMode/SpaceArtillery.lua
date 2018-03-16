@@ -46,7 +46,7 @@ function Definitions()
 	
 	AllowEngagedUnits = false
 	IgnoreTarget = true
-	Category = "Space_Artillery"
+	Category = "AlwaysOff"
 	TaskForce = {
 	{
 		"MainForce"						

@@ -53,7 +53,7 @@ function Base_Definitions()
         Definitions()
     end
 
-    FREE_STORE_ATTACK_RANGE = 600.0
+    FREE_STORE_ATTACK_RANGE = 2000.0
 end
 
 function main()
@@ -77,23 +77,20 @@ function FreeStoreService()
     friendly_location = FindTarget.Reachable_Target(PlayerObject, "Current_Friendly_Location", "Tactical_Location", "Any_Threat", 0.5)
     aggressive_mode = (EvaluatePerception("Allowed_As_Defender_Land", PlayerObject) > 0.0)
 
-    --Manage the space station in space mode
-    if Get_Game_Mode() == "Space" then
-        if TestValid(space_station) then
-            station_threat = FindDeadlyEnemy(space_station)
-            if station_threat then
-                space_station.Attack_Target(station_threat)
-            end
+	if TestValid(space_station) then
+		station_threat = FindDeadlyEnemy(space_station)
+		if station_threat then
+			space_station.Attack_Target(station_threat)
+		end
 
-            --Maybe this station has a special weapon?
-            special_target = FindTarget.Reachable_Target(PlayerObject, "Needs_Hypervelocity_Shot", "Enemy_Unit", "Any_Threat", 0.5, space_station, 1500.0)
-            if TestValid(special_target) then
-                space_station.Fire_Special_Weapon(special_target, PlayerObject)
-            end
-        else
-            space_station = PlayerObject.Get_Space_Station()
-        end
-    end
+		--Maybe this station has a special weapon?
+		special_target = FindTarget.Reachable_Target(PlayerObject, "Needs_Hypervelocity_Shot", "Enemy_Unit", "Any_Threat", 0.5, space_station, 1500.0)
+		if TestValid(special_target) then
+			space_station.Fire_Special_Weapon(special_target, PlayerObject)
+		end
+	else
+		space_station = PlayerObject.Get_Space_Station()
+	end
 end
 
 function On_Unit_Service(object)
@@ -113,10 +110,6 @@ function On_Unit_Service(object)
     current_target = object.Get_Attack_Target()
     if TestValid(current_target) then
 
-        if Service_Heal(object, 0.6) then
-            return
-        end
-
         if Service_Kite(object) then
             return
         end
@@ -135,17 +128,6 @@ function On_Unit_Service(object)
             return
         end
 
-        if Service_Heal(object, 1.0) then
-            return
-        end
-
-        -- Reset some abilities
-        object.Activate_Ability("SPREAD_OUT", false)
-
-        if Service_Garrison(object) then
-            return
-        end
-
         if Service_Attack(object) then
             return
         end
@@ -153,82 +135,6 @@ function On_Unit_Service(object)
         Service_Guard(object)
 
     end
-end
-
-function Service_Heal(object, health_threshold)
-
-    --Add difficulty factor here
-
-    if object.Get_Hull() < health_threshold then
-
-        -- Try to find the nearest healing structure appropriate for this unit
-        lib_fs_healer_property_flag = Get_Special_Healer_Property_Flag(object)
-        if not lib_fs_healer_property_flag then
-            if object.Is_Category("Infantry") then
-                lib_fs_healer_property_flag = "HealsInfantry"
-            elseif object.Is_Category("Vehicle") then
-                lib_fs_healer_property_flag = "HealsVehicles"
-            end
-        end
-
-        if lib_fs_healer_property_flag then
-            healer = Find_Nearest(object, lib_fs_healer_property_flag, PlayerObject, true)
-        end
-
-        if TestValid(healer) then
-
-            if object.Get_Distance(healer) > 100.0 then
-                object.Activate_Ability("SPREAD_OUT", false)
-                Try_Ability(object,"JET_PACK", healer)
-                Try_Ability(object,"SPRINT")
-                Try_Ability(object, "SPOILER_LOCK")
-                Try_Ability(object, "STEALTH")
-                Try_Ability(object, "FORCE_CLOAK")
-
-                object.Move_To(healer, 10)
-                return true
-            end
-        end
-    end
-
-    return false
-
-end
-
-function Service_Garrison(object)
-
-    if object.Has_Property("CanContainGarrison") then
-
-        lib_garrison_table = object.Get_Garrisoned_Units()
-        if table.getn(lib_garrison_table) > 0 then
-
-            lib_garrison_needs_heals = true
-            lib_garrison_healer = Find_Nearest(object, "HealsInfantry", object.Get_Owner(), true)
-            lib_garrison_enemy = Find_Nearest(object, object.Get_Owner(), false)
-            lib_eject_for_heal = TestValid(lib_garrison_healer) and (object.Get_Distance(lib_garrison_healer) < 150)
-            lib_eject_for_attack = (not object.Has_Property("GarrisonCanFire")) and TestValid(lib_garrison_enemy) and (object.Get_Distance(lib_garrison_enemy) < FREE_STORE_ATTACK_RANGE)
-
-            for i,garrison in pairs(lib_garrison_table) do
-                if garrison.Get_Hull() > 0.4 then
-                    lib_garrison_needs_heals = false
-                    if lib_eject_for_attack and garrison.Is_Good_Against(lib_garrison_enemy) then
-                        garrison.Leave_Garrison()
-                    end
-                elseif lib_eject_for_heal then
-                    garrison.Leave_Garrison()
-                end
-            end
-
-            if lib_garrison_needs_heals and TestValid(lib_garrison_healer) then
-                object.Move_To(lib_garrison_healer)
-                return true
-            end
-
-        end
-    end
-
-
-    return false
 end
 
 function Service_Attack(object)
@@ -259,9 +165,6 @@ function Service_Attack(object)
 end
 
 function Service_Guard(object)
-    if Try_Deploy_Garrison(object, nil, 0.0) then
-        return true
-    end
 
     closest_friendly_structure = Find_Nearest(object, "Structure", object.Get_Owner(), true)
     if TestValid(closest_friendly_structure) then
@@ -285,7 +188,7 @@ end
 
 function Service_Kite(object)
 
-    if object.Get_Hull() > 0.5 then
+    if object.Get_Hull() > 0.5 or not object.Are_Engines_Online() or object.Get_Hull() < 0.1 then
         return false
     end
 
@@ -295,28 +198,14 @@ function Service_Kite(object)
 
         if lib_fs_deadly_enemy.Is_Good_Against(object) then
 
-            if Try_Ability(object, "PROXIMITY_MINES", object) then
-                return true
-            end
-
             if Try_Ability(object, "BUZZ_DROIDS", object) then
                 return true
             end
-
-            object.Activate_Ability("SPREAD_OUT", false)
-            Try_Ability(object, "SPRINT")
+			
             Try_Ability(object, "SPOILER_LOCK")
             Try_Ability(object, "STEALTH")
-            Try_Ability(object, "FORCE_CLOAK")
-
-            if object.Get_Hull() > 0.5 then
-                Try_Ability(object, "STIM_PACK")
-            end
 
             lib_fs_kite_pos = Project_By_Unit_Range(lib_fs_deadly_enemy, object)
-            if Try_Ability(object, "JET_PACK", lib_fs_kite_pos) then
-                return true
-            end
 
             object.Move_To(lib_fs_kite_pos)
 

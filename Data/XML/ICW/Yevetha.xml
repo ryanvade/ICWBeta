@@ -147,7 +147,7 @@
 		<Fire_Inaccuracy_Distance> Super, 30.0 </Fire_Inaccuracy_Distance>
 
 		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
-		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>5000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
 		<Death_Explosions>Tiny_Explosion_Space</Death_Explosions>
 		<Death_SFXEvent_Start_Die>Unit_X_Wing_Death_SFX</Death_SFXEvent_Start_Die>
@@ -451,7 +451,7 @@
 		<Max_Lift>0.0</Max_Lift>
 
 		<Death_Clone>Damage_Normal, Small_Explosion_Space</Death_Clone>
-		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>12000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
 
 		<Affiliation>Yevetha</Affiliation>
@@ -486,9 +486,12 @@
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>120</Size_Value>
 		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
-		<SpaceBehavior> SELF_DESTRUCT, ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<SpaceBehavior> SELF_DESTRUCT, ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SPAWN_SQUADRON, SELECTABLE, POWERED, SHIELDED, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		
+		<Starting_Spawned_Units_Tech_5>Trifoil_Squadron, 2</Starting_Spawned_Units_Tech_5> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_5>Trifoil_Squadron, 2</Reserve_Spawned_Units_Tech_5> <!-- -1 == no limit -->
 
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
 		<CategoryMask> Corvette | AntiFighter | AntiBomber </CategoryMask>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
@@ -949,7 +952,7 @@
 		<Tech_Level>99</Tech_Level>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<HardPoints>
-		HP_Corellian_Corvette_01, HP_Corellian_Corvette_02, HP_Corellian_Corvette_03, HP_Corellian_Corvette_04, HP_Corellian_Corvette_05, HP_CR90_Hangar, HP_CR90_Tractor_Beam
+		HP_Corellian_Corvette_01, HP_Corellian_Corvette_02, HP_Corellian_Corvette_03, HP_Corellian_Corvette_04, HP_CR90_Hangar, HP_CR90_Tractor_Beam
 		</HardPoints>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
@@ -1373,7 +1376,7 @@
 		<Text_ID>TEXT_UNIT_YEVETHA</Text_ID>
 		<Stealth_Capable>No</Stealth_Capable>
 
-		<LandBehavior>LANDING, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, TURRET, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT</LandBehavior>
+		<LandBehavior>LANDING, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, TURRET, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
 
 
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
@@ -1417,7 +1420,7 @@
 		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
-		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Projectile_Types>Proj_Hand_Blaster_Redx2</Projectile_Types>
 
 		<Turret_Rotate_Extent_Degrees>30.0</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>30.0</Turret_Elevate_Extent_Degrees>
@@ -1528,7 +1531,7 @@
 		<Is_Escort>yes</Is_Escort>
 		<Ship_Class>infantry</Ship_Class>
 		<Company_Transport_Unit>Imperial_Landing_Craft_Troops</Company_Transport_Unit>
-				<Create_Team_Type> Yevetha_Team </Create_Team_Type>
+		<Create_Team_Type> Yevetha_Team </Create_Team_Type>
 
 		<!-- AI  Changed to 15 soldiers with 5 per troop -->
 		<Company_Units> Yevethan_Soldier, Yevethan_Soldier, Yevethan_Soldier, Yevethan_Soldier, Yevethan_Soldier, Yevethan_Soldier </Company_Units>

@@ -55,7 +55,7 @@ function Begin_GC(message)
     --Post-Zsinj, Kosh merges with Treutan
     start_planet = FindPlanet("Bastion")
     spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
-    ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,false,false)
+    ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true,false)
 
 
 

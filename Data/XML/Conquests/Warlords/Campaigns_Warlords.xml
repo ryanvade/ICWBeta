@@ -130,16 +130,16 @@
         <Empire_Story_Name>Conquests\Warlords\Story_Plots_Sandbox_Warlords_Empire.xml</Empire_Story_Name>
         <Underworld_Story_Name>Conquests\Warlords\Story_Plots_Sandbox_Warlords_Container.xml</Underworld_Story_Name>
         	 
-		<AI_Player_Control> Teradoc, BasicRebel </AI_Player_Control>      
-		<AI_Player_Control> Rebel, BasicRebel </AI_Player_Control>
+		<AI_Player_Control> Teradoc, GenericAI </AI_Player_Control>      
+		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Pentastar, BasicRebel </AI_Player_Control>
-		<AI_Player_Control> Pirates, BasicRebel </AI_Player_Control>	
+		<AI_Player_Control> Pentastar, GenericAI </AI_Player_Control>
+		<AI_Player_Control> Pirates, GenericAI </AI_Player_Control>	
 		<AI_Player_Control> Empire, SandboxHuman </AI_Player_Control>		
-		<AI_Player_Control> Hutts, BasicRebel </AI_Player_Control>			
+		<AI_Player_Control> Hutts, GenericAI </AI_Player_Control>			
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, BasicEmpire </AI_Player_Control>		
+		<AI_Player_Control> Harrsk, GenericAI </AI_Player_Control>		
 		
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -177,11 +177,12 @@
 		
 		<!-- Bespin Space Forces -->
 		<Starting_Forces> Rebel, Bespin, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Dauntless </Starting_Forces>
 		<!-- Bespin Land Forces -->
 		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Bespin, Rebel_Ground_Mining_Facility </Starting_Forces>
@@ -192,17 +193,8 @@
 		
 		<!-- Bothawui Space Forces -->
 		<Starting_Forces> Rebel, Bothawui, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Nebulon_B_Frigate </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bothawui, Dauntless </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
@@ -216,13 +208,8 @@
 		
 		<!-- Chardaan Space Forces -->
 		<Starting_Forces> Rebel, Chardaan, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Empress_Station </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Calamari_Cruiser </Starting_Forces>
 		<!-- Chardaan Land Forces -->
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Light_Vehicle_Factory </Starting_Forces>
@@ -233,11 +220,16 @@
 		
 		<!-- Endor Space Forces -->
 		<Starting_Forces> Rebel, Endor, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
 		<!-- Endor Land Forces -->
 		<Starting_Forces> Rebel, Endor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Endor, Rebel_Infantry_Squad </Starting_Forces>
@@ -247,10 +239,10 @@
 		
 		<!-- Fondor Space Forces -->
 		<Starting_Forces> Rebel, Fondor, NR_Star_Base_3 </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Nebulon_B_Frigate </Starting_Forces>
@@ -274,9 +266,9 @@
 		<Starting_Forces> Rebel, Hast, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Calamari_Cruiser </Starting_Forces>
@@ -290,7 +282,7 @@
 		
 		<!-- Kothlis Space Forces -->
 		<Starting_Forces> Rebel, Kothlis, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Marauder_Missile_Cruiser </Starting_Forces>
@@ -312,7 +304,7 @@
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Calamari_Cruiser </Starting_Forces>
@@ -328,13 +320,13 @@
 		
 		<!-- Saijo Space Forces -->
 		<Starting_Forces> Rebel, Saijo, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Nebulon_B_Frigate </Starting_Forces>
@@ -365,10 +357,10 @@
 		<Starting_Forces> Rebel, Sullust, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Dauntless </Starting_Forces>
@@ -1597,16 +1589,16 @@
         <Empire_Story_Name>Conquests\Warlords\Story_Plots_Sandbox_Warlords_Empire.xml</Empire_Story_Name>
         <Underworld_Story_Name>Conquests\Warlords\Story_Plots_Sandbox_Warlords_Container.xml</Underworld_Story_Name>
         	 
-		<AI_Player_Control> Teradoc, BasicRebel </AI_Player_Control>      
-		<AI_Player_Control> Rebel, BasicRebel </AI_Player_Control>
+		<AI_Player_Control> Teradoc, GenericAI </AI_Player_Control>      
+		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Pentastar, BasicRebel </AI_Player_Control>
-		<AI_Player_Control> Pirates, BasicRebel </AI_Player_Control>	
-		<AI_Player_Control> Empire, BasicRebel </AI_Player_Control>		
+		<AI_Player_Control> Pentastar, GenericAI </AI_Player_Control>
+		<AI_Player_Control> Pirates, GenericAI </AI_Player_Control>	
+		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>		
 		<AI_Player_Control> Hutts, SandboxHuman </AI_Player_Control>			
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, BasicEmpire </AI_Player_Control>		
+		<AI_Player_Control> Harrsk, GenericAI </AI_Player_Control>		
 		
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -1642,13 +1634,14 @@
 		<Max_Tech_Level> Rebel, 0 </Max_Tech_Level>
 		
 		
-		<!-- Bespin Space Forces -->
+			<!-- Bespin Space Forces -->
 		<Starting_Forces> Rebel, Bespin, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Dauntless </Starting_Forces>
 		<!-- Bespin Land Forces -->
 		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Bespin, Rebel_Ground_Mining_Facility </Starting_Forces>
@@ -1659,17 +1652,8 @@
 		
 		<!-- Bothawui Space Forces -->
 		<Starting_Forces> Rebel, Bothawui, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Nebulon_B_Frigate </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bothawui, Dauntless </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
@@ -1683,13 +1667,8 @@
 		
 		<!-- Chardaan Space Forces -->
 		<Starting_Forces> Rebel, Chardaan, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Empress_Station </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Calamari_Cruiser </Starting_Forces>
 		<!-- Chardaan Land Forces -->
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Light_Vehicle_Factory </Starting_Forces>
@@ -1700,11 +1679,16 @@
 		
 		<!-- Endor Space Forces -->
 		<Starting_Forces> Rebel, Endor, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
 		<!-- Endor Land Forces -->
 		<Starting_Forces> Rebel, Endor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Endor, Rebel_Infantry_Squad </Starting_Forces>
@@ -1714,10 +1698,10 @@
 		
 		<!-- Fondor Space Forces -->
 		<Starting_Forces> Rebel, Fondor, NR_Star_Base_3 </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Nebulon_B_Frigate </Starting_Forces>
@@ -1741,9 +1725,9 @@
 		<Starting_Forces> Rebel, Hast, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Calamari_Cruiser </Starting_Forces>
@@ -1757,7 +1741,7 @@
 		
 		<!-- Kothlis Space Forces -->
 		<Starting_Forces> Rebel, Kothlis, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Marauder_Missile_Cruiser </Starting_Forces>
@@ -1779,7 +1763,7 @@
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Calamari_Cruiser </Starting_Forces>
@@ -1795,13 +1779,13 @@
 		
 		<!-- Saijo Space Forces -->
 		<Starting_Forces> Rebel, Saijo, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Nebulon_B_Frigate </Starting_Forces>
@@ -1832,10 +1816,10 @@
 		<Starting_Forces> Rebel, Sullust, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Dauntless </Starting_Forces>
@@ -1847,6 +1831,7 @@
 		<Starting_Forces> Rebel, Sullust, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_Light_Tank_Brigade </Starting_Forces>	
+
 
 		
 		<!-- Empire Starting Forces -->
@@ -3065,15 +3050,15 @@
         <Underworld_Story_Name>Conquests\Warlords\Story_Plots_Sandbox_Warlords_Container.xml</Underworld_Story_Name>
         	 
 		<AI_Player_Control> Teradoc, SandboxHuman </AI_Player_Control>      
-		<AI_Player_Control> Rebel, BasicRebel </AI_Player_Control>
+		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Pentastar, BasicRebel </AI_Player_Control>
-		<AI_Player_Control> Pirates, BasicRebel </AI_Player_Control>	
-		<AI_Player_Control> Empire, BasicRebel </AI_Player_Control>		
-		<AI_Player_Control> Hutts, BasicRebel </AI_Player_Control>			
+		<AI_Player_Control> Pentastar, GenericAI </AI_Player_Control>
+		<AI_Player_Control> Pirates, GenericAI </AI_Player_Control>	
+		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>		
+		<AI_Player_Control> Hutts, GenericAI </AI_Player_Control>			
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, BasicEmpire </AI_Player_Control>		
+		<AI_Player_Control> Harrsk, GenericAI </AI_Player_Control>		
 		
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -3109,13 +3094,14 @@
 		<Max_Tech_Level> Rebel, 0 </Max_Tech_Level>
 		
 		
-		<!-- Bespin Space Forces -->
+			<!-- Bespin Space Forces -->
 		<Starting_Forces> Rebel, Bespin, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Dauntless </Starting_Forces>
 		<!-- Bespin Land Forces -->
 		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Bespin, Rebel_Ground_Mining_Facility </Starting_Forces>
@@ -3126,17 +3112,8 @@
 		
 		<!-- Bothawui Space Forces -->
 		<Starting_Forces> Rebel, Bothawui, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Nebulon_B_Frigate </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bothawui, Dauntless </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
@@ -3150,13 +3127,8 @@
 		
 		<!-- Chardaan Space Forces -->
 		<Starting_Forces> Rebel, Chardaan, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Empress_Station </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Calamari_Cruiser </Starting_Forces>
 		<!-- Chardaan Land Forces -->
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Light_Vehicle_Factory </Starting_Forces>
@@ -3167,11 +3139,16 @@
 		
 		<!-- Endor Space Forces -->
 		<Starting_Forces> Rebel, Endor, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
 		<!-- Endor Land Forces -->
 		<Starting_Forces> Rebel, Endor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Endor, Rebel_Infantry_Squad </Starting_Forces>
@@ -3181,10 +3158,10 @@
 		
 		<!-- Fondor Space Forces -->
 		<Starting_Forces> Rebel, Fondor, NR_Star_Base_3 </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Nebulon_B_Frigate </Starting_Forces>
@@ -3208,9 +3185,9 @@
 		<Starting_Forces> Rebel, Hast, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Calamari_Cruiser </Starting_Forces>
@@ -3224,7 +3201,7 @@
 		
 		<!-- Kothlis Space Forces -->
 		<Starting_Forces> Rebel, Kothlis, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Marauder_Missile_Cruiser </Starting_Forces>
@@ -3246,7 +3223,7 @@
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Calamari_Cruiser </Starting_Forces>
@@ -3262,13 +3239,13 @@
 		
 		<!-- Saijo Space Forces -->
 		<Starting_Forces> Rebel, Saijo, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Nebulon_B_Frigate </Starting_Forces>
@@ -3299,10 +3276,10 @@
 		<Starting_Forces> Rebel, Sullust, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Dauntless </Starting_Forces>
@@ -3314,6 +3291,7 @@
 		<Starting_Forces> Rebel, Sullust, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_Light_Tank_Brigade </Starting_Forces>	
+
 
 		
 		<!-- Empire Starting Forces -->
@@ -4531,16 +4509,16 @@
         <Empire_Story_Name>Conquests\Warlords\Story_Plots_Sandbox_Warlords_Empire.xml</Empire_Story_Name>
         <Underworld_Story_Name>Conquests\Warlords\Story_Plots_Sandbox_Warlords_Container.xml</Underworld_Story_Name>
         	 
-		<AI_Player_Control> Teradoc, BasicRebel </AI_Player_Control>      
-		<AI_Player_Control> Rebel, BasicRebel </AI_Player_Control>
+		<AI_Player_Control> Teradoc, GenericAI </AI_Player_Control>      
+		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
 		<AI_Player_Control> Pentastar, SandboxHuman </AI_Player_Control>
-		<AI_Player_Control> Pirates, BasicRebel </AI_Player_Control>	
-		<AI_Player_Control> Empire, BasicRebel </AI_Player_Control>		
-		<AI_Player_Control> Hutts, BasicRebel </AI_Player_Control>			
+		<AI_Player_Control> Pirates, GenericAI </AI_Player_Control>	
+		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>		
+		<AI_Player_Control> Hutts, GenericAI </AI_Player_Control>			
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, BasicEmpire </AI_Player_Control>		
+		<AI_Player_Control> Harrsk, GenericAI </AI_Player_Control>		
 		
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -4578,11 +4556,12 @@
 		
 		<!-- Bespin Space Forces -->
 		<Starting_Forces> Rebel, Bespin, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Dauntless </Starting_Forces>
 		<!-- Bespin Land Forces -->
 		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Bespin, Rebel_Ground_Mining_Facility </Starting_Forces>
@@ -4593,17 +4572,8 @@
 		
 		<!-- Bothawui Space Forces -->
 		<Starting_Forces> Rebel, Bothawui, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Nebulon_B_Frigate </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bothawui, Dauntless </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
@@ -4617,13 +4587,8 @@
 		
 		<!-- Chardaan Space Forces -->
 		<Starting_Forces> Rebel, Chardaan, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Empress_Station </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Calamari_Cruiser </Starting_Forces>
 		<!-- Chardaan Land Forces -->
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Light_Vehicle_Factory </Starting_Forces>
@@ -4634,11 +4599,16 @@
 		
 		<!-- Endor Space Forces -->
 		<Starting_Forces> Rebel, Endor, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
 		<!-- Endor Land Forces -->
 		<Starting_Forces> Rebel, Endor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Endor, Rebel_Infantry_Squad </Starting_Forces>
@@ -4648,10 +4618,10 @@
 		
 		<!-- Fondor Space Forces -->
 		<Starting_Forces> Rebel, Fondor, NR_Star_Base_3 </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Nebulon_B_Frigate </Starting_Forces>
@@ -4675,9 +4645,9 @@
 		<Starting_Forces> Rebel, Hast, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Calamari_Cruiser </Starting_Forces>
@@ -4691,7 +4661,7 @@
 		
 		<!-- Kothlis Space Forces -->
 		<Starting_Forces> Rebel, Kothlis, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Marauder_Missile_Cruiser </Starting_Forces>
@@ -4713,7 +4683,7 @@
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Calamari_Cruiser </Starting_Forces>
@@ -4729,13 +4699,13 @@
 		
 		<!-- Saijo Space Forces -->
 		<Starting_Forces> Rebel, Saijo, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Nebulon_B_Frigate </Starting_Forces>
@@ -4766,10 +4736,10 @@
 		<Starting_Forces> Rebel, Sullust, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Dauntless </Starting_Forces>
@@ -5997,16 +5967,16 @@
         <Empire_Story_Name>Conquests\Warlords\Story_Plots_Sandbox_Warlords_Empire.xml</Empire_Story_Name>
         <Underworld_Story_Name>Conquests\Warlords\Story_Plots_Sandbox_Warlords_Container.xml</Underworld_Story_Name>
         	 
-		<AI_Player_Control> Teradoc, BasicRebel </AI_Player_Control>      
-		<AI_Player_Control> Rebel, BasicRebel </AI_Player_Control>
+		<AI_Player_Control> Teradoc, GenericAI </AI_Player_Control>      
+		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Pentastar, BasicRebel </AI_Player_Control>
+		<AI_Player_Control> Pentastar, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Pirates, SandboxHuman </AI_Player_Control>	
-		<AI_Player_Control> Empire, BasicRebel </AI_Player_Control>		
-		<AI_Player_Control> Hutts, BasicRebel </AI_Player_Control>			
+		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>		
+		<AI_Player_Control> Hutts, GenericAI </AI_Player_Control>			
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, BasicEmpire </AI_Player_Control>		
+		<AI_Player_Control> Harrsk, GenericAI </AI_Player_Control>		
 		
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -6042,13 +6012,14 @@
 		<Max_Tech_Level> Rebel, 0 </Max_Tech_Level>
 		
 		
-		<!-- Bespin Space Forces -->
+			<!-- Bespin Space Forces -->
 		<Starting_Forces> Rebel, Bespin, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Dauntless </Starting_Forces>
 		<!-- Bespin Land Forces -->
 		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Bespin, Rebel_Ground_Mining_Facility </Starting_Forces>
@@ -6059,17 +6030,8 @@
 		
 		<!-- Bothawui Space Forces -->
 		<Starting_Forces> Rebel, Bothawui, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Nebulon_B_Frigate </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bothawui, Dauntless </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
@@ -6083,13 +6045,8 @@
 		
 		<!-- Chardaan Space Forces -->
 		<Starting_Forces> Rebel, Chardaan, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Empress_Station </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Calamari_Cruiser </Starting_Forces>
 		<!-- Chardaan Land Forces -->
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Light_Vehicle_Factory </Starting_Forces>
@@ -6100,11 +6057,16 @@
 		
 		<!-- Endor Space Forces -->
 		<Starting_Forces> Rebel, Endor, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
 		<!-- Endor Land Forces -->
 		<Starting_Forces> Rebel, Endor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Endor, Rebel_Infantry_Squad </Starting_Forces>
@@ -6114,10 +6076,10 @@
 		
 		<!-- Fondor Space Forces -->
 		<Starting_Forces> Rebel, Fondor, NR_Star_Base_3 </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Nebulon_B_Frigate </Starting_Forces>
@@ -6141,9 +6103,9 @@
 		<Starting_Forces> Rebel, Hast, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Calamari_Cruiser </Starting_Forces>
@@ -6157,7 +6119,7 @@
 		
 		<!-- Kothlis Space Forces -->
 		<Starting_Forces> Rebel, Kothlis, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Marauder_Missile_Cruiser </Starting_Forces>
@@ -6179,7 +6141,7 @@
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Calamari_Cruiser </Starting_Forces>
@@ -6195,13 +6157,13 @@
 		
 		<!-- Saijo Space Forces -->
 		<Starting_Forces> Rebel, Saijo, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Nebulon_B_Frigate </Starting_Forces>
@@ -6232,10 +6194,10 @@
 		<Starting_Forces> Rebel, Sullust, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Dauntless </Starting_Forces>
@@ -7462,16 +7424,16 @@
         <Empire_Story_Name>Conquests\Warlords\Story_Plots_Sandbox_Warlords_Empire.xml</Empire_Story_Name>
         <Underworld_Story_Name>Conquests\Warlords\Story_Plots_Sandbox_Warlords_Container.xml</Underworld_Story_Name>
         	 
-		<AI_Player_Control> Teradoc, BasicRebel </AI_Player_Control>      
+		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
 		<AI_Player_Control> Rebel, SandboxHuman </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Pentastar, BasicRebel </AI_Player_Control>
-		<AI_Player_Control> Pirates, BasicRebel </AI_Player_Control>	
-		<AI_Player_Control> Empire, BasicRebel </AI_Player_Control>		
-		<AI_Player_Control> Hutts, BasicRebel </AI_Player_Control>			
+		<AI_Player_Control> Pentastar, WarlordAI </AI_Player_Control>
+		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>	
+		<AI_Player_Control> Empire, RemnantAI </AI_Player_Control>		
+		<AI_Player_Control> Hutts, WarlordAI </AI_Player_Control>			
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, BasicEmpire </AI_Player_Control>		
+		<AI_Player_Control> Harrsk, WarlordAI </AI_Player_Control>		
 		
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -7509,11 +7471,12 @@
 		
 		<!-- Bespin Space Forces -->
 		<Starting_Forces> Rebel, Bespin, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bespin, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Alliance_Assault_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Dauntless </Starting_Forces>
 		<!-- Bespin Land Forces -->
 		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Bespin, Rebel_Ground_Mining_Facility </Starting_Forces>
@@ -7524,17 +7487,8 @@
 		
 		<!-- Bothawui Space Forces -->
 		<Starting_Forces> Rebel, Bothawui, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Nebulon_B_Frigate </Starting_Forces>
-		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
+		<Starting_Forces> Rebel, Bothawui, Dauntless </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
@@ -7548,13 +7502,8 @@
 		
 		<!-- Chardaan Space Forces -->
 		<Starting_Forces> Rebel, Chardaan, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Chardaan, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Empress_Station </Starting_Forces>
+		<Starting_Forces> Rebel, Chardaan, Calamari_Cruiser </Starting_Forces>
 		<!-- Chardaan Land Forces -->
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Chardaan, R_Ground_Light_Vehicle_Factory </Starting_Forces>
@@ -7565,11 +7514,16 @@
 		
 		<!-- Endor Space Forces -->
 		<Starting_Forces> Rebel, Endor, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, A-Wing_Squadron </Starting_Forces>
-		<Starting_Forces> Rebel, Endor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Nebulon_B_Frigate </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Calamari_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
+		<Starting_Forces> Rebel, Endor, Corellian_Corvette</Starting_Forces>
 		<!-- Endor Land Forces -->
 		<Starting_Forces> Rebel, Endor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Endor, Rebel_Infantry_Squad </Starting_Forces>
@@ -7579,10 +7533,10 @@
 		
 		<!-- Fondor Space Forces -->
 		<Starting_Forces> Rebel, Fondor, NR_Star_Base_3 </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Fondor, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Nebulon_B_Frigate </Starting_Forces>
@@ -7606,9 +7560,9 @@
 		<Starting_Forces> Rebel, Hast, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Hast, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Calamari_Cruiser </Starting_Forces>
@@ -7622,7 +7576,7 @@
 		
 		<!-- Kothlis Space Forces -->
 		<Starting_Forces> Rebel, Kothlis, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Kothlis, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Marauder_Missile_Cruiser </Starting_Forces>
@@ -7644,7 +7598,7 @@
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, B-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Calamari_Cruiser </Starting_Forces>
@@ -7660,13 +7614,13 @@
 		
 		<!-- Saijo Space Forces -->
 		<Starting_Forces> Rebel, Saijo, NR_Star_Base_2 </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Saijo, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Saijo, Nebulon_B_Frigate </Starting_Forces>
@@ -7697,10 +7651,10 @@
 		<Starting_Forces> Rebel, Sullust, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Corellian_Gunboat </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
-		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron </Starting_Forces>
+		<Starting_Forces> Rebel, Sullust, A-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Rebel_X-Wing_Squadron_Buildable </Starting_Forces>
 		<Starting_Forces> Rebel, Sullust, Dauntless </Starting_Forces>

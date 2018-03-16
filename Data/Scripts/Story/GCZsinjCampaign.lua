@@ -61,7 +61,7 @@ function On_Zsinj_Death(message)
     start_planet = FindPlanet("Centares")
 	if start_planet.Get_Owner() == p_maldrood then
 		spawn_list_kosh = { "Lancet_Kosh" }
-		KoshSpawn = SpawnList(spawn_list_kosh, start_planet, p_maldrood, false, false)
+		KoshSpawn = SpawnList(spawn_list_kosh, start_planet, p_maldrood, true, false)
 	end
 	
     --Corporate Sector Spawns
@@ -73,7 +73,7 @@ function On_Zsinj_Death(message)
 
     spawn_list = { "Lucrehulk", "Lucrehulk" }
 
-      ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, false, false)
+      ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, true, false)
     end
 
 
@@ -83,7 +83,7 @@ function On_Zsinj_Death(message)
       ChangePlanetOwnerAndRetreat(start_planet, p_corporate)
 
       spawn_list = { "Lucrehulk", "Lucrehulk" }
-      ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, false, false)
+      ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, true, false)
     end
 
 
@@ -93,7 +93,7 @@ function On_Zsinj_Death(message)
       ChangePlanetOwnerAndRetreat(start_planet, p_corporate)
 
       spawn_list = { "Lucrehulk", "Lucrehulk" }
-      ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, false, false)
+      ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, true, false)
     end
   elseif message == OnUpdate then
 
@@ -112,7 +112,7 @@ function Commenor_Maldrood(message)
 			Story_Event("GENDARR_JOINS_SPEECH")
 		end
       spawn_list_commenor = { "Lott_Team" , "Gendarr_Reliance" }
-      CommenorSpawn = SpawnList(spawn_list_commenor, start_planet, p_maldrood,false,false)
+      CommenorSpawn = SpawnList(spawn_list_commenor, start_planet, p_maldrood,true, false)
     end
 
   elseif message == OnUpdate then
@@ -131,7 +131,7 @@ function Antem_Maldrood(message)
 			Story_Event("GETELLES_JOINS_SPEECH")
 		end
       spawn_list_kosh = { "Getelles_Team" , "Larm_Carrack", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two" }
-      KoshSpawn = SpawnList(spawn_list_kosh, start_planet, p_maldrood,false,false)
+      KoshSpawn = SpawnList(spawn_list_kosh, start_planet, p_maldrood,true, false)
       --end
     end
 

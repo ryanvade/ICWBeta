@@ -12,8 +12,8 @@
 --*   @Date:                2017-11-24T12:43:51+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            Boarding.lua
--- @Last modified by:
--- @Last modified time: 2018-02-10T16:34:08+01:00
+--*   @Last modified by:    [TR]Pox
+--*   @Last modified time:  2018-03-13T13:07:19+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -22,6 +22,7 @@
 
 require("PGCommands")
 require("TRCommands")
+require("TRUtil")
 
 Boarding = {}
 
@@ -41,7 +42,7 @@ function Boarding:Update(globals)
     if Object.Is_Ability_Active("SPOILER_LOCK") then
         if self.attemptsLeft <= 0 then
             Object.Activate_Ability("SPOILER_LOCK", false)
-            GLOBALS.ShowScreenText("BOARDING_UNAVAILABLE", 5)
+            TRUtil.ShowScreenText("BOARDING_UNAVAILABLE", 5)
             return
         end
 
@@ -108,7 +109,6 @@ function BoardingProximityTrigger(prox_obj, trigger_obj, self)
 end
 
 function BoardingTimer(self)
-    Game_Message("TEXT_FACTION_EMPIRE")
     Cancel_Timer(BoardingTimer)
     self:ToggleBoardingEffects()
     self.attemptsLeft = self.attemptsLeft - 1
@@ -129,7 +129,7 @@ function BoardingTimer(self)
         local boardedTypeName = self.boardingTarget.Get_Type().Get_Name()
         local newOwnerName = Object.Get_Owner().Get_Faction_Name()
         TM.PrepareBoardingTransaction(boardedTypeName, newOwnerName)
-        GLOBALS.ShowScreenText("BOARDING_SUCCESSFUL_REGULAR", 10)
+        TRUtil.ShowScreenText("BOARDING_SUCCESSFUL_REGULAR", 10)
     end
 end
 

@@ -1767,6 +1767,57 @@
 		<Prereq>Set_Subera_Pellaeon</Prereq>
 	</Event>
 	
+		<Event Name="Jtptan_Locked">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Jtptan</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Yevetha_Not_Played</Prereq>
+	</Event>
+	
+	<Event Name="Jtptan_Unlocked">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Jtptan</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Set_Subera_Pellaeon</Prereq>
+	</Event>
+
+	<Event Name="Polneye_Locked">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Polneye</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Yevetha_Not_Played</Prereq>
+	</Event>
+	
+	<Event Name="Polneye_Unlocked">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Polneye</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Set_Subera_Pellaeon</Prereq>
+	</Event>
+	
+	<Event Name="ILC905_Locked">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>ILC905</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Yevetha_Not_Played</Prereq>
+	</Event>
+	
+	<Event Name="ILC905_Unlocked">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>ILC905</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Set_Subera_Pellaeon</Prereq>
+	</Event>
+	
 	<Event Name="Yevetha_Spawns">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Prereq>Set_Subera_Pellaeon</Prereq>
@@ -1827,6 +1878,57 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
 		<Reward_Param1>MistThree</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Hapes_Unlocks</Prereq>
+	</Event>
+	
+		<Event Name="Hapes_Bouncer">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Hapes</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Disabler_NewRep</Prereq>
+	</Event>
+	
+	<Event Name="Hapes_Unlocked">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Hapes</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Hapes_Unlocks</Prereq>
+	</Event>
+	
+	<Event Name="Charubah_Bouncer">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Charubah</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Disabler_NewRep</Prereq>
+	</Event>
+	
+	<Event Name="Charubah_Unlocked">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Charubah</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Hapes_Unlocks</Prereq>
+	</Event>
+	
+	<Event Name="Terephon_Bouncer">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Terephon</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Disabler_NewRep</Prereq>
+	</Event>
+	
+	<Event Name="Terephon_Unlocked">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Terephon</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Hapes_Unlocks</Prereq>
 	</Event>

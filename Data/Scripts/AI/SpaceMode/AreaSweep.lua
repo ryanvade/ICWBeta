@@ -60,6 +60,7 @@ function Definitions()
 	}
 	}
 
+	RequiredCategories = { "AntiFighter"}
 	AllowEngagedUnits = false
 
 	kill_target = nil

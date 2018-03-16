@@ -11,18 +11,10 @@
 		  10.0 * Variable_Target.TradeRoutes) / 30.0 
 	</GenericPlanetValue>
 
-	<FriendlySpaceForceStrength>
-		Variable_Target.FriendlyForce.SpaceTotal
-	</FriendlySpaceForceStrength>
-
-	<FriendlyForceNearUnit>
-		Variable_Target.Location.FriendlyForce
-	</FriendlyForceNearUnit>
-
 	<Is_Home_Planet>
 		Variable_Target.Type.Token == Variable_Self.HomePlanet.Type.Token
 	</Is_Home_Planet>
-
+	
 	<One>
 		1.0
 	</One>
@@ -51,20 +43,30 @@
 		0.0
 	</Zero>
 
-	<Is_Empire>
-		Variable_Self.IsFaction {Parameter_Faction = "Empire"}
-	</Is_Empire>
-
-	<Is_Rebel>
-		Variable_Self.IsFaction {Parameter_Faction = "Rebel"}
-	</Is_Rebel>
+	<Is_Connected_To_Player>
+		(Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}) > 0.0
+	</Is_Connected_To_Player>
 	
-	<Is_Underworld>
-		Variable_Self.IsFaction {Parameter_Faction = "Underworld"}
-	</Is_Underworld>
-
-	<Is_Campaign>
-		Game.IsCampaignGame
-	</Is_Campaign>
-
 </Equations>

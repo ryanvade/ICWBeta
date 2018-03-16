@@ -54,14 +54,15 @@ function Definitions()
 	TaskForce = {
 	{
 		"MainForce"						
-		,"MinimumTotalSize = 80"
+		,"MinimumTotalSize = 20"
 		,"MinimumTotalForce = 10000"					
-		, "LandHero | SpaceHero | Infantry | Vehicle | Air | Fighter | Bomber | Corvette | Frigate | Super | Capital = 100%"
+		, "LandHero | SpaceHero | Infantry | Vehicle | Air | Corvette | Frigate | Capital | Super = 90%"
+		,"Corvette | Frigate | Capital = 10%"
 	}
 	}
 	RequiredCategories =	{ 
 								"Infantry | Vehicle",
-								"Corvette | Frigate | Capital | Super"
+								"Corvette | Frigate", "Capital | Super"
 							}	
 	
 	difficulty = "Easy"

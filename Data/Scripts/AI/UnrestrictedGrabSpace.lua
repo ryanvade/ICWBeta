@@ -54,7 +54,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"MainForce"						
-		, "Fighter | Bomber | Corvette | Frigate | Super | Capital = 100%"
+		, "Corvette | Frigate | Super | Capital = 100%"
 	}
 	}
 	

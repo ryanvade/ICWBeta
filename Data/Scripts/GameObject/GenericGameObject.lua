@@ -12,8 +12,8 @@
 --*   @Date:                2017-12-14T10:54:01+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            GenericGameObject.lua
--- @Last modified by:
--- @Last modified time: 2018-01-26T00:52:44+01:00
+--*   @Last modified by:    [TR]Pox
+--*   @Last modified time:  2018-03-13T13:09:14+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -40,7 +40,7 @@ function State_Init(message)
             ScriptExit()
         end
 
-        
+
         TM = require("TRGameModeTransactions")
         TypeLibrary = require("GameObjectLibrary")
 
@@ -48,10 +48,6 @@ function State_Init(message)
         if not typeEntry then
             ScriptExit()
         end
-
-		GLOBALS = require("GameGlobals")
-		
-        GLOBALS.Init()
 
         local scripts = typeEntry.Scripts
         for i, script in pairs(scripts) do

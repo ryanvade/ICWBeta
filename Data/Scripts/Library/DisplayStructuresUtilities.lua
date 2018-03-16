@@ -12,8 +12,8 @@
 --*   @Date:                2017-12-22T10:45:35+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            DisplayStructuresUtilities.lua
---*   @Last modified by:    Pox
---*   @Last modified time:  2018-01-14T13:49:40+01:00
+--*   @Last modified by:    [TR]Pox
+--*   @Last modified time:  2018-03-10T04:14:44+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -23,7 +23,7 @@
 require("GameObjectLibrary")
 
 
-function FindFriendlyStructuresOnPlanet(planet, player)
+function FindFriendlyStructuresOnPlanet(planet)
     local structuresOnPlanet = {}
     for structure, structureInfo in pairs(GameObjectLibrary.Structures) do
       CountStructuresOnPlanet(structuresOnPlanet, structure, structureInfo, planet)

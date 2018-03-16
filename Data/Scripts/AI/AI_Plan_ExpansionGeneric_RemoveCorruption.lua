@@ -49,24 +49,11 @@ function Definitions()
 		{
 			"MainForce",
 			"DenyHeroAttach",
-			"Mon_Mothma_Team | Katarn_Team | Luke_Skywalker_Jedi_Team | Han_Solo_Team | Emperor_Palpatine_Team | General_Veers_Team | Mara_Saber_Team = 1"
+			"TaskForceRequired"
 		}
 	}
 end
 
 function MainForce_Thread()
-	AssembleForce(MainForce)
-	LaunchUnits(MainForce)
-	MainForce.Set_As_Goal_System_Removable(false)
-	MainForce.Activate_Ability()
-	MainForce.Set_Plan_Result(true)	
-	Sleep(300)
-end
-
-function MainForce_No_Units_Remaining(tf)
-	--No action
-end
-
-function MainForce_Production_Failed(tf, failed_object_type)
 	ScriptExit()
 end

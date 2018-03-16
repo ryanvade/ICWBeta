@@ -12,8 +12,8 @@
 --*   @Date:                2017-12-14T10:54:01+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            GameGlobals.lua
--- @Last modified by:
--- @Last modified time: 2018-01-24T00:32:26+01:00
+--*   @Last modified by:    [TR]Pox
+--*   @Last modified time:  2018-03-10T03:06:07+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************

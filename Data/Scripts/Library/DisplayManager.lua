@@ -12,8 +12,8 @@
 --*   @Date:                2017-12-22T10:19:56+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            DisplayManager.lua
--- @Last modified by:   marcus
--- @Last modified time: 2018-02-27T20:15:35+01:00
+--*   @Last modified by:    [TR]Pox
+--*   @Last modified time:  2018-03-11T03:42:27+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -21,30 +21,51 @@
 
 
 require("Class")
-require("GameGlobals")
-require("StoryEvents")
+require("TRUtil")
 require("DisplayStructuresUtilities")
 
 OrbitalStructureDisplay = Class {
+    FACTION_COLORS = {
+        ["EMPIRE"] = {r = 8, g = 122, b = 16},
+        ["REBEL"] = {r = 239, g = 139, b = 9},
+        ["UNDERWORLD"] = {r = 102, g = 188, b = 217},
+        ["PENTASTAR"] = {r = 55, g = 64, b = 184},
+        ["YEVETHA"] = {r = 248, g = 237, b = 60},
+        ["TERADOC"] = {r = 255, g = 20, b = 50},
+        ["PIRATES"] = {r = 179, g = 148, b = 105},
+        ["HUTTS"] = {r = 255, g = 255, b = 255},
+        ["WARLORDS"] = {r = 142, g = 195, b = 0},
+        ["CORPORATE_SECTOR"] = {r = 176, g = 124, b = 172},
+        ["HARRSK"] = {r = 142, g = 195, b = 0},
+        ["NEUTRAL"] = {r = 100, g = 100, b = 100},
+        ["HOSTILE"] = {r = 153, g = 21, b = 223}
+    },
+
     CurrentText = {},
 
-    Constructor = function(self)
-        GLOBALS.Events.SelectedPlanetChanged:AttachListener(self.Update, self)
-        GLOBALS.Events.GalacticProductionFinished:AttachListener(self.Update, self)
+    SelectedPlanet = nil,
+
+    Constructor = function(self, selectedPlanetChangedEvent, productionFinishedEvent)
+        selectedPlanetChangedEvent:AttachListener(self.Update, self)
+        productionFinishedEvent:AttachListener(self.ProductionUpdate, self)
+    end,
+
+    ProductionUpdate = function(self, planet)
+        if planet ~= self.SelectedPlanet then
+          return
+        end
+        self:Update(planet)
     end,
 
     Update = function(self, planet)
-        if planet ~= GLOBALS.GetSelectedPlanet() then
-            return
-        end
-
+        self.SelectedPlanet = planet
         local owner = planet.Get_Owner()
         local ownerName = owner.Get_Faction_Name()
-        local color = GLOBALS.FACTION_COLORS[ownerName]
+        local color = self.FACTION_COLORS[ownerName]
 
         self:Clear()
 
-        GLOBALS.ShowScreenText("TEXT_SELECTED_PLANET", -1, planet, color)
+        TRUtil.ShowScreenText("TEXT_SELECTED_PLANET", -1, planet, color)
         self.CurrentText = {"TEXT_SELECTED_PLANET"}
 
         -- if not planet.Get_Owner().Is_Human() then
@@ -57,14 +78,14 @@ OrbitalStructureDisplay = Class {
             table.insert(self.CurrentText, structureText)
             local number = GameObjectNumber(amount)
             if number then
-                GLOBALS.ShowScreenText(structureText, -1, number, color)
+                TRUtil.ShowScreenText(structureText, -1, number, color)
             end
         end
     end,
 
     Clear = function(self)
         for _, text in pairs(self.CurrentText) do
-            GLOBALS.RemoveScreenText(text)
+            TRUtil.RemoveScreenText(text)
         end
     end
 }

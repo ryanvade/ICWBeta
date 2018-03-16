@@ -51,9 +51,7 @@ function Definitions()
 		"ReserveForce"
 		,"Infantry = 0,3"
 		,"Vehicle = 0,3"
-		,"Air = 0,2"
-		,"-HAV_Juggernaut_Company"
-		,"-Gallofree_HTT_Company"		
+		,"Air = 0,2"	
 		,"-Field_Com_Rebel_Team"
 		,"-Field_Com_Empire_Team"
 	}

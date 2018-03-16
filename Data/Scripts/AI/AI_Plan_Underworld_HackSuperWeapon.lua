@@ -43,24 +43,16 @@ require("pgevents")
 
 function Definitions()
 	
-	Category = "Hack_Super_Weapon"
-	IgnoreTarget = true
+	Category = "AlwaysOff"
 	TaskForce = {
 		{
 			"MainForce",
 			"DenyHeroAttach",
-			"IG88_Team = 1"
+			"TaskForceRequired"
 		}
 	}
 end
 
 function MainForce_Thread()
-	BlockOnCommand(MainForce.Produce_Force(Target))
-	BlockOnCommand(MainForce.Move_To(Target))
-	BlockOnCommand(LandUnits(MainForce))
-	MainForce.Set_Plan_Result(true)	
-end
-
-function MainForce_Production_Failed(tf, failed_object_type)
 	ScriptExit()
 end

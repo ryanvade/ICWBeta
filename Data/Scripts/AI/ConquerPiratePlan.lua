@@ -52,7 +52,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"MainForce"						
-		, "Infantry | Vehicle | Air | Fighter | Bomber | Corvette | Frigate | Super | Capital = 100%"
+		, "Infantry | Vehicle | Air | Corvette | Frigate | Super | Capital = 100%"
 	}
 	}
 	RequiredCategories = { "Air | Infantry | Vehicle" }	

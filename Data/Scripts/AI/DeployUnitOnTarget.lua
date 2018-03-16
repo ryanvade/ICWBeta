@@ -43,32 +43,18 @@ require("pgevents")
 
 
 function Definitions()
-	DebugMessage("%s -- In Definitions", tostring(Script))
-	
 	Category = "AlwaysOff"
-	IgnoreTarget = true
 	TaskForce = {
 	{
 		"MainForce",
 		"DenyHeroAttach",
-		"Bounty_Hunter_Team_E | Bounty_Hunter_Team_R = 1"
+		"TaskForceRequired"
 	}
 	}
 
 end
 
 function MainForce_Thread()
-	DebugMessage("%s -- In MainForce_Thread.", tostring(Script))
-		
-	BlockOnCommand(MainForce.Produce_Force(AITarget))
-
-	-- Landing a hero deploys it, removing it from the game and killing the script.  So,
-	-- we have to indicate success before we land the unit, even though she hasn't deployed.
-	-- If a hero killer gets her before she deploys, the plan should die before setting itself successful.	
-	MainForce.Set_Plan_Result(true)
-	
-	BlockOnCommand(LandUnits(MainForce))
-	
-	DebugMessage("%s -- Finished MainForce_Thread.", tostring(Script))
+	ScriptExit()
 end
 

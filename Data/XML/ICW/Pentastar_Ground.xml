@@ -1,6 +1,54 @@
 <?xml version="1.0" ?>
 <Remnant_Space_Units>
 
+	<GroundInfantry Name="Pentastar_Armytrooper">
+		<Variant_Of_Existing_Type>Armytrooper</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ENFORCERTROOPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ENFORCERTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Affiliation>Pentastar</Affiliation>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		<Icon_Name>i_button_enforcer_trooper.tga</Icon_Name>
+		<Land_Model_Anim_Override_Name>EI_ARMYTROOPERARMORED.ALO</Land_Model_Anim_Override_Name>
+		<Land_Model_Name>EI_PENTTROOPERARMORED.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EI_PENTTROOPERARMORED.ALO,
+			Urban, 				EI_PENTTROOPERARMORED.ALO,
+			Arctic, 			EI_PENTTROOPERARMORED.ALO,
+			Volcanic, 			EI_PENTTROOPERARMORED.ALO,
+			Desert, 			EI_PENTTROOPERARMORED.ALO,
+			Forest, 			EI_PENTTROOPERARMORED.ALO,
+			Swamp, 				EI_PENTTROOPERARMORED.ALO
+		</Land_Terrain_Model_Mapping>
+
+	</GroundInfantry>
+	
+		<GroundCompany Name="Pentastar_Army_Trooper_Squad">
+
+		<Variant_Of_Existing_Type>Army_Trooper_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Pentastar</Affiliation>
+				<Icon_Name>i_button_enforcer_trooper.tga</Icon_Name>
+
+		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
+		<Text_ID>TEXT_UNIT_ENFORCERTROOPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ENFORCERTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Create_Team_Type> Armytrooper_Team </Create_Team_Type>
+        <!-- AI  Changed to 18 troopers in squads of 9 -->
+		<Company_Units> Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper</Company_Units>
+		<Company_Units> Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper</Company_Units>
+		<Company_Units> Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper</Company_Units>
+		<Company_Units> Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper</Company_Units>
+		<Company_Units> Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Company_Transport_Unit>Imperial_Landing_Craft_Troops</Company_Transport_Unit>
+
+	</GroundCompany>
+	
+
 <GroundCompany Name="Shock_Soldier_Squad_Pentastar">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_REBEL_TANK_BUSTER_SQUAD</Text_ID>
@@ -403,6 +451,7 @@
 		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
+	
 	
 	<GroundCompany Name="Pentastar_TIE_Squad_Ground">
 		<Text_ID>TEXT_UNIT_ACCLAMATOR</Text_ID>
@@ -3475,5 +3524,72 @@
 		</Abilities>
     </SpecialStructure>
 
+	<GroundCompany Name="Pentastar_Light_Scout_Squad">
+		<LOD_Bias>5</LOD_Bias>
+		<Text_ID>TEXT_IMPERIAL_LIGHT_SCOUT_SQUAD</Text_ID>
+		<!--<Encyclopedia_Good_Against> Rebel_Trooper MPTL </Encyclopedia_Good_Against>-->
+		<!--<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>-->
+		<GUI_Row> 0 </GUI_Row>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Damage>10</Damage>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Pentastar, Teradoc, Hutts</Affiliation>
+		<Build_Cost_Credits>150</Build_Cost_Credits>
+		<Piracy_Value_Credits>50</Piracy_Value_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
+		<Required_Planets />
+		<Behavior>ABILITY_COUNTDOWN, DUMMY_GROUND_COMPANY</Behavior>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>yes</Is_Escort>
+		<Ship_Class>infantry</Ship_Class>
+		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
+		<Company_Units>Scout_Trooper, Scout_Trooper</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_scout_trooper.tga</Icon_Name>
+		<GUI_Model_Name>EV_Bike.ALO</GUI_Model_Name>
+		<GUI_Distance>65</GUI_Distance>
+		<GUI_Offset>0 0 5</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Scout_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Scout_Trooper</SFXEvent_Fleet_Move>
+
+        
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>650</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>6.5</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_SCOUTTROOPER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>UNTARGETED_STICKY_BOMB</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Spawned_Object_Type>Proj_Speeder_Bomb</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>3</Bomb_Countdown_Seconds>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Maintenance_Cost>0.05</Maintenance_Cost>
+		<Population_Value>1</Population_Value>
+		<Score_Cost_Credits>150</Score_Cost_Credits>
+	</GroundCompany>
 
 </Remnant_Space_Units>

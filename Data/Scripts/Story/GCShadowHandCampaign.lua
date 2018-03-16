@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            GCShadowHandCampaign.lua
 --*   @Last modified by:
---*   @Last modified time:  2018-02-03T12:22:17-05:00
+--*   @Last modified time:  2018-03-13T22:30:29-04:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -36,8 +36,10 @@ function Definitions()
       Determine_Faction_LUA = Find_Faction,
       Eclipse_Completed_Generic = Palpatine_Joins,
       Luke_Completed = Luke_Joins,
-	  Empire_wins_Coruscant = Spawn_Empire_Reward,
-      Warlords_Breakoff = Empire_Fractures
+	  Lose_Luke = Luke_Betrays_Empire,
+	  Save_Luke = Luke_Rejoins,
+	    Warlords_Breakoff = Empire_Fractures,
+      Empire_wins_Coruscant = Spawn_Empire_Reward
     }
 
 end
@@ -84,12 +86,13 @@ function Palpatine_Joins(message)
     --ChangePlanetOwnerAndRetreat(start_planet, p_empire)
 
     spawn_list_emperor = { "Emperor_Palpatine_Team" }
-    EmperorSpawn = SpawnList(spawn_list_emperor, start_planet, p_empire,false,false)
+    EmperorSpawn = SpawnList(spawn_list_emperor, start_planet, p_empire,true,false)
 
-    if p_newrep.Is_Human() then
-      spawn_list_luke = { "Luke_Skywalker_Darkside_Team" }
-      LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_empire,false,false)
-    end
+      if p_newrep.Is_Human() then
+        spawn_list_luke = { "Luke_Skywalker_Darkside_Team" }
+        LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_empire,true,false)
+      end
+
 
   end
 end
@@ -98,8 +101,6 @@ function Luke_Joins(message)
   if message == OnEnter then
 
     p_empire = Find_Player("Empire")
-    start_planet = FindPlanet("Byss")
-
     start_planet = FindPlanet("Byss")
 
     if start_planet.Get_Owner() ~= Find_Player("Empire") then
@@ -113,7 +114,51 @@ function Luke_Joins(message)
     end
 
     spawn_list_luke = { "Luke_Skywalker_Darkside_Team" }
-    LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_empire,false,false)
+    LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_empire,true,false)
+
+  end
+end
+
+function Luke_Betrays_Empire(message)
+  if message == OnEnter then
+
+    p_rebel = Find_Player("Rebel")
+    start_planet = FindPlanet("Yavin")
+
+    if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+      allPlanets = FindPlanet.Get_All_Planets()
+      random = GameRandom(1, table.getn(allPlanets))
+      start_planet = allPlanets[random]
+      while start_planet.Get_Owner() ~= Find_Player("Rebel") do
+        random = GameRandom(1, table.getn(allPlanets))
+        start_planet = allPlanets[random]
+      end
+    end
+
+    spawn_list_luke = { "Luke_Skywalker_Jedi_Team" }
+    LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_rebel,true,false)
+
+  end
+end
+
+function Luke_Rejoins(message)
+  if message == OnEnter then
+
+    p_rebel = Find_Player("Rebel")
+    start_planet = FindPlanet("Yavin")
+
+    if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+      allPlanets = FindPlanet.Get_All_Planets()
+      random = GameRandom(1, table.getn(allPlanets))
+      start_planet = allPlanets[random]
+      while start_planet.Get_Owner() ~= Find_Player("Rebel") do
+        random = GameRandom(1, table.getn(allPlanets))
+        start_planet = allPlanets[random]
+      end
+    end
+
+    spawn_list_luke = { "Luke_Skywalker_Jedi_Team" }
+    LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_rebel,true,false)
 
   end
 end
@@ -133,7 +178,7 @@ function Empire_Fractures(message)
     start_planet = FindPlanet("Byss")
     if start_planet.Get_Owner() == p_empire then
       spawn_list = { "Carnor_Jax_Team" }
-      ImperialForces = SpawnList(spawn_list, start_planet, p_empire, false, false)
+      ImperialForces = SpawnList(spawn_list, start_planet, p_empire, true, false)
     end
 
     --Federated Teradoc Union (Centares for Treutan, Hakassi for Kosh)
@@ -146,8 +191,8 @@ function Empire_Fractures(message)
     start_planet = FindPlanet("Centares")
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_maldrood)
-      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","13X_Teradoc" , "Crimson_Victory" , "Crimson_Victory" , "Crimson_Victory", "Crimson_Victory", "Crimson_Victory", "Crimson_Victory", "P_Ground_Barracks" , "P_Ground_Light_Vehicle_Factory"}
-      ImperialForces = SpawnList(spawn_list, start_planet, p_maldrood, false, false)
+      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","13X_Teradoc" , "Crimson_Victory" , "Crimson_Victory" , "Crimson_Victory", "Crimson_Victory", "Crimson_Victory", "Crimson_Victory"}
+      ImperialForces = SpawnList(spawn_list, start_planet, p_maldrood, true, false)
     end
 
     local checkKosh = Find_First_Object("Lancet_Kosh")
@@ -158,8 +203,8 @@ function Empire_Fractures(message)
     start_planet = FindPlanet("Hakassi")
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_maldrood)
-      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Lancet_Kosh" , "Strike_Cruiser" ,"Strike_Cruiser" ,"Strike_Cruiser" , "P_Ground_Barracks" , "P_Ground_Light_Vehicle_Factory" }
-      ImperialForces = SpawnList(spawn_list, start_planet, p_maldrood, false, false)
+      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Lancet_Kosh" , "Strike_Cruiser" ,"Strike_Cruiser" ,"Strike_Cruiser"  }
+      ImperialForces = SpawnList(spawn_list, start_planet, p_maldrood, true, false)
     end
 
     --Zero Command
@@ -172,23 +217,23 @@ function Empire_Fractures(message)
     start_planet = FindPlanet("Kalist")
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
-      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two", "P_Ground_Barracks" ,"Strike_Cruiser" ,"Strike_Cruiser" , "P_Ground_Light_Vehicle_Factory" }
-      ImperialForces = SpawnList(spawn_list, start_planet, p_harrsk, false, false)
+      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two", "Strike_Cruiser" ,"Strike_Cruiser"  }
+      ImperialForces = SpawnList(spawn_list, start_planet, p_harrsk, true, false)
     end
 
     --Pentastar
     start_planet = FindPlanet("Entralla")
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_pentastar)
-      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Generic_Bellator" ,"Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two", "P_Ground_Barracks" ,"Strike_Cruiser" ,"Strike_Cruiser" , "P_Ground_Light_Vehicle_Factory" }
-      ImperialForces = SpawnList(spawn_list, start_planet, p_pentastar, false, false)
+      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Generic_Bellator" ,"Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two", "Strike_Cruiser" ,"Strike_Cruiser" }
+      ImperialForces = SpawnList(spawn_list, start_planet, p_pentastar, true, false)
     end
 
     start_planet = FindPlanet("Bastion")
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_pentastar)
-      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Generic_Bellator" ,"Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two", "P_Ground_Barracks" , "P_Ground_Light_Vehicle_Factory" }
-      ImperialForces = SpawnList(spawn_list, start_planet, p_pentastar, false, false)
+      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Generic_Bellator" ,"Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two"}
+      ImperialForces = SpawnList(spawn_list, start_planet, p_pentastar, true, false)
     end
 
     -- Delvardus
@@ -201,15 +246,15 @@ function Empire_Fractures(message)
     start_planet = FindPlanet("Eriadu")
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_eriadu)
-      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Torpedo_Sphere" ,"Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Escort_Carrier","Escort_Carrier", "Torpedo_Sphere" ,"Torpedo_Sphere" ,"P_Ground_Barracks" , "P_Ground_Light_Vehicle_Factory" }
-      ImperialForces = SpawnList(spawn_list, start_planet, p_eriadu, false, false)
+      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Torpedo_Sphere" ,"Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Escort_Carrier","Escort_Carrier", "Torpedo_Sphere" ,"Torpedo_Sphere"  }
+      ImperialForces = SpawnList(spawn_list, start_planet, p_eriadu, true, false)
     end
 
     start_planet = FindPlanet("Kampe")
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_eriadu)
-      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Torpedo_Sphere" , "Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two", "Escort_Carrier", "Escort_Carrier","Escort_Carrier","Thalassa", "Night_Hammer" , "P_Ground_Barracks" , "P_Ground_Light_Vehicle_Factory" }
-      ImperialForces = SpawnList(spawn_list, start_planet, p_eriadu, false, false)
+      spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Torpedo_Sphere" , "Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two", "Escort_Carrier", "Escort_Carrier","Escort_Carrier","Thalassa", "Night_Hammer" }
+      ImperialForces = SpawnList(spawn_list, start_planet, p_eriadu, true, false)
     end
 
   end
@@ -222,8 +267,8 @@ function Spawn_Empire_Reward(message)
     start_planet = FindPlanet("Coruscant")
 
 
-	spawn_list_coruscant = {"Generic_Star_Destroyer_Two", "Generic_Secutor", "Generic_Allegiance", "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "Dreadnaught_Empire", "Dreadnaught_Empire", "Generic_Interdictor_Cruiser", "Generic_Victory_Destroyer", "Vindicator_Cruiser", "Carrack_Cruiser", "Carrack_Cruiser", "Lancer_Frigate", "Lancer_Frigate", "Lancer_Frigate", "Raider_Pentastar", "Generic_Procursator", "Generic_Victory_Destroyer_Two", "Generic_Star_Destroyer", "Generic_Star_Destroyer", "Strike_Cruiser", "Strike_Cruiser", "Generic_Victory_Destroyer" }
-    CoruscantSpawn = SpawnList(spawn_list_coruscant, start_planet, p_empire,false,false)
+	spawn_list_coruscant = {"Generic_Star_Destroyer_Two", "Generic_Secutor", "Generic_Allegiance", "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "Generic_Interdictor_Cruiser", "Generic_Victory_Destroyer", "Vindicator_Cruiser", "Carrack_Cruiser", "Carrack_Cruiser", "Lancer_Frigate", "Lancer_Frigate", "Lancer_Frigate", "Raider_Pentastar", "Generic_Procursator", "Generic_Victory_Destroyer_Two", "Generic_Star_Destroyer", "Generic_Star_Destroyer", "Strike_Cruiser", "Strike_Cruiser", "Generic_Victory_Destroyer" }
+    CoruscantSpawn = SpawnList(spawn_list_coruscant, start_planet, p_empire,true,false)
 
   elseif message == OnUpdate then
   end

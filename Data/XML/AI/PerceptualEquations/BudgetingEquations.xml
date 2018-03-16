@@ -1,35 +1,7 @@
 <?xml version="1.0" ?>
 <Equations>
-	<!--================== Budgeting for the Empire ==================-->
-	<!-- Fairly balanced with emphasis on offense -->
-	<!-- Information budget kept low since probe droids are cheap -->
 
-	<!-- Snowball budget - more money for offense as galactic domination comes closer -->
-	<BasicEmpireOffensiveBudgetAllocation>
-		5.0 
-		+ 
-		(10.0 * Variable_Self.PlanetsControlled)
-		+
-		(6.0 * (1.0 - Function_Has_Enough_Space_Force_Globally.Evaluate))
-	</BasicEmpireOffensiveBudgetAllocation>
-
-	<!-- Defensive budget
-	We only care about land defenses if we have enough space forces
-	AND
-		SCALE if special structure defenses are needed
-		ADD baseline amount for tactical defense spending
-	-->
-	<BasicEmpireDefensiveBudgetAllocation>
-		Function_Has_Enough_Space_Force_Globally.Evaluate
-		*
-		(
-			8.0 * Function_Can_Build_Defensive_Structures.Evaluate * (1.0 - Function_Has_Enough_Defensive_Structures.Evaluate)
-			+
-			2.0
-		)
-	</BasicEmpireDefensiveBudgetAllocation>
-
-
+	<!-- Utility equations -->
 	<Can_Build_Defensive_Structures>
 		(
 			Variable_Self.IsFaction {Parameter_Faction = "Empire"} * 
@@ -66,179 +38,8 @@
 		(0.3 - (Function_Defensive_Structure_Count.Evaluate / Variable_Self.PlanetsControlledUnnormalized ))
 		> 0.0
 	</Has_Enough_Defensive_Structures>
-
-	<!-- Increase with tech level: higher tech units mostly need high level bases.
-		Also increase with maintenance: bases prevent maintenance costs 
-		Decrease as bases are maxed out.
-	 
-		Note that The Major Item funds are diverted to Infrastructure if we are unable to tech up but want to.
-		Infrastructure money should then be spent on upgrading the highest level starbase, lifting the dependency.
-		-->
-	<BasicEmpireInfrastructureBudgetAllocation>
-		1.1 
-		* 
-		(2.5 - Variable_Self.MaxedStarbases - Variable_Self.MaxedGroundbases) 
-		*
-		(1.0 + 2.0 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility", 
-															Parameter_Type = "Pentastar_Ground_Mining_Facility",
-															Parameter_Type = "U_Ground_Mining_Facility",
-															Parameter_Type = "Generic_Tradestation"} / Variable_Self.PlanetsControlledUnnormalized)))
-		+
-		6 * (1 - Function_Can_Build_Offensive_Space.Evaluate)
-	</BasicEmpireInfrastructureBudgetAllocation>
-
-	<!-- Based on average age of scouted information -->
-	<BasicEmpireInformationBudgetAllocation>
-		0.5 * Function_Global_Scout_Need.Evaluate
-	</BasicEmpireInformationBudgetAllocation>
-
-	<!-- Receive a trickle of funds so that eventually, a major purchase is likely
-		Adjust this to control how soon the AI will spend on tech upgrades.
-
-		Scale this inversely with tech level and posession of the DeathStar (tech 6, in a sense)
-		This is needed because during middle and late game, we need more funds for special structures, etc.
-		Also, we don't want the AI to rush to max tech.
-
-		Shut off funds if we're trying to upgrade a base in order to tech
-		(the tech was already deemed affordable, and the reserve for it remains in the category)
-
-		Shut off funds if we're behind in the space race but not behind in the tech race
-		
-		2.0 * Variable_Self.CanAdvanceTech
-	-->
-	<BasicEmpireMajorItemBudgetAllocation>
-		0.8 
-		* 
-		(7.0 	- Variable_Self.TechLevel 
-				- Variable_Self.HasUnit{Parameter_Type = "Death_Star"}
-				- Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility", Parameter_Count = 1})
-		*
-		(1.0 - Function_Need_Tech_Upgrade_Unblocked.Evaluate)
-		*
-		clamp(Function_Has_Enough_Space_Force_Globally.Evaluate + (Game.Timeline > Variable_Self.TechLevel), 0.0, 1.0)
-		+
-		3.0 * (Variable_Self.TechLevel == 5) * (1 - Variable_Self.HasUnit{Parameter_Type = "Death_Star"})
-	</BasicEmpireMajorItemBudgetAllocation>
-
-	<!-- Tech Upgrade Purchasing Budgets -->
-	<!-- What fraction of the gross budget is required to support building the next tech item
-		without pause, plus a small pad to compansate for fluctuations in spending that 
-		may occur before this perception can compensate.
-
-		add a buffer large enough to ensure that the upgrade can be afforded, despite cash spikes/drops
-	-->
-	<TechUpgradeBudgetRequirement>
-		(
-			(1 - Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility", Parameter_Count = 1}) *
-			Variable_Self.BudgetFractionToBuild{Parameter_Type = "E_Ground_Research_Facility"}
-			+
-			Variable_Self.HasStructure{Parameter_Type = "E_Ground_Research_Facility", Parameter_Count = 1} *
-			(Variable_Self.TechLevel == 1) *
-			Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Primary_Hyperdrive"} 
-			+
-			(Variable_Self.TechLevel == 2) *
-			Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Shield_Gen"} 
-			+
-			(Variable_Self.TechLevel == 3) *
-			Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Superlaser_Core"} 
-			+
-			(Variable_Self.TechLevel == 4) *
-			Variable_Self.BudgetFractionToBuild{Parameter_Type = "DS_Durasteel"} 
-			+ 
-			(Variable_Self.TechLevel == 5) *
-			Variable_Self.BudgetFractionToBuild{Parameter_Type = "Death_Star"} 
-			*
-			1.25
-			+
-			0.05
-	  )
-
-	</TechUpgradeBudgetRequirement>
-
-	<!-- Tech Upgrade Template Budget ____________________________________________________	-->
-	<EmpireTechUpgradeOffensiveAllocation>
-		0.01
-		+
-		(1.0 - Function_TechUpgradeBudgetRequirement.Evaluate)
-		*
-		0.3
-	</EmpireTechUpgradeOffensiveAllocation>
-
-	<EmpireTechUpgradeDefensiveAllocation>
-		(1.0 - Function_TechUpgradeBudgetRequirement.Evaluate)
-		*
-		0.3
-		*
-		Function_Can_Build_Defensive_Structures.Evaluate
-	</EmpireTechUpgradeDefensiveAllocation>
-
-	<!-- 
-		Variable_Self.CanAdvanceTech 
-		* 
-	-->
-	<EmpireTechUpgradeMajorItemAllocation>
-		Function_TechUpgradeBudgetRequirement.Evaluate
-	</EmpireTechUpgradeMajorItemAllocation>
-
-	<!-- 
-		(1.0 - Variable_Self.CanAdvanceTech) * Function_TechUpgradeBudgetRequirement.Evaluate
-		+
-	-->
-	<EmpireTechUpgradeInfrastructureAllocation>
-		(1.0 - Function_TechUpgradeBudgetRequirement.Evaluate)
-		*
-		0.2
-	</EmpireTechUpgradeInfrastructureAllocation>
-
-	<EmpireTechUpgradeInformationAllocation>
-		(1.0 - Function_TechUpgradeBudgetRequirement.Evaluate)
-		*
-		0.0
-	</EmpireTechUpgradeInformationAllocation>
-
-
-
-	<!--================== Budgeting for the Rebels ==================-->
-	<!-- Aggressive stance.  Low defense and information -->
-
-	<!-- Snowball budget - more money for offense as galactic domination comes closer -->
-	<BasicRebelOffensiveBudgetAllocation>
-		7.2 + Variable_Self.PlanetsControlled
-		+
-		(6.0 * (1.0 - Function_Has_Enough_Space_Force_Globally.Evaluate))
-	</BasicRebelOffensiveBudgetAllocation>
 	
-	<!-- Defensive budget increases with proportion of planets that are undefended -->
-	<BasicRebelDefensiveBudgetAllocation>
-		Function_Has_Enough_Space_Force_Globally.Evaluate
-		*
-		(
-			8.0 * Function_Can_Build_Defensive_Structures.Evaluate * (1.0 - Function_Has_Enough_Defensive_Structures.Evaluate)
-			+
-			2.0
-		)
-	</BasicRebelDefensiveBudgetAllocation>
-	
-	<!-- Increase with tech level: higher tech units mostly need high level bases. -->
-	<!-- Also increase with low income -->
-	<!-- Decrease as bases are maxed out -->
-	<BasicRebelInfrastructureBudgetAllocation>
-		1.1 
-		* 
-		(2.5 - Variable_Self.MaxedStarbases - Variable_Self.MaxedGroundbases) 
-		*
-		(1.0 + 2.0 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Rebel_Ground_Mining_Facility", 
-															Parameter_Type = "Empire_Ground_Mining_Facility", 
-															Parameter_Type = "Pentastar_Ground_Mining_Facility",
-															Parameter_Type = "U_Ground_Mining_Facility",
-															Parameter_Type = "Generic_Tradestation" } / Variable_Self.PlanetsControlledUnnormalized)))
-	</BasicRebelInfrastructureBudgetAllocation>
-	
-	<!-- Based on average age of scouted information -->
-	<BasicRebelInformationBudgetAllocation>
-		0.5 * Function_Global_Scout_Need.Evaluate
-	</BasicRebelInformationBudgetAllocation>	
-	
+	<!-- This is 1 unless FoW is on for the AI -->
 	<GenericSpaceTargetedOffensiveBudgetAllocation>
 		Game.ForceVisibility
 	</GenericSpaceTargetedOffensiveBudgetAllocation>
@@ -247,6 +48,7 @@
 		0.5
 	</GenericSpaceDefensiveBudgetAllocation>
 	
+	<!-- This is 0 unless FoW is on for the AI -->
 	<GenericSpaceUntargetedOffensiveBudgetAllocation>
 		1.0 - Game.ForceVisibility
 	</GenericSpaceUntargetedOffensiveBudgetAllocation>
@@ -278,4 +80,63 @@
 				)
 	</Land_Tactical_Budget_Clamped>
 
+	<!-- Offense-oriented budget. The below usually evaluates to ~13 -->
+	<GenericOffensiveBudgetAllocation>
+		7.2 + Variable_Self.PlanetsControlled
+		+
+		(6.0 * (1.0 - Function_Has_Enough_Space_Force_Globally.Evaluate))
+	</GenericOffensiveBudgetAllocation>
+	
+	<!-- Infrastructure budget. Usually evaluates to ~6 -->
+	<GenericInfrastructureBudgetAllocation>
+		3.0 
+		* 
+		(2.5 - Variable_Self.MaxedStarbases - Variable_Self.MaxedGroundbases) 
+		*
+		(1.0 + 2.0 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Rebel_Ground_Mining_Facility", 
+															Parameter_Type = "Empire_Ground_Mining_Facility", 
+															Parameter_Type = "Pentastar_Commercial_Entity",
+															Parameter_Type = "U_Ground_Mining_Facility",
+															Parameter_Type = "Generic_Tradestation" } / Variable_Self.PlanetsControlledUnnormalized)))
+	</GenericInfrastructureBudgetAllocation>
+	
+	<!-- Trickle funds into the major item budget -->
+	<!-- Increase if we want to build our capital but don't have the funds -->
+	<!-- Usually evaluates to < 1 -->
+	<GenericMajorItemBudgetAllocation>
+		Variable_Self.PlanetsControlled
+		+
+		(
+			(1 - Function_Has_Capital_Building.Evaluate)
+			* 
+			10
+		)
+	</GenericMajorItemBudgetAllocation>
+	
+	<!-- Warlords tilt more strongly to attack than construction -->
+	<WarlordOffensiveBudgetAllocation>
+		1.5 * Function_GenericOffensiveBudgetAllocation.Evaluate
+	</WarlordOffensiveBudgetAllocation>
+	
+	<WarlordInfrastructureBudgetAllocation>
+		Function_GenericInfrastructureBudgetAllocation.Evaluate
+	</WarlordInfrastructureBudgetAllocation>
+	
+	<WarlordMajorItemBudgetAllocation>
+		Function_GenericMajorItemBudgetAllocation.Evaluate
+	</WarlordMajorItemBudgetAllocation>
+	
+	<!-- Remnant tilts more towards infrastructure and big stuff -->
+	<RemnantOffensiveBudgetAllocation>
+		0.9 * Function_GenericOffensiveBudgetAllocation.Evaluate
+	</RemnantOffensiveBudgetAllocation>
+	
+	<RemnantInfrastructureBudgetAllocation>
+		1.4 * Function_GenericInfrastructureBudgetAllocation.Evaluate
+	</RemnantInfrastructureBudgetAllocation>
+	
+	<RemnantMajorItemBudgetAllocation>
+		1.2 * Function_GenericMajorItemBudgetAllocation.Evaluate
+	</RemnantMajorItemBudgetAllocation>	
+	
 </Equations>

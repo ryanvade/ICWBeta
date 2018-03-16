@@ -59,12 +59,12 @@
 
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Tech_Level>99</Tech_Level>
+		<Tech_Level>1</Tech_Level>
 
 		<Affiliation>Underworld</Affiliation>
 		<Political_Control>0</Political_Control>
-		<Build_Cost_Credits>2000</Build_Cost_Credits>
-		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
 		<Size_Value>50</Size_Value>
 		<Base_Position>In_Base</Base_Position>
@@ -74,6 +74,7 @@
 		<Required_Special_Structures />
 		<Required_Planets />
 		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 
 		<Tactical_Health>3000</Tactical_Health>
 		<Shield_Points>1000</Shield_Points>
@@ -458,17 +459,17 @@
 		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
 		<Spawned_Squadron_Location_Flyout_Distances>180.0</Spawned_Squadron_Location_Flyout_Distances>
 		<Spawn_Garrison_On_Load>True</Spawn_Garrison_On_Load>
-		
+
 		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
 			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
 			Point13, Point14, Point15, Point16 </Target_Bones>
-			
+
 		<Damage>20</Damage>
 
 		<HardPoints>
 			HP_Barracks_Laser
 		</HardPoints>
-		
+
 				<Should_Be_Destroyed_When_All_Hardpoints_Destroyed> No </Should_Be_Destroyed_When_All_Hardpoints_Destroyed>
 		<Land_FOW_Reveal_Range>220.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>220.0</Targeting_Max_Attack_Distance>
@@ -587,8 +588,8 @@
 
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		
-		
+
+
 		<HardPoints>
 			HP_Barracks_Laser, HP_Barracks_LaserTwo
 		</HardPoints>
@@ -754,7 +755,7 @@
 
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		
+
 		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
 			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
 			Point13, Point14, Point15, Point16 </Target_Bones>
@@ -1388,7 +1389,7 @@
 		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SIMPLE_SPACE_LOCOMOTOR </SpaceBehavior>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
 		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
 		<Icon_Name>i_button_golan_one.tga</Icon_Name>
@@ -1522,7 +1523,7 @@
 		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SIMPLE_SPACE_LOCOMOTOR </SpaceBehavior>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
 		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
 		<Icon_Name>i_button_golan_two.tga</Icon_Name>
@@ -1690,7 +1691,7 @@
 		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SIMPLE_SPACE_LOCOMOTOR </SpaceBehavior>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
 		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
 		<Icon_Name>i_button_golan_three.tga</Icon_Name>
@@ -1951,7 +1952,7 @@
  		<SpaceBehavior>SPACE_OBSTACLE, REVEAL, HIDE_WHEN_FOGGED,UNIT_AI, ABILITY_COUNTDOWN, POWERED, SHIELDED, TARGETING, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT 		</SpaceBehavior>
  		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
  		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
- 		<Space_FOW_Reveal_Range>1000.0</Space_FOW_Reveal_Range>
+ 		<Space_FOW_Reveal_Range>10000.0</Space_FOW_Reveal_Range>
  		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
  		<Icon_Name>i_button_NB_APBase.tga</Icon_Name>
  		<Victory_Relevant>yes</Victory_Relevant>
@@ -2049,10 +2050,20 @@
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures>Structure_Category_Dummy</Required_Special_Structures>
 		<Required_Planets />
-		<Tactical_Health>1200</Tactical_Health>
+
+		<Shield_Points>3010</Shield_Points>
+		<Shield_Refresh_Rate>40</Shield_Refresh_Rate>
+		<Energy_Capacity>3000</Energy_Capacity>
+		<Energy_Refresh_Rate>500</Energy_Refresh_Rate>
+		<AI_Combat_Power>1000</AI_Combat_Power>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+
+        <Tactical_Health>3010</Tactical_Health>
  		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
  		<SpaceBehavior>SPACE_OBSTACLE, REVEAL, HIDE_WHEN_FOGGED,UNIT_AI, ABILITY_COUNTDOWN, POWERED, SHIELDED, TARGETING, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT 		</SpaceBehavior>
-		<Space_FOW_Reveal_Range>4000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>40000.0</Space_FOW_Reveal_Range>
 		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
@@ -2169,7 +2180,7 @@
 		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SIMPLE_SPACE_LOCOMOTOR </SpaceBehavior>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
 		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
 		<Icon_Name>i_button_xq_platform.tga</Icon_Name>
@@ -2316,7 +2327,7 @@
 		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
-		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>28000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
 		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
 		<Icon_Name>i_button_validusia.tga</Icon_Name>
@@ -2489,10 +2500,10 @@
 		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
-		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>28000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
 		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
-		<Icon_Name>i_button_validusia.tga</Icon_Name>
+		<Icon_Name>i_button_empress.tga</Icon_Name>
 		<Victory_Relevant>yes</Victory_Relevant>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<Scale_Factor>8.3</Scale_Factor>

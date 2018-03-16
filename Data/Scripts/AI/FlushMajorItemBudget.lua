@@ -45,10 +45,7 @@ require("pgevents")
 --
 
 function Definitions()
-	DebugMessage("%s -- In Definitions", tostring(Script))
-	
 	Category = "AlwaysOff"
-	IgnoreTarget = true
 	TaskForce = {
 	-- First Task Force
 	{
@@ -56,16 +53,9 @@ function Definitions()
 		, "TaskForceRequired"
 	}
 	}
-	
-	DebugMessage("%s -- Done Definitions", tostring(Script))
 end
 
 function MainForce_Thread()
-	DebugMessage("%s -- In MainForce_Thread.", tostring(Script))
-		
-	Budget.Flush_Category("MajorItem")
-	
-	DebugMessage("%s -- MainForce Done!  Exiting Script!", tostring(Script))
 	ScriptExit()
 end
 

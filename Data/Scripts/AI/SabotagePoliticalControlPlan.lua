@@ -42,33 +42,15 @@
 require("pgevents")
 
 function Definitions()
-	DebugMessage("%s -- In Definitions", tostring(Script))
-	
-	IgnoreTarget = true;
 	Category = "AlwaysOff"
 	TaskForce = {
 	{
 		"BountyForce"						
-		,"Bounty_Hunter_Team_E | Bounty_Hunter_Team_R = 1"
+		,"TaskForceRequired"
 	}
 	}
-	
-	DebugMessage("%s -- Done Definitions", tostring(Script))
 end
 
 function BountyForce_Thread()
-	DebugMessage("%s -- In BountyForce_Thread.", tostring(Script))
-	Sleep(1)
-
-	AssembleForce(BountyForce)
-	Sleep(1)
-	BlockOnCommand(BountyForce.Move_To(Target))
-	BountyForce.Set_Plan_Result(true)
-	LandUnits(BountyForce)
-	DebugMessage("%s -- BountyForce Done!  Exiting Script!", tostring(Script))
-	ScriptExit()
-end
-
-function BountyForce_No_Units_Remaining()
 	ScriptExit()
 end

@@ -42,37 +42,17 @@
 require("pgevents")
 
 function Definitions()
-	
-	--The mechanisms for corrupting a planet and for sabotaging it are identical - which we perform depends on
-	--the current corruption state of the target.  This is assessed at the perception level and by the time
-	--we execute the plan it makes no difference to our behavior
-	Category = "Corrupt_Planet | Sabotage_Planet"
-	IgnoreTarget = true
+
+	Category = "AlwaysOff"
 	TaskForce = {
 		{
 			"MainForce",
 			"DenyHeroAttach",
-			"Underworld_Saboteur_Team = 1"
+			"TaskForceRequired"
 		}
 	}
 end
 
 function MainForce_Thread()
-	AssembleForce(MainForce)
-	BlockOnCommand(MainForce.Move_To(Target))
-	MainForce.Activate_Ability()
-	
-	Sleep(10)
-	
-	if MainForce.Get_Goal_Type_Name() == "Corrupt_Planet" then
-		if Target.Is_Corrupted() then	
-			MainForce.Set_Plan_Result(true)	
-		end
-	end
-	
-	--Always treat sabotage as failing so that we won't repeatedly perform it on the same planet (cost goes up)
-end
-
-function MainForce_Production_Failed(tf, failed_object_type)
 	ScriptExit()
 end

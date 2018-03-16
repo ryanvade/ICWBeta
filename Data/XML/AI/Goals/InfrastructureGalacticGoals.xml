@@ -11,7 +11,8 @@
 		<Build_Time_Delay_Tolerance>1.2</Build_Time_Delay_Tolerance>
 		<Is_Like>
 			Build_Initial_Starbase_Only,
-			Build_Space_Defensive_Structure
+			Build_Space_Defensive_Structure,
+			Build_Space_Company
 		</Is_Like>
 	</Upgrade_Starbase>
 
@@ -32,7 +33,9 @@
 			Build_Base_Component_Heavy_Vehicle_Factory,
 			Build_Base_Component_Advanced_Vehicle_Factory,
 			Build_Base_Component_Barracks,
-			Build_Turbolasers
+			Build_Turbolasers,
+			Build_Ground_Company,
+			Build_Capital
 		</Is_Like>
 	</Build_Economic_Structure>
 
@@ -46,7 +49,8 @@
 		<Build_Time_Delay_Tolerance>1.2</Build_Time_Delay_Tolerance>
 		<Is_Like>
 			Upgrade_Starbase,
-			Build_Space_Defensive_Structure
+			Build_Space_Defensive_Structure,
+			Build_Space_Company
 		</Is_Like>
 	</Build_Initial_Starbase_Only>
 
@@ -67,7 +71,9 @@
 			Build_Base_Component_Heavy_Vehicle_Factory,
 			Build_Base_Component_Advanced_Vehicle_Factory,
 			Build_Base_Component_Barracks,
-			Build_Turbolasers
+			Build_Turbolasers,
+			Build_Ground_Company,
+			Build_Capital
 		</Is_Like>
 	</Build_Initial_Groundbase_Only>
 
@@ -87,7 +93,9 @@
 			Build_Base_Component_Heavy_Vehicle_Factory,
 			Build_Base_Component_Advanced_Vehicle_Factory,
 			Build_Base_Component_Barracks,
-			Build_Turbolasers
+			Build_Turbolasers,
+			Build_Ground_Company,
+			Build_Capital
 		</Is_Like>
 	</Build_Infiltrator_Facility>
 
@@ -107,7 +115,9 @@
 			Build_Base_Component_Advanced_Vehicle_Factory,
 			Build_Infiltrator_Facility,
 			Build_Base_Component_Barracks,
-			Build_Turbolasers
+			Build_Turbolasers,
+			Build_Ground_Company,
+			Build_Capital
 		</Is_Like>
 	</Build_Base_Component_Light_Vehicle_Factory>
 
@@ -127,7 +137,9 @@
 			Build_Base_Component_Advanced_Vehicle_Factory,
 			Build_Infiltrator_Facility,
 			Build_Base_Component_Barracks,
-			Build_Turbolasers			
+			Build_Turbolasers,
+			Build_Ground_Company,
+			Build_Capital			
 		</Is_Like>
 	</Build_Base_Component_Heavy_Vehicle_Factory>
 
@@ -147,7 +159,9 @@
 			Build_Base_Component_Heavy_Vehicle_Factory,
 			Build_Infiltrator_Facility,
 			Build_Base_Component_Barracks,
-			Build_Turbolasers			
+			Build_Turbolasers,
+			Build_Ground_Company,
+			Build_Capital			
 		</Is_Like>
 	</Build_Base_Component_Advanced_Vehicle_Factory>
 
@@ -167,8 +181,70 @@
 			Build_Base_Component_Heavy_Vehicle_Factory,
 			Build_Base_Component_Advanced_Vehicle_Factory,
 			Build_Infiltrator_Facility,
-			Build_Turbolasers
+			Build_Turbolasers,
+			Build_Ground_Company,
+			Build_Capital
 		</Is_Like>		
 	</Build_Base_Component_Barracks>
 
+	<!-- Very expensive structures need to run under the majoritem budget -->
+	
+	<Build_Ground_Company>
+		<AIGoalApplicationFlags> Friendly </AIGoalApplicationFlags>
+		<GameMode> Galactic </GameMode>
+		<Category> MajorItem </Category>
+		<Reachability> Any </Reachability>
+		<Time_Limit> 30.0 </Time_Limit>		
+		<Build_Time_Delay_Tolerance>1.5</Build_Time_Delay_Tolerance>
+		<Is_Like>
+			Build_Initial_Groundbase_Only,
+			Build_Economic_Structure,
+			Build_Base_Shield,
+			Build_Weapon,
+			Build_Base_Component_Light_Vehicle_Factory,
+			Build_Base_Component_Heavy_Vehicle_Factory,
+			Build_Base_Component_Advanced_Vehicle_Factory,
+			Build_Infiltrator_Facility,
+			Build_Base_Component_Barracks,
+			Build_Turbolasers,
+			Build_Capital
+		</Is_Like>
+	</Build_Ground_Company>
+	
+	<Build_Capital>
+		<AIGoalApplicationFlags> Friendly </AIGoalApplicationFlags>
+		<GameMode> Galactic </GameMode>
+		<Category> MajorItem </Category>
+		<Reachability> Any </Reachability>
+		<Time_Limit> 30.0 </Time_Limit>		
+		<Build_Time_Delay_Tolerance>1.5</Build_Time_Delay_Tolerance>
+		<Is_Like>
+			Build_Initial_Groundbase_Only,
+			Build_Economic_Structure,
+			Build_Base_Shield,
+			Build_Weapon,
+			Build_Base_Component_Light_Vehicle_Factory,
+			Build_Base_Component_Heavy_Vehicle_Factory,
+			Build_Base_Component_Advanced_Vehicle_Factory,
+			Build_Infiltrator_Facility,
+			Build_Base_Component_Barracks,
+			Build_Turbolasers,
+			Build_Ground_Company
+		</Is_Like>
+	</Build_Capital>
+	
+	<Build_Space_Company>
+		<AIGoalApplicationFlags> Friendly </AIGoalApplicationFlags>
+		<GameMode> Galactic </GameMode>
+		<Category> MajorItem </Category>
+		<Reachability> Any </Reachability>
+		<Time_Limit> 30.0 </Time_Limit>
+		<Build_Time_Delay_Tolerance>1.2</Build_Time_Delay_Tolerance>
+		<Is_Like>
+			Build_Initial_Starbase_Only,
+			Build_Space_Defensive_Structure,
+			Upgrade_Starbase
+		</Is_Like>
+	</Build_Space_Company>
+	
 </Goals>

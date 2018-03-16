@@ -12,8 +12,8 @@
 --*   @Date:                2017-11-24T12:43:51+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            GCPlayerAgnostic.lua
--- @Last modified by:
--- @Last modified time: 2018-02-11T02:52:16+01:00
+--*   @Last modified by:    [TR]Pox
+--*   @Last modified time:  2018-03-10T19:26:45+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -23,13 +23,14 @@
 require("PGDebug")
 require("PGStateMachine")
 require("PGStoryMode")
-require("StoryEvents")
-require("StoryEventManager")
-require("GameObjectLibrary")
-GLOBALS = require("GameGlobals")
+
+CONSTANTS = require("GameConstants")
+TM = require("TRGameModeTransactions")
+
+require("TRUtil")
+require("GalacticConquest")
 require("DisplayManager")
 require("CategoryFilter")
-TM = require("TRGameModeTransactions")
 
 
 function Definitions()
@@ -38,27 +39,27 @@ function Definitions()
 
     ServiceRate = 0.1
 
-    CONST_STORY_THREAD_FLAG = true
     StoryModeEvents = { Zoom_Zoom = Begin_GC }
 end
 
 function Begin_GC(message)
     if message == OnEnter then
-        GLOBALS.Init()
-        GLOBALS.InitializeEvents()
-        GLOBALS.PLAYER.Enable_Advisor_Hints("Galactic",false)
-        GLOBALS.PLAYER.Enable_Advisor_Hints("Space",false)
-        GLOBALS.PLAYER.Enable_Advisor_Hints("Land",false)
+        local plot = TRUtil.GetPlayerAgnosticPlot()
+        GC = GalacticConquest:New(plot, CONSTANTS.PLAYABLE_FACTIONS)
 
-        StructureDisplay = OrbitalStructureDisplay:New()
-        Filter = CategoryFilter:New()
+        GC.HumanPlayer.Enable_Advisor_Hints("Galactic",false)
+        GC.HumanPlayer.Enable_Advisor_Hints("Space",false)
+        GC.HumanPlayer.Enable_Advisor_Hints("Land",false)
+
+        StructureDisplay = OrbitalStructureDisplay:New(GC.Events.SelectedPlanetChanged, GC.Events.GalacticProductionFinished)
+        Filter = CategoryFilter:New(plot, GC)
 
         -- Create_Thread("EventManagerThread")
         Create_Thread("TransactionManagerThread")
         -- Create_Thread("CategoryFilterThread")
 
       elseif message == OnUpdate then
-        GLOBALS.Update()
+        GC:Update()
         Filter:Update()
     end
 end

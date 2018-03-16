@@ -41,38 +41,16 @@
 
 require("pgevents")
 
--- Tell the script pooling system to pre-cache this number of scripts.
-ScriptPoolCount = 0
-
 function Definitions()
-	DebugMessage("%s -- In Definitions", tostring(Script))
-	
 	Category = "AlwaysOff"
-	IgnoreTarget = true
 	TaskForce = {
 	{
 		"StructureForce",
-		"Structure = 1"
+		"TaskForceRequired"
 	}
 	}
-
-	DebugMessage("%s -- Done Definitions", tostring(Script))
 end
 
 function StructureForce_Thread()
-	DebugMessage("%s -- In StructureForce_Thread.", tostring(Script))
-	
-	Sleep(1)
-	
---	StructureForce.Set_As_Goal_System_Removable(false)
-	AssembleForce(StructureForce)
-	
-	StructureForce.Set_Plan_Result(true)
-	DebugMessage("%s -- StructureForce done!", tostring(Script));
-	ScriptExit()
-end
-
-function StructureForce_Production_Failed(tf, failed_object_type)
-	DebugMessage("%s -- Abandonning plan owing to production failure.", tostring(Script))
 	ScriptExit()
 end

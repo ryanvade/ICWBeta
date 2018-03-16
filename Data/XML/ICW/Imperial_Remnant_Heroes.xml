@@ -6,7 +6,7 @@
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
 		<Text_ID>TEXT_HERO_CARNOR_JAX</Text_ID>
 		<Land_Model_Anim_Override_Name>EI_RoyalGaurd.alo</Land_Model_Anim_Override_Name>
-		<Land_Model_Name>carnorjax.ALO</Land_Model_Name>
+		<Land_Model_Name>EI_carnorjax.ALO</Land_Model_Name>
 		<Icon_Name>i_button_carnor_jax.tga</Icon_Name>
 
 		<GalacticBehavior> SELECTABLE </GalacticBehavior>
@@ -2504,7 +2504,7 @@
 		<Fire_Inaccuracy_Distance> Super, 30.0 </Fire_Inaccuracy_Distance>
 
 		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
-		<Space_FOW_Reveal_Range>1500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>15000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
 		<Death_Explosions>Tiny_Explosion_Space</Death_Explosions>
 		<Death_SFXEvent_Start_Die>Unit_TIE_Fighter_Death_SFX</Death_SFXEvent_Start_Die>
@@ -3801,6 +3801,73 @@
 		</Abilities>
 		
 	</UniqueUnit>
+	
+	<UniqueUnit Name="Pellaeon_Reaper">
+		<Variant_Of_Existing_Type>Generic_Executor</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_LUSANKYA</Text_ID>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<Tech_Level>99</Tech_Level>
+		<Lua_Script></Lua_Script>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
+        <Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
+        <Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 5</Starting_Spawned_Units_Tech_0>
+        <Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+        <Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 8</Reserve_Spawned_Units_Tech_0> 
+        <Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 8</Reserve_Spawned_Units_Tech_0>
+        <Reserve_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+		
+		<Icon_Name>i_button_gilad_pellaeon.tga</Icon_Name>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND2 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GILAD_PELLAEON TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_REAPER </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPITAL </Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 42500 </Score_Cost_Credits>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+
+		
+		<Abilities SubObjectList="Yes">
+			
+			<Combat_Bonus_Ability Name="Pellaeon_Self_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types> Chimera_Pellaeon_Vice </Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Pellaeon_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types> </Excluded_Unit_Types>
+				<Health_Bonus_Percentage>0.15</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.15</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.15</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.15</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Battlefield_Modifier_Ability Name="Pellaeon_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>1.15</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+
+		</Abilities>
+
+	</UniqueUnit>
 
 	<UniqueUnit Name="Chimera_Pellaeon_Grand">
 		<Variant_Of_Existing_Type>Generic_Star_Destroyer_Two</Variant_Of_Existing_Type>
@@ -3844,20 +3911,6 @@
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Unit_Abilities_Data SubObjectList="Yes">
-			
-			<Unit_Ability>
-				<Type>CONCENTRATE_FIRE</Type>
-				<Effective_Radius>6000</Effective_Radius>
-				<Recharge_Seconds>20</Recharge_Seconds>
-				<Expiration_Seconds>15</Expiration_Seconds>
-				<Particle_Effect>Home_One_Target_Particles</Particle_Effect>
-				<GUI_Activated_Ability_Name>Pellaeon_Ability</GUI_Activated_Ability_Name>
-				<SFXEvent_Target_Ability> Unit_Barrage_Ackbar </SFXEvent_Target_Ability>
-			</Unit_Ability>
-
-		</Unit_Abilities_Data>
 
 		<Abilities SubObjectList="Yes">
 
@@ -3911,17 +3964,6 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
 			
-			<Concentrate_Fire_Attack_Ability Name="Pellaeon_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Fighter | Bomber | Transport | Corvette | Frigate | Capital | Structure</Applicable_Unit_Categories>
-				<Applicable_Unit_Types />
-				
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Damage_Increase_Percent>0.5</Target_Damage_Increase_Percent>
-				<Target_Speed_Decrease_Percent>0.0</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			</Concentrate_Fire_Attack_Ability>
-
 		</Abilities>
 		
 	</UniqueUnit>
@@ -4319,7 +4361,7 @@
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
 
-		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>250000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
 		
 		<CategoryMask> Capital | AntiFrigate </CategoryMask>

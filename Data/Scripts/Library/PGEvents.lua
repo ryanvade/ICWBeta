@@ -153,8 +153,6 @@ function Respond_To_MinRange_Attacks(tf, unit)
 		,"E_Ground_Turbolaser_Tower"
 		,"MPTL"
 		,"SPMAT_Walker"
-		,"Marauder_Missile_Cruiser"
-		,"Broadside_Class_Cruiser"
 		}
 
 	deadly_enemy = FindDeadlyEnemy(unit)
@@ -326,12 +324,6 @@ function Default_Unit_Damaged(tf, unit, attacker, deliberate)
 			(lib_is_hero and lib_current_health < 0.6) or
 			(lib_current_health < 0.7 and lib_attacker_is_good_vs_me) or
 			(lib_current_health < 0.4 and not lib_i_am_good_vs_attacker) then
-
-			--Certain factions have no self-preservation
-			lib_faction_name = unit.Get_Owner().Get_Faction_Name()
-			if lib_faction_name == "PIRATES" or lib_faction_name == "HUTTS" then
-				return
-			end
 
 			-- Turn off any abilities that would hinder self-preservation
 			unit.Activate_Ability("Power_To_Weapons", false)

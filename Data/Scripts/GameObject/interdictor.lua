@@ -72,8 +72,6 @@ function State_Init(message)
 		interdicting = false
 		using_missile_shield = false
 		cancelling_shield = false
-		marauder = Find_Object_Type("Marauder_Missile_Cruiser")
-		broadside = Find_Object_Type("Broadside_Class_Cruiser")
 
 	elseif message == OnUpdate then
 
@@ -114,9 +112,11 @@ end
 function Under_Missile_Attack()
 	deadly_enemy = FindDeadlyEnemy(Object)
 	if TestValid(deadly_enemy) then
-		enemy_type = deadly_enemy.Get_Type()
-		if TestValid(deadly_enemy) and (enemy_type == marauder or enemy_type == broadside) then
-			return true
+		projectile_types = deadly_enemy.Get_All_Projectile_Types()
+		for _, projectile in pairs(projectile_types) do
+			if projectile.Is_Affected_By_Missile_Shield() then
+				return true
+			end
 		end
 	end
 	return false

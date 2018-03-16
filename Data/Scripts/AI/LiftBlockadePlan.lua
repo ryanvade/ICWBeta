@@ -55,10 +55,10 @@ function Definitions()
 		"MainForce"						-- Name of the MainForce, Variable and thread function.
 		,"MinimumTotalSize = 4"
 		,"MinimumTotalForce = 2500"					
-		,"Frigate | Capital | Corvette | Fighter | Bomber = 100%"
+		,"Frigate | Capital | Corvette = 100%"
 	}
 	}
-	RequiredCategories = { "Corvette | Frigate | Capital | Super" }	
+	RequiredCategories = { "Corvette | Frigate | Capital" }	
 end
 
 function MainForce_Thread()

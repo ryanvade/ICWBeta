@@ -46,7 +46,7 @@
 	<Needs_Ground_Defensive_Structure>
 		5.0 *
 		Variable_Target.OpenStructureSlots *
-		Variable_Target.GroundbaseLevel *
+		Variable_Target.GroundbaseLevelUnnormalized *
 		Variable_Target.FriendlyForce.GroundTotalNBTD *
 		Function_DefensiveValue.Evaluate
 	</Needs_Ground_Defensive_Structure>
@@ -57,9 +57,11 @@
 	<Needs_Space_Defensive_Structure>
 		50.0 *
 		Variable_Target.OpenStructureSlots *
-		Variable_Target.StarbaseLevel *
+		Variable_Target.StarbaseLevelUnnormalized *
 		Variable_Target.FriendlyForce.SpaceTotalNBTD *
-		Function_DefensiveValue.Evaluate
+		(1.0 + Function_DefensiveValue.Evaluate)
+		+
+		8.0 * Function_Planet_Has_Capital_Building.Evaluate
 	</Needs_Space_Defensive_Structure>
 	
 	<!-- Don't defend planets with enemy forces blockading (handled by Lift_Blockade) -->
@@ -118,6 +120,8 @@
 		+
 		8.0 * Function_Is_Connected_To_Enemy.Evaluate
 		+
+		8.0 * Function_Planet_Has_Capital_Building.Evaluate
+		+
 		Variable_Target.FriendlyForce.SpaceTotalUnnormalized / 5000.0 
 		+ 
 		Variable_Target.FriendlyForce.GroundTotalUnnormalized / 2500.0
@@ -141,6 +145,8 @@
 		8.0 * Function_Is_Connected_To_Enemy.Evaluate
 		+
 		Variable_Target.FriendlyForce.GroundTotalUnnormalized / 2500.0
+		+
+		8.0 * Function_Planet_Has_Capital_Building.Evaluate
 	</Needs_Base_Shield>
 
 	<!--
@@ -156,23 +162,30 @@
 		+
 		8.0 * Function_Is_Connected_To_Enemy.Evaluate
 		+
+		8.0 * Function_Planet_Has_Capital_Building.Evaluate
+		+
 		10.0
 	</Needs_Turbolasers>
 
-	<!--
-
-		-->
-	<Needs_Jamming_Station>
-		Variable_Target.OpenStructureSlots 
-		*
-		Function_Has_Enough_Bases_For_Tech.Evaluate
-		*
-		(Function_Defense_Level.Evaluate > 5)
-	</Needs_Jamming_Station>
-
-
 	<Defense_Level>
 		Variable_Target.StarbaseLevelUnnormalized 
+		+ Variable_Target.HasStructure {Parameter_Type = "Rebel_Golan_One"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Rebel_Golan_Two"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Rebel_Golan_Two_Strategic"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Rebel_Golan_Three"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Rebel_Golan_Three_Strategic"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Empire_Golan_One"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Empire_Golan_Two"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Empire_Golan_Two_Strategic"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Empire_Golan_Three"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Empire_Golan_Three_Strategic"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Oto"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Visvia"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Brask"}
+		+ Variable_Target.HasStructure {Parameter_Type = "NewRep_XQ"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Alignment_XQ"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Validusia"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Empress_Station"}
 		+ Variable_Target.HasStructure {Parameter_Type = "Ground_Ion_Cannon", Parameter_Count = 1}
 		+ Variable_Target.HasStructure {Parameter_Type = "Ground_Empire_Hypervelocity_Gun", Parameter_Count = 1}
 		+ Variable_Target.HasStructure {Parameter_Type = "Ground_Pentastar_Hypervelocity_Gun", Parameter_Count = 1}
@@ -181,9 +194,7 @@
 		+ Variable_Target.HasStructure {Parameter_Type = "E_Galactic_Turbolaser_Tower_Defenses", Parameter_Count = 1}
 		+ Variable_Target.HasStructure {Parameter_Type = "R_Galactic_Turbolaser_Tower_Defenses", Parameter_Count = 1}
 		+ Variable_Target.HasStructure {Parameter_Type = "U_Galactic_Turbolaser_Tower_Defenses", Parameter_Count = 1}
-		+ Variable_Target.HasStructure {Parameter_Type = "Y_Galactic_Turbolaser_Tower_Defenses", Parameter_Count = 1}
-		+ Variable_Target.HasStructure {Parameter_Type = "Ground_Magnepulse_Cannon", Parameter_Count = 1}		
-		+ Variable_Target.HasStructure {Parameter_Type = "Ground_Gravity_Generator", Parameter_Count = 1}
+		+ Variable_Target.HasStructure {Parameter_Type = "Y_Galactic_Turbolaser_Tower_Defenses", Parameter_Count = 1}	
 	</Defense_Level>
 
 	<Can_Park_Ground_Unit>
@@ -210,6 +221,8 @@
 		Variable_Target.HasStructure {Parameter_Type = "E_Ground_Base_Shield", Parameter_Type = "R_Ground_Base_Shield",
 										Parameter_Type = "E_Galactic_Turbolaser_Tower_Defenses", Parameter_Type = "R_Galactic_Turbolaser_Tower_Defenses",
 										Parameter_Type = "U_Galactic_Turbolaser_Tower_Defenses", Parameter_Type = "Y_Galactic_Turbolaser_Tower_Defenses"}
+		+
+		2.0 * Function_Planet_Has_Capital_Building.Evaluate								
 	</Ground_Priority_Defense_Score>
 
 	<Space_Priority_Defense_Score>
@@ -218,6 +231,8 @@
 		2.0 * Function_Is_Connected_To_Enemy.Evaluate
 		+
 		Variable_Target.HasStructure {Parameter_Type = "Ground_Ion_Cannon", Parameter_Type = "Ground_Empire_Hypervelocity_Gun", Parameter_Type = "Ground_Pentastar_Hypervelocity_Gun"}
+		+
+		2.0 * Function_Planet_Has_Capital_Building.Evaluate
 	</Space_Priority_Defense_Score>
 
 	<Friendly_Space_Unit_Raw_Total>
@@ -244,36 +259,4 @@
 		Game.EnemyForce.GroundTotalUnnormalized - Game.EnemyForce.GroundTotalUnnormalized {Parameter_Category = GameObjectCategoryType[LandHero]}
 	</Enemy_Global_Land_Unit_Raw_Total>
 	
-	<Needs_Magic_Ground_Defense>
-		0.0
-	</Needs_Magic_Ground_Defense>
-	
-	<Needs_Magic_Space_Defense>
-		0.0
-	</Needs_Magic_Space_Defense>
-		
-	<Needs_Magic_Ground_Defense_Easy>
-		0.0
-	</Needs_Magic_Ground_Defense_Easy>
-	
-	<Needs_Magic_Space_Defense_Easy>
-		0.0	
-	</Needs_Magic_Space_Defense_Easy>
-	
-	<Needs_Magic_Ground_Defense_Hard>
-		0.0
-	</Needs_Magic_Ground_Defense_Hard>
-	
-	<Needs_Magic_Space_Defense_Hard>
-		0.0
-	</Needs_Magic_Space_Defense_Hard>			
-	
-	<Needs_Magic_Ground_Structure>
-		0.0
-	</Needs_Magic_Ground_Structure>
-
-	<Needs_Magic_Cash_Drop>
-		0.0
-	</Needs_Magic_Cash_Drop>
-		
 </Equations>

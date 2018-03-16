@@ -51,7 +51,7 @@
 
 
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
-		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>20000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
 
 		<!-- Comm array and supply dock should be replaced by dummy hard points -->
@@ -149,7 +149,7 @@
 		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
-		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>20000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
 
 		<HardPoints>
@@ -258,7 +258,7 @@
 		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
 
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
-		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>20000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
 
 		<!-- Comm array and supply dock should be replaced by dummy hard points -->
@@ -409,7 +409,7 @@
 
 	<SpaceUnit Name="Arquitens">
 		<Text_ID>TEXT_UNIT_ARQUITENS</Text_ID>
-		<!--<Encyclopedia_Good_Against> X-Wing Corellian_Gunship Corellian_Corvette </Encyclopedia_Good_Against>-->
+		<!--<Encyclopedia_Good_Against> X-Wing Corellian_Gunboat Corellian_Corvette </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> B-wing Y-wing MC40a </Encyclopedia_Vulnerable_To>-->
 		<GUI_Row> 1 </GUI_Row>
 		<Space_Model_Name>PA_Arquitens.ALO</Space_Model_Name>
@@ -478,7 +478,7 @@
 		<Death_Leave_Hulk_Behind> No </Death_Leave_Hulk_Behind>
 
 		<Death_Clone>Damage_Normal, Small_Explosion_Space</Death_Clone>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
 
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
@@ -663,7 +663,7 @@
 
 		<Death_Clone>Damage_Normal, Large_Explosion_Space_Empire</Death_Clone>
 
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1500.0</Targeting_Max_Attack_Distance>
          <HardPoints>
 			HP_Torpedo_Sphere_DualTurbo07,
@@ -873,7 +873,7 @@
 		<Behavior> DUMMY_STARSHIP, SELECTABLE </Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON</SpaceBehavior>
 
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1400.0</Targeting_Max_Attack_Distance>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
@@ -893,7 +893,7 @@
 			HP_Escort_Hangar
 		</HardPoints>
 
-		<CategoryMask> Frigate | AntiCorvette</CategoryMask>
+		<CategoryMask> Frigate | AntiCorvette | Carrier</CategoryMask>
 		<Icon_Name>I_BUTTON_ESCORT_CARRIER.tga</Icon_Name>
 		<GUI_Model_Name>Escort_Carrier.ALO</GUI_Model_Name>
 		<GUI_Distance>1000</GUI_Distance>
@@ -1098,7 +1098,7 @@
 
 		<Death_Clone>Damage_Normal, Interdictor_Death_Clone</Death_Clone>
 
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
 
 		<HardPoints>
@@ -1288,10 +1288,10 @@
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
 
-		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>250000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
 		<Death_Clone />
-		<CategoryMask> Capital | AntiFrigate </CategoryMask>
+		<CategoryMask> Super | AntiFrigate </CategoryMask>
 
 		<HardPoints>
      		HP_Bellator_Turbo_1, HP_Bellator_Turbo_2, HP_Bellator_Turbo_3, HP_Bellator_Turbo_4, HP_Bellator_Turbo_5, HP_Bellator_Turbo_6, HP_Bellator_Turbo_7, HP_Bellator_Turbo_8, HP_Bellator_Turbo_9, HP_Bellator_Turbo_10, HP_Bellator_Turbo_11, HP_Bellator_Turbo_12, HP_Bellator_Turbo_13, HP_Bellator_Turbo_14, HP_Bellator_Turbo_15, HP_Bellator_Turbo_16, HP_Bellator_Turbo_17, HP_Bellator_Turbo_18, HP_Bellator_Turbo_19, HP_Bellator_Turbo_20, HP_Bellator_Turbo_21, HP_Bellator_Turbo_22, HP_Bellator_Turbo_23, HP_Bellator_Turbo_24, HP_Bellator_Turbo_25, HP_Bellator_Turbo_26, HP_Bellator_Turbo_27, HP_Bellator_Turbo_28, HP_Bellator_Turbo_29, HP_Bellator_Turbo_30, HP_Bellator_Turbo_31, HP_Bellator_Turbo_32, HP_Bellator_Turbo_33, HP_Bellator_Turbo_34, HP_Bellator_Turbo_35, HP_Bellator_Turbo_36, HP_Bellator_Turbo_37, HP_Bellator_Turbo_38, HP_Bellator_Turbo_39, HP_Bellator_Turbo_40, HP_Bellator_Turbo_41, HP_Bellator_Turbo_42, HP_Bellator_Turbo_43, HP_Bellator_Turbo_44, HP_Bellator_Turbo_45, HP_Bellator_Turbo_46,
@@ -1468,7 +1468,7 @@
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
 
-		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>250000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
 		<Death_Clone />
 		<CategoryMask> Capital | AntiFrigate </CategoryMask>
@@ -1687,7 +1687,7 @@
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
 		<Death_Clone>Damage_Normal, Star_Destroyer_Death_Clone</Death_Clone>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1500.0</Targeting_Max_Attack_Distance>
          <HardPoints>
 			HP_Star_Destroyer_Weapon_FR, HP_Star_Destroyer_Weapon_FL, HP_Star_Destroyer_Weapon_L2, HP_Star_Destroyer_Weapon_R2,
@@ -1892,7 +1892,7 @@
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
 		<Death_Clone>Damage_Normal, Star_Destroyer_Death_Clone</Death_Clone>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1500.0</Targeting_Max_Attack_Distance>
 
 		<HardPoints>
@@ -2089,7 +2089,7 @@
 				<Surface_Bombardment_Capable>yes</Surface_Bombardment_Capable>
 
         <Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
-        <Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+        <Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
         <Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
         <Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 
@@ -2291,7 +2291,7 @@
         <Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
         <Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
-        <Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+        <Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
         <Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
         <Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 
@@ -2454,7 +2454,7 @@
         <Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
         <Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
-        <Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+        <Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
         <Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
         <Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 
@@ -2634,7 +2634,7 @@
         <Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
         <Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
-        <Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+        <Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
         <Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
         <Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 
@@ -2816,7 +2816,7 @@
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
 		<Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
-		<Space_FOW_Reveal_Range>4000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>40000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2700.0</Targeting_Max_Attack_Distance>
 
 		<HardPoints>
@@ -3000,7 +3000,7 @@
 				<Surface_Bombardment_Capable>yes</Surface_Bombardment_Capable>
 
         <Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
-        <Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+        <Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
         <Targeting_Max_Attack_Distance>1700.0</Targeting_Max_Attack_Distance>
         <Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 
@@ -3169,7 +3169,7 @@
 
 		<Death_Clone>Damage_Normal, Interdictor_Death_Clone</Death_Clone>
 
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1400.0</Targeting_Max_Attack_Distance>
 
 		<HardPoints>
@@ -3400,7 +3400,7 @@
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
 		<Death_Clone>Damage_Normal,  Dominator_Death_Clone</Death_Clone>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
 
 		<HardPoints>
@@ -3575,7 +3575,7 @@
 		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 
-		<Space_FOW_Reveal_Range>1000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>10000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
@@ -3583,7 +3583,7 @@
 		<Death_Clone>Damage_Normal, Small_Explosion_Space</Death_Clone>
 
 		<HardPoints>
-		HP_IPV_00, HP_IPV_01, HP_IPV_02, HP_IPV_03, HP_IPV_04, HP_IPV_05
+		HP_IPV_00, HP_IPV_01, HP_IPV_02, HP_IPV_03
 		</HardPoints>
 
 		<CategoryMask> Corvette | AntiFighter | AntiBomber </CategoryMask>
@@ -3731,7 +3731,7 @@
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 
 		<Death_Clone>Damage_Normal, Acclamator_Death_Clone</Death_Clone>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
@@ -3918,7 +3918,7 @@
 		<Behavior> DUMMY_STARSHIP, SELECTABLE </Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1700.0</Targeting_Max_Attack_Distance>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
@@ -4058,7 +4058,7 @@
 
 	<SpaceUnit Name="Carrack_Cruiser">
 		<Text_ID>TEXT_UNIT_CARRACK</Text_ID>
-		<!--<Encyclopedia_Good_Against> X-Wing Corellian_Gunship Corellian_Corvette </Encyclopedia_Good_Against>-->
+		<!--<Encyclopedia_Good_Against> X-Wing Corellian_Gunboat Corellian_Corvette </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> B-wing Y-wing MC40a </Encyclopedia_Vulnerable_To>-->
 		<GUI_Row> 1 </GUI_Row>
 		<Space_Model_Name>EV_Carrack.ALO</Space_Model_Name>
@@ -4127,7 +4127,7 @@
 		<Death_Leave_Hulk_Behind> No </Death_Leave_Hulk_Behind>
 
 		<Death_Clone>Damage_Normal, Small_Explosion_Space</Death_Clone>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
 
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
@@ -4304,7 +4304,7 @@
 		<Behavior> DUMMY_STARSHIP, SELECTABLE </Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1700.0</Targeting_Max_Attack_Distance>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
@@ -4507,7 +4507,7 @@
 		<Behavior> DUMMY_STARSHIP, SELECTABLE </Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
@@ -4703,7 +4703,7 @@
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 
 		<Death_Clone>Damage_Normal, Acclamator_Death_Clone</Death_Clone>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
@@ -4908,7 +4908,7 @@
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 
 		<Death_Clone>Damage_Normal</Death_Clone>
-		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>12000.0</Space_FOW_Reveal_Range>
 
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 		<Targeting_Max_Attack_Distance>1400.0</Targeting_Max_Attack_Distance>
@@ -5103,8 +5103,8 @@
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
-		<Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
-		<Space_FOW_Reveal_Range>4000.0</Space_FOW_Reveal_Range>
+		<Death_Clone>Damage_Normal, Lucrehulk_Death_Clone</Death_Clone>
+		<Space_FOW_Reveal_Range>40000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2700.0</Targeting_Max_Attack_Distance>
 		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<HardPoints>
@@ -5203,6 +5203,25 @@
 		</Abilities>
 	</SpaceUnit>
 
+	<SpaceUnit Name="Lucrehulk_Death_Clone">
+		<Text_ID>TEXT_UNIT_ACCLAMATOR</Text_ID>
+		<Space_Model_Name>CIS_Tradehulk_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>CIS_Tradehulk_D.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		<Scale_Factor>8.2</Scale_Factor>
+		<Layer_Z_Adjust>-230.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+
+	</SpaceUnit>
+
 	<SpaceUnit Name="Generic_Allegiance">
 		<Text_ID>TEXT_UNIT_ALLEGIANCE</Text_ID>
 
@@ -5277,7 +5296,7 @@
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
 		<Death_Clone>Damage_Normal, Allegiance_Death_Clone</Death_Clone>
-		<Space_FOW_Reveal_Range>4000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>40000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
 
 		<HardPoints>
@@ -5463,7 +5482,7 @@
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
 		<Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
-		<Space_FOW_Reveal_Range>4000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>40000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2100.0</Targeting_Max_Attack_Distance>
 
 		<HardPoints>
@@ -5646,7 +5665,7 @@
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
 		<Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1700.0</Targeting_Max_Attack_Distance>
                 <HardPoints>
 			HP_Tector_Engines
@@ -5833,18 +5852,18 @@
         <Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
         <Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
-        <Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+        <Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
         <Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
         <Death_Explosions>Large_Explosion_Space</Death_Explosions>
 
         <Death_Clone>Damage_Normal, Providence_Death_Clone</Death_Clone>
 
         <HardPoints>
-          IH_laser01, IH_laser02, IH_Hangar01, IH_Hangar02, IH_Shield_Gen, IH_engine, IH_Ion01, IH_Ion02, IH_Turbo01, IH_Turbo02, IH_Proton01, IH_Proton02, IH_Proton03, IH_Proton04, IH_Proton05, IH_Proton06, IH_Proton07, IH_Proton08
+          IH_laser01, IH_laser02, IH_Hangar01, IH_Hangar02, IH_Shield_Gen, IH_engine, IH_Ion01, IH_Ion02, IH_Turbo01, IH_Turbo02, IH_Proton01, IH_Proton02, IH_Proton03, IH_Proton04, IH_Proton05, IH_Proton06, IH_Turbo03, IH_Turbo04
         </HardPoints>
 
         <CategoryMask> Frigate | AntiCorvette | Boardable</CategoryMask>
-        <Icon_Name>i_button_providence.tga</Icon_Name>
+        <Icon_Name>i_button_prov.tga</Icon_Name>
         <GUI_Model_Name>cis_providence.alo</GUI_Model_Name>
         <GUI_Distance>1100</GUI_Distance>
         <GUI_Offset>0 0 0</GUI_Offset>
@@ -5981,7 +6000,7 @@
 		<Max_Lift>0.0</Max_Lift>
 
 		<Death_Clone>Damage_Normal, Imperial_Landing_Craft_Death_Clone</Death_Clone>
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1400.0</Targeting_Max_Attack_Distance>
 
 		<Build_Initially_Locked>No</Build_Initially_Locked>
@@ -6015,7 +6034,7 @@
 		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
 		<SpaceBehavior> ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, SPAWN_SQUADRON, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 
-		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1200.0</Targeting_Max_Attack_Distance>
 		<CategoryMask>Transport</CategoryMask>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>

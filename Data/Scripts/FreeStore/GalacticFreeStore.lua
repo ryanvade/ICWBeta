@@ -215,7 +215,7 @@ function Find_Ground_Unit_Target(object)
 		end
 	end
 	
-	priority_planet = FindTarget.Reachable_Target(PlayerObject, "Ground_Priority_Defense_Score", "Friendly", "Friendly_Only", 0.1, object)
+	priority_planet = FindTarget.Reachable_Target(PlayerObject, "Ground_Priority_Defense_Score", "Friendly", "Friendly_Only", 0.8, object)
 	if priority_planet then
 		priority_planet = priority_planet.Get_Game_Object()
 	end
@@ -287,7 +287,7 @@ function Find_Space_Unit_Target(object)
 		end
 	end
 	
-	priority_planet = FindTarget.Reachable_Target(PlayerObject, "Space_Priority_Defense_Score", "Friendly", "Friendly_Only", 0.1, object)
+	priority_planet = FindTarget.Reachable_Target(PlayerObject, "Space_Priority_Defense_Score", "Friendly", "Friendly_Only", 0.8, object)
 	if priority_planet then
 		priority_planet = priority_planet.Get_Game_Object()
 	end

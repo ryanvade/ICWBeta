@@ -44,23 +44,15 @@ require("pgevents")
 
 function Definitions()	
 	Category = "AlwaysOff"
-	IgnoreTarget = true
-	
 	TaskForce = {
 	{
 		"ReserveForce"
 		,"DenyHeroAttach"
-		,"Vehicle = 4"	
+		,"TaskForceRequired"	
 	}
 	}
-	AllowFreeStoreUnits = false
-	MagicPlan = true
-	MagicPlanStealing = false
 end
 
 function ReserveForce_Thread()		
-	ReserveForce.Set_As_Goal_System_Removable(false)
-	BlockOnCommand(ReserveForce.Produce_Force(Target))
-	Sleep(40)
 	ScriptExit()
 end

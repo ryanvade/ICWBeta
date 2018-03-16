@@ -635,7 +635,7 @@ GameObjectLibrary = {
                 "SingleUnitRetreat"
             },
             Fighters={
-                ["SKIPRAY_SQUADRON"]={
+                ["TIE_BOMBER_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=0,
                         Initial=2
@@ -643,20 +643,28 @@ GameObjectLibrary = {
                 }
             }
         },
-        ["MC80B"]={
+       ["MC80B"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat"
             },
             Fighters={
-                ["B-WING_SQUADRON"]={
-                    ["REBEL"] = {
+                ["TIE_FIGHTER_SQUADRON"]={
+                    ["EMPIRE"] = {
                         Reserve=1,
                         Initial=1
-                    },
-                    ["HOSTILE"] = {
+                    }
+                },
+                ["TRIFOIL_SQUADRON"]={
+                    ["YEVETHA"] = {
                         Reserve=1,
+                        Initial=3
+                    }
+                },
+                ["TIE_INTERCEPTOR_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=0,
                         Initial=1
                     }
                 },
@@ -670,21 +678,29 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
-                ["TRIFOIL_SQUADRON"]={
-                    ["YEVETHA"] = {
-                        Reserve=2,
-                        Initial=2
-                    }
-                },
-                ["TIE_BOMBER_SQUADRON"]={
-                    ["EMPIRE"] = {
+                ["Y-WING_SQUADRON"]={
+                    ["REBEL"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+                    ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
                     }
                 },
-                ["TIE_INTERCEPTOR_SQUADRON"]={
+                ["TIE_BOMBER_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=1,
+                        Reserve=0,
+                        Initial=1
+                    }
+                },
+                ["REBEL_X-WING_SQUADRON"]={
+                    ["REBEL"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["HOSTILE"] = {
+                        Reserve=0,
                         Initial=1
                     }
                 }
@@ -948,19 +964,19 @@ GameObjectLibrary = {
                 ["TORRENT_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=5,
-                        Initial=2
+                        Initial=5
                     }
                 },
                 ["TIE_BOMBER_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=5,
-                        Initial=2
+                        Initial=5
                     }
                 },
                 ["TIE_FIGHTER_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=5,
-                        Initial=2
+                        Initial=5
                     }
                 }
             }
@@ -2495,15 +2511,9 @@ GameObjectLibrary = {
         ["ARMADIA"]={
             Scripts={
                 "MultiLayer",
-                "FighterSpawn"
+                "SingleUnitRetreat"
             },
             Fighters={
-                ["TRIFOIL_SQUADRON"]={
-                    ["DEFAULT"] = {
-                        Reserve=0,
-                        Initial=4
-                    }
-                }
             }
         },
         ["ARQUITENS"]={

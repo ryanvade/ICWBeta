@@ -12,8 +12,8 @@
 --*   @Date:                2018-01-13T11:47:17+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            CategoryFilter.lua
---*   @Last modified by:    Pox
---*   @Last modified time:  2018-02-27T20:36:57+01:00
+--*   @Last modified by:    [TR]Pox
+--*   @Last modified time:  2018-03-10T19:26:58+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -47,25 +47,20 @@ CategoryFilter = Class {
 
         LastAiDummyCheck = nil,
 
-        Constructor = function(self)
-            local plot = GLOBALS.PLAYER_AGNOSTIC_PLOT
-
-            if not plot then
-                return
-            end
-
-            GLOBALS.Events.SelectedPlanetChanged:AttachListener(self.SpawnCategoryDummy, self)
-            GLOBALS.Events.PlanetOwnerChanged:AttachListener(self.OnPlanetOwnerChanged, self)
+        Constructor = function(self, plot, galacticConquest)
+            self.GalacticConquest = galacticConquest
+            self.GalacticConquest.Events.SelectedPlanetChanged:AttachListener(self.SpawnCategoryDummy, self)
+            self.GalacticConquest.Events.PlanetOwnerChanged:AttachListener(self.OnPlanetOwnerChanged, self)
 
             for _, eventName in pairs(self.EventNames) do
                 local event = plot.Get_Event(eventName)
                 if event then
-                    event.Set_Reward_Parameter(1, GLOBALS.PLAYER.Get_Faction_Name())
+                    event.Set_Reward_Parameter(1, galacticConquest.HumanPlayer.Get_Faction_Name())
                 end
             end
 
 
-            local allPlanets = GLOBALS.ALL_PLANETS
+            local allPlanets = self.GalacticConquest.Planets
             for _, planet in pairs(allPlanets) do
                 self:SpawnAiDummies(planet)
             end
@@ -80,12 +75,12 @@ CategoryFilter = Class {
 
         HandleFilterChange = function (self)
             for categoryFlag, _ in pairs(self.CategoryFlags) do
-                if Check_Story_Flag(GLOBALS.PLAYER, categoryFlag, nil, true) then
+                if Check_Story_Flag(self.GalacticConquest.HumanPlayer, categoryFlag, nil, true) then
                     if self.ActiveFilter == categoryFlag then
                         break
                     end
                     self.ActiveFilter = categoryFlag
-                    self:SpawnCategoryDummy(GLOBALS.GetSelectedPlanet())
+                    self:SpawnCategoryDummy(self.GalacticConquest.GetSelectedPlanet())
                     break
                 end
             end
@@ -98,8 +93,8 @@ CategoryFilter = Class {
 
             self:ClearAiDummies(planet)
             if planet.Get_Owner().Is_Human() then
-                if planet == GLOBALS.GetSelectedPlanet() then
-                    self:SpawnCategoryDummy(GLOBALS.GetSelectedPlanet())
+                if planet == self.GalacticConquest.GetSelectedPlanet() then
+                    self:SpawnCategoryDummy(self.GalacticConquest.GetSelectedPlanet())
                 end
             else
                 self:SpawnAiDummies(planet)
@@ -111,7 +106,7 @@ CategoryFilter = Class {
                 return
             end
 
-            for _, planet in pairs(FindPlanet.Get_All_Planets()) do
+            for _, planet in pairs(self.GalacticConquest.Planets) do
                 if not planet.Get_Owner().Is_Human() then
                     self:CreateAiEntry(planet)
                     self:RemoveInvalidEntries(self.SpawnedAiDummies[planet])
@@ -159,7 +154,7 @@ CategoryFilter = Class {
                 self.Placeholder
             }
 
-            local dummies = SpawnList(typeList, selectedPlanet, GLOBALS.PLAYER, false, false)
+            local dummies = SpawnList(typeList, selectedPlanet, self.GalacticConquest.HumanPlayer, false, false)
         end,
 
         SpawnAiDummies = function(self, planet)
