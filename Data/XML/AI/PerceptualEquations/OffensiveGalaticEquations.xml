@@ -437,6 +437,17 @@
 		*
 		(Variable_Target.IsHumanControlled == 0.0)
 	</Should_Conquer_Pirate_Planet>
+	
+	<Warlord_Should_Conquer_Pirate_Planet>
+		Function_Should_Conquer_Pirate_Planet.Evaluate
+		*
+		(1 + 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Empire"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Pirates"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Hutts"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Pentastar"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Teradoc"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Harrsk"})
+	</Warlord_Should_Conquer_Pirate_Planet>
 
 	<Should_Conquer_Opponent_Planet>
 		(
@@ -452,6 +463,17 @@
 		(1.0 - Function_Should_Perform_Unrestricted_Grab_Space.Evaluate)
 	</Should_Conquer_Opponent_Planet>
 
+	<Warlord_Should_Conquer_Opponent_Planet>
+		Function_Should_Conquer_Opponent_Planet.Evaluate
+		*
+		(1 + 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Empire"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Pirates"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Hutts"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Pentastar"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Teradoc"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Harrsk"})
+	</Warlord_Should_Conquer_Opponent_Planet>
+	
 	<First_Attack_Allowed>
 		Game.Age > Function_Initial_Grace_Period.Evaluate
 	</First_Attack_Allowed>

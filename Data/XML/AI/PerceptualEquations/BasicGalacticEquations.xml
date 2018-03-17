@@ -15,6 +15,26 @@
 		Variable_Target.Type.Token == Variable_Self.HomePlanet.Type.Token
 	</Is_Home_Planet>
 	
+	<Is_Production_Planet>
+		5 * (Variable_Target.StarbaseLevel == 3)
+		+
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Barracks",
+													Parameter_Type = "R_Ground_Barracks",
+													Parameter_Type = "P_Ground_Barracks",
+													Parameter_Only_Consider_Complete = 1.0}
+		+
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "R_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Heavy_Vehicle_Factory",
+													Parameter_Only_Consider_Complete = 1.0}
+		+
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Advanced_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Advanced_Vehicle_Factory",
+													Parameter_Only_Consider_Complete = 1.0}
+		+
+		clamp(Function_Defense_Level.Evaluate, 0.0, 2.0)
+	</Is_Production_Planet>
+	
 	<One>
 		1.0
 	</One>
