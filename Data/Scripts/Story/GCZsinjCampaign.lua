@@ -32,21 +32,49 @@ function Definitions()
 
   StoryModeEvents =
   {
-    Universal_Story_Start = Begin_GC,
+	Determine_Faction_LUA = Find_Faction,
     Zsinj_Death = On_Zsinj_Death,
+	Spawn_Leia = Leia_Spawn,
+	Spawn_Leia_Again = Leia_Respawn,
+	Spawn_Hapans = Get_Hapes,
     Maldrood_Antem = Antem_Maldrood,
 	Maldrood_Commenor = Commenor_Maldrood,
   }
 
 end
 
-function Begin_GC(message)
+function Find_Faction(message)
   if message == OnEnter then
---    Testing Zsinj Kill
---    Sleep(10)
---    Find_First_Object("Iron_Fist").Despawn()
+
+    p_newrep = Find_Player("Rebel")
+    p_empire = Find_Player("Empire")
+    p_eoth = Find_Player("Underworld")
+    p_eriadu = Find_Player("Hutts")
+    p_pentastar = Find_Player("Pentastar")
+    p_zsinj = Find_Player("Pirates")
+    p_maldrood = Find_Player("Teradoc")
+    p_yevetha = Find_Player("Yevetha")
+
+    if p_newrep.Is_Human() then
+      Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
+    elseif p_empire.Is_Human() then
+      Story_Event("ENABLE_BRANCH_EMPIRE_FLAG")
+    elseif p_eoth.Is_Human() then
+      Story_Event("ENABLE_BRANCH_EOTH_FLAG")
+    elseif p_eriadu.Is_Human() then
+      Story_Event("ENABLE_BRANCH_ERIADU_FLAG")
+    elseif p_pentastar.Is_Human() then
+      Story_Event("ENABLE_BRANCH_PENTASTAR_FLAG")
+    elseif p_zsinj.Is_Human() then
+      Story_Event("ENABLE_BRANCH_ZSINJ_FLAG")
+    elseif p_maldrood.Is_Human() then
+      Story_Event("ENABLE_BRANCH_TERADOC_FLAG")
+    elseif p_yevetha.Is_Human() then
+      Story_Event("ENABLE_BRANCH_YEVETHA_FLAG")
+    end
   end
 end
+
 
 function On_Zsinj_Death(message)
   if message == OnEnter then
@@ -96,6 +124,74 @@ function On_Zsinj_Death(message)
       ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, true, false)
     end
   elseif message == OnUpdate then
+
+  end
+end
+
+function Leia_Spawn(message)
+  if message == OnEnter then
+
+    p_rebel = Find_Player("Rebel")
+    start_planet = FindPlanet("Coruscant")
+
+    if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+      allPlanets = FindPlanet.Get_All_Planets()
+      random = GameRandom(1, table.getn(allPlanets))
+      start_planet = allPlanets[random]
+      while start_planet.Get_Owner() ~= Find_Player("Rebel") do
+        random = GameRandom(1, table.getn(allPlanets))
+        start_planet = allPlanets[random]
+      end
+    end
+
+    spawn_list_requiem = { "Princess_Leia_Team" }
+    LeiaSpawn = SpawnList(spawn_list_requiem, start_planet, p_rebel,true,false)
+
+  end
+end
+
+function Leia_Respawn(message)
+  if message == OnEnter then
+
+    p_rebel = Find_Player("Rebel")
+    start_planet = FindPlanet("Coruscant")
+
+    if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+      allPlanets = FindPlanet.Get_All_Planets()
+      random = GameRandom(1, table.getn(allPlanets))
+      start_planet = allPlanets[random]
+      while start_planet.Get_Owner() ~= Find_Player("Rebel") do
+        random = GameRandom(1, table.getn(allPlanets))
+        start_planet = allPlanets[random]
+      end
+    end
+
+    spawn_list_requiem = { "Princess_Leia_Team" }
+    LeiaSpawn = SpawnList(spawn_list_requiem, start_planet, p_rebel,true,false)
+
+  end
+end
+
+function Get_Hapes(message)
+  if message == OnEnter then
+
+    p_rebel = Find_Player("Rebel")
+    start_planet = FindPlanet("Hapes")
+
+	spawn_list_hapan = { "Song_of_War", "AMM_BattleDragon", "AMM_Nova_Cruiser" }
+    HapesSpawn = SpawnList(spawn_list_hapan, start_planet, p_rebel,true,false)
+	
+    spawn_list_hapan = { "AMM_BattleDragon", "AMM_BattleDragon", "AMM_BattleDragon", "AMM_BattleDragon", "AMM_Nova_Cruiser", "AMM_Nova_Cruiser" }
+    start_planet = FindPlanet("MistOne")
+	HapesSpawn = SpawnList(spawn_list_hapan, start_planet, p_rebel,true,false)
+	
+	spawn_list_hapan = { "AMM_BattleDragon", "AMM_BattleDragon", "AMM_BattleDragon", "AMM_BattleDragon", "AMM_BattleDragon" }
+	start_planet = FindPlanet("MistTwo")
+    CharubahSpawn = SpawnList(spawn_list_hapan, start_planet, p_rebel,true,false)
+	
+	spawn_list_hapan = { "AMM_BattleDragon", "AMM_BattleDragon", "AMM_BattleDragon", "AMM_BattleDragon", "AMM_Nova_Cruiser", "AMM_Nova_Cruiser" }
+	start_planet = FindPlanet("MistThree")
+    TerephonSpawn = SpawnList(spawn_list_hapan, start_planet, p_rebel,true,false)
 
   end
 end

@@ -308,7 +308,7 @@
 			</Force_Healing_Ability>
 
 
-			
+
 			<Redirect_Blaster_Ability Name="Jedi_Redirect_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
 				<!-- Redirection chance is rolled first. If failed, we roll block chance. If failed, we take the damage. -->
@@ -341,7 +341,7 @@
                 <Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
                 <Owner_Light_Effect_Pulse_Count />
             </Absorb_Blaster_Ability>
-			
+
 			 <Berserker_Ability Name="Jedi_Force_Attack">
 				<Activation_Style> Special_Attack </Activation_Style>
                 <Activation_Min_Range>0.0</Activation_Min_Range>
@@ -1418,26 +1418,26 @@
 
 		<Projectile_Damage>0.5</Projectile_Damage>
 	</GroundInfantry>
-	
-	
+
+
 	<GroundInfantry Name="Stormtrooper">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_UNIT_STORMTROOPER</Text_ID>
 		<Land_Model_Name>EI_STORMTROOPER.ALO</Land_Model_Name>
-		<!--<Land_Terrain_Model_Mapping>
+		<Land_Terrain_Model_Mapping>
 			Temperate, 			EI_STORMTROOPER.ALO,
 			Urban, 				EI_STORMTROOPER.ALO,
 			Arctic, 			EI_SNOWTROOPER.ALO,
-			Volcanic, 			EI_SANDTROOPER.ALO,
+			Volcanic, 			EI_STORMTROOPER.ALO,
 			Desert, 			EI_SANDTROOPER.ALO,
 			Forest, 			EI_STORMTROOPER.ALO,
 			Swamp, 				EI_STORMTROOPER.ALO
-		</Land_Terrain_Model_Mapping>-->
-		
-		
+		</Land_Terrain_Model_Mapping>
+
+
 		<Behavior>SELECTABLE</Behavior>
 		<LandBehavior>LANDING, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TURRET,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DEMOLITION</LandBehavior>
-		
+
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
@@ -1466,7 +1466,7 @@
 		<OverrideAcceleration> 0.05 </OverrideAcceleration>
 		<OverrideDeceleration> 0.05 </OverrideDeceleration>
 		<FormationOrder> 2 </FormationOrder>
-		
+
 		<Scale_Factor>1.5</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
@@ -1483,9 +1483,9 @@
 		<Energy_Capacity>0</Energy_Capacity>
 		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
 		<Stealth_Capable>No</Stealth_Capable>
-		
+
 		<Armor_Type> Armor_Infantry </Armor_Type>
-		
+
 		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
 		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
 		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
@@ -1594,7 +1594,7 @@
 				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
 				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
-			
+
 			<Unit_Ability>
 				<Type>HUNT</Type>
 			</Unit_Ability>
@@ -1690,7 +1690,7 @@
 			</Combat_Bonus_Ability>
 			</Abilities>
 	</GroundInfantry>
-	
+
 	<GroundInfantry Name="Armytrooper">
 		<Text_ID>TEXT_UNIT_ARMYTROOPER</Text_ID>
 		<!--<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Underworld_Merc</Encyclopedia_Good_Against>-->
@@ -1707,14 +1707,14 @@
 		</Land_Terrain_Model_Mapping>
 		<Behavior>SELECTABLE</Behavior>
 		<LandBehavior>LANDING, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON,STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DEMOLITION</LandBehavior>
-		
+
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<CanCellStack>yes</CanCellStack>
 		<Mass>1.0</Mass>
 		<Target_Bones> b_head, b_chest </Target_Bones>
-		
+
 		<Icon_Name>i_button_army_trooper.tga</Icon_Name>
 		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier, High_Ground</SurfaceFX_Name>
 		<Garrison_Category> Infantry </Garrison_Category>
@@ -1760,20 +1760,20 @@
 		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>0.75</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
-		
-		<Turret_Rotate_Extent_Degrees>30.0</Turret_Rotate_Extent_Degrees> 
- 	 	<Turret_Elevate_Extent_Degrees>30.0</Turret_Elevate_Extent_Degrees> 
- 		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust> 
- 		
- 		<Turret_Bone_Name>MuzzleA_00</Turret_Bone_Name> 
-  		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name> 
-  		<Turret_Rotate_Speed>9000.0</Turret_Rotate_Speed> 
- 		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis> 
-  		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis> 
-  		<Turret_Targets_Ground_Vehicles>2</Turret_Targets_Ground_Vehicles> 
-  		<Turret_Targets_Ground_Infantry>1</Turret_Targets_Ground_Infantry> 
-  		<Turret_Targets_Air_Vehicles>3</Turret_Targets_Air_Vehicles> 
-  		<Turret_Targets_Anything_Else>3</Turret_Targets_Anything_Else> 
+
+		<Turret_Rotate_Extent_Degrees>30.0</Turret_Rotate_Extent_Degrees>
+ 	 	<Turret_Elevate_Extent_Degrees>30.0</Turret_Elevate_Extent_Degrees>
+ 		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+ 		<Turret_Bone_Name>MuzzleA_00</Turret_Bone_Name>
+  		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+  		<Turret_Rotate_Speed>9000.0</Turret_Rotate_Speed>
+ 		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+  		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+  		<Turret_Targets_Ground_Vehicles>2</Turret_Targets_Ground_Vehicles>
+  		<Turret_Targets_Ground_Infantry>1</Turret_Targets_Ground_Infantry>
+  		<Turret_Targets_Air_Vehicles>3</Turret_Targets_Air_Vehicles>
+  		<Turret_Targets_Anything_Else>3</Turret_Targets_Anything_Else>
 
 						<Influences_Capture_Point>True</Influences_Capture_Point>
 
@@ -1790,11 +1790,11 @@
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
 		<SFXEvent_Attack>Unit_Attack_Storm_Trooper</SFXEvent_Attack>
 		<SFXEvent_Guard>Unit_Guard_Storm_Trooper</SFXEvent_Guard>
-		
-		
+
+
 		<SFXEvent_Fire>Unit_Stormy_Fire</SFXEvent_Fire>
-		
-		
+
+
 		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
 		<SFXEvent_Assist_Move> Unit_Assist_Move_Storm_Trooper </SFXEvent_Assist_Move>
 		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Storm_Trooper </SFXEvent_Assist_Attack>
@@ -1826,12 +1826,12 @@
 		<Weather_Category>Infantry</Weather_Category>
 		<Encyclopedia_Text>TEXT_TOOLTIP_NAVYTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
-		
+
 		<Death_Fade_Time>0.25</Death_Fade_Time>
 		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
 		<Tactical_Bribe_Cost>25</Tactical_Bribe_Cost>
 		<Presence_Induced_Animations>
-			Attention, 
+			Attention,
 				Emperor_Palpatine,
 		</Presence_Induced_Animations>
 		<!-- Non-Hero unit abilities description -->
@@ -1845,10 +1845,10 @@
 				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
 		</Unit_Abilities_Data>
-		
+
 		<Projectile_Damage>0.5</Projectile_Damage>
 	</GroundInfantry>
-	
+
 	<GroundInfantry Name="Armytrooper_Lieutenant">
 		<Variant_Of_Existing_Type>Armytrooper</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_ARMYTROOPER_LIEUTENANT</Text_ID>
@@ -1903,8 +1903,8 @@
 			</Combat_Bonus_Ability>
 			</Abilities>
 	</GroundInfantry>
-	
-	
+
+
 	<GroundInfantry Name="Novatrooper">
 		<Variant_Of_Existing_Type>Stormtrooper</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_NOVATROOPER</Text_ID>
@@ -1922,7 +1922,7 @@
 		<Land_Model_Anim_Override_Name>EI_NOVATROOPER.ALO</Land_Model_Anim_Override_Name>
 		<Encyclopedia_Text>TEXT_TOOLTIP_NOVATROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<No_Colorization_Color> 251, 174, 1, 255 </No_Colorization_Color>
-	
+
 		<Max_Speed> 1.7 </Max_Speed>
 		<Space_Layer> None </Space_Layer>
 		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
@@ -2005,7 +2005,7 @@
 	<GroundInfantry Name="NewRepublic_Captain">
 		<Variant_Of_Existing_Type>Rebel_Trooper</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_REPUBLIC_CAPTAIN</Text_ID>
-	
+
 		<Tactical_Health>21</Tactical_Health>
 		<Encyclopedia_Text>TEXT_TOOLTIP_REPUBLIC_CAPTAIN TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<No_Colorization_Color> 251, 174, 1, 255 </No_Colorization_Color>
@@ -2070,7 +2070,7 @@
 			Urban, 				EI_STORMIE_SPLODE.ALO,
 			Arctic, 			EI_SNOWIE_SPLODE.ALO,
 			Volcanic, 			EI_STORMIE_SPLODE.ALO,
-			Desert, 			EI_STORMIE_SPLODE.ALO,
+			Desert, 			EI_SAND_SPLODE.ALO,
 			Forest, 			EI_STORMIE_SPLODE.ALO,
 			Swamp, 				EI_STORMIE_SPLODE.ALO
 		</Land_Terrain_Model_Mapping>
@@ -2083,9 +2083,9 @@
 		<Land_Terrain_Model_Mapping>
 			Temperate, 			EI_STORMIE_SPLODE.ALO,
 			Urban, 				EI_STORMIE_SPLODE.ALO,
-			Arctic, 			EI_STORMIE_SPLODE.ALO,
+			Arctic, 			EI_SNOWIE_SPLODE.ALO,
 			Volcanic, 			EI_STORMIE_SPLODE.ALO,
-			Desert, 			EI_STORMIE_SPLODE.ALO,
+			Desert, 			EI_SAND_SPLODE.ALO,
 			Forest, 			EI_STORMIE_SPLODE.ALO,
 			Swamp, 				EI_STORMIE_SPLODE.ALO
 		</Land_Terrain_Model_Mapping>
@@ -2296,7 +2296,7 @@
 			Swamp, 				RI_elite.ALO
 		</Land_Terrain_Model_Mapping>
 		<Text_ID>TEXT_UNIT_REBEL_TROOPER</Text_ID>
-	
+
 		<Garrison_Value>0</Garrison_Value>
 		<Stealth_Capable>No</Stealth_Capable>
 		<Behavior>SELECTABLE</Behavior>
@@ -2307,7 +2307,7 @@
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<CanCellStack>yes</CanCellStack>
 		<Mass>1.0</Mass>
-		<Create_Team>Yes</Create_Team> 
+		<Create_Team>Yes</Create_Team>
 		<Movement_Animation_Speed> 0.9 </Movement_Animation_Speed>
 		<Walk_Animation_Speed> .4 </Walk_Animation_Speed>
 		<Crouch_Animation_Speed> .537 </Crouch_Animation_Speed>
@@ -2456,14 +2456,14 @@
 				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
 				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
-			
+
 			<Unit_Ability>
 				<Type>HUNT</Type>
 			</Unit_Ability>
 
 		</Unit_Abilities_Data>
-		
-		
+
+
 
 		<!-- When this unit is converted by the "convert to enemy" special ability (Force Corruption), this is what his type pointer changes to -->
 		<Conversion_Ability_Changes_To_Enemy> Rebel_Trooper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
@@ -2835,7 +2835,7 @@
 				<Applicable_Unit_Types/>
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
-			
+
 						<Galactic_Stealth_Ability Name="Mara_Galactic_Stealth">
 				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
 			</Galactic_Stealth_Ability>

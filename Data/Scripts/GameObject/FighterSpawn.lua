@@ -12,8 +12,8 @@
 --*   @Date:                2017-12-14T10:54:01+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            FighterSpawn.lua
---*   @Last modified by:    svenmarcus
---*   @Last modified time:  2018-03-09T12:20:53+01:00
+--*   @Last modified by:    [TR]Pox
+--*   @Last modified time:  2018-03-20T01:01:39+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -32,6 +32,7 @@ function FighterSpawn:Init( globals)
     self.isActive = true
     self.spawnedFighters = {}
     self.fighterData = TypeLibrary.Units[Object.Get_Type().Get_Name()].Fighters
+    self.originalOwner = Object.Get_Owner()
     self:InsertFighters()
     globals.Fighters = self.spawnedFighters
 end
@@ -60,7 +61,7 @@ function FighterSpawn:InsertFighters()
 end
 
 function FighterSpawn:GetFighterEntry(tab)
-    local owner = Object.Get_Owner()
+    local owner = self.originalOwner
     local ownerName = owner.Get_Faction_Name()
 
     if not tab[ownerName] and not tab["DEFAULT"] then
@@ -110,6 +111,11 @@ function FighterSpawn.Spawn(wrapper)
     local objectType = data.ObjectType
     local tab = self.fighterData[objectType.Get_Name()]
     local entry = self:GetFighterEntry(tab)
+
+    if not entry then
+        DebugMessage("Could not find Fighter Entry for %s on Carrier %s", tostring(objectType.Get_Name()), tostring(Object.Get_Type().Get_Name()))
+        return
+    end
 
     if entry.Reserve > 0 then
         local sqadron = Spawn_Unit(objectType, Object.Get_Bone_Position("root"), Object.Get_Owner(), true, false)[1]

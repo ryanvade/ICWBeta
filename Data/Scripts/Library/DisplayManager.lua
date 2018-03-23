@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            DisplayManager.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-03-11T03:42:27+01:00
+--*   @Last modified time:  2018-03-17T02:25:08+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -68,9 +68,9 @@ OrbitalStructureDisplay = Class {
         TRUtil.ShowScreenText("TEXT_SELECTED_PLANET", -1, planet, color)
         self.CurrentText = {"TEXT_SELECTED_PLANET"}
 
-        -- if not planet.Get_Owner().Is_Human() then
-        --   return
-        -- end
+        if not planet.Get_Owner().Is_Human() then
+          return
+        end
 
         local structuresOnPlanet = FindFriendlyStructuresOnPlanet(planet)
 

@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            Boarding.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-03-13T13:07:19+01:00
+--*   @Last modified time:  2018-03-22T19:42:33+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -22,7 +22,8 @@
 
 require("PGCommands")
 require("TRCommands")
-require("TRUtil")
+TRUtil = require("TRUtil")
+require("TransactionFactory")
 
 Boarding = {}
 
@@ -90,8 +91,9 @@ function Boarding:ToggleBoardingEffects()
 
     self.boardingEffectsActive = not self.boardingEffectsActive
     self.boardingTarget.Stop()
-    self.boardingTarget.Highlight(self.boardingEffectsActive)
-    --self.boardingTarget.Prevent_All_Fire(self.boardingEffectsActive)
+    if self.boardingEffectsActive then
+        self.boardingTarget.Attach_Particle_Effect("Boarding_Particle")
+    end
 end
 
 function BoardingProximityTrigger(prox_obj, trigger_obj, self)
@@ -110,25 +112,28 @@ end
 
 function BoardingTimer(self)
     Cancel_Timer(BoardingTimer)
+    local target = self.boardingTarget
     self:ToggleBoardingEffects()
     self.attemptsLeft = self.attemptsLeft - 1
     self.registeredTimer = false
+    self.boardingTarget = nil
     Object.Activate_Ability("SPOILER_LOCK", false)
 
-    if not TestValid(self.boardingTarget) then
+    if not TestValid(target) then
         return
     end
 
-    if self.boardingTarget.Get_Owner() == Object.Get_Owner() then
+    if target.Get_Owner() == Object.Get_Owner() then
         return
     end
 
-    local success = (GameRandom(1,100) - unit.Get_Hull() * 30) > 50
+    local success = (GameRandom(1,100) - target.Get_Hull() * 30) > 50
     if success then
-        self.boardingTarget.Change_Owner(Object.Get_Owner())
-        local boardedTypeName = self.boardingTarget.Get_Type().Get_Name()
+        target.Change_Owner(Object.Get_Owner())
+        local boardedTypeName = target.Get_Type().Get_Name()
         local newOwnerName = Object.Get_Owner().Get_Faction_Name()
-        TM.PrepareBoardingTransaction(boardedTypeName, newOwnerName)
+        local transaction = CreateBoardingTransaction(boardedTypeName, newOwnerName)
+        TM:RegisterBoardingTransaction(transaction)
         TRUtil.ShowScreenText("BOARDING_SUCCESSFUL_REGULAR", 10)
     end
 end

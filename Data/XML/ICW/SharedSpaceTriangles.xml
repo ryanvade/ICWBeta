@@ -102,7 +102,7 @@
 		<Score_Cost_Credits> 1500</Score_Cost_Credits>
 		<Retreat_Self_Destruct_Explosion>Self_Destruct_Star_Base_Level_1_Empire</Retreat_Self_Destruct_Explosion>
 		 <Ranking_In_Category>1</Ranking_In_Category>
-		<Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
+		<Death_Clone>Damage_Normal, Huge_Explosion_Space</Death_Clone>
 
 	</StarBase>
 
@@ -205,7 +205,7 @@
 		<Score_Cost_Credits> 3000</Score_Cost_Credits>
 		<Retreat_Self_Destruct_Explosion>Self_Destruct_Star_Base_Level_2_Empire</Retreat_Self_Destruct_Explosion>
 
-		<Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
+		<Death_Clone>Damage_Normal, Friggin_Huge_Explosion_Space</Death_Clone>
 
 	</StarBase>
 
@@ -311,7 +311,7 @@
 		<Score_Cost_Credits> 6000</Score_Cost_Credits>
 		<Retreat_Self_Destruct_Explosion>Self_Destruct_Star_Base_Level_3_Empire</Retreat_Self_Destruct_Explosion>
 
-		<Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
+		<Death_Clone>Damage_Normal, Friggin_Huger_Explosion_Space</Death_Clone>
 
 	</StarBase>
 
@@ -729,7 +729,7 @@
 		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Star_Destroyer_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
 
 		<CategoryMask> Capital | AntiFrigate | Boardable </CategoryMask>
-		<Icon_Name>i_button_torpedosphere.tga</Icon_Name>
+		<Icon_Name>i_button_torpsphere.tga</Icon_Name>
 		<GUI_Model_Name>EV_StarDestroyer_hulk.ALO</GUI_Model_Name>
 		<GUI_Distance>2300</GUI_Distance>
 		<GUI_Offset>0 0 0</GUI_Offset>
@@ -1397,6 +1397,32 @@
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
 		</Abilities>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Megador">
+
+		<Variant_Of_Existing_Type>Generic_Bellator</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MEGADOR</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MEGADOR </Encyclopedia_Text>
+
+
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<Tech_Level>99</Tech_Level>
+		<Lua_Script></Lua_Script>
+
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
+        <Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
+        <Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 5</Starting_Spawned_Units_Tech_0>
+        <Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+        <Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 4</Reserve_Spawned_Units_Tech_0>
+        <Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 4</Reserve_Spawned_Units_Tech_0>
+        <Reserve_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 3</Reserve_Spawned_Units_Tech_0>
+
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<GUI_Row> 0 </GUI_Row>
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+
 	</SpaceUnit>
 
 	<SpaceUnit Name="Generic_Executor">

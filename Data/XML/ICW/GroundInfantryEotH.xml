@@ -3,21 +3,21 @@
 
 	<GroundInfantry Name="Phalanx_Commando">
 		<Text_ID>TEXT_UNIT_PHALANX_COMMANDO</Text_ID>
-		
+
   		<Encyclopedia_Text>TEXT_TOOLTIP_PHALANX_COMMANDO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_COMMANDO</Encyclopedia_Unit_Class>
 
 		<Stealth_Capable>Yes</Stealth_Capable>
 		<Land_Model_Name>phailcommando.alo</Land_Model_Name>
 		<Behavior>SELECTABLE</Behavior>
-		
+
 		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, IDLE, GARRISON_UNIT</LandBehavior>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<CanCellStack>yes</CanCellStack>
 		<Mass>1.0</Mass>
 		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
-		
+
 		<Movement_Animation_Speed> 25.0 </Movement_Animation_Speed>
 		<Rotation_Animation_Speed> 8.0 </Rotation_Animation_Speed>
 		<Walk_Animation_Speed> .40 </Walk_Animation_Speed>
@@ -54,7 +54,7 @@
 		<Victory_Relevant>yes</Victory_Relevant>
 		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
 		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
-		
+
 		<Targeting_Max_Attack_Distance>325.0</Targeting_Max_Attack_Distance>
 		<Land_FOW_Reveal_Range>405.0</Land_FOW_Reveal_Range>
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
@@ -89,15 +89,15 @@
 		<SFXEvent_Guard>Unit_Guard_Rebel_Infiltrator</SFXEvent_Guard>
 		<SFXEvent_Fire>Unit_Rebel_Infantry_Fire</SFXEvent_Fire>
 		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_3_Death</Death_SFXEvent_Start_Die>
-		
+
 		<!-- Placeholder events for Frank -->
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Rebel_Infiltrator </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Rebel_Infiltrator </SFXEvent_Assist_Move>
 		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Rebel_Infiltrator </SFXEvent_Assist_Attack>
 
-		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
-		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
 		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
-		  
+
 		<Is_Squashable> Yes </Is_Squashable>
 		<Create_Team>No</Create_Team>
 		<AI_Combat_Power>10</AI_Combat_Power>
@@ -115,7 +115,7 @@
 		<Weather_Category>Infantry</Weather_Category>
 		<Icon_Name>i_button_phalanxcommando.tga</Icon_Name>
 
-	
+
 
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
@@ -126,18 +126,18 @@
 				<GUI_Activated_Ability_Name>Phalanx_Commando_Grenade_Attack</GUI_Activated_Ability_Name>
 				<SFXEvent_Target_Ability> Unit_Attack_02_Rebel_Infiltrator </SFXEvent_Target_Ability>
 			</Unit_Ability>
-			
+
 			<Unit_Ability>
 				<Type>SPREAD_OUT</Type>
 				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
 				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
 				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
-			
+
 		</Unit_Abilities_Data>
-		
+
 		<Abilities SubObjectList="Yes">
-			<Grenade_Attack_Ability Name="Phalanx_Commando_Grenade_Attack"> 
+			<Grenade_Attack_Ability Name="Phalanx_Commando_Grenade_Attack">
 				<Activation_Style> User_Input </Activation_Style> <!-- Was Special_Attack -->
 				<!-- We need to be within this distance of the clicked target to consider throwing the grenade -->
 				<Activation_Min_Range>5.0</Activation_Min_Range>
@@ -158,12 +158,12 @@
 			<Galactic_Stealth_Ability Name="Phalanx_Galactic_Stealth">
 				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
 			</Galactic_Stealth_Ability>
-		
+
 		</Abilities>
 
-		
-		
-		
+
+
+
 		<Death_Fade_Time>0.25</Death_Fade_Time>
 		<Death_Persistence_Duration>1.0</Death_Persistence_Duration>
 
@@ -172,7 +172,7 @@
 
 	<GroundCompany Name="Phalanx_Commando_Team">
 		<Text_ID>TEXT_UNIT_PHALANX_COMMANDO</Text_ID>
-		
+
 		<GUI_Row> 1 </GUI_Row>
 		<Is_Dummy>Yes</Is_Dummy>
 		<Damage>8</Damage>
@@ -209,26 +209,26 @@
 
   		<Encyclopedia_Text>TEXT_TOOLTIP_PHALANX_COMMANDO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_COMMANDO</Encyclopedia_Unit_Class>
-		
+
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 		<Score_Cost_Credits>120</Score_Cost_Credits>
 
 		<Population_Value>1</Population_Value>
 		<Abilities SubObjectList="Yes">
-			
+
 			<Galactic_Stealth_Ability Name="Phalanx_Galactic_Stealth">
 				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
 			</Galactic_Stealth_Ability>
-		
+
 		</Abilities>
-		
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>UC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>--> 
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 	</GroundCompany>
 
@@ -244,7 +244,7 @@
         <Uses_Multiple_Locomotors> Yes </Uses_Multiple_Locomotors>
         <Hover_Offset>16.0</Hover_Offset>
         <Primary_Locomotor_Name>WALK_LOCOMOTOR</Primary_Locomotor_Name>
-        
+
         <SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
         <Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
         <Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
@@ -272,7 +272,7 @@
         <OverrideAcceleration> .1 </OverrideAcceleration>
         <OverrideDeceleration> .1 </OverrideDeceleration>
         <Max_Lift> .6 </Max_Lift>
-        
+
         <Scale_Factor>0.07</Scale_Factor> <!-- Temp scale change for scale test - change back once models resized -->
         <!--<Is_Sprite>No</Is_Sprite>-->
         <Type>Walk</Type>
@@ -288,14 +288,14 @@
         <Stealth_Capable>No</Stealth_Capable>
         <Victory_Relevant>yes</Victory_Relevant>
         <Armor_Type> Armor_Hero </Armor_Type>
-	
+
         <Projectile_Types>Proj_Shial_Sniper_Blue</Projectile_Types>
         <Land_FOW_Reveal_Range>250.0</Land_FOW_Reveal_Range>
         <Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
         <Targeting_Max_Attack_Distance>250.0</Targeting_Max_Attack_Distance>
         <Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
         <Projectile_Fire_Recharge_Seconds>0.2</Projectile_Fire_Recharge_Seconds>
-        
+
         <SFXEvent_Select>Unit_Select_Boba_Fett</SFXEvent_Select>
         <SFXEvent_Move>Unit_Move_Boba_Fett</SFXEvent_Move>
         <SFXEvent_Fleet_Move>Unit_Fleet_Move_Boba_Fett</SFXEvent_Fleet_Move>
@@ -321,7 +321,7 @@
         <Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
         <HardPoints>Hide_Shial</HardPoints>
         <Always_Spawn_In_Orbit>No</Always_Spawn_In_Orbit>
-        
+
         <Select_Box_Scale>27</Select_Box_Scale>
         <Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
         <Selection_Blob_Material_Name>Selection_Underworld_Hero</Selection_Blob_Material_Name>
@@ -335,7 +335,7 @@
         <Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
         <Targeting_Priority_Set>AvoidAntiInfantryTurretsAir</Targeting_Priority_Set>
         <Autonomous_Move_Extension_Vs_Attacker>200.0</Autonomous_Move_Extension_Vs_Attacker>
-        
+
         <Neutralization_Cost>1500.0</Neutralization_Cost>
         <Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
         <Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
@@ -348,16 +348,16 @@
 
         <Death_Fade_Time>0.25</Death_Fade_Time>
         <Death_Persistence_Duration>0.0</Death_Persistence_Duration>
-    	
-	
-		
-       
+
+
+
+
     </HeroUnit>
 
-		
+
 	<GroundCompany Name="Shial_Team">
 		<Text_ID>TEXT_HERO_SHIAL</Text_ID>
-	
+
 		<GUI_Row> 1 </GUI_Row>
 		<Is_Dummy>Yes</Is_Dummy>
 		<Damage>8</Damage>
@@ -397,19 +397,19 @@
 
   		<Encyclopedia_Text>TEXT_TOOLTIP_SHIAL</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_COMMANDO</Encyclopedia_Unit_Class>
-		
+
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 		<Score_Cost_Credits>120</Score_Cost_Credits>
-		
+
 		<Population_Value>1</Population_Value>
-		
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1350</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>UC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>--> 
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 	</GroundCompany>
 <GroundInfantry Name="Phalanx_Trooper">
@@ -417,17 +417,8 @@
 		<Text_ID>TEXT_UNIT_PHALANX_TROOPER</Text_ID>
 
 		<Land_Model_Name>Eoth_Phalanxsold.ALO</Land_Model_Name>
-		<!--<Land_Terrain_Model_Mapping>
-			Temperate, 			EI_STORMTROOPER.ALO,
-			Urban, 				EI_STORMTROOPER.ALO,
-			Arctic, 			EI_SNOWTROOPER.ALO,
-			Volcanic, 			EI_SANDTROOPER.ALO,
-			Desert, 			EI_SANDTROOPER.ALO,
-			Forest, 			EI_STORMTROOPER.ALO,
-			Swamp, 				EI_STORMTROOPER.ALO
-		</Land_Terrain_Model_Mapping>-->
 		<Behavior>SELECTABLE</Behavior>
-		<LandBehavior>LANDING, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TURRET,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DEMOLITION</LandBehavior>		
+		<LandBehavior>LANDING, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TURRET,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DEMOLITION</LandBehavior>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
@@ -456,7 +447,7 @@
 		<OverrideAcceleration> 0.05 </OverrideAcceleration>
 		<OverrideDeceleration> 0.05 </OverrideDeceleration>
 		<FormationOrder> 2 </FormationOrder>
-		
+
 		<Scale_Factor>1.65</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
@@ -473,9 +464,9 @@
 		<Energy_Capacity>0</Energy_Capacity>
 		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
 		<Stealth_Capable>No</Stealth_Capable>
-		
+
 		<Armor_Type> Armor_Infantry </Armor_Type>
-		
+
 		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
 		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
 		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
@@ -578,7 +569,7 @@
 				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
 				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
-			
+
 			<Unit_Ability>
 				<Type>HUNT</Type>
 			</Unit_Ability>
@@ -591,7 +582,7 @@
 
 
 
-	
+
 	<GroundInfantry Name="Phalanx_Force_Whirlwind_Death_Clone">
 		<Variant_Of_Existing_Type>Phalanx_Trooper</Variant_Of_Existing_Type>
 		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
@@ -603,7 +594,7 @@
 		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
 		<Specific_Death_Anim_Index />
 	</GroundInfantry>
-	
+
 	<GroundInfantry Name="Phalanx_Remote_Bomb_Death_Clone">
 		<Variant_Of_Existing_Type>Phalanx_Trooper</Variant_Of_Existing_Type>
 		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Bomb_Death</Death_SFXEvent_Start_Die>
@@ -618,7 +609,7 @@
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_PHALANX_SERGEANT TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<No_Colorization_Color> 251, 174, 1, 255 </No_Colorization_Color>
-		
+
 		<Max_Speed> 1.7 </Max_Speed>
 		<Space_Layer> None </Space_Layer>
 		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
@@ -630,7 +621,7 @@
 	<GroundCompany Name="Phalanx_Trooper_Squad">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_PHALANX_TROOPER_SQUAD</Text_ID>
-	
+
 		<Encyclopedia_Text>TEXT_TOOLTIP_PHALANX_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
 		<GUI_Row> 1 </GUI_Row>
@@ -639,7 +630,7 @@
 		<Autoresolve_Health>100</Autoresolve_Health> <!-- changed to reflect the real health of the units-->
 		<Affiliation>Underworld</Affiliation>
 		<Build_Cost_Credits>100</Build_Cost_Credits>
-		
+
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -658,7 +649,7 @@
 		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Sergeant</Company_Units>
 		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Sergeant</Company_Units>
 		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Sergeant</Company_Units>
-		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Sergeant</Company_Units>	
+		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Sergeant</Company_Units>
 		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Sergeant</Company_Units>
 		<Max_Squad_Size> 6 </Max_Squad_Size>
 		<Icon_Name>i_button_phalanxtrooper.tga</Icon_Name>
@@ -671,7 +662,7 @@
 		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
 		<SFXEvent_Build_Complete>Unit_Complete_Storm_Trooper</SFXEvent_Build_Complete>
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
-		
+
 		<Create_Team_Type>Phalanx_Team</Create_Team_Type>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -680,14 +671,14 @@
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
-		
+
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 		<Population_Value>1</Population_Value>
 		<Score_Cost_Credits>54</Score_Cost_Credits>
-		
+
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
 			<Unit_Ability>
@@ -698,13 +689,13 @@
 			</Unit_Ability>
 
 		</Unit_Abilities_Data>
-		
+
 	</GroundCompany>
-	
+
 	<GroundCompany Name="Phalanx_Trooper_Destroy">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_PHALANX_TROOPER_SQUAD</Text_ID>
-	
+
 		<Encyclopedia_Text>TEXT_TOOLTIP_PHALANX_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
 		<GUI_Row> 1 </GUI_Row>
@@ -740,7 +731,7 @@
 		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
 		<SFXEvent_Build_Complete>Unit_Complete_Storm_Trooper</SFXEvent_Build_Complete>
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
-		
+
 		<Create_Team_Type> Phalanx_Team </Create_Team_Type>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -749,10 +740,10 @@
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
-		
+
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 		<Population_Value>1</Population_Value>
 		<Score_Cost_Credits>54</Score_Cost_Credits>

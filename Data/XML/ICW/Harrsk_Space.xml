@@ -89,6 +89,82 @@
 		</Tactical_Buildable_Objects_Campaign>
 
 	</StarBase>
+	
+	<UniqueUnit Name="Whirlwind_Star_Destroyer">
+		<Variant_Of_Existing_Type>Generic_Tector</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_harssk.tga</Icon_Name>
+		
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Text_ID>TEXT_HERO_HARRSK</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND2 TEXT_TOOLTIP_TRAIT_SPLITPERSONALITY TEXT_TOOLTIP_TRAIT_DEFENSIVE TEXT_TOOLTIP_BIO TEXT_TOOLTIP_HARRSK TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_WHIRLWIND </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HIGH_ADMIRAL </Encyclopedia_Unit_Class>
+
+		<Lua_Script></Lua_Script>
+		<Tech_Level>99</Tech_Level>
+		
+		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		
+		<SFXEvent_Select>Unit_Select_Harrsk</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Harrsk</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Harrsk</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Harrsk</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Move_Harrsk</SFXEvent_Guard>
+		<SFXEvent_Move_Opposite>Unit_Select_Harrsk</SFXEvent_Move_Opposite>
+		<SFXEvent_Barrage>Unit_Attack_Harrsk</SFXEvent_Barrage>
+		<SFXEvent_Stop>Unit_Move_Harrsk</SFXEvent_Stop>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Move_Harrsk </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Move_Harrsk </SFXEvent_Move_Into_Nebula>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Harrsk </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Harrsk </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Harrsk </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Harrsk </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Harrsk </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Harrsk </SFXEvent_Attack_Hardpoint>
+		
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Harrsk </SFXEvent_Hardpoint_Destroyed>
+		<Death_SFXEvent_Start_Die>Unit_Harrsk_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Harrsk_Self_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types> Shockwave_Star_Destroyer </Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>-0.15</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Harrsk_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.15</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.15</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.20</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.25</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.15</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Battlefield_Modifier_Ability Name="Harrsk_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>1.15</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+			
+		</Abilities>
+
+	</UniqueUnit>
 
 
 </Remnant_Space_Units>

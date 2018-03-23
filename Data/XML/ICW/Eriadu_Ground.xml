@@ -16,9 +16,9 @@
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<CanCellStack>yes</CanCellStack>
 		<Mass>1.0</Mass>
-		
+
 		<Target_Bones> b_head, b_chest </Target_Bones>
-		
+
 		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
 		<Garrison_Category> Infantry </Garrison_Category>
 		<Movement_Animation_Speed> 0.7 </Movement_Animation_Speed>
@@ -82,9 +82,9 @@
 		<SFXEvent_Attack>Unit_Attack_Rebel_Infiltrator</SFXEvent_Attack>
 		<SFXEvent_Guard>Unit_Guard_Rebel_Infiltrator</SFXEvent_Guard>
 		<Influences_Capture_Point>True</Influences_Capture_Point>
-		
+
 		<SFXEvent_Fire>Unit_Blarg_Fire</SFXEvent_Fire>
-		
+
 		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_3_Death</Death_SFXEvent_Start_Die>
 		<!-- Placeholder events for Frank -->
 		<SFXEvent_Assist_Move> Unit_Assist_Move_Rebel_Infiltrator </SFXEvent_Assist_Move>
@@ -122,7 +122,7 @@
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		<Tactical_Bribe_Cost>100</Tactical_Bribe_Cost>
-	
+
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
@@ -134,24 +134,24 @@
 				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
 				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Sprint_Katarn</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
-			
+
 			<!-- Secondary ability -->
 			<Unit_Ability>
 				<Type>SPREAD_OUT</Type>
 				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
 				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Plex_Soldier</SFXEvent_GUI_Unit_Ability_Activated>		  
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Plex_Soldier</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
-		
+
 		</Unit_Abilities_Data>
 
 		<Death_Fade_Time>0.25</Death_Fade_Time>
 		<Death_Persistence_Duration>1.0</Death_Persistence_Duration>
 		<!-- When this unit is converted by the "convert to enemy" special ability (Force Corruption), this is what his type pointer changes to -->
 		<Conversion_Ability_Changes_To_Enemy> Rebel_Infiltrator_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
-		
+
 	</GroundInfantry>
-	
+
 	<GroundCompany Name="Storm_Command_Team">
 		<Text_ID>TEXT_UNIT_STORM_COMMANDO</Text_ID>
 		<!--<Encyclopedia_Good_Against> Stormtrooper </Encyclopedia_Good_Against>-->
@@ -196,9 +196,9 @@
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 		<Score_Cost_Credits>120</Score_Cost_Credits>
-		
+
 		<Population_Value>1</Population_Value>
-		
+
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
@@ -210,17 +210,17 @@
 				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
 				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Sprint_Katarn</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
-			
+
 			<!-- Secondary ability -->
 			<Unit_Ability>
 				<Type>SPREAD_OUT</Type>
 				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
 				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Plex_Soldier</SFXEvent_GUI_Unit_Ability_Activated>		  
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Plex_Soldier</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
-		
+
 		</Unit_Abilities_Data>
-		
+
 	</GroundCompany>
 
 	<GroundCompany Name="Shock_Soldier_Squad_Delvardus">
@@ -283,14 +283,14 @@
 		<Tactical_Build_Prerequisites/>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>--> 
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		  			
+
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 		<Population_Value>1</Population_Value>
-		
+
 	</GroundCompany>
-	
+
 	<GroundInfantry Name="Shock_Soldier_Delvardus">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_UNIT__EMPIRE_PLEX_SOLDIER</Text_ID>
@@ -308,7 +308,7 @@
 		<CanCellStack>yes</CanCellStack>
 		<Mass>1.0</Mass>
 		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
-		
+
 		<Target_Bones> b_head, b_chest </Target_Bones>
 
 		<Movement_Animation_Speed> 0.688 </Movement_Animation_Speed>
@@ -328,7 +328,7 @@
 		<OverrideAcceleration> .05 </OverrideAcceleration>
 		<OverrideDeceleration> .05 </OverrideDeceleration>
 		<FormationOrder> 3 </FormationOrder>
-			
+
 		<Scale_Factor>1.5</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
@@ -368,15 +368,15 @@
 		<SFXEvent_Guard>Unit_Guard_Storm_Trooper</SFXEvent_Guard>
 		<SFXEvent_Fire>Unit_Shocker_Fire</SFXEvent_Fire>
 		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_2_Death</Death_SFXEvent_Start_Die>
-		
+
 		<!-- Placeholder events for Frank -->
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Storm_Trooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Storm_Trooper </SFXEvent_Assist_Move>
 		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Storm_Trooper </SFXEvent_Assist_Attack>
 
-		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
-		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
 		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
-		
+
 		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
 		<MovementClass> Infantry </MovementClass>
 
@@ -404,7 +404,7 @@
 		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
 		<Targeting_Max_Attack_Distance>210.0</Targeting_Max_Attack_Distance>
 		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
-		
+
 		<Surface_Type_Cover_Damage_Shield>.5</Surface_Type_Cover_Damage_Shield>
 		<Weather_Category>Infantry</Weather_Category>
 
@@ -434,15 +434,15 @@
 				<Type>SPREAD_OUT</Type>
 				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
 				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Plex_Soldier</SFXEvent_GUI_Unit_Ability_Activated>		  
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Plex_Soldier</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
 		</Unit_Abilities_Data>
-		
+
 		<!-- When this unit is converted by the "convert to enemy" special ability (Force Corruption), this is what his type pointer changes to -->
 		<Conversion_Ability_Changes_To_Enemy> Shock_Soldier_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
 
 	</GroundInfantry>
-	
+
 	<GroundInfantry Name="Squad_Shock_Soldier_Delvardus">
 		<Variant_Of_Existing_Type>Shock_Soldier_Pentastar</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_PLEX_SOLDIER</Text_ID>
@@ -457,7 +457,7 @@
 
 		<!-- When this unit is converted by the "convert to enemy" special ability (Force Corruption), this is what his type pointer changes to -->
 		<Conversion_Ability_Changes_To_Enemy> Squad_Shock_Soldier_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
-		
+
 	</GroundInfantry>
 
 	<GroundCompany Name="Delvardus_A6_Juggernaut_Company">
@@ -471,7 +471,7 @@
 		<Is_Dummy>Yes</Is_Dummy>
 		<Damage>60</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
-		
+
 		<Affiliation>Hutts</Affiliation>
 		<Build_Cost_Credits>650</Build_Cost_Credits>
 		<Build_Time_Seconds>50</Build_Time_Seconds>
@@ -486,12 +486,12 @@
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>P_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
-		
+
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>3</Formation_Priority>
 		<Is_Escort>yes</Is_Escort>
 		<Ship_Class>walker</Ship_Class>
-		
+
 		<Company_Transport_Unit>Imperial_Landing_Craft_Heavy</Company_Transport_Unit>
 		<Company_Units>A6_Juggernaut</Company_Units>
 		<Max_Squad_Size> 1 </Max_Squad_Size>
@@ -500,25 +500,25 @@
 		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
 		<SFXEvent_Build_Complete>Unit_Complete_Juggernaut</SFXEvent_Build_Complete>
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
-		
+
 		<Score_Cost_Credits>600</Score_Cost_Credits>
         <Maintenance_Cost>0.05</Maintenance_Cost>
 		<Population_Value>1</Population_Value>
-		
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1350</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>12.5</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>--> 
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-        
+
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes"> </Unit_Abilities_Data>
 
 	</GroundCompany>
-	
+
 	<GroundCompany Name="Delvardus_IDT_Squad">
 		<LOD_Bias>4</LOD_Bias>
 		<Text_ID>TEXT_UNIT_IDT</Text_ID>
@@ -567,12 +567,12 @@
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 		<Population_Value>1</Population_Value>
-	
+
 	</GroundCompany>
 
 	<GroundCompany Name="Delvardus_Chariot_LAV_Company">
@@ -615,7 +615,7 @@
 		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_CHARIOT_LAV</Encyclopedia_Text>
@@ -625,11 +625,11 @@
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
  			<Unit_Ability>
-  				<Type>HUNT</Type> 
+  				<Type>HUNT</Type>
   			</Unit_Ability>
   		</Unit_Abilities_Data>
 		<Population_Value>1</Population_Value>
-		
+
 	</GroundCompany>
 
 	<GroundInfantry Name="Delvardus_Sergeant">
@@ -641,9 +641,9 @@
 		<Land_Terrain_Model_Mapping>
 			Temperate, 			EI_STORMTROOPER.ALO,
 			Urban, 				EI_STORMTROOPER.ALO,
-			Arctic, 			EI_STORMTROOPER.ALO,
+			Arctic, 			EI_SNOWTROOPER.ALO,
 			Volcanic, 			EI_STORMTROOPER.ALO,
-			Desert, 			EI_STORMTROOPER.ALO,
+			Desert, 			EI_SANDTROOPER.ALO,
 			Forest, 			EI_STORMTROOPER.ALO,
 			Swamp, 				EI_STORMTROOPER.ALO
 		</Land_Terrain_Model_Mapping>
@@ -659,9 +659,9 @@
 		<MaxJiggleDistance> 2 </MaxJiggleDistance>
 		<Influences_Capture_Point>True</Influences_Capture_Point>
 		<Icon_Name>i_button_navy_trooper.tga</Icon_Name>
-		
+
 	</GroundInfantry>
-	
+
 	<GroundInfantry Name="Delvardus_Stormtrooper">
 		<Variant_Of_Existing_Type>Stormtrooper</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_STORMTROOPER</Text_ID>
@@ -675,15 +675,15 @@
 		<FormationRaggedness> .2 </FormationRaggedness>
 		<MaxJiggleDistance> 2 </MaxJiggleDistance>
 		<Icon_Name>i_button_navy_trooper.tga</Icon_Name>
-		
+
 	</GroundInfantry>
-	
+
 	<GroundCompany Name="Delvardus_trooper_Squad">
 		<Variant_Of_Existing_Type>Imperial_Stormtrooper_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
 		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
 		 <!-- AI  Changed to 18 troopers in squads of 9 -->
-	
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>2</Tactical_Build_Time_Seconds>
@@ -694,7 +694,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 	</GroundCompany>
-	
+
 	<GroundInfantry Name="Delvardus_Armytrooper">
 		<Variant_Of_Existing_Type>Armytrooper</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_ARMYTROOPER</Text_ID>
@@ -706,16 +706,16 @@
 		<FormationRaggedness> .2 </FormationRaggedness>
 		<MaxJiggleDistance> 2 </MaxJiggleDistance>
 		<Icon_Name>i_button_army_trooper.tga</Icon_Name>
-		
+
 	</GroundInfantry>
-	
+
 	<GroundVehicle Name="Delvardus_Armytrooper_Lieutenant">
 
 		<Variant_Of_Existing_Type>Armytrooper_Lieutenant</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
 
 	</GroundVehicle>
-	
+
 	<GroundCompany Name="Delvardus_Army_Trooper_Squad">
 
 		<Variant_Of_Existing_Type>Army_Trooper_Squad</Variant_Of_Existing_Type>
@@ -733,7 +733,7 @@
 		<Company_Transport_Unit>Imperial_Landing_Craft_Troops</Company_Transport_Unit>
 
 	</GroundCompany>
-	
+
 	<GroundCompany Name="Delvardus_Destruction_Squad">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_UNIT_PENTASTAR_SQUAD</Text_ID>
@@ -783,15 +783,15 @@
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 		<Population_Value>1</Population_Value>
 		<Score_Cost_Credits>54</Score_Cost_Credits>
-		
+
 	</GroundCompany>
-	
+
 	<GroundCompany Name="TIE_Crawler_Company_Delvardus">
 		<Text_ID>TEXT_UNIT_CRAWLER</Text_ID>
 		<!--<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>-->
@@ -833,7 +833,7 @@
 		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CRAWLER</Encyclopedia_Text>
@@ -843,12 +843,12 @@
 	<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
  			<Unit_Ability>
-  				<Type>HUNT</Type> 
+  				<Type>HUNT</Type>
   			</Unit_Ability>
   		</Unit_Abilities_Data>
 
 		<Population_Value>1</Population_Value>
-		
+
 	</GroundCompany>
 
 	<GroundCompany Name="Fortress_Company_Delvardus">
@@ -863,7 +863,7 @@
 		<Is_Dummy>Yes</Is_Dummy>
 		<Damage>100</Damage>
 		<Autoresolve_Health>450</Autoresolve_Health>
-		
+
 		<Affiliation>Hutts</Affiliation>
 		<Build_Cost_Credits>1000</Build_Cost_Credits>
 		<Build_Time_Seconds>40</Build_Time_Seconds>
@@ -883,21 +883,21 @@
 		<Formation_Priority>4</Formation_Priority>
 		<Is_Escort>no</Is_Escort>
 		<Ship_Class>walker</Ship_Class>
-		
+
 		<Company_Transport_Unit>Imperial_Landing_Craft_Heavy</Company_Transport_Unit>
 		<Company_Units>Floating_Fortress</Company_Units>
-		
+
 		<Score_Cost_Credits>1000</Score_Cost_Credits>
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 		<Population_Value>1</Population_Value>
-		
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>12.5</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<SFXEvent_Build_Started>RHD_Build_Vehicle</SFXEvent_Build_Started>
@@ -909,11 +909,11 @@
 
 	</GroundCompany>
 
-	
+
 	<!-- ******************************************************************** -->
 	<!-- ******************************* Ground *************************** -->
 	<!-- ******************************************************************** -->
-	
+
 	<GroundCompany Name="Delvardus_Saber_Group">
 		<Text_ID>TEXT_IMPERIAL_ARMOR_GROUP</Text_ID>
 		<!--<Encyclopedia_Good_Against> T2B_Tank MPTL Pod_Walker </Encyclopedia_Good_Against>-->
@@ -969,17 +969,17 @@
 		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		
+
 		<Encyclopedia_Text>TEXT_TOOLTIP_M1_REPULSOR</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TANK</Encyclopedia_Unit_Class>
 		<Maintenance_Cost>0.05</Maintenance_Cost>
-		        
+
 		<Population_Value>1</Population_Value>
-		
+
 	</GroundCompany>
-	
+
 	<GroundCompany Name="Delvardus_Heavy_Assault_Company">
 		<LOD_Bias>0.5</LOD_Bias>
 		<Text_ID>TEXT_IMPERIAL_HEAVY_ASSAULT_COMPANY</Text_ID>
@@ -1024,7 +1024,7 @@
 		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_ATAT</Encyclopedia_Text>
@@ -1032,9 +1032,9 @@
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 
 		<Population_Value>1</Population_Value>
-		
+
 	</GroundCompany>
-	
+
 	<GroundCompany Name="Delvardus_Heavy_Scout_Squad">
 		<LOD_Bias>4</LOD_Bias>
 		<Text_ID>TEXT_IMPERIAL_HEAVY_SCOUT_SQUAD</Text_ID>
@@ -1089,7 +1089,7 @@
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_ATST</Encyclopedia_Text>
@@ -1097,9 +1097,9 @@
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 
 		<Population_Value>1</Population_Value>
-		
+
 	</GroundCompany>
-	
+
 	<GroundCompany Name="Delvardus_Anti_Aircraft_Company">
 		<Text_ID>TEXT_IMPERIAL_ANTI_AIRCRAFT</Text_ID>
 		<!--<Encyclopedia_Good_Against> Snowspeeder Y-wing </Encyclopedia_Good_Against>-->
@@ -1145,24 +1145,24 @@
 				<Expiration_Seconds>10</Expiration_Seconds>
 			</Unit_Ability>
 		</Unit_Abilities_Data>
-		
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>6.5</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_ATAA</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
 		<Maintenance_Cost>0.05</Maintenance_Cost>
- 
+
 		<Population_Value>1</Population_Value>
-		
+
 	</GroundCompany>
-	
+
 	<GroundCompany Name="Delvardus_Artillery_Corp">
 		<Text_ID>TEXT_IMPERIAL_ARTILLERY_CORPS</Text_ID>
 		<!--<Encyclopedia_Good_Against> UC_Rebel_Buildable_Anti_Vehicle_Turret UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>-->
@@ -1203,10 +1203,10 @@
 		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
-		
+
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
@@ -1214,8 +1214,8 @@
 				<Type>DEPLOY</Type>
 			</Unit_Ability>
 		</Unit_Abilities_Data>
-		
-		
+
+
 		<Encyclopedia_Text>TEXT_TOOLTIP_SPMA</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
 		<Maintenance_Cost>0.05</Maintenance_Cost>
@@ -1255,8 +1255,8 @@
 		<FormationGrouping> Solo </FormationGrouping>
 		<PathFrameDelay> 4 </PathFrameDelay>
 		<Hover_Height>80.0</Hover_Height>
-		<Should_Cause_Limited_Turrets_To_Turn> false </Should_Cause_Limited_Turrets_To_Turn>	
-			
+		<Should_Cause_Limited_Turrets_To_Turn> false </Should_Cause_Limited_Turrets_To_Turn>
+
 		<AI_Combat_Power>200</AI_Combat_Power>
 
 		<Behavior>SELECTABLE, POWERED</Behavior>
@@ -1283,7 +1283,7 @@
 		<Land_FOW_Reveal_Range>320.0</Land_FOW_Reveal_Range>
 		<!--This must be less than the drain life radius-->
 		<Targeting_Max_Attack_Distance>140.0</Targeting_Max_Attack_Distance>
-		
+
 		<Hardpoints>
 			HP_Lancet_Turret_00,
 			HP_Lancet_Turret_01
@@ -1317,8 +1317,8 @@
 		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Lancet_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
 
 		<SFXEvent_Unit_Lost> EHD_Unit_Destroyed </SFXEvent_Unit_Lost>
-		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
-		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
 		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
 
 		<CategoryMask> Air | AntiStructure | AntiAir </CategoryMask>
@@ -1358,19 +1358,19 @@
                 <Applicable_Unit_Categories> Structure | Vehicle |Infantry | LandHero </Applicable_Unit_Categories>
                 <Duration_In_Seconds>99999</Duration_In_Seconds>
                 <Damage_Per_Second>20</Damage_Per_Second>
-                <Drain_Effect_Name>Lancet_Drain_Life_Effect</Drain_Effect_Name>	
+                <Drain_Effect_Name>Lancet_Drain_Life_Effect</Drain_Effect_Name>
                 <Drain_Source_Bone_Name>HP_TRAC_BONE</Drain_Source_Bone_Name>
                 <SFXEvent_Activate>Unit_Force_Lightning</SFXEvent_Activate>
                 <Max_Drain_Victims>1</Max_Drain_Victims>
                 <Should_Heal>No</Should_Heal>
                 <Charging_Time_In_Seconds>2.0</Charging_Time_In_Seconds>
-                <Drain_Radius> 150.0 </Drain_Radius> 
+                <Drain_Radius> 150.0 </Drain_Radius>
                 <Activation_Max_Range>150.0</Activation_Max_Range>
             </Drain_Life_Ability>
 
         </Abilities>
 
-		
+
 	</GroundVehicle>
 
 	<GroundCompany Name="Lancet_Air_Wing">
@@ -1418,7 +1418,7 @@
 		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
         <Abilities SubObjectList="Yes">
@@ -1428,9 +1428,9 @@
                 <Applicable_Unit_Categories> Structure | Vehicle |Infantry | LandHero </Applicable_Unit_Categories>
                 <Duration_In_Seconds>99999</Duration_In_Seconds>
                 <Damage_Per_Second>20</Damage_Per_Second>
-                <Drain_Effect_Name>Lancet_Drain_Life_Effect</Drain_Effect_Name>	
+                <Drain_Effect_Name>Lancet_Drain_Life_Effect</Drain_Effect_Name>
                 <Drain_Source_Bone_Name>HP_TRAC_BONE</Drain_Source_Bone_Name>
-                <Drain_Radius> 150.0 </Drain_Radius>		
+                <Drain_Radius> 150.0 </Drain_Radius>
                 <SFXEvent_Activate>Unit_Force_Lightning</SFXEvent_Activate>
                 <Max_Drain_Victims>1</Max_Drain_Victims>
                 <Should_Heal>No</Should_Heal>
@@ -1441,7 +1441,5 @@
         </Abilities>
 
 	</GroundCompany>
-	
+
 </Remnant_Space_Units>
-	
-	

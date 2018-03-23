@@ -62,7 +62,7 @@ function Find_Faction(message)
 	elseif p_zsinj.Is_Human() then
 		Story_Event("ENABLE_BRANCH_ZSINJ_FLAG")
 	elseif p_maldrood.Is_Human() then
-		Story_Event("ENABLE_BRANCH_MALDROOD_FLAG")
+		Story_Event("ENABLE_BRANCH_TERADOC_FLAG")
 	end
 
   end

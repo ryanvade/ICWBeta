@@ -86,7 +86,7 @@
 	
 	<Event Name="Devastator_Unlock">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>800</Event_Param1>
+		<Event_Param1>800</Event_Param1>  <!-- Should be synced with devastator narrative and narrative NR in container xml -->
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>World_Devastator</Reward_Param1>
 		<Prereq>Universal_Story_Start</Prereq>
@@ -98,6 +98,17 @@
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Reaper_Kaine</Reward_Param1>
 		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Byss_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>Byss</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_PALPATINE_BOUNCE_OSH</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9>Palpatine_Loop</Reward_Param9>
+		<Perpetual>true</Perpetual>
 	</Event>
 	
 

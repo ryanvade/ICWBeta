@@ -52,7 +52,7 @@ function Definitions()
 	MinContrastScale = 1.25
 	MaxContrastScale = 1.75
 
-	Category = "Conquer_Opponent"
+	Category = "Conquer_Opponent | Warlord_Conquer_Opponent"
 	TaskForce = {
 	-- First Task Force
 	{
@@ -68,7 +68,7 @@ function Definitions()
 		,"LandHero | Vehicle | Infantry | Air = 100%"
 	}
 	}
-	RequiredCategories = { "Infantry | Vehicle", "Corvette | Frigate", "Capital" }		--Must have at least one ground unit, also make sure space force is reasonable
+	RequiredCategories = { "Infantry", "Vehicle", "Corvette | Frigate | Capital" }		--Must have at least one ground unit, also make sure space force is reasonable
 
 	PerFailureContrastAdjust = 1.0
 	

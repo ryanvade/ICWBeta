@@ -50,7 +50,7 @@ function Definitions()
 	GlobalContrastScale = 3.0
 	PerFailureContrastAdjust = 0.5
 	
-	Category = "Conquer_Opponent"
+	Category = "Conquer_Opponent | Warlord_Conquer_Opponent"
 	TaskForce = {
 	{
 		"MainForce"						

@@ -26,7 +26,7 @@
 		</Land_Terrain_Model_Mapping>
 
 	</GroundInfantry>
-	
+
 		<GroundCompany Name="Pentastar_Army_Trooper_Squad">
 
 		<Variant_Of_Existing_Type>Army_Trooper_Squad</Variant_Of_Existing_Type>
@@ -47,7 +47,7 @@
 		<Company_Transport_Unit>Imperial_Landing_Craft_Troops</Company_Transport_Unit>
 
 	</GroundCompany>
-	
+
 
 <GroundCompany Name="Shock_Soldier_Squad_Pentastar">
 		<LOD_Bias>5</LOD_Bias>
@@ -451,8 +451,8 @@
 		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
-	
-	
+
+
 	<GroundCompany Name="Pentastar_TIE_Squad_Ground">
 		<Text_ID>TEXT_UNIT_ACCLAMATOR</Text_ID>
 		<!--<Encyclopedia_Good_Against> AT_AT_Walker </Encyclopedia_Good_Against>-->
@@ -495,13 +495,13 @@
 		<Score_Cost_Credits>225</Score_Cost_Credits>
 
 		<Unit_Abilities_Data SubObjectList="Yes">
-			
+
 			<Unit_Ability>
 				<Type>HUNT</Type>
 			</Unit_Ability>
-			
+
 		</Unit_Abilities_Data>
-	
+
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
@@ -511,9 +511,9 @@
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		
+
 		<CategoryMask>Frigate | Air | AntiStructure</CategoryMask>
-  		
+
   		<Encyclopedia_Text> TEXT_TOOLTIP_ACCLAMATOR TEXT_TOOLTIP_ACCLAMATOR_GROUND</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FRIGATE</Encyclopedia_Unit_Class>
         <Maintenance_Cost>0.05</Maintenance_Cost>
@@ -690,9 +690,9 @@
 		<Land_Terrain_Model_Mapping>
 			Temperate, 			EI_STORMTROOPER.ALO,
 			Urban, 				EI_STORMTROOPER.ALO,
-			Arctic, 			EI_STORMTROOPER.ALO,
+			Arctic, 			EI_SNOWTROOPER.ALO,
 			Volcanic, 			EI_STORMTROOPER.ALO,
-			Desert, 			EI_STORMTROOPER.ALO,
+			Desert, 			EI_SANDTROOPER.ALO,
 			Forest, 			EI_STORMTROOPER.ALO,
 			Swamp, 				EI_STORMTROOPER.ALO
 		</Land_Terrain_Model_Mapping>
@@ -739,7 +739,7 @@
 		<Affiliation>Pentastar</Affiliation>
 		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
 		 <!-- AI  Changed to 18 troopers in squads of 9 -->
-	
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>2</Tactical_Build_Time_Seconds>
@@ -749,7 +749,7 @@
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
-	
+
 	</GroundCompany>
 
 	<GroundCompany Name="Pentastar_Destruction_Squad">
@@ -1079,7 +1079,7 @@
 
 		<Abilities SubObjectList="Yes">
 
-		
+
 			<Redirect_Blaster_Ability Name="Jedi_Redirect_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
 				<!-- Redirection chance is rolled first. If failed, we roll block chance. If failed, we take the damage. -->
@@ -1469,16 +1469,16 @@
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_AT</SFXEvent_Fleet_Move>
 		<Score_Cost_Credits>1000</Score_Cost_Credits>
 
-	
 
-		
+
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1600</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_ATTE</Encyclopedia_Text>
@@ -3563,14 +3563,14 @@
 		<SFXEvent_Build_Complete>Unit_Complete_Scout_Trooper</SFXEvent_Build_Complete>
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Scout_Trooper</SFXEvent_Fleet_Move>
 
-        
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>650</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>6.5</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_SCOUTTROOPER</Encyclopedia_Text>

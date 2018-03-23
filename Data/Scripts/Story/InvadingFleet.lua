@@ -12,8 +12,8 @@
 --*   @Date:                2017-11-24T12:43:51+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            InvadingFleet.lua
---*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2017-12-21T12:40:28+01:00
+--*   @Last modified by:    marcus
+--*   @Last modified time:  2018-03-17T01:28:22+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -26,7 +26,7 @@ require("PGSpawnUnits")
 require("PGMoveUnits")
 require("RaidFleet")
 require("RandomEventQueue")
-TM = require("TRGameModeTransactions")
+require("TRGameModeTransactions")
 
 function Definitions()
 
@@ -53,7 +53,8 @@ end
 
 function State_Init(message)
   if message == OnEnter then
-    TM.ResetBoardingTransactions()
+    TM = TransactionManager:New()
+    TM:ResetBoardingTransactions()
     local fleet = MakeRaidFleet(15)
     --fleet:initialize()
     queue = MakeRandomEventQueue()
@@ -71,15 +72,5 @@ function Remove_Huttlist(message)
 end
 
 function RegisterBoardingTransactions()
-  local boardedTypes = TM.ExecuteBoardingTransactions()
-  for i, wrapper in pairs(boardedTypes) do
-    local objectString = wrapper.objectType
-    local ownerString = wrapper.owner
-    local unitList = Find_All_Objects_Of_Type(Find_Player(ownerString), objectString)
-    if table.getn(unitList) > 0 then
-      unitList[1].Despawn()
-      local transactionString = TM.CreateSpawnTransaction(objectString, ownerString)
-      TM.RegisterTransaction(transactionString)
-    end
-  end
+  TM:ExecuteBoardingTransactions()
 end

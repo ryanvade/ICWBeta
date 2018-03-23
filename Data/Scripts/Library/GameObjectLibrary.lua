@@ -12,8 +12,8 @@
 --*   @Date:                2018-01-06T18:36:14+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            GameObjectLibrary.lua
---*   @Last modified by:
---*   @Last modified time:  2018-02-15T15:20:58-05:00
+--*   @Last modified by:    [TR]Pox
+--*   @Last modified time:  2018-03-17T02:26:19+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -106,18 +106,18 @@ GameObjectLibrary = {
 		["SLAYN_KORPIL"]={
             Text="TEXT_DISPLAY_SLAYN_KORPIL"
         },
-        ["PLACEHOLDER_CATEGORY_DUMMY"]={
-            Text="TEXT_DISPLAY_PLACEHOLDER_CATEGORY_DUMMY"
-        },
-        ["NON_CAPITAL_CATEGORY_DUMMY"]={
-            Text="TEXT_DISPLAY_NON_CAPITAL_CATEGORY_DUMMY"
-        },
-        ["CAPITAL_CATEGORY_DUMMY"]={
-            Text="TEXT_DISPLAY_CAPITAL_CATEGORY_DUMMY"
-        },
-        ["STRUCTURE_CATEGORY_DUMMY"]={
-            Text="TEXT_DISPLAY_STRUCTURE_CATEGORY_DUMMY"
-        }
+        -- ["PLACEHOLDER_CATEGORY_DUMMY"]={
+        --     Text="TEXT_DISPLAY_PLACEHOLDER_CATEGORY_DUMMY"
+        -- },
+        -- ["NON_CAPITAL_CATEGORY_DUMMY"]={
+        --     Text="TEXT_DISPLAY_NON_CAPITAL_CATEGORY_DUMMY"
+        -- },
+        -- ["CAPITAL_CATEGORY_DUMMY"]={
+        --     Text="TEXT_DISPLAY_CAPITAL_CATEGORY_DUMMY"
+        -- },
+        -- ["STRUCTURE_CATEGORY_DUMMY"]={
+        --     Text="TEXT_DISPLAY_STRUCTURE_CATEGORY_DUMMY"
+        -- }
 
     },
     Units={

@@ -298,7 +298,7 @@
 		dislike pirate systems under some circumstances (don't zero out desire entirely, because we want to expand through pirates toward the player)
 	 -->
 	<Is_Good_Invasion_Target>
-		15.0 * (Variable_Target.EnemyForce.HasGroundForce == 0.0) * (Variable_Target.EnemyForce.HasSpaceForce == 0.0)
+		50.0 * (Variable_Target.EnemyForce.HasGroundForce == 0.0) * (Variable_Target.EnemyForce.HasSpaceForce == 0.0)
 		+ 
 		5.0 * Function_Is_Neglected_By_My_Opponent_Space.Evaluate
 		+
@@ -436,6 +436,8 @@
 		Function_Is_Good_Invasion_Target.Evaluate 
 		*
 		(Variable_Target.IsHumanControlled == 0.0)
+		*
+		Function_Is_Connected_To_Me.Evaluate
 	</Should_Conquer_Pirate_Planet>
 	
 	<Warlord_Should_Conquer_Pirate_Planet>
@@ -446,7 +448,8 @@
 			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Hutts"}
 			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Pentastar"}
 			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Teradoc"}
-			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Harrsk"})
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Harrsk"}
+			+ 0.5 * Variable_Target.IsFaction{Parameter_Faction = "Warlords"})
 	</Warlord_Should_Conquer_Pirate_Planet>
 
 	<Should_Conquer_Opponent_Planet>

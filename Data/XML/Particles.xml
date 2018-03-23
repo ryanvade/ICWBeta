@@ -1,5 +1,15 @@
 <?xml version="1.0"?>
 <Particles>
+
+	<Particle Name="Boarding_Particle">
+		<Space_Model_Name>P_BOARDING.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Behavior>PARTICLE</Behavior>
+		<Particle_Lifetime_Frames>80</Particle_Lifetime_Frames>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</Particle>
+
 	<Particle Name="Lancet_Lightning_Particle">
 		<Land_Model_Name>p_lancettesla_b.alo</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
@@ -428,6 +438,16 @@
 	<Particle Name="Friggin_Huge_Explosion_Space">
 		<Land_Model_Name>p_explosion_friggin_huge00.alo</Land_Model_Name>
 		<Space_Model_Name>p_explosion_friggin_huge00.alo</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Behavior>PARTICLE</Behavior>
+		<Particle_Lifetime_Frames>60</Particle_Lifetime_Frames>
+		<Explosion_Jitter_Factor>4</Explosion_Jitter_Factor>
+		<Explosion_Scorch_Mark>EXPLOSION_SCORCH_MARK_HUGE</Explosion_Scorch_Mark>
+	</Particle>
+	<Particle Name="Friggin_Huger_Explosion_Space">
+		<Land_Model_Name>P_EXPLOSION_GODDAMNHUGE00.alo</Land_Model_Name>
+		<Space_Model_Name>P_EXPLOSION_GODDAMNHUGE00.alo</Space_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Is_Decoration>Yes</Is_Decoration>
 		<Behavior>PARTICLE</Behavior>

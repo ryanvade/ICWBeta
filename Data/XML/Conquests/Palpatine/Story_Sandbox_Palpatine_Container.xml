@@ -225,7 +225,7 @@
 
 	<Event Name="Devastator_Unlock_Narrative">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>800</Event_Param1>
+		<Event_Param1>800</Event_Param1>  <!-- Should be synced with devastator unlock in Empire xml -->
 		<Reward_Type>MULTIMEDIA</Reward_Type>
 		<Reward_Param1>TEXT_CONQUEST_PALPATINE_DEVASTATOR_UNLOCK</Reward_Param1>
 		<Reward_Param2>15</Reward_Param2>
@@ -262,18 +262,6 @@
 		<Event_Param1>1040</Event_Param1>
 		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
 		<Reward_Param1>Eclipse_Tag</Reward_Param1>
-		<Branch>Faction_Branch_Remnant</Branch>
-	</Event>
-
-	<Event Name="Byss_Bounces_IR">
-		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
-		<Event_Param1>Byss</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_PALPATINE_BOUNCE_OSH</Reward_Param1>
-		<Reward_Param2>10</Reward_Param2>
-		<Reward_Param3></Reward_Param3>
-		<Reward_Param9>Palpatine_Loop</Reward_Param9>
-		<Perpetual>true</Perpetual>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -397,9 +385,26 @@
 		<Branch>Faction_Branch_Newrep</Branch>
 	</Event>
 	
+	<Event Name="Devastator_Unlock_Narrative_NR">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>800</Event_Param1>  <!-- Should be synced with devastator unlock in Empire xml -->
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_PALPATINE_NR_DEVASTATORS</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Mothma_Devastator_Speech</Reward_Param8>
+		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Branch>Faction_Branch_Newrep</Branch>
+	</Event>
+	
 	<Event Name="Palpatine_Unlock_Narrative">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1060</Event_Param1> <!-- Timer for Palpatine and Luke spawn in Empire xml -->
+		<Event_Param1>1060</Event_Param1>
 		<Reward_Type>MULTIMEDIA</Reward_Type>
 		<Reward_Param1>TEXT_CONQUEST_PALPATINE_NR_INTRO_ONE</Reward_Param1>
 		<Reward_Param2>15</Reward_Param2>

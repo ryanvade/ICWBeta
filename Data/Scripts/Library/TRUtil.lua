@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            TRUtil.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-03-10T19:31:39+01:00
+--*   @Last modified time:  2018-03-17T02:24:26+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************

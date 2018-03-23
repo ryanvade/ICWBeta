@@ -12,13 +12,15 @@
 --*   @Date:                2017-12-17T14:11:19+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            SingleUnitRetreat.lua
---*   @Last modified by:    svenmarcus
---*   @Last modified time:  2018-03-01T15:29:51+01:00
+--*   @Last modified by:    [TR]Pox
+--*   @Last modified time:  2018-03-21T23:38:00+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
 
 
+
+require("TransactionFactory")
 
 SingleUnitRetreat = {}
 
@@ -41,7 +43,7 @@ function SingleUnitRetreat:Update(globals)
         end
 
         if self:RetreatAllowed(globals) then
-            self:JumpToHyperSpace()
+            self:JumpToHyperSpace(globals)
             return
         end
 
@@ -141,9 +143,10 @@ function SingleUnitRetreat:HasHangar()
     return EvaluatePerception("Has_Hangar", Object.Get_Owner(), Object) == 1
 end
 
-function SingleUnitRetreat:JumpToHyperSpace()
-    local transaction = TM.CreateSpawnTransaction(Object.Get_Type().Get_Name(), Object.Get_Owner().Get_Faction_Name())
-    TM.RegisterTransaction(transaction)
+function SingleUnitRetreat:JumpToHyperSpace(globals)
+    self:MakeFightersSelectable(globals)
+    local transaction = CreateSpawnTransaction(Object.Get_Type().Get_Name(), Object.Get_Owner().Get_Faction_Name())
+    TM:RegisterGameModeTransaction(transaction)
     Object.Hyperspace_Away()
     self.isActive = false
     jumpInProgress = false

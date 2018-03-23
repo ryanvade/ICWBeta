@@ -33,8 +33,9 @@ function Definitions()
 
   StoryModeEvents =
   {
-    Universal_Story_Start = Begin_GC,
-    Dominion_Attacks = Rogriss_Deployed
+  Universal_Story_Start = Begin_GC,
+    Determine_Faction_LUA = Find_Faction,
+    Rogriss_Joins = Rogriss_Deployed
   }
 
 end
@@ -44,29 +45,11 @@ function Find_Faction(message)
 
 	p_newrep = Find_Player("Rebel")
 	p_empire = Find_Player("Empire")
-	p_eoth = Find_Player("Underworld")
-	p_eriadu = Find_Player("Hutts")
-	p_pentastar = Find_Player("Pentastar")
-	p_zsinj = Find_Player("Pirates")
-	p_maldrood = Find_Player("Teradoc")
-	p_yevetha = Find_Player("Yevetha")
 
 	if p_newrep.Is_Human() then
 		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
 	elseif p_empire.Is_Human() then
 		Story_Event("ENABLE_BRANCH_EMPIRE_FLAG")
-	elseif p_eoth.Is_Human() then
-		Story_Event("ENABLE_BRANCH_EOTH_FLAG")
-	elseif p_eriadu.Is_Human() then
-		Story_Event("ENABLE_BRANCH_ERIADU_FLAG")
-	elseif p_pentastar.Is_Human() then
-		Story_Event("ENABLE_BRANCH_PENTASTAR_FLAG")
-	elseif p_zsinj.Is_Human() then
-		Story_Event("ENABLE_BRANCH_ZSINJ_FLAG")
-	elseif p_maldrood.Is_Human() then
-		Story_Event("ENABLE_BRANCH_MALDROOD_FLAG")
-	elseif p_yevetha.Is_Human() then
-		Story_Event("ENABLE_BRANCH_YEVETHA_FLAG")
 	end
 
   end
@@ -75,15 +58,15 @@ end
 function Rogriss_Deployed(message)
   if message == OnEnter then
 
-    p_empire = Find_Player("Empire")
+    local p_empire = Find_Player("Empire")
 
-	start_planet = FindPlanet("Bastion")
+	local start_planet = FindPlanet("Bastion")
 	if start_planet.Get_Owner() == Find_Player("Empire") then
 		if p_empire.Is_Human() then
 			Story_Event("ROGRISS_JOINS_SPEECH")
 		end
-		spawn_list_Rogriss = { "Rogriss_Dominion"  }
-		RogrissSpawn = SpawnList(spawn_list_Rogriss, start_planet, p_empire,true, false)
+		local spawn_list_Rogriss = { "Rogriss_Dominion" }
+		local RogrissSpawn = SpawnList(spawn_list_Rogriss, start_planet, p_empire,true, false)
 	end
 
 

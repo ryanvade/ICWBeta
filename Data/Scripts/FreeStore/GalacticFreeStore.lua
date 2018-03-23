@@ -46,14 +46,14 @@ function Base_Definitions()
 	DebugMessage("%s -- In Base_Definitions", tostring(Script))
 
 	-- how often does this script get serviced?
-	ServiceRate = 10
-	UnitServiceRate = 10
+	ServiceRate = 20
+	UnitServiceRate = 20
 	
 	Common_Base_Definitions()
 	
 	-- Percentage of units to move on each service.
-	SpaceMovePercent = 0.020
-	GroundMovePercent = 0.020
+	SpaceMovePercent = 0.040
+	GroundMovePercent = 0.040
 
 	if Definitions then
 		Definitions()

@@ -44,70 +44,160 @@ require("pgtaskforce")
 -- Tell the script pooling system to pre-cache this number of scripts.
 ScriptPoolCount = 4
 
-function Definitions()	
+function Definitions()
 	MinContrastScale = 1.1
 	MaxContrastScale = 1.15
-		
-	Category = "Conquer_Pirate"
+
+	Category = "Conquer_Pirate | Warlord_Conquer_Pirate"
 	TaskForce = {
+	-- First Task Force
 	{
-		"MainForce"						
-		, "Infantry | Vehicle | Air | Corvette | Frigate | Super | Capital = 100%"
+		"SpaceForce"				
+		,"SpaceHero | Frigate | Capital | Corvette | Bomber | Fighter | Super = 100%"
+	},
+	{
+		"GroundForce"
+		,"Vehicle | Infantry | Air = 100%"
 	}
 	}
-	RequiredCategories = { "Air | Infantry | Vehicle" }	
+	RequiredCategories = { "Infantry | Vehicle", "Corvette | Frigate | Capital" }		--Must have at least one ground unit, also make sure space force is reasonable
 	
+	SpaceSecured = true
 	LandSecured = false
+	MovingGroundForceToTarget = false
+	WasConflict = false
 end
 
-function MainForce_Thread()
-	
+function SpaceForce_Thread()
 	-- Since we're using plan failure to adjust contrast, we're 
 	-- only concerned with failures in battle. Default the 
 	-- plan to successful and then 
 	-- only on the event of our task force being killed is the
 	-- plan set to a failed state.
-	MainForce.Set_Plan_Result(true)	
+	SpaceForce.Set_Plan_Result(true)
 	
-	if MainForce.Are_All_Units_On_Free_Store() == true then
-		AssembleForce(MainForce)
+	SpaceSecured = false
+
+	if SpaceForce.Are_All_Units_On_Free_Store() == true then
+		AssembleForce(SpaceForce)
 	else
-		BlockOnCommand(MainForce.Produce_Force());
+		BlockOnCommand(SpaceForce.Produce_Force());
+		return
+	end
+
+	if SpaceForce.Get_Force_Count() == 0 then
+		SpaceSecured = true
+	else
+		BlockOnCommand(SpaceForce.Move_To(Target))
+		WasConflict = true
+		if SpaceForce.Get_Force_Count() == 0 then
+			SpaceForce.Set_Plan_Result(false)		
+			Exit_Plan()
+		end
+				
+		SpaceSecured = true
+		
+		while not LandSecured do
+			Sleep(5)
+		end
+		
+		SpaceForce.Release_Forces(1.0)
+	end
+end
+
+function GroundForce_Thread()
+	--Needs to be done by both taskforces - sometimes we may only create a ground force, and if we
+	--declare it a failure we'll just end up with crazy contrast escalation.
+	GroundForce.Set_Plan_Result(true)	
+	
+	if GroundForce.Are_All_Units_On_Free_Store() == true then
+		AssembleForce(GroundForce)
+	else
+		BlockOnCommand(GroundForce.Produce_Force());
 		return
 	end
 	
-	BlockOnCommand(MainForce.Move_To(Target))
-	if MainForce.Get_Force_Count() == 0 then
-		MainForce.Set_Plan_Result(false)	
-		ScriptExit()
-	end
-	if Invade(MainForce) == false then
-		MainForce.Set_Plan_Result(false)			
-		ScriptExit()
+	LandUnits(GroundForce)
+	
+	while not SpaceSecured do
+		if WasConflict then
+			Exit_Plan()
+		end
+		Sleep(5)
 	end
 	
+	if not LaunchUnits(GroundForce) then
+		Exit_Plan()
+	end
+	
+	MovingGroundForceToTarget = true
+	BlockOnCommand(GroundForce.Move_To(Target))	
+	MovingGroundForceToTarget = false
+	WasConflict = true	
+	if Invade(GroundForce) == false then
+		GroundForce.Set_Plan_Result(false)
+		Exit_Plan()
+	end
+
+	-- This plan has all but succeeded; make sure AI systems don't remove it
+	GroundForce.Set_As_Goal_System_Removable(false)	
+	GroundForce.Test_Target_Contrast(false)	
+	
 	LandSecured = true
-	MainForce.Release_Forces(1.0)
+				
+	GroundForce.Release_Forces(1.0)
+	
 	FundBases(PlayerObject, Target)
-		
+
+	Exit_Plan()
+end
+
+function Exit_Plan()
+	if SpaceForce then
+		SpaceForce.Release_Forces(1.0)
+	end
+	GroundForce.Release_Forces(1.0)
 	ScriptExit()
 end
 
-function MainForce_Production_Failed(failed_object_type)
+function SpaceForce_Production_Failed(tf, failed_object_type)
 	ScriptExit()
 end
 
-function MainForce_Original_Target_Owner_Changed(tf, old_owner, new_owner)	
+function GroundForce_Production_Failed(tf, failed_object_type)
+	ScriptExit()
+end
+
+function SpaceForce_Original_Target_Owner_Changed(tf, old_owner, new_owner)	
 	--Ignore changes to neutral - it might just be temporary on the way to
 	--passing into my control.
 	if new_owner ~= PlayerObject and new_owner.Is_Neutral() == false then
+		if (not LandSecured) then
+			ScriptExit()
+		end
+	end
+end
+
+function GroundForce_Original_Target_Owner_Changed(tf, old_owner, new_owner)	
+	--Ignore changes to neutral - it might just be temporary on the way to
+	--passing into my control.
+	if new_owner ~= PlayerObject and new_owner.Is_Neutral() == false then
+		if (not LandSecured) then
+			ScriptExit()
+		end
+	end
+end
+
+function SpaceForce_No_Units_Remaining()
+	if not LandSecured then
+		SpaceForce.Set_Plan_Result(false) 
 		ScriptExit()
 	end
 end
 
-function MainForce_No_Units_Remaining()
+function GroundForce_No_Units_Remaining()
 	if not LandSecured then
-		MainForce.Set_Plan_Result(false)			
+		GroundForce.Set_Plan_Result(false) 
 		ScriptExit()
 	end
 end
