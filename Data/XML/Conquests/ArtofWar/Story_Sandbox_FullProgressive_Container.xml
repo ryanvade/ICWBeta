@@ -543,6 +543,77 @@
 		<Branch>Faction_Branch_Newrep</Branch>
 	</Event>
 	
+	<Event Name="Thrawn_Welcome_Mon">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_THRAWN_NR_INTRO_ONE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8 />
+		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Rebels_Enter_Tech_02</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
+	</Event>
+		
+	 <Event Name="Palpatine_Welcome_Mon">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_PALPATINE_NR_INTRO_ONE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8 />
+		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Rebels_Enter_Tech_03</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
+
+	</Event>
+  
+  	 <Event Name="Daala_Welcome_Leia">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_DAALA_NR_INTRO_ONE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8 />
+		<Reward_Param9>Leia_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Rebels_Enter_Tech_04</Prereq>
+			<Branch>Faction_Branch_NewRep</Branch>
+
+	</Event>
+	
+	<Event Name="Pellaeon_Welcome_Leia">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_PELLAEON_NR_INTRO_ONE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8 />
+		<Reward_Param9>Leia_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Rebels_Enter_Tech_05</Prereq>
+			<Branch>Faction_Branch_NewRep</Branch>
+
+	</Event>
+	
 	<!--***********************************************************-->
 	<!--***********************************************************-->
 	<!--***************** Pentastar Alignment Story ******************-->
@@ -612,39 +683,6 @@
 		<Branch>Faction_Branch_Pentastar</Branch>
 	</Event>
 	
-	<Event Name="Yevetha_Spawns_Dialogue_PA">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Prereq>Era_Five_Begins</Prereq>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_KAINE_YEVETHA_SPAWNS</Reward_Param1>
-		<Reward_Param2>22</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8></Reward_Param8>
-		<Reward_Param9>Moff_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Branch>Faction_Branch_Pentastar</Branch>
-	</Event>
-	
-	<Event Name="Hapes_Spawns_Dialogue_PA">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1500</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_KAINE_HAPES_SPAWNS</Reward_Param1>
-		<Reward_Param2>22</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8></Reward_Param8>
-		<Reward_Param9>Moff_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-	</Event>
-
 	<!--***********************************************************-->
 	<!--***********************************************************-->
 	<!--***************** Eriadu Authority Story ******************-->
@@ -711,6 +749,30 @@
 		<Branch>Faction_Branch_Teradoc</Branch>
 	</Event>
 	
+		<!--***********************************************************-->
+	<!--***********************************************************-->
+	<!--***************** Greater Maldrood Story ******************-->
+	<!--***********************************************************-->	
+	<!--***********************************************************-->	
+	
+	<Event Name="Intro_Welcome_Yevetha">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_BFC_DL_INTRO_ONE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Teradoc_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Teradoc_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_Yevetha</Prereq>
+		<Branch>Faction_Branch_Yevetha</Branch>
+	</Event>
+	
+
 	<!--***********************************************************-->
 	<!--***********************************************************-->
 	<!--***************** Warlord Zsinj Story ******************-->
@@ -1000,12 +1062,12 @@
 		<Prereq>Spawn_Clone</Prereq>
 		<Branch>Faction_Branch_EotH</Branch>
 	</Event>
-	
-		
+			
 	<Event Name="Phalanx_Research_Begin">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>400</Event_Param1>
 		<Branch>Faction_Branch_EotH</Branch>
+		<Prereq>Hand_Level_Three</Prereq>
 	</Event>
 
 	<Event Name="Unlock_Phalanx_Speech">
@@ -1816,11 +1878,14 @@
 		<Reward_Param1>ILC905</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Set_Subera_Pellaeon</Prereq>
+		<Prereq>Faction_Branch_Enabler_Yevetha</Prereq>
+
 	</Event>
 	
 	<Event Name="Yevetha_Spawns">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Prereq>Set_Subera_Pellaeon</Prereq>
+		<Prereq>Faction_Branch_Enabler_Yevetha</Prereq>
 	</Event>
 	
 

@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            GenericGameObject.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-03-19T22:28:40+01:00
+--*   @Last modified time:  2018-03-24T02:18:16+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -56,7 +56,7 @@ function State_Init(message)
             table.insert(modules, mod)
             mod:Init(globalValues)
         end
-
+        Sleep(5)
     elseif message == OnUpdate then
         for i, mod in pairs(modules) do
             if mod.isActive then

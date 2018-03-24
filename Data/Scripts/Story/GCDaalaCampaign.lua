@@ -33,14 +33,7 @@ function Definitions()
 
   StoryModeEvents =
   {
-    Universal_Story_Start = Begin_GC,
-    Determine_Faction_LUA = Find_Faction,
-    Maldrood_Antem = Antem_Maldrood,
-    Maldrood_Kashyyyk = Kashyyyk_Maldrood,
-    Maldrood_Commenor = Commenor_Maldrood,
-    Eriadu_Elrood = Elrood_Eriadu,
-    Set_Subera_Isard = SubEra_Change,
-    Talks_End = Pentastar_Talks
+    Determine_Faction_LUA = Find_Faction
   }
 
 end
@@ -48,14 +41,14 @@ end
 function Find_Faction(message)
   if message == OnEnter then
 
-	p_newrep = Find_Player("Rebel")
-	p_empire = Find_Player("Empire")
-	p_eoth = Find_Player("Underworld")
-	p_eriadu = Find_Player("Hutts")
-	p_pentastar = Find_Player("Pentastar")
-	p_zsinj = Find_Player("Pirates")
-	p_maldrood = Find_Player("Teradoc")
-	p_yevetha = Find_Player("Yevetha")
+	local p_newrep = Find_Player("Rebel")
+	local p_empire = Find_Player("Empire")
+	local p_eoth = Find_Player("Underworld")
+	local p_eriadu = Find_Player("Hutts")
+	local p_pentastar = Find_Player("Pentastar")
+	local p_zsinj = Find_Player("Pirates")
+	local p_maldrood = Find_Player("Teradoc")
+	local p_yevetha = Find_Player("Yevetha")
 
 	if p_newrep.Is_Human() then
 		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")

@@ -151,7 +151,7 @@
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Rogue_Squadron_Space</Reward_Param1>
 		<Reward_Param2>Coruscant</Reward_Param2>
-		<Prereq>Rebels_Enter_Tech_02</Prereq>
+		<Prereq>Rebels_Enter_Tech_01</Prereq>
 		<Branch>Spawn_Crash_Prevention_Rebel</Branch>
 	</Event>
 
@@ -229,13 +229,24 @@
 		<Branch>Spawn_Crash_Prevention_Rebel</Branch>
 	</Event>
 	
+	<Event Name="Trigger_Leia_Death">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Princess_Leia_Team</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Leia_Alive</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
 	<Event Name="Spawn_Leia_Noghri">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Princess_Leia_Team_Noghri</Reward_Param1>
 		<Reward_Param2>Coruscant</Reward_Param2>
 		<Prereq>Rebels_Enter_Tech_03</Prereq>
-		<Branch>Spawn_Crash_Prevention_Rebel</Branch>
+		<Branch>Leia_Alive</Branch>
+
 	</Event>
 
 	<Event Name="R_Destroy_Ackbar">
@@ -244,14 +255,15 @@
 		<Reward_Param1>Home_One</Reward_Param1>
 		<Prereq>Rebels_Enter_Tech_03</Prereq>
 	</Event>
-
-	<Event Name="Spawn_Wedge">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>UNIQUE_UNIT</Reward_Type>
-		<Reward_Param1>Wedge_Lusankya</Reward_Param1>
-		<Reward_Param2>Coruscant</Reward_Param2>
-		<Prereq>Rebels_Enter_Tech_03</Prereq>
-		<Branch>Spawn_Crash_Prevention_Rebel</Branch>
+	
+	<Event Name="Trigger_Ackbar_Death">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Pestage_Team</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Ackbar_Alive</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
 	</Event>
 	
 	<Event Name="Spawn_Ackbar_Voyager">
@@ -260,13 +272,23 @@
         <Reward_Param1>Galactic_Voyager</Reward_Param1>
         <Reward_Param2>MonCalimari</Reward_Param2>
 		<Prereq>Rebels_Enter_Tech_03</Prereq>
-		<Branch>Spawn_Crash_Prevention_Rebel</Branch>
+		<Branch>Ackbar_Alive</Branch>
 	</Event>
 	
 	<!-- Spawn Time Era 4 Heroes Daala -->
 	<Event Name="Rebels_Enter_Tech_04">
 		<Event_Type>STORY_TECH_LEVEL</Event_Type>
 		<Event_Param1>3</Event_Param1>
+	</Event>
+	
+	<Event Name="Spawn_Bell">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Bell_Endurance</Reward_Param1>
+		<Reward_Param2>Lonnaw</Reward_Param2>
+		<Prereq>Rebels_Enter_Tech_04</Prereq>
+		<Branch>Spawn_Crash_Prevention_Rebel</Branch>
+
 	</Event>
 
 	<Event Name="Spawn_Cilghal">

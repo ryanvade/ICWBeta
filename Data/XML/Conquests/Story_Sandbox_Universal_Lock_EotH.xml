@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Fractured Empire (Isard) *****-->
+<!--******************************************************-->
+
+
+
+<Story>
+	
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+
+
+	<Event Name="EotH_Enter_Tech_01">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>1</Event_Param1>
+	</Event>
+		<!-- Move to higher tech, lock units not available to thrawn -->
+	<Event Name="EotH_Enter_Tech_02">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>2</Event_Param1>
+	</Event>
+	
+	<Event Name="EotH_Enter_Tech_03">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+	</Event>
+	
+	<Event Name="Buildable_Phalanx">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Phalanx_Destroyer</Reward_Param1>
+		<Prereq>EotH_Enter_Tech_03</Prereq>
+	</Event>
+	
+	<Event Name="EotH_Enter_Tech_04">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+	</Event>
+	
+	<!--<Event Name="Buildable_Intego">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Intego_Destroyer</Reward_Param1>
+		<Prereq>EotH_Enter_Tech_04</Prereq>
+	</Event>-->
+	
+
+	<Event Name="EotH_Enter_Tech_05">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>5</Event_Param1>
+	</Event>
+	
+
+</Story>

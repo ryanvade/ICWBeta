@@ -167,17 +167,17 @@
 		<LandBehavior>WALK_LOCOMOTOR,TARGETING,IDLE,WEAPON,POWERED,REVEAL,HIDE_WHEN_FOGGED,UNIT_AI,TELEKINESIS_TARGET,STUNNABLE, SQUASH, HUNT, AFFECTED_BY_SHIELD, DAMAGE_TRACKING</LandBehavior>
 
 		<Property_Flags>GoodInfantryCrusher</Property_Flags>
-		<Autoresolve_Health>200</Autoresolve_Health>
+		<Autoresolve_Health>300</Autoresolve_Health>
 		<Mass>1.0</Mass>
-		<Scale_Factor>1.0</Scale_Factor>
+		<Scale_Factor>2.5</Scale_Factor>
 				<Affiliation>Pentastar</Affiliation>
 
 		<Walk_Transition>Yes</Walk_Transition>
 		<Movement_Animation_Speed> 0.7117 </Movement_Animation_Speed>
 		<Rotation_Animation_Speed> 1.5 </Rotation_Animation_Speed>
-		<Max_Speed>1.2</Max_Speed>
-		<Max_Rate_Of_Turn>4</Max_Rate_Of_Turn>
-		<Stopped_Rate_Of_Turn>3.75</Stopped_Rate_Of_Turn>
+		<Max_Speed>0.9</Max_Speed>
+		<Max_Rate_Of_Turn>2</Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn>1.75</Stopped_Rate_Of_Turn>
 		<Walk_Transition>Yes</Walk_Transition>
 		<Has_Pre_Turn_Anim> yes </Has_Pre_Turn_Anim>
 		<Min_Speed_Fraction_For_Turn> .4 </Min_Speed_Fraction_For_Turn>
@@ -206,9 +206,9 @@
 		<Select_Box_Scale>50</Select_Box_Scale>
 		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
 
-		<Size_Value>75</Size_Value>
+		<Size_Value>100</Size_Value>
 
-		<Armor_Type> Armor_ATST </Armor_Type>
+		<Armor_Type> Armor_ATAT </Armor_Type>
 
 		<Damage>20</Damage>
 		<Shield_Points>0</Shield_Points>
@@ -219,14 +219,14 @@
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Collidable_By_Projectile_Dead>No</Collidable_By_Projectile_Dead>
 
-		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		<Projectile_Types>Proj_AT_AP</Projectile_Types>
 		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.8</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>6</Projectile_Fire_Recharge_Seconds>
-		
+
 
 		<Land_FOW_Reveal_Range>350.0</Land_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>280.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>420.0</Targeting_Max_Attack_Distance>
 		<Targeting_Priority_Set>AntiVehicle</Targeting_Priority_Set>
 
 		<Targeting_Fire_Inaccuracy> Infantry, 10.0 </Targeting_Fire_Inaccuracy>
@@ -1598,6 +1598,7 @@
 		<Encyclopedia_Text>TEXT_TOOLTIP_ATPT</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
 		<Land_Model_Name>ATPT.ALO</Land_Model_Name>
+		<Target_Bones> BONE11, BONE06, BONE01 </Target_Bones>
 		<Behavior>SELECTABLE</Behavior>
 		<LandBehavior>BARRAGE, ABILITY_COUNTDOWN,AFFECTED_BY_SHIELD,HUNT, WALK_LOCOMOTOR,TARGETING,IDLE,WEAPON,POWERED,REVEAL,HIDE_WHEN_FOGGED,UNIT_AI,TELEKINESIS_TARGET,STUNNABLE,DAMAGE_TRACKING, SQUASH, GARRISON_UNIT</LandBehavior>
 		<!-- Ground vehicles priority 1, ground infantry priority 2, air vehicles priority 3 (N/A = 9999) -->
@@ -2293,8 +2294,8 @@
 		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
 		<Presence_Range>200.0</Presence_Range>
 	</GroundVehicle>
-	
-	
+
+
 	<GroundVehicle Name="AT_AT_Walker_Armytrooper">
 			<Variant_Of_Existing_Type>AT_AT_Walker</Variant_Of_Existing_Type>
 			<Unit_Abilities_Data SubObjectList="Yes">
@@ -2312,7 +2313,7 @@
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 	</GroundVehicle>
-	
+
 	<GroundVehicle Name="AT_ST_Walker">
 		<LOD_Bias>4</LOD_Bias>
 		<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
@@ -3142,7 +3143,7 @@
 		<Presence_Range>100.0</Presence_Range>
 		<Land_Model_Name>EV_TIECRAWLER_D.ALO</Land_Model_Name>
 	</GroundVehicle>
-	
+
 	<GroundVehicle Name="M1_Repulsor_Tank">
 		<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
 		<Blob_Shadow_Scale>65.0, 65.0</Blob_Shadow_Scale>
@@ -3407,7 +3408,7 @@
 	</GroundVehicle>
 
 
-	
+
 	<GroundVehicle Name="Skiff">
 		<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
 		<Blob_Shadow_Scale>75.0, 20.0</Blob_Shadow_Scale>
@@ -3726,7 +3727,7 @@
 
 
 	</GroundVehicle>
-	
+
 	<GroundVehicle Name="A6_Juggernaut">
 		<LOD_Bias>0.5</LOD_Bias>
 		<Text_ID>TEXT_UNIT_JUGGERNAUT_A6</Text_ID>

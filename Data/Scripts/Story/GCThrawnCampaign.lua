@@ -24,8 +24,6 @@ require("PGBase")
 require("PGStateMachine")
 require("PGStoryMode")
 require("PGSpawnUnits")
-TM = require("TRGameModeTransactions")
-
 
 function Definitions()
 

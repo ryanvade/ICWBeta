@@ -581,68 +581,7 @@
 		<Reward_Param2>0</Reward_Param2>
 	</Event>
 	
-	
-	<Event Name="Phalanx_Research_Begin">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>600</Event_Param1>
-		<Branch>Faction_Branch_EotH</Branch>
-	</Event>
 
-	<Event Name="Unlock_Phalanx_Speech">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_EOTH_RESEARCH_PHALANX</Reward_Param1>
-		<Reward_Param2>15</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8></Reward_Param8>
-		<Reward_Param9></Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Phalanx_Research_Begin</Prereq>
-	</Event>
-
- 	<Event Name="Unlock_Phalanx_Rsearch">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Dummy_Research_Phalanx</Reward_Param1>
-		<Prereq>Unlock_Phalanx_Speech</Prereq>
-	</Event>
-	
-	
-	<Event Name="Unlock_Phalanx_AI">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Phalanx_Destroyer</Reward_Param1>
-		<Prereq>Faction_Branch_Enabler_Pentastar</Prereq>
-		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
-		<Prereq>Faction_Branch_Enabler_Eriadu</Prereq>
-		<Prereq>Faction_Branch_Enabler_Zsinj</Prereq>
-		<Prereq>Faction_Branch_Enabler_Teradoc</Prereq>
-		<Prereq>Faction_Branch_Enabler_Yevetha</Prereq>
-	</Event>
-	
-	<Event Name="Unlock_Phalanx">
-		<Event_Type>STORY_CONSTRUCT</Event_Type>
-		<Event_Param1>Dummy_Research_Phalanx</Event_Param1>
-		<Event_Param2>1</Event_Param2>
-		<Event_Param3>Underworld</Event_Param3>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Phalanx_Destroyer</Reward_Param1>
-		<Prereq>Faction_Branch_Enabler_EotH</Prereq>
-		<Branch>Faction_Branch_EotH</Branch>
-	</Event>
-			
-	<Event Name="Research_Phalanx_Remove">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>DESTROY_OBJECT</Reward_Type>
-		<Reward_Param1>Dummy_Research_Phalanx</Reward_Param1>
-		<Prereq>Unlock_Phalanx</Prereq>
-	</Event>
-	
-		
 <!-- Hero spawns -->
 <!-- Hero spawns -->
 <!-- Hero spawns -->

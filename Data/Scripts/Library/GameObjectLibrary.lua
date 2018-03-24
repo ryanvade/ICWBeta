@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            GameObjectLibrary.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-03-17T02:26:19+01:00
+--*   @Last modified time:  2018-03-24T01:57:10+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -31,7 +31,7 @@ GameObjectLibrary = {
         "Generic_Dominator",
         "Phulik_Binder",
         "Iillor_Corusca",
-		"CC7700"
+        "CC7700"
     },
     Numbers={
         "Display_One",
@@ -97,31 +97,31 @@ GameObjectLibrary = {
         ["EMPIRE_GOLAN_TWO_STRATEGIC"]={
             Text="TEXT_DISPLAY_GOLAN_TWO_STATION"
         },
-		["RANCOR_BASE"]={
+        ["RANCOR_BASE"]={
             Text="TEXT_DISPLAY_RANCOR_BASE"
         },
-		["BLACK_15"]={
+        ["BLACK_15"]={
             Text="TEXT_DISPLAY_BLACK15"
         },
-		["SLAYN_KORPIL"]={
+        ["SLAYN_KORPIL"]={
             Text="TEXT_DISPLAY_SLAYN_KORPIL"
         },
-        -- ["PLACEHOLDER_CATEGORY_DUMMY"]={
-        --     Text="TEXT_DISPLAY_PLACEHOLDER_CATEGORY_DUMMY"
-        -- },
-        -- ["NON_CAPITAL_CATEGORY_DUMMY"]={
-        --     Text="TEXT_DISPLAY_NON_CAPITAL_CATEGORY_DUMMY"
-        -- },
-        -- ["CAPITAL_CATEGORY_DUMMY"]={
-        --     Text="TEXT_DISPLAY_CAPITAL_CATEGORY_DUMMY"
-        -- },
-        -- ["STRUCTURE_CATEGORY_DUMMY"]={
-        --     Text="TEXT_DISPLAY_STRUCTURE_CATEGORY_DUMMY"
-        -- }
+    -- ["PLACEHOLDER_CATEGORY_DUMMY"]={
+    --     Text="TEXT_DISPLAY_PLACEHOLDER_CATEGORY_DUMMY"
+    -- },
+    -- ["NON_CAPITAL_CATEGORY_DUMMY"]={
+    --     Text="TEXT_DISPLAY_NON_CAPITAL_CATEGORY_DUMMY"
+    -- },
+    -- ["CAPITAL_CATEGORY_DUMMY"]={
+    --     Text="TEXT_DISPLAY_CAPITAL_CATEGORY_DUMMY"
+    -- },
+    -- ["STRUCTURE_CATEGORY_DUMMY"]={
+    --     Text="TEXT_DISPLAY_STRUCTURE_CATEGORY_DUMMY"
+    -- }
 
     },
     Units={
-		["LANCER_FRIGATE"]={
+        ["LANCER_FRIGATE"]={
             Scripts={
                 "MultiLayer",
                 "SingleUnitRetreat"
@@ -146,12 +146,12 @@ GameObjectLibrary = {
             Fighters={
             }
         },
-		["GENERIC_INTERDICTOR_CRUISER"]={
+        ["GENERIC_INTERDICTOR_CRUISER"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat",
-				"Interdictor"
+                "Interdictor"
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
@@ -175,7 +175,7 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -226,7 +226,7 @@ GameObjectLibrary = {
                 "MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat",
-				"Interdictor"
+                "Interdictor"
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
@@ -331,6 +331,7 @@ GameObjectLibrary = {
         },
         ["GENERIC_ACCLAMATOR_ASSAULT_SHIP"]={
             Scripts={
+                "MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat"
             },
@@ -464,7 +465,7 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -494,7 +495,7 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -552,7 +553,7 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=2
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=2
                     }
@@ -643,7 +644,7 @@ GameObjectLibrary = {
                 }
             }
         },
-       ["MC80B"]={
+        ["MC80B"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn",
@@ -706,7 +707,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["CORELLIAN_CORVETTE"]={
+        ["CORELLIAN_CORVETTE"]={
             Scripts={
                 "MultiLayer"
             },
@@ -743,7 +744,7 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     },
@@ -956,7 +957,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["LUCREHULK"]={
+        ["LUCREHULK"]={
             Scripts={
                 "FighterSpawn"
             },
@@ -981,7 +982,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["YEVETHA_ALLEGIANCE"]={
+        ["YEVETHA_ALLEGIANCE"]={
             Scripts={
             },
             Fighters={
@@ -992,6 +993,9 @@ GameObjectLibrary = {
                 "MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat"
+            },
+            Flags = {
+                HANGAR = true
             },
             Fighters={
                 ["Z95_HEADHUNTER_SQUADRON"]={
@@ -1065,7 +1069,7 @@ GameObjectLibrary = {
                         Initial=3
                     }
                 },
-				["SCIMMY_SQUADRON"]={
+                ["SCIMMY_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=10,
                         Initial=3
@@ -1084,7 +1088,7 @@ GameObjectLibrary = {
                         Reserve=10,
                         Initial=3
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=10,
                         Initial=3
                     }
@@ -1094,11 +1098,11 @@ GameObjectLibrary = {
                         Reserve=10,
                         Initial=3
                     },
-					["TERADOC"] = {
+                    ["TERADOC"] = {
                         Reserve=10,
                         Initial=3
                     },
-					["PENTASTAR"] = {
+                    ["PENTASTAR"] = {
                         Reserve=10,
                         Initial=3
                     },
@@ -1110,7 +1114,7 @@ GameObjectLibrary = {
                         Reserve=10,
                         Initial=3
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=10,
                         Initial=3
                     }
@@ -1120,11 +1124,11 @@ GameObjectLibrary = {
                         Reserve=10,
                         Initial=3
                     },
-					["TERADOC"] = {
+                    ["TERADOC"] = {
                         Reserve=10,
                         Initial=3
                     },
-					["PENTASTAR"] = {
+                    ["PENTASTAR"] = {
                         Reserve=10,
                         Initial=3
                     },
@@ -1136,34 +1140,34 @@ GameObjectLibrary = {
                         Reserve=10,
                         Initial=3
                     },
-					["YEVETHA"] = {
+                    ["YEVETHA"] = {
                         Reserve=10,
                         Initial=3
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=10,
                         Initial=3
                     }
                 },
-				["Y-WING_SQUADRON"]={
+                ["Y-WING_SQUADRON"]={
                     ["REBEL"] = {
                         Reserve=10,
                         Initial=3
                     }
                 },
-				["SHIELDED_TIE_SQUADRON"]={
+                ["SHIELDED_TIE_SQUADRON"]={
                     ["REBEL"] = {
                         Reserve=10,
                         Initial=3
                     }
                 },
-				["A-WING_SQUADRON"]={
+                ["A-WING_SQUADRON"]={
                     ["REBEL"] = {
                         Reserve=10,
                         Initial=3
                     }
                 },
-				["TRIFOIL_SQUADRON"]={
+                ["TRIFOIL_SQUADRON"]={
                     ["YEVETHA"] = {
                         Reserve=20,
                         Initial=6
@@ -1179,7 +1183,7 @@ GameObjectLibrary = {
             Fighters={
             }
         },
-		["LUCREHULK_CSA"]={
+        ["LUCREHULK_CSA"]={
             Scripts={
                 "FighterSpawn"
             },
@@ -1323,7 +1327,7 @@ GameObjectLibrary = {
                         Reserve=10,
                         Initial=3
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=10,
                         Initial=3
                     }
@@ -1375,7 +1379,7 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=2
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=2
                     },
@@ -1444,13 +1448,19 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=2
                     }
+                },
+                ["TRIFOIL_SQUADRON"]={
+                    ["YEVETHA"] = {
+                        Reserve=0,
+                        Initial=2
+                    }
                 }
             }
         },
         ["EMPRESS_STATION"]={
             Scripts={
-              "TurnStation",
-              "FighterSpawn"
+                "TurnStation",
+                "FighterSpawn"
             },
             Fighters={
                 ["Y-WING_SQUADRON"]={
@@ -1484,7 +1494,7 @@ GameObjectLibrary = {
                 "MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat",
-				"Interdictor"
+                "Interdictor"
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
@@ -1792,7 +1802,7 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=2
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=2
                     },
@@ -1858,6 +1868,12 @@ GameObjectLibrary = {
                 },
                 ["Z95_HEADHUNTER_SQUADRON"]={
                     ["CORPORATE_SECTOR"] = {
+                        Reserve=0,
+                        Initial=2
+                    }
+                },
+                ["TRIFOIL_SQUADRON"]={
+                    ["YEVETHA"] = {
                         Reserve=0,
                         Initial=2
                     }
@@ -1978,7 +1994,7 @@ GameObjectLibrary = {
                         Reserve=2,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=2,
                         Initial=1
                     }
@@ -2008,7 +2024,7 @@ GameObjectLibrary = {
                         Reserve=4,
                         Initial=2
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=4,
                         Initial=2
                     },
@@ -2030,7 +2046,7 @@ GameObjectLibrary = {
                         Reserve=4,
                         Initial=2
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=4,
                         Initial=2
                     }
@@ -2079,7 +2095,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["CRIMSON_VICTORY"]={
+        ["CRIMSON_VICTORY"]={
             Scripts={
                 "FighterSpawn"
             },
@@ -2119,7 +2135,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["ENDURANCE"]={
+        ["ENDURANCE"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn",
@@ -2339,7 +2355,7 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -2369,7 +2385,7 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -2427,7 +2443,7 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=2
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=2
                     }
@@ -2543,7 +2559,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["NEBULON_B-2_ZSINJ"]={
+        ["NEBULON_B-2_ZSINJ"]={
             Scripts={
                 "MultiLayer",
                 "SingleUnitRetreat"
@@ -2610,7 +2626,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["KATANA_DREADNAUGHT_EMPIRE"]={
+        ["KATANA_DREADNAUGHT_EMPIRE"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn",
@@ -2878,7 +2894,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["NEBULON_B_FRIGATE"]={
+        ["NEBULON_B_FRIGATE"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn",
@@ -2908,7 +2924,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["ALIGNMENT_XQ"]={
+        ["ALIGNMENT_XQ"]={
             Scripts={
                 "TurnStation",
                 "FighterSpawn"
@@ -2922,7 +2938,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["SACHEEN"]={
+        ["SACHEEN"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn",
@@ -2937,7 +2953,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["PELTAST"]={
+        ["PELTAST"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn",
@@ -3003,7 +3019,7 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -3023,7 +3039,7 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -3037,14 +3053,14 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
                 }
             }
         },
-		["NEUTRON_STAR"]={
+        ["NEUTRON_STAR"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn"
@@ -3092,7 +3108,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["ALARIA"]={
+        ["ALARIA"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn",
@@ -3175,19 +3191,19 @@ GameObjectLibrary = {
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
-					["EMPIRE"] = {
+                    ["EMPIRE"] = {
                         Reserve=0,
                         Initial=1
                     },
-					["PIRATES"] = {
+                    ["PIRATES"] = {
                         Reserve=0,
                         Initial=1
                     },
-					["HOSTILE"] = {
+                    ["HOSTILE"] = {
                         Reserve=0,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -3213,7 +3229,7 @@ GameObjectLibrary = {
             Fighters={
             }
         },
-		["MAJESTIC"]={
+        ["MAJESTIC"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn",
@@ -3298,7 +3314,7 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=1
                     },
-					["WARLORDS"] = {
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -3311,7 +3327,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["GENERIC_EXECUTOR"]={
+        ["GENERIC_EXECUTOR"]={
             Scripts={
                 "FighterSpawn"
             },
@@ -3491,7 +3507,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["RANCOR_BASE"]={
+        ["RANCOR_BASE"]={
             Scripts={
                 "FighterSpawn"
             },
@@ -3504,7 +3520,7 @@ GameObjectLibrary = {
                 }
             }
         },
-		["BLACK_15"]={
+        ["BLACK_15"]={
             Scripts={
                 "FighterSpawn"
             },
@@ -3517,9 +3533,9 @@ GameObjectLibrary = {
                 }
             }
         },
-		["SLAYN_KORPIL"]={
+        ["SLAYN_KORPIL"]={
             Scripts={
-				"TurnStation",
+                "TurnStation",
                 "FighterSpawn"
             },
             Fighters={
@@ -3620,6 +3636,6 @@ GameObjectLibrary = {
             }
         }
 
-      }
+    }
 }
 return GameObjectLibrary

@@ -1425,6 +1425,32 @@
 
 	</SpaceUnit>
 
+	<SpaceUnit Name="Dominion">
+
+		<Variant_Of_Existing_Type>Generic_Bellator</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_DOMINION</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DOMINION </Encyclopedia_Text>
+
+
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<Tech_Level>99</Tech_Level>
+		<Lua_Script></Lua_Script>
+
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
+        <Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
+        <Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 5</Starting_Spawned_Units_Tech_0>
+        <Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+        <Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 4</Reserve_Spawned_Units_Tech_0>
+        <Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 4</Reserve_Spawned_Units_Tech_0>
+        <Reserve_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 3</Reserve_Spawned_Units_Tech_0>
+
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<GUI_Row> 0 </GUI_Row>
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+
+	</SpaceUnit>
+	
 	<SpaceUnit Name="Generic_Executor">
 
 		<Text_ID>TEXT_UNIT_EXECUTOR_GENERIC</Text_ID>

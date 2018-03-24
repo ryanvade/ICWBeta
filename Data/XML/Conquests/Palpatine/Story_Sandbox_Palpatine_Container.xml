@@ -78,38 +78,6 @@
 		<Reward_Param2>1</Reward_Param2>
 	</Event>
 
-	<Event Name="Faction_Branch_Disabler_Eriadu">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>0</Event_Param1>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Eriadu</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-	</Event>
-
-	<Event Name="Faction_Branch_Disabler_Zsinj">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>0</Event_Param1>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Zsinj</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-	</Event>
-
-	<Event Name="Faction_Branch_Disabler_Teradoc">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>0</Event_Param1>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Teradoc</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-	</Event>
-
-	<Event Name="Faction_Branch_Disabler_Pentastar">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>0</Event_Param1>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Pentastar</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-	</Event>
-
 	<Event Name="Determine_Faction_LUA">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>0</Event_Param1>
@@ -129,54 +97,6 @@
 		<Event_Param2>ENABLE_BRANCH_EMPIRE_FLAG</Event_Param2>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
 		<Reward_Param1>Faction_Branch_Remnant</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-
-	<Event Name="Faction_Branch_Enabler_EotH">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_EOTH_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Remnant</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-
-	<Event Name="Faction_Branch_Enabler_Eriadu">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_ERIADU_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Eriadu</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-
-	<Event Name="Faction_Branch_Enabler_Zsinj">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_ZSINJ_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Zsinj</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-
-	<Event Name="Faction_Branch_Enabler_Teradoc">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_TERADOC_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Teradoc</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-
-	<Event Name="Faction_Branch_Enabler_Pentastar">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_PENTASTAR_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Pentastar</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-
-	<Event Name="Faction_Branch_Enabler_Yevetha">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_YEVETHA_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Pentastar</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 	</Event>
 
@@ -265,92 +185,7 @@
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
-	<Event Name="Capture_Luke_Speech">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>100</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_PALPATINE_NEW_APPRENTICE</Reward_Param1>
-		<Reward_Param2>15</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8>Palpatine_Intro_Speech</Reward_Param8>
-		<Reward_Param9>Emperor_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Imperial_Mutiny</Prereq>
-	</Event>
 
-    <Event Name="Luke_Capture_Dialog">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>100</Event_Param1>
-		<Story_Dialog>Dialog_Shadow_Sandbox_Remnant</Story_Dialog>
-		<Story_Chapter>2</Story_Chapter>
-		<Story_Tag>Luke_Tag</Story_Tag>
-		<Prereq>Capture_Luke_Speech</Prereq>
-	</Event>
-	
-	<Event Name="Kill_Luke">
-  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Luke_Skywalker_Jedi_Team</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
-		<Event_Param4>Empire</Event_Param4>
-		<Prereq>Capture_Luke_Speech</Prereq>
-	</Event>
-	
-	<Event Name="Luke_Completed">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
-		<Reward_Param1>Luke_Tag</Reward_Param1>
-		<Prereq>Kill_Luke</Prereq>
-	</Event>
-
-	<Event Name="Luke_Captured_Speech">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>10</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_PALPATINE_NEW_APPRENTICE_DONE</Reward_Param1>
-		<Reward_Param2>15</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8>Palpatine_Intro_Speech</Reward_Param8>
-		<Reward_Param9>Emperor_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Kill_Luke</Prereq>
-	</Event>
-
-	<Event Name="Lose_Luke">
-  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Luke_Skywalker_Darkside_Team</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
-		<Event_Param4>Pentastar, Yevetha, Rebel, Pirates, Underworld, Sarlacc, Hutts</Event_Param4>
-		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
-		<Reward_Param1>Luke_Lost_Tag</Reward_Param1>
-		<Prereq>Kill_Luke</Prereq>
-	 </Event>
-
-	<Event Name="Luke_Lost_Speech">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>10</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_PALPATINE_NEW_APPRENTICE_LOST</Reward_Param1>
-		<Reward_Param2>15</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8>Palpatine_Intro_Speech</Reward_Param8>
-		<Reward_Param9>Emperor_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Lose_Luke </Prereq>
-	</Event>
 
 	<!--***********************************************************-->
 	<!--***********************************************************-->
@@ -419,147 +254,6 @@
 		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
 	</Event>
 	
-	<Event Name="Luke_Dies">
-		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Luke_Skywalker_Jedi_Team</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_PALPATINE_LUKE_MISSION_D</Reward_Param1>
-		<Reward_Param2>15</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8>Leia_Luke_Mission_Speech</Reward_Param8>
-		<Reward_Param9>Leia_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
-	</Event>
-
-	<Event Name="Luke_Investigates_Disable">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Luke_Investigates_Branch</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-		<Prereq>Luke_Dies</Prereq>
-	</Event>
-
-	<Event Name="Luke_Investigates">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>160</Event_Param1>
-		<Reward_Type>DISABLE_STORY_EVENT</Reward_Type>
-		<Reward_Param1>Luke_Dies</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-		<Branch>Luke_Investigates_Branch</Branch>
-		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
-	</Event>
-
-	<Event Name="Luke_Investigate_Speech">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_PALPATINE_LUKE_MISSION</Reward_Param1>
-		<Reward_Param2>15</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8>Luke_Mission_Speech</Reward_Param8>
-		<Reward_Param9>Luke_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Luke_Investigates</Prereq>
-		<Branch>Luke_Investigates_Branch</Branch>
-	</Event>
-
-	<Event Name="Luke_Vanishes">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Luke_Skywalker_Jedi_Team</Reward_Param1>
-		<Branch>Luke_Investigates_Branch</Branch>
-		<Prereq>Luke_Investigates</Prereq>
-	</Event>
-
-
-	<Event Name="Leia_Plea_Narrative">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>35</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_PALPATINE_LEIA_PLEA</Reward_Param1>
-		<Reward_Param2>15</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8>Leia_Plea_Speech</Reward_Param8>
-		<Reward_Param9>Leia_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Palpatine_Unlock_Narrative</Prereq>
-	</Event>
-
-	<Event Name="Save_Luke_Dialog">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Story_Dialog>Dialog_NewRep_Shadow</Story_Dialog>		
-		<Story_Tag>Luke_Tag_NewRep</Story_Tag>
-		<Story_Chapter>1</Story_Chapter>
-		<Prereq>Leia_Plea_Narrative</Prereq>
-	</Event>
-
-	<Event Name="Leia_Dies">
-		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Princess_Leia_Team</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Save_Luke_Branch</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-	</Event>
-	
-	 <Event Name="Luke_Complete_Failure">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
-		<Reward_Param1>Luke_Tag_NewRep</Reward_Param1>
-		<Prereq>Leia_Dies</Prereq>
-	</Event>
-
-	<Event Name="Save_Luke">
-  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Luke_Skywalker_Darkside_Team</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
-		<Event_Param4>Pentastar, Yevetha, Empire, Pirates, Underworld, Sarlacc, Hutts</Event_Param4>
-		<Prereq>Universal_Story_Start</Prereq>
-		<Branch>Save_Luke_Branch</Branch>
-	 </Event>
-
-	<Event Name="Save_Luke_Speech">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>10</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_PALPATINE_LUKE_RETURNED</Reward_Param1>
-		<Reward_Param2>15</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8>Luke_Returned_Speech</Reward_Param8>
-		<Reward_Param9>Luke_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Save_Luke</Prereq>
-		<Branch>Save_Luke_Branch</Branch>
-	</Event>
-	
-	<Event Name="Luke_Complete_Success">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
-		<Reward_Param1>Luke_Tag_NewRep</Reward_Param1>
-		<Prereq>Save_Luke</Prereq>
-	</Event>
-
-
 	<!--***********************************************************-->
 	<!--***********************************************************-->
 	<!--******************** UNIVERSAL EVENTS *********************-->
@@ -599,14 +293,6 @@
 		<Prereq>Kaine_Death</Prereq>
 	</Event>
 
-	<Event Name="Disable_Capture_Branch">  <!-- disable capture events if Luke has been killed before they trigger -->
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>0</Event_Param1>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Capture_Branch</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-	</Event>
-
 	<Event Name="Eclipse_Completed_Generic">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>1060</Event_Param1>
@@ -618,24 +304,6 @@
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
 	</Event>
-
-		<Event Name="Gendarr_Joins">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_FUCKOFF</Reward_Param1>
-		<Reward_Param2>15</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8></Reward_Param8>
-		<Reward_Param9>Teradoc_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Warlords_Breakoff</Prereq>
-		<Perpetual>true</Perpetual>
-    </Event>
-
 
 	<Event Name="Syn_Joins">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>

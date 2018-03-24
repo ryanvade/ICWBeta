@@ -539,14 +539,43 @@
 	<SpaceUnit Name="181_Cowall_Fighter">
 		<Variant_of_Existing_Type>181st_TIE_Interceptor</Variant_of_Existing_Type>
 		<Text_ID>TEXT_UNIT_COWALL</Text_ID>
+   		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_COWALL TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>150</Tactical_Health>
 		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
 
-   		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_COWALL TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
 		<Property_Flags> SmallShip </Property_Flags>
 		<Icon_Name>i_button_fel_soontir.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+	
+ 	</SpaceUnit>
+	
+	<SpaceUnit Name="181_Droid_Bomb">
+		<Variant_of_Existing_Type>181st_TIE_Interceptor</Variant_of_Existing_Type>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>75</Tactical_Health>
+		
+		<SpaceBehavior>SELF_DESTRUCT, ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+		<!-- Primary ability -->
+		<Unit_Ability>
+            <Type>SELF_DESTRUCT</Type>
+            <Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+            <Expiration_Seconds>3.5</Expiration_Seconds>
+            <Recharge_Seconds>10</Recharge_Seconds> 
+            <Spawned_Object_Type> Droid_Bomb_Self_Destruct_Blast </Spawned_Object_Type>
+            <GUI_Activated_Ability_Name>Vengeance_Self_Destruct</GUI_Activated_Ability_Name>
+            <Stop_When_Activated>No</Stop_When_Activated>
+   
+            <!--<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>-->
+            <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+   
+			<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_DETONATE_DROID_FIGHTERS</Alternate_Name_Text>
+			<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_DETONATE_DROID_FIGHTERS_DESCRIPTION</Alternate_Description_Text>
+
+         </Unit_Ability>
+		</Unit_Abilities_Data>
 	
  	</SpaceUnit>
 	
@@ -572,9 +601,9 @@
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
 		<Required_Special_Structures />
 		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
-		<Squadron_Units>181_Cowall_Fighter, 181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>
-		<Squadron_Units>181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>
-		<Squadron_Units>181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>	
+		<Squadron_Units>181_Cowall_Fighter, 181st_TIE_Interceptor, 181_Droid_Bomb, 181_Droid_Bomb</Squadron_Units>
+		<Squadron_Units>181_Droid_Bomb, 181_Droid_Bomb, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>
+		<Squadron_Units>181st_TIE_Interceptor, 181_Droid_Bomb</Squadron_Units>	
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
 		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
@@ -615,7 +644,118 @@
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 		<Population_Value>1</Population_Value>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+		<!-- Primary ability -->
+		<Unit_Ability>
+            <Type>SELF_DESTRUCT</Type>
+            <Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+            <Expiration_Seconds>3.5</Expiration_Seconds>
+            <Recharge_Seconds>10</Recharge_Seconds> 
+            <Spawned_Object_Type> Droid_Bomb_Self_Destruct_Blast </Spawned_Object_Type>
+            <GUI_Activated_Ability_Name>Vengeance_Self_Destruct</GUI_Activated_Ability_Name>
+            <Stop_When_Activated>No</Stop_When_Activated>
+   
+            <!--<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>-->
+            <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+   
+			<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_DETONATE_DROID_FIGHTERS</Alternate_Name_Text>
+			<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_DETONATE_DROID_FIGHTERS_DESCRIPTION</Alternate_Description_Text>
+
+         </Unit_Ability>
+		</Unit_Abilities_Data>
+		
 	</Squadron>
+	
+	<Container Name="181st_Cowell_TIE_Interceptor_Container">
+		<Text_ID>TEXT_UNIT_COWALL</Text_ID>
+   		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_COWALL TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
+		<Show_Name>No</Show_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		
+		<Icon_Name>i_button_fel_soontir.tga</Icon_Name>
+		
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Hyperspace>yes</Hyperspace>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>
+
+		<Autoresolve_Health>300</Autoresolve_Health>
+		<Damage>25</Damage>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Behavior>TEAM, TEAM_LOCOMOTOR, SELECTABLE, TARGETING, UNIT_AI</Behavior>
+		<SpaceBehavior> REVEAL, SELF_DESTRUCT, ABILITY_COUNTDOWN </SpaceBehavior>
+		
+		<Max_Speed>5.0</Max_Speed>
+		<Min_Speed>1.5</Min_Speed>
+		
+		<Space_FOW_Reveal_Range>800.0</Space_FOW_Reveal_Range>
+		<MovementClass>Space</MovementClass>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Scale_Land>80</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>200</Radar_Icon_Scale_Space>
+	 			
+	 	<CategoryMask>SpaceHero | Fighter | AntiCapital | AntiSuper</CategoryMask>
+		<FormationOrder>2</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>300.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Space_FOW_Reveal_Range>10000.0</Space_FOW_Reveal_Range>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+
+		
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>120</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+		<!-- Primary ability -->
+		<Unit_Ability>
+            <Type>SELF_DESTRUCT</Type>
+            <Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+            <Expiration_Seconds>3.5</Expiration_Seconds>
+            <Recharge_Seconds>10</Recharge_Seconds> 
+            <Spawned_Object_Type> Droid_Bomb_Self_Destruct_Blast </Spawned_Object_Type>
+            <GUI_Activated_Ability_Name>Vengeance_Self_Destruct</GUI_Activated_Ability_Name>
+            <Stop_When_Activated>No</Stop_When_Activated>
+   
+            <!--<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>-->
+            <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+   
+			<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_DETONATE_DROID_FIGHTERS</Alternate_Name_Text>
+			<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_DETONATE_DROID_FIGHTERS_DESCRIPTION</Alternate_Description_Text>
+
+         </Unit_Ability>
+		</Unit_Abilities_Data>
+	</Container>
 
 	<UniqueUnit Name="Iron_Fist">
 		<Variant_Of_Existing_Type>Generic_Executor</Variant_Of_Existing_Type>

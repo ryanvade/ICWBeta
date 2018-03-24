@@ -25,7 +25,6 @@ require("PGStateMachine")
 require("PGStoryMode")
 require("PGSpawnUnits")
 require("ChangeOwnerUtilities")
-TM = require("TRGameModeTransactions")
 
 function Definitions()
 
@@ -43,8 +42,8 @@ end
 function Find_Faction(message)
   if message == OnEnter then
 
-	p_newrep = Find_Player("Rebel")
-	p_empire = Find_Player("Empire")
+	local p_newrep = Find_Player("Rebel")
+	local p_empire = Find_Player("Empire")
 
 	if p_newrep.Is_Human() then
 		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")

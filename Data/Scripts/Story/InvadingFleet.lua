@@ -12,8 +12,8 @@
 --*   @Date:                2017-11-24T12:43:51+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            InvadingFleet.lua
---*   @Last modified by:    marcus
---*   @Last modified time:  2018-03-17T01:28:22+01:00
+--*   @Last modified by:    [TR]Pox
+--*   @Last modified time:  2018-03-23T23:55:47+01:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -67,10 +67,5 @@ end
 function Remove_Huttlist(message)
   if message == OnEnter then
     queue:postBattleCleanUp()
-    RegisterBoardingTransactions()
   end
-end
-
-function RegisterBoardingTransactions()
-  TM:ExecuteBoardingTransactions()
 end

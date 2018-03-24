@@ -1040,6 +1040,84 @@
 		
 	</HeroCompany>
 
+	<SpaceUnit Name="Maarek_Stele">
+		<Variant_of_Existing_Type>TIE_Defender</Variant_of_Existing_Type>
+		<Text_ID> TEXT_181ST_STELE_SQUADRON </Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_MAAREK_STELE TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>150</Tactical_Health>
+		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
+
+   	
+		<Property_Flags> SmallShip </Property_Flags>
+		<Icon_Name>i_button_stele.tga</Icon_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		
+
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 1.2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Steele_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category> Fighter </Unit_Strength_Category>
+				<Applicable_Unit_Categories> Fighter </Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.10</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+		</Abilities>
+	
+		
+ 	</SpaceUnit>
+	
+	<SpaceUnit Name="TIE_Defender_Stele">
+		<Variant_of_Existing_Type>TIE_Defender</Variant_of_Existing_Type>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>100</Tactical_Health>
+		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
+		
+
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 1.2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+ 	</SpaceUnit>
+	
 	<Squadron Name="181st_Stele">
 		<Text_ID>TEXT_181ST_STELE_SQUADRON</Text_ID>
 		<GUI_Row> 1 </GUI_Row>
@@ -1062,9 +1140,9 @@
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
 		<Required_Special_Structures />
 		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
-		<Squadron_Units>Maarek_Stele, TIE_Defender, TIE_Defender, TIE_Defender</Squadron_Units>
-		<Squadron_Units>TIE_Defender, TIE_Defender, TIE_Defender, TIE_Defender</Squadron_Units>
-		<Squadron_Units>TIE_Defender, TIE_Defender</Squadron_Units>	
+		<Squadron_Units>Maarek_Stele, TIE_Defender_Stele, TIE_Defender_Stele, TIE_Defender_Stele</Squadron_Units>
+		<Squadron_Units>TIE_Defender_Stele, TIE_Defender_Stele, TIE_Defender_Stele, TIE_Defender_Stele</Squadron_Units>
+		<Squadron_Units>TIE_Defender_Stele, TIE_Defender_Stele</Squadron_Units>	
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
 		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
@@ -1081,6 +1159,9 @@
 		<GUI_Offset>0 0 0</GUI_Offset>
 		<GUI_Velocity>45</GUI_Velocity>
 		<Icon_Name>i_button_stele.tga</Icon_Name>
+		
+		<Create_Team_Type> 181st_Stele_Space_Container </Create_Team_Type>
+     	<Max_Squad_Size> 12 </Max_Squad_Size>
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
@@ -1106,46 +1187,30 @@
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 		 
 		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 1.2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
 		<Population_Value>1</Population_Value>
 	</Squadron>
 	
-	<SpaceUnit Name="Maarek_Stele">
-		<Variant_of_Existing_Type>TIE_Defender</Variant_of_Existing_Type>
-		<Text_ID> TEXT_181ST_STELE_SQUADRON </Text_ID>
+	<Container Name="181st_Stele_Space_Container">
+		<Text_ID>TEXT_181ST_STELE_SQUADRON</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_MAAREK_STELE TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>150</Tactical_Health>
-		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
-
-   	
-		<Property_Flags> SmallShip </Property_Flags>
-		<Icon_Name>i_button_stele.tga</Icon_Name>
-		<Is_Named_Hero>Yes</Is_Named_Hero>
-		
-		
-		<Abilities SubObjectList="Yes">
-			<Combat_Bonus_Ability Name="Steele_Combat_Bonus">
-				<Activation_Style>Space_Automatic</Activation_Style>
-				<Unit_Strength_Category> Fighter </Unit_Strength_Category>
-				<Applicable_Unit_Categories> Fighter </Applicable_Unit_Categories>
-				<Applicable_Unit_Types />
-				<Health_Bonus_Percentage>0.10</Health_Bonus_Percentage>
-				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
-				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
-				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
-				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
-				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
-				<Stacking_Category>0</Stacking_Category>
-			</Combat_Bonus_Ability>
-			
-		</Abilities>
-	
-		
- 	</SpaceUnit>
-	
-	<Squadron Name="Elite_Squadron">
-		<Text_ID>TEXT_ELITE_SQUADRON</Text_ID>
 		<GUI_Row> 1 </GUI_Row>
 		<Hyperspace>Yes</Hyperspace>
 		<Is_Dummy>Yes</Is_Dummy>
@@ -1165,10 +1230,180 @@
 		<Required_Timeline>1</Required_Timeline>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
 		<Required_Special_Structures />
+		<Hyperspace>yes</Hyperspace>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>
+		
+		<Behavior>TEAM, TEAM_LOCOMOTOR, SELECTABLE, TARGETING, UNIT_AI</Behavior>
+		<SpaceBehavior> REVEAL, ABILITY_COUNTDOWN</SpaceBehavior>
+	
+		<Max_Speed>5.0</Max_Speed>
+		<Min_Speed>1.5</Min_Speed>
+		
+		<Space_FOW_Reveal_Range>800.0</Space_FOW_Reveal_Range>
+		<MovementClass>Space</MovementClass>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Scale_Land>80</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>200</Radar_Icon_Scale_Space>
+	 			
+	 	<CategoryMask>SpaceHero | Fighter | AntiCapital | AntiSuper</CategoryMask>
+		<FormationOrder>2</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>300.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Space_FOW_Reveal_Range>10000.0</Space_FOW_Reveal_Range>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>			
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>120</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 1.2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</Container>
+
+	<SpaceUnit Name="Erisi_Dlarit">
+		<Variant_of_Existing_Type>TIE_Interceptor</Variant_of_Existing_Type>
+		<Text_ID>TEXT_ELITE_SQUADRON</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ELITE_SQUADRON TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ELITEST </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>150</Tactical_Health>
+		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
+		
+		<SpaceBehavior> ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+		
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>		
+
+		<SFXEvent_Select>Unit_Select_Erisi</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Erisi</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Erisi</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Erisi</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Move_Erisi</SFXEvent_Guard>
+		<SFXEvent_Announce>Unit_Select_Erisi</SFXEvent_Announce>
+		<SFXEvent_Group_Move>Unit_Move_Erisi</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Attack_Erisi</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Erisi </Death_SFXEvent_Start_Die>
+		
+		<Property_Flags> SmallShip </Property_Flags>
+		<Icon_Name>i_button_erisi.tga</Icon_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Create_Team>Yes</Create_Team>
+	
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 1.2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+ 	</SpaceUnit>
+
+	<SpaceUnit Name="Erisi_Escort_Interceptor">
+		<Text_ID>TEXT_ELITE_INTERCEPTOR</Text_ID>
+		<Variant_Of_Existing_Type>TIE_Interceptor</Variant_Of_Existing_Type>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>	
+		
+		<Tactical_Health>70</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Damage>5</Damage>
+
+		<SpaceBehavior> ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 1.2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>
+
+	<Squadron Name="Elite_Squadron">
+		<Text_ID>TEXT_ELITE_SQUADRON</Text_ID>
+		<GUI_Row> 1 </GUI_Row>
+		<Hyperspace>Yes</Hyperspace>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Autoresolve_Health>300</Autoresolve_Health>
+		<Damage>25</Damage>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Affiliation>Empire</Affiliation>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Planets>Coruscant</Required_Planets>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Slice_Cost_Credits>2000</Slice_Cost_Credits>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>1</Required_Timeline>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Special_Structures />
+		<Create_Team_Type> Elite_Squadron_Container </Create_Team_Type>
+     	<Max_Squad_Size> 12 </Max_Squad_Size>
 		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
-		<Squadron_Units>Erisi_Dlarit, TIE_Interceptor, TIE_Interceptor, TIE_Interceptor</Squadron_Units>
-		<Squadron_Units>TIE_Interceptor, TIE_Interceptor, TIE_Interceptor, TIE_Interceptor</Squadron_Units>
-		<Squadron_Units>TIE_Interceptor, TIE_Interceptor</Squadron_Units>	
+		<Squadron_Units>Erisi_Dlarit, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor</Squadron_Units>
+		<Squadron_Units>Erisi_Escort_Interceptor, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor</Squadron_Units>
+		<Squadron_Units>Erisi_Escort_Interceptor, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor</Squadron_Units>	
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
 		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
@@ -1221,34 +1456,124 @@
 		<Death_SFXEvent_Start_Die> Unit_Defeat_Erisi </Death_SFXEvent_Start_Die>
 		
 		<Population_Value>1</Population_Value>
+		
+				<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 1.2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
 	</Squadron>
 
-	<SpaceUnit Name="Erisi_Dlarit">
-		<Variant_of_Existing_Type>TIE_Interceptor</Variant_of_Existing_Type>
+	<Container Name="Elite_Squadron_Container">
 		<Text_ID>TEXT_ELITE_SQUADRON</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ELITE_SQUADRON TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ELITEST </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>150</Tactical_Health>
-		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
-
-		<SFXEvent_Select>Unit_Select_Erisi</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Erisi</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Move_Erisi</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Erisi</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Move_Erisi</SFXEvent_Guard>
-		<SFXEvent_Announce>Unit_Select_Erisi</SFXEvent_Announce>
-		<SFXEvent_Group_Move>Unit_Move_Erisi</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Attack_Erisi</SFXEvent_Group_Attack>
-		<Death_SFXEvent_Start_Die> Unit_Defeat_Erisi </Death_SFXEvent_Start_Die>
-		
-		<Property_Flags> SmallShip </Property_Flags>
-		<Icon_Name>i_button_erisi.tga</Icon_Name>
+		<GUI_Row> 1 </GUI_Row>
+		<Show_Name>No</Show_Name>
+		<Is_Dummy>No</Is_Dummy>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Autoresolve_Health>300</Autoresolve_Health>
+		<Damage>25</Damage>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-	
-			
+		<Affiliation>Empire</Affiliation>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Planets>Coruscant</Required_Planets>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Slice_Cost_Credits>2000</Slice_Cost_Credits>
+		<Tech_Level>99</Tech_Level>
+		<AI_Combat_Power>3000</AI_Combat_Power>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Hyperspace>yes</Hyperspace>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		
- 	</SpaceUnit>
+		<Behavior>TEAM, TEAM_LOCOMOTOR, SELECTABLE, TARGETING, UNIT_AI</Behavior>
+		<SpaceBehavior> REVEAL, ABILITY_COUNTDOWN</SpaceBehavior>
+	
+		<Max_Speed>5.0</Max_Speed>
+		<Min_Speed>1.5</Min_Speed>
+		
+		<Space_FOW_Reveal_Range>800.0</Space_FOW_Reveal_Range>
+		<MovementClass>Space</MovementClass>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Scale_Land>80</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>200</Radar_Icon_Scale_Space>
+	 			
+	 	<CategoryMask>SpaceHero | Fighter </CategoryMask>
+		<FormationOrder>2</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>300.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Space_FOW_Reveal_Range>10000.0</Space_FOW_Reveal_Range>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>		
+		<GUI_Distance>120</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+		<Icon_Name>i_button_erisi.tga</Icon_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ELITE_SQUADRON  TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ELITEST</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>	
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>120</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 1.2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</Container>
 
 	<!-- The Shockwave Star Destroyer is used by Harrsk (Remnant Major Hero) during space battles -->
 	<UniqueUnit Name="Shockwave_Star_Destroyer">
@@ -2301,142 +2626,64 @@
 		<Population_Value>1</Population_Value>
 	</HeroCompany>
 
-	<Squadron Name="181st_TIE_Interceptor_Squadron">
+	<SpaceUnit Name="Turr_Phennir">
+		<Variant_of_Existing_Type>181st_TIE_Interceptor</Variant_of_Existing_Type>
 		<Text_ID>TEXT_181ST_TIE_INTERCEPTOR_SQUADRON</Text_ID>
-		<GUI_Row> 1 </GUI_Row>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_181ST TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>150</Tactical_Health>
+		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
+   	
 		<Hyperspace>Yes</Hyperspace>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Formation_Priority>1</Formation_Priority>
-		<Is_Escort>Yes</Is_Escort>
-		<Is_Bomber>no</Is_Bomber>
-		<Autoresolve_Health>300</Autoresolve_Health>
-		<Damage>25</Damage>
-		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<Affiliation>Empire</Affiliation>
-		<Build_Time_Seconds>20</Build_Time_Seconds>
-		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
-		<Required_Planets>Coruscant</Required_Planets>
-		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Slice_Cost_Credits>2000</Slice_Cost_Credits>
-		<Tech_Level>99</Tech_Level>
-		<Required_Timeline>1</Required_Timeline>
-		<Required_Star_Base_Level>3</Required_Star_Base_Level>
-		<Required_Special_Structures />
-		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
-		<Squadron_Units>Turr_Phennir, 181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>
-		<Squadron_Units>181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>
-		<Squadron_Units>181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>	
-		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>		
-		<GUI_Model_Name>Ev_181_interceptor.alo</GUI_Model_Name>
-		<GUI_Distance>120</GUI_Distance>
-		<GUI_Offset>0 0 0</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>
+	
+		<Property_Flags> SmallShip </Property_Flags>
 		<Icon_Name>i_button_phennir.tga</Icon_Name>
-
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
-
-		<FormationOrder>1</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
-		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
-		<Idle_Chase_Range>200.0</Idle_Chase_Range>
-		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
-		<Autonomous_Move_Extension_Vs_Attacker>500.0</Autonomous_Move_Extension_Vs_Attacker>
-		<Property_Flags> SmallShip </Property_Flags>
-		<Score_Cost_Credits> 420</Score_Cost_Credits>
-		
-		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_181ST  TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
-		
-		
-		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		
-		<Population_Value>1</Population_Value>
-	</Squadron>
-
-	<Squadron Name="181st_Fel">
-		<Text_ID>TEXT_UNIT_SOONTIR_FEL_EMPIRE</Text_ID>
-		<GUI_Row> 1 </GUI_Row>
-		<Hyperspace>Yes</Hyperspace>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Formation_Priority>1</Formation_Priority>
-		<Is_Escort>Yes</Is_Escort>
-		<Is_Bomber>no</Is_Bomber>
-		<Autoresolve_Health>300</Autoresolve_Health>
-		<Damage>25</Damage>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<Affiliation>Empire</Affiliation>
-		<Build_Time_Seconds>20</Build_Time_Seconds>
-		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
-		<Required_Planets>Coruscant</Required_Planets>
-		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Slice_Cost_Credits>2000</Slice_Cost_Credits>
-		<Tech_Level>99</Tech_Level>
-		<Required_Timeline>1</Required_Timeline>
-		<Required_Star_Base_Level>3</Required_Star_Base_Level>
-		<Required_Special_Structures />
-		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
-		<Squadron_Units>181_Fel, 181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>
-		<Squadron_Units>181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>
-		<Squadron_Units>181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>	
-		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>		
-		<GUI_Model_Name>Ev_181_interceptor.alo</GUI_Model_Name>
-		<GUI_Distance>120</GUI_Distance>
-		<GUI_Offset>0 0 0</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<Icon_Name>i_button_fel_soontir.tga</Icon_Name>
-
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
-
-		<FormationOrder>1</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
-		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
-		<Idle_Chase_Range>200.0</Idle_Chase_Range>
-		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
-		<Autonomous_Move_Extension_Vs_Attacker>500.0</Autonomous_Move_Extension_Vs_Attacker>
-		<Property_Flags> SmallShip </Property_Flags>
-		<Score_Cost_Credits> 420</Score_Cost_Credits>
+		<Create_Team> Yes </Create_Team>
+		<Create_Team_Type>181st_TIE_Interceptor_Squadron</Create_Team_Type>
+	
+		<SFXEvent_Select>Unit_Select_Phennir</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Phennir</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Phennir</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Phennir</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Move_Phennir</SFXEvent_Guard>
+		<SFXEvent_Assist_Move>Unit_Move_Phennir </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Attack_Phennir</SFXEvent_Assist_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Phennir </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Phennir </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Health_Low_Phennir </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Enemy_Health_Critical_Wedge_Rogue </SFXEvent_Enemy_Health_Critical_Warning>
 		
-		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_SOONTIR_FEL_EMPIRE TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>REPLENISH_WINGMEN</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Active_By_Default>No</Active_By_Default>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Respawn_Vader_Ship</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
 		
-		<Tactical_Build_Cost_Multiplayer>3200</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<Population_Value>1</Population_Value>
-	</Squadron>
-
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Phennir_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category> Fighter </Unit_Strength_Category>
+				<Applicable_Unit_Categories> Fighter </Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.10</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+		</Abilities>
+		
+ 	</SpaceUnit>
+	
 	<SpaceUnit Name="181st_TIE_Interceptor">
 
 		<Text_ID>TEXT_UNIT_TIE_INTERCEPTOR_181</Text_ID>
@@ -2448,6 +2695,8 @@
 		<Select_Box_Scale>70</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
 
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
 
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
@@ -2569,51 +2818,171 @@
 		<Strafe_Distance>500.0</Strafe_Distance>
 		<Population_Value>0</Population_Value>
 	</SpaceUnit>
+	
+	<Squadron Name="181st_TIE_Interceptor_Squadron">
+		<Text_ID>TEXT_181ST_TIE_INTERCEPTOR_SQUADRON</Text_ID>
+		<GUI_Row> 1 </GUI_Row>
+		<Hyperspace>Yes</Hyperspace>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Autoresolve_Health>300</Autoresolve_Health>
+		<Damage>25</Damage>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Affiliation>Empire</Affiliation>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Planets>Coruscant</Required_Planets>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Slice_Cost_Credits>2000</Slice_Cost_Credits>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>1</Required_Timeline>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Special_Structures />
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<Squadron_Units>Turr_Phennir, 181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>
+		<Squadron_Units>181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>
+		<Squadron_Units>181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>	
+		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>		
+		<GUI_Model_Name>Ev_181_interceptor.alo</GUI_Model_Name>
+		<GUI_Distance>120</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+		<Icon_Name>i_button_phennir.tga</Icon_Name>
+		
+		<Create_Team_Type> 181st_Phennir_TIE_Interceptor_Container </Create_Team_Type>
+		<Max_Squad_Size> 12 </Max_Squad_Size>
+		
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
 
-	<SpaceUnit Name="Turr_Phennir">
-		<Variant_of_Existing_Type>181st_TIE_Interceptor</Variant_of_Existing_Type>
+		<FormationOrder>1</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>500.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Property_Flags> SmallShip </Property_Flags>
+		<Score_Cost_Credits> 420</Score_Cost_Credits>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_181ST  TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		
+		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		
+		<Population_Value>1</Population_Value>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>REPLENISH_WINGMEN</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Active_By_Default>No</Active_By_Default>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Respawn_Vader_Ship</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>	
+		
+	</Squadron>
+
+	<Container Name="181st_Phennir_TIE_Interceptor_Container">
 		<Text_ID>TEXT_181ST_TIE_INTERCEPTOR_SQUADRON</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_181ST TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>150</Tactical_Health>
-		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
-
-   	
-		<Property_Flags> SmallShip </Property_Flags>
-		<Icon_Name>i_button_phennir.tga</Icon_Name>
+		<Show_Name>No</Show_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-	
-			<SFXEvent_Select>Unit_Select_Phennir</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Phennir</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Move_Phennir</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Phennir</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Move_Phennir</SFXEvent_Guard>
-		<SFXEvent_Assist_Move>Unit_Move_Phennir </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Attack_Phennir</SFXEvent_Assist_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Phennir </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Phennir </SFXEvent_Health_Critical_Warning>
-		<SFXEvent_Enemy_Health_Low_Warning> Unit_Health_Low_Phennir </SFXEvent_Enemy_Health_Low_Warning>
-		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Enemy_Health_Critical_Wedge_Rogue </SFXEvent_Enemy_Health_Critical_Warning>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
 		
-		<Abilities SubObjectList="Yes">
-			<Combat_Bonus_Ability Name="Phennir_Combat_Bonus">
-				<Activation_Style>Space_Automatic</Activation_Style>
-				<Unit_Strength_Category> Fighter </Unit_Strength_Category>
-				<Applicable_Unit_Categories> Fighter </Applicable_Unit_Categories>
-				<Applicable_Unit_Types />
-				<Health_Bonus_Percentage>0.10</Health_Bonus_Percentage>
-				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
-				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
-				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
-				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
-				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
-				<Stacking_Category>0</Stacking_Category>
-			</Combat_Bonus_Ability>
-			
-		</Abilities>
-		
- 	</SpaceUnit>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Hyperspace>yes</Hyperspace>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 
+		<Autoresolve_Health>300</Autoresolve_Health>
+		<Damage>25</Damage>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Behavior>TEAM, TEAM_LOCOMOTOR, SELECTABLE, TARGETING, UNIT_AI</Behavior>
+		<SpaceBehavior> REVEAL, ABILITY_COUNTDOWN</SpaceBehavior>
+		
+		<Max_Speed>5.0</Max_Speed>
+		<Min_Speed>1.5</Min_Speed>
+		
+		<Space_FOW_Reveal_Range>800.0</Space_FOW_Reveal_Range>
+		<MovementClass>Space</MovementClass>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Scale_Land>80</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>200</Radar_Icon_Scale_Space>
+	 			
+	 	<CategoryMask>SpaceHero | Fighter | AntiCapital | AntiSuper</CategoryMask>
+		<FormationOrder>2</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>300.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Space_FOW_Reveal_Range>10000.0</Space_FOW_Reveal_Range>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+
+		<Icon_Name>i_button_phennir.tga</Icon_Name>
+		
+		<Lua_Script>ObjectScript_VaderTIESquadron</Lua_Script>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>120</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+		<!-- Unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>REPLENISH_WINGMEN</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Active_By_Default>No</Active_By_Default>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Respawn_Vader_Ship</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>	
+	</Container>
+	
 	<SpaceUnit Name="181_Fel">
 		<Variant_of_Existing_Type>181st_TIE_Interceptor</Variant_of_Existing_Type>
 		<Text_ID>TEXT_UNIT_SOONTIR_FEL</Text_ID>
@@ -2627,6 +2996,27 @@
 		<Property_Flags> SmallShip </Property_Flags>
 		<Icon_Name>i_button_fel_soontir.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+		<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+
+				<Recharge_Seconds>60</Recharge_Seconds>
+				
+				 <!-- This is the radius within which we can "drop" the projectile (targeting radius) -->
+				 <!-- The actual radius of ability is in projectile XML -->
+				 <Effective_Radius> 300.0 </Effective_Radius>
+				 <Spawned_Object_Type>Fel_Weaken_Enemy_Effect</Spawned_Object_Type>  
+			   <SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability> 
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+
+				<!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+				<Area_Effect_Decal_Distance> 300 </Area_Effect_Decal_Distance>
+
+			</Unit_Ability>
+		</Unit_Abilities_Data>
 		
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Fel_Combat_Bonus">
@@ -2646,6 +3036,443 @@
 		</Abilities>
 		
  	</SpaceUnit>
+	
+	<Squadron Name="181st_Fel">
+		<Text_ID>TEXT_UNIT_SOONTIR_FEL_EMPIRE</Text_ID>
+		<GUI_Row> 1 </GUI_Row>
+		<Hyperspace>Yes</Hyperspace>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Autoresolve_Health>300</Autoresolve_Health>
+		<Damage>25</Damage>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Affiliation>Empire</Affiliation>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Planets>Coruscant</Required_Planets>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Slice_Cost_Credits>2000</Slice_Cost_Credits>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>1</Required_Timeline>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Special_Structures />
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<Squadron_Units>181_Fel, 181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>
+		<Squadron_Units>181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>
+		<Squadron_Units>181st_TIE_Interceptor, 181st_TIE_Interceptor</Squadron_Units>	
+		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>		
+		<GUI_Model_Name>Ev_181_interceptor.alo</GUI_Model_Name>
+		<GUI_Distance>120</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+		<Icon_Name>i_button_fel_soontir.tga</Icon_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
+
+		<FormationOrder>1</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>500.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Property_Flags> SmallShip </Property_Flags>
+		<Score_Cost_Credits> 420</Score_Cost_Credits>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_SOONTIR_FEL_EMPIRE TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		
+		<Tactical_Build_Cost_Multiplayer>3200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Population_Value>1</Population_Value>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+		<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+
+				<Recharge_Seconds>60</Recharge_Seconds>
+				
+				 <!-- This is the radius within which we can "drop" the projectile (targeting radius) -->
+				 <!-- The actual radius of ability is in projectile XML -->
+				 <Effective_Radius> 300.0 </Effective_Radius>
+				 <Spawned_Object_Type>Fel_Weaken_Enemy_Effect</Spawned_Object_Type>  
+			   <SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability> 
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+
+				<!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+				<Area_Effect_Decal_Distance> 300 </Area_Effect_Decal_Distance>
+
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</Squadron>
+	
+	<Container Name="181st_Fel_TIE_Interceptor_Container">
+		<Text_ID>TEXT_181ST_TIE_INTERCEPTOR_SQUADRON</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_181ST TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
+		<Show_Name>No</Show_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Hyperspace>yes</Hyperspace>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>
+
+		<Autoresolve_Health>300</Autoresolve_Health>
+		<Damage>25</Damage>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Behavior>TEAM, TEAM_LOCOMOTOR, SELECTABLE, TARGETING, UNIT_AI</Behavior>
+		<SpaceBehavior> REVEAL, ABILITY_COUNTDOWN</SpaceBehavior>
+		
+		<Max_Speed>5.0</Max_Speed>
+		<Min_Speed>1.5</Min_Speed>
+		
+		<Space_FOW_Reveal_Range>800.0</Space_FOW_Reveal_Range>
+		<MovementClass>Space</MovementClass>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Scale_Land>80</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>200</Radar_Icon_Scale_Space>
+	 			
+	 	<CategoryMask>SpaceHero | Fighter | AntiCapital | AntiSuper</CategoryMask>
+		<FormationOrder>2</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>300.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Space_FOW_Reveal_Range>10000.0</Space_FOW_Reveal_Range>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+
+		<Icon_Name>i_button_phennir.tga</Icon_Name>
+		
+		<Lua_Script>ObjectScript_VaderTIESquadron</Lua_Script>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>120</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+		<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+
+				<Recharge_Seconds>60</Recharge_Seconds>
+				
+				 <!-- This is the radius within which we can "drop" the projectile (targeting radius) -->
+				 <!-- The actual radius of ability is in projectile XML -->
+				 <Effective_Radius> 50.0 </Effective_Radius>
+				 <Spawned_Object_Type>Fel_Weaken_Enemy_Effect</Spawned_Object_Type>  
+			   <SFXEvent_Target_Ability> Unit_INSPIRE_FEAR </SFXEvent_Target_Ability> 
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_INSPIRE_FEAR</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_INSPIRE_FEAR_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_INSPIRE_FEAR_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_MINOR_DRAIN_LIFE.TGA</Alternate_Icon_Name>
+
+				
+				<!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+				<Area_Effect_Decal_Distance> 300 </Area_Effect_Decal_Distance>
+
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</Container>
+	
+	<SpaceUnit Name="Turr_Phennir_Defender">
+		<Variant_of_Existing_Type>Wedge_TIE_Defender</Variant_of_Existing_Type>
+		<Text_ID>TEXT_181ST_TIE_INTERCEPTOR_SQUADRON</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_181ST TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
+		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
+   	
+		<Property_Flags> SmallShip </Property_Flags>
+		<Icon_Name>i_button_phennir.tga</Icon_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Create_Team> Yes </Create_Team>
+		<Create_Team_Type>181st_TIE_Defender_Squadron</Create_Team_Type>
+	
+		<Damage>25</Damage>
+		<Shield_Points>10</Shield_Points>
+		<Tactical_Health>20</Tactical_Health>
+		<Shield_Refresh_Rate>1</Shield_Refresh_Rate>
+	
+		<SFXEvent_Select>Unit_Select_Phennir</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Phennir</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Phennir</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Phennir</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Move_Phennir</SFXEvent_Guard>
+		<SFXEvent_Assist_Move>Unit_Move_Phennir </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Attack_Phennir</SFXEvent_Assist_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Phennir </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Phennir </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Health_Low_Phennir </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Enemy_Health_Critical_Wedge_Rogue </SFXEvent_Enemy_Health_Critical_Warning>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>REPLENISH_WINGMEN</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Active_By_Default>No</Active_By_Default>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Respawn_Vader_Ship</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Phennir_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category> Fighter </Unit_Strength_Category>
+				<Applicable_Unit_Categories> Fighter </Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.10</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+		</Abilities>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="181st_TIE_Defender">
+
+		<Text_ID>TEXT_UNIT_TIE_INTERCEPTOR_181</Text_ID>
+		<Variant_Of_Existing_Type>Wedge_TIE_Defender</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_EV_TIE_Defender.tga</Icon_Name>
+		
+		<Is_Named_Hero>No</Is_Named_Hero>
+		
+		<Damage>20</Damage>
+		<Shield_Points>10</Shield_Points>
+		<Tactical_Health>15</Tactical_Health>
+		<Shield_Refresh_Rate>1</Shield_Refresh_Rate>
+		
+		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
+		<SFXEvent_Select> Unit_Select_TIE_Fighter </SFXEvent_Select>
+		<SFXEvent_Move> Unit_Move_TIE_Fighter </SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_TIE_Fighter</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack> Unit_Attack_TIE_Fighter </SFXEvent_Attack>
+		<SFXEvent_Guard> Unit_Guard_TIE_Fighter </SFXEvent_Guard>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_TIE_Fighter </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_TIE_Fighter </SFXEvent_Move_Into_Nebula>
+
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_TIE_Fighter</SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_TIE_Fighter </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Low_Warning> Unit_Enemy_Health_Low_Tie_Fighter </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Critical_Warning> Unit_Enemy_Health_Critical_Tie_Fighter </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_TIE_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_TIE_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_TIE_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_TIE_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_TIE_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_TIE_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_TIE_Fighter </SFXEvent_Attack_Hardpoint>
+
+		<!-- Test: Each TIE fighter will play a 3D ambient "flyby" sound every X to Y seconds -->
+		<!-- Note: To invoke SFXEvent_Ambient, AMBIENT_SFX behavior needs to be added to the behavior list -->
+		<SFXEvent_Ambient_Moving> Unit_TIE_Fighter_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_TIE_Fighter_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+	</SpaceUnit>
+	
+	<Squadron Name="181st_TIE_Defender_Squadron">
+		<Text_ID>TEXT_181ST_TIE_INTERCEPTOR_SQUADRON</Text_ID>
+		<GUI_Row> 1 </GUI_Row>
+		<Hyperspace>Yes</Hyperspace>
+		
+		<Is_Dummy>Yes</Is_Dummy>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Autoresolve_Health>1600</Autoresolve_Health>
+		<Damage>50</Damage>
+		<Affiliation>Empire</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<Required_Planets>Coruscant</Required_Planets>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Required_Star_Base_Level>2</Required_Star_Base_Level>
+
+		<Build_Time_Seconds>20</Build_Time_Seconds>
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<Squadron_Units>Turr_Phennir_Defender, 181st_TIE_Defender, 181st_TIE_Defender, 181st_TIE_Defender</Squadron_Units>
+		<Squadron_Units>181st_TIE_Defender, 181st_TIE_Defender, 181st_TIE_Defender, 181st_TIE_Defender</Squadron_Units>
+		<Squadron_Units>181st_TIE_Defender, 181st_TIE_Defender, 181st_TIE_Defender, 181st_TIE_Defender</Squadron_Units>	
+		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>		
+
+		<Icon_Name>i_button_phennir.tga</Icon_Name>
+		
+		<Create_Team_Type>181st_TIE_Defender_Container </Create_Team_Type>
+		<Max_Squad_Size> 12 </Max_Squad_Size>
+		
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
+
+		<FormationOrder>1</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>500.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Property_Flags> SmallShip </Property_Flags>
+		<Score_Cost_Credits> 420</Score_Cost_Credits>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_181ST  TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		
+		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		
+		<Population_Value>1</Population_Value>
+	</Squadron>
+		
+	<Container Name="181st_TIE_Defender_Container">
+		<Text_ID>TEXT_181ST_TIE_INTERCEPTOR_SQUADRON</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_181ST TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
+		<Show_Name>No</Show_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Hyperspace>yes</Hyperspace>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>
+
+		<Autoresolve_Health>1600</Autoresolve_Health>
+		<Damage>50</Damage>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Behavior>TEAM, TEAM_LOCOMOTOR, SELECTABLE, TARGETING, UNIT_AI</Behavior>
+		<SpaceBehavior> REVEAL, ABILITY_COUNTDOWN</SpaceBehavior>
+		
+		<Max_Speed>5.0</Max_Speed>
+		<Min_Speed>1.5</Min_Speed>
+		
+		<Space_FOW_Reveal_Range>800.0</Space_FOW_Reveal_Range>
+		<MovementClass>Space</MovementClass>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Scale_Land>80</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>200</Radar_Icon_Scale_Space>
+	 			
+	 	<CategoryMask>SpaceHero | Fighter | AntiCapital | AntiSuper</CategoryMask>
+		<FormationOrder>2</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>300.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Space_FOW_Reveal_Range>10000.0</Space_FOW_Reveal_Range>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+
+		<Icon_Name>i_button_phennir.tga</Icon_Name>
+		
+		<Lua_Script>ObjectScript_VaderTIESquadron</Lua_Script>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>120</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+		<!-- Unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>REPLENISH_WINGMEN</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Active_By_Default>No</Active_By_Default>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Respawn_Vader_Ship</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>	
+	</Container>
 
 	<!-- The Judicator Star Destroyer is used by Brandei(Remnant Major Hero) during space battles -->
 	<UniqueUnit Name="Judicator_Star_Destroyer">
@@ -3188,7 +4015,7 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ROGRISS TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_DOMINION </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
 
-		<Tech_Level>5</Tech_Level>
+		<Tech_Level>99</Tech_Level>
 		<Affiliation>Empire</Affiliation>
 
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>

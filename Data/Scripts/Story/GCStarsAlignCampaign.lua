@@ -24,8 +24,6 @@ require("PGBase")
 require("PGStateMachine")
 require("PGStoryMode")
 require("PGSpawnUnits")
-TM = require("TRGameModeTransactions")
-
 
 function Definitions()
 
@@ -48,14 +46,14 @@ end
 function Begin_GC(message)
   if message == OnEnter then
 
-    p_empire = Find_Player("Empire")
-    p_rebel = Find_Player("Rebel")
-    p_pentastar = Find_Player("Pentastar")
+    local p_empire = Find_Player("Empire")
+    local p_rebel = Find_Player("Rebel")
+    local p_pentastar = Find_Player("Pentastar")
 
     --Post-Zsinj, Kosh merges with Treutan
-    start_planet = FindPlanet("Bastion")
-    spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
-    ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true,false)
+    local start_planet = FindPlanet("Bastion")
+    local spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
+    local ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true,false)
 
 
 
