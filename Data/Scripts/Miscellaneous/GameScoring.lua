@@ -477,14 +477,6 @@ function Game_Mode_Ending_Event(mode_name)
     LastWasCampaignGame = CampaignGame
     if StringCompare(mode_name, "Galactic") then
         CampaignGame = false
-    elseif StringCompare(mode_name, "Space") then
-        if not TransactionManager then
-            TransactionManager = require("TRGameModeTransactions")
-        end
-        if not TM then
-            TM = TransactionManager:New()
-        end
-        TM:ExecuteBoardingTransactions()
     end
 end
 

@@ -1303,49 +1303,6 @@ GameObjectLibrary = {
                 }
             }
         },
-        ["GENERIC_BELLATOR"]={
-            Scripts={
-                "FighterSpawn"
-            },
-            Fighters={
-                ["TIE_AVENGER_SQUADRON"]={
-                    ["TERADOC"] = {
-                        Reserve=10,
-                        Initial=3
-                    }
-                },
-                ["TORRENT_SQUADRON"]={
-                    ["PENTASTAR"] = {
-                        Reserve=10,
-                        Initial=3
-                    },
-                    ["HARRSK"] = {
-                        Reserve=10,
-                        Initial=3
-                    },
-                    ["HOSTILE"] = {
-                        Reserve=10,
-                        Initial=3
-                    },
-                    ["WARLORDS"] = {
-                        Reserve=10,
-                        Initial=3
-                    }
-                },
-                ["TIE_FIGHTER_SQUADRON"]={
-                    ["DEFAULT"] = {
-                        Reserve=10,
-                        Initial=3
-                    }
-                },
-                ["TIE_BOMBER_SQUADRON"]={
-                    ["DEFAULT"] = {
-                        Reserve=10,
-                        Initial=2
-                    }
-                }
-            }
-        },
         ["GENERIC_ALLEGIANCE"]={
             Scripts={ "MultiLayer"
             },

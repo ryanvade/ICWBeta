@@ -59,7 +59,7 @@ function Spawn_At_Planets(planet_list)
 					,{Find_Object_Type("Kariek_Shieldship"), 5, "Space"}
 					,{Find_Object_Type("Syndic_Destroyer"), 5, "Space"}
 					,{Find_Object_Type("Phalanx_Destroyer"), 2, "Space"}
-					,{Find_Object_Type("Intego_Destroyer"), 2, "Space"}
+					--,{Find_Object_Type("Intego_Destroyer"), 2, "Space"}
 					,{Find_Object_Type("Peltast"), 2, "Space"}
 					,{Find_Object_Type("Auriette_Carrier"), 4, "Space"}
 					,{Find_Object_Type("Asdoni"), 5, "Space"}
@@ -182,7 +182,7 @@ function Spawn_At_All_Planets()
 					,{Find_Object_Type("Kariek_Shieldship"), 5, "Space"}
 					,{Find_Object_Type("Syndic_Destroyer"), 5, "Space"}
 					,{Find_Object_Type("Phalanx_Destroyer"), 2, "Space"}
-					,{Find_Object_Type("Intego_Destroyer"), 2, "Space"}
+					--,{Find_Object_Type("Intego_Destroyer"), 2, "Space"}
 					,{Find_Object_Type("Peltast"), 2, "Space"}
 					,{Find_Object_Type("Auriette_Carrier"), 4, "Space"}
 					,{Find_Object_Type("Asdoni"), 5, "Space"}

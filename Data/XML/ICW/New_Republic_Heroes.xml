@@ -2385,7 +2385,7 @@
 	<HeroUnit Name="Gavrisom">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_GAVRISOM</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_GAVRISOM </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GAVRISOM </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
 		
 		<Icon_Name>i_button_gavrisom.tga</Icon_Name>
@@ -3907,7 +3907,14 @@
         <Ranking_In_Category>3</Ranking_In_Category>
 		
 		<Tech_Level>99</Tech_Level>
-		<Lua_Script>GenericGameObject</Lua_Script>
+		
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED,  SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		
+		<Starting_Spawned_Units_Tech_0>K-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>K-Wing_Squadron, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>E-Wing_Squadron, 4</Reserve_Spawned_Units_Tech_0>
 
 		<SFXEvent_Select>Unit_Select_Illor</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Illor</SFXEvent_Move>
@@ -3985,7 +3992,6 @@
         <Ranking_In_Category>3</Ranking_In_Category>
 		
 		<Tech_Level>99</Tech_Level>
-		<Lua_Script>GenericGameObject</Lua_Script>
 
 		<SFXEvent_Select>Unit_Select_Illor</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Illor</SFXEvent_Move>

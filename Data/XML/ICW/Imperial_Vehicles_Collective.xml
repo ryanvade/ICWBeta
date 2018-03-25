@@ -1728,7 +1728,7 @@
 		<!--<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>-->
 		<Encyclopedia_Text>TEXT_TOOLTIP_CHARIOT_LAV</Encyclopedia_Text>
  		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
- 		<Land_Model_Name>chariot.alo</Land_Model_Name>
+ 		<Land_Model_Name>EV_Chariot.alo</Land_Model_Name>
 		<Mass>1.0</Mass>
 		<Scale_Factor>0.46</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
@@ -1755,7 +1755,7 @@
   		<MaxSecondaryTurnROTCoefficient>.7</MaxSecondaryTurnROTCoefficient>
  		<SecondaryTurnLookaheadDistance>0</SecondaryTurnLookaheadDistance>
  		<Custom_Hard_XExtent>20.0</Custom_Hard_XExtent>
- 		<Custom_Hard_YExtent>10.0</Custom_Hard_YExtent>
+ 		<Custom_Hard_YExtent>30.0</Custom_Hard_YExtent>
 		<MovementPredictionInterval> 3.0 </MovementPredictionInterval>
 		<Armor_Type> Armor_T2B </Armor_Type>
 		<Shield_Armor_Type>Shield_Tank</Shield_Armor_Type>
@@ -1800,7 +1800,7 @@
 		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
-		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
 		<SFXEvent_Fire>Unit_Tank_T2B_Fire</SFXEvent_Fire>
@@ -1844,12 +1844,11 @@
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 		<Targeting_Priority_Set>AntiVehicle</Targeting_Priority_Set>
 		<Autonomous_Move_Extension_Vs_Attacker>150.0</Autonomous_Move_Extension_Vs_Attacker>
-		<Select_Box_Scale>60</Select_Box_Scale>
+		<Select_Box_Scale>200</Select_Box_Scale>
 		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
 		<GUI_Bracket_Size>1</GUI_Bracket_Size>
 		<Weather_Category>Tracked</Weather_Category>
 		<Icon_Name>i_button_clav.tga</Icon_Name>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 		<Vehicle_Thief_Inside_Clone>Chariot_LAV_Combat_Captured</Vehicle_Thief_Inside_Clone>
 		<Tactical_Bribe_Cost>100</Tactical_Bribe_Cost>
