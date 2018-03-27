@@ -213,12 +213,7 @@
 		<Prereq>Rebels_Enter_Tech_03</Prereq>
 	</Event>
 
-	<Event Name="R_Destroy_Leia">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Princess_Leia_Team</Reward_Param1>
-		<Prereq>Rebels_Enter_Tech_03</Prereq>
-	</Event>
+
 
 	<Event Name="Spawn_Corran">
 		<Event_Type>STORY_TRIGGER</Event_Type>
@@ -248,17 +243,17 @@
 		<Branch>Leia_Alive</Branch>
 
 	</Event>
-
-	<Event Name="R_Destroy_Ackbar">
+	
+		<Event Name="R_Destroy_Leia">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Home_One</Reward_Param1>
-		<Prereq>Rebels_Enter_Tech_03</Prereq>
+		<Reward_Param1>Princess_Leia_Team</Reward_Param1>
+		<Prereq>Spawn_Leia_Noghri</Prereq>
 	</Event>
-	
+
 	<Event Name="Trigger_Ackbar_Death">
   		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Pestage_Team</Event_Param1>
+  		<Event_Param1>Home_One</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
@@ -274,6 +269,13 @@
 		<Prereq>Rebels_Enter_Tech_03</Prereq>
 		<Branch>Ackbar_Alive</Branch>
 	</Event>
+		<Event Name="R_Destroy_Ackbar">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Home_One</Reward_Param1>
+		<Prereq>Spawn_Ackbar_Voyager</Prereq>
+	</Event>
+	
 	
 	<!-- Spawn Time Era 4 Heroes Daala -->
 	<Event Name="Rebels_Enter_Tech_04">

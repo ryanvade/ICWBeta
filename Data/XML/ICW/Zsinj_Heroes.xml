@@ -16,6 +16,9 @@
 		<Tech_Level>1</Tech_Level>
 		<Lua_Script></Lua_Script>
 		
+			<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+
+		
 		<Starting_Spawned_Units_Tech_0>TIE_Raptor_Squadron, 2</Starting_Spawned_Units_Tech_0>
         <Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
         <Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 5</Starting_Spawned_Units_Tech_0>
@@ -394,7 +397,8 @@
 
 	<SpaceUnit Name="Banjeer">
 		<Variant_Of_Existing_Type>Generic_Quaser</Variant_Of_Existing_Type>
-		
+		<Space_FOW_Reveal_Range>700.0</Space_FOW_Reveal_Range>	
+
 		<Text_ID>TEXT_HERO_BANJEER</Text_ID>
 		<Lua_Script></Lua_Script>
 		
@@ -402,6 +406,9 @@
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 		<Icon_Name>i_button_banjeer.tga</Icon_Name>
+		
+			<CategoryMask> Frigate | SpaceHero </CategoryMask>
+
 		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
@@ -468,6 +475,9 @@
 		<HardPoints> 
 		HP_Corellian_Corvette_01, HP_Corellian_Corvette_02, HP_Corellian_Corvette_03, HP_Corellian_Corvette_04, HP_CR90_Hangar, HP_CR90_Tractor_Beam
 		</HardPoints>
+		
+		<CategoryMask> Corvette | SpaceHero </CategoryMask>
+
 		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		
@@ -621,6 +631,8 @@
 		<GUI_Offset>0 0 0</GUI_Offset>
 		<GUI_Velocity>45</GUI_Velocity>
 		<Icon_Name>i_button_fel_soontir.tga</Icon_Name>
+		
+		<Create_Team_Type>181st_Cowell_TIE_Interceptor_Container</Create_Team_Type>
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
@@ -807,6 +819,9 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND2 TEXT_TOOLTIP_TRAIT_COMMERCIAL TEXT_TOOLTIP_TRAIT_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ZSINJ TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_IRONFIST </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_WARLORD </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 42500 </Score_Cost_Credits>
+		
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+
 		
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Zsinj_Self_Bonus">
@@ -1008,6 +1023,9 @@
 		<Variant_Of_Existing_Type>Generic_Star_Destroyer_Two</Variant_Of_Existing_Type>
 		<Icon_Name>i_button_trigit.tga</Icon_Name>
 		
+				<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+
+		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_TRIGIT </Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_TRIGIT TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_IMPLACABLE </Encyclopedia_Text>
@@ -1098,6 +1116,8 @@
 
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>

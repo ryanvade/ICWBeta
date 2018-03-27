@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            CategoryFilter.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-03-10T19:26:58+01:00
+--*   @Last modified time:  2018-03-27T03:41:19+02:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -163,9 +163,12 @@ CategoryFilter = Class {
                 return
             end
 
-            -- if EvaluatePerception("Has_Starbase", owner, planet) == 0 then
-            --     return
-            -- end
+            --hopefully prevents perception evaluation crashes
+            if owner and planet then
+                if EvaluatePerception("Has_Starbase", self.GalacticConquest.HumanPlayer, planet) == 0 then
+                    return
+                end
+            end
 
             self:ClearAiDummies(planet)
             self:CreateAiEntry(planet)

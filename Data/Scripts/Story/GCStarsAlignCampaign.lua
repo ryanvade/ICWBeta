@@ -31,9 +31,28 @@ function Definitions()
 
   StoryModeEvents =
   {
+	Determine_Faction_LUA = Find_Faction,
+	Spawn_Isard = Spawn_Lusankya,
     Talks_End = Begin_GC
   }
 
+end
+
+function Find_Faction(message)
+  if message == OnEnter then
+
+    local p_newrep = Find_Player("Rebel")
+    local p_empire = Find_Player("Empire")
+	local p_pentastar = Find_Player("Pentastar")
+
+    if p_newrep.Is_Human() then
+		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
+    elseif p_empire.Is_Human() then
+		Story_Event("ENABLE_BRANCH_EMPIRE_FLAG")
+	elseif p_pentastar.Is_Human() then
+		Story_Event("ENABLE_BRANCH_PENTASTAR_FLAG")
+    end
+  end
 end
 
 function Galactic(message)
@@ -52,10 +71,36 @@ function Begin_GC(message)
 
     --Post-Zsinj, Kosh merges with Treutan
     local start_planet = FindPlanet("Bastion")
+	
+	if start_planet.Get_Owner() ~= Find_Player("Pentastar") then
+      local allPlanets = FindPlanet.Get_All_Planets()
+      local random = GameRandom(1, table.getn(allPlanets))
+      local start_planet = allPlanets[random]
+      while start_planet.Get_Owner() ~= Find_Player("Pentastar") do
+        local random = GameRandom(1, table.getn(allPlanets))
+        local start_planet = allPlanets[random]
+      end
+    end
+	
     local spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
     local ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true,false)
 
 
+
+  elseif message == OnUpdate then
+
+  end
+end
+
+function Spawn_Lusankya(message)
+  if message == OnEnter then
+
+    local p_empire = Find_Player("Empire")
+
+    --Post-Zsinj, Kosh merges with Treutan
+    local start_planet = FindPlanet("Ketaris")
+    local spawn_list_Lusankya = { "Lusankya" }
+    local LusankyaSpawn = SpawnList(spawn_list_Lusankya, start_planet, p_empire,true,false)
 
   elseif message == OnUpdate then
 

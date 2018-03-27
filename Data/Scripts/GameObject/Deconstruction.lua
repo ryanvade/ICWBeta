@@ -13,12 +13,13 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            Deconstruction.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-03-20T01:40:30+01:00
+--*   @Last modified time:  2018-03-26T09:58:14+02:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
 
 
+require("PGStateMachine")
 
 function Definitions()
     DebugMessage("%s -- In Definitions", tostring(Script))
@@ -35,7 +36,8 @@ function State_Init(message)
 
         local planet = Object.Get_Planet_Location()
         local deconstructionTypeName = Object.Get_Type().Get_Name()
-        local objectTypeName = deconstructionTypeName:gsub("Deconstruct_", "")
+        local objectTypeName = string.gsub(deconstructionTypeName, "DECONSTRUCT_", "")
+
         local allObjects = Find_All_Objects_Of_Type(objectTypeName)
 
         for _, structure in pairs(allObjects) do

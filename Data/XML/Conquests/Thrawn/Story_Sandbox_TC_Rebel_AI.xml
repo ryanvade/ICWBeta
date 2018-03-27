@@ -16,15 +16,7 @@
 		<Event_Param1>60</Event_Param1>
 
  </Event>
-<!-- Force Rebels to get X-wing instead of Z-95 to start -->
-	<Event Name="Unlock_X_wings">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Rebel_X-Wing_Squadron</Reward_Param1>
-		<Reward_Param2>Z95_Headhunter_Rebel_Squadron</Reward_Param2>
-		<Prereq>Universal_Story_Start</Prereq>
-	</Event>
-	<!-- Zsinj -->
+
 
 
 <!-- Rebel Hero Release -->
@@ -39,28 +31,7 @@
 		<Reward_Param2>MonCalimari</Reward_Param2>
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
-<!--	<Event Name="CommanderLock">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>LOCK_UNIT</Reward_Type>
-		<Reward_Param1>Fleet_Com_Rebel_Team</Reward_Param1>
-		<Prereq>Universal_Story_Start</Prereq>
-	</Event>
-	<Event Name="DISABLE_BUILDABLE_Fleet_Com">
-<Event_Type>STORY_TRIGGER</Event_Type>
-<Reward_Type>DISABLE_BUILDABLE</Reward_Type>
-<Reward_Param1>Fleet_Com_Rebel_Team</Reward_Param1>
-<Prereq>Universal_Story_Start</Prereq>
-</Event>
-<Event Name="Remove_Fleet_Coms">
-<Event_Type>STORY_CONSTRUCT</Event_Type>
-<Event_Param1>Fleet_Com_Rebel_Team</Event_Param1>
-<Event_Param2>1</Event_Param2>
-<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
-<Reward_Type>REMOVE_UNIT</Reward_Type>
-<Reward_Param1>Fleet_Com_Rebel_Team</Reward_Param1>
-<Prereq>Universal_Story_Start</Prereq>
-<Perpetual>true</Perpetual>
-</Event>-->
+
 	<Event Name="Spawn_Han_Solo">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SPAWN_HERO</Reward_Type>

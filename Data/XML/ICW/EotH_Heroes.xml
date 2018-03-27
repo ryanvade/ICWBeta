@@ -1373,6 +1373,8 @@
 		<Score_Cost_Credits> 600</Score_Cost_Credits>
 		<SpaceBehavior>ABILITY_COUNTDOWN</SpaceBehavior>
 		
+		<Create_Team_Type>Chak_Fel_Space_Container</Create_Team_Type>
+		
 		<Max_Squad_Size> 12 </Max_Squad_Size>
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
@@ -1525,7 +1527,7 @@
 		<AI_Combat_Power>6000</AI_Combat_Power>
 		<Score_Cost_Credits> 6000 </Score_Cost_Credits>
         <Build_Cost_Credits>0</Build_Cost_Credits>
-		<CategoryMask> Capital |  AntiFrigate </CategoryMask>
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
 		<Population_Value>4</Population_Value>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -1598,7 +1600,7 @@
 	  
 		<AI_Combat_Power>6000</AI_Combat_Power>
 		<Score_Cost_Credits> 6000 </Score_Cost_Credits>
-        <CategoryMask> Capital |  AntiFrigate </CategoryMask>
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>5500</Tactical_Build_Cost_Multiplayer>
@@ -1669,6 +1671,9 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_PARCK TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_STRIKEFAST </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 		<Lua_Script></Lua_Script>
+		
+		<CategoryMask> Frigate | SpaceHero </CategoryMask>
+
 		
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 
@@ -1809,7 +1814,10 @@
 		<Starting_Spawned_Units_Tech_0>Clawcraft_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		<Reserve_Spawned_Units_Tech_0>Furion_Squadron, 1</Reserve_Spawned_Units_Tech_0>
+		
+				<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
 
+		
 	<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>8000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
@@ -1896,6 +1904,8 @@
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+				<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+
 
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Aralani_Self_Bonus">

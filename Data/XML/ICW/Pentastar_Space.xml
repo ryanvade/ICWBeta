@@ -40,11 +40,11 @@
 		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_0>Generic_Acclamator_Assault_Ship, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Generic_Acclamator_Assault_Ship, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Skirmish_Acclamator_Assault_Ship, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Acclamator_Assault_Ship, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_0>Enforcer, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Enforcer, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Skirmish_Enforcer, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Enforcer, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		<Tactical_Buildable_Objects_Campaign>
 			Pentastar,
@@ -71,11 +71,11 @@
 		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_0>Generic_Acclamator_Assault_Ship, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Generic_Acclamator_Assault_Ship, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Skirmish_Acclamator_Assault_Ship, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Acclamator_Assault_Ship, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_0>Enforcer, 4</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Enforcer, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Skirmish_Enforcer, 4</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Enforcer, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		<Tactical_Buildable_Objects_Campaign>
 			Pentastar,
@@ -692,7 +692,7 @@
 
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
-		<CategoryMask> Frigate | AntiCorvette </CategoryMask>
+		<CategoryMask> Frigate | AntiCorvette | Boardable</CategoryMask>
 		<Icon_Name>i_button_vindicator.tga</Icon_Name>
 		<GUI_Model_Name>EV_Vindicator.alo</GUI_Model_Name>
 		<GUI_Distance>900</GUI_Distance>
@@ -751,7 +751,7 @@
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 		<Targeting_Priority_Set>Corvette</Targeting_Priority_Set>
 
-		<Encyclopedia_Text> TEXT_TOOLTIP_ENFORCER </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ENFORCER TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PICKET </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 3000</Score_Cost_Credits>
 
@@ -1086,7 +1086,7 @@
 		HP_Munificent_Dual_One, HP_Munificent_Dual_Two, HP_Munificent_Dual_Three, HP_Munificent_Dual_Four, HP_Munificent_Medium_One, HP_Munificent_Medium_Two, 	HP_Munificent_Medium_Three, HP_Munificent_Medium_Four, HP_Munificent_Heavy, HP_Munificent_Ion, Munificent_Bay, Munificent_Engines
         </HardPoints>
 
-        <CategoryMask> Frigate | AntiCorvette</CategoryMask>
+        <CategoryMask> Frigate | AntiCorvette | Boardable</CategoryMask>
         <Icon_Name>i_button_munificent.tga</Icon_Name>
         <GUI_Model_Name>EV_VictoryStarDestroyerMark1.alo</GUI_Model_Name>
         <GUI_Distance>1100</GUI_Distance>
@@ -1147,7 +1147,7 @@
         <Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
         <Targeting_Priority_Set>Frigate</Targeting_Priority_Set>
 
-        <Encyclopedia_Text> TEXT_TOOLTIP_MUNIFICENT </Encyclopedia_Text>
+        <Encyclopedia_Text> TEXT_TOOLTIP_MUNIFICENT TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
         <Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
         <Score_Cost_Credits> 2250</Score_Cost_Credits>
 		<Lua_Script>GenericGameObject</Lua_Script>

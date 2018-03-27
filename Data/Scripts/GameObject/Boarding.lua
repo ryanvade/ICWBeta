@@ -127,7 +127,7 @@ function BoardingTimer(self)
         return
     end
 
-    local success = (GameRandom(1,100) - target.Get_Hull() * 30) > 50
+    local success = (GameRandom(1,100) - target.Get_Hull() * 40) > 50
     if success then
         target.Change_Owner(Object.Get_Owner())
         local boardedTypeName = target.Get_Type().Get_Name()

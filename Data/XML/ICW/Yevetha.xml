@@ -43,8 +43,8 @@
 		<Starting_Spawned_Units_Tech_5>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_5> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_5>TIE_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_5> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_5>Corellian_Corvette, 2</Starting_Spawned_Units_Tech_5> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_5>Corellian_Corvette, 1</Reserve_Spawned_Units_Tech_5> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_5>Skirmish_CR90, 2</Starting_Spawned_Units_Tech_5> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_5>Skirmish_CR90, 1</Reserve_Spawned_Units_Tech_5> <!-- -1 == no limit -->
 
 		<Starting_Spawned_Units_Tech_5>Armadia, 2</Starting_Spawned_Units_Tech_5> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_5>Armadia, 3</Reserve_Spawned_Units_Tech_5> <!-- -1 == no limit -->
@@ -64,8 +64,8 @@
 		<Starting_Spawned_Units_Tech_5>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_5> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_5>TIE_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_5> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_5>Corellian_Corvette, 2</Starting_Spawned_Units_Tech_5> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_5>Corellian_Corvette, 1</Reserve_Spawned_Units_Tech_5> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_5>Skirmish_CR90, 2</Starting_Spawned_Units_Tech_5> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_5>Skirmish_CR90, 1</Reserve_Spawned_Units_Tech_5> <!-- -1 == no limit -->
 
 		<Starting_Spawned_Units_Tech_5>Armadia, 4</Starting_Spawned_Units_Tech_5> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_5>Armadia, 15</Reserve_Spawned_Units_Tech_5> <!-- -1 == no limit -->
@@ -663,6 +663,9 @@
 		<Affiliation>Yevetha</Affiliation>
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		
+				<CategoryMask> Capital |  AntiCapital | SpaceHero </CategoryMask>
+
+		
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script></Lua_Script>
@@ -742,6 +745,9 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_POLITICIAN </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 4000 </Score_Cost_Credits>
 		<Lua_Script></Lua_Script>
+		
+			<CategoryMask> Frigate | SpaceHero </CategoryMask>
+
 
 		<Icon_Name>i_button_nil_spaar.tga</Icon_Name>
 
@@ -846,6 +852,7 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
+		
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
@@ -894,6 +901,9 @@
 		<Affiliation>Yevetha</Affiliation>
 		<Tech_Level>99</Tech_Level>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		
+		<CategoryMask> Frigate | SpaceHero </CategoryMask>
+
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
@@ -951,6 +961,9 @@
 		<Affiliation>Yevetha</Affiliation>
 		<Tech_Level>99</Tech_Level>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+			<CategoryMask> Corvette | SpaceHero </CategoryMask>
+
+		
 		<HardPoints>
 		HP_Corellian_Corvette_01, HP_Corellian_Corvette_02, HP_Corellian_Corvette_03, HP_Corellian_Corvette_04, HP_CR90_Hangar, HP_CR90_Tractor_Beam
 		</HardPoints>
@@ -1040,6 +1053,9 @@
 		<Affiliation>Yevetha</Affiliation>
 		<Tech_Level>99</Tech_Level>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+
 
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Noorr_Self_Bonus">
@@ -1089,6 +1105,9 @@
 		<Affiliation>Yevetha</Affiliation>
 		<Tech_Level>99</Tech_Level>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+
 
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Fraan_Self_Bonus">

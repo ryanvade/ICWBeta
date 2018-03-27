@@ -360,8 +360,17 @@ GameObjectLibrary = {
             Scripts={
                 "MultiLayer",
                 "SingleUnitRetreat"
+            },        
+			Flags = {
+                HANGAR = true
             },
-            Fighters={
+			Fighters={
+                ["TIE_FIGHTER_SQUADRON"]={
+                    ["DEFAULT"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                }
             }
         },
         ["REPUBLIC_BOARDING_SHUTTLE"]={
@@ -614,6 +623,9 @@ GameObjectLibrary = {
                 "FighterSpawn",
                 "SingleUnitRetreat"
             },
+			Flags = {
+                HANGAR = true
+            },
             Fighters={
                 ["E-WING_SQUADRON"]={
                     ["REBEL"] = {
@@ -634,6 +646,9 @@ GameObjectLibrary = {
                 "MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat"
+            },
+            Flags = {
+                HANGAR = true
             },
             Fighters={
                 ["TIE_BOMBER_SQUADRON"]={
@@ -1155,7 +1170,7 @@ GameObjectLibrary = {
                         Initial=3
                     }
                 },
-                ["SHIELDED_TIE_SQUADRON"]={
+                ["REBEL_X-WING_SQUADRON"]={
                     ["REBEL"] = {
                         Reserve=10,
                         Initial=3
@@ -2144,6 +2159,9 @@ GameObjectLibrary = {
                 "FighterSpawn",
                 "SingleUnitRetreat"
             },
+            Flags = {
+                HANGAR = true
+            },
             Fighters={
                 ["MIYTIL_BOMBER_SQUADRON"]={
                     ["DEFAULT"] = {
@@ -2460,6 +2478,9 @@ GameObjectLibrary = {
                 "MultiLayer",
                 "FighterSpawn"
             },
+            Flags = {
+                HANGAR = true
+            },
             Fighters={
                 ["TRIFOIL_SQUADRON"]={
                     ["YEVETHA"] = {
@@ -2485,6 +2506,9 @@ GameObjectLibrary = {
             Scripts={
                 "MultiLayer",
                 "SingleUnitRetreat"
+            },
+            Flags = {
+                HANGAR = true
             },
             Fighters={
             }
@@ -2588,6 +2612,9 @@ GameObjectLibrary = {
                 "MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat"
+            },
+            Flags = {
+                HANGAR = true
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
@@ -2777,6 +2804,9 @@ GameObjectLibrary = {
                 "FighterSpawn",
                 "SingleUnitRetreat"
             },
+            Flags = {
+                HANGAR = true
+            },
             Fighters={
                 ["SCARSISS_SQUADRON"]={
                     ["DEFAULT"] = {
@@ -2856,6 +2886,9 @@ GameObjectLibrary = {
                 "MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat"
+            },
+            Flags = {
+                HANGAR = true
             },
             Fighters={
                 ["REBEL_X-WING_SQUADRON"]={
@@ -3260,6 +3293,9 @@ GameObjectLibrary = {
                 "MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat"
+            },
+            Flags = {
+                HANGAR = true
             },
             Fighters={
                 ["TIE_RAPTOR_SQUADRON"]={

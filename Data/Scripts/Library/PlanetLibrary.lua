@@ -92,6 +92,7 @@ PlanetLibrary = {
   ["DUMMY_EOTH"] = {Structures = {}},
   ["DUMMY_PIRATES"] = {Structures = {}},
   ["DUMMY_YEVETHA"] = {Structures = {}},
+  ["PAARIN"] = {Structures = {}},
   ["PAKRIK_MINOR"] = {Structures = {}},
   ["PALANHI"] = {Structures = {}},
   ["PANTOLOMIN"] = {Structures = {}},
@@ -125,6 +126,7 @@ PlanetLibrary = {
   ["SVIVREN"] = {Structures = {}},
   ["SYCA"] = {Structures = {}},
   ["TALASEA"] = {Structures = {}},
+  ["TYAN"] = {Structures = {}},
   ["TALFAGLIO"] = {Structures = {}},
   ["TANGRENE"] = {Structures = {}},
   ["TATOOINE"] = {Structures = {}},
@@ -167,6 +169,7 @@ PlanetLibrary = {
   ["HAPES"] = {Structures = {}},
   ["HAST"] = {Structures = {}},
   ["HELSKA_4"] = {Structures = {}},
+  ["HEWETT"] = {Structures = {}},
   ["HONOGHR"] = {Structures = {}},
   ["HOTH"] = {Structures = {}},
   ["ILC905"] = {Structures = {}},
@@ -225,6 +228,8 @@ PlanetLibrary = {
   ["ORINDA"] = {Structures = {}},
   ["ORISTROM"] = {Structures = {}},
   ["OROCCO"] = {Structures = {}},
+  ["TARTAGLIA"] = {Structures = {}},
+  ["CORTHENIA"] = {Structures = {}},
   ["OSSUS"] = {Structures = {}},
   ["CENTARES"] = {Structures = {}},
   ["COLUMEX"] = {Structures = {}},
@@ -237,7 +242,8 @@ PlanetLibrary = {
   ["CLAKDOR"] = {Structures = {}},
   ["VONDARC"] = {Structures = {}},
   ["EIATTU"] = {Structures = {}},
-  ["IPHIGIN"] = {Structures = {}}
+  ["IPHIGIN"] = {Structures = {}},
+  ["TRAVAL"] = {Structures = {}}
 }
 
 return PlanetLibrary

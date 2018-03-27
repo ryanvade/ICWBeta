@@ -34,7 +34,7 @@
 			Kuat,
 			Qretu,
 			Thyferra,
-			YagDhul
+			YagDhul,
 			<!-- New Republic -->
 			Brentaal,
 			Borleais,
@@ -58,7 +58,7 @@
 			Phind,
 			Selaggis,
 			Serenno,
-			Tangrene
+			Tangrene,
 			<!-- Krennel -->
 			Axxila,
 			Ciutric,
@@ -78,7 +78,6 @@
 			Belsmuth_Phind,
 			Borleais_Carida,
 			Borleais_Coruscant,
-			Borleais_Levian,
 			Borleais_Champala,
 			Bothawui_Denon,
 			Bothawui_Kothlis,
@@ -140,10 +139,12 @@
 		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>      
 		<AI_Player_Control> Rebel, SandboxHuman </AI_Player_Control>
 		<AI_Player_Control> Pirates, GenericAI </AI_Player_Control>
+		<AI_Player_Control> Warlords, None </AI_Player_Control>
 							
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Pirates, DefaultGalacticHints </Markup_Filename>	
+		<Markup_Filename>Warlords, None </Markup_Filename>	
 		
 		<Supports_Custom_Settings>False</Supports_Custom_Settings>
 		<Show_Completed_Tab>True</Show_Completed_Tab>
@@ -332,6 +333,7 @@
 		<Starting_Forces> Rebel, Coruscant, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<!-- Coruscant Land Forces -->
 		<Starting_Forces> Rebel, Coruscant, R_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Rebel, Coruscant, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -357,6 +359,7 @@
 		<Starting_Forces> Empire, Thyferra, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, E_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Empire_Ground_Mining_Facility </Starting_Forces>
+		<Starting_Forces> Empire, Thyferra, Remnant_Capital </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Imperial_Armor_Group </Starting_Forces>
@@ -465,6 +468,7 @@
 
 		
 		<!-- Belsmuth Space Forces -->	
+		<Starting_Forces> Pirates, Belsmuth, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, Dreadnaught_Empire </Starting_Forces>
@@ -478,14 +482,16 @@
 		<Starting_Forces> Pirates, Belsmuth, Zsinj_Light_Scout_Squad </Starting_Forces>	
 		<Starting_Forces> Pirates, Belsmuth, Zsinj_Heavy_Scout_Squad </Starting_Forces>	
 		
-		<!-- Selaggis Space Forces -->	
+		<!-- Selaggis Space Forces -->
+		<Starting_Forces> Pirates, Selaggis, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, Nebulon_B_Zsinj </Starting_Forces>
 		
-		<!-- Selaggis Space Forces -->	
+		<!-- Selaggis Space Forces -->
+		<Starting_Forces> Pirates, Celanon, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Dreadnaught_Empire </Starting_Forces>
@@ -499,6 +505,7 @@
 		<Starting_Forces> Pirates, Celanon, Zsinj_Light_Scout_Squad </Starting_Forces>
 		
 		<!-- Comkin Space Forces -->	
+		<Starting_Forces> Pirates, Comkin, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Nebulon_B_Zsinj </Starting_Forces>
 		<!-- Comkin Land Forces -->
@@ -508,7 +515,8 @@
 		<Starting_Forces> Pirates, Comkin, Zsinj_A6_Juggernaut_Company </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Zsinj_Light_Scout_Squad </Starting_Forces>
 		
-				<!-- Corsin Space Forces -->	
+		<!-- Corsin Space Forces -->
+		<Starting_Forces> Pirates, Corsin, Zsinj_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Nebulon_B_Zsinj </Starting_Forces>
@@ -519,10 +527,12 @@
 		<Starting_Forces> Pirates, Corsin, Zsinj_Raptor_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Zsinj_Raptor_Squad </Starting_Forces>
 
-				<!-- Serenno Space Forces -->	
+				<!-- Serenno Space Forces -->
+		<Starting_Forces> Pirates, Serenno, Zsinj_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Demolisher </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Implacable_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Strike_Cruiser </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Rancor_Base </Starting_Forces>
 		<!-- Serenno Land Forces -->
 		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Ground_Empire_Hypervelocity_Gun </Starting_Forces>
@@ -536,7 +546,8 @@
 		<Starting_Forces> Pirates, Serenno, Zsinj_Heavy_Scout_Squad </Starting_Forces>	
 		<Starting_Forces> Pirates, Serenno, Teubbo_Team </Starting_Forces>		
 		
-		<!-- Phindar Space Forces -->	
+		<!-- Phindar Space Forces -->
+		<Starting_Forces> Pirates, Phind, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Generic_Victory_Destroyer </Starting_Forces>
 		<!--Phindar Land Forces -->
@@ -546,18 +557,20 @@
 		<Starting_Forces> Pirates, Phind, Zsinj_Raptor_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Zsinj_Raptor_Squad </Starting_Forces>
 		
-		<!-- Phindar Space Forces -->
+		<!-- Tangrene Space Forces -->
+		<Starting_Forces> Pirates, Tangrene, Zsinj_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Iron_Fist </Starting_Forces>
-		<!--Phindar Land Forces -->
+		<!--Tangrene Land Forces -->
 		<Starting_Forces> Pirates, Tangrene, Pentastar_Commercial_Entity </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Pentastar_Commercial_Entity </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Pentastar_Commercial_Entity </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Zsinj_Raptor_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Zsinj_Heavy_Scout_Squad </Starting_Forces>
 		
-				<!-- Gravan Space Forces -->	
+				<!-- Gravan Space Forces -->
+		<Starting_Forces> Pirates, Gravan, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Nebulon_B_Zsinj </Starting_Forces>
 		<!-- Gravan Land Forces -->
@@ -730,7 +743,7 @@
 			Kuat,
 			Qretu,
 			Thyferra,
-			YagDhul
+			YagDhul,
 			<!-- New Republic -->
 			Brentaal,
 			Borleais,
@@ -754,7 +767,7 @@
 			Phind,
 			Selaggis,
 			Serenno,
-			Tangrene
+			Tangrene,
 			<!-- Krennel -->
 			Axxila,
 			Ciutric,
@@ -774,7 +787,6 @@
 			Belsmuth_Phind,
 			Borleais_Carida,
 			Borleais_Coruscant,
-			Borleais_Levian,
 			Borleais_Champala,
 			Bothawui_Denon,
 			Bothawui_Kothlis,
@@ -836,10 +848,13 @@
 		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>      
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Pirates, SandboxHuman </AI_Player_Control>
+		<AI_Player_Control> Warlords, None </AI_Player_Control>
 							
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Pirates, DefaultGalacticHints </Markup_Filename>	
+		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>	
+		
 		
 		<Supports_Custom_Settings>False</Supports_Custom_Settings>
 		<Show_Completed_Tab>True</Show_Completed_Tab>
@@ -1037,6 +1052,7 @@
 		<Starting_Forces> Rebel, Coruscant, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<!-- Coruscant Land Forces -->
 		<Starting_Forces> Rebel, Coruscant, R_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Rebel, Coruscant, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -1059,6 +1075,7 @@
 		<Starting_Forces> Empire, Thyferra, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, E_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Empire_Ground_Mining_Facility </Starting_Forces>
+		<Starting_Forces> Empire, Thyferra, Remnant_Capital </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Imperial_Armor_Group </Starting_Forces>
@@ -1159,10 +1176,12 @@
 
 		
 		<!-- Belsmuth Space Forces -->	
-		<Starting_Forces> Pirates, Belsmuth, Generic_Star_Destroyer </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, Dreadnaught_Empire </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Generic_Victory_Destroyer </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Nebulon_B_Zsinj </Starting_Forces>
 		<!-- Belsmuth Land Forces -->
 		<Starting_Forces> Pirates, Belsmuth, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, P_Ground_Light_Vehicle_Factory </Starting_Forces>
@@ -1171,17 +1190,18 @@
 		<Starting_Forces> Pirates, Belsmuth, Zsinj_Light_Scout_Squad </Starting_Forces>	
 		<Starting_Forces> Pirates, Belsmuth, Zsinj_Heavy_Scout_Squad </Starting_Forces>	
 		
-		<!-- Selaggis Space Forces -->	
+		<!-- Selaggis Space Forces -->
+		<Starting_Forces> Pirates, Selaggis, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, Nebulon_B_Zsinj </Starting_Forces>
 		
-		<!-- Selaggis Space Forces -->	
+		<!-- Selaggis Space Forces -->
+		<Starting_Forces> Pirates, Celanon, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Celanon, Dreadnaught_Empire </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Dreadnaught_Empire </Starting_Forces>
 		<!-- Comkin Land Forces -->
 		<Starting_Forces> Pirates, Celanon, P_Ground_Light_Vehicle_Factory </Starting_Forces>
@@ -1193,7 +1213,8 @@
 		<Starting_Forces> Pirates, Celanon, Zsinj_Light_Scout_Squad </Starting_Forces>
 		
 		<!-- Comkin Space Forces -->	
-		<Starting_Forces> Pirates, Comkin, Generic_Victory_Destroyer </Starting_Forces>
+		<Starting_Forces> Pirates, Comkin, Zsinj_Star_Base_1 </Starting_Forces>
+		<Starting_Forces> Pirates, Comkin, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Nebulon_B_Zsinj </Starting_Forces>
 		<!-- Comkin Land Forces -->
 		<Starting_Forces> Pirates, Comkin, P_Ground_Barracks </Starting_Forces>
@@ -1202,7 +1223,9 @@
 		<Starting_Forces> Pirates, Comkin, Zsinj_A6_Juggernaut_Company </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Zsinj_Light_Scout_Squad </Starting_Forces>
 		
-				<!-- Corsin Space Forces -->	
+		<!-- Corsin Space Forces -->
+		<Starting_Forces> Pirates, Corsin, Zsinj_Star_Base_1 </Starting_Forces>
+		<Starting_Forces> Pirates, Corsin, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Nebulon_B_Zsinj </Starting_Forces>
 		<!-- Corsin Land Forces -->
@@ -1212,10 +1235,12 @@
 		<Starting_Forces> Pirates, Corsin, Zsinj_Raptor_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Zsinj_Raptor_Squad </Starting_Forces>
 
-				<!-- Serenno Space Forces -->	
+				<!-- Serenno Space Forces -->
+		<Starting_Forces> Pirates, Serenno, Zsinj_Star_Base_3 </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Demolisher </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Implacable_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Strike_Cruiser </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Rancor_Base </Starting_Forces>
 		<!-- Serenno Land Forces -->
 		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Ground_Empire_Hypervelocity_Gun </Starting_Forces>
@@ -1229,7 +1254,8 @@
 		<Starting_Forces> Pirates, Serenno, Zsinj_Heavy_Scout_Squad </Starting_Forces>	
 		<Starting_Forces> Pirates, Serenno, Teubbo_Team </Starting_Forces>		
 		
-		<!-- Phindar Space Forces -->	
+		<!-- Phindar Space Forces -->
+		<Starting_Forces> Pirates, Phind, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Generic_Victory_Destroyer </Starting_Forces>
 		<!--Phindar Land Forces -->
@@ -1239,18 +1265,19 @@
 		<Starting_Forces> Pirates, Phind, Zsinj_Raptor_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Zsinj_Raptor_Squad </Starting_Forces>
 		
-		<!-- Phindar Space Forces -->
+		<!-- Tangrene Space Forces -->
 		<Starting_Forces> Pirates, Tangrene, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Iron_Fist </Starting_Forces>
-		<!--Phindar Land Forces -->
+		<!--Tangrene Land Forces -->
 		<Starting_Forces> Pirates, Tangrene, Pentastar_Commercial_Entity </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Pentastar_Commercial_Entity </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Pentastar_Commercial_Entity </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Zsinj_Raptor_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Zsinj_Heavy_Scout_Squad </Starting_Forces>
 		
-				<!-- Gravan Space Forces -->	
+				<!-- Gravan Space Forces -->
+		<Starting_Forces> Pirates, Gravan, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Nebulon_B_Zsinj </Starting_Forces>
 		<!-- Gravan Land Forces -->
@@ -1260,6 +1287,7 @@
 		<Starting_Forces> Pirates, Gravan, Zsinj_Raptor_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Zsinj_Raptor_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Zsinj_Heavy_Scout_Squad </Starting_Forces>	
+
 		
 		<!-- Corellia Space Forces -->
 		<Starting_Forces> Warlords, Corellia, Generic_Victory_Destroyer </Starting_Forces>
@@ -1421,7 +1449,7 @@
 			Kuat,
 			Qretu,
 			Thyferra,
-			YagDhul
+			YagDhul,
 			<!-- New Republic -->
 			Brentaal,
 			Borleais,
@@ -1445,7 +1473,7 @@
 			Phind,
 			Selaggis,
 			Serenno,
-			Tangrene
+			Tangrene,
 			<!-- Krennel -->
 			Axxila,
 			Ciutric,
@@ -1465,7 +1493,6 @@
 			Belsmuth_Phind,
 			Borleais_Carida,
 			Borleais_Coruscant,
-			Borleais_Levian,
 			Borleais_Champala,
 			Bothawui_Denon,
 			Bothawui_Kothlis,
@@ -1527,10 +1554,12 @@
 		<AI_Player_Control> Empire, SandboxHuman </AI_Player_Control>      
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Pirates, GenericAI </AI_Player_Control>
-							
+		<AI_Player_Control> Warlords, None </AI_Player_Control>
+
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Pirates, DefaultGalacticHints </Markup_Filename>	
+		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>	
 		
 		<Supports_Custom_Settings>False</Supports_Custom_Settings>
 		<Show_Completed_Tab>True</Show_Completed_Tab>
@@ -1820,6 +1849,7 @@
 		<Starting_Forces> Rebel, Coruscant, Y-Wing_Squadron_Buildable </Starting_Forces>
 		<!-- Coruscant Land Forces -->
 		<Starting_Forces> Rebel, Coruscant, R_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Rebel, Coruscant, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -1844,6 +1874,7 @@
 		<Starting_Forces> Empire, Thyferra, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, E_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Empire_Ground_Mining_Facility </Starting_Forces>
+		<Starting_Forces> Empire, Thyferra, Remnant_Capital </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Imperial_Armor_Group </Starting_Forces>
@@ -1871,8 +1902,7 @@
 
 		
 		<!-- Belsmuth Space Forces -->	
-		<Starting_Forces> Pirates, Belsmuth, Generic_Star_Destroyer </Starting_Forces>
-		<Starting_Forces> Pirates, Belsmuth, Generic_Star_Destroyer </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, Dreadnaught_Empire </Starting_Forces>
@@ -1886,17 +1916,18 @@
 		<Starting_Forces> Pirates, Belsmuth, Zsinj_Light_Scout_Squad </Starting_Forces>	
 		<Starting_Forces> Pirates, Belsmuth, Zsinj_Heavy_Scout_Squad </Starting_Forces>	
 		
-		<!-- Selaggis Space Forces -->	
+		<!-- Selaggis Space Forces -->
+		<Starting_Forces> Pirates, Selaggis, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Selaggis, Nebulon_B_Zsinj </Starting_Forces>
 		
-		<!-- Selaggis Space Forces -->	
+		<!-- Selaggis Space Forces -->
+		<Starting_Forces> Pirates, Celanon, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Celanon, Dreadnaught_Empire </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Dreadnaught_Empire </Starting_Forces>
 		<!-- Comkin Land Forces -->
 		<Starting_Forces> Pirates, Celanon, P_Ground_Light_Vehicle_Factory </Starting_Forces>
@@ -1908,8 +1939,8 @@
 		<Starting_Forces> Pirates, Celanon, Zsinj_Light_Scout_Squad </Starting_Forces>
 		
 		<!-- Comkin Space Forces -->	
+		<Starting_Forces> Pirates, Comkin, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Generic_Star_Destroyer </Starting_Forces>
-		<Starting_Forces> Pirates, Comkin, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Nebulon_B_Zsinj </Starting_Forces>
 		<!-- Comkin Land Forces -->
 		<Starting_Forces> Pirates, Comkin, P_Ground_Barracks </Starting_Forces>
@@ -1918,7 +1949,8 @@
 		<Starting_Forces> Pirates, Comkin, Zsinj_A6_Juggernaut_Company </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Zsinj_Light_Scout_Squad </Starting_Forces>
 		
-				<!-- Corsin Space Forces -->	
+		<!-- Corsin Space Forces -->
+		<Starting_Forces> Pirates, Corsin, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Nebulon_B_Zsinj </Starting_Forces>
@@ -1929,12 +1961,12 @@
 		<Starting_Forces> Pirates, Corsin, Zsinj_Raptor_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Zsinj_Raptor_Squad </Starting_Forces>
 
-				<!-- Serenno Space Forces -->	
+				<!-- Serenno Space Forces -->
+		<Starting_Forces> Pirates, Serenno, Zsinj_Star_Base_3 </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Demolisher </Starting_Forces>
-		<Starting_Forces> Pirates, Serenno, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Implacable_Star_Destroyer </Starting_Forces>
-		<Starting_Forces> Pirates, Serenno, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Strike_Cruiser </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Rancor_Base </Starting_Forces>
 		<!-- Serenno Land Forces -->
 		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, Ground_Empire_Hypervelocity_Gun </Starting_Forces>
@@ -1948,7 +1980,8 @@
 		<Starting_Forces> Pirates, Serenno, Zsinj_Heavy_Scout_Squad </Starting_Forces>	
 		<Starting_Forces> Pirates, Serenno, Teubbo_Team </Starting_Forces>		
 		
-		<!-- Phindar Space Forces -->	
+		<!-- Phindar Space Forces -->
+		<Starting_Forces> Pirates, Phind, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Generic_Victory_Destroyer </Starting_Forces>
 		<!--Phindar Land Forces -->
@@ -1958,18 +1991,19 @@
 		<Starting_Forces> Pirates, Phind, Zsinj_Raptor_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Zsinj_Raptor_Squad </Starting_Forces>
 		
-		<!-- Phindar Space Forces -->
+		<!-- Tangrene Space Forces -->
 		<Starting_Forces> Pirates, Tangrene, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Star_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Iron_Fist </Starting_Forces>
-		<!--Phindar Land Forces -->
+		<!--Tangrene Land Forces -->
 		<Starting_Forces> Pirates, Tangrene, Pentastar_Commercial_Entity </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Pentastar_Commercial_Entity </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Pentastar_Commercial_Entity </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Zsinj_Raptor_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Zsinj_Heavy_Scout_Squad </Starting_Forces>
 		
-				<!-- Gravan Space Forces -->	
+				<!-- Gravan Space Forces -->
+		<Starting_Forces> Pirates, Gravan, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Nebulon_B_Zsinj </Starting_Forces>
 		<!-- Gravan Land Forces -->

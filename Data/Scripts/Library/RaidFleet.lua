@@ -31,7 +31,7 @@ function MakeRaidFleet(chance)
     {"Skirmish_Lancer_Frigate", "Skirmish_Carrack_Cruiser", "Skirmish_Star_Destroyer_Two", "Skirmish_Victory_Destroyer_Two"},
     {"Skirmish_Vigilance_Gunship", "Skirmish_Auriette_Carrier", "Skirmish_Warlord", "Skirmish_Chiss_Star_Destroyer"},
      {"Skirmish_Lancer_Frigate", "Skirmish_Neutron_Star", "Skirmish_Star_Destroyer_Two", "Skirmish_Victory_Destroyer_Two"},
-    {"Skirmish_Enforcer", "Skirmish_Raider_Pentastar", "Skirmish_Procursator", "Skirmish_Secutor"},
+    {"Skirmish_Enforcer", "Skirmish_Raider_Pentastar", "Skirmish_Procursator", "Skirmish_Star_Destroyer_Two"},
     {"Skirmish_IPV1_Teradoc", "Skirmish_Carrack_Cruiser", "Skirmish_Star_Destroyer_Two", "Skirmish_Crimson_Victory"},
     {"Skirmish_Tartan_Patrol_Cruiser", "Skirmish_Carrack_Cruiser", "Skirmish_Tector", "Skirmish_Victory_Destroyer_Two"},
     {"Nova_Cruiser", "BattleDragon"}

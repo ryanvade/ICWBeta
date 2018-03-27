@@ -579,7 +579,8 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		
 				<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
-		
+			<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+	
 		<Affiliation>Pirates</Affiliation>
 		<Tech_Level>99</Tech_Level>
 			<Lua_Script></Lua_Script>
@@ -1136,6 +1137,9 @@
 
 		<Icon_Name>i_button_SYSCO.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+
+				<CategoryMask> Capital |  AntiCapital | SpaceHero </CategoryMask>
+
 		
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
@@ -1474,8 +1478,20 @@
 		
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
-		
-		</Unit_Abilities_Data>
+            <!-- Primary ability -->
+            <Unit_Ability>
+                <Type>POWER_TO_WEAPONS</Type>
+                <Expiration_Seconds>25</Expiration_Seconds>
+                <Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,    0.5f</Mod_Multiplier>
+                <Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,    -3f</Mod_Multiplier>
+                <Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,    1.0f</Mod_Multiplier>
+                <Mod_Multiplier>SPEED_MULTIPLIER,        0.5f</Mod_Multiplier>
+                <Recharge_Seconds>45</Recharge_Seconds>
+
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+            </Unit_Ability>
+
+        </Unit_Abilities_Data>
 
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Otro_Self_Bonus">

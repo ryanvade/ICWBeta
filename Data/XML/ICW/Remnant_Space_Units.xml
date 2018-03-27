@@ -508,7 +508,7 @@
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
 		<Damage>70</Damage>
 		<Autoresolve_Health>23400</Autoresolve_Health>
-		<Shield_Points>11000</Shield_Points>
+		<Shield_Points>14000</Shield_Points>
 		<Tactical_Health>11700</Tactical_Health> <!-- was 6000 -->
 		<Shield_Refresh_Rate>40</Shield_Refresh_Rate>
 		<Energy_Capacity>8000</Energy_Capacity>
@@ -738,7 +738,7 @@
 			HP_Strike_01, HP_Strike_02, HP_Strike_03, HP_Strike_04, HP_Strike_05, HP_Strike_06, HP_Strike_Engines, HP_Strike_Hangar, HP_Strike_Shields
 		</HardPoints>
 
-		<CategoryMask> Frigate | AntiCorvette</CategoryMask>
+		<CategoryMask> Frigate | AntiCorvette | Boardable</CategoryMask>
 		<Icon_Name>i_button_strike.tga</Icon_Name>
 		<GUI_Model_Name>StrikeCruiser.alo</GUI_Model_Name>
 		<GUI_Distance>1100</GUI_Distance>
@@ -854,7 +854,7 @@
 			</Planet_Income_Bonus_Ability>
 		</Abilities>
 
-		<Encyclopedia_Text> TEXT_TOOLTIP_STRIKE_CRUISER</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_STRIKE_CRUISER TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 2250</Score_Cost_Credits>
 
@@ -901,7 +901,7 @@
         <Icon_Name>i_button_crimson.tga</Icon_Name>
         <GUI_Model_Name>EV_VictoryStarDestroyerMark2.alo</GUI_Model_Name>
 
-        <Encyclopedia_Text> TEXT_TOOLTIP_CRIMSON </Encyclopedia_Text>
+        <Encyclopedia_Text> TEXT_TOOLTIP_CRIMSON TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
         <Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
 
     </SpaceUnit>
@@ -1006,7 +1006,7 @@
 
 				<Surface_Bombardment_Capable>yes</Surface_Bombardment_Capable>
 				<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-        <CategoryMask> Frigate | AntiCorvette</CategoryMask>
+        <CategoryMask> Frigate | AntiCorvette | Boardable</CategoryMask>
         <Icon_Name>i_button_MTC_Sensor.tga</Icon_Name>
         <GUI_Model_Name>EV_MTC.alo</GUI_Model_Name>
         <GUI_Distance>1100</GUI_Distance>
@@ -1083,7 +1083,7 @@
 			</Planet_Income_Bonus_Ability>
 		</Abilities>
 
-        <Encyclopedia_Text> TEXT_TOOLTIP_MTC_SENSOR </Encyclopedia_Text>
+        <Encyclopedia_Text> TEXT_TOOLTIP_MTC_SENSOR TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
         <Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
         <Score_Cost_Credits> 2250</Score_Cost_Credits>
 

@@ -132,6 +132,7 @@
 		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
+		<CategoryMask> Frigate | SpaceHero </CategoryMask>
 		
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
@@ -277,7 +278,7 @@
 			HP_Karrde_01, HP_Karrde_02, HP_Karrde_03
 		</HardPoints>
 
-		<CategoryMask> Frigate | AntiCorvette</CategoryMask>
+		<CategoryMask> Frigate | AntiCorvette | SpaceHero</CategoryMask>
 		<Icon_Name>i_button_talon_karrde.tga</Icon_Name>
 		<GUI_Model_Name>RV_WildKarrde.ALO</GUI_Model_Name>
 		<GUI_Distance>1200</GUI_Distance>
@@ -563,6 +564,9 @@
 		
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+	
+			<CategoryMask> Frigate | SpaceHero </CategoryMask>
+
 
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -632,6 +636,7 @@
 		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
+		<CategoryMask> Frigate | SpaceHero </CategoryMask>
 		
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
@@ -980,6 +985,7 @@
 		
 				<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
 		
 		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 5</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 5</Starting_Spawned_Units_Tech_0>
@@ -1106,6 +1112,8 @@
 		<Reserve_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+
 
 		<SFXEvent_Select>Unit_Select_Han_Solo</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Han_Solo</SFXEvent_Move>
@@ -3012,6 +3020,9 @@
 		<Text_ID>TEXT_HERO_BOOSTER</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMERCIAL TEXT_TOOLTIP_BIO TEXT_TOOLTIP_BOOSTER TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ERRANTVENTURE </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPTAIN </Encyclopedia_Unit_Class>
+		
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+
 
 		<Tech_Level>99</Tech_Level>
 		<SFXEvent_Select>Unit_Select_Piett</SFXEvent_Select>
@@ -3234,7 +3245,9 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPTAIN </Encyclopedia_Unit_Class>
 
 		<Space_Model_Name>EV_Red.ALO</Space_Model_Name>
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
 
+		
 		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
@@ -3331,6 +3344,7 @@
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<CategoryMask> Capital |  AntiCapital | SpaceHero </CategoryMask>
 
 			<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
         <Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
@@ -3803,6 +3817,9 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+
+		
 		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
@@ -3866,6 +3883,8 @@
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script>GenericGameObject</Lua_Script>
 		
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Sovv_Self_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
@@ -3905,6 +3924,7 @@
 		<Variant_Of_Existing_Type>Endurance</Variant_Of_Existing_Type>
 				
         <Ranking_In_Category>3</Ranking_In_Category>
+
 		
 		<Tech_Level>99</Tech_Level>
 		
@@ -4076,6 +4096,7 @@
 		<Icon_Name>i_button_yonka.tga</Icon_Name>
 		
 				<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, POWERED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
 
 		
 		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
@@ -4148,6 +4169,7 @@
 		<Lua_Script>GenericGameObject</Lua_Script>
 		
 				<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, POWERED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
 
 		
 		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
