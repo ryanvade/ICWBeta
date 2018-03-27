@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<!-- Equations that define perception functions -->
+<Equations>
+
+	<!--Value planets based mostly on income and trade routes.  Also consider structure and base capabilities -->
+	<GenericPlanetValue>
+		( 15.0 * Variable_Target.BaseIncome +
+		  1.0 * Variable_Target.MaxStructureSlots + 
+		  2.0 * Variable_Target.MaxGroundbaseLevel + 
+		  2.0 * Variable_Target.MaxStarbaseLevel +
+		  10.0 * Variable_Target.TradeRoutes) / 30.0 
+	</GenericPlanetValue>
+
+	<Is_Home_Planet>
+		Variable_Target.Type.Token == Variable_Self.HomePlanet.Type.Token
+	</Is_Home_Planet>
+	
+	<Is_Production_Planet>
+		5 * (Variable_Target.StarbaseLevel == 3)
+		+
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Barracks",
+													Parameter_Type = "R_Ground_Barracks",
+													Parameter_Type = "P_Ground_Barracks",
+													Parameter_Only_Consider_Complete = 1.0}
+		+
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "R_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Heavy_Vehicle_Factory",
+													Parameter_Only_Consider_Complete = 1.0}
+		+
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Advanced_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Advanced_Vehicle_Factory",
+													Parameter_Only_Consider_Complete = 1.0}
+		+
+		clamp(Function_Defense_Level.Evaluate, 0.0, 2.0)
+	</Is_Production_Planet>
+	
+	<One>
+		1.0
+	</One>
+
+    <ReallySmall>
+        0.000000001
+    </ReallySmall>
+
+	<ReallyBig>
+		50.0
+	</ReallyBig>
+
+	<Medium>
+		25.0
+	</Medium>
+
+	<Medium_High>
+		35.0
+	</Medium_High>
+
+	<High>
+		40.0
+	</High>
+
+	<Zero>
+		0.0
+	</Zero>
+
+	<Is_Connected_To_Player>
+		(Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}) > 0.0
+	</Is_Connected_To_Player>
+	
+</Equations>
