@@ -9,7 +9,7 @@
 
 	<Priority_Set Name="AntiInfantry">
 		<Attack_Priorities>
-			LandHero, 0.5,	Infantry, 1.0,		Turret, 2.0,		Vehicle, 3.0,   TacticalStructure, 4.0, Structure, 5.0
+			LandHero, 0.5,	Infantry, 1.0,		Vehicle, 2.0,		Structure, 3.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall, Air
@@ -19,20 +19,20 @@
 	
 	<Priority_Set Name="AntiInfantryAir">
 		<Attack_Priorities>
-			LandHero, 0.5,	Infantry, 1.0,		Turret, 2.0,		Air, 2.5,		Vehicle, 3.0,   TacticalStructure, 4.0, Structure, 5.0
+			LandHero, 0.5,	Infantry, 1.0,		Air, 2.5,		Vehicle, 3.0,   Structure, 4.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall
 		</Category_Exclusions>
 		<Property_Exclusions>NotOpportunityTarget</Property_Exclusions>
 		<Unit_Exclusions>
-			Y-Wing_Bombing_Run, TIE_Bomber_Bombing_Run, Skipray_Bombing_Run
+			Y-Wing_Bombing_Run, TIE_Bomber_Bombing_Run, Skipray_Bombing_Run, Syca_Bombing_Run
 		</Unit_Exclusions>
 	</Priority_Set>
 
 	<Priority_Set Name="AntiVehicle">
 		<Attack_Priorities>
-			Vehicle, 1.0,  LandHero, 1.5,	   Turret, 2.0,	   Infantry, 3.0,     Structure, 3.5,	TacticalStructure, 4.0
+			Vehicle, 1.0,  LandHero, 1.5,	   Infantry, 3.0,     Structure, 3.5
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall, Air
@@ -42,7 +42,7 @@
 
     <Priority_Set Name="AntiVehicleStructure">
         <Attack_Priorities>
-            Vehicle, 1.0,  LandHero, 1.5,	   Turret, 2.0,    Infantry, 3.0, Structure, 4.0,     TacticalStructure, 4.0
+            Vehicle, 1.0,  LandHero, 1.5,	  Infantry, 3.0, Structure, 4.0
         </Attack_Priorities>
         <Category_Exclusions>
             Wall, Air
@@ -52,7 +52,7 @@
 	
 	<Priority_Set Name="AntiVehicleAir">
         <Attack_Priorities>
-            Vehicle, 1.0,  LandHero, 1.5,	   Turret, 2.0,    	Air, 2.5,	Infantry, 3.0, Structure, 4.0,     TacticalStructure, 4.0
+            Vehicle, 1.0,  LandHero, 1.5,	   Air, 2.5,	Infantry, 3.0, Structure, 4.0
         </Attack_Priorities>
         <Category_Exclusions>
             Wall
@@ -62,20 +62,20 @@
 	
 	<Priority_Set Name="AntiVehicleAirNoBomb">
         <Attack_Priorities>
-            Vehicle, 1.0,  LandHero, 1.5,	   Turret, 2.0,    	Air, 2.5,	Infantry, 3.0, Structure, 4.0,     TacticalStructure, 4.0
+            Vehicle, 1.0,  LandHero, 1.5,	   Air, 2.5,	Infantry, 3.0, Structure, 4.0
         </Attack_Priorities>
         <Category_Exclusions>
             Wall
         </Category_Exclusions>
 		<Property_Exclusions>NotOpportunityTarget</Property_Exclusions>
 		<Unit_Exclusions>
-			Y-Wing_Bombing_Run, TIE_Bomber_Bombing_Run, Skipray_Bombing_Run
+			Y-Wing_Bombing_Run, TIE_Bomber_Bombing_Run, Skipray_Bombing_Run, Syca_Bombing_Run
 		</Unit_Exclusions>
     </Priority_Set>
 
 	<Priority_Set Name="AntiAir">
 		<Attack_Priorities>
-			Air, 1.0, Vehicle, 2.0,	Turret, 3.0,	Infantry, 4.0,  TacticalStructure, 5.0
+			Air, 1.0, Vehicle, 2.0,	Infantry, 4.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall
@@ -85,7 +85,7 @@
 
     <Priority_Set Name="ATATAntiEverything">
         <Attack_Priorities>
-            Vehicle, 1.0,  LandHero, 2.5,	Turret, 2.0,  Infantry, 4.0, Structure, 3.0,     TacticalStructure, 4.0
+            Vehicle, 1.0,  LandHero, 2.5,	Infantry, 4.0, Structure, 3.0
         </Attack_Priorities>
         <Category_Exclusions>
             Wall
@@ -120,7 +120,7 @@
 
 	<Priority_Set Name="Destroyer_Droid_Attack_Priority">
 		<Attack_Priorities>
-			LandHero, 1.0,	Infantry, 2.0, Vehicle, 3.0, Turret, 4.0, TacticalStructure, 5.0, Structure, 5.0
+			LandHero, 1.0,	Infantry, 2.0, Vehicle, 3.0, Structure, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall, Air
@@ -133,10 +133,8 @@
             Vehicle, 1.0, 
             Air, 2.0
             LandHero, 4.0, 
-            Turret, 3.0,
             Infantry, 5.0, 
-            Structure, 6.0,     
-            TacticalStructure, 6.0
+            Structure, 6.0
         </Attack_Priorities>
         <Category_Exclusions>
             Wall
@@ -147,11 +145,9 @@
 	<Priority_Set Name="Rocket_Vehicle_Attack_Priority"> <!-- used only by MAL, air removed -->
         <Attack_Priorities>
             Vehicle, 1.0, 
-            Turret, 2.0,
             LandHero, 3.0,
             Infantry, 4.0, 
-            Structure, 5.0,     
-            TacticalStructure, 5.0
+            Structure, 5.0
         </Attack_Priorities>
         <Category_Exclusions>
             Wall, Air
@@ -162,10 +158,8 @@
 	<Priority_Set Name="Anti_All_Attack_Priority"> <!-- used only by Canderous -->
         <Attack_Priorities>
             Vehicle, 1.0, 
-            Turret, 2.0,
 			Air, 3.0,
             Structure, 4.0,     
-            TacticalStructure, 4.0,
             LandHero, 5.0,
             Infantry, 6.0
         </Attack_Priorities>
@@ -188,7 +182,7 @@
 	<!-- Prevent Rancors in Dathomir mission from attacking night sister units -->
 	<Priority_Set Name="Rancor_Dark_Ally_Attack_Priority">
 		<Attack_Priorities>
-			LandHero, 0.5,	Infantry, 1.0,	TacticalStructure, 2.0
+			LandHero, 0.5,	Infantry, 1.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall, Structure, Air
@@ -227,7 +221,7 @@
 
 	<Priority_Set Name="AntiStructure">
 		<Attack_Priorities>
-			Turret, 1.0,	Vehicle, 2.0,	Infantry, 3.0,	TacticalStructure, 4.0
+			Turret, 1.0,	Vehicle, 2.0,	Infantry, 3.0,	Structure, 4.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall, Air
@@ -237,7 +231,7 @@
 
 	<Priority_Set Name="AntiInfantry_No_Structures">
 		<Attack_Priorities>
-			LandHero, 0.5,	Infantry, 1.0,	TacticalStructure, 2.0, Structure, 5.0
+			LandHero, 0.5,	Infantry, 1.0,	Structure, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall, Air
@@ -247,7 +241,7 @@
 
 	<Priority_Set Name="AntiVehicle_No_Structures">
 		<Attack_Priorities>
-			Vehicle, 1.0,	LandHero, 1.5,	TacticalStructure, 2.0, Structure, 5.0
+			Vehicle, 1.0,	LandHero, 1.5,	Structure, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall, Air
@@ -257,7 +251,7 @@
 
 	<Priority_Set Name="AvoidAntiInfantryTurrets">
 		<Attack_Priorities>
-			LandHero, 0.5,	Infantry, 1.0,		Turret, 2.0,		Vehicle, 3.0,     TacticalStructure, 4.0, Structure, 5.0
+			LandHero, 0.5,	Infantry, 1.0,		Vehicle, 3.0,     Structure, 4.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall, Air
@@ -270,7 +264,7 @@
 	
 	<Priority_Set Name="AvoidAntiInfantryTurretsAir">
 		<Attack_Priorities>
-			LandHero, 0.5,	Infantry, 1.0,		Turret, 2.0,	Air, 2.5,		Vehicle, 3.0,     TacticalStructure, 4.0, Structure, 5.0
+			LandHero, 0.5,	Infantry, 1.0,		Air, 2.5,		Vehicle, 3.0,     Structure, 4.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall
@@ -286,8 +280,6 @@
 			LandHero, 1.0,	
 			Infantry, 2.0,     
 			Vehicle, 3.0,
-			Turret, 4.0,
-			TacticalStructure, 5.0,
 			Structure, 5.0,
 		</Attack_Priorities>
 		<Category_Exclusions>
@@ -308,11 +300,10 @@
 			MPTL, 1.0,	
 			SPMAT_Walker, 1.0,
 			Vehicle, 2.0,
-			Turret, 3.0,    
-			TacticalStructure, 4.0,
 			Air, 5.0,
 			LandHero, 6.0,
 			Infantry, 7.0
+			Structure, 8.0,
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall
@@ -330,9 +321,7 @@
 	<Priority_Set Name="Air_Attack_Move">
 		<Attack_Priorities>
 			SPMAT_Walker, 1.0,
-			Vehicle, 2.0,
-			Turret, 3.0,     
-			TacticalStructure, 4.0,
+			Vehicle, 2.0,  
 			Air, 5.0,
 			LandHero, 6.0,
 			Infantry, 7.0,
@@ -357,11 +346,10 @@
 		<Attack_Priorities>
 			MPTL, 1.0,	
 			SPMAT_Walker, 1.0,
-			Vehicle, 2.0,
-			Turret, 3.0,    
-			TacticalStructure, 4.0,
+			Vehicle, 2.0,  
 			LandHero, 5.0,
-			Infantry, 6.0
+			Infantry, 6.0,
+			Structure, 7.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall, Air
@@ -381,8 +369,7 @@
 			LandHero, 1.0,
 			Infantry, 2.0,
 			Vehicle, 3.0,
-			Turret, 4.0,
-			TacticalStructure, 5.0,
+			Structure, 5.0,
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall, Air
@@ -401,8 +388,6 @@
 
 	<Priority_Set Name="Artillery_Attack_Move">
 		<Attack_Priorities>
-			Turret, 1.0,
-			TacticalStructure, 2.0,
 			Vehicle, 3.0,
 			Structure, 4.0,
 			LandHero, 5.0,

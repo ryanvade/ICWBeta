@@ -103,12 +103,31 @@
 		<Reward_Param2>0</Reward_Param2>
 	</Event>
 	
+	<Event Name="Faction_Branch_Playing_NewRep">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_NewRep_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
+	</Event>
+	
+	
 	<Event Name="Faction_Branch_Enabler_Remnant">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>ENABLE_BRANCH_EMPIRE_FLAG</Event_Param2>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
 		<Reward_Param1>Faction_Branch_Remnant</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Remnant">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Empire_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
 	</Event>
 	
 	<Event Name="Faction_Branch_Enabler_EotH">
@@ -119,12 +138,30 @@
 		<Reward_Param2>0</Reward_Param2>
 	</Event>
 	
+	<Event Name="Faction_Branch_Playing_EotH">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_EotH_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_EotH</Prereq>
+	</Event>
+	
 	<Event Name="Faction_Branch_Enabler_Eriadu">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>ENABLE_BRANCH_ERIADU_FLAG</Event_Param2>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
 		<Reward_Param1>Faction_Branch_Eriadu</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Eriadu">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Eriadu_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Eriadu</Prereq>
 	</Event>
 	
 	<Event Name="Faction_Branch_Enabler_Zsinj">
@@ -135,12 +172,30 @@
 		<Reward_Param2>0</Reward_Param2>
 	</Event>
 	
+	<Event Name="Faction_Branch_Playing_Zsinj">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Zsinj_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Zsinj</Prereq>
+	</Event>
+	
 	<Event Name="Faction_Branch_Enabler_Teradoc">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>ENABLE_BRANCH_TERADOC_FLAG</Event_Param2>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
 		<Reward_Param1>Faction_Branch_Teradoc</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Teradoc">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Teradoc_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Teradoc</Prereq>
 	</Event>
 	
 	<Event Name="Faction_Branch_Enabler_Pentastar">
@@ -151,12 +206,228 @@
 		<Reward_Param2>0</Reward_Param2>
 	</Event>	
 	
+	<Event Name="Faction_Branch_Playing_Pentastar">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Pentastar_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Pentastar</Prereq>
+	</Event>
+	
 	<Event Name="Faction_Branch_Enabler_Yevetha">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>ENABLE_BRANCH_YEVETHA_FLAG</Event_Param2>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
 		<Reward_Param1>Faction_Branch_Yevetha</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Yevetha">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Yevetha_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Yevetha</Prereq>
+	</Event>
+	
+ <!-- ================================================================= -->
+  <!-- ==================== BEGIN SAVE CRASH EVENTS ==================== -->
+  <!-- ================================================================= -->
+
+	<Event Name="Filter_Save_Fixer_Enable">
+		<Event_Type>STORY_CLICK_GUI</Event_Type>
+		<Event_Param1>b_save_fixer</Event_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>
+  
+	<Event Name="Save_AI_Disable_Rebel">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Enable</Prereq>
+		<Branch>Faction_Branch_NewRep_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+	<Event Name="Save_AI_Disable_Empire">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Enable</Prereq>
+		<Branch>Faction_Branch_Empire_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Disable_EotH">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Underworld</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Enable</Prereq>
+		<Branch>Faction_Branch_EotH_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Disable_Pentastar">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Pentastar</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Enable</Prereq>
+		<Branch>Faction_Branch_Pentastar_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Disable_Pirates">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Pirates</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Enable</Prereq>
+		<Branch>Faction_Branch_Zsinj_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Disable_Eriadu">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Hutts</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Enable</Prereq>
+		<Branch>Faction_Branch_Eriadu_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Disable_Teradoc">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Teradoc</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Enable</Prereq>
+		<Branch>Faction_Branch_Teradoc_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+	<Event Name="Save_AI_Disable_Yevetha">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Yevetha</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Enable</Prereq>
+		<Branch>Faction_Branch_Yevetha_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Disable_Harrsk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Harrsk</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Enable</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+  
+	<Event Name="Filter_Save_Fixer_Disable">
+		<Event_Type>STORY_CLICK_GUI</Event_Type>
+		<Event_Param1>b_save_fixer01</Event_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>
+  
+  	<Event Name="Save_AI_Enable_Rebel">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>GenericAI</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Disable</Prereq>
+		<Branch>Faction_Branch_NewRep_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+	<Event Name="Save_AI_Enable_Empire">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>GenericAI</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Disable</Prereq>
+		<Branch>Faction_Branch_Empire_Save</Branch>
+
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Enable_EotH">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Underworld</Reward_Param1>
+		<Reward_Param2>GenericAI</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Disable</Prereq>
+		<Branch>Faction_Branch_EotH_Save</Branch>
+
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Enable_Pentastar">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Pentastar</Reward_Param1>
+		<Reward_Param2>GenericAI</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Disable</Prereq>
+		<Branch>Faction_Branch_Pentastar_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Enable_Pirates">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Pirates</Reward_Param1>
+		<Reward_Param2>GenericAI</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Disable</Prereq>
+		<Branch>Faction_Branch_Zsinj_Save</Branch>
+
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Enable_Eriadu">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Hutts</Reward_Param1>
+		<Reward_Param2>GenericAI</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Disable</Prereq>
+		<Branch>Faction_Branch_Eriadu_Save</Branch>
+
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Enable_Teradoc">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Teradoc</Reward_Param1>
+		<Reward_Param2>GenericAI</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Disable</Prereq>
+		<Branch>Faction_Branch_Teradoc_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+	<Event Name="Save_AI_Enable_Yevetha">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Yevetha</Reward_Param1>
+		<Reward_Param2>GenericAI</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Disable</Prereq>
+		<Branch>Faction_Branch_Yevetha_Save</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Save_AI_Enable_Harrsk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Harrsk</Reward_Param1>
+		<Reward_Param2>GenericAI</Reward_Param2>
+		<Prereq>Filter_Save_Fixer_Disable</Prereq>
+		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<!--***********************************************************-->
