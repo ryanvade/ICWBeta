@@ -24,7 +24,6 @@ require("PGBase")
 require("PGStateMachine")
 require("PGStoryMode")
 require("PGSpawnUnits")
-require("ChangeOwnerUtilities")
 
 function Definitions()
 
@@ -43,8 +42,8 @@ end
 function Find_Faction(message)
   if message == OnEnter then
 
-    local p_newrep = Find_Player("Rebel")
-    local p_empire = Find_Player("Empire")
+     p_newrep = Find_Player("Rebel")
+     p_empire = Find_Player("Empire")
    
 
     if p_newrep.Is_Human() then
@@ -58,21 +57,21 @@ end
 function Requiem_Spawn(message)
   if message == OnEnter then
 
-    local p_rebel = Find_Player("Rebel")
-    local start_planet = FindPlanet("Ciutric")
+     p_rebel = Find_Player("Rebel")
+     start_planet = FindPlanet("Ciutric")
 
     if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-      local allPlanets = FindPlanet.Get_All_Planets()
-      local random = GameRandom(1, table.getn(allPlanets))
-      local start_planet = allPlanets[random]
+       allPlanets = FindPlanet.Get_All_Planets()
+       random = GameRandom(1, table.getn(allPlanets))
+       start_planet = allPlanets[random]
       while start_planet.Get_Owner() ~= Find_Player("Rebel") do
-        local random = GameRandom(1, table.getn(allPlanets))
-        local start_planet = allPlanets[random]
+         random = GameRandom(1, table.getn(allPlanets))
+         start_planet = allPlanets[random]
       end
     end
 
-    local spawn_list_requiem = { "Requiem_Squadron_Space" }
-    local RequiemSpawn = SpawnList(spawn_list_requiem, start_planet, p_rebel,false,false)
+     spawn_list_requiem = { "Requiem_Squadron_Space" }
+     RequiemSpawn = SpawnList(spawn_list_requiem, start_planet, p_rebel,false,false)
 
   end
 end
@@ -80,21 +79,21 @@ end
 function NR_Lusankya(message)
   if message == OnEnter then
 
-    local p_rebel = Find_Player("Rebel")
-    local start_planet = FindPlanet("Bilbringi")
+     p_rebel = Find_Player("Rebel")
+     start_planet = FindPlanet("Bilbringi")
 
     if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-      local allPlanets = FindPlanet.Get_All_Planets()
-      local random = GameRandom(1, table.getn(allPlanets))
-      local start_planet = allPlanets[random]
+       allPlanets = FindPlanet.Get_All_Planets()
+       random = GameRandom(1, table.getn(allPlanets))
+       start_planet = allPlanets[random]
       while start_planet.Get_Owner() ~= Find_Player("Rebel") do
-        local random = GameRandom(1, table.getn(allPlanets))
-        local start_planet = allPlanets[random]
+         random = GameRandom(1, table.getn(allPlanets))
+         start_planet = allPlanets[random]
       end
     end
 
-    local spawn_list_lusankya = { "Wedge_Lusankya" }
-    local LusankyaSpawn = SpawnList(spawn_list_lusankya, start_planet, p_rebel,false,false)
+     spawn_list_lusankya = { "Wedge_Lusankya" }
+     LusankyaSpawn = SpawnList(spawn_list_lusankya, start_planet, p_rebel,false,false)
 
   end
 end
@@ -102,21 +101,21 @@ end
 function CH_Lusankya(message)
   if message == OnEnter then
 
-    local p_empire = Find_Player("Empire")
-    local start_planet = FindPlanet("Bilbringi")
+     p_empire = Find_Player("Empire")
+     start_planet = FindPlanet("Bilbringi")
 
     if start_planet.Get_Owner() ~= Find_Player("Empire") then
-      local allPlanets = FindPlanet.Get_All_Planets()
-      local random = GameRandom(1, table.getn(allPlanets))
-      local start_planet = allPlanets[random]
+       allPlanets = FindPlanet.Get_All_Planets()
+       random = GameRandom(1, table.getn(allPlanets))
+       start_planet = allPlanets[random]
       while start_planet.Get_Owner() ~= Find_Player("Empire") do
-        local random = GameRandom(1, table.getn(allPlanets))
-        local start_planet = allPlanets[random]
+         random = GameRandom(1, table.getn(allPlanets))
+         start_planet = allPlanets[random]
       end
     end
 
-    local spawn_list_lusankya = { "Lusankya", "TIE_Defender_Squadron_Buildable", "TIE_Defender_Squadron_Buildable" }
-    local LusankyaSpawn = SpawnList(spawn_list_lusankya, start_planet, p_empire,false,false)
+     spawn_list_lusankya = { "Lusankya", "TIE_Defender_Squadron_Buildable", "TIE_Defender_Squadron_Buildable" }
+     LusankyaSpawn = SpawnList(spawn_list_lusankya, start_planet, p_empire,false,false)
 
   end
 end

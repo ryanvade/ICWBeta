@@ -24,7 +24,7 @@ require("PGBase")
 require("PGStateMachine")
 require("PGStoryMode")
 require("PGSpawnUnits")
-require("ChangeOwnerUtilities")
+
 
 function Definitions()
 
@@ -47,14 +47,14 @@ end
 function Find_Faction(message)
   if message == OnEnter then
 
-	local p_newrep = Find_Player("Rebel")
-	local p_empire = Find_Player("Empire")
-	local p_eoth = Find_Player("Underworld")
-	local p_eriadu = Find_Player("Hutts")
-	local p_pentastar = Find_Player("Pentastar")
-	local p_zsinj = Find_Player("Pirates")
-	local p_maldrood = Find_Player("Teradoc")
-	local p_yevetha = Find_Player("Yevetha")
+	 p_newrep = Find_Player("Rebel")
+	 p_empire = Find_Player("Empire")
+	 p_eoth = Find_Player("Underworld")
+	 p_eriadu = Find_Player("Hutts")
+	 p_pentastar = Find_Player("Pentastar")
+	 p_zsinj = Find_Player("Pirates")
+	 p_maldrood = Find_Player("Teradoc")
+	 p_yevetha = Find_Player("Yevetha")
 
 	if p_newrep.Is_Human() then
 		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
@@ -80,16 +80,16 @@ end
 function Commenor_Maldrood(message)
   if message == OnEnter then
 
-    local p_maldrood = Find_Player("Teradoc")
-    local start_planet = FindPlanet("Commenor")
+     p_maldrood = Find_Player("Teradoc")
+     start_planet = FindPlanet("Commenor")
 
 
     if start_planet.Get_Owner() == Find_Player("Teradoc") then
 		if p_maldrood.Is_Human() then
 			Story_Event("GENDARR_JOINS_SPEECH")
 		end
-     local  spawn_list_commenor = { "Lott_Team" , "Gendarr_Reliance" }
-     local  CommenorSpawn = SpawnList(spawn_list_commenor, start_planet, p_maldrood,true, false)
+       spawn_list_commenor = { "Lott_Team" , "Gendarr_Reliance" }
+       CommenorSpawn = SpawnList(spawn_list_commenor, start_planet, p_maldrood,true, false)
     end
 
   elseif message == OnUpdate then
@@ -99,16 +99,16 @@ end
 function Antem_Maldrood(message)
   if message == OnEnter then
 
-   local  p_maldrood = Find_Player("Teradoc")
-    local start_planet = FindPlanet("Antem")
+     p_maldrood = Find_Player("Teradoc")
+     start_planet = FindPlanet("Antem")
 
 
     if start_planet.Get_Owner() == Find_Player("Teradoc") then
 		if p_maldrood.Is_Human() then
 			Story_Event("GETELLES_JOINS_SPEECH")
 		end
-      local spawn_list_kosh = { "Getelles_Team" , "Larm_Carrack" }
-      local KoshSpawn = SpawnList(spawn_list_kosh, start_planet, p_maldrood,true, false)
+       spawn_list_kosh = { "Getelles_Team" , "Larm_Carrack" }
+       KoshSpawn = SpawnList(spawn_list_kosh, start_planet, p_maldrood,true, false)
       --end
     end
 
@@ -120,16 +120,16 @@ end
 function Kashyyyk_Maldrood(message)
   if message == OnEnter then
 
-    local p_maldrood = Find_Player("Teradoc")
-    local start_planet = FindPlanet("Kashyyyk")
+     p_maldrood = Find_Player("Teradoc")
+     start_planet = FindPlanet("Kashyyyk")
 
 
     if start_planet.Get_Owner() == Find_Player("Teradoc") then
 		if p_maldrood.Is_Human() then
 			Story_Event("SYN_JOINS_SPEECH")
 		end
-      local spawn_list_syn = { "Syn_Silooth" }
-      local SynSpawn = SpawnList(spawn_list_syn, start_planet, p_maldrood,true, false)
+       spawn_list_syn = { "Syn_Silooth" }
+       SynSpawn = SpawnList(spawn_list_syn, start_planet, p_maldrood,true, false)
       --end
     end
 
@@ -141,15 +141,15 @@ end
 function Elrood_Eriadu(message)
   if message == OnEnter then
 
-    local p_eriadu = Find_Player("Hutts")
-    local start_planet = FindPlanet("Elrood")
+     p_eriadu = Find_Player("Hutts")
+     start_planet = FindPlanet("Elrood")
 
 	if start_planet.Get_Owner() == Find_Player("Hutts") then
 		if p_eriadu.Is_Human() then
 			Story_Event("ELROOD_JOINS_SPEECH")
 		end
-		local spawn_list_elrood = { "Andal_Team" , "Zed_Stalker" , "Pryl_Thunderflare" }
-		local ElroodSpawn = SpawnList(spawn_list_elrood, start_planet, p_eriadu,true, false)
+		 spawn_list_elrood = { "Andal_Team" , "Zed_Stalker" , "Pryl_Thunderflare" }
+		 ElroodSpawn = SpawnList(spawn_list_elrood, start_planet, p_eriadu,true, false)
     end
 
   elseif message == OnUpdate then
@@ -161,57 +161,57 @@ end
 function SubEra_Change(message)
   if message == OnEnter then
 
-	local p_empire = Find_Player("Empire")
-    local p_harrsk = Find_Player("Harrsk")
+	 p_empire = Find_Player("Empire")
+     p_harrsk = Find_Player("Harrsk")
 
-	local start_planet = FindPlanet("Coruscant")
+	 start_planet = FindPlanet("Coruscant")
 
 	if start_planet.Get_Owner() ~= Find_Player("Empire") then
-		local allPlanets = FindPlanet.Get_All_Planets()
-		local random = GameRandom(1, table.getn(allPlanets))
-		local start_planet = allPlanets[random]
+		 allPlanets = FindPlanet.Get_All_Planets()
+		 random = GameRandom(1, table.getn(allPlanets))
+		 start_planet = allPlanets[random]
 	  while start_planet.Get_Owner() ~= Find_Player("Empire") do
-			local random = GameRandom(1, table.getn(allPlanets))
-			local start_planet = allPlanets[random]
+			 random = GameRandom(1, table.getn(allPlanets))
+			 start_planet = allPlanets[random]
 		end
 	end
 
-	local spawn_list_isard = { "Lusankya" , "Implacable_Star_Destroyer" }
-	local IsardSpawn = SpawnList(spawn_list_isard, start_planet, p_empire,true, false)
+	 spawn_list_isard = { "Lusankya" , "Implacable_Star_Destroyer" }
+	 IsardSpawn = SpawnList(spawn_list_isard, start_planet, p_empire,true, false)
 
-	local checkPestage = Find_First_Object("Sate_Pestage")
+	 checkPestage = Find_First_Object("Sate_Pestage")
   if TestValid(checkPestage) then
     checkPestage.Despawn()
   end
 
-  local checkHarrsk = Find_First_Object("Shockwave_Star_Destroyer")
+   checkHarrsk = Find_First_Object("Shockwave_Star_Destroyer")
   if TestValid(checkHarrsk) then
     checkHarrsk.Despawn()
   end
 
-	local ProjectAmbition = Find_First_Object("Project_Ambition_Dummy")
+	 ProjectAmbition = Find_First_Object("Project_Ambition_Dummy")
 	if ProjectAmbition then
-		local spawn_list_ambition = { "Makati_Steadfast" , "Takel_MagicDragon" , "Corrupter_Star_Destroyer" }
-		local AmbitionRewards = SpawnList(spawn_list_ambition, start_planet, p_empire,true, false)
+		 spawn_list_ambition = { "Makati_Steadfast" , "Takel_MagicDragon" , "Corrupter_Star_Destroyer" }
+		 AmbitionRewards = SpawnList(spawn_list_ambition, start_planet, p_empire,true, false)
 		ProjectAmbition.Despawn()
 	end
 
     --Harrsk spawns
 
-    local start_planet = FindPlanet("Kalist")
+     start_planet = FindPlanet("Kalist")
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
 
-      local spawn_list = { "Shockwave_Star_Destroyer" , "P_Ground_Barracks"  , "P_Ground_Light_Vehicle_Factory"   }
-      local HarrskForces = SpawnList(spawn_list, start_planet, p_harrsk, false, false)
+       spawn_list = { "Shockwave_Star_Destroyer" , "P_Ground_Barracks"  , "P_Ground_Light_Vehicle_Factory"   }
+       HarrskForces = SpawnList(spawn_list, start_planet, p_harrsk, false, false)
     end
 
-    local start_planet = FindPlanet("Abregado_Rae")
+     start_planet = FindPlanet("Abregado_Rae")
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
 
-      local spawn_list = { "P_Ground_Barracks" , "P_Ground_Light_Vehicle_Factory"   }
-      local HarrskForces = SpawnList(spawn_list, start_planet, p_harrsk, false, false)
+       spawn_list = { "P_Ground_Barracks" , "P_Ground_Light_Vehicle_Factory"   }
+       HarrskForces = SpawnList(spawn_list, start_planet, p_harrsk, false, false)
     end
 
 	elseif message == OnUpdate then
@@ -222,15 +222,15 @@ end
 function Pentastar_Talks(message)
   if message == OnEnter then
 
-    local  p_pentastar = Find_Player("Pentastar")
+      p_pentastar = Find_Player("Pentastar")
 
-	local start_planet = FindPlanet("Bastion")
+	 start_planet = FindPlanet("Bastion")
 	if start_planet.Get_Owner() == Find_Player("Pentastar") then
 		if p_pentastar.Is_Human() then
 			Story_Event("KAINE_JOINS_SPEECH")
 		end
-		local spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
-		local ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true, false)
+		 spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
+		 ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true, false)
 	end
 
 
