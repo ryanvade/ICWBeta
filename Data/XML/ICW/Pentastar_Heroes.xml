@@ -579,7 +579,7 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		
 				<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
-			<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+			<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
 	
 		<Affiliation>Pirates</Affiliation>
 		<Tech_Level>99</Tech_Level>
@@ -751,13 +751,16 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
+				<Space_FOW_Reveal_Range>3500.0</Space_FOW_Reveal_Range>
+
+		
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 3</Reserve_Spawned_Units_Tech_0>
-		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		<CategoryMask> Capital | SpaceHero | AntiCapital </CategoryMask>
 
 		<SFXEvent_Select>Unit_Select_Delvardus</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Delvardus</SFXEvent_Move>
@@ -778,7 +781,7 @@
 		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Delvardus </SFXEvent_Attack_Hardpoint>
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>17000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>20000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>115</Tactical_Build_Time_Seconds>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
@@ -1138,7 +1141,7 @@
 		<Icon_Name>i_button_SYSCO.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 
-				<CategoryMask> Capital |  AntiCapital | SpaceHero </CategoryMask>
+				<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
 
 		
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
@@ -1306,13 +1309,14 @@
 	  
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+				<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>6500</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Time_Seconds>55</Tactical_Build_Time_Seconds>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Abilities SubObjectList="Yes">
@@ -1461,19 +1465,19 @@
 
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
-		
+				<Space_FOW_Reveal_Range>2200.0</Space_FOW_Reveal_Range>
+
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		<Reserved_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Reserved_Spawned_Units_Tech_0>
 	  
-		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		<CategoryMask> Frigate | SpaceHero | AntiFrigate </CategoryMask>
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>2700</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 		<!-- Non-Hero unit abilities description -->
@@ -1595,7 +1599,7 @@
 		<SpaceBehavior>ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Lua_Script>GenericGameObject</Lua_Script>
 
-		<Space_FOW_Reveal_Range>10000.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
 		<CategoryMask> Fighter | SpaceHero</CategoryMask>
@@ -1664,6 +1668,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
 
 		<Score_Cost_Credits> 35000 </Score_Cost_Credits>
+		
 
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
@@ -1686,11 +1691,11 @@
 		</Unit_Abilities_Data>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 	</UniqueUnit>

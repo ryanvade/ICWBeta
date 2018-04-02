@@ -50,7 +50,7 @@ function TR_On_Unit_Service(object)
         end
 
     elseif object.Is_Category("Capital") then
-        if AttackNearestWhenInRange(object, "Super", TR_ATTACK_RANGE) then
+        if AttackNearestWhenInRange(object, "SuperCapital", TR_ATTACK_RANGE) then
             return true
         end
 

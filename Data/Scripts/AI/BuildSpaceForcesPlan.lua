@@ -58,6 +58,7 @@ function Definitions()
 		,"Corvette = 0,4"
 		,"Frigate = 0,4"
 		,"Capital = 0,4"
+		,"SuperCapital = 0,1"
 	}
 	}
 	RequiredCategories = { "Corvette | Frigate | Capital" }

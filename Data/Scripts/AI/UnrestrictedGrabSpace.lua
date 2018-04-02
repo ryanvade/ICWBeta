@@ -54,7 +54,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"MainForce"						
-		, "Corvette | Frigate | Super | Capital = 100%"
+		, "Corvette | Frigate | Capital | SuperCapital  = 100%"
 	}
 	}
 	
@@ -74,6 +74,8 @@ function MainForce_Thread()
 	AssembleForce(MainForce)
 
 	BlockOnCommand(MainForce.Move_To(Target))
+	--Enforce a 2 week wait even if the AI thinks its force has been destroyed
+	Sleep(80)
 	if MainForce.Get_Force_Count() == 0 then
 		MainForce.Set_Plan_Result(false)	
 		ScriptExit()

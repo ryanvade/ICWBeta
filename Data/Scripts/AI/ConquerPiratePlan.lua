@@ -51,13 +51,18 @@ function Definitions()
 	Category = "Conquer_Pirate | Warlord_Conquer_Pirate"
 	TaskForce = {
 	-- First Task Force
+	-- Stop AI throwing away heroes on each other
 	{
-		"SpaceForce"				
-		,"SpaceHero | Frigate | Capital | Corvette | Bomber | Fighter | Super = 100%"
+		"SpaceForce"
+		,"DenyHeroAttach"
+		,"Frigate | Capital | Corvette | Bomber | Fighter | SuperCapital = 100%"
+		,"-SpaceHero"
 	},
 	{
 		"GroundForce"
+		,"DenyHeroAttach"
 		,"Vehicle | Infantry | Air = 100%"
+		,"-LandHero"
 	}
 	}
 	RequiredCategories = { "Infantry | Vehicle", "Corvette | Frigate | Capital" }		--Must have at least one ground unit, also make sure space force is reasonable

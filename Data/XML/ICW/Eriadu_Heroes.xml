@@ -38,7 +38,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPTAIN </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 42500 </Score_Cost_Credits>
 
-				<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+				<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
 
 
 		<Abilities SubObjectList="Yes">
@@ -96,7 +96,7 @@
 		<Reserve_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 3</Reserve_Spawned_Units_Tech_0>
 	  
-		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		<CategoryMask> Capital | SpaceHero | AntiCapital </CategoryMask>
 
 		<SFXEvent_Select>Unit_Select_Delvardus</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Delvardus</SFXEvent_Move>
@@ -361,15 +361,17 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPTAIN </Encyclopedia_Unit_Class>
 
 		<Tech_Level>99</Tech_Level>
+
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 		
+				<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>6200</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Cost_Multiplayer>6900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>60</Tactical_Build_Time_Seconds>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 		<Abilities SubObjectList="Yes">
@@ -431,13 +433,16 @@
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 		
+		
+				<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>6200</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Cost_Multiplayer>6900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>60</Tactical_Build_Time_Seconds>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
 		
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Resuun_Self_Bonus">
@@ -632,13 +637,16 @@
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 		
+		
+				<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>6200</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Cost_Multiplayer>6900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>60</Tactical_Build_Time_Seconds>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
 		
 		<Abilities SubObjectList="Yes">
 
@@ -811,7 +819,7 @@
 		
 		<Icon_Name>i_button_cronus.tga</Icon_Name>
 	
-			<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+			<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
 
 	
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
@@ -1461,7 +1469,7 @@
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 		<Is_Stealth_Company>No</Is_Stealth_Company>
 	</HeroCompany>
 

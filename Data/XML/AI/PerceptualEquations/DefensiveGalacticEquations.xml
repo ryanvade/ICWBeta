@@ -110,19 +110,17 @@
     </SpaceDefensiveValue>
 
 	<Needs_Weapon>
-		2.0 * Variable_Target.StarbaseLevelUnnormalized
+		Variable_Target.StarbaseLevelUnnormalized
 		+
-		2.0 * Variable_Target.GroundbaseLevelUnnormalized
-		+
-		8.0 * Variable_Target.Hints.Chokepoint
+		Variable_Target.GroundbaseLevelUnnormalized
 		+
 		2.0 * Function_DefensiveValue.Evaluate
 		+
-		8.0 * Function_Is_Connected_To_Enemy.Evaluate
+		4.0 * Function_Is_Connected_To_Enemy.Evaluate
 		+
 		8.0 * Function_Planet_Has_Capital_Building.Evaluate
 		+
-		Variable_Target.FriendlyForce.SpaceTotalUnnormalized / 5000.0 
+		Variable_Target.FriendlyForce.SpaceTotalUnnormalized / 10000.0 
 		+ 
 		Variable_Target.FriendlyForce.GroundTotalUnnormalized / 2500.0
 	</Needs_Weapon>
@@ -156,15 +154,13 @@
 	<Needs_Turbolasers>
 		2.0 * Variable_Target.GroundbaseLevelUnnormalized
 		+
-		8.0 * Variable_Target.Hints.Chokepoint
-		+
 		2.0 * Function_DefensiveValue.Evaluate
 		+
 		8.0 * Function_Is_Connected_To_Enemy.Evaluate
 		+
 		8.0 * Function_Planet_Has_Capital_Building.Evaluate
 		+
-		10.0
+		5.0
 	</Needs_Turbolasers>
 
 	<Defense_Level>

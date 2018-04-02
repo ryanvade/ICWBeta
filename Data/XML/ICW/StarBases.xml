@@ -292,7 +292,7 @@
 				Skirmish_MC90,
 				Skirmish_Nebula,
 				Skirmish_Endurance,
-				Rogue_Squadron_Space,
+				Bell_Endurance,
 				Iblis_Peregrine,
 				Galactic_Voyager,
 				Han_Solo_Team_Space_MP,
@@ -319,46 +319,44 @@
 		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-
+		
 		<HardPoints>
+			HP_Empress_Hangar_01,
+			HP_Empress_Hangar_02,
+			HP_Empress_Hangar_03,
+			HP_Empress_Proton01,
+			HP_Empress_Proton02,
+			HP_Empress_Proton03,
+			HP_Empress_Proton04,
+			HP_Empress_Proton05,
+			HP_Empress_Proton06,
+			HP_Empress_Turbo01,
+			HP_Empress_Turbo02,
+			HP_Empress_Turbo03,
+			HP_Empress_Turbo04,
+			HP_Empress_Turbo05,
+			HP_Empress_Turbo06,
+			HP_Empress_Turbo07,
+			HP_Empress_Turbo08,
+			HP_Empress_Turbo09,
+			HP_Empress_Turbo10,
+			HP_Empress_Turbo11,
+			HP_Empress_Turbo12,
 			HP_Empire_Station_One_Supply_Dock,
 			HP_Empire_Station_One_Comm_Array,
-			HP_Golan_One_One,
-			HP_Golan_One_Two,
-			HP_Golan_Two_One,
-			HP_Golan_Two_Two,
-			HP_Golan_One_Five,
-			HP_Golan_One_Six,
-			HP_Golan_Two_Three,
-			HP_Golan_Two_Four,
-			HP_Golan_Two_Five,
-			HP_Golan_Two_Six,
-			HP_Golan_Two_Seven,
-			HP_Golan_Two_Eight,
-			HP_Golan_Two_Nine,
-			HP_Golan_Two_Ten,
-			HP_Golan_Two_Eleven,
-			HP_Golan_Two_Twelve,
-			HP_Golan_Three_Twelve
-			HP_Golan_Three_Eleven,
-			HP_Golan_Three_Ten,
-			HP_Golan_Three_Nine,
-			HP_Golan_Three_Eight,
-			HP_Golan_Three_Seven,
-			HP_Golan_Three_Six,
-			HP_Golan_Three_Five,
-			HP_Golan_Three_Four,
-			HP_Golan_Three_Three,
-			HP_Golan_Three_Two,
-			HP_Golan_Three_One,
-			HP_Golan_One_Fighter_Bay,
-			HP_Golan_One_Shield_Generator
 		</HardPoints>
+
+	
 		<Scale_Factor>15.3</Scale_Factor>
-		<Space_Model_Name>GE_GOLAN_THREE.alo</Space_Model_Name>
-				<Shield_Points>10010</Shield_Points>
+		<Text_ID>TEXT_UNIT_EMPRESS</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_EMPRESS </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+	
+	
+		<Space_Model_Name>NR_Empress.alo</Space_Model_Name>
+		<Shield_Points>12010</Shield_Points>
 		<Shield_Refresh_Rate>40</Shield_Refresh_Rate>
-<Select_Box_Scale>90</Select_Box_Scale>
+		<Select_Box_Scale>90</Select_Box_Scale>
 		
 		<!-- Special Abilities unique to Skirmish mode -->
 		<Abilities SubObjectList="Yes">
@@ -497,16 +495,24 @@
 		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
 		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
 	</StarBase>
+	
 	<!-- Empire Skirmish Starbases -->
 	<StarBase Name="Skirmish_Remnant_Star_Base_1">
 		<Variant_Of_Existing_Type>Remnant_Star_Base_3</Variant_Of_Existing_Type>
 		<Is_Community_Property>Yes</Is_Community_Property>
 
-		
+				<Text_ID>TEXT_UNIT_VALIDUSIA</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_VALIDUSIA </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
 		
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
 		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+		
+		<Shield_Points>20000</Shield_Points>
+		<Shield_Refresh_Rate>35</Shield_Refresh_Rate>
+		<Energy_Capacity>3000</Energy_Capacity>
+		<Energy_Refresh_Rate>500</Energy_Refresh_Rate>
 
 		<!-- Tactical Production Options -->
 		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
@@ -528,9 +534,9 @@
 				Skirmish_Star_Destroyer_Two,
 				Skirmish_World_Devastator,
 				Scylla,
-				Rogriss_Aurora,
+				Klev_Silencer7,
 				Chimera_Pellaeon_Grand,
-				Elite_Squadron,
+				Judicator_Star_Destroyer,
 				EC_Level_Two_Tech_Upgrade,
 				EC_Level_Three_Tech_Upgrade,
 				ES_Enhanced_Reactors_L1_Upgrade,
@@ -555,44 +561,54 @@
 		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-
-
+		
 		<HardPoints>
+			HP_Validusia_DualTurbo01,
+			HP_Validusia_DualTurbo02,
+			HP_Validusia_DualTurbo03,
+			HP_Validusia_DualTurbo04,
+			HP_Validusia_DualTurbo05,
+			HP_Validusia_DualTurbo06,
+			HP_Validusia_DualTurbo07,
+			HP_Validusia_DualTurbo08,
+			HP_Validusia_DualTurbo09,
+			HP_Validusia_DualTurbo10,
+			HP_Validusia_DualTurbo11,
+			HP_Validusia_DualTurbo12,
+			HP_Validusia_DualTurbo13,
+			HP_Validusia_DualTurbo14,
+			HP_Validusia_DualTurbo15,
+			HP_Validusia_DualTurbo16,
+			HP_Validusia_DualTurbo17,
+			HP_Validusia_DualTurbo18,
+			HP_Validusia_Concussion08,
+			HP_Validusia_Concussion07,
+			HP_Validusia_Concussion06,
+			HP_Validusia_Concussion05,
+			HP_Validusia_Concussion04,
+			HP_Validusia_Concussion03,
+			HP_Validusia_Concussion02,
+			HP_Validusia_Concussion01,
+			HP_Validusia_Ion01,
+			HP_Validusia_Ion02,
+			HP_Validusia_Ion03,
+			HP_Validusia_Ion04,
+			HP_Validusia_Ion05,
+			HP_Validusia_Ion06,
+			HP_Validusia_Ion07,
+			HP_Validusia_Ion08,
+			HP_Validusia_Hangar,
 			HP_Empire_Station_One_Supply_Dock,
 			HP_Empire_Station_One_Comm_Array,
-			HP_Golan_One_One,
-			HP_Golan_One_Two,
-			HP_Golan_Two_One,
-			HP_Golan_Two_Two,
-			HP_Golan_One_Five,
-			HP_Golan_One_Six,
-			HP_Golan_Two_Three,
-			HP_Golan_Two_Four,
-			HP_Golan_Two_Five,
-			HP_Golan_Two_Six,
-			HP_Golan_Two_Seven,
-			HP_Golan_Two_Eight,
-			HP_Golan_Two_Nine,
-			HP_Golan_Two_Ten,
-			HP_Golan_Two_Eleven,
-			HP_Golan_Two_Twelve,
-			HP_Golan_Three_Twelve
-			HP_Golan_Three_Eleven,
-			HP_Golan_Three_Ten,
-			HP_Golan_Three_Nine,
-			HP_Golan_Three_Eight,
-			HP_Golan_Three_Seven,
-			HP_Golan_Three_Six,
-			HP_Golan_Three_Five,
-			HP_Golan_Three_Four,
-			HP_Golan_Three_Three,
-			HP_Golan_Three_Two,
-			HP_Golan_Three_One,
-			HP_Golan_One_Fighter_Bay,
-			HP_Golan_One_Shield_Generator
 		</HardPoints>
-		<Scale_Factor>15.3</Scale_Factor>
-		<Space_Model_Name>GE_GOLAN_THREE.alo</Space_Model_Name>
+		<Icon_Name>i_button_validusia.tga</Icon_Name>
+
+
+
+	
+		<Scale_Factor>4.5</Scale_Factor>
+
+		<Space_Model_Name>PA_Validusia.alo</Space_Model_Name>
 				<Shield_Points>10010</Shield_Points>
 		<Shield_Refresh_Rate>40</Shield_Refresh_Rate>
 		<Select_Box_Scale>90</Select_Box_Scale>

@@ -25,8 +25,8 @@
 		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>5300</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>38</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Cost_Multiplayer>8000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
@@ -545,6 +545,9 @@
 		<GUI_Row> 2 </GUI_Row>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		
+		<Space_FOW_Reveal_Range>2200.0</Space_FOW_Reveal_Range>
+
+		
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND2 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GARM TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_PEREGRINE </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 4000 </Score_Cost_Credits>
@@ -570,8 +573,8 @@
 
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>2500</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
@@ -845,7 +848,8 @@
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
-		
+				<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+
 		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
@@ -856,13 +860,12 @@
 		
 		<Tech_Level>99</Tech_Level>
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>5400</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Cost_Multiplayer>9000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>60</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<SFXEvent_Select>Unit_Select_Ackbar</SFXEvent_Select>
@@ -985,7 +988,7 @@
 		
 				<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
-		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+		<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
 		
 		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 5</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 5</Starting_Spawned_Units_Tech_0>
@@ -1281,7 +1284,7 @@
 		<Fire_Inaccuracy_Distance> Corvette, 5.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Super, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> SuperCapital, 30.0 </Fire_Inaccuracy_Distance>
 
 		<Turret_Rotate_Extent_Degrees>180</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
@@ -2237,7 +2240,7 @@
 		<Fire_Inaccuracy_Distance> Corvette, 15.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Frigate, 70.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Super, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> SuperCapital, 30.0 </Fire_Inaccuracy_Distance>
 
 		<Fire_Category_Restrictions> Infantry, Vehicle, Structure, Air, Transport </Fire_Category_Restrictions>
 
@@ -2905,7 +2908,7 @@
 		<Fire_Inaccuracy_Distance> Corvette, 5.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Super, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> SuperCapital, 30.0 </Fire_Inaccuracy_Distance>
 
 		<Turret_Rotate_Extent_Degrees>180</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
@@ -2939,7 +2942,7 @@
 		<Fire_Inaccuracy_Distance> Corvette, 5.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Super, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> SuperCapital, 1.0 </Fire_Inaccuracy_Distance>
 
 		<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
 		<Blob_Shadow_Scale>200.0, 100.0</Blob_Shadow_Scale>
@@ -3344,7 +3347,7 @@
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
-		<CategoryMask> Capital |  AntiCapital | SpaceHero </CategoryMask>
+		<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
 
 			<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
         <Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
@@ -3924,6 +3927,7 @@
 		<Variant_Of_Existing_Type>Endurance</Variant_Of_Existing_Type>
 				
         <Ranking_In_Category>3</Ranking_In_Category>
+		<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
 
 		
 		<Tech_Level>99</Tech_Level>
@@ -4002,6 +4006,15 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Icon_Name>i_button_bell.tga</Icon_Name>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>8500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>60</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 	</UniqueUnit>
 
@@ -4374,7 +4387,7 @@
 		<Fire_Inaccuracy_Distance> Corvette, 5.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Super, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> SuperCapital, 30.0 </Fire_Inaccuracy_Distance>
 
 		<Turret_Rotate_Extent_Degrees>180</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>

@@ -10,7 +10,7 @@
 	<Corvette>			0x00000008		</Corvette>
 	<Frigate>			0x00000010		</Frigate>
 	<Capital>			0x00000020		</Capital>
-	<Super>				0x00000040		</Super>
+	<SuperCapital>      0x00000040		</SuperCapital>
 	
 	<Infantry>			0x00000080		</Infantry>
 	<Vehicle>			0x00000100		</Vehicle>
@@ -29,22 +29,21 @@
 	<AntiVehicle>		0x00080000		</AntiVehicle>
 	<AntiAir>			0x00100000		</AntiAir>
 	<AntiStructure>		0x00200000		</AntiStructure>
-
-	<LandHero>			0x00400000		</LandHero>
-	<Carrier>			0x00800000		</Carrier>
-
+	<Carrier>			0x00400000		</Carrier>
+	<Boardable>         0x00800000		</Boardable>	
+    
 	<Wall>				0x01000000		</Wall>
 
 	<Upgrade>			0x02000000		</Upgrade>
 
-	<SpaceHero>			0x04000000		</SpaceHero>
-	<NonCombatHero>		0x08000000		</NonCombatHero>
-	<Boardable>         0x10000000		</Boardable>
+	<LandHero>			0x04000000		</LandHero>			<!-- 0000 0100 0000 0000 0000 0000 0000 0000 -->
+	<SpaceHero>			0x08000000		</SpaceHero>		<!-- 0000 1000 0000 0000 0000 0000 0000 0000 -->
+	<NonCombatHero>		0x10000000		</NonCombatHero>	<!-- 0001 0000 0000 0000 0000 0000 0000 0000 -->
 	
 	<!-- Data definitions for "Hero", "all" and "none" -->
-	<Hero>			0x1C000000	</Hero>
-	<All>			0xFFFFFFFF	</All>
-	<None>			0x00000000	</None>
+	<Hero>				0x1C000000	</Hero>						<!-- 0011 1000 0000 0000 0000 0000 0000 0000 -->
+	<All>				0xFFFFFFFF	</All>
+	<None>				0x00000000	</None>
 	
 </EnumDefinition>
 

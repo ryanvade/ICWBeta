@@ -16,7 +16,7 @@
 		<Tech_Level>1</Tech_Level>
 		<Lua_Script></Lua_Script>
 		
-			<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+			<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
 
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Raptor_Squadron, 2</Starting_Spawned_Units_Tech_0>
@@ -420,6 +420,8 @@
 
 		<Required_Planets>Columex</Required_Planets>
 		
+						<Space_FOW_Reveal_Range>1500.0</Space_FOW_Reveal_Range>
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1600</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>21</Tactical_Build_Time_Seconds>
@@ -820,7 +822,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_WARLORD </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 42500 </Score_Cost_Credits>
 		
-		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+		<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
 
 		
 		<Abilities SubObjectList="Yes">
@@ -897,12 +899,14 @@
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 		
+						<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>6300</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>115</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Cost_Multiplayer>8800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>60</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 		<Abilities SubObjectList="Yes">
@@ -1045,12 +1049,13 @@
 	  
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 		
+						<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>6500</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Time_Seconds>55</Tactical_Build_Time_Seconds>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 	<!-- Non-Hero unit abilities description -->
@@ -1123,6 +1128,9 @@
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		
+						<Space_FOW_Reveal_Range>1800.0</Space_FOW_Reveal_Range>
+
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>

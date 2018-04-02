@@ -92,13 +92,20 @@
 
 	<StarBase Name="Skirmish_Pentastar_Star_Base_1">
 		<Variant_Of_Existing_Type>Pentastar_Star_Base_3</Variant_Of_Existing_Type>
-			<Is_Community_Property>Yes</Is_Community_Property>
+					<Is_Community_Property>Yes</Is_Community_Property>
 
-
-
+				<Text_ID>TEXT_UNIT_VALIDUSIA</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_VALIDUSIA </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
 		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+		
+		<Shield_Points>20000</Shield_Points>
+		<Shield_Refresh_Rate>35</Shield_Refresh_Rate>
+		<Energy_Capacity>3000</Energy_Capacity>
+		<Energy_Refresh_Rate>500</Energy_Refresh_Rate>
 
 		<!-- Tactical Production Options -->
 		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
@@ -121,7 +128,6 @@
 				Skirmish_Dominator,
 				Skirmish_Praetor,
 				Dekeet_Praetor,
-				Dynamic_Besk,
 				Trelix_Indenture,
 				Otro_Enforcer,
 				Grant_Oriflamme,
@@ -142,6 +148,67 @@
 				ES_Hypervelocity_Gun_Use_Upgrade,
 		</Tactical_Buildable_Objects_Multiplayer>
 		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+	
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		
+		<HardPoints>
+			HP_Validusia_DualTurbo01,
+			HP_Validusia_DualTurbo02,
+			HP_Validusia_DualTurbo03,
+			HP_Validusia_DualTurbo04,
+			HP_Validusia_DualTurbo05,
+			HP_Validusia_DualTurbo06,
+			HP_Validusia_DualTurbo07,
+			HP_Validusia_DualTurbo08,
+			HP_Validusia_DualTurbo09,
+			HP_Validusia_DualTurbo10,
+			HP_Validusia_DualTurbo11,
+			HP_Validusia_DualTurbo12,
+			HP_Validusia_DualTurbo13,
+			HP_Validusia_DualTurbo14,
+			HP_Validusia_DualTurbo15,
+			HP_Validusia_DualTurbo16,
+			HP_Validusia_DualTurbo17,
+			HP_Validusia_DualTurbo18,
+			HP_Validusia_Concussion08,
+			HP_Validusia_Concussion07,
+			HP_Validusia_Concussion06,
+			HP_Validusia_Concussion05,
+			HP_Validusia_Concussion04,
+			HP_Validusia_Concussion03,
+			HP_Validusia_Concussion02,
+			HP_Validusia_Concussion01,
+			HP_Validusia_Ion01,
+			HP_Validusia_Ion02,
+			HP_Validusia_Ion03,
+			HP_Validusia_Ion04,
+			HP_Validusia_Ion05,
+			HP_Validusia_Ion06,
+			HP_Validusia_Ion07,
+			HP_Validusia_Ion08,
+			HP_Validusia_Hangar,
+			HP_Empire_Station_One_Supply_Dock,
+			HP_Empire_Station_One_Comm_Array,
+		</HardPoints>
+		<Icon_Name>i_button_validusia.tga</Icon_Name>
+
+
+
+	
+		<Scale_Factor>4.5</Scale_Factor>
+
+		<Space_Model_Name>PA_Validusia.alo</Space_Model_Name>
+				<Shield_Points>10010</Shield_Points>
+		<Shield_Refresh_Rate>40</Shield_Refresh_Rate>
+		<Select_Box_Scale>90</Select_Box_Scale>
+	
+
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
 
 		<!-- Data to prevent this from being buildable in galactic mode -->
 		<Build_Cost_Credits>0</Build_Cost_Credits>
@@ -151,47 +218,7 @@
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 
 
-		<HardPoints>
-			HP_Empire_Station_One_Supply_Dock,
-			HP_Empire_Station_One_Comm_Array,
-			HP_Golan_One_One,
-			HP_Golan_One_Two,
-			HP_Golan_Two_One,
-			HP_Golan_Two_Two,
-			HP_Golan_One_Five,
-			HP_Golan_One_Six,
-			HP_Golan_Two_Three,
-			HP_Golan_Two_Four,
-			HP_Golan_Two_Five,
-			HP_Golan_Two_Six,
-			HP_Golan_Two_Seven,
-			HP_Golan_Two_Eight,
-			HP_Golan_Two_Nine,
-			HP_Golan_Two_Ten,
-			HP_Golan_Two_Eleven,
-			HP_Golan_Two_Twelve,
-			HP_Golan_Three_Twelve
-			HP_Golan_Three_Eleven,
-			HP_Golan_Three_Ten,
-			HP_Golan_Three_Nine,
-			HP_Golan_Three_Eight,
-			HP_Golan_Three_Seven,
-			HP_Golan_Three_Six,
-			HP_Golan_Three_Five,
-			HP_Golan_Three_Four,
-			HP_Golan_Three_Three,
-			HP_Golan_Three_Two,
-			HP_Golan_Three_One,
-			HP_Golan_One_Fighter_Bay,
-			HP_Golan_One_Shield_Generator
-		</HardPoints>
-		<Scale_Factor>15.3</Scale_Factor>
-		<Space_Model_Name>GE_GOLAN_THREE.alo</Space_Model_Name>
-				<Shield_Points>10010</Shield_Points>
-		<Shield_Refresh_Rate>40</Shield_Refresh_Rate>
-		<Select_Box_Scale>90</Select_Box_Scale>
-
-
+		
 		<!-- Special Abilities unique to Skirmish mode -->
 		<Abilities SubObjectList="Yes">
 			<Income_Stream_Ability Name="P_Starbase_Income_Stream">

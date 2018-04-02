@@ -251,7 +251,7 @@ function Spawn_At_All_Planets()
 			-- Scaled combat power based on planet value, reduced by if connected to a player, then increased or decreased by difficulty level
 			scaled_combat_power = 20000 * EvaluatePerception("GenericPlanetValue", hostile, planet) * (1.5 - EvaluatePerception("Is_Connected_To_Player", hostile, planet)) * Difficulty_Modifier
 			-- pick a random unit selection table
-			random_table_index = GameRandom.Free_Random(1, 4)
+			random_table_index = GameRandom.Free_Random(1, 5)
 			
 			DebugMessage("%s -- Attempting to spawn units at %s, from table number %s, combat power %s, difficulty modifier %s", tostring(Script), tostring(planet), tostring(random_table_index), tostring(scaled_combat_power), tostring(Difficulty_Modifier))
 			-- Spawns random units at the planet for the given faction and combat power per planet
@@ -337,7 +337,7 @@ end
 -- In: playerobject, combat power desired, discrete distribution of units
 function Select_Spawn_Unit(player, combat_value, distribution, space)
 	local space = false
-	local cap = 3
+	local cap = GameRandom.Free_Random(1, 3)
 	-- sample the distribution to pick a unit (hopefully random)
 	local spawn_unit = distribution.Sample()
 	

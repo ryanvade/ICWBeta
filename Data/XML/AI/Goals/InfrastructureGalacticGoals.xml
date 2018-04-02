@@ -12,7 +12,8 @@
 		<Is_Like>
 			Build_Initial_Starbase_Only,
 			Build_Space_Defensive_Structure,
-			Build_Space_Company
+			Build_Space_Company,
+			Build_Tradestation
 		</Is_Like>
 	</Upgrade_Starbase>
 
@@ -38,6 +39,21 @@
 			Build_Capital
 		</Is_Like>
 	</Build_Economic_Structure>
+	
+	<Build_Tradestation>
+		<AIGoalApplicationFlags> Friendly </AIGoalApplicationFlags>
+		<GameMode> Galactic </GameMode>
+		<Category> Infrastructure </Category>
+		<Reachability> Any </Reachability>
+		<Time_Limit> 30.0 </Time_Limit>	
+		<Build_Time_Delay_Tolerance>1.2</Build_Time_Delay_Tolerance>
+		<Is_Like>
+			Build_Initial_Starbase_Only,
+			Build_Space_Defensive_Structure,
+			Build_Space_Company,
+			Upgrade_Starbase
+		</Is_Like>
+	</Build_Tradestation>
 
 	<!-- Build a starbase on a planet that currently has none -->
 	<Build_Initial_Starbase_Only>
@@ -243,7 +259,8 @@
 		<Is_Like>
 			Build_Initial_Starbase_Only,
 			Build_Space_Defensive_Structure,
-			Upgrade_Starbase
+			Upgrade_Starbase,
+			Build_Tradestation
 		</Is_Like>
 	</Build_Space_Company>
 	

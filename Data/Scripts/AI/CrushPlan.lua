@@ -56,13 +56,13 @@ function Definitions()
 		"MainForce"						
 		,"MinimumTotalSize = 20"
 		,"MinimumTotalForce = 10000"					
-		, "LandHero | SpaceHero | Infantry | Vehicle | Air | Corvette | Frigate | Capital | Super = 90%"
+		, "LandHero | SpaceHero | Infantry | Vehicle | Air | Corvette | Frigate | Capital | SuperCapital = 90%"
 		,"Corvette | Frigate | Capital = 10%"
 	}
 	}
 	RequiredCategories =	{ 
 								"Infantry | Vehicle",
-								"Corvette | Frigate", "Capital | Super"
+								"Corvette | Frigate", "Capital | SuperCapital"
 							}	
 	
 	difficulty = "Easy"

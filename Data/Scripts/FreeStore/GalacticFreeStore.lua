@@ -53,7 +53,7 @@ function Base_Definitions()
 	
 	-- Percentage of units to move on each service.
 	SpaceMovePercent = 0.040
-	GroundMovePercent = 0.040
+	GroundMovePercent = 0.2
 
 	if Definitions then
 		Definitions()

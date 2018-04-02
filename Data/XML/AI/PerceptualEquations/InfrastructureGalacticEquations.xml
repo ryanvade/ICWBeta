@@ -234,7 +234,7 @@
 		*
 		(Variable_Target.MaxGroundbaseLevel > 0)
 		*
-		((Variable_Target.StarbaseLevel > 0) + (Variable_Target.MaxStarbaseLevel == 0.0))
+		((Variable_Target.StarbaseLevel > 0) + (Variable_Target.MaxStarbaseLevel == 0.0) + Variable_Self.IsFaction{ Parameter_Faction = "Hostile"})
 	</Needs_Initial_Groundbase>
 
 	<!-- Desire to build a mine.
@@ -257,7 +257,6 @@
 															Parameter_Type = "Pentastar_Commercial_Entity", 
 															Parameter_Type = "Rebel_Ground_Mining_Facility",
 															Parameter_Type = "U_Ground_Mining_Facility",
-															Parameter_Type = "Generic_Tradestation",
 															Parameter_Only_Consider_Complete = 1.0} / Variable_Self.PlanetsControlledUnnormalized))
 			)
 			*
@@ -267,7 +266,6 @@
 																									Parameter_Type = "Rebel_Ground_Mining_Facility",
 																									Parameter_Type = "Pentastar_Commercial_Entity",
 																									Parameter_Type = "U_Ground_Mining_Facility",
-																									Parameter_Type = "Generic_Tradestation",
 																									Parameter_Only_Consider_Complete = 1.0})
 			*
 			Variable_Self.HasStructure {Parameter_Type = "E_Ground_Barracks",
@@ -284,12 +282,49 @@
 										Parameter_Type = "Rebel_Ground_Mining_Facility",
 										Parameter_Type = "Pentastar_Commercial_Entity",
 										Parameter_Type = "U_Ground_Mining_Facility",
-										Parameter_Type = "Generic_Tradestation",
 										Parameter_Only_Consider_Complete = 1.0} == 0.0)
 		)
 		*
 		(0.1 + 0.9 * (Function_Is_Connected_To_Enemy.Evaluate == 0))
+		*
+		(20 >= Variable_Self.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility",
+										Parameter_Type = "Rebel_Ground_Mining_Facility",
+										Parameter_Type = "Pentastar_Commercial_Entity",
+										Parameter_Type = "U_Ground_Mining_Facility",
+										Parameter_Only_Consider_Complete = 1.0})
+		*
+		(3 >= Variable_Target.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility",
+										Parameter_Type = "Rebel_Ground_Mining_Facility",
+										Parameter_Type = "Pentastar_Commercial_Entity",
+										Parameter_Type = "U_Ground_Mining_Facility",
+										Parameter_Only_Consider_Complete = 1.0})
 	</Needs_Mining_Facility>
+	
+	<Needs_Tradestation>
+		(
+			(
+				10.0
+				*
+				(1.0 + Variable_Target.IncomeUnnormalized * Variable_Target.IncomeUnnormalized / 25000.0)
+				+
+				10 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Generic_Tradestation", Parameter_Only_Consider_Complete = 1.0} / Variable_Self.PlanetsControlledUnnormalized))
+			)
+			*
+			clamp(Function_Defense_Level.Evaluate - 1, 0.1, 2.0)
+			*
+			(1 > Variable_Target.StructureCount {Parameter_Type = "Generic_Tradestation", Parameter_Only_Consider_Complete = 1.0})
+			*
+			(Function_Should_Save_For_Desirable_Structures.Evaluate == 0)
+			+
+			50.0
+			*
+			(Variable_Self.HasStructure {Parameter_Type = "Generic_Tradestation", Parameter_Only_Consider_Complete = 1.0} == 0.0)
+		)
+		*
+		(0.1 + 0.9 * (Function_Is_Connected_To_Enemy.Evaluate == 0))
+		*
+		(15 >= Variable_Self.StructureCount {Parameter_Type = "Generic_Tradestation", Parameter_Only_Consider_Complete = 1.0})
+	</Needs_Tradestation>
 
 	<!--
 		are we Rebels?

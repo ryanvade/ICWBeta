@@ -52,7 +52,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"MainForce"						
-		,"Corvette | Frigate | Capital | Super = 2,6"
+		,"Corvette | Frigate | Capital | SuperCapital = 2,6"
 	},
 	{
 		"EscortForce"

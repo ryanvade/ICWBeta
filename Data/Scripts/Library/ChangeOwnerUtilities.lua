@@ -120,7 +120,7 @@ function IsValidCategory(unit)
     "Corvette",
     "Frigate",
     "Capital",
-    "Super",
+    "SuperCapital",
     "Infantry",
     "Vehicle",
     "Air",

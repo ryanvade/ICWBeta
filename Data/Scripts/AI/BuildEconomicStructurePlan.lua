@@ -41,7 +41,7 @@
 
 require("pgevents")
 
-ScriptPoolCount = 4
+ScriptPoolCount = 2
 
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
@@ -51,7 +51,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"StructureForce",
-		"Rebel_Ground_Mining_Facility | Empire_Ground_Mining_Facility | Pentastar_Commercial_Entity | U_Ground_Mining_Facility | Generic_Tradestation | Prison = 1"
+		"Rebel_Ground_Mining_Facility | Empire_Ground_Mining_Facility | Pentastar_Commercial_Entity | U_Ground_Mining_Facility = 1"
 	}
 	}
 

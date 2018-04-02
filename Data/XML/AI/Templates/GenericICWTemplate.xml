@@ -62,27 +62,27 @@
 
 	<Turn_On>
 		<Goals>
-				<Category>Hero</Category>
-				<Category>NoBudget</Category>
+			<Category>Hero</Category>
+			<Category>NoBudget</Category>
             <Category>Tactical_Targeted</Category>
             <Category>Defensive</Category>
             <Category>Tactical_Untargeted</Category>
-				<Category>StoryArc</Category>
-				<Category>High_Priority</Category>
-				<Category>Med_Priority</Category>
-				<Category>Map_Control</Category>
+			<Category>StoryArc</Category>
+			<Category>High_Priority</Category>
+			<Category>Med_Priority</Category>
+			<Category>Map_Control</Category>
 		</Goals>
 		
 		<Plans>
-				<Goal_Category>Hero</Goal_Category>
-				<Goal_Category>NoBudget</Goal_Category>
+			<Goal_Category>Hero</Goal_Category>
+			<Goal_Category>NoBudget</Goal_Category>
             <Goal_Category>Tactical_Targeted</Goal_Category>
             <Goal_Category>Defensive</Goal_Category>
             <Goal_Category>Tactical_Untargeted</Goal_Category>
-				<Goal_Category>StoryArc</Goal_Category>
-				<Goal_Category>High_Priority</Goal_Category>
-				<Goal_Category>Med_Priority</Goal_Category>
-				<Goal_Category>Map_Control</Goal_Category>
+			<Goal_Category>StoryArc</Goal_Category>
+			<Goal_Category>High_Priority</Goal_Category>
+			<Goal_Category>Med_Priority</Goal_Category>
+			<Goal_Category>Map_Control</Goal_Category>
 		</Plans>
 	</Turn_On>
 
@@ -125,5 +125,35 @@
 	</Turn_On>
 
 </Generic_Land>
+
+<None_Infrastructure_Template>
+
+	<Priority>1</Priority>
+	
+	<Trigger>One</Trigger>
+	
+	<Budget>
+		<Infrastructure>One</Infrastructure>
+	</Budget>
+
+	<Turn_On>
+		<Goals>
+			<Category>Infrastructure</Category>
+		</Goals>
+		
+		<Plans>
+			<Goal_Category>Infrastructure</Goal_Category>
+		</Plans>
+	</Turn_On>
+	
+	<Turn_Off>
+		<Goals>
+			<Category>Defensive</Category>
+			<Category>Offensive</Category>
+			<Category>MajorItem</Category>
+			<Category>Always</Category>
+		</Goals>
+	</Turn_Off>
+</None_Infrastructure_Template>
 
 </AITemplates>

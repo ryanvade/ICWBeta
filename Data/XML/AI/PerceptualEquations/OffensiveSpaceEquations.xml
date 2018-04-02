@@ -311,9 +311,11 @@
 			+
 			1.0 * (Variable_Target.Location.EnemyForce {Parameter_Category = GameObjectCategoryType[Corvette]} == 0)
 			+
-			2.0 * ((Variable_Target.Location.FriendlyForce {Parameter_Category = GameObjectCategoryType[Fighter|Corvette|Frigate|Capital]} * 1) > Variable_Target.Location.EnemyForce)
+			2.0 * ((Variable_Target.Location.FriendlyForce {Parameter_Category = GameObjectCategoryType[Fighter|Corvette|Frigate|Capital|SuperCapital]} * 1) > Variable_Target.Location.EnemyForce)
 			+
-			0.5 * (1000 > Variable_Target.DistanceToNearestFriendly {Parameter_Category = GameObjectCategoryType[Fighter|Corvette|Frigate|Capital]})
+			0.5 * (1000 > Variable_Target.DistanceToNearestFriendly {Parameter_Category = GameObjectCategoryType[Fighter|Corvette|Frigate|Capital|SuperCapital]})
+			+
+			2.0 * Variable_Target.EnemyForce {Parameter_Category = GameObjectCategoryType[SuperCapital]}
 		)
 
 	</Unit_Needs_To_Be_Bombed>
@@ -638,7 +640,7 @@
 		(
 			Variable_Target.EnemyForce {Parameter_Category = GameObjectCategoryType[Fighter|Bomber|Transport]}
 			+
-			Variable_Target.EnemyForce {Parameter_Category = GameObjectCategoryType[Corvette|Frigate|Capital|Structure]}
+			Variable_Target.EnemyForce {Parameter_Category = GameObjectCategoryType[Corvette|Frigate|Capital|SuperCapital|Structure]}
 		)
 	</Fighter_Location_Isolated>
 
@@ -958,7 +960,7 @@
 		*
 		Function_Is_Starbase.Evaluate
 		*
-		(2500 > Variable_Target.DistanceToNearestEnemy {Parameter_Category = GameObjectCategoryType[Frigate | Capital]})
+		(2500 > Variable_Target.DistanceToNearestEnemy {Parameter_Category = GameObjectCategoryType[Frigate | Capital | SuperCapital]})
 	</Need_To_Defend_Space_Station>
 
 	<Has_Hangar>

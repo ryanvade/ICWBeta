@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            GameObjectLibrary.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-03-24T01:57:10+01:00
+--*   @Last modified time:  2018-03-31T17:32:25+02:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -209,6 +209,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=0,
                         Initial=2
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=2
                     }
                 }
             }
@@ -249,6 +253,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=0,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=1
                     }
                 },
                 ["Y-WING_SQUADRON"]={
@@ -263,6 +271,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -360,7 +372,7 @@ GameObjectLibrary = {
             Scripts={
                 "MultiLayer",
                 "SingleUnitRetreat"
-            },        
+            },
 			Flags = {
                 HANGAR = true
             },
@@ -692,6 +704,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1
                     }
                 },
                 ["Y-WING_SQUADRON"]={
@@ -700,6 +716,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -716,6 +736,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -805,6 +829,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=2,
                         Initial=2
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=2,
+                        Initial=2
                     }
                 },
                 ["REBEL_X-WING_SQUADRON"]={
@@ -859,6 +887,11 @@ GameObjectLibrary = {
                         Reserve=2,
                         Initial=2,
                         TechLevel=GreaterThan(3)
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=2,
+                        Initial=2,
+                        TechLevel=GreaterThan(3)
                     }
                 },
                 ["TIE_BOMBER_SQUADRON"]={
@@ -873,6 +906,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -928,6 +965,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=0,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=1
                     }
                 },
                 ["TIE_FIGHTER_SQUADRON"]={
@@ -954,6 +995,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -1025,6 +1070,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -1286,6 +1335,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=0,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=1
                     }
                 },
                 ["Y-WING_SQUADRON"]={
@@ -1300,6 +1353,10 @@ GameObjectLibrary = {
                         Initial=2
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=2
                     }
@@ -1558,6 +1615,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1
                     }
                 },
                 ["Y-WING_SQUADRON"]={
@@ -1572,6 +1633,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -1629,6 +1694,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=2,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=2,
+                        Initial=1
                     }
                 },
                 ["TIE_BOMBER_SQUADRON"]={
@@ -1643,6 +1712,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=2,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=2,
                         Initial=1
                     }
@@ -1913,6 +1986,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -2229,6 +2306,11 @@ GameObjectLibrary = {
                         Reserve=2,
                         Initial=2,
                         TechLevel=LessOrEqualTo(3)
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=2,
+                        Initial=2,
+                        TechLevel=LessOrEqualTo(3)
                     }
                 },
                 ["FURION_SQUADRON"]={
@@ -2238,6 +2320,11 @@ GameObjectLibrary = {
                         TechLevel=GreaterThan(3)
                     },
                     ["HOSTILE"] = {
+                        Reserve=2,
+                        Initial=2,
+                        TechLevel=GreaterThan(3)
+                    },
+                    ["WARLORDS"] = {
                         Reserve=2,
                         Initial=2,
                         TechLevel=GreaterThan(3)
@@ -2277,6 +2364,11 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=1,
                         TechLevel=GreaterThan(3)
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=1,
+                        TechLevel=GreaterThan(3)
                     }
                 },
                 ["TIE_BOMBER_SQUADRON"]={
@@ -2292,6 +2384,11 @@ GameObjectLibrary = {
                         TechLevel=LessOrEqualTo(3)
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1,
+                        TechLevel=LessOrEqualTo(3)
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1,
                         TechLevel=LessOrEqualTo(3)
@@ -2575,6 +2672,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=0,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=1
                     }
                 },
                 ["Y-WING_SQUADRON"]={
@@ -2589,6 +2690,10 @@ GameObjectLibrary = {
                         Initial=2
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=2
                     }
@@ -2664,6 +2769,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=0,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=1
                     }
                 },
                 ["Y-WING_SQUADRON"]={
@@ -2672,6 +2781,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -2688,6 +2801,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -2709,6 +2826,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=0,
                         Initial=2
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=2
                     }
                 },
                 ["B-WING_SQUADRON"]={
@@ -2717,6 +2838,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -2756,6 +2881,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=2,
                         Initial=2
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=2,
+                        Initial=2
                     }
                 },
                 ["TRIFOIL_SQUADRON"]={
@@ -2770,6 +2899,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=2,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=2,
                         Initial=1
                     }
@@ -2792,6 +2925,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=2,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=2,
                         Initial=1
                     }
@@ -2839,6 +2976,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1
                     }
                 },
                 ["B-WING_SQUADRON"]={
@@ -2849,6 +2990,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1
                     }
                 },
                 ["A-WING_SQUADRON"]={
@@ -2857,6 +3002,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -2956,6 +3105,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -3119,6 +3272,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1
                     }
                 },
                 ["REBEL_X-WING_SQUADRON"]={
@@ -3133,6 +3290,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -3169,11 +3330,54 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=2
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=2
                     }
                 }
             }
         },
         ["DREADNAUGHT_EMPIRE"]={
+            Scripts={
+                "MultiLayer",
+                "FighterSpawn",
+                "SingleUnitRetreat"
+            },
+            Fighters={
+                ["TIE_FIGHTER_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["PIRATES"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=1
+                    }
+                },
+                ["Z95_HEADHUNTER_SQUADRON"]={
+                    ["CORPORATE_SECTOR"] = {
+                        Reserve=0,
+                        Initial=1
+                    }
+                },
+                ["REBEL_X-WING_SQUADRON"]={
+                    ["REBEL"] = {
+                        Reserve=0,
+                        Initial=1
+                    }
+                }
+            }
+        },
+        ["DREADNAUGHT_REBEL"]={
             Scripts={
                 "MultiLayer",
                 "FighterSpawn",
@@ -3419,6 +3623,10 @@ GameObjectLibrary = {
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1
                     }
                 }
             }
@@ -3576,6 +3784,11 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1,
                         TechLevel=GreaterThan(3)
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1,
+                        TechLevel=GreaterThan(3)
                     }
                 },
                 ["TIE_INTERCEPTOR_SQUADRON"]={
@@ -3596,6 +3809,10 @@ GameObjectLibrary = {
                         Initial=1
                     },
                     ["HOSTILE"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
                     }
