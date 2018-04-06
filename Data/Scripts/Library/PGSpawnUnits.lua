@@ -140,19 +140,23 @@ function SpawnList(type_list, entry_marker, player, allow_ai_usage, delete_after
 		
 		for k, unit_type in pairs(type_list) do
 			ref_type = Find_Object_Type(unit_type)
-			new_units= Spawn_Unit(ref_type, entry_marker, player)
-			for j, unit in pairs(new_units) do
-				table.insert(unit_list, unit)
-				if allow_ai_usage then
-					--MessageBox("allow_ai_usage: %s", tostring(unit))
-					unit.Prevent_AI_Usage(false)
-				else
-					unit.Prevent_AI_Usage(true) -- This doesn't happen automatically, unlike for Reinforce_Unit
+			if TestValid(ref_type) then
+				new_units= Spawn_Unit(ref_type, entry_marker, player)
+				for j, unit in pairs(new_units) do
+					table.insert(unit_list, unit)
+					if allow_ai_usage then
+						--MessageBox("allow_ai_usage: %s", tostring(unit))
+						unit.Prevent_AI_Usage(false)
+					else
+						unit.Prevent_AI_Usage(true) -- This doesn't happen automatically, unlike for Reinforce_Unit
+					end
+					if delete_after_scenario then
+						--MessageBox("deleting after scenario: %s", tostring(unit))
+						unit.Mark_Parent_Mode_Object_For_Death()
+					end
 				end
-				if delete_after_scenario then
-					--MessageBox("deleting after scenario: %s", tostring(unit))
-					unit.Mark_Parent_Mode_Object_For_Death()
-				end
+			else
+				DebugMessage("%s -- ERROR! Unit %s not found in XML!", tostring(Script), tostring(unit_type))
 			end
 		end
 		

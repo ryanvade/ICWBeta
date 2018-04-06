@@ -12,6 +12,8 @@
 		Distance from max potential base level
 		Need to reduce maintaince tax
 	-->
+	
+	<!-- Added extra test to prevent overbuilding on planets with potential for a company -->
 	<Needs_Groundbase_Upgrade>
 		(Variable_Target.GroundbaseLevel > 0.0)
 		*
@@ -28,6 +30,8 @@
 		)
 		/
 		7.0
+		*
+		(Variable_Target.MaxGroundbaseLevelUnnormalized - Variable_Target.GroundbaseLevelUnnormalized - Function_Is_Company_Planet.Evaluate)
 	</Needs_Groundbase_Upgrade>
 
 	<!--
@@ -298,6 +302,8 @@
 										Parameter_Type = "Pentastar_Commercial_Entity",
 										Parameter_Type = "U_Ground_Mining_Facility",
 										Parameter_Only_Consider_Complete = 1.0})
+		*
+		(Variable_Target.MaxGroundbaseLevelUnnormalized - Variable_Target.GroundbaseLevelUnnormalized - Function_Is_Company_Planet.Evaluate)
 	</Needs_Mining_Facility>
 	
 	<Needs_Tradestation>
@@ -398,11 +404,13 @@
 		*
 		clamp(Function_Defense_Level.Evaluate, 0.0, 2.0)
 		*
-		Function_Needs_Groundbase_Upgrade.Evaluate	
+		Function_Is_Company_Planet.Evaluate
 	</Need_Ground_Company>
 	
 	<Need_Space_Company>
 		(Variable_Target.StarbaseLevelUnnormalized > 1)
+		*
+		Function_Is_Company_Planet.Evaluate
 	</Need_Space_Company>
 	
 	<Need_Capital_Building>

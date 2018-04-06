@@ -42,8 +42,8 @@ end
 function Find_Faction(message)
   if message == OnEnter then
 
-     p_newrep = Find_Player("Rebel")
-     p_empire = Find_Player("Empire")
+    local p_newrep = Find_Player("Rebel")
+    local p_empire = Find_Player("Empire")
    
 
     if p_newrep.Is_Human() then
@@ -57,8 +57,8 @@ end
 function Requiem_Spawn(message)
   if message == OnEnter then
 
-     p_rebel = Find_Player("Rebel")
-     start_planet = FindPlanet("Ciutric")
+    local p_rebel = Find_Player("Rebel")
+    local start_planet = FindPlanet("Ciutric")
 
     if start_planet.Get_Owner() ~= Find_Player("Rebel") then
        allPlanets = FindPlanet.Get_All_Planets()
@@ -70,8 +70,8 @@ function Requiem_Spawn(message)
       end
     end
 
-     spawn_list_requiem = { "Requiem_Squadron_Space" }
-     RequiemSpawn = SpawnList(spawn_list_requiem, start_planet, p_rebel,false,false)
+    local spawn_list_requiem = { "Requiem_Squadron_Space" }
+    local RequiemSpawn = SpawnList(spawn_list_requiem, start_planet, p_rebel,false,false)
 
   end
 end
@@ -92,8 +92,8 @@ function NR_Lusankya(message)
       end
     end
 
-     spawn_list_lusankya = { "Wedge_Lusankya" }
-     LusankyaSpawn = SpawnList(spawn_list_lusankya, start_planet, p_rebel,false,false)
+    local spawn_list_lusankya = { "Wedge_Lusankya" }
+    local LusankyaSpawn = SpawnList(spawn_list_lusankya, start_planet, p_rebel,false,false)
 
   end
 end
@@ -101,8 +101,8 @@ end
 function CH_Lusankya(message)
   if message == OnEnter then
 
-     p_empire = Find_Player("Empire")
-     start_planet = FindPlanet("Bilbringi")
+    local p_empire = Find_Player("Empire")
+    local start_planet = FindPlanet("Bilbringi")
 
     if start_planet.Get_Owner() ~= Find_Player("Empire") then
        allPlanets = FindPlanet.Get_All_Planets()
@@ -114,8 +114,8 @@ function CH_Lusankya(message)
       end
     end
 
-     spawn_list_lusankya = { "Lusankya", "TIE_Defender_Squadron_Buildable", "TIE_Defender_Squadron_Buildable" }
-     LusankyaSpawn = SpawnList(spawn_list_lusankya, start_planet, p_empire,false,false)
+    local spawn_list_lusankya = { "Lusankya", "TIE_Defender_Squadron_Buildable", "TIE_Defender_Squadron_Buildable" }
+    local LusankyaSpawn = SpawnList(spawn_list_lusankya, start_planet, p_empire,false,false)
 
   end
 end

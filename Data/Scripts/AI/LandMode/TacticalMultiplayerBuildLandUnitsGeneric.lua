@@ -51,8 +51,8 @@ function Definitions()
 		"ReserveForce"
 		,"RC_Level_Two_Tech_Upgrade | RC_Level_Three_Tech_Upgrade | RC_Level_Four_Tech_Upgrade = 0,1"
 		,"EC_Level_Two_Tech_Upgrade | EC_Level_Three_Tech_Upgrade | EC_Level_Four_Tech_Upgrade = 0,1"
-		,"UC_Level_Two_Tech_Upgrade | UC_Level_Three_Tech_Upgrade | PC_Level_Four_Tech_Upgrade = 0,1"
-		,"PC_Level_Two_Tech_Upgrade | PC_Level_Three_Tech_Upgrade | PC_Level_Four_Tech_Upgrade = 0,1"
+		,"UC_Level_Two_Tech_Upgrade | UC_Level_Three_Tech_Upgrade = 0,1"
+		,"PC_Level_Two_Tech_Upgrade | PC_Level_Three_Tech_Upgrade = 0,1"
 		,"Infantry | Vehicle | Air | LandHero | Upgrade = 0,3"
 		}
 	}

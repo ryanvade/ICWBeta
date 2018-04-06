@@ -42,7 +42,7 @@
 
 require("pgevents")
 
-ScriptPoolCount = 3
+ScriptPoolCount = 0
 
 function Definitions()
 	
@@ -53,7 +53,7 @@ function Definitions()
 	{
 		"MainForce"
 		,"DenyHeroAttach"		
-		,"Underworld_Saboteur = 1"
+		,"TaskForceRequired"
 	}
 	}
 end

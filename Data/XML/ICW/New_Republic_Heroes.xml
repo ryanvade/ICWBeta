@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <New_Republic_Heroes>
 
-		<UniqueUnit Name="Abaht_Intrepid">
+	<UniqueUnit Name="Abaht_Intrepid">
 		<Variant_Of_Existing_Type>Endurance</Variant_Of_Existing_Type>
 				
         <Ranking_In_Category>3</Ranking_In_Category>
@@ -132,7 +132,7 @@
 		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
-		<CategoryMask> Frigate | SpaceHero </CategoryMask>
+		<CategoryMask> Frigate | SpaceHero | AntiFighter | AntiBomber</CategoryMask>
 		
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
@@ -568,7 +568,7 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 	
-			<CategoryMask> Frigate | SpaceHero </CategoryMask>
+			<CategoryMask> Frigate | SpaceHero | AntiCorvette </CategoryMask>
 
 
 		
@@ -639,7 +639,7 @@
 		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
-		<CategoryMask> Frigate | SpaceHero </CategoryMask>
+		<CategoryMask> Frigate | SpaceHero | AntiFrigate</CategoryMask>
 		
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
@@ -830,7 +830,7 @@
 
 		</Abilities>
 
-		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		<CategoryMask> Capital | SpaceHero | AntiCapital </CategoryMask>
 
 		<Text_ID>TEXT_UNIT_HOME_ONE</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND1 TEXT_TOOLTIP_TRAIT_WARYOFTRAPS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_HOME_ONE_01 TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_HOMEONE </Encyclopedia_Text>
@@ -964,7 +964,7 @@
 			
 		</Abilities>
 
-		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		<CategoryMask> Capital | SpaceHero | AntiCapital </CategoryMask>
 
 		<Text_ID>TEXT_UNIT_GALACTIC_VOYAGER</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND1 TEXT_TOOLTIP_TRAIT_WARYOFTRAPS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_HOME_ONE_01 TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_GALACTICVOYAGER </Encyclopedia_Text>
@@ -1115,7 +1115,7 @@
 		<Reserve_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
-		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+		<CategoryMask> Capital |  AntiCapital | SpaceHero </CategoryMask>
 
 
 		<SFXEvent_Select>Unit_Select_Han_Solo</SFXEvent_Select>
@@ -3820,7 +3820,7 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
-		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+		<CategoryMask> Capital |  AntiCapital | SpaceHero </CategoryMask>
 
 		
 		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
@@ -3883,10 +3883,18 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Icon_Name>i_button_sovv.tga</Icon_Name>
 		
+				<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED,  SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+
+		
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script>GenericGameObject</Lua_Script>
 		
-		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+				<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 8</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>B-Wing_Squadron, 4</Reserve_Spawned_Units_Tech_0>
+
+		
+		<CategoryMask> Frigate |  AntiFrigate | SpaceHero </CategoryMask>
 
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Sovv_Self_Bonus">
@@ -3934,10 +3942,8 @@
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED,  SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		
-		<Starting_Spawned_Units_Tech_0>K-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 8</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>K-Wing_Squadron, 3</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>E-Wing_Squadron, 4</Reserve_Spawned_Units_Tech_0>
 
 		<SFXEvent_Select>Unit_Select_Illor</SFXEvent_Select>
@@ -3986,7 +3992,7 @@
 				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
 				<Applicable_Unit_Types />
 				<Excluded_Unit_Types> </Excluded_Unit_Types>
-				<Health_Bonus_Percentage>0.5</Health_Bonus_Percentage>
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
 				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
 				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
 				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
@@ -4077,7 +4083,7 @@
 				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
 				<Applicable_Unit_Types />
 				<Excluded_Unit_Types> </Excluded_Unit_Types>
-				<Health_Bonus_Percentage>0.5</Health_Bonus_Percentage>
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
 				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
 				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
 				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
@@ -4090,7 +4096,7 @@
 		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		
-		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		<CategoryMask> Frigate | SpaceHero | AntiFrigate </CategoryMask>
 
 		<Text_ID>TEXT_HERO_BELL</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_TRAIT_CAUTIOUS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_BELL TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_SWIFT_LIBERTY </Encyclopedia_Text>

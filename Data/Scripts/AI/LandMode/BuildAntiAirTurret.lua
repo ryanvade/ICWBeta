@@ -50,7 +50,7 @@ function Definitions()
 	{
 		"MainForce"					
 		,"TaskForceRequired"
-		,"UC_Empire_Buildable_Anti_Aircraft_Turret | UC_Rebel_Buildable_Anti_Aircraft_Turret | UC_Underworld_Buildable_Mass_Driver_Turret | UC_Hutt_Anti_Aircraft_Turret= 1"
+		,"UC_Empire_Buildable_Anti_Aircraft_Turret | UC_Rebel_Buildable_Anti_Aircraft_Turret | UC_Hutt_Anti_Aircraft_Turret= 1"
 	}
 	}
 

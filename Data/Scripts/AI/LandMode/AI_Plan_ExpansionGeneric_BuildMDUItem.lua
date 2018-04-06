@@ -51,7 +51,7 @@ function Definitions()
 	{
 		"MainForce"	
 		,"DenyHeroAttach"				
-		,"Underworld_Mobile_Defense_Unit | Rebel_Mobile_Defense_Unit | Empire_Mobile_Defense_Unit = 1"
+		,"TaskForceRequired"
 	}
 	}
 

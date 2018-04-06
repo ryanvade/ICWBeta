@@ -50,7 +50,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"MainForce"						
-		,"Marauder_Missile_Cruiser | Broadside_Class_Cruiser = 1,2"
+		,"Marauder_Missile_Cruiser = 1,2"
 	},
 	{
 		"EscortForce"		

@@ -41,7 +41,7 @@
 
 require("pgevents")
 
-ScriptPoolCount = 4
+ScriptPoolCount = 2
 
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))

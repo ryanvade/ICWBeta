@@ -53,8 +53,11 @@ function Definitions()
 	Category = "Unrestricted_Grab_Space"
 	TaskForce = {
 	{
-		"MainForce"						
-		, "Corvette | Frigate | Capital | SuperCapital  = 100%"
+		"MainForce"		
+		,"MinimumTotalSize = 5"
+		, "Corvette | Frigate | Capital  = 100%"
+		,"-SpaceHero"
+		,"-SuperCapital"
 	}
 	}
 	

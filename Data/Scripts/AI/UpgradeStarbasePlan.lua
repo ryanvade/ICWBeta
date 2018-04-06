@@ -52,7 +52,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"BaseForce",
-		"NR_Star_Base_1 | NR_Star_Base_2 | NR_Star_Base_3 | Remnant_Star_Base_1 | Remnant_Star_Base_2 | Remnant_Star_Base_3 | EotH_Star_Base_1 | EotH_Star_Base_2 | EotH_Star_Base_3 | Zsinj_Star_Base_1 | Zsinj_Star_Base_2 | Zsinj_Star_Base_3 | Hapan_Star_Base_1 | Hapan_Star_Base_2 | Pentastar_Star_Base_1 | Pentastar_Star_Base_2 | Pentastar_Star_Base_1 | Empire_Golan_One | Empire_Golan_Two | Empire_Golan_Two_Strategic | Empire_Golan_Three | Empire_Golan_Three_Strategic | Rebel_Golan_One | Rebel_Golan_Two | Rebel_Golan_Two_Strategic | Rebel_Golan_Three | Rebel_Golan_Three_Strategic | Brask | Oto | Visvia = 1"
+		"NR_Star_Base_1 | NR_Star_Base_2 | NR_Star_Base_3 | Remnant_Star_Base_1 | Remnant_Star_Base_2 | Remnant_Star_Base_3 | EotH_Star_Base_1 | EotH_Star_Base_2 | EotH_Star_Base_3 | Zsinj_Star_Base_1 | Zsinj_Star_Base_2 | Zsinj_Star_Base_3 | Hapan_Star_Base_1 | Hapan_Star_Base_2 | Pentastar_Star_Base_1 | Pentastar_Star_Base_2 | Pentastar_Star_Base_3 = 1"
 	}
 	}
 

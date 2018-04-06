@@ -64,6 +64,20 @@
 		8.0 * Function_Planet_Has_Capital_Building.Evaluate
 	</Needs_Space_Defensive_Structure>
 	
+	<Needs_Space_Super_Station>
+		(50.0 *
+		Variable_Target.OpenStructureSlots *
+		Variable_Target.StarbaseLevelUnnormalized *
+		Variable_Target.FriendlyForce.SpaceTotalNBTD *
+		(1.0 + Function_DefensiveValue.Evaluate)
+		+
+		8.0 * Function_Planet_Has_Capital_Building.Evaluate)
+		*
+		(5 > Variable_Self.StructureCount {Parameter_Type = "Oto", Parameter_Type = "Validusia", Parameter_Type = "Empress_Station", Parameter_Only_Consider_Complete = 1.0})
+		*
+		Variable_Self.IsFaction {Parameter_Faction = "Rebel", Parameter_Faction = "Underworld", Parameter_Faction = "Pentastar", Parameter_Faction = "Hutts"}
+	</Needs_Space_Super_Station>
+	
 	<!-- Don't defend planets with enemy forces blockading (handled by Lift_Blockade) -->
 	<!-- How valuable is the planet? -->
 	<!-- How many trade routes do I also control the other end for? -->

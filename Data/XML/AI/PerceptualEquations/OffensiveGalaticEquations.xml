@@ -284,6 +284,22 @@
 		+
 		(Function_Enemy_Global_Space_Unit_Raw_Total.Evaluate > (0.9 * Function_Friendly_Global_Space_Unit_Raw_Total.Evaluate))
 	 </Allow_Blind_Space_Production>
+	 
+	 <!-- Turns on supercap saving if the player has loads of credits, and appropriate starbase/tech level -->
+	 <Allow_SuperCapital_Production>
+		(Variable_Self.CreditsUnnormalized >= 40000)
+		*
+		(
+			Variable_Self.HasStructure {Parameter_Type = "NR_Star_Base_3"} * (Variable_Self.TechLevel >= 2)
+			+
+			Variable_Self.HasStructure {Parameter_Type = "Remnant_Star_Base_3"} * ((Variable_Self.TechLevel == 1) + (Variable_Self.TechLevel >= 4))
+			+
+			Variable_Self.HasStructure {Parameter_Type = "Delvardus_Star_Base_3",
+										Parameter_Type = "Teradoc_Star_Base_3",
+										Parameter_Type = "Pentastar_Star_Base_3",
+										Parameter_Type = "Zsinj_Star_Base_3" }
+		)
+	 </Allow_SuperCapital_Production>
 
 	<!-- Determine if we'd like to invade this system.
 
@@ -439,7 +455,7 @@
 		*
 		Function_Is_Connected_To_Me.Evaluate
 		*
-		(Game.Age > 5)
+		(1 - (Game.Age > 10) * Variable_Target.IsFaction {Parameter_Faction = "Warlords"})
 	</Should_Conquer_Pirate_Planet>
 	
 	<Warlord_Should_Conquer_Pirate_Planet>
@@ -523,7 +539,9 @@
 		*
 		(Variable_Target.StarbaseLevel == 0.0)
 		*
-		(1.0 - Variable_Target.EnemyForce.HasSpaceForce) 
+		(1.0 - Variable_Target.EnemyForce.HasSpaceForce)
+		*
+		Variable_Target.IsHumanControlled
 	</Should_Perform_Unrestricted_Grab_Land>
 
 	<Space_Force_Limit_For_Unrestricted_Grab>

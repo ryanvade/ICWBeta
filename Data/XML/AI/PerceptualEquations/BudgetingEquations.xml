@@ -100,9 +100,29 @@
 															Parameter_Type = "Generic_Tradestation" } / Variable_Self.PlanetsControlledUnnormalized)))
 	</GenericInfrastructureBudgetAllocation>
 	
+	<!-- Clean out the MajorItem budget if it gets bloated and isn't being used, or if we're Yevetha with a capital, or if we don't own many planets -->
+	<Flush_MajorItem_Budget>
+		(Variable_Self.ActiveGoals {Parameter_Category = AIGoalCategoryType[MajorItem]} == 0)
+		*
+		(
+			(Variable_Self.BudgetAllocation{Parameter_Category = AIGoalCategoryType[MajorItem]} * Variable_Self.CreditsUnnormalized > 20000)
+			*
+			(1 - Function_Allow_SuperCapital_Production.Evaluate)
+			+
+			(Variable_Self.IsFaction {Parameter_Faction = "Yevetha"})
+			*
+			Function_Has_Capital_Building.Evaluate
+			+
+			(0.1 > Variable_Self.PlanetsControlled)
+		)
+	</Flush_MajorItem_Budget>
+	
+	
 	<!-- Trickle funds into the major item budget -->
 	<!-- Increase if we want to build our capital but don't have the funds -->
-	<!-- Usually evaluates to < 1 -->
+	<!-- Increase if we want to build a company -->
+	<!-- Increase if we can build super stations -->
+	<!-- Usually evaluates to ~6 -->
 	<GenericMajorItemBudgetAllocation>
 		Variable_Self.PlanetsControlled
 		+
@@ -110,6 +130,16 @@
 			(1 - Function_Has_Capital_Building.Evaluate)
 			* 
 			10
+			+
+			(1 - Function_Has_Company.Evaluate)
+			*
+			4
+			+
+			Variable_Self.IsFaction {Parameter_Faction = "Rebel", Parameter_Faction = "Underworld", Parameter_Faction = "Pentastar", Parameter_Faction = "Hutts"}
+			*
+			(5 > Variable_Self.StructureCount {Parameter_Type = "Oto", Parameter_Type = "Validusia", Parameter_Type = "Empress_Station", Parameter_Only_Consider_Complete = 1.0})
+			*
+			4
 		)
 	</GenericMajorItemBudgetAllocation>
 	

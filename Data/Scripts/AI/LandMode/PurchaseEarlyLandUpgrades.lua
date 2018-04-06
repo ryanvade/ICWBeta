@@ -53,7 +53,7 @@ function Definitions()
 		,"DenyHeroAttach"
 
 		-- Buy some early game relative upgrades for infantry
-		,"EL_Increased_Mobility_Upgrade | EL_Increased_Mobility_Upgrade_NoPre | RL_Combat_Armor_L1_Upgrade_NoPre | RL_Combat_Armor_L1_Upgrade | UL_Bounty_Upgrade = 1"
+		,"EL_Increased_Mobility_Upgrade | EL_Increased_Mobility_Upgrade_NoPre | RL_Combat_Armor_L1_Upgrade_NoPre | RL_Combat_Armor_L1_Upgrade = 1"
 	}
 	}
 	 

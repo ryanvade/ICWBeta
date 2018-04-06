@@ -61,8 +61,8 @@ function Definitions()
 		,"RL_Combat_Armor_L1_Upgrade_NoPre | RL_Combat_Armor_L2_Upgrade_NoPre | RL_Enhanced_Repulsors_L1_Upgrade_NoPre | RL_Enhanced_Repulsors_L2_Upgrade_NoPre | RL_Improved_Treads_L1_Upgrade_NoPre | RL_Improved_Treads_L2_Upgrade_NoPre = 0,10"
 		,"RL_Plex_Soldier_Research_Upgrade | RL_Infiltrator_Research_Upgrade | RL_T2B_Research_Upgrade | RL_Snowspeeder_Research_Upgrade | RL_T4B_Research_Upgrade | RL_MPTL_Research_Upgrade | RL_Enhanced_Deployment_L1_Upgrade = 0,1"
 		
-		,"UL_Bounty_Upgrade | UL_Smuggled_Droid_Systems_L1_Upgrade | UL_MDU_Armor_Plating_L2_Upgrade | UL_Weapon_Boost_L1_Upgrade | UL_Weapon_Boost_L2_Upgrade | UL_Smuggled_Droid_Systems_L2_Upgrade | UL_Extort_Cash_L1_Upgrade | UL_Extort_Cash_L2_Upgrade | U_Magnetically_Sealed_Structure_Upgrade | UL_Planetary_Bombard_Use_Upgrade | UL_Bombing_Run_Use_Upgrade | U_Secure_Area_Upgrade = 0,10"
-		,"UL_Black_Market_Shielding_L1_Upgrade | UL_Black_Market_Shielding_L2_Upgrade | UL_MDU_Armor_Plating_L1_Upgrade | UL_Rancor_Stimulant_L1_Upgrade | UL_Rancor_Stimulant_L2_Upgrade | UL_Enhanced_Deployment_L1_Upgrade = 0,1"
+		,"UL_Planetary_Bombard_Use_Upgrade | UL_Bombing_Run_Use_Upgrade | U_Secure_Area_Upgrade = 0,10"
+		,"UL_Enhanced_Deployment_L1_Upgrade = 0,1"
 	}
 	}
 	 

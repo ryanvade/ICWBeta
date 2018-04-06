@@ -51,7 +51,7 @@ function Definitions()
 	{
 		"MainForce"					
 		,"DenyHeroAttach"
-		,"Darth_Vader = 1"
+		,"TaskForceRequired"
 	}
 	}
 	

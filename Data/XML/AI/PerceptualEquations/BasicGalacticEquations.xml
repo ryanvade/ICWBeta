@@ -89,4 +89,54 @@
 		Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}) > 0.0
 	</Is_Connected_To_Player>
 	
+	<Is_Company_Planet>
+		Variable_Target.Type.IsType {Parameter_Type = "Jaemus"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Lianna"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Corulag"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Kuat"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Gyndine"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Balmorra"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "MonCalimari"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Syca"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Eriadu"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Antem"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Corellia"} * 3
+		+ Variable_Target.Type.IsType {Parameter_Type = "Denon"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Coruscant"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Sluis_Van"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Fresia"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "CalSeti"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Sullust"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "NewCov"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Chardaan"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Kalarba"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Roche"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Charubah"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Brentaal"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Carida"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Nzoth"}
+	</Is_Company_Planet>
+	
+	<Has_Company>
+		Variable_Self.HasStructure {Parameter_Type = "Damorian_HQ"
+									,Parameter_Type = "Sienar_HQ"
+									,Parameter_Type = "KDY_HQ"
+									,Parameter_Type = "KDY_Branch"
+									,Parameter_Type = "MCS_HQ"
+									,Parameter_Type = "SFS_HQ"
+									,Parameter_Type = "Tarkin_Estates"
+									,Parameter_Type = "Loronar_HQ"
+									,Parameter_Type = "Arakyd_HQ"
+									,Parameter_Type = "Rendili_HQ"
+									,Parameter_Type = "Incom_HQ"
+									,Parameter_Type = "Sorosuub_HQ"
+									,Parameter_Type = "REC_HQ"
+									,Parameter_Type = "CEC_HQ"
+									,Parameter_Type = "Koensayr_HQ"
+									,Parameter_Type = "Yutrane_Trackata_HQ"
+									,Parameter_Type = "Olanji_Charubah_HQ"
+									,Parameter_Type = "TaggeCo_HQ"
+									,Parameter_Type = "Aratech_HQ"}
+	</Has_Company>
+	
 </Equations>

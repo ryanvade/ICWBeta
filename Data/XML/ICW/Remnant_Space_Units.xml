@@ -99,7 +99,7 @@
 			 HP_Lancer_03, HP_Lancer_02, HP_Lancer_01, HP_Lancer_00
 		</HardPoints>
 
-		<CategoryMask> Frigate | AntiFighter</CategoryMask>
+		<CategoryMask> Frigate | AntiFighter | AntiBomber</CategoryMask>
 		<Icon_Name>i_button_lancer.tga</Icon_Name>
 		<GUI_Model_Name>lancer.ALO</GUI_Model_Name>
 		<GUI_Distance>1200</GUI_Distance>
@@ -434,7 +434,7 @@
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>4</Build_Limit_Lifetime_Per_Player>
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		<Population_Value>35</Population_Value>
+		<Population_Value>22</Population_Value>
 
 	</SpaceUnit>
 
@@ -607,7 +607,7 @@
 		<SFXEvent_Engine_Moving_Loop> Unit_Star_Destroyer_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
 		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Star_Destroyer_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
 
-		<CategoryMask> Capital | AntiFrigate </CategoryMask>
+		<CategoryMask> SuperCapital | AntiCapital </CategoryMask>
 		<Icon_Name>i_button_worlddevastator.tga</Icon_Name>
 		<GUI_Model_Name>IR_WorldDevastator.ALO</GUI_Model_Name>
 		<GUI_Distance>2300</GUI_Distance>
@@ -738,7 +738,7 @@
 			HP_Strike_01, HP_Strike_02, HP_Strike_03, HP_Strike_04, HP_Strike_05, HP_Strike_06, HP_Strike_Engines, HP_Strike_Hangar, HP_Strike_Shields
 		</HardPoints>
 
-		<CategoryMask> Frigate | AntiCorvette | Boardable</CategoryMask>
+		<CategoryMask> Frigate | AntiFrigate | Boardable</CategoryMask>
 		<Icon_Name>i_button_strike.tga</Icon_Name>
 		<GUI_Model_Name>StrikeCruiser.alo</GUI_Model_Name>
 		<GUI_Distance>1100</GUI_Distance>
@@ -894,7 +894,7 @@
         <AI_Combat_Power>5900</AI_Combat_Power>
         <Build_Time_Seconds>35</Build_Time_Seconds>
 
-		<CategoryMask> Frigate | AntiCorvette | Boardable </CategoryMask>
+		<CategoryMask> Frigate | AntiFrigate | Boardable </CategoryMask>
 
 		<Build_Limit_Lifetime_Per_Player>50</Build_Limit_Lifetime_Per_Player>
 
@@ -1387,7 +1387,7 @@
 		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
 		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Y_Wing_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
 
-		<CategoryMask> Bomber </CategoryMask>
+		<CategoryMask> Bomber | AntiCapital</CategoryMask>
 		<Property_Flags> SmallShip </Property_Flags>
 		<Icon_Name>i_button_TIE_scimitar.tga</Icon_Name>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -1520,7 +1520,7 @@
 		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
 		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_TIE_Fighter_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
 
-		<CategoryMask> Fighter | AntiBomber</CategoryMask>
+		<CategoryMask> Fighter | AntiBomber | AntiFighter</CategoryMask>
 		<Property_Flags> SmallShip </Property_Flags>
 		<Icon_Name>i_button_tie_Interceptor.tga</Icon_Name>
 		<Victory_Relevant>no</Victory_Relevant>

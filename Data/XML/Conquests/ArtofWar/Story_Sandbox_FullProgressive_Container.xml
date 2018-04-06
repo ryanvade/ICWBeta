@@ -1122,77 +1122,7 @@
 	<!--***********************************************************-->	
 	<!--***********************************************************-->	
 
-	<Event Name="Spawn_Branch_Disabler_Hand">
-		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
-		<Event_Param1>Underworld</Event_Param1>
-		<Event_Param2>DESTROY_ALL</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Spawn_Crash_Prevention_Hand</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-	</Event>
 	
-	<Event Name="Underworld_Enters_Tech_01">
-		<Event_Type>STORY_TECH_LEVEL</Event_Type>
-		<Event_Param1>1</Event_Param1>
-	</Event>
-
-
-	<Event Name="Spawn_Thrawn">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Grey_Wolf</Reward_Param1>
-		<Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Underworld_Enters_Tech_01</Prereq>
-	</Event>
-
-	<Event Name="Spawn_Soontir">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Soontir_Fel_Squadron</Reward_Param1>
-		<Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Underworld_Enters_Tech_01</Prereq>
-	</Event>
-
-	<Event Name="Spawn_Aralani">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>UNIQUE_UNIT</Reward_Type>
-        <Reward_Param1>Aralani_Frontier</Reward_Param1>
-        <Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Underworld_Enters_Tech_01</Prereq>
-	</Event>
-	
-	<Event Name="Spawn_Niriz">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
-        <Reward_Param1>Niriz_Admonitor</Reward_Param1>
-        <Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Underworld_Enters_Tech_01</Prereq>
-	</Event>
-
-	<Event Name="Spawn_Voss">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>UNIQUE_UNIT</Reward_Type>
-        <Reward_Param1>Parck_Strikefast</Reward_Param1>
-        <Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Underworld_Enters_Tech_01</Prereq>
-	</Event>
-	
-	<Event Name="Spawn_Stent">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
-        <Reward_Param1>Stent_Thrawns_Hand</Reward_Param1>
-        <Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Underworld_Enters_Tech_01</Prereq>
-	</Event>
-	
-	<Event Name="Spawn_HoJ">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Hand_of_Judgement_Team</Reward_Param1>
-		<Reward_Param2>Nirauan</Reward_Param2>
-		<Branch>Spawn_Crash_Prevention_Hand</Branch>
-		<Prereq>Underworld_Enters_Tech_01</Prereq>
-	</Event>
 	
 	<Event Name="Isard_Welcome_Thrawn">
 		<Event_Type>STORY_TRIGGER</Event_Type>
@@ -1211,12 +1141,6 @@
 		<Branch>Faction_Branch_EotH</Branch>
 	</Event>
 		
-	<Event Name="U_Destroy_Thrawn">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Grey_Wolf</Reward_Param1>
-		<Prereq>Hand_Level_Two</Prereq>
-	</Event>
 	
 	<Event Name="Thrawn_Welcome_Parck">
 		<Event_Type>STORY_TRIGGER</Event_Type>
@@ -1236,21 +1160,6 @@
 	</Event>
 	
 
-	<Event Name="U_Destroy_Aralani">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Aralani_Frontier</Reward_Param1>
-		<Prereq>Hand_Level_Three</Prereq>
-	</Event>
-		
-	<Event Name="Spawn_Siath">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
-        <Reward_Param1>Siath_Battlehammer</Reward_Param1>
-        <Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Hand_Level_Three</Prereq>
-		<Branch>Spawn_Crash_Prevention_Hand</Branch>
-	</Event>
 	
 	<Event Name="Palpatine_Welcome_Parck">
 		<Event_Type>STORY_TRIGGER</Event_Type>
@@ -1269,23 +1178,7 @@
 		<Branch>Faction_Branch_EotH</Branch>
 	</Event>
 	
-	<Event Name="Spawn_Chak">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Chak_Fel_Krsiss_Squadron_Association</Reward_Param1>
-		<Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Hand_Level_Four</Prereq>
-		<Branch>Spawn_Crash_Prevention_Hand</Branch>
-	</Event>
 
-	<Event Name="Spawn_Ashik">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Ashik_Team</Reward_Param1>
-		<Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Hand_Level_Four</Prereq>
-		<Branch>Spawn_Crash_Prevention_Hand</Branch>
-	</Event>
 	
 	<Event Name="Daala_Welcome_Parck">
 		<Event_Type>STORY_TRIGGER</Event_Type>
@@ -1321,24 +1214,7 @@
 		<Branch>Faction_Branch_EotH</Branch>
 	</Event>
 	
-	<Event Name="Spawn_Aurek">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Aurek_Seven_Team</Reward_Param1>
-		<Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Hand_Level_Five</Prereq>
-		<Branch>Spawn_Crash_Prevention_Hand</Branch>
-	</Event>
 
-	<Event Name="Spawn_Clone">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>600</Event_Param1>
-       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
-        <Reward_Param1>Eviscerator</Reward_Param1>
-        <Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Hand_Level_Five</Prereq>
-		<Branch>Spawn_Crash_Prevention_Hand</Branch>
-	</Event>
 	
 	<Event Name="Clone_Welcome">
 		<Event_Type>STORY_TRIGGER</Event_Type>
@@ -1754,6 +1630,19 @@
 		<Prereq>Faction_Branch_Disabler_NewRep</Prereq>
 	</Event>
 	
+	<Event Name="Maw_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>The_Maw</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+	
 	<Event Name="Maw_Unlocked">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
@@ -1844,21 +1733,33 @@
 	
 	
 	<!--******************** Sub-Era Change - Pellaeon *********************-->
+	
+	
+	<Event Name="Branch_Enabler_Hammer">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Thalassa</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Branch_Daala_Hammer_Active</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
 
 	<Event Name="Trigger_Pellaeon_Daala_Gorgon_Death">
   		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
   		<Event_Param1>Gorgon</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
+		<Branch>Branch_Daala_Hammer_Active</Branch>
 	</Event>
 	
-	<Event Name="Trigger_Pellaeon_Daala_Knight_Hammer_Death">
+	<Event Name="Trigger_Pellaeon_Daala_Hammer_Death">
   		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
   		<Event_Param1>Knight_Hammer</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
 	</Event>
-	
+
 	
 	<Event Name="Trigger_Pellaeon_Regicide_Construct">
 		<Event_Type>STORY_CONSTRUCT</Event_Type>
@@ -1877,7 +1778,7 @@
   		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Prereq>Trigger_Pellaeon_Regicide_Construct</Prereq>
 		<Prereq>Trigger_Pellaeon_Daala_Gorgon_Death</Prereq>
-		<Prereq>Trigger_Pellaeon_Daala_Knight_Hammer_Death</Prereq>
+		<Prereq>Trigger_Pellaeon_Daala_Hammer_Death</Prereq>
 		<Prereq>Trigger_Daala_Pellaeon_Timer</Prereq>
 	</Event>
 	
@@ -2082,6 +1983,18 @@
 		<Prereq>Yevetha_Not_Played</Prereq>
 	</Event>
 	
+	<Event Name="Doornik_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>Doornik</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
 	<Event Name="Doornik_Unlocked">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
@@ -2097,6 +2010,18 @@
 		<Reward_Param1>Zfell</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
 		<Prereq>Yevetha_Not_Played</Prereq>
+	</Event>
+	
+	<Event Name="ZFell_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>Zfell</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<Event Name="Zfell_Unlocked">
@@ -2116,6 +2041,18 @@
 		<Prereq>Yevetha_Not_Played</Prereq>
 	</Event>
 	
+	<Event Name="Nzoth_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>Nzoth</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
 	<Event Name="Nzoth_Unlocked">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
@@ -2131,6 +2068,18 @@
 		<Reward_Param1>Jtptan</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
 		<Prereq>Yevetha_Not_Played</Prereq>
+	</Event>
+	
+		<Event Name="Jtptan_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>Jtptan</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<Event Name="Jtptan_Unlocked">
@@ -2150,6 +2099,18 @@
 		<Prereq>Yevetha_Not_Played</Prereq>
 	</Event>
 	
+		<Event Name="Polneye_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>Polneye</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
 	<Event Name="Polneye_Unlocked">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
@@ -2165,6 +2126,18 @@
 		<Reward_Param1>ILC905</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
 		<Prereq>Yevetha_Not_Played</Prereq>
+	</Event>
+	
+	<Event Name="ILC905_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>ILC905</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<Event Name="ILC905_Unlocked">
@@ -2200,6 +2173,18 @@
 		<Prereq>Faction_Branch_Disabler_NewRep</Prereq>
 	</Event>
 	
+	<Event Name="MitOne_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>MistOne</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
 	<Event Name="MistOne_Unlocked">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
@@ -2215,6 +2200,18 @@
 		<Reward_Param1>MistTwo</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
 		<Prereq>Faction_Branch_Disabler_NewRep</Prereq>
+	</Event>
+	
+	<Event Name="MistTwo_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>MistTwo</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<Event Name="MistTwo_Unlocked">
@@ -2234,6 +2231,18 @@
 		<Prereq>Faction_Branch_Disabler_NewRep</Prereq>
 	</Event>
 	
+	<Event Name="MistThree_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>MistThree</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
 	<Event Name="MistThree_Unlocked">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
@@ -2249,6 +2258,18 @@
 		<Reward_Param1>Hapes</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
 		<Prereq>Faction_Branch_Disabler_NewRep</Prereq>
+	</Event>
+	
+	<Event Name="Hapes_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>Hapes</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<Event Name="Hapes_Unlocked">
@@ -2268,6 +2289,18 @@
 		<Prereq>Faction_Branch_Disabler_NewRep</Prereq>
 	</Event>
 	
+	<Event Name="Charubah_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>Charubah</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
 	<Event Name="Charubah_Unlocked">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
@@ -2283,6 +2316,18 @@
 		<Reward_Param1>Terephon</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
 		<Prereq>Faction_Branch_Disabler_NewRep</Prereq>
+	</Event>
+	
+	<Event Name="Terephon_Bounces">
+		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
+		<Event_Param1>Terephon</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param9></Reward_Param9>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<Event Name="Terephon_Unlocked">

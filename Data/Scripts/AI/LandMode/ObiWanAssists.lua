@@ -51,7 +51,7 @@ function Definitions()
 	{
 		"MainForce"					
 		,"DenyHeroAttach"
-		,"Obi_Wan_Kenobi = 1"
+		,"TaskForceRequired"
 	}
 	}
 	

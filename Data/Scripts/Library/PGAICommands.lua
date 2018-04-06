@@ -125,6 +125,13 @@ function Set_Contrast_Values()
 	FriendlyContrastTypes[_e_cnt].Parse(FriendlyContrastTypeNames, FriendlyContrastWeights)	
 	_e_cnt = _e_cnt+1;
 	
+	EnemyContrastTypes[_e_cnt] = "SuperCapital"
+	FriendlyContrastTypeNames = {"AntiCapital", "Corvette", "Frigate", "Fighter", "Bomber", "Capital", "SuperCapital"}
+	FriendlyContrastWeights =	{2.0, 0.33, 0.5, 1.0, 1.0, 1.0, 1.0}
+	FriendlyContrastTypes[_e_cnt] = WeightedTypeList.Create()
+	FriendlyContrastTypes[_e_cnt].Parse(FriendlyContrastTypeNames, FriendlyContrastWeights)	
+	_e_cnt = _e_cnt+1;
+	
 	EnemyContrastTypes[_e_cnt] = "Infantry"
 	FriendlyContrastTypeNames = {"AntiInfantry", "Vehicle", "Infantry", "Air", "Structure", "LandHero"}
 	FriendlyContrastWeights =	{4.0, 0.5, 1.0, 1.0, 1.0, 4.0}

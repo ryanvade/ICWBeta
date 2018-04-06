@@ -423,19 +423,7 @@ end
 -- @since 3/15/2005 4:10:19 PM -- BMH
 --
 function Galactic_Production_Begin_Event(planet, object_type)
-	if object_type.Get_Name() == "DEATH_STAR" then
-		GameScoringMessage("Gamescoring -- Death Star building at %s", planet.Get_Type().Get_Name())
-	end
-	if object_type.Get_Name() == "DEATH_STAR" and planet.Get_Type().Get_Name() == "HOCKALEG" then
-		GlobalValue.Set("Death_Star_Production_Location", 1)
-		GameScoringMessage("Gamescoring -- Death Star building at %s, value set to %s", planet.Get_Type().Get_Name(), GlobalValue.Get("Death_Star_Production_Location"))
-	elseif object_type.Get_Name() == "DEATH_STAR" and planet.Get_Type().Get_Name() == "DESPAYRE" then
-		GlobalValue.Set("Death_Star_Production_Location", 2)
-		GameScoringMessage("Gamescoring -- Death Star building at %s, value set to %s", planet.Get_Type().Get_Name(), GlobalValue.Get("Death_Star_Production_Location"))
-	elseif object_type.Get_Name() == "DEATH_STAR" and planet.Get_Type().Get_Name() == "THE_MAW" then
-		GlobalValue.Set("Death_Star_Production_Location", 3)
-		GameScoringMessage("Gamescoring -- Death Star building at %s, value set to %s", planet.Get_Type().Get_Name(), GlobalValue.Get("Death_Star_Production_Location"))
-	end
+	
 --Track credits spent
 end
 
@@ -499,6 +487,19 @@ end
 -- @since 3/15/2005 4:10:19 PM -- BMH
 --
 function Galactic_Starbase_Level_Change(planet, old_type, new_type)
+	GameScoringMessage("GameScoring -- %s Starbase changed from %s to %s.", planet.Get_Type().Get_Name(), tostring(old_type), tostring(new_type))
+	
+	if old_type == nil then return end
+	if new_type ~= nil then return end
+	
+	fake_object_type = old_type
+	fake_object_player = planet.Get_Owner()
+	fake_object = {}
+	fake_object.Get_Owner = fake_get_owner
+	fake_object.Get_Type = fake_get_type
+	fake_object.Get_Game_Scoring_Type = fake_get_type
+	fake_object.Is_Valid = fake_is_valid
+	Galactic_Unit_Destroyed_Event(fake_object, planet.Get_Final_Blow_Player())
 end
 
 

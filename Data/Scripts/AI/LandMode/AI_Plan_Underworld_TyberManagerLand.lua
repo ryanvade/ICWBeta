@@ -49,7 +49,7 @@ function Definitions()
 	{
 		"MainForce"					
 		,"DenyHeroAttach"
-		,"Tyber_Zann = 1"
+		,"TaskForceRequired"
 	}
 	}
 	

@@ -2281,7 +2281,7 @@
 		<!-- CAN'T have acceleration on projectile - will not work with INTERCEPT CODE!!!! -->
 		<Projectile_Acceleration_Per_Frame>0.0</Projectile_Acceleration_Per_Frame>
 		<Projectile_Max_Flight_Distance>50000.0</Projectile_Max_Flight_Distance>
-		<Projectile_Damage>2000.0</Projectile_Damage>
+		<Projectile_Damage>1200.0</Projectile_Damage>
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<Projectile_Blast_Area_Damage>500.0</Projectile_Blast_Area_Damage>
 		<Projectile_Blast_Area_Range>100.0</Projectile_Blast_Area_Range>
@@ -4548,6 +4548,61 @@
 		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Medium</Projectile_Absorbed_By_Shields_Particle>
 		<AI_Combat_Power>100</AI_Combat_Power>
 	</Projectile>
+	<Projectile Name="Proj_Shev_Blaster_Shotgun">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
+		<Damage_Type> Damage_Tyber_Shotgun </Damage_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>20.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>DEFAULT</Projectile_Category>
+		<Projectile_Max_Flight_Distance>50.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>0.0</Projectile_Damage>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>3.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Blast_Area_Damage>7.0</Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range>25.0</Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle/>
+		<Projectile_Ground_Detonation_Particle/>
+		<Projectile_Lifetime_Detonation_Particle/>
+		<Projectile_Object_Creation_Particle>Tyber_Shotgun_Effect</Projectile_Object_Creation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Medium</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>100</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Hand_Blaster_Red_Shev">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>PROJ_LASER_RED_INF.ALO</Land_Model_Name>
+		<Scale_Factor>0.1</Scale_Factor>
+		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Max_Speed>17</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Fire_Pulse_Count>18</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.75</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Max_Flight_Distance>400.0</Projectile_Max_Flight_Distance>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>Small_Damage_Land_Red</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Small_Damage_Land_Red</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Projectile_Dirt_Collide_Red</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle/>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Small</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Ground_Detonation_SurfaceFX>PROJECTILE_INFANTRY</Projectile_Ground_Detonation_SurfaceFX>
+		<AI_Combat_Power>40</AI_Combat_Power>
+		<Projectile_SFXEvent_Detonate>SFX_Land_Blaster_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> Unit_Projectile_Infantry_Ricochet </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+	</Projectile>
 	<Projectile Name="Proj_Mass_Driver_Tank">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>p_proton_Vengance_small.alo</Land_Model_Name>
@@ -4914,6 +4969,50 @@
 		<AI_Combat_Power>40</AI_Combat_Power>
 		<Projectile_SFXEvent_Detonate>SFX_Land_Blaster_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> Unit_Projectile_Infantry_Ricochet </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+	</Projectile>
+	<Projectile Name="Proj_Ferrier_Conner_Net">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>p_seismic_bomb00.alo</Land_Model_Name>
+		<Space_Model_Name>p_seismic_bomb00.ALO</Space_Model_Name>
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<Max_Speed>0.0</Max_Speed>
+		<Damage_Type> Damage_StickyBomb </Damage_Type>
+		<Scale_Factor>3.0</Scale_Factor>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, BOMB</Behavior>
+		<Projectile_Category>STATIC_BOMB</Projectile_Category>
+		<Projectile_Blast_Area_Range>100.0</Projectile_Blast_Area_Range>
+		<Projectile_Blast_Area_Damage>200.0</Projectile_Blast_Area_Damage>
+		<Death_Explosions> Conner_Net_Burn </Death_Explosions>
+		<Damage_Type>Damage_Self_Destruct</Damage_Type>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<!--<Lua_Script>FriendlyFire_Mine</Lua_Script>-->
+		<Projectile_Object_Detonation_Particle>Conner_Net_Burn</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Conner_Net_Burn</Projectile_Ground_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Conner_Net_Burn</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle/>
+		<Projectile_Absorbed_By_Shields_Particle>Conner_Net_Burn</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Ground_Detonation_SurfaceFX>PROJECTILE_INFANTRY</Projectile_Ground_Detonation_SurfaceFX>
+		<AI_Combat_Power>5</AI_Combat_Power>
+		<Projectile_SFXEvent_Detonate>SFX_Grenade_Detonation</Projectile_SFXEvent_Detonate>
+		
+		<Projectile_Disables_Engines_When_Power_Drained>Yes</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Disable_Engines_Duration>10.0</Projectile_Disable_Engines_Duration>
+		<Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<AI_Combat_Power>40000</AI_Combat_Power>
+		<!-- Stun specifics -->
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Duration>30.0</Projectile_Ion_Stun_Duration>
+		<!-- must be same as Projectile_Disable_Engines_Duration in this case -->
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.999f</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		<!-- almost total speed reduction -->
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.8</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent><!-- fire rate reduced to 20% -->
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
 	</Projectile>
 	<Projectile Name="Proj_Useless">
 		<Text_ID>TEXT_NONE</Text_ID>

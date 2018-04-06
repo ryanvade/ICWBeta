@@ -1916,4 +1916,33 @@
 		<Behavior>PARTICLE</Behavior>
 		<Particle_Lifetime_Frames>30</Particle_Lifetime_Frames>
 	</Particle>
+	<Particle Name="Conner_Net_Burn">
+		<Land_Model_Name>p_plasma_burn.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Behavior>PARTICLE, ABILITY_COUNTDOWN</Behavior>
+		<Particle_Lifetime_Frames>360</Particle_Lifetime_Frames>
+		<Explosion_Scorch_Mark />
+
+        <Abilities SubObjectList="Yes">
+
+            <Force_Healing_Ability Name="Plasma_Burn_Contamination_Infantry">
+                <Activation_Style>Ground_Automatic</Activation_Style>
+                <Heal_Range>100.0</Heal_Range>
+                <Heal_Amount>-2.2</Heal_Amount> <!-- Negative damage means inflict pain on others -->
+                <Heal_Interval_In_Secs>.23</Heal_Interval_In_Secs>
+                <Applicable_Unit_Categories> Corvette | Fighter</Applicable_Unit_Categories>
+            </Force_Healing_Ability>
+
+            <!--<Force_Healing_Ability Name="Plasma_Burn_Contamination_Vehicles">
+                <Activation_Style>Ground_Automatic</Activation_Style>
+                <Heal_Range>75.0</Heal_Range>
+                <Heal_Amount>-3.0</Heal_Amount>
+                <Heal_Interval_In_Secs>1.0</Heal_Interval_In_Secs>
+                <Applicable_Unit_Categories> Vehicle </Applicable_Unit_Categories>
+            </Force_Healing_Ability>-->
+
+        </Abilities>
+
+	</Particle>	
 </Particles>
