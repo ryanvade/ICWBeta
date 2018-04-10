@@ -6,7 +6,7 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
 		<Text_ID>TEXT_HERO_CARNOR_JAX</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_CARNOR TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_FORCESENSITIVE TEXT_TOOLTIP_BIO TEXT_TOOLTIP_CARNOR TEXT_TOOLTIP_TACTICAL TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
 		<Land_Model_Name>EI_carnorjax.ALO</Land_Model_Name>
 		<Icon_Name>i_button_carnor_jax.tga</Icon_Name>
@@ -44,7 +44,7 @@
 		<Scale_Factor>1.75</Scale_Factor>
 		<Type>Walk</Type>
 		<Deploys>No</Deploys>
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Empire</Affiliation>
 		<Size_Value>10</Size_Value>
 		<Sensor_Range>40</Sensor_Range>
 		<Shield_Points>0</Shield_Points>
@@ -214,6 +214,14 @@
 				<Target_Particle_Effect>Earthquake_Dust_Particles</Target_Particle_Effect>
 				<Target_Particle_Bone_Name />
 			</Earthquake_Attack_Ability>
+			
+			<Battlefield_Modifier_Ability Name="Carnor_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Combat_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>1.5</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
 
 		</Abilities>
 	</HeroUnit>
@@ -257,7 +265,7 @@
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 
-		<Encyclopedia_Text> TEXT_TOOLTIP_CARNOR </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_FORCESENSITIVE TEXT_TOOLTIP_BIO TEXT_TOOLTIP_CARNOR </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
 		<CategoryMask>LandHero | SpaceHero</CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
@@ -365,6 +373,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_GENERAL </Encyclopedia_Unit_Class>
 		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Affiliation>Empire</Affiliation>
 		
 		<CategoryMask> Vehicle | AntiVehicle | AntiStructure | LandHero </CategoryMask>
 		<Icon_Name>i_button_melvar.tga</Icon_Name>	
@@ -1050,6 +1059,7 @@
 		<Property_Flags> SmallShip </Property_Flags>
 		<Icon_Name>i_button_stele.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Affiliation>Empire</Affiliation>
 		
 
 		<!-- Non-Hero unit abilities description -->
@@ -1093,8 +1103,7 @@
 		<Variant_of_Existing_Type>TIE_Defender</Variant_of_Existing_Type>
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>100</Tactical_Health>
-		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
-		
+		<Affiliation>Empire</Affiliation>
 
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
@@ -1232,7 +1241,7 @@
 		
 		<Behavior>TEAM, TEAM_LOCOMOTOR, SELECTABLE, TARGETING, UNIT_AI</Behavior>
 		<SpaceBehavior> REVEAL, ABILITY_COUNTDOWN</SpaceBehavior>
-	
+		<Icon_Name>i_button_stele.tga</Icon_Name>
 		<Max_Speed>5.0</Max_Speed>
 		<Min_Speed>1.5</Min_Speed>
 		
@@ -1306,7 +1315,8 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
 		
 		<Hyperspace>Yes</Hyperspace>
-		<Hyperspace_Speed>1.5</Hyperspace_Speed>		
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>	
+		<Victory_Relevant>yes</Victory_Relevant>		
 
 		<SFXEvent_Select>Unit_Select_Erisi</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Erisi</SFXEvent_Move>
@@ -1322,6 +1332,7 @@
 		<Icon_Name>i_button_erisi.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Create_Team>Yes</Create_Team>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>
@@ -1350,10 +1361,13 @@
 		<Variant_Of_Existing_Type>TIE_Interceptor</Variant_Of_Existing_Type>
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>	
+		<Victory_Relevant>yes</Victory_Relevant>
 		
 		<Tactical_Health>70</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Damage>5</Damage>
+		
+		<Affiliation>Empire</Affiliation>
 
 		<SpaceBehavior> ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
 
@@ -1589,6 +1603,7 @@
 		<Tech_Level>99</Tech_Level>
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		<Affiliation>Empire</Affiliation>
 		
 		<SFXEvent_Select>Unit_Select_Harrsk</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Harrsk</SFXEvent_Move>
@@ -1665,6 +1680,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -1762,6 +1778,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -1817,6 +1834,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_0>
@@ -1900,6 +1918,7 @@
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script></Lua_Script>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
         <Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
@@ -1977,6 +1996,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -2069,6 +2089,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -2176,6 +2197,7 @@
 		<Text_ID>TEXT_HERO_VERMEL</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_VERMEL TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ASCIAN </Encyclopedia_Text>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<CategoryMask> Corvette | SpaceHero | AntiFighter | AntiBomber </CategoryMask>
 		
@@ -2230,6 +2252,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -2327,6 +2350,7 @@
 		<GalacticBehavior> SELECTABLE </GalacticBehavior>
 		<LandBehavior> SELECTABLE, SURFACE_FX, WALK_LOCOMOTOR, IDLE, REVEAL, HIDE_WHEN_FOGGED, TARGETING, WEAPON, DAMAGE_TRACKING, UNIT_AI, ABILITY_COUNTDOWN, IMPOSING_PRESENCE, HOLSTER_WEAPON </LandBehavior>
 		<Lua_Script>Palpatine</Lua_Script>
+		<Affiliation>Empire</Affiliation>
 
 		<!-- Lightsaber holstering data -->
 		<SFXEvent_Draw_Weapon> Unit_Light_Saber_On </SFXEvent_Draw_Weapon>
@@ -2641,6 +2665,7 @@
    	
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
+		<Affiliation>Empire</Affiliation>
 	
 		<Property_Flags> SmallShip </Property_Flags>
 		<Icon_Name>i_button_phennir.tga</Icon_Name>
@@ -2702,6 +2727,7 @@
 
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
+		<Victory_Relevant>Yes</Victory_Relevant>
 		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
 
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
@@ -2714,8 +2740,6 @@
 		<Max_Thrust>1.0</Max_Thrust>
 		<Max_Rate_Of_Roll>6.0</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
-		<Hyperspace>no</Hyperspace>
-		<Hyperspace_Speed>0</Hyperspace_Speed>
 		<Begin_Turn_Towards_Distance>800.0</Begin_Turn_Towards_Distance>
 		<Fires_Forward>no</Fires_Forward>
 		<Turret_Rotate_Extent_Degrees>20</Turret_Rotate_Extent_Degrees>
@@ -2996,7 +3020,7 @@
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>200</Tactical_Health>
 		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
-
+		<Affiliation>Empire</Affiliation>
    	
 		<Property_Flags> SmallShip </Property_Flags>
 		<Icon_Name>i_button_fel_soontir.tga</Icon_Name>
@@ -3071,8 +3095,6 @@
 		<Max_Thrust>1.0</Max_Thrust>
 		<Max_Rate_Of_Roll>6.0</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
-		<Hyperspace>no</Hyperspace>
-		<Hyperspace_Speed>0</Hyperspace_Speed>
 		<Begin_Turn_Towards_Distance>800.0</Begin_Turn_Towards_Distance>
 		<Fires_Forward>no</Fires_Forward>
 		<Turret_Rotate_Extent_Degrees>20</Turret_Rotate_Extent_Degrees>
@@ -3408,6 +3430,7 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Create_Team> Yes </Create_Team>
 		<Create_Team_Type>181st_TIE_Defender_Squadron</Create_Team_Type>
+		<Affiliation>Empire</Affiliation>
 	
 		<Damage>25</Damage>
 		<Shield_Points>10</Shield_Points>
@@ -3466,6 +3489,7 @@
 		<Shield_Points>10</Shield_Points>
 		<Tactical_Health>15</Tactical_Health>
 		<Shield_Refresh_Rate>1</Shield_Refresh_Rate>
+		<Affiliation>Empire</Affiliation>
 		
 		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
 		<SFXEvent_Select> Unit_Select_TIE_Fighter </SFXEvent_Select>
@@ -3664,6 +3688,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -3746,6 +3771,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -3813,6 +3839,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIELD_COMMANDER </Encyclopedia_Unit_Class>
 		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Affiliation>Empire</Affiliation>
 		
 		<CategoryMask> Vehicle | AntiVehicle | AntiStructure | LandHero </CategoryMask>
 		<Icon_Name>i_button_covell.tga</Icon_Name>
@@ -4002,6 +4029,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -4059,7 +4087,7 @@
 		</Abilities>
 
 	</UniqueUnit>
-		<UniqueUnit Name="Emperors_Revenge_Star_Destroyer">
+	<UniqueUnit Name="Emperors_Revenge_Star_Destroyer">
 		<Variant_Of_Existing_Type>Generic_Star_Destroyer_Two</Variant_Of_Existing_Type>
 		
 		<Icon_Name>i_button_wessel.tga</Icon_Name>
@@ -4072,6 +4100,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -4144,6 +4173,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
@@ -4252,6 +4282,7 @@
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script></Lua_Script>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
         <Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
@@ -4721,6 +4752,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, POWERED, SHIELDED, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -4733,7 +4765,6 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_GILAD_PELLAEON</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND2 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GILAD_PELLAEON TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_CHIMERA </Encyclopedia_Text>
-		<Tech_Level>99</Tech_Level>
 		<SFXEvent_Select>Unit_Select_Pellaeon</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Pellaeon</SFXEvent_Move>
 		<SFXEvent_Fleet_Move>Unit_Move_Pellaeon</SFXEvent_Fleet_Move>
@@ -4818,6 +4849,7 @@
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script></Lua_Script>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
         <Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
@@ -4894,6 +4926,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -5329,6 +5362,7 @@
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1</Hyperspace_Speed>
 		<Maintenance_Cost>0.3</Maintenance_Cost>
+		<Affiliation>Empire</Affiliation>
 
 		<Death_Clone>Damage_Normal, Eclipse_Death_Clone</Death_Clone>
 
@@ -5934,6 +5968,7 @@
 		<Text_ID>TEXT_HERO_JORUUS_CBOATH</Text_ID>
 		
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Icon_Name>i_button_cbaoth.tga</Icon_Name>
 		
@@ -6098,6 +6133,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -6381,6 +6417,7 @@
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script></Lua_Script>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
         <Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
@@ -6439,6 +6476,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -6512,6 +6550,7 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+		<Affiliation>Empire</Affiliation>
 
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -6582,6 +6621,7 @@
 
 		
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Abilities SubObjectList="Yes">
 			
@@ -6624,6 +6664,7 @@
 		<Scale_Factor>25</Scale_Factor>
 		<Select_Box_Scale>60</Select_Box_Scale>
 		<Text_ID>TEXT_HERO_KLEV</Text_ID>
+		<Affiliation>Empire</Affiliation>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_KLEV TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_SILENCER7 </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
@@ -6714,6 +6755,7 @@
 		<Tech_Level>99</Tech_Level>
 		
 		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+		<Affiliation>Empire</Affiliation>
 
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -6784,6 +6826,7 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
+		<Affiliation>Empire</Affiliation>
 
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -7164,6 +7207,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -7232,6 +7276,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, POWERED, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
 		
 		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
 
@@ -7310,6 +7355,7 @@
 		
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script>GenericGameObject</Lua_Script>
+		<Affiliation>Empire</Affiliation>
 		
 		<Abilities SubObjectList="Yes">
 			
@@ -7575,6 +7621,7 @@
 
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script>GenericGameObject</Lua_Script>
+		<Affiliation>Empire</Affiliation>
 		
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
@@ -7645,6 +7692,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Icon_Name>i_button_banjeer.tga</Icon_Name>
+		<Affiliation>Empire</Affiliation>
 		
 		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 
@@ -7914,6 +7962,7 @@
 		
 		<CategoryMask> Vehicle | LandHero </CategoryMask>
 		<Icon_Name>i_button_xexus_shev.tga</Icon_Name>
+		<Affiliation>Empire</Affiliation>
 		
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
@@ -8011,7 +8060,8 @@
 		<SFXEvent_Build_Complete>Unit_Complete_Storm_Trooper</SFXEvent_Build_Complete>
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
 
-
+		<Required_Ground_Base_Level> 1 </Required_Ground_Base_Level>
+		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>2</Tactical_Build_Time_Seconds>
@@ -8066,6 +8116,8 @@
 		<MovementClass>Infantry</MovementClass>
 		<Garrison_Category> Infantry </Garrison_Category>
 		<CategoryMask>Infantry</CategoryMask>
+		
+		<Affiliation>Empire</Affiliation>
 
 		<Max_Speed> 1.6 </Max_Speed>
 		<Max_Rate_Of_Turn>12.0</Max_Rate_Of_Turn>
@@ -8132,6 +8184,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COUNCILMEMBER </Encyclopedia_Unit_Class>
 		
 		<Icon_Name>i_button_kooloota.tga</Icon_Name>
+		<Affiliation>Empire</Affiliation>
 
 		<Abilities SubObjectList="Yes">
 			
@@ -8193,6 +8246,7 @@
 	<HeroCompany Name="Kooloota_Team">
 	
 		<Variant_Of_Existing_Type>Brothic_Team</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
 	
 		<Text_ID>TEXT_HERO_KOOLOOTA</Text_ID>
 		<Icon_Name>i_button_kooloota.tga</Icon_Name>
@@ -8221,6 +8275,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COUNCILMEMBER </Encyclopedia_Unit_Class>
 		
 		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Affiliation>Empire</Affiliation>
 		
 		<Icon_Name>i_button_windcaller.tga</Icon_Name>
 
@@ -8254,6 +8309,7 @@
 	<HeroCompany Name="Windcaller_Team">
 	
 		<Variant_Of_Existing_Type>Brothic_Team</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
 	
 		<Text_ID>TEXT_HERO_WINDCALLER</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_WINDCALLER </Encyclopedia_Text>
@@ -8283,6 +8339,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COUNCILMEMBER </Encyclopedia_Unit_Class>
 		
 		<Icon_Name>i_button_manos.tga</Icon_Name>
+		<Affiliation>Empire</Affiliation>
 
 		<Abilities SubObjectList="Yes">
 			
@@ -8314,6 +8371,7 @@
 		<Text_ID>TEXT_HERO_MANOS</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_MANOS </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COUNCILMEMBER </Encyclopedia_Unit_Class>
+		<Affiliation>Empire</Affiliation>
 		
 		<Icon_Name>i_button_manos.tga</Icon_Name>
 		<Company_Units>Manos</Company_Units>
@@ -8332,6 +8390,7 @@
 	<HeroUnit Name="Za">
 	
 		<Variant_Of_Existing_Type>Brothic</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
 	
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_ZA</Text_ID>
@@ -8362,6 +8421,7 @@
 	<HeroCompany Name="Za_Team">
 	
 		<Variant_Of_Existing_Type>Brothic_Team</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
 	
 		<Text_ID>TEXT_HERO_ZA</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_ZA </Encyclopedia_Text>

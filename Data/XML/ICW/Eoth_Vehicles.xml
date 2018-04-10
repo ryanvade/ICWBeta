@@ -1322,7 +1322,17 @@
 		<Influences_Capture_Point> True </Influences_Capture_Point>
 		<Tactical_Bribe_Cost>50</Tactical_Bribe_Cost>
 		<!-- When this unit is converted by the "convert to enemy" special ability (Force Corruption), this is what his type pointer changes to -->
-		<Conversion_Ability_Changes_To_Enemy> Scout_Trooper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+		<Conversion_Ability_Changes_To_Enemy> Scout_Trooper_EotH_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Scout_Trooper_EotH_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> EotH_Scout_Bike </Variant_Of_Existing_Type>
+		<SFXEvent_Select> Unit_Select_Scout_Trooper </SFXEvent_Select>
+		<SFXEvent_Move> Unit_Move_Scout_Trooper </SFXEvent_Move>
+		<SFXEvent_Attack> Unit_Attack_Scout_Trooper </SFXEvent_Attack>
+		<SFXEvent_Guard> Unit_Guard_Scout_Trooper </SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Scout_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Scout_Trooper </SFXEvent_Assist_Attack>
 	</GroundInfantry>
 
 	

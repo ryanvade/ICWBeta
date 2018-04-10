@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            SingleUnitRetreat.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-03-21T23:38:00+01:00
+--*   @Last modified time:  2018-04-06T23:55:09+02:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -67,6 +67,7 @@ function SingleUnitRetreat:CheckCancel(globals)
     if not Object.Are_Engines_Online() or not Object.Is_Ability_Active("TURBO") or self:InterdictorActive() then
         self:MakeFightersSelectable(globals)
         self:RestoreFighters(globals)
+        Object.Activate_Ability("TURBO", false)
         Cancel_Timer(self.RetreatTimer)
         jumpInProgress = false
         retreatTimerDone = false
@@ -93,7 +94,7 @@ end
 function SingleUnitRetreat:RestoreFighters(globals)
     local fighterTable = TypeLibrary.Units[Object.Get_Type().Get_Name()].Fighters
     for squadronTable, amount in pairs(self.restoreTable) do
-        local fighterEntry = fighterTable[squadronTable.TypeString][Object.Get_Owner()]
+        local fighterEntry = fighterTable[squadronTable.TypeString][Object.Get_Owner().Get_Faction_Name()]
         fighterEntry.Reserve = fighterEntry.Reserve + amount
         table.insert(globals.Fighters, squadronTable)
         self.restoreTable[squadronTable] = nil
@@ -140,7 +141,12 @@ function SingleUnitRetreat:RetreatAllowed(globals)
 end
 
 function SingleUnitRetreat:HasHangar()
-    return EvaluatePerception("Has_Hangar", Object.Get_Owner(), Object) == 1
+    local hasHangarFlag = false
+    local typeName = Object.Get_Type().Get_Name()
+    if TypeLibrary.Units[typeName].Flags then
+        hasHangarFlag = TypeLibrary.Units[typeName].Flags.HANGAR
+    end
+    return hasHangarFlag or EvaluatePerception("Has_Hangar", Object.Get_Owner(), Object) == 1
 end
 
 function SingleUnitRetreat:JumpToHyperSpace(globals)

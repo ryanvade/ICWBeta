@@ -41,7 +41,8 @@
 												Parameter_Type = "Skirmish_Delvardus_Star_Base_1",
 												Parameter_Type = "Skirmish_Delvardus_Star_Base_5",
 												Parameter_Type = "Skirmish_Pentastar_Star_Base_1",
-												Parameter_Type = "Skirmish_Pentastar_Star_Base_5"}
+												Parameter_Type = "Skirmish_Pentastar_Star_Base_5",
+												Parameter_Type = "Skirmish_Y_Star_Base_1"}
 	</Distance_To_Nearest_Friendly_Starbase>
 
 	<Distance_To_Nearest_Enemy_Starbase>
@@ -80,7 +81,8 @@
 												Parameter_Type = "Skirmish_Delvardus_Star_Base_1",
 												Parameter_Type = "Skirmish_Delvardus_Star_Base_5",
 												Parameter_Type = "Skirmish_Pentastar_Star_Base_1",
-												Parameter_Type = "Skirmish_Pentastar_Star_Base_5"}
+												Parameter_Type = "Skirmish_Pentastar_Star_Base_5",
+												Parameter_Type = "Skirmish_Y_Star_Base_1"}
 	</Distance_To_Nearest_Enemy_Starbase>
 
 	<Is_Starbase>
@@ -119,7 +121,8 @@
 												Parameter_Type = "Skirmish_Delvardus_Star_Base_1",
 												Parameter_Type = "Skirmish_Delvardus_Star_Base_5",
 												Parameter_Type = "Skirmish_Pentastar_Star_Base_1",
-												Parameter_Type = "Skirmish_Pentastar_Star_Base_5"}
+												Parameter_Type = "Skirmish_Pentastar_Star_Base_5",
+												Parameter_Type = "Skirmish_Y_Star_Base_1"}
 	</Is_Starbase>
 
 	<!-- Certain plans are disallowed as a defender.  These plans are allowed if
@@ -315,7 +318,7 @@
 			+
 			0.5 * (1000 > Variable_Target.DistanceToNearestFriendly {Parameter_Category = GameObjectCategoryType[Fighter|Corvette|Frigate|Capital|SuperCapital]})
 			+
-			2.0 * Variable_Target.EnemyForce {Parameter_Category = GameObjectCategoryType[SuperCapital]}
+			2.0 * Variable_Target.Location.EnemyForce {Parameter_Category = GameObjectCategoryType[SuperCapital]}
 		)
 
 	</Unit_Needs_To_Be_Bombed>
@@ -365,6 +368,8 @@
 		(1 - Function_Should_Burn_Units_Space.Evaluate)
 		*
 		Function_Allowed_As_Defender_Space.Evaluate
+		*
+		(1.0 - Game.ForceVisibility)
 		*
 		(
 			15 * (2000 > Function_Distance_To_Nearest_Friendly_Starbase.Evaluate)
@@ -725,6 +730,7 @@
 	<Number_Resource_Structures_Space>
 		Variable_Self.TacticalBuiltStructureCount{Parameter_Type = "Empire_Mineral_Extractor"
 													,Parameter_Type = "Rebel_Mineral_Extractor"
+													,Parameter_Type = "Pentastar_Mineral_Extractor"
 													,Parameter_Type = "Underworld_Mineral_Extractor"}
 	</Number_Resource_Structures_Space>
 

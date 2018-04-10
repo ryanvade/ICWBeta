@@ -84,6 +84,162 @@
 
 	</StarBase>
 
+	<StarBase Name="Skirmish_Y_Star_Base_1">
+		<Variant_Of_Existing_Type>Y_Star_Base_3</Variant_Of_Existing_Type>
+						<Is_Community_Property>Yes</Is_Community_Property>
+
+				<Text_ID>TEXT_UNIT_VALIDUSIA</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_VALIDUSIA </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+		
+		<Shield_Points>20000</Shield_Points>
+		<Shield_Refresh_Rate>35</Shield_Refresh_Rate>
+		<Energy_Capacity>3000</Energy_Capacity>
+		<Energy_Refresh_Rate>500</Energy_Refresh_Rate>
+
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+	<Tactical_Buildable_Objects_Multiplayer>
+			Yevetha,
+				Trifoil_Squadron_Buildable,
+				TIE_Bomber_Squadron_Buildable,
+				Skirmish_CR90,
+				Skirmish_Nebulon-B2,
+				Armadia,
+				Skirmish_Dreadnaught_Empire,
+				Skirmish_Interdictor_Cruiser,
+				Skirmish_Victory_Destroyer,
+				Skirmish_Victory_Destroyer_Two,
+				Skirmish_Star_Destroyer,
+				Skirmish_Star_Destroyer_Two,
+				Skirmish_Allegiance,
+				Spaar_Aramadia,
+				Toorr_Devotion,
+				Voota_Splendor,
+				Attan_Beauty,
+				Noorr_Purity,
+				Fraan_Glory,
+				EC_Level_Two_Tech_Upgrade,
+				EC_Level_Three_Tech_Upgrade,
+				ES_Enhanced_Reactors_L1_Upgrade,
+				ES_Enhanced_Reactors_L2_Upgrade,
+				ES_Enhanced_Reactors_L3_Upgrade,
+				ES_Reinforced_Armor_L1_Upgrade,
+				ES_Reinforced_Armor_L2_Upgrade,
+				ES_Reinforced_Armor_L3_Upgrade,
+				ES_Improved_Weapons_L1_Upgrade,
+				ES_Improved_Weapons_L2_Upgrade,
+				ES_Improved_Weapons_L3_Upgrade,
+				ES_Improved_Defenses_L1_Upgrade,
+				ES_Improved_Defenses_L2_Upgrade,
+				ES_Improved_Defenses_L3_Upgrade,
+				ES_Hypervelocity_Gun_Use_Upgrade,
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+	
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		
+		<HardPoints>
+			HP_Validusia_DualTurbo01,
+			HP_Validusia_DualTurbo02,
+			HP_Validusia_DualTurbo03,
+			HP_Validusia_DualTurbo04,
+			HP_Validusia_DualTurbo05,
+			HP_Validusia_DualTurbo06,
+			HP_Validusia_DualTurbo07,
+			HP_Validusia_DualTurbo08,
+			HP_Validusia_DualTurbo09,
+			HP_Validusia_DualTurbo10,
+			HP_Validusia_DualTurbo11,
+			HP_Validusia_DualTurbo12,
+			HP_Validusia_DualTurbo13,
+			HP_Validusia_DualTurbo14,
+			HP_Validusia_DualTurbo15,
+			HP_Validusia_DualTurbo16,
+			HP_Validusia_DualTurbo17,
+			HP_Validusia_DualTurbo18,
+			HP_Validusia_DualTurbo19,
+			HP_Validusia_DualTurbo20,
+			HP_Validusia_DualTurbo21,
+			HP_Validusia_DualTurbo22,
+			HP_Validusia_DualTurbo23,
+			HP_Validusia_DualTurbo24,
+			HP_Validusia_Concussion08,
+			HP_Validusia_Concussion07,
+			HP_Validusia_Concussion06,
+			HP_Validusia_Concussion05,
+			HP_Validusia_Concussion04,
+			HP_Validusia_Concussion03,
+			HP_Validusia_Concussion02,
+			HP_Validusia_Concussion01,
+			HP_Validusia_Ion01,
+			HP_Validusia_Ion02,
+			HP_Validusia_Ion03,
+			HP_Validusia_Ion04,
+			HP_Validusia_Ion05,
+			HP_Validusia_Ion06,
+			HP_Validusia_Ion07,
+			HP_Validusia_Ion08,
+			HP_Validusia_Hangar,
+			HP_Empire_Station_One_Supply_Dock,
+			HP_Empire_Station_One_Comm_Array,
+		</HardPoints>
+		<Icon_Name>i_button_validusia.tga</Icon_Name>
+
+
+
+	
+		<Scale_Factor>4.5</Scale_Factor>
+
+		<Space_Model_Name>PA_Validusia.alo</Space_Model_Name>
+				<Shield_Points>10010</Shield_Points>
+		<Shield_Refresh_Rate>40</Shield_Refresh_Rate>
+		<Select_Box_Scale>90</Select_Box_Scale>
+	
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="D_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>55</Base_Income_Value>
+				<Base_Interval_In_Secs>18</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="D_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>			<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>45</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Remnant_Star_Base_5</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+ 			<Enable_Radar_Ability Name="D_Comm_Array_Enable_Radar">
+ 				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>			<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+ 				<Affects_All_Allies>True</Affects_All_Allies>
+ 			</Enable_Radar_Ability>
+		</Abilities>
+
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+	</StarBase>
+
+	
 	<SpaceUnit Name="Trifoil">
 
 		<Text_ID>TEXT_UNIT_TRIFOIL</Text_ID>
@@ -636,7 +792,7 @@
 		<!--<Encyclopedia_Good_Against> MC40a Carrack_Cruiser Vigilance_Gunship </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Generic_Star_Destroyer TIE_Bomber K-Wing </Encyclopedia_Vulnerable_To>-->
 
-		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- IMPORTANT! If you modify the ability below, please make same adjustments to unit's "Captured" clone. -->
 			<!-- I know this is awkward, hopefully we'll get a chance to re-write the code to fix it.   -Oksana -->
@@ -778,11 +934,13 @@
         
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+
+		<Tactical_Build_Cost_Multiplayer>2000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		<Population_Value>2</Population_Value>
@@ -842,6 +1000,7 @@
 	<UniqueUnit Name="Toorr_Devotion">
 		<Variant_Of_Existing_Type>Generic_Victory_Destroyer</Variant_Of_Existing_Type>
 		<Icon_Name>i_button_yev5.tga</Icon_Name>
+		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
 
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_DEVOTION </Text_ID>
@@ -853,7 +1012,7 @@
 		<Tech_Level>99</Tech_Level>
 		
 		
-		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Trifoil_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
@@ -889,6 +1048,14 @@
 		</Abilities>
 
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>24</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>
 
 	</UniqueUnit>
 
@@ -897,6 +1064,7 @@
 		<Text_ID>TEXT_HERO_SPLENDER</Text_ID>
 		<!--<Encyclopedia_Good_Against> Marauder_Missile_Cruiser </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Calamari_Cruiser Y-wing </Encyclopedia_Vulnerable_To>-->
+		<Space_FOW_Reveal_Range>2200.0</Space_FOW_Reveal_Range>
 
 		<Affiliation>Yevetha</Affiliation>
 		<Tech_Level>99</Tech_Level>
@@ -944,7 +1112,14 @@
 		</Abilities>
 
 		<Icon_Name>i_button_yev6.tga</Icon_Name>
-
+		
+		<Tactical_Build_Cost_Multiplayer>3500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>
 
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_SPLENDER TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_SPLENDOR </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PROCTOR </Encyclopedia_Unit_Class>
@@ -1030,11 +1205,17 @@
 	   </Abilities>
 
 
-		<Starting_Spawned_Units_Tech_1>CR90N_TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
-		<Starting_Spawned_Units_Tech_2>CR90N_TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_2>
-		<Starting_Spawned_Units_Tech_3>Trifoil_Squadron, 1</Starting_Spawned_Units_Tech_3>
-		<Starting_Spawned_Units_Tech_4>Trifoil_Squadron, 1</Starting_Spawned_Units_Tech_4>
-		<Starting_Spawned_Units_Tech_5>Trifoil_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_1>Trifoil_Squadron_Small, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_2>Trifoil_Squadron_Small, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_3>Trifoil_Squadron_Small, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_4>Trifoil_Squadron_Small, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_5>Trifoil_Squadron_Small, 1</Starting_Spawned_Units_Tech_5>
+		
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>12</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies> 
 
 		<Icon_Name>i_button_yev9.tga</Icon_Name>
 
@@ -1049,6 +1230,7 @@
 		<Text_ID>TEXT_HERO_VOL_NOORR</Text_ID>
 		<!--<Encyclopedia_Good_Against> Marauder_Missile_Cruiser </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Calamari_Cruiser Y-wing </Encyclopedia_Vulnerable_To>-->
+		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
 
 		<Affiliation>Yevetha</Affiliation>
 		<Tech_Level>99</Tech_Level>
@@ -1087,6 +1269,14 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 		</Abilities>
+		
+		<Tactical_Build_Cost_Multiplayer>10000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>65</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>
 
 		<Icon_Name>i_button_yev7.tga</Icon_Name>
 
@@ -1101,6 +1291,7 @@
 		<Text_ID>TEXT_HERO_TAL_FRAAN</Text_ID>
 		<!--<Encyclopedia_Good_Against> Marauder_Missile_Cruiser </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Calamari_Cruiser Y-wing </Encyclopedia_Vulnerable_To>-->
+		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
 
 		<Affiliation>Yevetha</Affiliation>
 		<Tech_Level>99</Tech_Level>
@@ -1141,6 +1332,14 @@
 		</Abilities>
 
 		<Icon_Name>i_button_yev2.tga</Icon_Name>
+		
+		<Tactical_Build_Cost_Multiplayer>10000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>65</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>
 
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_TAL_FRAAN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_GLORY </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PRIMATE </Encyclopedia_Unit_Class>
@@ -1580,6 +1779,10 @@
 				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
 			</Unit_Ability>
 		</Unit_Abilities_Data>
+		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>4</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites/>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 		<Population_Value>1</Population_Value>
 	</GroundCompany>
@@ -1887,7 +2090,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -1957,7 +2160,13 @@
 				<Type>HUNT</Type>
 			</Unit_Ability>
 		</Unit_Abilities_Data>
-
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		
+		<Tactical_Build_Cost_Multiplayer>950</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>17.5</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_ATST_YEVETHA</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
@@ -2017,7 +2226,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>17.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
+		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -2077,7 +2286,11 @@
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 
-
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>9</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_M1_REPULSOR</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TANK</Encyclopedia_Unit_Class>
@@ -2135,7 +2348,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>2000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
+		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -2184,7 +2397,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -2337,7 +2550,11 @@
 
 		</Unit_Abilities_Data>
 
-
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1750</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_ATAT_YEVETHA</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
@@ -2346,5 +2563,66 @@
 		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
+	<GroundCompany Name="Y_Anti_Aircraft_Company">
+		<Text_ID>TEXT_IMPERIAL_ANTI_AIRCRAFT</Text_ID>
+		<!--<Encyclopedia_Good_Against> Snowspeeder Y-wing </Encyclopedia_Good_Against>-->
+		<!--<Encyclopedia_Vulnerable_To> T4B_Tank MPTL </Encyclopedia_Vulnerable_To>-->
+		<GUI_Row> 1 </GUI_Row>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Damage>30</Damage>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Yevetha</Affiliation>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Piracy_Value_Credits>50</Piracy_Value_Credits>
+		<Build_Time_Seconds>70</Build_Time_Seconds>
+		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>P_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
+		<Required_Planets />
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Formation_Priority>5</Formation_Priority>
+		<Is_Escort>no</Is_Escort>
+		<Ship_Class>tank</Ship_Class>
+		<Company_Transport_Unit>Imperial_Landing_Craft_Tanks</Company_Transport_Unit>
+		<Company_Units>AT_AA_Walker, AT_AA_Walker</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_ataa.tga</Icon_Name>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_AT_AA</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_AA</SFXEvent_Fleet_Move>
+		<Score_Cost_Credits>500</Score_Cost_Credits>
+
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>MISSILE_SHIELD</Type>
+
+				<Effective_Radius>100</Effective_Radius>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>6.5</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATAA</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Maintenance_Cost>0.05</Maintenance_Cost>
+
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
 
 </Remnant_Space_Units>

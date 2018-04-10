@@ -522,11 +522,11 @@ function GalacticAttackAllowed(difficulty, ai_territories_just_gained)
 		max_player_wins_unresponded = 8
 		max_ai_attacks_allowed = 2
 		if difficulty == "Normal" then
-			min_player_wins_unresponded = 3
-			max_player_wins_unresponded = 6
+			min_player_wins_unresponded = 2
+			max_player_wins_unresponded = 4
 			max_ai_attacks_allowed = 2
 		elseif difficulty == "Hard" then
-			min_player_wins_unresponded = 1
+			min_player_wins_unresponded = 0
 			max_player_wins_unresponded = 2
 			max_ai_attacks_allowed = 4
 		end
@@ -558,7 +558,7 @@ function GalacticAttackAllowed(difficulty, ai_territories_just_gained)
 		if player_territories_gained >= player_gains_before_attacking then
 		
 			-- Player has won all that he's allowed without AI response, time to start attacking again
-			num_ai_attacks_left = GameRandom(0, max_player_wins_unresponded - 1)
+			num_ai_attacks_left = GameRandom(0, max_ai_attacks_allowed - 1)
 			GlobalValue.Set(PlayerSpecificName(PlayerObject, "num_ai_attacks_left"), num_ai_attacks_left)
 
 			-- Also reset the losses allowed, so that it will be randomized next time

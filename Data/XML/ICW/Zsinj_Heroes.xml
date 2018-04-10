@@ -15,6 +15,7 @@
 		<Slice_Cost_Credits>2000</Slice_Cost_Credits>
 		<Tech_Level>1</Tech_Level>
 		<Lua_Script></Lua_Script>
+		<Affiliation>Pirates</Affiliation>
 		
 			<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
 
@@ -401,6 +402,7 @@
 
 		<Text_ID>TEXT_HERO_BANJEER</Text_ID>
 		<Lua_Script></Lua_Script>
+		<Affiliation>Pirates</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Raptor_Squadron, 4</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Quasar_Zsinj, 2</Starting_Spawned_Units_Tech_0>
@@ -467,6 +469,8 @@
 	<SpaceUnit Name="Night_Caller">
 		<Variant_Of_Existing_Type>Corellian_Corvette</Variant_Of_Existing_Type>
 		
+		<Icon_Name>i_button_darillian.tga</Icon_Name>
+		
 		<Text_ID>TEXT_UNIT_CR90N</Text_ID>
 		
 		<Starting_Spawned_Units_Tech_1>CR90N_TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -483,6 +487,7 @@
 
 		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Affiliation>Pirates</Affiliation>
 		
 		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
 		
@@ -560,6 +565,7 @@
 		<Property_Flags> SmallShip </Property_Flags>
 		<Icon_Name>i_button_fel_soontir.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Affiliation>Pirates</Affiliation>
 	
  	</SpaceUnit>
 	
@@ -567,6 +573,8 @@
 		<Variant_of_Existing_Type>181st_TIE_Interceptor</Variant_of_Existing_Type>
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>75</Tactical_Health>
+		<Affiliation>Pirates</Affiliation>
+		
 		
 		<SpaceBehavior>SELF_DESTRUCT, ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
 
@@ -703,7 +711,7 @@
 		<Autoresolve_Health>300</Autoresolve_Health>
 		<Damage>25</Damage>
 
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Pirates</Affiliation>
 
 		<Behavior>TEAM, TEAM_LOCOMOTOR, SELECTABLE, TARGETING, UNIT_AI</Behavior>
 		<SpaceBehavior> REVEAL, SELF_DESTRUCT, ABILITY_COUNTDOWN </SpaceBehavior>
@@ -1040,6 +1048,7 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
+		<Affiliation>Pirates</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -1124,6 +1133,7 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		<Affiliation>Pirates</Affiliation>
 
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
@@ -1183,7 +1193,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_NIGHTSISTER </Encyclopedia_Unit_Class>
 		
 		<Land_Model_Name> UI_SILRI.ALO </Land_Model_Name>
-		<Icon_Name>i_button_ui_silri.tga</Icon_Name>
+		<Icon_Name>i_button_gethzerion.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Scale_Factor>1.75</Scale_Factor>
 		<Select_Box_Scale>27</Select_Box_Scale>
@@ -1221,7 +1231,7 @@
 		<OverrideDeceleration> .1 </OverrideDeceleration>
 		<Max_Lift> .6 </Max_Lift>
 
-		<Affiliation>Underworld</Affiliation>
+		<Affiliation>Pirates</Affiliation>
 		<Size_Value>10</Size_Value>
 		<Shield_Points>0</Shield_Points>
 		<Always_Spawn_In_Orbit>No</Always_Spawn_In_Orbit>
@@ -1383,11 +1393,11 @@
 		<Text_ID>TEXT_HERO_GETHZERION</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_FORCESENSITIVE TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GETHZERION TEXT_TOOLTIP_TACTICAL TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_NIGHTSISTER </Encyclopedia_Unit_Class>
-		<Icon_Name>i_button_ui_silri.tga</Icon_Name>
+		<Icon_Name>i_button_gethzerion.tga</Icon_Name>
 				
 		<Is_Dummy>Yes</Is_Dummy>
 		<Damage>80</Damage>
-		<Affiliation>Underworld</Affiliation>
+		<Affiliation>Pirates</Affiliation>
 		<Build_Time_Seconds>0</Build_Time_Seconds>
 		<Combat_Power_Value>0</Combat_Power_Value>
 		<Tech_Level>1</Tech_Level>
@@ -1412,7 +1422,7 @@
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Silri</SFXEvent_Fleet_Move>
 
 		<Score_Cost_Credits> 10000 </Score_Cost_Credits>
-		<CategoryMask> Infantry | SpaceHero </CategoryMask>
+		<CategoryMask> Infantry | LandHero </CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
 		<Population_Value>1</Population_Value>
 
@@ -1466,7 +1476,7 @@
 		<SFXEvent_Hero_Respawned>Unit_Select_Thrawn</SFXEvent_Hero_Respawned>
 		
 		<Score_Cost_Credits> 10000 </Score_Cost_Credits>
-		<CategoryMask>Infantry</CategoryMask>
+		<CategoryMask>Infantry | LandHero</CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
 		<Population_Value>1</Population_Value>
 		<Max_Squad_Size> 1 </Max_Squad_Size>
@@ -1602,7 +1612,6 @@
 
 		<Death_Fade_Time>0.25</Death_Fade_Time>
 		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
-		<Unique_Space_Unit>Shuttle_Tyderium</Unique_Space_Unit>
 
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Netbers_Ground_Bonus">

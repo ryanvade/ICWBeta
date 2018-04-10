@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            TRGameModeTransactions.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-03-19T23:23:14+01:00
+--*   @Last modified time:  2018-04-07T04:27:13+02:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -22,7 +22,6 @@
 
 require("Class")
 require("TableSerializer")
-TRUtil = require("TRUtil")
 
 TransactionManager = Class {
     RegisterTransaction = function(self, transactionRegistry, transactionFunction)
@@ -43,7 +42,7 @@ TransactionManager = Class {
 
     RegisterGameModeTransaction = function(self, transactionFunction)
         local allTransactions = GlobalValue.Get("GameModeTransactions")
-        if not TRUtil.ValidGlobalValue(allTransactions) then
+        if not self:ValidGlobalValue(allTransactions) then
             local transaction = {
                 execute = function(self)
                     ownerTable = {}
@@ -69,17 +68,24 @@ TransactionManager = Class {
 
     ExecuteTransactions = function(self, transactionRegistry)
         local allTransactions = GlobalValue.Get(transactionRegistry)
-        if allTransactions and allTransactions ~= "" then
-            local funcList = loadstring(allTransactions)()
-            for _, transaction in pairs(funcList) do
-                transaction:execute()
-            end
+        if not self:ValidGlobalValue(allTransactions) then
+            return
         end
+
+        local funcList = loadstring(allTransactions)()
+        for _, transaction in pairs(funcList) do
+            transaction:execute()
+        end
+
         GlobalValue.Set(transactionRegistry, "")
     end,
 
     ResetBoardingTransactions = function(self)
         GlobalValue.Set("BoardingTransactions", "")
+    end,
+
+    ValidGlobalValue = function(self, val)
+        return val and val ~= ""
     end
 }
 

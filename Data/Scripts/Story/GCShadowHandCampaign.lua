@@ -34,7 +34,7 @@ function Definitions()
     {
       Determine_Faction_LUA = Find_Faction,
       Eclipse_Completed_Generic = Palpatine_Joins,
-	  IR_Level_Three = Empire_Fractures,
+	  Warlords_Breakoff = Empire_Fractures,
       Empire_wins_Coruscant = Spawn_Empire_Reward
     }
 

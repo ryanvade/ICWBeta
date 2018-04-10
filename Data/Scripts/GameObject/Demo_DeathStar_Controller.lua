@@ -140,7 +140,7 @@ function SuperLaser_Cinematic()
 	Start_Cinematic_Camera()	
 	Letter_Box_In(0)
 	
-	deathstar = Find_First_Object("DEATH_STAR_II")
+	--deathstar = Find_First_Object("DEATH_STAR_II")
 	home_one = Find_First_Object("HOME_ONE")
 	
 	Set_Cinematic_Camera_Key(home_one, 2000, 30, 15, 1, 1, 1, 0)

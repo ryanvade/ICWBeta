@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            Boarding.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-03-22T19:42:33+01:00
+--*   @Last modified time:  2018-04-09T14:26:51+02:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -130,6 +130,7 @@ function BoardingTimer(self)
     local success = (GameRandom(1,100) - target.Get_Hull() * 40) > 50
     if success then
         target.Change_Owner(Object.Get_Owner())
+        target.Stop()
         local boardedTypeName = target.Get_Type().Get_Name()
         local newOwnerName = Object.Get_Owner().Get_Faction_Name()
         local transaction = CreateBoardingTransaction(boardedTypeName, newOwnerName)

@@ -100,9 +100,12 @@ function GoKite(tf, unit, kite_pos, release)
 		if unit.Get_Hull() > 0.5 then
 			Try_Ability(unit, "STIM_PACK")
 		end
-
-		unit.Move_To(kite_pos)
-		unit.Lock_Current_Orders()
+		
+		if (Get_Game_Mode() == "Space" and unit.Are_Engines_Online()) or Get_Game_Mode() ~= "Space" then
+			unit.Move_To(kite_pos)
+			unit.Lock_Current_Orders()
+		end
+		
 		tf.Release_Unit(unit)
 	else
 		if not unit.Is_On_Diversion() then

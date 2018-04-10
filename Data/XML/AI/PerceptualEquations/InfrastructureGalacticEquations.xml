@@ -258,7 +258,6 @@
 				(1.0 + Variable_Target.IncomeUnnormalized * Variable_Target.IncomeUnnormalized / 25000.0)
 				+
 				10 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility", 
-															Parameter_Type = "Pentastar_Commercial_Entity", 
 															Parameter_Type = "Rebel_Ground_Mining_Facility",
 															Parameter_Type = "U_Ground_Mining_Facility",
 															Parameter_Only_Consider_Complete = 1.0} / Variable_Self.PlanetsControlledUnnormalized))
@@ -268,7 +267,6 @@
 			*
 			((Variable_Target.MaxStructureSlotsUnnormalized / 2.0) > Variable_Target.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility",
 																									Parameter_Type = "Rebel_Ground_Mining_Facility",
-																									Parameter_Type = "Pentastar_Commercial_Entity",
 																									Parameter_Type = "U_Ground_Mining_Facility",
 																									Parameter_Only_Consider_Complete = 1.0})
 			*
@@ -284,7 +282,6 @@
 			*
 			(Variable_Self.HasStructure {Parameter_Type = "Empire_Ground_Mining_Facility",
 										Parameter_Type = "Rebel_Ground_Mining_Facility",
-										Parameter_Type = "Pentastar_Commercial_Entity",
 										Parameter_Type = "U_Ground_Mining_Facility",
 										Parameter_Only_Consider_Complete = 1.0} == 0.0)
 		)
@@ -293,13 +290,11 @@
 		*
 		(20 >= Variable_Self.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility",
 										Parameter_Type = "Rebel_Ground_Mining_Facility",
-										Parameter_Type = "Pentastar_Commercial_Entity",
 										Parameter_Type = "U_Ground_Mining_Facility",
 										Parameter_Only_Consider_Complete = 1.0})
 		*
 		(3 >= Variable_Target.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility",
 										Parameter_Type = "Rebel_Ground_Mining_Facility",
-										Parameter_Type = "Pentastar_Commercial_Entity",
 										Parameter_Type = "U_Ground_Mining_Facility",
 										Parameter_Only_Consider_Complete = 1.0})
 		*
@@ -361,6 +356,8 @@
 		(2.0 > Variable_Target.StructureCount {Parameter_Type = "Ground_Infiltrator_Facility", Parameter_Only_Consider_Complete = 1.0})
 		*
 		(Function_Should_Save_For_Desirable_Structures.Evaluate == 0)
+		*
+		Function_Needs_Groundbase_Upgrade.Evaluate
 	</Needs_Ground_Infiltrator_Facility>
 
 	<Should_Save_For_Desirable_Structures>

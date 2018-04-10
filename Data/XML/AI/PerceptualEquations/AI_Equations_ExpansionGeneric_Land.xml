@@ -24,6 +24,17 @@
 		+
 		Variable_Target.Type.IsType {Parameter_Type = "Garrison_Bunker_Underworld" } *
 		Variable_Self.IsFaction {Parameter_Faction = "UNDERWORLD"})
+		+
+		(Variable_Target.Type.IsType {Parameter_Type = "Garrison_Bunker_Pentastar" } *
+		Variable_Self.IsFaction {Parameter_Faction = "Pirates"}
+		+
+		Variable_Self.IsFaction {Parameter_Faction = "Hutts"}
+		+
+		Variable_Self.IsFaction {Parameter_Faction = "Pentastar"}
+		+
+		Variable_Self.IsFaction {Parameter_Faction = "Teradoc"}
+		+
+		Variable_Self.IsFaction {Parameter_Faction = "Yevetha"})
 	</Should_Garrison_Bunker>
 
 	<Should_Fire_Orbital_Bombardment>
@@ -52,7 +63,12 @@
 		((Variable_Self.IsDefender == 0.0) + (Game.IsCampaignGame == 0))
 		*
 		Variable_Target.Type.IsType {Parameter_Type = "HAV_Juggernaut", 
-										Parameter_Type = "Gallofree_HTT_Transport"}
+										Parameter_Type = "Gallofree_HTT_Transport",
+										Parameter_Type = "Aratech_Battle_Platform",
+										Parameter_Type = "Heavy_Tracker",
+										Parameter_Type = "Floating_Fortress",
+										Parameter_Type = "LAAT",
+										Parameter_Type = "IDT"}
 	</Should_Garrison_Transport>
 
 </Equations>

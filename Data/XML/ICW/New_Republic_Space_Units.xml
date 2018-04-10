@@ -4054,7 +4054,7 @@
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		<Population_Value>1</Population_Value>
+		<Population_Value>2</Population_Value>
 	</SpaceUnit>
 
 	<SpaceUnit Name="Dauntless">
@@ -4273,7 +4273,7 @@
 		<Damage>40</Damage>
 		<Autoresolve_Health>4260</Autoresolve_Health>
 		<Shield_Points>2362</Shield_Points>
-		<Tactical_Health>1890</Tactical_Health> <!-- was 2800 -->
+		<Tactical_Health>2100</Tactical_Health> <!-- was 2800 -->
 		<Shield_Refresh_Rate>53</Shield_Refresh_Rate> <!-- was 50 -->
 		<Energy_Capacity>3000</Energy_Capacity>
 		<Energy_Refresh_Rate>500</Energy_Refresh_Rate>
@@ -4316,7 +4316,16 @@
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
 		<HardPoints>
-			HP_Assault_Frigate_Engines, HP_Assault_Frigate_Hangar, HP_Assault_Frigate_Weapon_BL, HP_Assault_Frigate_Weapon_BR, HP_Assault_Frigate_Weapon_FL, HP_Assault_Frigate_Weapon_FR, HP_Assault_Frigate_Weapon_MFR, HP_Assault_Frigate_Weapon_BFRM
+			HP_Assault_Frigate_Engines, 
+			HP_Assault_Frigate_Hangar, 
+			HP_Assault_Frigate_Weapon_BL, 
+			HP_Assault_Frigate_Weapon_BR, 
+			HP_Assault_Frigate_Weapon_BL2, 
+			HP_Assault_Frigate_Weapon_BR2, 
+			HP_Assault_Frigate_Weapon_FL, 
+			HP_Assault_Frigate_Weapon_FR, 
+			HP_Assault_Frigate_Weapon_MFR, 
+			HP_Assault_Frigate_Weapon_BFRM
 		</HardPoints>
 
 		<CategoryMask> Frigate | AntiFrigate </CategoryMask>
@@ -4380,7 +4389,18 @@
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 		<Targeting_Priority_Set>Frigate</Targeting_Priority_Set>
 
+		<Unit_Ability>
+                <Type>POWER_TO_WEAPONS</Type>
+                <Expiration_Seconds>25</Expiration_Seconds>
+                <Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,    0.5f</Mod_Multiplier>
+                <Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,    -3f</Mod_Multiplier>
+                <Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,    1.0f</Mod_Multiplier>
+                <Mod_Multiplier>SPEED_MULTIPLIER,        0.5f</Mod_Multiplier>
+                <Recharge_Seconds>45</Recharge_Seconds>
 
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+            </Unit_Ability>
+			
 				<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>

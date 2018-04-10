@@ -4178,7 +4178,7 @@
             <Fire_Projectile_Type>Proj_Ship_Turbolaser_Red_Dual</Fire_Projectile_Type>
             <Fire_Min_Recharge_Seconds>3.0</Fire_Min_Recharge_Seconds>
             <Fire_Max_Recharge_Seconds>4.0</Fire_Max_Recharge_Seconds>
-            <Fire_Pulse_Count>5</Fire_Pulse_Count>
+            <Fire_Pulse_Count>2</Fire_Pulse_Count>
             <Fire_Pulse_Delay_Seconds>0.2</Fire_Pulse_Delay_Seconds>
            <Fire_Range_Distance>2100.0</Fire_Range_Distance>
 				<Fire_SFXEvent>Unit_Turbo_Fire</Fire_SFXEvent>
@@ -4221,7 +4221,92 @@
             <Fire_Projectile_Type>Proj_Ship_Turbolaser_Red_Dual</Fire_Projectile_Type>
             <Fire_Min_Recharge_Seconds>3.0</Fire_Min_Recharge_Seconds>
             <Fire_Max_Recharge_Seconds>4.0</Fire_Max_Recharge_Seconds>
-            <Fire_Pulse_Count>5</Fire_Pulse_Count>
+            <Fire_Pulse_Count>2</Fire_Pulse_Count>
+            <Fire_Pulse_Delay_Seconds>0.2</Fire_Pulse_Delay_Seconds>
+           <Fire_Range_Distance>2100.0</Fire_Range_Distance>
+				<Fire_SFXEvent>Unit_Turbo_Fire</Fire_SFXEvent>
+
+			<Fire_Inaccuracy_Distance> Fighter, 35.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Bomber, 35.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Transport, 15.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Corvette, 1.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Frigate, 15.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Capital, 70.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> SuperCapital, 30.0 </Fire_Inaccuracy_Distance>
+
+    </HardPoint>
+	
+		<HardPoint Name="HP_Assault_Frigate_Weapon_BL2">
+    			<Type> HARD_POINT_WEAPON_LASER </Type>
+            <Is_Targetable>Yes</Is_Targetable>
+            <Is_Destroyable>Yes</Is_Destroyable>
+            <Tooltip_Text>TEXT_WEAPON_TURBOLASER_DUAL</Tooltip_Text>
+            <Health>210.0</Health>  <!-- Was 250 -->
+
+			<Death_Explosion_Particles> Medium_Explosion_Space </Death_Explosion_Particles>
+			<Death_Explosion_SFXEvent>Unit_Hardpoint_Turbo_Laser_Death</Death_Explosion_SFXEvent>
+
+
+           <Model_To_Attach></Model_To_Attach>
+            <Collision_Mesh>FP_B-L_01</Collision_Mesh>
+            <Damage_Decal>FP_B-L_01</Damage_Decal>
+            <Damage_Particles>FP_B-L_01</Damage_Particles>
+
+            <Death_Breakoff_Prop> </Death_Breakoff_Prop>
+
+            <Attachment_Bone>FP_B-L_01</Attachment_Bone>
+
+            <Fire_Bone_A>FP_B-L_01</Fire_Bone_A>
+            <Fire_Bone_B>FP_B-L_01</Fire_Bone_B>
+            <Fire_Cone_Width>360</Fire_Cone_Width>
+            <Fire_Cone_Height>130.0</Fire_Cone_Height>
+            <Fire_Projectile_Type>Proj_Ship_Turbolaser_Red_Dual</Fire_Projectile_Type>
+            <Fire_Min_Recharge_Seconds>3.0</Fire_Min_Recharge_Seconds>
+            <Fire_Max_Recharge_Seconds>4.0</Fire_Max_Recharge_Seconds>
+            <Fire_Pulse_Count>2</Fire_Pulse_Count>
+            <Fire_Pulse_Delay_Seconds>0.2</Fire_Pulse_Delay_Seconds>
+           <Fire_Range_Distance>2100.0</Fire_Range_Distance>
+				<Fire_SFXEvent>Unit_Turbo_Fire</Fire_SFXEvent>
+
+			<Fire_Inaccuracy_Distance> Fighter, 35.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Bomber, 35.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Transport, 15.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Corvette, 1.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Frigate, 15.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Capital, 70.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> SuperCapital, 30.0 </Fire_Inaccuracy_Distance>
+
+
+    </HardPoint>
+
+	<HardPoint Name="HP_Assault_Frigate_Weapon_BR2">
+			<Type> HARD_POINT_WEAPON_LASER </Type>
+            <Is_Targetable>Yes</Is_Targetable>
+            <Is_Destroyable>Yes</Is_Destroyable>
+            <Tooltip_Text>TEXT_WEAPON_TURBOLASER_DUAL</Tooltip_Text>
+            <Health>210.0</Health>  <!-- Was 250 -->
+
+			<Death_Explosion_Particles> Medium_Explosion_Space </Death_Explosion_Particles>
+			<Death_Explosion_SFXEvent>Unit_Hardpoint_Turbo_Laser_Death</Death_Explosion_SFXEvent>
+
+
+            <Model_To_Attach></Model_To_Attach>
+            <Collision_Mesh>FP_B-R_01</Collision_Mesh>
+            <Damage_Decal>FP_B-R_01</Damage_Decal>
+            <Damage_Particles>FP_B-R_01</Damage_Particles>
+
+            <Death_Breakoff_Prop> </Death_Breakoff_Prop>
+
+            <Attachment_Bone>FP_B-R_01</Attachment_Bone>
+
+            <Fire_Bone_A>FP_B-R_01</Fire_Bone_A>
+            <Fire_Bone_B>FP_B-R_01</Fire_Bone_B>
+            <Fire_Cone_Width>360</Fire_Cone_Width>
+            <Fire_Cone_Height>130.0</Fire_Cone_Height>
+            <Fire_Projectile_Type>Proj_Ship_Turbolaser_Red_Dual</Fire_Projectile_Type>
+            <Fire_Min_Recharge_Seconds>3.0</Fire_Min_Recharge_Seconds>
+            <Fire_Max_Recharge_Seconds>4.0</Fire_Max_Recharge_Seconds>
+            <Fire_Pulse_Count>2</Fire_Pulse_Count>
             <Fire_Pulse_Delay_Seconds>0.2</Fire_Pulse_Delay_Seconds>
            <Fire_Range_Distance>2100.0</Fire_Range_Distance>
 				<Fire_SFXEvent>Unit_Turbo_Fire</Fire_SFXEvent>
@@ -4241,7 +4326,7 @@
             <Is_Targetable>Yes</Is_Targetable>
             <Is_Destroyable>Yes</Is_Destroyable>
             <Tooltip_Text>TEXT_WEAPON_TURBOLASER</Tooltip_Text>
-            <Health>270.0</Health>
+            <Health>210.0</Health>
 
 			<Death_Explosion_Particles> Large_Explosion_Space_Empire </Death_Explosion_Particles>
 			<Death_Explosion_SFXEvent>Unit_Hardpoint_Turbo_Laser_Death</Death_Explosion_SFXEvent>
@@ -4282,7 +4367,7 @@
             <Is_Targetable>Yes</Is_Targetable>
             <Is_Destroyable>Yes</Is_Destroyable>
             <Tooltip_Text>TEXT_WEAPON_TURBOLASER</Tooltip_Text>
-            <Health>270.0</Health>
+            <Health>210.0</Health>
 
 			<Death_Explosion_Particles> Large_Explosion_Space_Empire </Death_Explosion_Particles>
 			<Death_Explosion_SFXEvent>Unit_Hardpoint_Turbo_Laser_Death</Death_Explosion_SFXEvent>

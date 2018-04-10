@@ -1165,6 +1165,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Pirates, UC_Power_Generator_P</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_Power_Generator_P</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_Power_Generator_P</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_Power_Generator_P</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 45 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS,REVEAL, HIDE_WHEN_FOGGED </Behavior>
@@ -1190,7 +1191,7 @@
 		<Mass>1.0</Mass>
 		<Scale_Factor>0.75</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
 		<CategoryMask>Structure</CategoryMask>
@@ -1246,7 +1247,7 @@
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>1000</Energy_Capacity>
 		<Energy_Refresh_Rate>50</Energy_Refresh_Rate>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
 		<CategoryMask>Structure</CategoryMask>
@@ -1541,6 +1542,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Pirates, UC_P_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_P_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_P_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_P_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 45 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
@@ -1578,7 +1580,7 @@
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
 		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
@@ -1782,7 +1784,7 @@
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
 		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
-		<Affiliation>entastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>entastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -2131,7 +2133,7 @@
 		<Variant_Of_Existing_Type>N_Small_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
 		<Behavior>TACTICAL_BUILD_OBJECTS,REVEAL, BASE_SHIELD, HIDE_WHEN_FOGGED</Behavior>
 		<LandBehavior>TERRAIN_TEXTURE_MODIFICATION, LAND_OBSTACLE, SPACE_OBSTACLE</LandBehavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Tactical_Buildable_Objects_Multiplayer> 
 			Pentastar, 
 				UC_P_Small_Ground_Base_Shield, 
@@ -2140,6 +2142,8 @@
 			Teradoc, 
 				UC_P_Small_Ground_Base_Shield, 
 			Hutts, 
+				UC_P_Small_Ground_Base_Shield,
+			Yevetha, 
 				UC_P_Small_Ground_Base_Shield, 
 		</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 40 </Minimum_Time_Before_Pad_Can_Build_Again>
@@ -2243,12 +2247,12 @@
 		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
 	</GroundBuildable>
 	
-		<GroundBuildable Name="UC_P_Small_Ground_Base_Shield">
+	<GroundBuildable Name="UC_P_Small_Ground_Base_Shield">
 		<GUI_Bounds_Scale>0.05</GUI_Bounds_Scale>
 		<Behavior>TACTICAL_UNDER_CONSTRUCTION, REVEAL, HIDE_WHEN_FOGGED, BASE_SHIELD</Behavior>
 		<LandBehavior>TERRAIN_TEXTURE_MODIFICATION, LAND_OBSTACLE, SPACE_OBSTACLE</LandBehavior>
 		<Base_Shield_Always_Off> True </Base_Shield_Always_Off>
-      <Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
 		<Obstacle_Proxy_Type> N_Small_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
 		<Victory_Relevant>No</Victory_Relevant>
 		<Tactical_Buildable_Constructed> P_Ground_Base_Shield_Small </Tactical_Buildable_Constructed>
@@ -2288,7 +2292,7 @@
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
 		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -2585,6 +2589,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Pirates, UC_Pentastar_Ground_Mining_Facility</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_Pentastar_Ground_Mining_Facility</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_Pentastar_Ground_Mining_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_Pentastar_Ground_Mining_Facility</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 45.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Text_ID>TEXT_GROUND_MINING_FACILITY_EMPIRE</Text_ID>
 		<Land_Model_Name> NB_CMC22Mining.ALO </Land_Model_Name>
@@ -2593,7 +2598,7 @@
 		
 		<Terrain_Texture_Modifier_Square>false</Terrain_Texture_Modifier_Square>
 			
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Icon_Name>i_button_mining_facility.tga</Icon_Name>
 		<Is_Dummy>Yes</Is_Dummy>
 		<Scale_Factor>0.75</Scale_Factor>
@@ -2645,7 +2650,7 @@
 		
 		<!-- In FoC these are built on outpost pads -->
 		<Obstacle_Proxy_Type> Skirmish_Outpost_Pad </Obstacle_Proxy_Type>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Icon_Name>i_button_mining_facility.tga</Icon_Name>
 		
 		<Space_Layer> Corvette </Space_Layer>
@@ -3085,6 +3090,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Pirates, UC_P_Ground_Turbolaser_Tower</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_P_Ground_Turbolaser_Tower</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_P_Ground_Turbolaser_Tower</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_P_Ground_Turbolaser_Tower</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 40.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS, REVEAL, HIDE_WHEN_FOGGED</Behavior>
@@ -3093,7 +3099,7 @@
 		<Hides_When_Built_On>True</Hides_When_Built_On>
 		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
 		<Text_ID>TEXT_GROUND_TURBOLASER_TOWER</Text_ID>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Land_Model_Name>EB_TLTower.ALO</Land_Model_Name>
 		<Is_Dummy>No</Is_Dummy>
 		<Is_Community_Property>Yes</Is_Community_Property>
@@ -3141,7 +3147,7 @@
 		<Tactical_Buildable_Constructed> P_Ground_Turbolaser_Tower </Tactical_Buildable_Constructed>
 		<Tactical_Build_Start_Lower_Z> 50.0 </Tactical_Build_Start_Lower_Z>
 		<Text_ID>TEXT_GROUND_TURBOLASER_TOWER</Text_ID>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Land_Model_Name>EB_TLTower.ALO</Land_Model_Name>
 		<Is_Dummy>No</Is_Dummy>
 		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>			
@@ -3547,6 +3553,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Pirates, UC_P_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_P_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_P_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_P_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 50 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS, REVEAL,HIDE_WHEN_FOGGED</Behavior>
@@ -3572,7 +3579,7 @@
 		
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_infantry_barracks.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -3621,7 +3628,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_infantry_barracks.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -3883,6 +3890,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Pirates, UC_P_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_P_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_P_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_P_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 50.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS, REVEAL, HIDE_WHEN_FOGGED</Behavior>
@@ -3909,7 +3917,7 @@
 		
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_vehicle_factory.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -3958,7 +3966,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_vehicle_factory.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -4222,6 +4230,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Pirates, UC_P_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_P_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_P_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_P_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 50.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS, REVEAL,HIDE_WHEN_FOGGED</Behavior>
@@ -4248,7 +4257,7 @@
 				
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_advanced_weapons.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -4297,7 +4306,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_advanced_weapons.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -4548,7 +4557,7 @@
 		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
 	</GroundBuildable>
 	
-		<GroundBuildable Name="P_Ground_Advanced_Vehicle_Factory_Build_Pad">
+	<GroundBuildable Name="P_Ground_Advanced_Vehicle_Factory_Build_Pad">
 		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
 		<Land_Damage_Thresholds>1</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>3</Land_Damage_Alternates>
@@ -4557,6 +4566,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Pirates, UC_P_Ground_Advanced_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_P_Ground_Advanced_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_P_Ground_Advanced_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_P_Ground_Advanced_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 60.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS,REVEAL,HIDE_WHEN_FOGGED</Behavior>
@@ -4583,7 +4593,7 @@
 		
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_mega_advanced_weapons.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -4630,7 +4640,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_mega_advanced_weapons.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -5050,6 +5060,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Pirates, UC_P_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_P_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_P_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_P_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 50.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS, REVEAL,HIDE_WHEN_FOGGED</Behavior>
@@ -5076,7 +5087,7 @@
 		
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_research_facility.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -5125,7 +5136,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_research_facility.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -5389,6 +5400,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Pirates, UC_Communications_Array_P</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_Communications_Array_P</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_Communications_Array_P</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_Communications_Array_P</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 35 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Land_Model_Name>RB_COMCENTER.ALO</Land_Model_Name>
 		<Is_Community_Property>Yes</Is_Community_Property>
@@ -5419,7 +5431,7 @@
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>0</Energy_Capacity>
 		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Base_Level_Available>1</Base_Level_Available>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
@@ -5471,7 +5483,7 @@
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>0</Energy_Capacity>
 		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
 		<CategoryMask>Structure</CategoryMask>
@@ -5746,6 +5758,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Pirates, UC_Pentastar_Command_Center</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_Pentastar_Command_Center</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_Pentastar_Command_Center</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_Pentastar_Command_Center</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 65 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
 		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>			
@@ -5772,7 +5785,7 @@
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>0</Energy_Capacity>
 		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
 		<CategoryMask>Structure</CategoryMask>
@@ -5831,7 +5844,7 @@
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>0</Energy_Capacity>
 		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
 		<CategoryMask>Structure</CategoryMask>
@@ -6002,7 +6015,9 @@
 			Rebel,
 				UC_Rebel_Mineral_Processor,
 			Underworld,
-				UC_Underworld_Mineral_Processor, 
+				UC_Underworld_Mineral_Processor,
+			Yevetha, 
+				UC_Pentastar_Mineral_Processor,
 		</Tactical_Buildable_Objects_Multiplayer>
 		
 		<Minimum_Time_Before_Pad_Can_Build_Again> 30.0 </Minimum_Time_Before_Pad_Can_Build_Again>
@@ -6045,7 +6060,7 @@
 		<GUI_Bracket_Size> 1 </GUI_Bracket_Size> 
 		<Has_Land_Evaluator>True</Has_Land_Evaluator>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
-		<Affiliation>Neutral, Empire, Rebel, Underworld, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Neutral, Empire, Rebel, Underworld, Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		
 		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_RESOURCE_PAD_00 TEXT_TOOLTIP_UNIT_CAPTUREABLE_STRUCTURE </Encyclopedia_Text>
 		<MP_Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_RESOURCE_PAD_00 TEXT_TOOLTIP_UNIT_CAPTUREABLE_STRUCTURE </MP_Encyclopedia_Text>
@@ -6157,7 +6172,7 @@
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>0</Energy_Capacity>
 		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
 		<CategoryMask>Structure</CategoryMask>
@@ -6394,7 +6409,7 @@
 		<Scale_Factor> 1.00 </Scale_Factor>
 		<!--<Is_Sprite> No </Is_Sprite>-->
 		<Shield_Points> 0 </Shield_Points>
-		<Affiliation> Pentastar, Pirates, Teradoc, Hutts </Affiliation>
+		<Affiliation> Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
 		<Base_Level_Available> 1 </Base_Level_Available>
 		<Required_Ground_Base_Level> 0 </Required_Ground_Base_Level>
 		<Armor_Type> Armor_Structure </Armor_Type>
@@ -7109,7 +7124,12 @@
 			Hutts, 
 				UC_Pentastar_Ground_Mining_Facility,
 				UC_P_Uplink_Station,
-				UC_Ground_Magnepulse_Cannon_P,					
+				UC_Ground_Magnepulse_Cannon_P,
+
+			Yevetha, 
+				UC_Pentastar_Ground_Mining_Facility,
+				UC_P_Uplink_Station,
+				UC_Ground_Magnepulse_Cannon_P,
 
 		</Tactical_Buildable_Objects_Multiplayer>
 		
@@ -7143,7 +7163,7 @@
 		<GUI_Bracket_Size> 1 </GUI_Bracket_Size> 
 		<Has_Land_Evaluator>True</Has_Land_Evaluator>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Teradoc, Hutts, Yevetha</Affiliation>
 		<Immune_To_Damage>True</Immune_To_Damage>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 30.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		
@@ -7435,7 +7455,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
@@ -7728,7 +7748,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Pentastar</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Size_Value>50</Size_Value>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
@@ -7806,7 +7826,7 @@
 		<Custom_Hard_XExtent> 20.0 </Custom_Hard_XExtent>
 		<Custom_Hard_YExtent> 20.0 </Custom_Hard_YExtent>
 		
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Behavior>TACTICAL_SELL, SELECTABLE, DUMMY_GROUND_STRUCTURE</Behavior>
 		<LandBehavior> ABILITY_COUNTDOWN, SPACE_OBSTACLE, LAND_OBSTACLE, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
 		<Tactical_Sell_Credits> 600 </Tactical_Sell_Credits>

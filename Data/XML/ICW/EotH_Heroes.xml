@@ -87,7 +87,7 @@
 		<Scale_Factor>1.75</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Underworld</Affiliation>
 		<Required_Timeline>4</Required_Timeline>
 		<IsBuildable>No</IsBuildable>
 		<Spawn_Planet>NalHutta</Spawn_Planet>
@@ -567,6 +567,7 @@
 		<Shield_Points>16</Shield_Points>
 		<Tactical_Health>24</Tactical_Health>
 		<Damage>10</Damage>
+		<Affiliation>Underworld</Affiliation>
 		
 		<SpaceBehavior>FIGHTER_LOCOMOTOR, ABILITY_COUNTDOWN, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, NEBULA </SpaceBehavior>
 
@@ -944,6 +945,7 @@
 		<Shield_Points>16</Shield_Points>
 		<Tactical_Health>24</Tactical_Health>
 		<Damage>10</Damage>
+		<Affiliation>Underworld</Affiliation>
 		
 		<SpaceBehavior>FIGHTER_LOCOMOTOR, ABILITY_COUNTDOWN, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, NEBULA </SpaceBehavior>
 		
@@ -1292,6 +1294,7 @@
 		<Shield_Points>30</Shield_Points>
 		<Tactical_Health>60</Tactical_Health>
 		<Damage>20</Damage>
+		<Affiliation>Underworld</Affiliation>
 		
 		<SpaceBehavior>FIGHTER_LOCOMOTOR, ABILITY_COUNTDOWN, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, NEBULA </SpaceBehavior>
 		
@@ -1528,7 +1531,6 @@
 		<Score_Cost_Credits> 6000 </Score_Cost_Credits>
         <Build_Cost_Credits>0</Build_Cost_Credits>
 		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
-		<Population_Value>4</Population_Value>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>5500</Tactical_Build_Cost_Multiplayer>
@@ -1589,6 +1591,7 @@
 		
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script></Lua_Script>
+		<Affiliation>Underworld</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
@@ -1671,8 +1674,9 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_PARCK TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_STRIKEFAST </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 		<Lua_Script></Lua_Script>
+		<Affiliation>Underworld</Affiliation>
 		
-		<CategoryMask> Frigate | SpaceHero </CategoryMask>
+		<CategoryMask> Frigate | AntiFrigate | SpaceHero </CategoryMask>
 
 		
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
@@ -1807,6 +1811,7 @@
 		<Tech_Level>99</Tech_Level>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Lua_Script></Lua_Script>
+		<Affiliation>Underworld</Affiliation>
 		
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		
@@ -1864,15 +1869,16 @@
 </UniqueUnit>
 
 	<UniqueUnit Name="Aralani_Frontier">
-  <Variant_Of_Existing_Type>Syndic_Destroyer</Variant_Of_Existing_Type>
-  <Text_ID>TEXT_HERO_ARALANI</Text_ID>
-  <Encyclopedia_Text>TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ARALANI TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_FRONTIER</Encyclopedia_Text>
-  <Icon_Name>i_button_aralani.tga</Icon_Name>
-<Tech_Level>99</Tech_Level>
-<Is_Named_Hero>Yes</Is_Named_Hero>
-<Lua_Script></Lua_Script>
+		<Variant_Of_Existing_Type>Syndic_Destroyer</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_ARALANI</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ARALANI TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_FRONTIER</Encyclopedia_Text>
+		<Icon_Name>i_button_aralani.tga</Icon_Name>
+		<Tech_Level>99</Tech_Level>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Lua_Script></Lua_Script>
+		<Affiliation>Underworld</Affiliation>
 
-<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 
 		<Starting_Spawned_Units_Tech_0>Syca_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Clawcraft_Squadron, 2</Starting_Spawned_Units_Tech_0>
@@ -1880,7 +1886,7 @@
 		<Reserve_Spawned_Units_Tech_0>Syca_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Clawcraft_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 
-	<SFXEvent_Select>Unit_Select_Aralani</SFXEvent_Select>
+		<SFXEvent_Select>Unit_Select_Aralani</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Aralani</SFXEvent_Move>
 		<SFXEvent_Fleet_Move>Unit_Move_Aralani</SFXEvent_Fleet_Move>
 		<SFXEvent_Attack>Unit_Attack_Aralani</SFXEvent_Attack>
