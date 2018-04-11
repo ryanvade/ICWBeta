@@ -576,7 +576,7 @@
 		<Text_ID>TEXT_UNIT_ARMADIA</Text_ID>
 		<GUI_Row> 1 </GUI_Row>
 		<Space_Model_Name>ARMADIA.ALO</Space_Model_Name>
-		<GUI_Model_Name>RV_CORVETTE.ALO</GUI_Model_Name>
+		<GUI_Model_Name>ARMADIA.ALO</GUI_Model_Name>
 		<Select_Box_Scale>200</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
 		<Mass>0.995</Mass>
@@ -637,12 +637,12 @@
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>1250</Build_Cost_Credits>
         <Slice_Cost_Credits>675</Slice_Cost_Credits>
-		<AI_Combat_Power>1250</AI_Combat_Power>
+		<AI_Combat_Power>360</AI_Combat_Power>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>120</Size_Value>
 		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
-		<SpaceBehavior> SELF_DESTRUCT, ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SPAWN_SQUADRON, SELECTABLE, POWERED, SHIELDED, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SPAWN_SQUADRON, SELECTABLE, POWERED, SHIELDED, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		
 		<Starting_Spawned_Units_Tech_5>Trifoil_Squadron, 2</Starting_Spawned_Units_Tech_5> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_5>Trifoil_Squadron, 2</Reserve_Spawned_Units_Tech_5> <!-- -1 == no limit -->
@@ -706,13 +706,6 @@
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>SELF_DESTRUCT</Type>
-				<Expiration_Seconds>2</Expiration_Seconds>
-				<Recharge_Seconds>10</Recharge_Seconds>
-				<Spawned_Object_Type> Vengeance_Self_Destruct_Blast </Spawned_Object_Type>
-				<Supports_Autofire>False</Supports_Autofire>
-			</Unit_Ability>
 			<Unit_Ability>
 				<Type>TURBO</Type>
 
@@ -788,22 +781,12 @@
 		<Tech_Level>0</Tech_Level>
 		<Lua_Script>GenericGameObject</Lua_Script>
 
-		<SpaceBehavior>SELF_DESTRUCT, ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, SPAWN_SQUADRON, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, SPAWN_SQUADRON, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<!--<Encyclopedia_Good_Against> MC40a Carrack_Cruiser Vigilance_Gunship </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Generic_Star_Destroyer TIE_Bomber K-Wing </Encyclopedia_Vulnerable_To>-->
 
 		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- IMPORTANT! If you modify the ability below, please make same adjustments to unit's "Captured" clone. -->
-			<!-- I know this is awkward, hopefully we'll get a chance to re-write the code to fix it.   -Oksana -->
-			<Unit_Ability>
-				<Type>SELF_DESTRUCT</Type>
-				<Expiration_Seconds>2</Expiration_Seconds>
-				<Recharge_Seconds>10</Recharge_Seconds>
-				<Spawned_Object_Type> Vengeance_Self_Destruct_Blast </Spawned_Object_Type>
-				<Supports_Autofire>True</Supports_Autofire>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
+
 	</SpaceUnit>
 
 

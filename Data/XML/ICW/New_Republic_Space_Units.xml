@@ -303,6 +303,7 @@
 		<Shield_Refresh_Rate>15</Shield_Refresh_Rate>
 		<Energy_Capacity>1500</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+		<AI_Combat_Power>100</AI_Combat_Power>
 		<Ship_Class>corvette</Ship_Class>
 		<FormationPriority>3</FormationPriority>
 		<Is_Escort>Yes</Is_Escort>
@@ -502,7 +503,7 @@
 		<Transport_Capacity>6</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>1350</Build_Cost_Credits>
-		<AI_Combat_Power>1350</AI_Combat_Power>
+		<AI_Combat_Power>200</AI_Combat_Power>
 		<Build_Time_Seconds>20</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>120</Size_Value>
@@ -567,24 +568,6 @@
 		<Autonomous_Move_Extension_Vs_Attacker>300.0</Autonomous_Move_Extension_Vs_Attacker>
 
 
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>TURBO</Type>
-
-				<Expiration_Seconds>20</Expiration_Seconds>
-				<Recharge_Seconds>60</Recharge_Seconds>
-				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
-				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
-				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
-				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
-
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
-				<SFXEvent_GUI_Unit_Ability_Deactivated />
-			</Unit_Ability>
-
-		</Unit_Abilities_Data>
 
 
 				<Abilities SubObjectList="Yes">
@@ -698,7 +681,7 @@
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>1250</Build_Cost_Credits>
         <Slice_Cost_Credits>675</Slice_Cost_Credits>
-		<AI_Combat_Power>350</AI_Combat_Power>
+		<AI_Combat_Power>300</AI_Combat_Power>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>120</Size_Value>
@@ -874,7 +857,7 @@
 		<Transport_Capacity>4</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>1800</Build_Cost_Credits>
-		<AI_Combat_Power>1400</AI_Combat_Power>
+		<AI_Combat_Power>490</AI_Combat_Power>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>120</Size_Value>
@@ -1003,7 +986,7 @@
 		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Capital </Space_Layer>
-		<Layer_Z_Adjust>-290.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-230.0</Layer_Z_Adjust>
 		<OverrideAcceleration> .02 </OverrideAcceleration>
 		<OverrideDeceleration> .02 </OverrideDeceleration>
 		<Lua_Script>GenericGameObject</Lua_Script>
@@ -1040,7 +1023,7 @@
 		<Political_Faction>Rebel</Political_Faction>
 		<Squadron_Capacity>40</Squadron_Capacity>
 		<Build_Cost_Credits>7500</Build_Cost_Credits>
-		<AI_Combat_Power>4250</AI_Combat_Power>
+		<AI_Combat_Power>600</AI_Combat_Power>
 		<Build_Time_Seconds>105</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>360</Size_Value>
@@ -1200,7 +1183,7 @@
 		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Capital </Space_Layer>
-		<Layer_Z_Adjust>-290.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-100.0</Layer_Z_Adjust>
 		<OverrideAcceleration> .02 </OverrideAcceleration>
 		<OverrideDeceleration> .02 </OverrideDeceleration>
 		<Lua_Script>GenericGameObject</Lua_Script>
@@ -1236,7 +1219,7 @@
 		<Political_Faction>Rebel</Political_Faction>
 		<Squadron_Capacity>40</Squadron_Capacity>
 		<Build_Cost_Credits>8200</Build_Cost_Credits>
-		<AI_Combat_Power>4250</AI_Combat_Power>
+		<AI_Combat_Power>2800</AI_Combat_Power>
 		<Build_Time_Seconds>100</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>360</Size_Value>
@@ -1605,7 +1588,7 @@
 		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Capital </Space_Layer>
-		<Layer_Z_Adjust>-290.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-230.0</Layer_Z_Adjust>
 		<OverrideAcceleration> .02 </OverrideAcceleration>
 		<OverrideDeceleration> .02 </OverrideDeceleration>
 		<Surface_Bombardment_Capable>yes</Surface_Bombardment_Capable>
@@ -1641,7 +1624,7 @@
 		<Political_Faction>Rebel</Political_Faction>
 		<Squadron_Capacity>40</Squadron_Capacity>
 		<Build_Cost_Credits>6000</Build_Cost_Credits>
-		<AI_Combat_Power>4250</AI_Combat_Power>
+		<AI_Combat_Power>1410</AI_Combat_Power>
 		<Build_Time_Seconds>105</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>360</Size_Value>
@@ -1834,7 +1817,7 @@
 
 		<Squadron_Capacity>40</Squadron_Capacity>
 		<Build_Cost_Credits>40000</Build_Cost_Credits>
-		<AI_Combat_Power>45000</AI_Combat_Power>
+		<AI_Combat_Power>17160</AI_Combat_Power>
 		<Build_Time_Seconds>300</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>360</Size_Value>
@@ -1996,7 +1979,7 @@
 		<Political_Faction>Rebel</Political_Faction>
 		<Squadron_Capacity>40</Squadron_Capacity>
 		<Build_Cost_Credits>4500</Build_Cost_Credits>
-		<AI_Combat_Power>4250</AI_Combat_Power>
+		<AI_Combat_Power>2030</AI_Combat_Power>
 		<Build_Time_Seconds>105</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>360</Size_Value>
@@ -2219,7 +2202,7 @@
 		<Transport_Capacity>4</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>1250</Build_Cost_Credits>
-		<AI_Combat_Power>1250</AI_Combat_Power>
+		<AI_Combat_Power>190</AI_Combat_Power>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>120</Size_Value>
@@ -2390,7 +2373,7 @@
 		<Political_Faction>Rebel</Political_Faction>
 		<Squadron_Capacity>40</Squadron_Capacity>
 		<Build_Cost_Credits>6800</Build_Cost_Credits>
-		<AI_Combat_Power>6050</AI_Combat_Power>
+		<AI_Combat_Power>2750</AI_Combat_Power>
 		<Build_Time_Seconds>100</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>360</Size_Value>
@@ -2586,7 +2569,7 @@
 		<Political_Faction>Rebel</Political_Faction>
 		<Squadron_Capacity>40</Squadron_Capacity>
 		<Build_Cost_Credits>6800</Build_Cost_Credits>
-		<AI_Combat_Power>6050</AI_Combat_Power>
+		<AI_Combat_Power>2330</AI_Combat_Power>
 		<Build_Time_Seconds>100</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>360</Size_Value>
@@ -2805,7 +2788,7 @@
 		<Political_Faction>Rebel</Political_Faction>
 		<Squadron_Capacity>40</Squadron_Capacity>
 		<Build_Cost_Credits>4000</Build_Cost_Credits>
-		<AI_Combat_Power>4250</AI_Combat_Power>
+		<AI_Combat_Power>1170</AI_Combat_Power>
 		<Build_Time_Seconds>90</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>360</Size_Value>
@@ -3012,7 +2995,7 @@
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>2500</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<AI_Combat_Power>2200</AI_Combat_Power>
+		<AI_Combat_Power>310</AI_Combat_Power>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
@@ -3225,7 +3208,7 @@
 		<Transport_Capacity>8</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>2200</Build_Cost_Credits>
-		<AI_Combat_Power>2200</AI_Combat_Power>
+		<AI_Combat_Power>570</AI_Combat_Power>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
@@ -3452,7 +3435,7 @@
 		<Transport_Capacity>8</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>2100</Build_Cost_Credits>
-		<AI_Combat_Power>2200</AI_Combat_Power>
+		<AI_Combat_Power>80</AI_Combat_Power>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
@@ -3704,7 +3687,7 @@
 		<Transport_Capacity>8</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>2200</Build_Cost_Credits>
-		<AI_Combat_Power>2200</AI_Combat_Power>
+		<AI_Combat_Power>210</AI_Combat_Power>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
@@ -3918,7 +3901,7 @@
 		<Transport_Capacity>8</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>2200</Build_Cost_Credits>
-		<AI_Combat_Power>2200</AI_Combat_Power>
+		<AI_Combat_Power>310</AI_Combat_Power>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
@@ -4116,7 +4099,7 @@
 		<Transport_Capacity>12</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>3800</Build_Cost_Credits>
-		<AI_Combat_Power>2500</AI_Combat_Power>
+		<AI_Combat_Power>1520</AI_Combat_Power>
 		<Build_Time_Seconds>58</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
@@ -4297,7 +4280,7 @@
 		<Transport_Capacity>12</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>2000</Build_Cost_Credits>
-		<AI_Combat_Power>2500</AI_Combat_Power>
+		<AI_Combat_Power>850</AI_Combat_Power>
 		<Build_Time_Seconds>45</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
@@ -4505,7 +4488,7 @@
 		<Transport_Capacity>12</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>3300</Build_Cost_Credits>
-		<AI_Combat_Power>2500</AI_Combat_Power>
+		<AI_Combat_Power>1510</AI_Combat_Power>
 		<Build_Time_Seconds>45</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>

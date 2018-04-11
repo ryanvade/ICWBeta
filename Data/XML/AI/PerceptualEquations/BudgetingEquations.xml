@@ -142,6 +142,21 @@
 		)
 	</GenericMajorItemBudgetAllocation>
 	
+	<!-- For smaller GCs we want a lower major item budget, otherwise saving up takes a long time -->
+	<GenericLowMajorItemBudgetAllocation>
+		Variable_Self.PlanetsControlled
+		+
+		(
+			(1 - Function_Has_Capital_Building.Evaluate)
+			* 
+			10
+			+
+			Variable_Self.IsFaction {Parameter_Faction = "Rebel", Parameter_Faction = "Underworld", Parameter_Faction = "Pentastar", Parameter_Faction = "Hutts"}
+			*
+			(5 > Variable_Self.StructureCount {Parameter_Type = "Oto", Parameter_Type = "Validusia", Parameter_Type = "Empress_Station", Parameter_Only_Consider_Complete = 1.0})
+		)
+	</GenericLowMajorItemBudgetAllocation>
+	
 	<!-- Warlords tilt more strongly to attack than construction -->
 	<WarlordOffensiveBudgetAllocation>
 		1.5 * Function_GenericOffensiveBudgetAllocation.Evaluate
@@ -167,5 +182,42 @@
 	<RemnantMajorItemBudgetAllocation>
 		1.2 * Function_GenericMajorItemBudgetAllocation.Evaluate
 	</RemnantMajorItemBudgetAllocation>	
+	
+	<Pentastar_Aggro_On>
+		Variable_Self.TechLevel == 3
+	</Pentastar_Aggro_On>
+	
+	<Pentastar_Aggro_Off>
+		Variable_Self.TechLevel > 3
+	</Pentastar_Aggro_Off>
+	
+	<!-- Pentastar is very low aggro by default-->
+	<PentastarOffensiveBudgetAllocation>
+		0.5 * Function_GenericOffensiveBudgetAllocation.Evaluate
+	</PentastarOffensiveBudgetAllocation>
+	
+	<PentastarInfrastructureBudgetAllocation>
+		1.2 * Function_GenericInfrastructureBudgetAllocation.Evaluate
+	</PentastarInfrastructureBudgetAllocation>
+	
+	<PentastarMajorItemBudgetAllocation>
+		Function_GenericMajorItemBudgetAllocation.Evaluate
+	</PentastarMajorItemBudgetAllocation>	
+	
+	<EotHDefaultOffensiveBudgetAllocation>
+		0.2 * Function_GenericOffensiveBudgetAllocation.Evaluate
+	</EotHDefaultOffensiveBudgetAllocation>
+	
+	<EotHDefaultInfrastructureBudgetAllocation>
+		Function_GenericInfrastructureBudgetAllocation.Evaluate
+	</EotHDefaultInfrastructureBudgetAllocation>
+	
+	<EotHDefaultMajorItemBudgetAllocation>
+		Function_GenericMajorItemBudgetAllocation.Evaluate
+	</EotHDefaultMajorItemBudgetAllocation>
+	
+	<EotH_Aggro_On>
+		Variable_Self.TechLevel > 3
+	</EotH_Aggro_On>
 	
 </Equations>

@@ -335,6 +335,21 @@
 		
 		<Population_Value>1</Population_Value>
 		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SENSOR_JAMMING</Type>
+				<GUI_Activated_Ability_Name> Kardde_Sensor_Jamming </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>40.0</Recharge_Seconds> 
+				<Expiration_Seconds>20.0</Expiration_Seconds>
+				<Effective_Radius>300.0</Effective_Radius> 
+                <SFXEvent_GUI_Unit_Ability_Activated> Unit_Jam_Sensors_On_Skipray </SFXEvent_GUI_Unit_Ability_Activated> 				
+				<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Jam_Sensors_Off_Skipray </SFXEvent_GUI_Unit_Ability_Deactivated> 
+				<Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		
 		<Abilities SubObjectList="Yes">
 		
 		<Combat_Bonus_Ability Name="Karrde_Self_Bonus">
@@ -3900,9 +3915,8 @@
 		<Lua_Script>GenericGameObject</Lua_Script>
 		<Affiliation>Rebel</Affiliation>
 		
-				<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 8</Starting_Spawned_Units_Tech_0>
+				<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>B-Wing_Squadron, 4</Reserve_Spawned_Units_Tech_0>
 
 		
 		<CategoryMask> Frigate |  AntiFrigate | SpaceHero </CategoryMask>
@@ -4488,6 +4502,132 @@
 		<Space_Override_Population_Value>1</Space_Override_Population_Value>
 
 	</UniqueUnit>
+	
+	<UniqueUnit Name="Salm_Y-Wing_Escort">
+	
+		<Variant_Of_Existing_Type>Y-Wing</Variant_Of_Existing_Type>
+		
+		<Shield_Points>30</Shield_Points>
+		<Tactical_Health>30</Tactical_Health>
+		<Shield_Refresh_Rate>5</Shield_Refresh_Rate>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, HUNT, FIGHTER_LOCOMOTOR, SELECTABLE, GARRISON_UNIT, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, REVEAL, NEBULA </SpaceBehavior>
+		
+		<HardPoints>
+			HP_YWING_SALM_01, HP_YWING_SALM_02, HP_YWING_SALM_03
+		</HardPoints>
+		
+		<CategoryMask> Bomber | AntiCapital </CategoryMask>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</UniqueUnit>
+	
+	<UniqueUnit Name="Salm_Y-Wing">
+	
+		<Variant_Of_Existing_Type>Salm_Y-Wing_Escort</Variant_Of_Existing_Type>
+		
+		<Shield_Points>60</Shield_Points>
+		<Tactical_Health>60</Tactical_Health>
+		<Shield_Refresh_Rate>8</Shield_Refresh_Rate>
+		
+		<Text_ID>TEXT_HERO_SALM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_SALM TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_GUARDIAN_SQUADRON_YWING</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_GENERAL </Encyclopedia_Unit_Class>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, HUNT, FIGHTER_LOCOMOTOR, SELECTABLE, GARRISON_UNIT, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, REVEAL, NEBULA </SpaceBehavior>		
+		<CategoryMask> Bomber | AntiCapital | SpaceHero </CategoryMask>
+		
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+                <Recharge_Seconds>45</Recharge_Seconds>
+                <Expiration_Seconds>7</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FULL_SALVO_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FULL_SALVO_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_FULL_SALVO.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			
+			<Combat_Bonus_Ability Name="Salm_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types> </Excluded_Unit_Types>
+				<Health_Bonus_Percentage>0.15</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.15</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.15</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.15</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Salm_Combat_Bonus_Ace_Pilot">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types> </Excluded_Unit_Types>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.15</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.15</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.15</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.20</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Battlefield_Modifier_Ability Name="Salm_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>1.15</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+
+		</Abilities>
+		
+	</UniqueUnit>
+	
+	<Squadron Name="Salm_Y-Wing_Squadron">
+	
+		<Variant_Of_Existing_Type>Y-Wing_Squadron</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_HERO_GUARDIAN_SQUADRON_YWING</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GUARDIAN_SQUADRON_YWING</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOMBER </Encyclopedia_Unit_Class>
+		
+		<Squadron_Units>Salm_Y-Wing, Salm_Y-Wing_Escort, Salm_Y-Wing_Escort</Squadron_Units>
+		<Squadron_Units>Salm_Y-Wing_Escort, Salm_Y-Wing_Escort, Salm_Y-Wing_Escort</Squadron_Units>
+		<Squadron_Units>Salm_Y-Wing_Escort, Salm_Y-Wing_Escort, Salm_Y-Wing_Escort</Squadron_Units>
+		<Squadron_Units>Salm_Y-Wing_Escort, Salm_Y-Wing_Escort, Salm_Y-Wing_Escort</Squadron_Units>
+		
+		<Create_Team_Type>Salm_Y-Wing_Squadron_Container</Create_Team_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+                <Recharge_Seconds>45</Recharge_Seconds>
+                <Expiration_Seconds>7</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FULL_SALVO_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FULL_SALVO_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_FULL_SALVO.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</Squadron>
 
 	
 </New_Republic_Heroes>

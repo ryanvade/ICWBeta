@@ -3049,13 +3049,18 @@ GameObjectLibrary = {
         },
         ["ARMADIA"]={
             Scripts={
-                "MultiLayer",
-                "SingleUnitRetreat"
+                "MultiLayer"
             },
             Flags = {
                 HANGAR = true
             },
             Fighters={
+                ["TRIFOIL_SQUADRON"]={
+                    ["DEFAULT"] = {
+                        Reserve=0,
+                        Initial=1
+                    }
+                }
             }
         },
         ["ARQUITENS"]={

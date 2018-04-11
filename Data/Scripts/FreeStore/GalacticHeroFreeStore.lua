@@ -51,6 +51,7 @@ function Definitions()
 		ARALANI_FRONTIER = {nil, true}
 		,ASHIK_TEAM = {nil, false}
 		,CHAK_FEL_KRSISS_SQUADRON_ASSOCIATION = {nil, true}
+		,CHIMERA = {nil, true}
 		,JAG_FEL_SQUADRON_TEAM = {nil, true}
 		,NIRIZ_ADMONITOR = {nil, true}
 		,PARCK_STRIKEFAST = {nil, true}
