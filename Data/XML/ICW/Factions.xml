@@ -5395,17 +5395,13 @@
 	</Faction>
 
 	
+	
 	<Faction Name="Yevetha">
-
-		<Color> 248, 237, 60, 255 </Color>
-		<No_Colorization_Color> 248, 237, 60, 255 </No_Colorization_Color>
-		<Display_Font_Color> 248, 237, 60, 255 </Display_Font_Color>
-		<Big_Fleet_Color> 248, 237, 60, 255 </Big_Fleet_Color>
 
 		<Is_Debug_Switchable_To> Yes </Is_Debug_Switchable_To>
 		<Create_Player_In_Multiplayer_Games> No </Create_Player_In_Multiplayer_Games>
 
-		<Text_ID> TEXT_FACTION_YEVETHA </Text_ID>
+	<Text_ID> TEXT_FACTION_YEVETHA </Text_ID>
 		<Icon_Name> i_icon_yevetha.tga </Icon_Name>
 		<Alternate_Icon_Name> yevetha_icon.tga </Alternate_Icon_Name>
 		<Ground_Base_Icon_Name> groundbase_icon.tga </Ground_Base_Icon_Name>
@@ -5414,8 +5410,11 @@
 		<Fleet_Icon_Name> i_icon_fleet.tga </Fleet_Icon_Name>
 		<Ship_Icon_Name> g_fleet.tga </Ship_Icon_Name>
 		<Squadron_Icon_Name> g_squad.tga </Squadron_Icon_Name>
-
-		<Credits_Accumulation_Factor> 1.00 </Credits_Accumulation_Factor>
+		<Color> 248, 237, 60, 255 </Color>
+		<No_Colorization_Color> 248, 237, 60, 255 </No_Colorization_Color>
+		<Display_Font_Color> 248, 237, 60, 255 </Display_Font_Color>
+		<Big_Fleet_Color> 248, 237, 60, 255 </Big_Fleet_Color>
+		<Credits_Accumulation_Factor> 0.85 </Credits_Accumulation_Factor>
 		<Planet_Icon_Scale> 10.0 </Planet_Icon_Scale>
 		<Planet_Icon_Offset> 7.0, 10.0, -1.1 </Planet_Icon_Offset>
 		<Is_Playable>true</Is_Playable>
@@ -5511,13 +5510,13 @@
 		<Bombardment_Salvo_Delay> 1.0 </Bombardment_Salvo_Delay>
         <Bombardment_Initial_Delay> 3.0 </Bombardment_Initial_Delay>
 
-		<Land_Mode_Selection_Blob_Material_Name>Selection_Yevetha</Land_Mode_Selection_Blob_Material_Name>
+	<Land_Mode_Selection_Blob_Material_Name>Selection_Yevetha</Land_Mode_Selection_Blob_Material_Name>
 		<Space_Mode_Selection_Blob_Material_Name>Selection_Yevetha</Space_Mode_Selection_Blob_Material_Name>
 		<Land_Mode_Garrison_Selection_Blob_Material_Name>Selection_Yevetha</Land_Mode_Garrison_Selection_Blob_Material_Name>
 		<Space_Mode_Garrison_Selection_Blob_Material_Name>Selection_Yevetha</Space_Mode_Garrison_Selection_Blob_Material_Name>
         <Selection_Blob_RGBA>8, 122, 16, 255</Selection_Blob_RGBA>
-
-		<Space_Skirmish_Unit_Buy_Credits> 100000 </Space_Skirmish_Unit_Buy_Credits>
+		
+			<Space_Skirmish_Unit_Buy_Credits> 100000 </Space_Skirmish_Unit_Buy_Credits>
 		<Space_Skirmish_AI_Default_Forces>
 			Trifoil_Squadron, Trifoil_Squadron
 		</Space_Skirmish_AI_Default_Forces>
@@ -5534,10 +5533,11 @@
 		</Land_Skirmish_Unit_Cap_By_Player_Count>
 
 		<Debug_Ground_Structures>
-			P_Ground_Barracks,
-			P_Ground_Light_Vehicle_Factory,
-			Power_Generator_P,
-			Communications_Array_P
+			E_Ground_Barracks,
+			E_Ground_Officer_Academy,
+			E_Ground_Light_Vehicle_Factory,
+			Power_Generator_E,
+			Communications_Array_E
 		</Debug_Ground_Structures>
 
         <Superweapon_Win_Movie>Empire_Win_Deathstar</Superweapon_Win_Movie>
@@ -5554,6 +5554,7 @@
 		<!-- This enables the galactic victory condition: "Win by capturing Coruscant and eliminating Emperor Palpatine" -->
 		<Home_Planet>Nzoth</Home_Planet>
 		<Faction_Leader>Spaar_Aramadia</Faction_Leader>
+		<Faction_Leader_Company>Emperor_Palpatine_Team</Faction_Leader_Company>
 
 
 		<!-- Allow special weapon firing in tactical maps that have no parent galactic mode -->
@@ -5994,6 +5995,22 @@
 
 
 
+		<!-- Sandbox tactical battle introduction SpeechEvents -->
+
+														<!-- Note that conditionals will be evaluated in the order below, so order/priority is important -->
+														<!-- -->
+														<!-- Luke object types (4) : 		  	Luke_Skywalker, Luke_Team, Luke_XWing, Red_Squadron				-->
+														<!-- Mon Mothma object types (2):  	Mon_Mothma, Mon_Mothma_Team												-->
+														<!-- Emperor Palpatine types (2):  	Emperor_Palpatine, Emperor_Palpatine_Team								-->
+														<!-- Death Star types (1):  		  	Death_star																		-->
+														<!-- -->
+														<!-- ...Conditional_Or:  A (or) B present - and C not present													-->
+														<!-- ...Conditional_And: A (and) B present - and C not present													-->
+														<!-- -->
+														<!-- Conditionals:  		(A) Present, 				(B) Present,  	(C) Not Present -->
+
+
+
 		<!-- ============================================== -->
 		<!-- EMPIRE DROID ADVISOR TEXT		                -->
 		<!-- ============================================== -->
@@ -6061,7 +6078,7 @@
 
 
 		<Allies></Allies>
-		<Enemies> Empire, Rebel, Pirates, Hostile, Sarlacc, Underworld, Hutts, Pentastar, Teradoc, Warlords, Corporate_Sector, Harrsk, Hutt_Cartels, SsiRuuvi_Imperium, Mandalorians </Enemies>
+		<Enemies>  Rebel, Pirates, Hostile, Sarlacc, Underworld, Hutts, Empire, Pentastar, Teradoc, Warlords, Corporate_Sector, Harrsk, Hutt_Cartels, SsiRuuvi_Imperium, Mandalorians </Enemies>
 
 		<Can_Control_Planets>true</Can_Control_Planets>
 
@@ -6075,16 +6092,14 @@
 		<Multiplayer_Campaign_Heroes>
 
 		</Multiplayer_Campaign_Heroes>
-
 		<Multiplayer_Map_Preview_Icon>I_MULTIPLAY_YEVETHA.TGA</Multiplayer_Map_Preview_Icon>
 
         <Tech_Level_Icon_Name> i_button_y_tech_upgrade_ </Tech_Level_Icon_Name>
 
       <Alternate_Icon_Prefix> y_ </Alternate_Icon_Prefix>
 
+	  </Faction>
 
-
-	</Faction>
 
 	
 	<Faction Name="Corporate_Sector">
