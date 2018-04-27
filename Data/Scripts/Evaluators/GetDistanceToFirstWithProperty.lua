@@ -1,4 +1,4 @@
--- $Id: //depot/Projects/StarWars_Expansion/Run/Data/Scripts/AI/SpaceMode/DestroyUnit.lua#1 $
+-- $Id: //depot/Projects/StarWars_Expansion/Run/Data/Scripts/Evaluators/GetDistanceToNearestWithProperty.lua#1 $
 --/////////////////////////////////////////////////////////////////////////////////////////////////
 --
 -- (C) Petroglyph Games, Inc.
@@ -25,9 +25,9 @@
 -- C O N F I D E N T I A L   S O U R C E   C O D E -- D O   N O T   D I S T R I B U T E
 --/////////////////////////////////////////////////////////////////////////////////////////////////
 --
---              $File: //depot/Projects/StarWars_Expansion/Run/Data/Scripts/AI/SpaceMode/DestroyUnit.lua $
+--              $File: //depot/Projects/StarWars_Expansion/Run/Data/Scripts/Evaluators/GetDistanceToNearestWithProperty.lua $
 --
---    Original Author: James Yarrow
+--    Original Author: Steve_Copeland
 --
 --            $Author: Andre_Arsenault $
 --
@@ -39,61 +39,38 @@
 --
 --/////////////////////////////////////////////////////////////////////////////////////////////////
 
-require("pgevents")
+require("PGCommands")
 
-function Definitions()
-	DebugMessage("%s -- In Definitions", tostring(Script))
-	
-	AllowEngagedUnits = false
-	MaxContrastScale = 2.0
-	Category = "Destroy_Unit"
-	TaskForce = {
-	{
-		"MainForce"						
-		,"Fighter = 0, 2" -- don't take too many fighters because we allow engaged units
-		,"Fighter | Corvette | Frigate | Capital | SuperCapital | SpaceHero = 1, 20"
-	}
-	}
-	
-	ChangedTarget = false
-	AttackingShields = false
-	DropCurrentTarget = false
-
-	kill_target = nil
-
-	DebugMessage("%s -- Done Definitions", tostring(Script))
+function Clean_Up()
+	-- any temporary object pointers need to be set to nil in this function.
+	-- ie: Target = nil
+	nearest_obj = nil
 end
 
-function MainForce_Thread()
-	DebugMessage("%s -- In MainForce_Thread.", tostring(Script))
-
-	BlockOnCommand(MainForce.Produce_Force())
+-- Receives:
+-- property_flag_name as defined in GameObjectPropertiesType.xml
+-- affiliation_type is optional qualifier of "enemy" or "friendly"
+function Evaluate(property_flag_name, affiliation_type)
 	
-	QuickReinforce(PlayerObject, AITarget, MainForce)
-	
-	MainForce.Enable_Attack_Positioning(true)
-	DebugMessage("MainForce constructed at stage area!")
-
-	DebugMessage("%s -- Attack-moving to %s", tostring(Script), tostring (AITarget))
-	SetClassPriorities(MainForce, "Attack_Move")
-	BlockOnCommand(MainForce.Attack_Move(AITarget, MainForce.Get_Self_Threat_Max()))
-
-	MainForce.Set_Plan_Result(true)
-	
-	DebugMessage("%s -- MainForce Done!  Exiting Script!", tostring(Script))
-	ScriptExit()
-end
-
--- Make sure that units don't sit idle at the end of their move order, waiting for others
-function MainForce_Unit_Move_Finished(tf, unit)
-
-	DebugMessage("%s -- %s reached end of move, giving new order", tostring(Script), tostring(unit))
-
-	-- Assist the tf with whatever is holding it up
-	kill_target = FindDeadlyEnemy(tf)
-	if TestValid(kill_target) then
-		unit.Attack_Move(kill_target)
+	if affiliation_type == "ENEMY" then
+		nearest_obj = PruneFriendlyObjects(Find_All_Objects_Of_Type(property_flag_name))
+	elseif affiliation_type == "FRIENDLY" then
+		--only issue here is in skirmish, PlayerObject does not own the allied starbase in some cases
+		--notably when an AI is on the same team as a human player
+		nearest_obj = Find_All_Objects_Of_Type(property_flag_name, PlayerObject)
 	else
-		unit.Attack_Move(tf)
+		nearest_obj = Find_All_Objects_Of_Type(property_flag_name)
+	end
+	
+	--DebugMessage("%s -- First %s object with property %s for player %s, to %s is %s", tostring(Script), tostring(affiliation_type), tostring(property_flag_name), tostring(PlayerObject.Get_Faction_Name()), tostring(Target), tostring(nearest_obj[1]))
+	if TestValid(nearest_obj[1]) then
+		--DebugMessage("%s -- Distance is %s", tostring(Script), tostring(Target.Get_Distance(nearest_obj[1])))
+		return Target.Get_Distance(nearest_obj[1])
+	else
+		return BIG_FLOAT
 	end
 end
+
+
+
+

@@ -44,7 +44,7 @@ require("pgevents")
 function Definitions()
 
 	AllowEngagedUnits = false
-	Category = "Hide_Surprise_Units"
+	Category = "AlwaysOff"
 	IgnoreTarget = true
 	TaskForce = 
 	{

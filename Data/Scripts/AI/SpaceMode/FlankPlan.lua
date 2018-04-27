@@ -45,7 +45,6 @@ function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
 	AllowEngagedUnits = false
-	MinContrastScale = 0.75
 	Category = "Destroy_Unit"
 	TaskForce = {
 	{

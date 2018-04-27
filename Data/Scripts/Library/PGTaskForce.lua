@@ -47,7 +47,7 @@ end
 
 function AssembleForce(taskforce, stage_at_strongest_space)
 	if stage_at_strongest_space then
-		stage = FindTarget.Reachable_Target(PlayerObject, "FriendlySpaceForceStrength", "Friendly | Enemy | Neutral", "Enemy_undefended", 1.0, AITarget)
+		stage = FindTarget.Reachable_Target(PlayerObject, "Ground_Staging_Planet", "Friendly | Enemy | Neutral", "Enemy_undefended", 1.0, AITarget)
 		DebugMessage("%s -- Using the enemy_undefended reachable system %s with the strongest space force for staging.", tostring(Script), tostring(stage))
 	else
 		stage = taskforce.Get_Stage()
@@ -64,7 +64,7 @@ end
 
 function SynchronizedAssemble(taskforce, stage_at_strongest_space)
 	if stage_at_strongest_space then
-		stage = FindTarget(taskforce, "FriendlySpaceForceStrength", "Friendly | Enemy | Neutral", 1.0)
+		stage = FindTarget(taskforce, "Ground_Staging_Planet", "Friendly | Enemy | Neutral", 1.0)
 		DebugMessage("%s -- Using the system %s with the strongest space force for staging.", tostring(Script), tostring(stage))
 	else
 		stage = taskforce.Get_Stage()
@@ -280,7 +280,6 @@ function QuickReinforce(player, target, tf_to_reinforce, second_try_tf)
 		DebugMessage("%s-- received nil tf_to_reinforce", tostring(Script))
 		return 
 	end
-
 	
 	-- Space mode will attempt various reinforce attempts with timeouts,
 	-- then simply fail after the last option is exhausted.
@@ -320,6 +319,12 @@ function QuickReinforce(player, target, tf_to_reinforce, second_try_tf)
 				lib_enemy_to_avoid = nil
 				return
 			end
+		end
+
+		-- in skirmish mode, should attempt to reinforce at plan location first
+		if (EvaluatePerception("Is_Skirmish_Mode", PlayerObject) == 1) then
+			DebugMessage("%s-- Trying to reinforce by plan target in skirmish", tostring(Script))
+			BlockOnCommand(tf_to_reinforce.Reinforce(target), lib_reinforce_timeout)
 		end
 	
 		-- Try to land near the default starting point, or some base building, or finally the target itself.

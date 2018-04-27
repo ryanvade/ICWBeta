@@ -52,8 +52,8 @@ function Base_Definitions()
 	Common_Base_Definitions()
 	
 	-- Percentage of units to move on each service.
-	SpaceMovePercent = 0.040
-	GroundMovePercent = 0.2
+	SpaceMovePercent = 0.1
+	GroundMovePercent = 0.1
 
 	if Definitions then
 		Definitions()
@@ -215,7 +215,7 @@ function Find_Ground_Unit_Target(object)
 		end
 	end
 	
-	priority_planet = FindTarget.Reachable_Target(PlayerObject, "Ground_Priority_Defense_Score", "Friendly", "Friendly_Only", 0.8, object)
+	priority_planet = FindTarget.Reachable_Target(PlayerObject, "Ground_Priority_Defense_Score", "Friendly", "Friendly_Only", 1.0, object)
 	if priority_planet then
 		priority_planet = priority_planet.Get_Game_Object()
 	end
@@ -244,7 +244,7 @@ function Find_Ground_Unit_Target(object)
 	end	
 	
 	if not my_planet then
-		fallback_planet = FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 0.1, object)
+		fallback_planet = FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, object)
 		if fallback_planet then
 			return fallback_planet.Get_Game_Object()
 		end
@@ -265,7 +265,7 @@ function Find_Space_Unit_Target(object)
 		leader_planet = leader_object.Get_Planet_Location()
 	end
 		
-	max_force_target = 10000 
+	max_force_target = 20000 
 	force_target = EvaluatePerception("Friendly_Global_Space_Unit_Raw_Total", PlayerObject)
 	if not force_target then
 		return nil
@@ -287,7 +287,7 @@ function Find_Space_Unit_Target(object)
 		end
 	end
 	
-	priority_planet = FindTarget.Reachable_Target(PlayerObject, "Space_Priority_Defense_Score", "Friendly", "Friendly_Only", 0.8, object)
+	priority_planet = FindTarget.Reachable_Target(PlayerObject, "Space_Priority_Defense_Score", "Friendly", "Friendly_Only", 1.0, object)
 	if priority_planet then
 		priority_planet = priority_planet.Get_Game_Object()
 	end

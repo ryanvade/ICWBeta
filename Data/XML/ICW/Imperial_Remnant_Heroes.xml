@@ -430,7 +430,7 @@
 		<Text_ID>TEXT_HERO_MELVAR</Text_ID>
 		<Icon_Name>i_button_melvar.tga</Icon_Name>
 		<Is_Dummy>Yes</Is_Dummy>
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Pirates</Affiliation>
 		<Build_Cost_Credits>10000</Build_Cost_Credits>
 		<Build_Time_Seconds>60</Build_Time_Seconds>
 		<Combat_Power_Value>0</Combat_Power_Value>
@@ -459,9 +459,9 @@
 
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->  
-		<Tactical_Build_Cost_Multiplayer>10000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>60</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
@@ -1312,7 +1312,7 @@
 		<Tactical_Health>150</Tactical_Health>
 		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
 		
-		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+		<SpaceBehavior> ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
 		
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>	
@@ -1334,8 +1334,8 @@
 		<Create_Team>Yes</Create_Team>
 		<Affiliation>Empire</Affiliation>
 		
-		<Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>
+		<!-- <Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds> -->
 		
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
@@ -1418,6 +1418,12 @@
 		<Squadron_Units>Erisi_Dlarit, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor</Squadron_Units>
 		<Squadron_Units>Erisi_Escort_Interceptor, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor</Squadron_Units>
 		<Squadron_Units>Erisi_Escort_Interceptor, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor, Erisi_Escort_Interceptor</Squadron_Units>	
+		<Squadron_Units>TIE_Interceptor, TIE_Interceptor, TIE_Interceptor, TIE_Interceptor</Squadron_Units>
+		<Squadron_Units>TIE_Interceptor, TIE_Interceptor, TIE_Interceptor, TIE_Interceptor</Squadron_Units>
+		<Squadron_Units>TIE_Interceptor, TIE_Interceptor, TIE_Interceptor, TIE_Interceptor</Squadron_Units>
+		<Squadron_Units>TIE_Interceptor, TIE_Interceptor, TIE_Interceptor, TIE_Interceptor</Squadron_Units>
+		<Squadron_Units>TIE_Interceptor, TIE_Interceptor, TIE_Interceptor, TIE_Interceptor</Squadron_Units>
+		<Squadron_Units>TIE_Interceptor, TIE_Interceptor, TIE_Interceptor, TIE_Interceptor</Squadron_Units>
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
 		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
@@ -1835,6 +1841,8 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Affiliation>Empire</Affiliation>
+			<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_0>
@@ -3229,7 +3237,7 @@
 		
 	</SpaceUnit>
 	
-	<Squadron Name="181st_Fel">
+	<Squadron Name="181st_Fel_Squadron">
 		<Text_ID>TEXT_UNIT_SOONTIR_FEL_EMPIRE</Text_ID>
 		<GUI_Row> 1 </GUI_Row>
 		<Hyperspace>Yes</Hyperspace>
@@ -3847,6 +3855,19 @@
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">			
 			<!-- Secondary ability -->
+			<Combat_Bonus_Ability Name="Covell_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.10</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.10</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.10</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.10</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.05</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
 			
 			<Unit_Ability>
 				<Type>POWER_TO_WEAPONS</Type>
@@ -4542,6 +4563,20 @@
 		
 
 		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Veers_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.10</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.10</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.10</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.10</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.05</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+		
 			<Maximum_Firepower_Attack_Ability Name="AT_AT_Maximum_Firepower_Attack">
 				<Activation_Style> User_Input </Activation_Style>
 				<!-- We only consider the following unit types "valid targets": -->
@@ -4604,7 +4639,7 @@
 		<Scale_Factor>1.0</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Hutts</Affiliation>
 		<CategoryMask> Vehicle </CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
 		<Required_Timeline>2</Required_Timeline>
@@ -4654,7 +4689,7 @@
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Unit_Strength_Category />
 				<Applicable_Unit_Categories />
-				<Applicable_Unit_Types> Covell_AT_AT_Walker </Applicable_Unit_Types>
+				<Applicable_Unit_Types> Veers_AT_AT_Walker </Applicable_Unit_Types>
 				<Health_Bonus_Percentage> 0.20 </Health_Bonus_Percentage>
 				<Stacking_Category> 1 </Stacking_Category>
 			</Combat_Bonus_Ability>
@@ -4681,7 +4716,7 @@
 		<Text_ID>TEXT_HERO_VEERS_TEAM</Text_ID>
 		<Icon_Name>i_button_general_maximillian_veers.tga</Icon_Name>
 		<Is_Dummy>Yes</Is_Dummy>
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Hutts</Affiliation>
 		<!-- <Build_Cost_Credits>-1</Build_Cost_Credits> -->
 		<Build_Time_Seconds>0</Build_Time_Seconds>
 		<Combat_Power_Value>0</Combat_Power_Value>
@@ -4732,7 +4767,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->  
 		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
@@ -5507,7 +5542,7 @@
 			<Super_Laser_Ability Name="Eclipse_Super_Laser_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
-				<Applicable_Unit_Categories> Capital | Corvette | Frigate | Structure </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories> SuperCapital | Capital | Corvette | Frigate | Structure </Applicable_Unit_Categories>
 				<Applicable_Unit_Types />
                 <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
                 <Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>

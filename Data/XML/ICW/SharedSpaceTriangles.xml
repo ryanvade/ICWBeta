@@ -40,7 +40,7 @@
 		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Huge_Explosion_Space_Empire</Death_Explosions>
-		<Reinforcement_Prevention_Radius> 400 </Reinforcement_Prevention_Radius>
+		<Reinforcement_Prevention_Radius> 2000 </Reinforcement_Prevention_Radius>
 
 		<Armor_Type> Armor_Station </Armor_Type>
 		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
@@ -143,7 +143,7 @@
 		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Huge_Explosion_Space_Empire</Death_Explosions>
-		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+		<Reinforcement_Prevention_Radius> 2000 </Reinforcement_Prevention_Radius>
 
 		<Armor_Type> Armor_Station </Armor_Type>
 		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
@@ -236,6 +236,7 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>2</Required_Star_Base_Level>
 		<CategoryMask> Capital </CategoryMask>
+		<Property_Flags>IsStarbase</Property_Flags>
 		<Victory_Relevant>yes</Victory_Relevant>
 		<Autoresolve_Health>150</Autoresolve_Health>
 		<Damage>55</Damage>
@@ -246,7 +247,7 @@
 		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Huge_Explosion_Space</Death_Explosions>
-		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+		<Reinforcement_Prevention_Radius> 2000 </Reinforcement_Prevention_Radius>
 
 		<Armor_Type> Armor_Station </Armor_Type>
 		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
@@ -404,7 +405,7 @@
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
 		<CategoryMask>NonCombatHero</CategoryMask>
 		<Population_Value>1</Population_Value>
-		<Affiliation>Empire, Pentastar, Teradoc, Hutts, Pirates, Underworld</Affiliation>
+		<Affiliation>Empire, Pentastar, Teradoc, Hutts, Pirates, Underworld, Yevetha</Affiliation>
 	</HeroCompany>
 
 	<SpaceUnit Name="Arquitens">
@@ -3336,8 +3337,10 @@
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		<Population_Value>3</Population_Value>
+		
+	   <Abilities SubObjectList="Yes">
 
-		<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+	   		<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
 				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
@@ -3347,6 +3350,8 @@
 				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
+
+	   </Abilities>
 
 	</SpaceUnit>
 
@@ -3986,7 +3991,7 @@
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
 		<Death_Leave_Hulk_Behind> No </Death_Leave_Hulk_Behind>
 
-		<Death_Clone>Damage_Normal, Dreadnaught_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Normal</Death_Clone>
 
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
@@ -5115,7 +5120,7 @@
 		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
 
 		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
-		<Armor_Type> Armor_Frigate </Armor_Type>
+		<Armor_Type> Armor_SSD </Armor_Type>
 		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 
 		<Max_Speed>2.0</Max_Speed>
@@ -6087,7 +6092,7 @@
 		<Squadron_Capacity>0</Squadron_Capacity>
 		<Transport_Capacity>4</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
-		<Build_Cost_Credits>8050</Build_Cost_Credits>
+		<Build_Cost_Credits>10050</Build_Cost_Credits>
         <Slice_Cost_Credits>675</Slice_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
@@ -6172,7 +6177,7 @@
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		<Population_Value>1</Population_Value>
+		<Population_Value>4</Population_Value>
 	</SpaceUnit>
 
 

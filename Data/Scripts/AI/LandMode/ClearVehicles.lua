@@ -47,8 +47,7 @@ ScriptPoolCount = 6
 function Definitions()
 	
 	Category = "Clear_Vehicles"
-	MinContrastScale = 0.2
-	MaxContrastScale = 3.0
+	MaxContrastScale = 2.0
 	TaskForce = {
 	{
 		"MainForce"					

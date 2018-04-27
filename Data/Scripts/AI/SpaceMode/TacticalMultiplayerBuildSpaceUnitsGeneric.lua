@@ -49,11 +49,11 @@ function Definitions()
 	TaskForce = {
 		{
 		"ReserveForce"
-		,"RC_Level_Two_Tech_Upgrade | RC_Level_Three_Tech_Upgrade = 0,1"
-		,"EC_Level_Two_Tech_Upgrade | EC_Level_Three_Tech_Upgrade = 0,1"
-		,"UC_Level_Two_Tech_Upgrade | UC_Level_Three_Tech_Upgrade = 0,1"
-		,"PC_Level_Two_Tech_Upgrade | PC_Level_Three_Tech_Upgrade = 0,1"
-		,"Fighter | Bomber | Corvette | Frigate | Capital | SpaceHero = 0,1"
+		-- ,"RC_Level_Two_Tech_Upgrade | RC_Level_Three_Tech_Upgrade = 0,1"
+		-- ,"EC_Level_Two_Tech_Upgrade | EC_Level_Three_Tech_Upgrade = 0,1"
+		-- ,"UC_Level_Two_Tech_Upgrade | UC_Level_Three_Tech_Upgrade = 0,1"
+		-- ,"PC_Level_Two_Tech_Upgrade | PC_Level_Three_Tech_Upgrade = 0,1"
+		,"Fighter | Bomber | Corvette | Frigate | Capital | SuperCapital | SpaceHero = 0,3"
 		}
 	}
 	RequiredCategories = {"Fighter | Bomber | Corvette | Frigate | Capital"}
@@ -69,13 +69,13 @@ function ReserveForce_Thread()
 		
 	-- Give some time to accumulate money.
 	tech_level = PlayerObject.Get_Tech_Level()
-	min_credits = 2000
-	max_sleep_seconds = 10
+	min_credits = 4000
+	max_sleep_seconds = 30
 	if tech_level == 2 then
-		min_credits = 4000
+		min_credits = 8000
 		max_sleep_seconds = 50
 	elseif tech_level >= 3 then
-		min_credits = 6000
+		min_credits = 12000
 		max_sleep_seconds = 80
 	end
 	

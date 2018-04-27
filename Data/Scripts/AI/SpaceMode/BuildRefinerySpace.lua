@@ -49,7 +49,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"MainForce"
-		,"UC_Empire_Mineral_Extractor | UC_Rebel_Mineral_Extractor | UC_Underworld_Mineral_Extractor = 1"
+		,"UC_Empire_Mineral_Extractor | UC_Rebel_Mineral_Extractor | UC_Underworld_Mineral_Extractor | UC_Pentastar_Mineral_Extractor = 1"
 	}
 	}
 --	RequiredCategories = {"Structure"}
@@ -65,7 +65,7 @@ function MainForce_Thread()
 	-- Make sure we use a build pad that's not too near to the enemy base
 	nearby_pad_list = MainForce.Get_Reserved_Build_Pads()
 	for i, pad in pairs(nearby_pad_list) do
-		if EvaluatePerception("Distance_To_Nearest_Enemy_Starbase", PlayerObject, pad) > 2000 then
+		if EvaluatePerception("Distance_To_Nearest_Enemy_Starbase", PlayerObject, pad) > 3000 then
 			good_pad = pad
 			break
 		end
@@ -87,7 +87,9 @@ function MainForce_Thread()
 		elseif faction_name == "HUTTS" then
 			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)
 		elseif faction_name == "TERADOC" then
-			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)					
+			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)
+		elseif faction_name == "YEVETHA" then
+			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)	
 		else
 			MessageBox("unexpected faction name: %s", faction_name)
 		end

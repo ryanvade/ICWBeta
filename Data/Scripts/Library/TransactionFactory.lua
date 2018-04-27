@@ -54,6 +54,9 @@ function CreateSpawnTransaction(object_string, owner_string)
             while planet.Get_Owner() ~= player do
                 random = GameRandom(1, table.getn(allPlanets))
                 planet = allPlanets[random]
+				while planet == FindPlanet("Dummy_Empire") or planet == FindPlanet("Dummy_Rebel") or planet == FindPlanet("Dummy_EotH") do
+					planet = allPlanets[random]
+				end
             end
             return planet
         end

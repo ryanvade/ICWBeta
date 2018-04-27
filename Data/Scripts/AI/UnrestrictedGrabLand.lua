@@ -47,8 +47,7 @@ require("pgtaskforce")
 ScriptPoolCount = 4
 
 function Definitions()	
-	MinContrastScale = 1.1
-	MaxContrastScale = 1.25
+	MaxContrastScale = 1.1
 		
 	Category = "Unrestricted_Grab_Land"
 	TaskForce = {
@@ -73,7 +72,7 @@ function MainForce_Thread()
 	
 	--For fast execution, build and attack in one plan rather than having the first few iterations
 	--feed the freestore
-	AssembleForce(MainForce)
+	AssembleForce(MainForce, true)
 	
 	if not LaunchUnits(MainForce) then
 		ScriptExit()

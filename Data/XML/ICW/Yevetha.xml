@@ -568,7 +568,7 @@
 	<SpaceUnit Name="Yevetha_Boarding_Shuttle">
 		<Variant_Of_Existing_Type>Generic_Boarding_Shuttle</Variant_Of_Existing_Type>
 		<Affiliation>Yevetha</Affiliation>
-		<Tech_Level>99</Tech_Level>
+		<Tech_Level>1</Tech_Level>
 		<Lua_Script>GenericGameObject</Lua_Script>
 	</SpaceUnit>
 
@@ -751,29 +751,29 @@
 		<Population_Value>2</Population_Value>
 	</SpaceUnit>
 
-	<Squadron Name="Armadia_E">
+	<SpaceUnit Name="Armadia_E">
 		<Variant_of_Existing_Type>Armadia</Variant_of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
 		<Tech_Level>99</Tech_Level>
-	</Squadron>
+	</SpaceUnit>
 
-	<Squadron Name="Armadia_R">
+	<SpaceUnit Name="Armadia_R">
 		<Variant_of_Existing_Type>Armadia</Variant_of_Existing_Type>
 		<Affiliation>Rebel</Affiliation>
 		<Tech_Level>99</Tech_Level>
-	</Squadron>
+	</SpaceUnit>
 
-	<Squadron Name="Armadia_U">
+	<SpaceUnit Name="Armadia_U">
 		<Variant_of_Existing_Type>Armadia</Variant_of_Existing_Type>
 		<Affiliation>Underworld</Affiliation>
 		<Tech_Level>99</Tech_Level>
-	</Squadron>
+	</SpaceUnit>
 
-	<Squadron Name="Armadia_P">
+	<SpaceUnit Name="Armadia_P">
 		<Variant_of_Existing_Type>Armadia</Variant_of_Existing_Type>
 		<Affiliation>Pentastar</Affiliation>
 		<Tech_Level>99</Tech_Level>
-	</Squadron>
+	</SpaceUnit>
 
 	<SpaceUnit Name="Yevetha_Dreadnaught">
 		<Variant_Of_Existing_Type>Dreadnaught</Variant_Of_Existing_Type>
@@ -1411,45 +1411,156 @@
 	<HeroUnit Name="Eri_Palle">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_ERI_PALLE</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_ERI_PALLE </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INTELLIGENCE </Encyclopedia_Unit_Class>
-		<SFXEvent_Fleet_Move>Unit_Cracken</SFXEvent_Fleet_Move>
-
+		<Land_Model_Name>NI_Yevetha.ALO</Land_Model_Name>
 		<Icon_Name>i_button_yev4.tga</Icon_Name>
+		<Icon_Name />
 		<Mass>1.0</Mass>
-		<Scale_Factor>1.0</Scale_Factor>
+		<Scale_Factor>1.6</Scale_Factor> <!-- Temp scale change for scale test - change back once models resized -->
 		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Respawn_Whole_Team_When_Killed>Yes</Respawn_Whole_Team_When_Killed>
 		<Type>Walk</Type>
 		<Affiliation>Yevetha</Affiliation>
-		<!-- must use a special ability to modify political control in order to stack correctly -->
-		<Political_Control>0</Political_Control>
-		<Political_Faction>Yevetha</Political_Faction>
 		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures />
-		<Required_Planets />
 		<IsBuildable>No</IsBuildable>
-		<Spawn_Planet>Alderaan</Spawn_Planet>
-		<Size_Value>75</Size_Value>
-		<Damage>100</Damage>
-		<Autoresolve_Health>500</Autoresolve_Health>
-		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
-		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
-		<CategoryMask> Infantry | SpaceHero </CategoryMask>
-		<Ranking_In_Category> 3 </Ranking_In_Category>
+		<Size_Value>10</Size_Value>
+		<Stealth_Capable>Yes</Stealth_Capable>
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<CanCellStack>yes</CanCellStack>
+		<Mass>1.0</Mass>
+		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
 
-		<Neutralization_Cost>1000.0</Neutralization_Cost>
-		<Can_Be_Neutralized_By_Major_Heroes>No</Can_Be_Neutralized_By_Major_Heroes>
+		<Movement_Animation_Speed> 0.8 </Movement_Animation_Speed>
+		<Max_Speed> 1 </Max_Speed>
+		<Max_Rate_Of_Turn> 20.0 </Max_Rate_Of_Turn>
+		<Custom_Soft_Footprint_Radius> 6.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 5.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 5.0 </Custom_Hard_YExtent>
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> .5 </FormationSpacing> <!-- Temp scale change for scale test - change back once models resized -->
+		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
+		<Min_Speed> .1 </Min_Speed>
+		<OverrideAcceleration> .1 </OverrideAcceleration>
+		<OverrideDeceleration> .25 </OverrideDeceleration>
+		
+		<Deploys>No</Deploys>
+		
+		<Armor_Type> Armor_Hero </Armor_Type>
+		<Damage>40</Damage>
+		<Autoresolve_Health>350</Autoresolve_Health>
+		<Tactical_Health>350</Tactical_Health>
+
+		<GalacticBehavior>SELECTABLE</GalacticBehavior>
+		<LandBehavior>SELECTABLE, ABILITY_COUNTDOWN, SURFACE_FX, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
+		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		
+		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
+		
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+
+		<Targeting_Max_Attack_Distance>375.0</Targeting_Max_Attack_Distance>
+		<Land_FOW_Reveal_Range>500.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Projectile_Types> Proj_Infiltrator_Blaster </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Targeting_Fire_Inaccuracy> Infantry, 0.1 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
+
+		<CategoryMask> Infantry </CategoryMask>
+		<Ranking_In_Category> 4 </Ranking_In_Category>
+		<MovementClass>Infantry</MovementClass>
+
+		<OccupationStyle>1x1</OccupationStyle>
+		<FormationRaggedness> 1.0 </FormationRaggedness>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>5.0, 5.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+		<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
+		<Is_Squashable> No </Is_Squashable>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Victory_Relevant>yes</Victory_Relevant>
+
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		
+		<Select_Box_Scale>27</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Selection_Blob_Material_Name>Selection_Rebel_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Empire_Hero</Highlight_Blob_Material_Name>
+
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+		<AI_Combat_Power>250</AI_Combat_Power>
+
+		<Idle_Chase_Range>100.0</Idle_Chase_Range>
+		<Guard_Chase_Range>200.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
+		<Autonomous_Move_Extension_Vs_Attacker>200.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Lua_Script>HanSolo</Lua_Script>
+
+		<Neutralization_Cost>2000.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
 		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
 
-		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
+		<Always_Spawn_In_Orbit>No</Always_Spawn_In_Orbit>
+		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ERI_PALLE TEXT_TOOLTIP_TACTICAL TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INTELLIGENCE </Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 5000 </Score_Cost_Credits>
+		
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
 
-		<Galactic_Influence_Range>50.0</Galactic_Influence_Range>
-		<Hyperspace_Fleet_Reveal_Range>50.0</Hyperspace_Fleet_Reveal_Range>
-
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>STICKY_BOMB</Type>
+				<Recharge_Seconds>30.0f </Recharge_Seconds>
+				<GUI_Activated_Ability_Name>Palle_Commando_Grenade_Attack</GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Attack_02_Rebel_Infiltrator </SFXEvent_Target_Ability>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 8.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Sprint_Han_Solo</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
 		<Abilities SubObjectList="Yes">
-			<System_Spy_Ability Name="Cracken_Access">
+			<Grenade_Attack_Ability Name="Palle_Commando_Grenade_Attack">
+				<Activation_Style> User_Input </Activation_Style> <!-- Was Special_Attack -->
+				<!-- We need to be within this distance of the clicked target to consider throwing the grenade -->
+				<Activation_Min_Range>5.0</Activation_Min_Range>
+				<Activation_Max_Range>75.0</Activation_Max_Range>
+				<Requires_Direct_Player_Command> No </Requires_Direct_Player_Command> <!-- Was NO -->
+				<Grenade_Type>Proj_Vape_Charge</Grenade_Type>
+				<Grenade_Toss_Anim>BOMBTOSS</Grenade_Toss_Anim>
+				<Grenade_Spawn_Frame>12.0</Grenade_Spawn_Frame>
+				<Grenade_Spawn_Bone>MuzzleA_00</Grenade_Spawn_Bone>
+				<Grenade_Explode_Timer_In_Secs>8.0</Grenade_Explode_Timer_In_Secs>
+				<!-- Percentage chance to activate given a certain number of valid targets in range. -->
+				<!-- First number in the pair is the number of valid targets, second is the chance to activate. -->
+				<Activation_Chance>0,0.0, 1,1.0, 5,1.0, 500,1.0</Activation_Chance>
+				<!-- We only consider the following unit types "valid targets": -->
+				<Applicable_Unit_Categories>Vehicle | Structure</Applicable_Unit_Categories>
+				<!-- <Applicable_Unit_Types /> -->
+			</Grenade_Attack_Ability>		
+			<System_Spy_Ability Name="Palle_Access">
 				<Initially_Enabled>Yes</Initially_Enabled>
 				<Activation_Style>Galactic_Automatic</Activation_Style>
 				<Causes_Despawn>Yes</Causes_Despawn>
@@ -1470,30 +1581,15 @@
 				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
 			</System_Spy_Ability>
 
-			<Battlefield_Modifier_Ability Name="Cracken_FOW_Increase">
-				<Initially_Enabled>Yes</Initially_Enabled>
-				<Activation_Style>Ground_Automatic</Activation_Style>
-				<FOW_Reveal_Range_Multiplier>30</FOW_Reveal_Range_Multiplier>
-				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
-				<Stacking_Category>0</Stacking_Category>
-			</Battlefield_Modifier_Ability>
-
-			<Battlefield_Modifier_Ability Name="Thrawn_FOW_Increase2">
-				<Initially_Enabled>Yes</Initially_Enabled>
-				<Activation_Style>Space_Automatic</Activation_Style>
-				<FOW_Reveal_Range_Multiplier>30</FOW_Reveal_Range_Multiplier>
-				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
-				<Stacking_Category>0</Stacking_Category>
-			</Battlefield_Modifier_Ability>
-
-			<Galactic_Stealth_Ability Name="Cracken_Galactic_Stealth">
+			<Galactic_Stealth_Ability Name="Palle_Galactic_Stealth">
 				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
 			</Galactic_Stealth_Ability>
 
 		</Abilities>
-
+		
 	</HeroUnit>
 
+	
 	<HeroCompany Name="Eri_Palle_Team">
 		<Text_ID>TEXT_HERO_ERI_PALLE</Text_ID>
 		<Icon_Name>i_button_yev4.tga</Icon_Name>
@@ -1509,7 +1605,7 @@
 		<Required_Special_Structures></Required_Special_Structures>
 		<Required_Planets>Coruscant</Required_Planets>
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Company_Transport_Unit>Alliance_Shuttle</Company_Transport_Unit>
+		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
 		<Company_Units>Eri_Palle</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Encyclopedia_Text>TEXT_TOOLTIP_ERI_PALLE</Encyclopedia_Text>
@@ -1517,17 +1613,31 @@
 		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>RHD_Request_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Respawn_Mothma</SFXEvent_Build_Complete>
-		<SFXEvent_Hero_Respawned>Unit_Respawn_Mothma</SFXEvent_Hero_Respawned>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
 
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->  
+		<Tactical_Build_Cost_Multiplayer>800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>12</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<CategoryMask> Infantry | SpaceHero </CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
 		<Population_Value>1</Population_Value>
-
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>STICKY_BOMB</Type>
+				<Recharge_Seconds>30.0f </Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Infiltrator_Grenade_Attack </GUI_Activated_Ability_Name>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
 		<Abilities SubObjectList="Yes">
 			<Galactic_Stealth_Ability Name="Cracken_Galactic_Stealth">
 				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>

@@ -19,7 +19,7 @@
  	 <Event Name="Spawn_Branch_Disabler_Empire">
 		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
 		<Event_Param1>Empire</Event_Param1>
-		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Event_Param2>DESTROY_ALL_STRUCTURES</Event_Param2>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
 		<Reward_Param1>Spawn_Crash_Prevention_Empire</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
@@ -67,7 +67,7 @@
 	
 	<Event Name="Trigger_Isard_Pestage_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>3800</Event_Param1>
+		<Event_Param1>2400</Event_Param1>
 	</Event>
 	
 	<Event Name="Ambition_Researched">
@@ -345,7 +345,7 @@
 				
 	<Event Name="Trigger_Palpatine_Jax_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>3800</Event_Param1>	
+		<Event_Param1>2400</Event_Param1>	
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 		
@@ -582,7 +582,7 @@
 	
 	<Event Name="Trigger_Jax_Daala_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>3800</Event_Param1>	
+		<Event_Param1>2400</Event_Param1>	
 		<Prereq>Spawn_Carnor</Prereq>
 	</Event>
 		
@@ -672,10 +672,10 @@
 		<Branch>Spawn_Crash_Prevention_Empire</Branch>
 	</Event>
 	
-		<Event Name="E_Destroy_Jeretai">
+		<Event Name="E_Destroy_Jeratai">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Jeretai_Allegiance</Reward_Param1>
+		<Reward_Param1>Jeratai_Allegiance</Reward_Param1>
 		<Prereq>Trigger_Daala_Jax_Death</Prereq>
 		<Prereq>Trigger_Jax_Daala_Timer</Prereq>
 		<Branch>Spawn_Crash_Prevention_Empire</Branch>
@@ -727,7 +727,8 @@
 	</Event>
 	
 	<Event Name="Destroy_Daala_For_Hammer">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>5</Event_Param1>	
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Gorgon</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
@@ -735,7 +736,8 @@
 	</Event>
 
 	<Event Name="Spawn_Daala_Hammer">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>5</Event_Param1>	
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Knight_Hammer</Reward_Param1>
 		<Reward_Param2>Bastion</Reward_Param2>
@@ -821,7 +823,8 @@
 	</Event>
 	
 	<Event Name="Destroy_Pellaeon_For_Reaper">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>5</Event_Param1>	
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Chimera_Pellaeon_Grand</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_05</Prereq>
@@ -829,7 +832,8 @@
 	</Event>
 
 	<Event Name="Spawn_Gilad_Reaper">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>5</Event_Param1>	
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Pellaeon_Reaper</Reward_Param1>
 		<Reward_Param2>Bastion</Reward_Param2>

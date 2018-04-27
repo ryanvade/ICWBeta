@@ -52,7 +52,6 @@ function Definitions()
 	
 	Category = "PreDefend_Structure"
 	AllowEngagedUnits = true
-	MinContrastScale = 0.5
 	MaxContrastScale = 1.2
 	TaskForce = {
 	{

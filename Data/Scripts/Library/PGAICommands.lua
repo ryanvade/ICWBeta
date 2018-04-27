@@ -48,8 +48,8 @@ function Base_Definitions()
 	MagicPlan = false
 	
 	-- Scale all counter forces by this factor
-	MinContrastScale = 1.1
-	MaxContrastScale = 1.5
+	MinContrastScale = 1.0
+	MaxContrastScale = 1.2
 	PerFailureContrastAdjust = 0.1
 	EnemyContrastTypes = {}
 	FriendlyContrastTypes = {}

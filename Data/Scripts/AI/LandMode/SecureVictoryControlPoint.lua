@@ -45,7 +45,6 @@ function Definitions()
 
 	Category = "Secure_Victory_Control_Point"
 	IgnoreTarget = false
-	MinContrastScale = 0.5
 	MaxContrastScale = 1.5
 	TaskForce = 
 	{

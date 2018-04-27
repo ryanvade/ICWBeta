@@ -50,13 +50,12 @@ function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 
 	Category = "Sweep_Area"
-	MinContrastScale = 0.01
-	MaxContrastScale = 1.3
+	MaxContrastScale = 1.0
 	TaskForce = {
 	-- First Task Force
 	{
 		"MainForce"
-		,"Fighter | Corvette | Frigate | SpaceHero = 1, 10"
+		,"Fighter | Corvette | SpaceHero = 1, 10"
 	}
 	}
 

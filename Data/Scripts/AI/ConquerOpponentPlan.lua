@@ -49,8 +49,7 @@ ScriptPoolCount = 2
 --
 
 function Definitions()
-	MinContrastScale = 1.25
-	MaxContrastScale = 1.75
+	MaxContrastScale = 1.3
 
 	Category = "Conquer_Opponent | Warlord_Conquer_Opponent"
 	TaskForce = {
@@ -70,7 +69,7 @@ function Definitions()
 	}
 	RequiredCategories = { "Infantry", "Vehicle", "Corvette | Frigate | Capital" }		--Must have at least one ground unit, also make sure space force is reasonable
 
-	PerFailureContrastAdjust = 1.0
+	PerFailureContrastAdjust = 0.5
 	
 	SpaceSecured = true
 	LandSecured = false
@@ -131,7 +130,7 @@ function GroundForce_Thread()
 	GroundForce.Set_Plan_Result(true)	
 	
 	if GroundForce.Are_All_Units_On_Free_Store() == true then
-		AssembleForce(GroundForce)
+		AssembleForce(GroundForce, true)
 	else
 		BlockOnCommand(GroundForce.Produce_Force());
 		return

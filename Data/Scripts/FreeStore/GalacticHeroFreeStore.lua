@@ -148,11 +148,13 @@ function Definitions()
 		,KATARN_TEAM = {nil, false}
 		,LANDO_CALRISSIAN_TEAM = {"Is_Home_Planet", false}
 		,MARA_SABER_TEAM = {nil, false}
+		,MILLENNIUM_FALCON = {nil, true}
 		,MIRAX_TEAM = {"Is_Home_Planet", false}
 		,MON_MOTHMA_TEAM = {"Is_Home_Planet", false}
 		,NANTZ_INDEPENDENCE = {nil, true}
 		,PRINCESS_LEIA_TEAM = {"Is_Production_Planet", false}
 		,PRINCESS_LEIA_TEAM_NOGHRI = {"Is_Home_Planet", false}
+		,ROGUE_SQUADRON_SPACE = {nil, true}
 		,SOLO_REMONDA = {nil, true}
 		,SOVV_DAUNTLESS = {nil, true}
 		,VANTAI_MOONSHADOW = {nil, true}

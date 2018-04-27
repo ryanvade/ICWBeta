@@ -13,7 +13,7 @@
 --*   @Project:             Imperial Civil War
 --*   @Filename:            SingleUnitRetreat.lua
 --*   @Last modified by:    [TR]Pox
---*   @Last modified time:  2018-04-06T23:55:09+02:00
+--*   @Last modified time:  2018-04-12T00:05:00+02:00
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
@@ -120,11 +120,21 @@ end
 function SingleUnitRetreat:DespawnFighters(globals, squadronTable, index)
     squadronTable.Squadron.Set_Selectable(false)
     squadronTable.Squadron.Move_To(Object)
-    if squadronTable.Squadron.Get_Distance(Object) <= 400 then
+    local distanceFactor = self:GetDistanceFactor()
+    if squadronTable.Squadron.Get_Distance(Object) <= (400 * distanceFactor) then
         self:SaveFighters(globals, squadronTable)
         squadronTable.Squadron.Despawn()
         table.remove(globals.Fighters, index)
     end
+end
+
+function SingleUnitRetreat:GetDistanceFactor()
+    local typeFlags = TypeLibrary.Units[Object.Get_Type().Get_Name()].Flags
+    if not typeFlags then
+        return 1.0
+    end
+
+    return (typeFlags.FighterDespawnFactor or 1.0)
 end
 
 function SingleUnitRetreat:SaveFighters(globals, squadronTable)

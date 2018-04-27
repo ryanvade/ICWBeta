@@ -139,7 +139,7 @@
 			Yavin,
 			Yinchorr,
 			Ylesia,
-			Zfell
+			Zfell, Dummy_Empire, Dummy_Rebel, Dummy_EotH
 		</Locations>
 
 		<Trade_Routes>
@@ -354,8 +354,8 @@
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Yevetha, None </AI_Player_Control>
 		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
-		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
-		<AI_Player_Control> Hutts, WarlordAI </AI_Player_Control>				
+		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
+		<AI_Player_Control> Hutts, None </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, GenericAI </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
 		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
@@ -1319,6 +1319,7 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Okins_Allegiance</Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -1348,6 +1349,8 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Ramier_Team </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Trier_Secutor </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
@@ -1637,7 +1640,7 @@
 		<Starting_Forces> Hutts, Eriadu, TIE_Crawler_Company_Delvardus </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_Heavy_Assault_Company </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_A6_Juggernaut_Company </Starting_Forces>
-		
+		<Starting_Forces> Hutts, Eriadu, General_Veers_Team </Starting_Forces>
 
 	
 		<!-- Sanrafsix Space Forces -->
@@ -1698,6 +1701,8 @@
 		<!-- YagDhul Land Forces -->
 		<Starting_Forces> Hutts, YagDhul, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Trooper_Squad </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Weir_Team </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Strang_Team </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Heavy_Assault_Company </Starting_Forces>
@@ -1853,7 +1858,9 @@
 		<Starting_Credits> Yevetha,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Yevetha, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Yevetha, 5 </Max_Tech_Level>
-		
+				<Starting_Forces> Rebel, Dummy_Rebel, R_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Underworld, Dummy_EotH, U_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Empire, Dummy_Empire, E_Ground_Barracks </Starting_Forces>
 		
 	</Campaign>
 	
@@ -1991,7 +1998,7 @@
 			Yavin,
 			Yinchorr,
 			Ylesia,
-			Zfell
+			Zfell, Dummy_Empire, Dummy_Rebel, Dummy_EotH
 		</Locations>
 
 		<Trade_Routes>
@@ -2200,15 +2207,15 @@
         <Underworld_Story_Name>Conquests\ArtofWar\Story_Plots_Sandbox_FullProgressive_Container.xml</Underworld_Story_Name>
 		
 		<AI_Player_Control> Rebel, SandboxHuman </AI_Player_Control>
-		<AI_Player_Control> Pentastar, PentastarAI </AI_Player_Control>
+		<AI_Player_Control> Pentastar, None </AI_Player_Control>
 		<AI_Player_Control> Underworld, EotHAI </AI_Player_Control>
 		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Yevetha, None </AI_Player_Control>
 		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
-		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
+		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
 		<AI_Player_Control> Hutts, WarlordAI </AI_Player_Control>				
-		<AI_Player_Control> Corporate_Sector, GenericAI </AI_Player_Control>		
+		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
 		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
 
@@ -3168,6 +3175,7 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Okins_Allegiance</Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -3197,6 +3205,8 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Ramier_Team </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Trier_Secutor </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
@@ -3486,7 +3496,7 @@
 		<Starting_Forces> Hutts, Eriadu, TIE_Crawler_Company_Delvardus </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_Heavy_Assault_Company </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_A6_Juggernaut_Company </Starting_Forces>
-		
+		<Starting_Forces> Hutts, Eriadu, General_Veers_Team </Starting_Forces>
 
 	
 		<!-- Sanrafsix Space Forces -->
@@ -3547,6 +3557,8 @@
 		<!-- YagDhul Land Forces -->
 		<Starting_Forces> Hutts, YagDhul, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Trooper_Squad </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Weir_Team </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Strang_Team </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Heavy_Assault_Company </Starting_Forces>
@@ -3703,7 +3715,9 @@
 		<Starting_Tech_Level> Yevetha, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Yevetha, 5 </Max_Tech_Level>
 		
-		
+				<Starting_Forces> Rebel, Dummy_Rebel, R_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Underworld, Dummy_EotH, U_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Empire, Dummy_Empire, E_Ground_Barracks </Starting_Forces>
 	</Campaign>
 	
 	<Campaign Name="Art_of_War_EotH">
@@ -3840,7 +3854,7 @@
 			Yavin,
 			Yinchorr,
 			Ylesia,
-			Zfell
+			Zfell, Dummy_Empire, Dummy_Rebel, Dummy_EotH
 		</Locations>
 
 		<Trade_Routes>
@@ -4055,9 +4069,9 @@
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Yevetha, None </AI_Player_Control>
 		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
-		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
-		<AI_Player_Control> Hutts, WarlordAI </AI_Player_Control>				
-		<AI_Player_Control> Corporate_Sector, GenericAI </AI_Player_Control>		
+		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
+		<AI_Player_Control> Hutts, None </AI_Player_Control>				
+		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
 		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
 
@@ -5020,6 +5034,7 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Okins_Allegiance</Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -5049,6 +5064,8 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Ramier_Team </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Trier_Secutor </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
@@ -5338,7 +5355,7 @@
 		<Starting_Forces> Hutts, Eriadu, TIE_Crawler_Company_Delvardus </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_Heavy_Assault_Company </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_A6_Juggernaut_Company </Starting_Forces>
-		
+		<Starting_Forces> Hutts, Eriadu, General_Veers_Team </Starting_Forces>
 
 	
 		<!-- Sanrafsix Space Forces -->
@@ -5399,6 +5416,8 @@
 		<!-- YagDhul Land Forces -->
 		<Starting_Forces> Hutts, YagDhul, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Trooper_Squad </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Weir_Team </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Strang_Team </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Heavy_Assault_Company </Starting_Forces>
@@ -5555,7 +5574,9 @@
 		<Starting_Tech_Level> Yevetha, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Yevetha, 5 </Max_Tech_Level>
 		
-		
+				<Starting_Forces> Rebel, Dummy_Rebel, R_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Underworld, Dummy_EotH, U_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Empire, Dummy_Empire, E_Ground_Barracks </Starting_Forces>
 	</Campaign>
 	
 	<Campaign Name="Art_of_War_Pentastar">
@@ -5692,7 +5713,7 @@
 			Yavin,
 			Yinchorr,
 			Ylesia,
-			Zfell
+			Zfell, Dummy_Empire, Dummy_Rebel, Dummy_EotH
 		</Locations>
 
 		<Trade_Routes>
@@ -5907,9 +5928,9 @@
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Yevetha, None </AI_Player_Control>
 		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
-		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
-		<AI_Player_Control> Hutts, WarlordAI </AI_Player_Control>				
-		<AI_Player_Control> Corporate_Sector, GenericAI </AI_Player_Control>		
+		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
+		<AI_Player_Control> Hutts, None </AI_Player_Control>				
+		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
 		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
 
@@ -6871,6 +6892,7 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Okins_Allegiance</Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -6900,6 +6922,8 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Ramier_Team </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Trier_Secutor </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
@@ -7189,7 +7213,7 @@
 		<Starting_Forces> Hutts, Eriadu, TIE_Crawler_Company_Delvardus </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_Heavy_Assault_Company </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_A6_Juggernaut_Company </Starting_Forces>
-		
+		<Starting_Forces> Hutts, Eriadu, General_Veers_Team </Starting_Forces>
 
 	
 		<!-- Sanrafsix Space Forces -->
@@ -7250,6 +7274,8 @@
 		<!-- YagDhul Land Forces -->
 		<Starting_Forces> Hutts, YagDhul, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Trooper_Squad </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Weir_Team </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Strang_Team </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Heavy_Assault_Company </Starting_Forces>
@@ -7406,7 +7432,9 @@
 		<Starting_Tech_Level> Yevetha, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Yevetha, 5 </Max_Tech_Level>
 		
-		
+				<Starting_Forces> Rebel, Dummy_Rebel, R_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Underworld, Dummy_EotH, U_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Empire, Dummy_Empire, E_Ground_Barracks </Starting_Forces>
 	</Campaign>
 	
 	<Campaign Name="Art_of_War_Teradoc">
@@ -7543,7 +7571,7 @@
 			Yavin,
 			Yinchorr,
 			Ylesia,
-			Zfell
+			Zfell, Dummy_Empire, Dummy_Rebel, Dummy_EotH
 		</Locations>
 
 		<Trade_Routes>
@@ -7753,13 +7781,13 @@
 		
 		<AI_Player_Control> Teradoc, SandboxHuman </AI_Player_Control>
 		<AI_Player_Control> Pentastar, PentastarAI </AI_Player_Control>
-		<AI_Player_Control> Underworld, EotHAI </AI_Player_Control>
+		<AI_Player_Control> Underworld, None </AI_Player_Control>
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Yevetha, None </AI_Player_Control>
 		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
 		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>      
-		<AI_Player_Control> Hutts, WarlordAI </AI_Player_Control>				
+		<AI_Player_Control> Hutts, None </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, GenericAI </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
 		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
@@ -8722,6 +8750,7 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Okins_Allegiance</Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -8751,6 +8780,8 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Ramier_Team </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Trier_Secutor </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
@@ -9040,7 +9071,7 @@
 		<Starting_Forces> Hutts, Eriadu, TIE_Crawler_Company_Delvardus </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_Heavy_Assault_Company </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_A6_Juggernaut_Company </Starting_Forces>
-		
+		<Starting_Forces> Hutts, Eriadu, General_Veers_Team </Starting_Forces>
 
 	
 		<!-- Sanrafsix Space Forces -->
@@ -9101,6 +9132,8 @@
 		<!-- YagDhul Land Forces -->
 		<Starting_Forces> Hutts, YagDhul, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Trooper_Squad </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Weir_Team </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Strang_Team </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Heavy_Assault_Company </Starting_Forces>
@@ -9257,7 +9290,9 @@
 		<Starting_Tech_Level> Yevetha, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Yevetha, 5 </Max_Tech_Level>
 		
-		
+				<Starting_Forces> Rebel, Dummy_Rebel, R_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Underworld, Dummy_EotH, U_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Empire, Dummy_Empire, E_Ground_Barracks </Starting_Forces>
 	</Campaign>
 	
 	<Campaign Name="Art_of_War_Pirates">
@@ -9394,7 +9429,7 @@
 			Yavin,
 			Yinchorr,
 			Ylesia,
-			Zfell
+			Zfell, Dummy_Empire, Dummy_Rebel, Dummy_EotH
 		</Locations>
 
 		<Trade_Routes>
@@ -9604,14 +9639,14 @@
 		
 		<AI_Player_Control> Pirates, SandboxHuman </AI_Player_Control>
 		<AI_Player_Control> Pentastar, PentastarAI </AI_Player_Control>
-		<AI_Player_Control> Underworld, EotHAI </AI_Player_Control>
+		<AI_Player_Control> Underworld, None </AI_Player_Control>
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Yevetha, None </AI_Player_Control>
 		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
 		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
-		<AI_Player_Control> Hutts, WarlordAI </AI_Player_Control>				
-		<AI_Player_Control> Corporate_Sector, GenericAI </AI_Player_Control>		
+		<AI_Player_Control> Hutts, None </AI_Player_Control>				
+		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
 		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
 
@@ -10571,6 +10606,7 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Okins_Allegiance</Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -10600,6 +10636,8 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Ramier_Team </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Trier_Secutor </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
@@ -10889,7 +10927,7 @@
 		<Starting_Forces> Hutts, Eriadu, TIE_Crawler_Company_Delvardus </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_Heavy_Assault_Company </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_A6_Juggernaut_Company </Starting_Forces>
-		
+		<Starting_Forces> Hutts, Eriadu, General_Veers_Team </Starting_Forces>
 
 	
 		<!-- Sanrafsix Space Forces -->
@@ -10950,6 +10988,8 @@
 		<!-- YagDhul Land Forces -->
 		<Starting_Forces> Hutts, YagDhul, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Trooper_Squad </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Weir_Team </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Strang_Team </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Heavy_Assault_Company </Starting_Forces>
@@ -11106,7 +11146,9 @@
 		<Starting_Tech_Level> Yevetha, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Yevetha, 5 </Max_Tech_Level>
 		
-		
+				<Starting_Forces> Rebel, Dummy_Rebel, R_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Underworld, Dummy_EotH, U_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Empire, Dummy_Empire, E_Ground_Barracks </Starting_Forces>
 	</Campaign>
 	
 	<Campaign Name="Art_of_War_Eriadu">
@@ -11243,7 +11285,7 @@
 			Yavin,
 			Yinchorr,
 			Ylesia,
-			Zfell
+			Zfell, Dummy_Empire, Dummy_Rebel, Dummy_EotH
 		</Locations>
 
 		<Trade_Routes>
@@ -11455,12 +11497,12 @@
 		<AI_Player_Control> Pentastar, PentastarAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, EotHAI </AI_Player_Control>
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
-		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
+		<AI_Player_Control> Pirates, None </AI_Player_Control>
 		<AI_Player_Control> Yevetha, None </AI_Player_Control>
 		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
 		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
 		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>				
-		<AI_Player_Control> Corporate_Sector, GenericAI </AI_Player_Control>		
+		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
 		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
 
@@ -12420,6 +12462,7 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Okins_Allegiance</Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -12449,6 +12492,8 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Ramier_Team </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Trier_Secutor </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
@@ -12738,7 +12783,7 @@
 		<Starting_Forces> Hutts, Eriadu, TIE_Crawler_Company_Delvardus </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_Heavy_Assault_Company </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_A6_Juggernaut_Company </Starting_Forces>
-		
+		<Starting_Forces> Hutts, Eriadu, General_Veers_Team </Starting_Forces>
 
 	
 		<!-- Sanrafsix Space Forces -->
@@ -12799,6 +12844,8 @@
 		<!-- YagDhul Land Forces -->
 		<Starting_Forces> Hutts, YagDhul, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Trooper_Squad </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Weir_Team </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Strang_Team </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Heavy_Assault_Company </Starting_Forces>
@@ -12955,7 +13002,9 @@
 		<Starting_Tech_Level> Yevetha, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Yevetha, 5 </Max_Tech_Level>
 		
-		
+				<Starting_Forces> Rebel, Dummy_Rebel, R_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Underworld, Dummy_EotH, U_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Empire, Dummy_Empire, E_Ground_Barracks </Starting_Forces>
 	</Campaign>
 	
 	<Campaign Name="Art_of_War_Yevetha">
@@ -13092,7 +13141,7 @@
 			Yavin,
 			Yinchorr,
 			Ylesia,
-			Zfell
+			Zfell, Dummy_Empire, Dummy_Rebel, Dummy_EotH
 		</Locations>
 
 		<Trade_Routes>
@@ -13304,12 +13353,12 @@
 		<AI_Player_Control> Pentastar, PentastarAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, EotHAI </AI_Player_Control>
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
-		<AI_Player_Control> Hutts, WarlordAI </AI_Player_Control>
+		<AI_Player_Control> Hutts, None </AI_Player_Control>
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
-		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
+		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
 		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>				
-		<AI_Player_Control> Corporate_Sector, GenericAI </AI_Player_Control>		
+		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
 		<AI_Player_Control> Warlords, None </AI_Player_Control>		
 		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
 
@@ -14269,6 +14318,7 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Okins_Allegiance</Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -14298,6 +14348,8 @@
 		
 		<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Ramier_Team </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Trier_Secutor </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
@@ -14587,7 +14639,7 @@
 		<Starting_Forces> Hutts, Eriadu, TIE_Crawler_Company_Delvardus </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_Heavy_Assault_Company </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_A6_Juggernaut_Company </Starting_Forces>
-		
+		<Starting_Forces> Hutts, Eriadu, General_Veers_Team </Starting_Forces>
 
 	
 		<!-- Sanrafsix Space Forces -->
@@ -14648,6 +14700,8 @@
 		<!-- YagDhul Land Forces -->
 		<Starting_Forces> Hutts, YagDhul, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Trooper_Squad </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Weir_Team </Starting_Forces>
+		<Starting_Forces> Hutts, YagDhul, Strang_Team </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Empire_Ground_Mining_Facility </Starting_Forces>
 		<Starting_Forces> Hutts, YagDhul, Delvardus_Heavy_Assault_Company </Starting_Forces>
@@ -14804,7 +14858,9 @@
 		<Starting_Tech_Level> Yevetha, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Yevetha, 5 </Max_Tech_Level>
 		
-		
+				<Starting_Forces> Rebel, Dummy_Rebel, R_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Underworld, Dummy_EotH, U_Ground_Barracks </Starting_Forces>
+<Starting_Forces> Empire, Dummy_Empire, E_Ground_Barracks </Starting_Forces>
 	</Campaign>
 	
 </Campaigns_All>

@@ -232,11 +232,15 @@
 			+
 			3.0 * (1.0 - Variable_Target.Location.EnemyForce)
 			+
+			3.0 * (Variable_Target.Location.EnemyForce * (1.0 - Variable_Target.Location.EnemyForce{Parameter_Category = GameObjectCategoryType[Structure]}))
+ 			+
+			2.0 * ((1.0 - Variable_Target.Location.EnemyForce) * Variable_Target.Location.EnemyForce{Parameter_Category = GameObjectCategoryType[Structure]})
+			+
 			2.0 * (1.0 - (Variable_Target.Shield > 0.66))
 			+
 			2.0 * (1.0 - Variable_Target.Health)
 			+
-			5.0 * (1.0 - Variable_Target.Health > 0.8)
+			5.0 * (1.0 - Variable_Target.Health > 0.3)
 			+
 			(1.0 - Variable_Target.ForceNBTD)
 			+
@@ -523,10 +527,10 @@
 					(Variable_Self.IsDefender) *
 					(Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Transport]} >= 150)
 				)
-				+
+				<!-- +
 				(1 - Game.IsCampaignGame)
 				*
-				(Variable_Self.BaseLevel == 0)
+				(Variable_Self.BaseLevel == 0) -->
 			)
 			> 0
 		)
@@ -689,7 +693,7 @@
 			+
 			5 * (1 - Variable_Target.Location.EnemyForce)
 			+
-			20 * clamp( (10000 / (Variable_Target.DistanceToNearestFriendly {Parameter_Category = GameObjectCategoryType[Capital]} + 1)), 0, 2)
+			20 * clamp( (10000 / Script_GetDistanceToFirstWithProperty.Evaluate {Parameter_Script_String = "IsStarbase", Parameter_Script_String = "FRIENDLY"}), 0, 4)
 			-
 			5.0 * Variable_Target.HasBuiltObject
 			+
@@ -710,7 +714,7 @@
 		*
 		Function_Need_To_Secure_Contestable.Evaluate
 		*
-		(Function_Distance_To_Nearest_Enemy_Starbase.Evaluate > 2500)
+		(Script_GetDistanceToFirstWithProperty.Evaluate {Parameter_Script_String = "IsStarbase", Parameter_Script_String = "ENEMY"} > 4000)
 		*
 		(
 			Game.IsCampaignGame
@@ -718,7 +722,7 @@
 			(Game.IsCampaignGame == 0.0)
 			*
 			(
-				Function_Is_Refinery_Pad_Space.Evaluate
+				5 * Function_Is_Refinery_Pad_Space.Evaluate
 				+
 				(1 - Function_Is_Refinery_Pad_Space.Evaluate)
 				*
@@ -744,7 +748,7 @@
 		*
 		(1 - Function_Is_Saving_For_Refineries_Space.Evaluate)
 		*
-		(1 - Function_Skirmish_Needs_New_Space_Station.Evaluate)
+		((1 - Function_Skirmish_Needs_New_Space_Station.Evaluate) + (Variable_Self.CreditsUnnormalized > 5000))
 		*
 		(
 			0.2 >
@@ -771,7 +775,9 @@
 			)
 		)
 		*
-		(Function_Distance_To_Nearest_Enemy_Starbase.Evaluate > 2500)
+		(Script_GetDistanceToFirstWithProperty.Evaluate {Parameter_Script_String = "IsStarbase", Parameter_Script_String = "ENEMY"} > 4000)
+		*
+		Function_Is_Refinery_Pad_Space.Evaluate
 	</Need_To_Build_Refinery_Space>
 
 	<!-- Save cash
@@ -782,7 +788,7 @@
 	<Is_Saving_For_Refineries_Space>
 		(Variable_Self.OpenBuildPadCount{Parameter_Type = "Mineral_Extractor_Pad"} > 0)
 		*
-		(1500 > Variable_Self.CreditsUnnormalized)
+		(850 > Variable_Self.CreditsUnnormalized)
 	</Is_Saving_For_Refineries_Space>
 
 
@@ -795,9 +801,9 @@
 	<Tactical_Multiplayer_Should_Build_Generic_Space>
 		(1 - Function_Is_Saving_For_Refineries_Space.Evaluate)
 		*
-		(1 - Function_Skirmish_Needs_New_Space_Station.Evaluate)
-		*
 		Function_Tactical_Multiplayer_Should_Build_Generic.Evaluate
+		*
+		5.0
 	</Tactical_Multiplayer_Should_Build_Generic_Space>
 
 
@@ -805,31 +811,25 @@
 
 	-->
 	<Should_Purchase_Ability_Generic_Space>
-		(Game.Age > 120)
+		0.05
 		*
-		(Variable_Self.FriendlyForce > (0.5 * Variable_Self.EnemyForce))
+		((Variable_Self.FriendlyForce > Variable_Self.EnemyForce) + (Variable_Self.CreditsUnnormalized > 5000))
+		*
+		(Game.IsCampaignGame == 0)
+		*
+		(1 - Function_Is_Saving_For_Refineries_Space.Evaluate)
+		*
+		Function_Number_Resource_Structures_Space.Evaluate
 		*
 		(
-			(Game.IsCampaignGame == 0)
-			*
-			(1 - Function_Is_Saving_For_Refineries_Space.Evaluate)
-			*
-			(Function_Number_Resource_Structures_Space.Evaluate > 0)
-			*
-			(1 - Function_Skirmish_Needs_New_Space_Station.Evaluate)
-			*
-			(8 > Variable_Self.UnitSpaceAvailable)
-			*
-			(
-				1.0
-				+
-				10.0 * (Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (0.8 * Variable_Enemy.ForceUnnormalized{Parameter_Attenuator = 1.0}))
-				+
-				(5.0 * (0#1>0.5))
-			)
+			1.0
 			+
-			(Game.IsCampaignGame)
+			10.0 * (Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (0.8 * Variable_Enemy.ForceUnnormalized{Parameter_Attenuator = 1.0}))
+			+
+			(5.0 * (0#1>0.5))
 		)
+		+
+		(Game.IsCampaignGame)
 	</Should_Purchase_Ability_Generic_Space>
 
 	<!--
@@ -924,19 +924,23 @@
 		*
 		(Function_Number_Resource_Structures_Space.Evaluate >= 1.0)
 		*
-		(Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Fighter | Bomber | Corvette | Frigate]} > 1000.0)
+		(
+			(1 # 2) * (Game.Age > 60) * Function_Number_Resource_Structures_Space.Evaluate
+			+
+			(0 # 1) * (Game.Age > 30) * Function_Number_Resource_Structures_Space.Evaluate
+		)
 		*
-		((Game.Age > 60.0) * (Variable_Self.BaseLevel == 1.0)
+		(Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Fighter | Bomber | Corvette | Frigate]} > 3000.0)
+		*
+		(1 - Function_Is_Saving_For_Refineries_Space.Evaluate)
+		*
+		((Game.Age > 60.0) * (Variable_Self.TechLevel == 1.0)
 		+
-		(Game.Age > 180.0) * (Variable_Self.BaseLevel == 2.0)
+		(Game.Age > 180.0) * (Variable_Self.TechLevel == 2.0)
 		+
-		(Game.Age > 600.0) * (Variable_Self.BaseLevel == 3.0)
+		(3.0 > Variable_Self.TechLevel) * (Variable_Self.FriendlyForce > (2.0 * Variable_Self.EnemyForce))
 		+
-		(Game.Age > 1200.0) * (Variable_Self.BaseLevel == 4.0)
-		+
-		(5.0 > Variable_Self.BaseLevel) * (Variable_Self.FriendlyForce > (2.0 * Variable_Self.EnemyForce))
-		+
-		(5.0 > Variable_Self.BaseLevel) * (Variable_Self.EnemyForce > (2.0 * Variable_Self.FriendlyForce)))
+		(3.0 > Variable_Self.TechLevel) * (Variable_Self.EnemyForce > (2.0 * Variable_Self.FriendlyForce)))
 	</Skirmish_Needs_New_Space_Station>
 
 	<Skirmish_Needs_New_Space_Station_With_Multiplier>

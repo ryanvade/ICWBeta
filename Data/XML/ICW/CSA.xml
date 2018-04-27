@@ -45,8 +45,8 @@
 		<Starting_Spawned_Units_Tech_0>CR90_Zsinj, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>CR90_Zsinj, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_0>Generic_Victory_Destroyer, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-
+		<Starting_Spawned_Units_Tech_0>Marauder_Missile_Cruiser, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Marauder_Missile_Cruiser, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 	</StarBase>
 
@@ -67,8 +67,11 @@
 		<Starting_Spawned_Units_Tech_0>CR90_Zsinj, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>CR90_Zsinj, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_0>Generic_Victory_Destroyer, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Generic_Victory_Destroyer, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Marauder_Missile_Cruiser, 4</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Marauder_Missile_Cruiser, 4</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		
+		<Starting_Spawned_Units_Tech_0>Dreadnaught_Empire, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Dreadnaught_Empire, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 
 		<Tactical_Buildable_Objects_Campaign>
@@ -620,6 +623,25 @@
 		</Abilities>
 	</SpecialStructure>
 	
+	<SpecialStructure Name="C_Galactic_Turbolaser_Tower_Defenses">
+		<Variant_Of_Existing_Type>Template_Galactic_Turbolaser_Tower_Defenses</Variant_Of_Existing_Type>
+
+		<Affiliation>Pentastar, Hutts, Pirates, Teradoc</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>1</Tech_Level>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Tactical_Additional_Structure_Type>Power_Generator_P</Tactical_Additional_Structure_Type>
+		<Required_Special_Structures>C_Ground_Barracks</Required_Special_Structures>
+		<!-- When one of these objects is created in galactic mode, we will populate every marker in land mode
+		that is a specific marker for E_Ground_Turbolaser_Tower. The galactic object will persist unless all
+		instances of those tactical objects have been destroyed. -->
+		<Place_Other_Type_At_Every_Specific_Marker_Position>P_Ground_Turbolaser_Tower</Place_Other_Type_At_Every_Specific_Marker_Position>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpecialStructure>
+	
 	<SpaceUnit Name="Lucrehulk_CSA">
 		<Variant_Of_Existing_Type>Generic_Lucrehulk</Variant_Of_Existing_Type>
 		<Affiliation>Corporate_Sector</Affiliation>
@@ -628,7 +650,6 @@
 				<Starting_Spawned_Units_Tech_0>Skipray_Squadron, 1</Starting_Spawned_Units_Tech_0>
 				<CategoryMask> Capital | AntiFrigate  </CategoryMask>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
 	</SpaceUnit>
 	
 	<UniqueUnit Name="Grumby_Notropis">
@@ -797,7 +818,7 @@
 		<Is_Dummy>Yes</Is_Dummy>
 		<Damage>18</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health> <!-- changed to reflect the real health of the units-->
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Corporate_Sector</Affiliation>
 		<Build_Cost_Credits>60</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
@@ -938,7 +959,7 @@
 		<Is_Dummy>Yes</Is_Dummy>
 		<Damage>60</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
-		<Affiliation>Pirates</Affiliation>
+		<Affiliation>Corporate_Sector</Affiliation>
 		<Build_Cost_Credits>200</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -989,7 +1010,7 @@
 		<Is_Dummy>Yes</Is_Dummy>
 		<Damage>24</Damage>
 		<Autoresolve_Health>200</Autoresolve_Health>
-		<Affiliation>Pentastar</Affiliation>
+		<Affiliation>Corporate_Sector</Affiliation>
 		<Build_Cost_Credits>200</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>35</Build_Time_Seconds>
@@ -1044,6 +1065,71 @@
 		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
+	<Squadron Name="Z95_Squadron_Buildable">
+		<Variant_Of_Existing_Type>Z95_Headhunter_Squadron</Variant_Of_Existing_Type>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Tech_Level>1</Tech_Level>
+		<Affiliation>Corporate_Sector</Affiliation>
+		<Population_Value>1</Population_Value>
+
+	</Squadron>
+	
+	<GroundCompany Name="C_Hailfire_Company">
+		<LOD_Bias>4</LOD_Bias>
+		<Text_ID>TEXT_UNIT_HAILFIRE</Text_ID>
+		<!--<Encyclopedia_Good_Against> M1_Repulsor_Tank IFX_Fighter_tank_Empire_Armor AT_AT_Walker </Encyclopedia_Good_Against>-->
+		<!--<Encyclopedia_Vulnerable_To> Plex-Soldier Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>-->
+		<Encyclopedia_Text>TEXT_TOOLTIP_HAILFIRE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_hailfire.tga</Icon_Name>
+
+		<GUI_Row> 1 </GUI_Row>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Damage>60</Damage>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Corporate_Sector</Affiliation>
+		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> C_Ground_Light_Vehicle_Factory </Required_Special_Structures>
+		<Required_Planets />
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Formation_Priority>6</Formation_Priority>
+		<Is_Escort>no</Is_Escort>
+		<Ship_Class>infantry</Ship_Class>
+		<Company_Transport_Unit>Imperial_Landing_Craft_Artillery</Company_Transport_Unit>
+		<Company_Units>Hailfire, Hailfire</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Destroyer_Droid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Destroyer_Droid</SFXEvent_Fleet_Move>
+		<Score_Cost_Credits>650</Score_Cost_Credits>
+		<Maintenance_Cost>0.05</Maintenance_Cost>
+		<Population_Value>1</Population_Value>
+
+		<Cheap_Bribe_Cost>50</Cheap_Bribe_Cost>
+		<Expensive_Bribe_Cost>100</Expensive_Bribe_Cost>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+
+		<!-- Non-Hero unit abilities description -->
+
+	</GroundCompany>
+	
 	<UniqueUnit Name="Aratech_Battle_Platform">
 		<Text_ID>TEXT_UNIT_ARATECH_BP</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_ARATECH_BP </Encyclopedia_Text>
@@ -1229,7 +1315,6 @@
 		</Abilities>
 
 	</UniqueUnit>
-
 
 	<UniqueUnit Name="Aratech_Battle_Platform_Death_Clone">
 		<Variant_Of_Existing_Type>Aratech_Battle_Platform</Variant_Of_Existing_Type>

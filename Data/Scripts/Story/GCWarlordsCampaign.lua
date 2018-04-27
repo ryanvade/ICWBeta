@@ -20,11 +20,9 @@
 
 
 
-require("PGBase")
-require("PGStateMachine")
 require("PGStoryMode")
 require("PGSpawnUnits")
-
+require("ChangeOwnerUtilities")
 
 function Definitions()
 
@@ -161,10 +159,10 @@ end
 function SubEra_Change(message)
   if message == OnEnter then
 
-	local p_empire = Find_Player("Empire")
-    local p_harrsk = Find_Player("Harrsk")
+	p_empire = Find_Player("Empire")
+	p_harrsk = Find_Player("Harrsk")
 
-	local start_planet = FindPlanet("Coruscant")
+	start_planet = FindPlanet("Coruscant")
 
 	if start_planet.Get_Owner() ~= Find_Player("Empire") then
 		 allPlanets = FindPlanet.Get_All_Planets()
@@ -176,42 +174,42 @@ function SubEra_Change(message)
 		end
 	end
 
-	local spawn_list_isard = { "Lusankya" , "Implacable_Star_Destroyer" }
-	local IsardSpawn = SpawnList(spawn_list_isard, start_planet, p_empire,true, false)
+	spawn_list_isard = { "Lusankya" , "Implacable_Star_Destroyer" }
+	IsardSpawn = SpawnList(spawn_list_isard, start_planet, p_empire,true, false)
 
-	local checkPestage = Find_First_Object("Sate_Pestage")
+	checkPestage = Find_First_Object("Sate_Pestage")
   if TestValid(checkPestage) then
     checkPestage.Despawn()
   end
 
-  local checkHarrsk = Find_First_Object("Shockwave_Star_Destroyer")
+  checkHarrsk = Find_First_Object("Shockwave_Star_Destroyer")
   if TestValid(checkHarrsk) then
     checkHarrsk.Despawn()
   end
 
-	local ProjectAmbition = Find_First_Object("Project_Ambition_Dummy")
+	ProjectAmbition = Find_First_Object("Project_Ambition_Dummy")
 	if TestValid(ProjectAmbition) then
-		local spawn_list_ambition = { "Makati_Steadfast" , "Takel_MagicDragon" , "Corrupter_Star_Destroyer" }
-		local AmbitionRewards = SpawnList(spawn_list_ambition, start_planet, p_empire,true, false)
+		spawn_list_ambition = { "Makati_Steadfast" , "Takel_MagicDragon" , "Corrupter_Star_Destroyer" }
+		AmbitionRewards = SpawnList(spawn_list_ambition, start_planet, p_empire,true, false)
 		ProjectAmbition.Despawn()
 	end
 
     --Harrsk spawns
 
-    local start_planet = FindPlanet("Kalist")
+    start_planet = FindPlanet("Kalist")
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
 
-      local spawn_list = { "Shockwave_Star_Destroyer" , "P_Ground_Barracks"  , "P_Ground_Light_Vehicle_Factory"   }
-      local HarrskForces = SpawnList(spawn_list, start_planet, p_harrsk, false, false)
+      spawn_list = { "Shockwave_Star_Destroyer" }
+      HarrskForces = SpawnList(spawn_list, start_planet, p_harrsk, false, false)
     end
 
-    local start_planet = FindPlanet("Abregado_Rae")
+    start_planet = FindPlanet("Abregado_Rae")
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
 
-       local spawn_list = { "P_Ground_Barracks" , "P_Ground_Light_Vehicle_Factory"   }
-       local HarrskForces = SpawnList(spawn_list, start_planet, p_harrsk, false, false)
+       spawn_list = { "Shockwave_Star_Destroyer"   }
+       HarrskForces = SpawnList(spawn_list, start_planet, p_harrsk, false, false)
     end
 
 	elseif message == OnUpdate then

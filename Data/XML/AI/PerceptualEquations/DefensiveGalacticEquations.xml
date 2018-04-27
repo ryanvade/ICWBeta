@@ -216,7 +216,9 @@
 	</Can_Park_Ground_Unit>
 	
 	<Low_Ground_Defense_Score>
-		1.0 - Variable_Target.FriendlyForce.GroundTotalNBTD
+		(1.0 - Variable_Target.FriendlyForce.GroundTotalNBTD)
+		*
+		Function_Can_Park_Ground_Unit.Evaluate
 	</Low_Ground_Defense_Score>
 
 	<Low_Space_Defense_Score>
@@ -224,27 +226,39 @@
 	</Low_Space_Defense_Score>
 
 	<Ground_Priority_Defense_Score>
-		Variable_Target.Hints.Chokepoint
+		(Variable_Target.Hints.Chokepoint
 		+
-		2.0 * Function_Is_Connected_To_Enemy.Evaluate
+		5.0 * Function_Is_Connected_To_Enemy.Evaluate
+		+
+		5.0 * (Variable_Target.TradeRoutes - Variable_Target.ActiveTradeRoutes)
 		+
 		Variable_Target.HasStructure {Parameter_Type = "E_Ground_Base_Shield", Parameter_Type = "R_Ground_Base_Shield",
 										Parameter_Type = "E_Galactic_Turbolaser_Tower_Defenses", Parameter_Type = "R_Galactic_Turbolaser_Tower_Defenses",
 										Parameter_Type = "U_Galactic_Turbolaser_Tower_Defenses", Parameter_Type = "Y_Galactic_Turbolaser_Tower_Defenses"}
 		+
-		2.0 * Function_Planet_Has_Capital_Building.Evaluate								
+		2.0 * Function_Planet_Has_Capital_Building.Evaluate)
+		*
+		Function_Can_Park_Ground_Unit.Evaluate
 	</Ground_Priority_Defense_Score>
 
 	<Space_Priority_Defense_Score>
 		Variable_Target.Hints.Chokepoint
 		+
-		2.0 * Function_Is_Connected_To_Enemy.Evaluate
+		5.0 * Function_Is_Connected_To_Enemy.Evaluate
+		+
+		5.0 * (Variable_Target.TradeRoutes - Variable_Target.ActiveTradeRoutes)
 		+
 		Variable_Target.HasStructure {Parameter_Type = "Ground_Ion_Cannon", Parameter_Type = "Ground_Empire_Hypervelocity_Gun", Parameter_Type = "Ground_Pentastar_Hypervelocity_Gun"}
 		+
 		2.0 * Function_Planet_Has_Capital_Building.Evaluate
 	</Space_Priority_Defense_Score>
 
+	<Ground_Staging_Planet>
+		(Variable_Target.StarbaseLevelUnnormalized - Function_Is_Connected_To_Enemy.Evaluate)
+		*
+		Function_Friendly_Space_Unit_Raw_Total.Evaluate
+	</Ground_Staging_Planet>
+	
 	<Friendly_Space_Unit_Raw_Total>
 		Variable_Target.FriendlyForce.SpaceTotalUnnormalized - Variable_Target.FriendlyForce.SpaceTotalUnnormalized {Parameter_Category = GameObjectCategoryType[SpaceHero]}
 	</Friendly_Space_Unit_Raw_Total>

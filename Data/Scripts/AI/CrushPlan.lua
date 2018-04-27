@@ -47,7 +47,7 @@ ScriptPoolCount = 2
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
-	GlobalContrastScale = 3.0
+	GlobalContrastScale = 2.0
 	PerFailureContrastAdjust = 0.5
 	
 	Category = "Conquer_Opponent | Warlord_Conquer_Opponent"
@@ -91,7 +91,7 @@ function MainForce_Thread()
 	MainForce.Set_Plan_Result(true)	
 	
 	if MainForce.Are_All_Units_On_Free_Store() == true then
-		AssembleForce(MainForce)
+		AssembleForce(MainForce, true)
 	else
 		BlockOnCommand(MainForce.Produce_Force());
 		return

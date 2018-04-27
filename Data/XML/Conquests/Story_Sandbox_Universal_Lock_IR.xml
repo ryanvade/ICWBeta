@@ -162,7 +162,7 @@
 	<Event Name="E_Lock_Boarding">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
-		<Reward_Param1>Incom_HQ</Reward_Param1>
+		<Reward_Param1>Imperial_Boarding_Shuttle</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 		
@@ -193,6 +193,34 @@
 		<Reward_Param1>Sovereign</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
+	
+	<Event Name="Unlock_World_Devastator">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>World_Devastator</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_03</Prereq>
+	</Event>
+	
+	<Event Name="E_Lock_WorldDevastator_Jax_A">
+		<Event_Type>STORY_DESTROY</Event_Type>
+		<Event_Param1>Emperor_Palpatine_Team</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>World_Devastator</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_03</Prereq>
+	</Event>
+	
+	<Event Name="E_Lock_WorldDevastator_Jax_B">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Emperor_Palpatine_Team</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>World_Devastator</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_03</Prereq>
+	</Event>
+	
 	
 <!--******************************************************-->
 <!--******	Era 4                                    *****-->
@@ -249,7 +277,7 @@
 		<Event Name="Unlock_Praetor_Daala">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Generic_Vindicator</Reward_Param1>
+		<Reward_Param1>Generic_Praetor</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 	</Event>
 	

@@ -100,26 +100,21 @@ function SpaceForce_Thread()
 		return
 	end
 	
-	
-	if SpaceForce.Get_Force_Count() == 0 then
-		if EvaluatePerception("Is_Good_Ground_Grab_Target", PlayerObject, Target) == 0 then
-			DebugMessage("%s -- No SpaceForce at target and enemies still present in space.  Abandonning plan.", tostring(Script))
-			SpaceForce.Set_Plan_Result(false)
-			--Exit_Plan_With_Possible_Sleep()
-		else
-			DebugMessage("%s -- No SpaceForce, but Space at target appears clear anyway.", tostring(Script))
-			SpaceSecured = true
-		end
+	if EvaluatePerception("Is_Good_Ground_Grab_Target", PlayerObject, Target) == 0 then
+		DebugMessage("%s -- No SpaceForce at target and enemies still present in space.  Abandonning plan.", tostring(Script))
+		SpaceForce.Set_Plan_Result(false)
+		Exit_Plan_With_Possible_Sleep()
 	else
+		DebugMessage("%s -- No SpaceForce, but Space at target appears clear anyway.", tostring(Script))
 		SpaceSecured = true
-		
-		while not LandSecured do
-			Sleep(5)
-		end
-		
-		SpaceForce.Release_Forces(1.0)
-		DebugMessage("%s -- SpaceForce Done!  Exiting Script!", tostring(Script))
 	end
+	
+	while not LandSecured do
+		Sleep(5)
+	end
+	
+	SpaceForce.Release_Forces(1.0)
+	DebugMessage("%s -- SpaceForce Done!  Exiting Script!", tostring(Script))
 end
 
 function GroundForce_Thread()
@@ -131,9 +126,9 @@ function GroundForce_Thread()
 
 		DebugMessage("%s -- GroundForce waiting for the space force to succede.", tostring(Script))
 		while not SpaceSecured do
---			if WasConflict then
---				Exit_Plan_With_Possible_Sleep()
---			end
+			if WasConflict then
+				Exit_Plan_With_Possible_Sleep()
+			end
 			Sleep(5)
 		end
 		DebugMessage("%s -- converging ground units on the target.", tostring(Script))
@@ -147,7 +142,7 @@ function GroundForce_Thread()
 	WasConflict = true
 	if Invade(GroundForce) == false then
 		DebugMessage("%s -- Curses...The invasion failed!  Exiting Script!", tostring(Script))
---		Exit_Plan_With_Possible_Sleep()
+		Exit_Plan_With_Possible_Sleep()
 	end
 
 	DebugMessage("%s -- Political control changed building Ground and Starbase.", tostring(Script))
@@ -155,7 +150,7 @@ function GroundForce_Thread()
 	GroundForce.Release_Forces(1.0)
 	GroundForce.Set_Plan_Result(true)
 	FundBases(PlayerObject, Target)
---	Exit_Plan_With_Possible_Sleep()
+	Exit_Plan_With_Possible_Sleep()
 end
 
 function Exit_Plan_With_Possible_Sleep()

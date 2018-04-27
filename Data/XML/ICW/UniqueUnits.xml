@@ -472,6 +472,22 @@
  		</Unit_Ability>
 		</Unit_Abilities_Data>
 		
+		<Abilities SubObjectList="Yes">		
+			<Combat_Bonus_Ability Name="Solo_Falcon_Space_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>-0.05</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.15</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.05</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.05</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.1</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+		</Abilities>
+		
 		<Death_Clone>Damage_Normal, Millennium_Falcon_Death_Clone</Death_Clone>
 		<Lua_Script>ObjectScript_MillenniumFalcon</Lua_Script>
 		<Space_Override_Population_Value>1</Space_Override_Population_Value>

@@ -327,6 +327,11 @@ function Default_Unit_Damaged(tf, unit, attacker, deliberate)
 			(lib_is_hero and lib_current_health < 0.6) or
 			(lib_current_health < 0.7 and lib_attacker_is_good_vs_me) or
 			(lib_current_health < 0.4 and not lib_i_am_good_vs_attacker) then
+			
+			lib_faction_name = unit.Get_Owner().Get_Faction_Name()
+			if lib_faction_name == "HOSTILE" then
+				return
+			end
 
 			-- Turn off any abilities that would hinder self-preservation
 			unit.Activate_Ability("Power_To_Weapons", false)
@@ -448,12 +453,14 @@ function Default_Target_In_Range(tf, unit, target)
     
 	-- Turn various abilities that would be useful.  
 	-- The ability time-out or the plan ending will turn off the ability.
-	Try_Ability(unit,"Power_To_Weapons")
-	Try_Ability(unit,"SPREAD_OUT")
-	Try_Ability(unit, "BARRAGE", target)
-	Try_Ability(unit, "BUZZ_DROIDS", target)
-	Try_Ability(unit, "FULL_SALVO")
-
+	if unit.Get_Type().Get_Max_Range() < unit.Get_Distance(target) then
+		Try_Ability(unit,"Power_To_Weapons")
+		Try_Ability(unit,"SPREAD_OUT")
+		Try_Ability(unit, "BARRAGE", target)
+		Try_Ability(unit, "BUZZ_DROIDS", target)
+		Try_Ability(unit, "FULL_SALVO")
+	end
+		
 	if unit.Get_Hull() > 0.5 then
 		Try_Ability(unit, "STIM_PACK")
 	end	

@@ -47,8 +47,7 @@ require("pgtaskforce")
 ScriptPoolCount = 4
 
 function Definitions()	
-	MinContrastScale = 1.1
-	MaxContrastScale = 1.25
+	MaxContrastScale = 1.1
 		
 	Category = "Unrestricted_Grab_Space"
 	TaskForce = {
