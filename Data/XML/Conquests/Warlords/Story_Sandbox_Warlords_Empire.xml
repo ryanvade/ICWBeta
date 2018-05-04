@@ -36,6 +36,17 @@
 		<Event_Param1>200</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Project_Ambition_Dummy</Reward_Param1>
+		<Branch>Ambition_Unlock</Branch>
+	</Event>
+	
+	<Event Name="UnUnlock_Ambition">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Ambition_Unlock</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Ambition_Researched</Prereq>
+		<Prereq>Trigger_Isard_Pestage_Death</Prereq>
+		<Prereq>Trigger_Isard_Coruscant_Falls</Prereq>
 	</Event>
 	
 	<Event Name="Trigger_Isard_Coruscant_Falls">
@@ -69,7 +80,9 @@
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Elite_Squadron</Reward_Param1>
 		<Reward_Param2>Thyferra</Reward_Param2>
-		<Prereq>Empire_Enters_Tech_01</Prereq>
+		<Prereq>Ambition_Researched</Prereq>
+		<Prereq>Trigger_Isard_Pestage_Death</Prereq>
+		<Prereq>Trigger_Isard_Coruscant_Falls</Prereq>
 	</Event>
 
 		<Event Name="Spawn_Harrsk">

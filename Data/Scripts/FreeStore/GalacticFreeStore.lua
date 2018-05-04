@@ -243,7 +243,14 @@ function Find_Ground_Unit_Target(object)
 		return poorly_defended_planet
 	end	
 	
-	if not my_planet then
+	fallback_planet = FindTarget.Reachable_Target(PlayerObject, "Can_Park_Ground_Unit", "Friendly", "Friendly_Only", 1.0, object)
+	if fallback_planet then
+		fallback_planet = fallback_planet.Get_Game_Object()
+	end
+	
+	if fallback_planet and fallback_planet.Get_Is_Planet_AI_Usable() and object.Can_Land_On_Planet(fallback_planet) then
+		return fallback_planet
+	else
 		fallback_planet = FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, object)
 		if fallback_planet then
 			return fallback_planet.Get_Game_Object()

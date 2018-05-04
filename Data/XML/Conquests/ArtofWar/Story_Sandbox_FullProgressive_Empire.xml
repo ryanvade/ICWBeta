@@ -16,10 +16,9 @@
 
  </Event>
  
- 	 <Event Name="Spawn_Branch_Disabler_Empire">
-		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
-		<Event_Param1>Empire</Event_Param1>
-		<Event_Param2>DESTROY_ALL_STRUCTURES</Event_Param2>
+ 	<Event Name="Spawn_Branch_Disabler_Empire">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>DISABLE_EMPIRE</Event_Param2>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
 		<Reward_Param1>Spawn_Crash_Prevention_Empire</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
@@ -48,6 +47,15 @@
 		<Event_Param1>80</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Project_Ambition_Dummy</Reward_Param1>
+		<Branch>Ambition_Unlock</Branch>
+	</Event>
+	
+	<Event Name="UnUnlock_Ambition">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Ambition_Unlock</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Lock_Project_Ambition</Prereq>
 	</Event>
 	
 	<Event Name="Trigger_Isard_Coruscant_Falls">
@@ -67,7 +75,7 @@
 	
 	<Event Name="Trigger_Isard_Pestage_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>2400</Event_Param1>
+		<Event_Param1>3200</Event_Param1>
 	</Event>
 	
 	<Event Name="Ambition_Researched">
@@ -93,7 +101,7 @@
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Elite_Squadron</Reward_Param1>
 		<Reward_Param2>Thyferra</Reward_Param2>
-		<Prereq>Empire_Enters_Tech_01</Prereq>
+		<Prereq>Ambition_Researched</Prereq>
 	</Event>
 
 	<Event Name="Spawn_Harrsk">
@@ -345,7 +353,7 @@
 				
 	<Event Name="Trigger_Palpatine_Jax_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>2400</Event_Param1>	
+		<Event_Param1>3200</Event_Param1>	
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 		
@@ -582,7 +590,7 @@
 	
 	<Event Name="Trigger_Jax_Daala_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>2400</Event_Param1>	
+		<Event_Param1>3200</Event_Param1>	
 		<Prereq>Spawn_Carnor</Prereq>
 	</Event>
 		

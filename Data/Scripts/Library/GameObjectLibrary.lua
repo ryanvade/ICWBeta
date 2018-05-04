@@ -545,6 +545,7 @@ GameObjectLibrary = {
         ["ENFORCER"]={
             Scripts={
                 "MultiLayer",
+				"FighterSpawn",
                 "SingleUnitRetreat"
             },
 			Flags = {
@@ -3805,8 +3806,18 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
+				["TORRENT_SQUADRON"]={
+                    ["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=1
+                    }
+                },
 				["TIE_INTERCEPTOR_SQUADRON"]={
                     ["EMPIRE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["HUTTS"] = {
                         Reserve=0,
                         Initial=1
                     },
@@ -3824,11 +3835,19 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=1
                     },
+					["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
 					["TERADOC"] = {
                         Reserve=0,
                         Initial=1
                     },
 					["PIRATES"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["HUTTS"] = {
                         Reserve=0,
                         Initial=1
                     },
@@ -3846,11 +3865,19 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=1
                     },
+					["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
 					["TERADOC"] = {
                         Reserve=0,
                         Initial=1
                     },
 					["PIRATES"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["HUTTS"] = {
                         Reserve=0,
                         Initial=1
                     },
@@ -4243,10 +4270,24 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
+				["TIE_FIGHTER_SQUADRON"]={
+                    ["PIRATES"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=1
+                    }
+                },
                 ["Z95_HEADHUNTER_SQUADRON"]={
                     ["CORPORATE_SECTOR"] = {
                         Reserve=0,
-                        Initial=1
+                        Initial=2
                     }
                 }
             }

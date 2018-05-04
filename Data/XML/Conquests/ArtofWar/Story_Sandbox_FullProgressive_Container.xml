@@ -846,11 +846,38 @@
 	<Event Name="Intro_Welcome_NewRep_Dialog">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>15</Event_Param1>
-		<Story_Dialog>Dialog_NewRep_EndorAftermath</Story_Dialog>
+		<Story_Dialog>Dialog_NewRep_FullProgressive</Story_Dialog>
 		<Story_Chapter>0</Story_Chapter>
 		<Story_Tag>Main_Tag</Story_Tag>
 		<Prereq>Intro_Welcome_NewRep</Prereq>
 		<Branch>Faction_Branch_Newrep</Branch>
+	</Event>
+	
+	<Event Name="Isard_Welcome_NewRep">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_ISARD_NR_INTRO_MOTHMA</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Mothma_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Set_Subera_Isard</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
+	</Event>
+		
+	<Event Name="NewRep_Isard_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_NewRep_FullProgressive</Story_Dialog>
+		<Story_Chapter>1</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Set_Subera_Isard</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
 	</Event>
 	
 	<Event Name="Thrawn_Welcome_Mon">
@@ -869,7 +896,18 @@
 		<Prereq>NR_Level_Two</Prereq>
 		<Branch>Faction_Branch_NewRep</Branch>
 	</Event>
-		
+	
+	<Event Name="NewRep_Thrawn_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_NewRep_FullProgressive</Story_Dialog>
+		<Story_Chapter>2</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Thrawn_Welcome_Mon</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
+	</Event>
+	
+	
 	 <Event Name="Palpatine_Welcome_Mon">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>MULTIMEDIA</Reward_Type>
@@ -887,6 +925,48 @@
 		<Branch>Faction_Branch_NewRep</Branch>
 
 	</Event>
+	
+		
+	<Event Name="NewRep_Palpatine_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_NewRep_FullProgressive</Story_Dialog>
+		<Story_Chapter>3</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Palpatine_Welcome_Mon</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
+	</Event>
+	
+	<Event Name="Jax_Welcome_Mon">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_JAX_NR_INTRO_ONE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8 />
+		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Set_Subera_Jax</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
+
+	</Event>
+	
+		
+	<Event Name="Jax_Welcome_Mon">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_NewRep_FullProgressive</Story_Dialog>
+		<Story_Chapter>4</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Palpatine_Welcome_Mon</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
+	</Event>
+	
+	
   
   	 <Event Name="Daala_Welcome_Leia">
 		<Event_Type>STORY_TRIGGER</Event_Type>
@@ -906,6 +986,17 @@
 
 	</Event>
 	
+		<Event Name="Daala_Welcome_Mon">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_NewRep_FullProgressive</Story_Dialog>
+		<Story_Chapter>5</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Daala_Welcome_Leia</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
+	</Event>
+	
+	
 	<Event Name="Pellaeon_Welcome_Leia">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>MULTIMEDIA</Reward_Type>
@@ -923,6 +1014,17 @@
 			<Branch>Faction_Branch_NewRep</Branch>
 
 	</Event>
+	
+			<Event Name="Pellaeon_Welcome_Mon">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_NewRep_FullProgressive</Story_Dialog>
+		<Story_Chapter>6</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Daala_Welcome_Leia</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
+	</Event>
+	
 	
 	<!--***********************************************************-->
 	<!--***********************************************************-->
@@ -1329,7 +1431,7 @@
 	
 	<Event Name="Trigger_Isard_Pestage_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>2400</Event_Param1>
+		<Event_Param1>3200</Event_Param1>
 	</Event>
 		
 	<Event Name="Set_Subera_Isard">
@@ -1358,7 +1460,7 @@
 		
 	<Event Name="Trigger_Thrawn_Isard_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>2400</Event_Param1>
+		<Event_Param1>3200</Event_Param1>
 		<Prereq>Set_Subera_Isard</Prereq>
 	</Event>
 		
@@ -1465,7 +1567,7 @@
 	
 	<Event Name="Trigger_Palpatine_Thrawn_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>2400</Event_Param1>
+		<Event_Param1>3200</Event_Param1>
 		<Prereq>Set_Subera_Thrawn</Prereq>
 	</Event>
 	
@@ -1587,7 +1689,7 @@
 		
 	<Event Name="Trigger_Palpatine_Jax_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>2400</Event_Param1>
+		<Event_Param1>3200</Event_Param1>
 		<Prereq>Set_Subera_Palpatine</Prereq>
 	</Event>
 		
@@ -1617,7 +1719,7 @@
 		
 	<Event Name="Trigger_Jax_Daala_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>2400</Event_Param1>
+		<Event_Param1>3200</Event_Param1>
 		<Prereq>Set_Subera_Jax</Prereq>
 	</Event>
 	
@@ -1770,7 +1872,7 @@
 		
 	<Event Name="Trigger_Daala_Pellaeon_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>2400</Event_Param1>
+		<Event_Param1>3200</Event_Param1>
 		<Prereq>Set_Subera_Daala</Prereq>
 	</Event>
 		
