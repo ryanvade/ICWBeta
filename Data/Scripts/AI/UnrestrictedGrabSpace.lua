@@ -59,6 +59,7 @@ function Definitions()
 		,"-SuperCapital"
 	}
 	}
+	RequiredCategories = {"Corvette | Frigate | Capital"}	--we want at least one heavier ship
 	
 end
 

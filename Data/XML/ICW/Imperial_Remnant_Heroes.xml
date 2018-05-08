@@ -3852,36 +3852,47 @@
 		<CategoryMask> Vehicle | AntiVehicle | AntiStructure | LandHero </CategoryMask>
 		<Icon_Name>i_button_covell.tga</Icon_Name>
 		
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">			
-			<!-- Secondary ability -->
-			<Combat_Bonus_Ability Name="Covell_Combat_Bonus">
-				<Activation_Style>Ground_Automatic</Activation_Style>
-				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
-				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
-				<Applicable_Unit_Types />
-				<Health_Bonus_Percentage>0.10</Health_Bonus_Percentage>
-				<Damage_Bonus_Percentage>0.10</Damage_Bonus_Percentage>
-				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
-				<Shield_Bonus_Percentage>0.10</Shield_Bonus_Percentage>
-				<Defense_Bonus_Percentage>0.10</Defense_Bonus_Percentage>
-				<Movement_Speed_Bonus_Percentage>0.05</Movement_Speed_Bonus_Percentage>
-				<Stacking_Category>0</Stacking_Category>
-			</Combat_Bonus_Ability>
-			
+			<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
 			<Unit_Ability>
-				<Type>POWER_TO_WEAPONS</Type>
-				<Expiration_Seconds>20</Expiration_Seconds>
-				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
-				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-3f</Mod_Multiplier>
-				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
-				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
-				<Recharge_Seconds>60</Recharge_Seconds>
-				
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_PtW_Covell</SFXEvent_GUI_Unit_Ability_Activated>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>70</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier> <!-- no delay, fire continuously -->
+				<GUI_Activated_Ability_Name>AT_AT_Maximum_Firepower_Attack</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<Projectile_Types_Override>Proj_Veers_AT_AT_Max_Power_Laser_Red</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Activate_Energy_Blast_Veers</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Target_Energy_Blast_Veers </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+			<!-- Secondary ability -->
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Veers_Deployed_Imperial_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_Veers</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
 
 		</Unit_Abilities_Data>
+		
+
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="AT_AT_Maximum_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<!-- We only consider the following unit types "valid targets": -->
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Owner_Particle_Effect>Veers_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+				
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
 
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 
@@ -3903,7 +3914,7 @@
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
 		<Affiliation>Empire</Affiliation>
-		<CategoryMask> Vehicle | LandHero </CategoryMask>
+		<CategoryMask> LandHero </CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
 		<Required_Timeline>2</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
@@ -3915,8 +3926,8 @@
 		<Size_Value>75</Size_Value>
 		<Damage>80</Damage>
 		<Autoresolve_Health>450</Autoresolve_Health>
-		<Lua_Script>Veers</Lua_Script>
 
+		
 		<Has_Land_Evaluator>False</Has_Land_Evaluator> <!-- land evaluator is on his at-at -->
 		<AI_Combat_Power>500</AI_Combat_Power>
 
@@ -3994,7 +4005,7 @@
 		<Company_Units>General_Covell</Company_Units>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<CategoryMask>LandHero | Vehicle</CategoryMask>
+		<CategoryMask>LandHero</CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
 		<Score_Cost_Credits> 18000 </Score_Cost_Credits>
 		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
@@ -4005,20 +4016,27 @@
 		
 		<Population_Value>1</Population_Value>
 
-		<Unit_Abilities_Data SubObjectList="Yes">			
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>4</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>AT_AT_Maximum_Firepower_Attack</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<Projectile_Types_Override>Proj_Veers_AT_AT_Max_Power_Laser_Red</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+			</Unit_Ability>
+			
 			<!-- Secondary ability -->
 			<Unit_Ability>
-				<Type>POWER_TO_WEAPONS</Type>
-				<Expiration_Seconds>20</Expiration_Seconds>
-				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
-				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-3f</Mod_Multiplier>
-				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
-				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
-				<Recharge_Seconds>60</Recharge_Seconds>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Veers_Deployed_Imperial_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
 				
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_PtW_Covell</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
-
 		</Unit_Abilities_Data>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->  
@@ -5445,7 +5463,7 @@
 		<Space_FOW_Reveal_Range>250000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
 		
-		<CategoryMask> SuperCapital | AntiCapital | SpaceHero </CategoryMask>
+		<CategoryMask> SuperCapital | AntiCapital | Interdictor | SpaceHero </CategoryMask>
 
 		<HardPoints>
      	HP_Executor_Turbo_1, HP_Executor_Turbo_2, HP_Executor_Turbo_3, HP_Executor_Turbo_4, HP_Executor_Turbo_5, HP_Executor_Turbo_6, HP_Executor_Turbo_7, HP_Executor_Turbo_8, HP_Executor_Turbo_9, HP_Executor_Turbo_10, HP_Executor_Turbo_11, HP_Executor_Turbo_12, HP_Executor_Turbo_13, HP_Executor_Turbo_14, HP_Executor_Turbo_15, HP_Executor_Turbo_16, HP_Executor_Turbo_17, HP_Executor_Turbo_18, HP_Executor_Turbo_19, HP_Executor_Turbo_20, HP_Executor_Turbo_21, HP_Executor_Turbo_22, HP_Executor_Turbo_23, HP_Executor_Turbo_24, HP_Executor_Turbo_25, HP_Executor_Turbo_26, HP_Executor_Turbo_27, HP_Executor_Turbo_28, HP_Executor_Turbo_29, HP_Executor_Turbo_30, HP_Executor_Turbo_31, HP_Executor_Turbo_32, HP_Executor_Turbo_33, HP_Executor_Turbo_34, HP_Executor_Turbo_35, HP_Executor_Turbo_36, HP_Executor_Turbo_37, HP_Executor_Turbo_38, HP_Executor_Turbo_39, HP_Executor_Turbo_40, HP_Executor_Turbo_41, HP_Executor_Turbo_42, HP_Executor_Turbo_43, HP_Executor_Turbo_44, HP_Executor_Turbo_45, HP_Executor_Turbo_46,

@@ -32,7 +32,6 @@ function Definitions()
   StoryModeEvents =
   {
 	Determine_Faction_LUA = Find_Faction,
-	Spawn_Isard = Spawn_Lusankya,
     Talks_End = Begin_GC
   }
 
@@ -41,35 +40,22 @@ end
 function Find_Faction(message)
   if message == OnEnter then
 
-    local p_newrep = Find_Player("Rebel")
-    local p_empire = Find_Player("Empire")
 	local p_pentastar = Find_Player("Pentastar")
 
-    if p_newrep.Is_Human() then
-		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
-    elseif p_empire.Is_Human() then
-		Story_Event("ENABLE_BRANCH_EMPIRE_FLAG")
-	elseif p_pentastar.Is_Human() then
+    if p_pentastar.Is_Human() then
 		Story_Event("ENABLE_BRANCH_PENTASTAR_FLAG")
     end
-  end
-end
-
-function Galactic(message)
-  if message == OnEnter then
-
-  elseif message == OnUpdate then
   end
 end
 
 function Begin_GC(message)
   if message == OnEnter then
 
-    local p_empire = Find_Player("Empire")
-    local p_rebel = Find_Player("Rebel")
-    local p_pentastar = Find_Player("Pentastar")
+    p_empire = Find_Player("Empire")
+    p_rebel = Find_Player("Rebel")
+    p_pentastar = Find_Player("Pentastar")
 
-    local start_planet = FindPlanet("Bastion")
+    start_planet = FindPlanet("Bastion")
 	
 	if start_planet.Get_Owner() ~= Find_Player("Pentastar") then
        allPlanets = FindPlanet.Get_All_Planets()
@@ -81,27 +67,16 @@ function Begin_GC(message)
       end
     end
 	
-    local spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
-    local ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true,false)
+	if p_pentastar.Is_Human() then
+  		Story_Event("KAINE_JOINS_SPEECH")
+  	end
+	
+    spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
+    ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true,false)
 
-
-
+	ScriptExit()
   elseif message == OnUpdate then
 
   end
 end
 
-function Spawn_Lusankya(message)
-  if message == OnEnter then
-
-     p_empire = Find_Player("Empire")
-
-    --Post-Zsinj, Kosh merges with Treutan
-     start_planet = FindPlanet("Ketaris")
-     spawn_list_Lusankya = { "Lusankya" }
-     LusankyaSpawn = SpawnList(spawn_list_Lusankya, start_planet, p_empire,true,false)
-
-  elseif message == OnUpdate then
-
-  end
-end

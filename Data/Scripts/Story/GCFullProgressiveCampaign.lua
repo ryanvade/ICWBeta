@@ -29,16 +29,11 @@ function Definitions()
   StoryModeEvents =
   {
     Determine_Faction_LUA = Find_Faction,
-    Zsinj_Death = On_Zsinj_Death,
     Maldrood_Antem = Antem_Maldrood,
     Maldrood_Kashyyyk = Kashyyyk_Maldrood,
     Maldrood_Commenor = Commenor_Maldrood,
     Eriadu_Elrood = Elrood_Eriadu,
     Set_Subera_Isard = SubEra_Change,
-    Talks_End = Pentastar_Talks,
-    Hapes_Spawns = HapesSpawns,
-    Yevetha_Spawns = PellaeonSpawns,
-    Trigger_Council_Thrawn_Death = Ciutric_Breakway,
     Set_Subera_Palpatine = DarkEmpireSpawns,
     Set_Subera_Daala = DaalaSpawns,
     Set_Subera_Thrawn = ThrawnSpawns,
@@ -77,23 +72,6 @@ function Find_Faction(message)
 		Story_Event("ENABLE_BRANCH_YEVETHA_FLAG")
 	end
 
-  end
-end
-
-function On_Zsinj_Death(message)
-  if message == OnEnter then
-
-   p_empire = Find_Player("Empire")
-   p_maldrood = Find_Player("Teradoc")
-
-    --Post-Zsinj, Kosh merges with Treutan
-   start_planet = FindPlanet("Centares")
-    if TestValid(start_planet) then
-      if start_planet.Get_Owner() == p_maldrood then
-       spawn_list_kosh = { "Lancet_Kosh" }
-       SpawnList(spawn_list_kosh, start_planet, p_maldrood, true, false)
-      end
-    end
   end
 end
 
@@ -234,151 +212,6 @@ function SubEra_Change(message)
       end
     end
 
-
-  end
-end
-
-function Ciutric_Breakway(message)
-  if message == OnEnter then
-
-    p_empire = Find_Player("Empire")
-    p_ciutric = Find_Player("Warlords")
-
-    start_planet = FindPlanet("Ciutric")
-    if TestValid(start_planet) then
-      if start_planet.Get_Owner() == p_empire then
-        ChangePlanetOwnerAndRetreat(start_planet, p_ciutric)
-
-        spawn_list = { "Generic_Star_Destroyer"  }
-        SpawnList(spawn_list, start_planet, p_ciutric, true, false)
-      end
-    end
-
-
-
-  end
-end
-
-function Pentastar_Talks(message)
-  if message == OnEnter then
-
-  p_pentastar = Find_Player("Pentastar")
-
-	start_planet = FindPlanet("Bastion")
-  if TestValid(start_planet) then
-  	if start_planet.Get_Owner() == Find_Player("Pentastar") then
-  		if p_pentastar.Is_Human() then
-  			Story_Event("KAINE_JOINS_SPEECH")
-  		end
-  		spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
-  		SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true,false)
-  	end
-  end
-
-
-  end
-end
-
-function HapesSpawns(message)
-  if message == OnEnter then
-
-   p_hapes = Find_Player("Sarlacc")
-   start_planet = FindPlanet("Terephon")
-  if TestValid(start_planet) then
-    ChangePlanetOwnerAndRetreat(start_planet, p_hapes)
-    spawn_list_Hapans = { "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser"}
-    SpawnList(spawn_list_Hapans, start_planet, p_hapes,true,false)
-  end
-
-	start_planet = FindPlanet("Charubah")
-  if TestValid(start_planet) then
-    ChangePlanetOwnerAndRetreat(start_planet, p_hapes)
-    spawn_list_Hapans = { "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser"}
-    SpawnList(spawn_list_Hapans, start_planet, p_hapes,true,false)
-  end
-
-	start_planet = FindPlanet("Hapes")
-  if TestValid(start_planet) then
-  ChangePlanetOwnerAndRetreat(start_planet, p_hapes)
-    spawn_list_Hapans = { "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Star_Home", "Song_of_War"}
-    SpawnList(spawn_list_Hapans, start_planet, p_hapes,true,false)
-  end
-
-	start_planet = FindPlanet("MistOne")
-  if TestValid(start_planet) then
-    ChangePlanetOwnerAndRetreat(start_planet, p_hapes)
-    spawn_list_Hapans = { "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser"}
-    SpawnList(spawn_list_Hapans, start_planet, p_hapes,true,false)
-  end
-
-	start_planet = FindPlanet("MistTwo")
-  if TestValid(start_planet) then
-    ChangePlanetOwnerAndRetreat(start_planet, p_hapes)
-    spawn_list_Hapans = { "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser"}
-    SpawnList(spawn_list_Hapans, start_planet, p_hapes,true,false)
-  end
-
-	start_planet = FindPlanet("MistThree")
-   if TestValid(start_planet) then
-    ChangePlanetOwnerAndRetreat(start_planet, p_hapes)
-   spawn_list_Hapans = { "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser"}
-   SpawnList(spawn_list_Hapans, start_planet, p_hapes,true,false)
-  end
-
-end
-end
-
-function PellaeonSpawns(message)
-  if message == OnEnter then
-
-    RegicideObject = Find_First_Object("Dummy_Regicide_Pellaeon")
-    if TestValid(RegicideObject) then
-        RegicideObject.Despawn()
-    end
-
-    p_yevetha = Find_Player("Hostile")
-
-    start_planet = FindPlanet("Nzoth")
-    if TestValid(start_planet) then
-      ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-      spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer_Two", "Spaar_Aramadia", "Toorr_Devotion", "Voota_Splendor", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
-      SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-    end
-
-	start_planet = FindPlanet("Doornik")
-	  if TestValid(start_planet) then
-	 	 ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-		spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Attan_Beauty", "Noorr_Purity", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad" }
-	    SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-	  end
-
-	start_planet = FindPlanet("Zfell")
-  if TestValid(start_planet) then
-  ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-	spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
-    SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-  end
-
-	start_planet = FindPlanet("ILC905")
-  if TestValid(start_planet) then
-  ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-    spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
-    SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-  end
-
-	start_planet = FindPlanet("Polneye")
-  if TestValid(start_planet) then
-  ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-	spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
-    SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-  end
-
-	start_planet = FindPlanet("Jtptan")
-  if TestValid(start_planet) then
-  ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-	spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Bille_Pride", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
-    SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-  end
 
   end
 end
