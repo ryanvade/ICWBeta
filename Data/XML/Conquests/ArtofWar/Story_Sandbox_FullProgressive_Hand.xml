@@ -1,0 +1,176 @@
+<?xml version="1.0" ?>
+
+
+
+<!--****************************************************-->
+<!--***** CAMPAIGN: Fractured Empire (Empire Version) *****-->
+<!--****************************************************-->
+
+
+
+<Story>
+
+ <Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+
+ </Event>
+ 
+ <Event Name="Spawn_Branch_Disabler_Hand">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>Underworld</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Spawn_Crash_Prevention_Hand</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Underworld_Enters_Tech_01">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>1</Event_Param1>
+	</Event>
+
+
+	<Event Name="Spawn_Thrawn">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Grey_Wolf</Reward_Param1>
+		<Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Soontir">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Soontir_Fel_Squadron</Reward_Param1>
+		<Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Aralani">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>Aralani_Frontier</Reward_Param1>
+        <Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Niriz">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>Niriz_Admonitor</Reward_Param1>
+        <Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Voss">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>Parck_Strikefast</Reward_Param1>
+        <Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Stent">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>Stent_Thrawns_Hand</Reward_Param1>
+        <Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_HoJ">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Hand_of_Judgement_Team</Reward_Param1>
+		<Reward_Param2>Nirauan</Reward_Param2>
+		<Branch>Spawn_Crash_Prevention_Hand</Branch>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+	</Event>
+	
+		<Event Name="Hand_Enters_Level_Two">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>2</Event_Param1>
+	</Event>
+	
+	
+	
+	<Event Name="U_Destroy_Thrawn">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Grey_Wolf</Reward_Param1>
+		<Prereq>Hand_Enters_Level_Two</Prereq>
+	</Event>
+	
+			<Event Name="Hand_Enters_Level_Three">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+	</Event>
+	
+	
+	<Event Name="U_Destroy_Aralani">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Aralani_Frontier</Reward_Param1>
+		<Prereq>Hand_Enters_Level_Three</Prereq>
+	</Event>
+		
+	<Event Name="Spawn_Siath">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>Siath_Battlehammer</Reward_Param1>
+        <Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Hand_Enters_Level_Three</Prereq>
+		<Branch>Spawn_Crash_Prevention_Hand</Branch>
+	</Event>
+	
+			<Event Name="Hand_Enters_Level_Four">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+	</Event>
+	
+	
+		<Event Name="Spawn_Chak">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Chak_Fel_Krsiss_Squadron_Association</Reward_Param1>
+		<Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Hand_Enters_Level_Four</Prereq>
+		<Branch>Spawn_Crash_Prevention_Hand</Branch>
+	</Event>
+
+	<Event Name="Spawn_Ashik">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Ashik_Team</Reward_Param1>
+		<Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Hand_Enters_Level_Four</Prereq>
+		<Branch>Spawn_Crash_Prevention_Hand</Branch>
+	</Event>
+	
+			<Event Name="Hand_Enters_Level_Five">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>5</Event_Param1>
+	</Event>
+	
+		<Event Name="Spawn_Aurek">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Aurek_Seven_Team</Reward_Param1>
+		<Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Hand_Enters_Level_Five</Prereq>
+		<Branch>Spawn_Crash_Prevention_Hand</Branch>
+	</Event>
+
+	<Event Name="Spawn_Clone">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>600</Event_Param1>
+       	<Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>Eviscerator</Reward_Param1>
+        <Reward_Param2>Nirauan</Reward_Param2>
+		<Prereq>Hand_Enters_Level_Five</Prereq>
+		<Branch>Spawn_Crash_Prevention_Hand</Branch>
+	</Event>
+	
+	
+</Story>
