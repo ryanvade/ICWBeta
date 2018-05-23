@@ -1,0 +1,348 @@
+<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Rim World Conflict (Empire)	******-->
+<!--******************************************************-->
+
+<Story>
+
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="NR_Level_Two">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>	
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="NR_Level_Three">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>		
+	</Event>
+	
+	<Event Name="IR_Level_Two">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>		
+	</Event>
+	
+	<Event Name="IR_Level_Three">
+  		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>30</Event_Param1>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>3</Reward_Param2>
+<Prereq>Universal_Story_Start</Prereq>		
+	</Event>
+
+
+	<Event Name="Reveal_All_Planets">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REVEAL_ALL_PLANETS</Reward_Type>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+
+<!--******************************************************-->
+<!--***************	Faction Determiners	******************-->
+<!--******************************************************-->
+
+
+	<Event Name="Faction_Branch_Disabler_NewRep">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_NewRep</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+
+	<Event Name="Faction_Branch_Disabler_Remnant">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Remnant</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+
+	<Event Name="Determine_Faction_LUA">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+
+
+	<Event Name="Faction_Branch_Enabler_NewRep">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_NEWREP_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_NewRep</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+
+	<Event Name="Faction_Branch_Enabler_Remnant">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_EMPIRE_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Remnant</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+	<!--******************* IMPERIAL STORYLINE ********************-->
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+
+	<Event Name="Intro_Welcome">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_PALPATINE_IR_INTRO_ONE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Palpatine_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Emperor_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
+		<Branch>Faction_Branch_Remnant</Branch>
+	</Event>
+
+	<Event Name="Intro_Welcome_Empire_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Shadow_Sandbox_Remnant</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag_Empire</Story_Tag>
+		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
+		<Branch>Faction_Branch_Remnant</Branch>
+	</Event>
+
+	<Event Name="Wait_Eclipse">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>60</Event_Param1>
+		<Story_Dialog>Dialog_Shadow_Sandbox_Remnant</Story_Dialog>
+		<Story_Chapter>1</Story_Chapter>
+		<Story_Tag>Eclipse_Tag</Story_Tag>
+		<Prereq>Intro_Welcome</Prereq>
+		<Branch>Faction_Branch_Remnant</Branch>
+	</Event>
+
+	<Event Name="Devastator_Unlock_Narrative">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>800</Event_Param1>  <!-- Should be synced with devastator unlock in Empire xml -->
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_PALPATINE_DEVASTATOR_UNLOCK</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Palpatine_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Emperor_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Branch>Faction_Branch_Remnant</Branch>
+	</Event>
+
+	<Event Name="Imperial_Mutiny">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_PALPATINE_IR_MUTINY</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Palpatine_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Emperor_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Kaine_Death</Prereq>
+		<Branch>Faction_Branch_Remnant</Branch>
+	</Event>
+
+   	<Event Name="Eclipse_Completed_Empire">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1040</Event_Param1>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Eclipse_Tag</Reward_Param1>
+		<Branch>Faction_Branch_Remnant</Branch>
+	</Event>
+	
+
+
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+	<!--***************** New Republic Storyline ******************-->
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+
+	<Event Name="Intro_Welcome_NewRep">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_PALPATINE_NR_INTRO</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8 />
+		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
+		<Branch>Faction_Branch_NewRep</Branch>
+	</Event>
+
+	<Event Name="Intro_Welcome_NewRep_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_NewRep_Shadow</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_NewRep</Prereq>
+		<Branch>Faction_Branch_Newrep</Branch>
+	</Event>
+	
+	<Event Name="Devastator_Unlock_Narrative_NR">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>800</Event_Param1>  <!-- Should be synced with devastator unlock in Empire xml -->
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_PALPATINE_NR_DEVASTATORS</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Mothma_Devastator_Speech</Reward_Param8>
+		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
+		<Branch>Faction_Branch_Newrep</Branch>
+	</Event>
+	
+	<Event Name="Palpatine_Unlock_Narrative">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1060</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_PALPATINE_NR_INTRO_ONE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Mothma_Palpatine_Speech</Reward_Param8>
+		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
+				<Branch>Faction_Branch_Newrep</Branch>
+
+	</Event>
+	
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+	<!--******************** UNIVERSAL EVENTS *********************-->
+	<!--***********************************************************-->
+	<!--***********************************************************-->
+
+	<Event Name="Byss_Lock">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Byss</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+
+	<Event Name="Byss_UnLock">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1037</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Byss</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+
+	<Event Name="Kaine_Death">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>700</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Reaper_Kaine</Reward_Param1>
+		<Prereq>Intro_Welcome</Prereq>
+	</Event>
+
+	<Event Name="Mutiny_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>10</Event_Param1>
+		<Story_Dialog>Dialog_Lore_Events</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Lore_Events</Story_Tag>
+		<Prereq>Kaine_Death</Prereq>
+	</Event>
+
+	<Event Name="Eclipse_Completed_Generic">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1060</Event_Param1>
+	</Event>
+
+	<Event Name="Warlords_Breakoff">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Emperor_Palpatine_Team</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+	</Event>
+
+	<Event Name="Syn_Joins">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>GENDARR_JOINS_SPEECH</Event_Param2>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_GENERIC_SYN_JOINS</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Teradoc_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<!--<Prereq>Maldrood_Antem</Prereq>-->
+	</Event>
+	
+	<Event Name="Battle_of_Coruscant">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>16</Event_Param1>
+		<Reward_Type>LINK_TACTICAL</Reward_Type>
+		<Reward_Param1>Coruscant</Reward_Param1> <!-- the planet -->
+		<Reward_Param2>SPACE</Reward_Param2> <!-- LAND or SPACE, MUST be capitalized -->
+		<Reward_Param3>Hostile</Reward_Param3> <!-- attacking faction -->
+		<Reward_Param4>Space_Coruscant.ted</Reward_Param4> <!-- the map you want to load for your mission -->
+		<Reward_Param5>Rebel</Reward_Param5> <!-- defending faction -->
+		<Reward_Param7>Battle_of_Coruscant.xml</Reward_Param7> <!-- the story plot file -->
+		<Reward_Param8>1</Reward_Param8> <!-- explained below -->
+		<Reward_Param13>1</Reward_Param13> <!-- 1: displays the "Launch Battle" dialog before battle; 0: skips the dialog and launches battle without asking the player -->
+		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
+	</Event>
+	
+	<Event Name="Empire_wins_Coruscant">  <!-- This exists to trigger Lua events -->
+		<Event_Type>STORY_MISSION_LOST</Event_Type>
+		<Event_Param1>Battle_of_Coruscant.xml</Event_Param1>
+	</Event>
+
+</Story>
