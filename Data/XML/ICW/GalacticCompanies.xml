@@ -1,0 +1,3309 @@
+<?xml version="1.0"?>
+<SpecialStructures>
+
+
+
+	<SpecialStructure Name="Sienar_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_SIENAR</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Empire, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>  </Required_Special_Structures>
+		<Required_Planets>Jaemus, Lianna, Corulag</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_sienar.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_SIENAR_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Sienar_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> TIE_Crawler_Company_Pentastar, Vindicator_Cruiser, Enforcer, Generic_Interdictor_Cruiser, IPV1_Teradoc, TIE_Defender_Squadron_Buildable, Century_Brigade, Imperial_Anti_Infantry_Brigade, TIE_Crawler_Company_Delvardus, Zsinj_Anti_Infantry_Brigade, Zsinj_Century_Brigade, TIE_Crawler_Company_Teradoc, Avenger_Squadron_Buildable, Skipray_Squadron_Buildable, Lancet_Air_Wing</Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Sienar_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> TIE_Crawler_Company_Pentastar, Vindicator_Cruiser, Enforcer, Generic_Interdictor_Cruiser, IPV1_Teradoc, TIE_Defender_Squadron_Buildable, Century_Brigade, Imperial_Anti_Infantry_Brigade, TIE_Crawler_Company_Delvardus, Zsinj_Anti_Infantry_Brigade, Zsinj_Century_Brigade, TIE_Crawler_Company_Teradoc, Avenger_Squadron_Buildable, Skipray_Squadron_Buildable, Lancet_Air_Wing</Applicable_Unit_Types>
+
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+
+	<SpecialStructure Name="KDY_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_KDY</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+	Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+	Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Empire, Rebel, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Kuat</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_kdy.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_KDY_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="KDY_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Generic_Praetor, Generic_Tector, Generic_Executor, Sovereign, Generic_Star_Destroyer_Two, Generic_Dominator, Generic_Star_Destroyer, Generic_Acclamator_Assault_ship, Escort_Carrier, Imperial_ATPT_Squad, Imperial_Heavy_Scout_Squad, Imperial_Artillery_Corp, Imperial_Heavy_Assault_Company, Generic_Bellator, Teradoc_Artillery_Corp, Teradoc_ATPT_Squad, Teradoc_Heavy_Assault_Company, Teradoc_ATPT_Squad, Zsinj_Heavy_Assault_Company, Delvardus_Heavy_Assault_Company, Delvardus_Heavy_Scout_Squad, Delvardus_Artillery_Corp, Penta_ATPT_Squad, Penta_Heavy_Assault_Company, Nebulon_B_Zsinj, Nebulon_B-2_Zsinj, Nebulon_B-2_Frigate, Nebulon_B_Frigate, Corona, Arquitens, Generic_Gladiator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Generic_Procursator, Crimson_Victory, Generic_Secutor, Generic_Venator, Generic_Imperial_II_Frigate, Generic_Allegiance, Generic_Praetor, Raider_Pentastar, Lancer_Frigate, Imperial_Anti_Aircraft_Company, Teradoc_Anti_Aircraft_Company, Delvardus_Anti_Aircraft_Company, Pentastar_Anti_Aircraft_Company, Pentastar_Walker_Group, Teradoc_Walker_Group, Zsinj_A6_Juggernaut_Company, Delvardus_A6_Juggernaut_Company, Fortress_Company, Fortress_Company_Delvardus, Fortress_Company_Teradoc, Delvardus_IDT_Squad, Delvardus_Saber_Group, Pentastar_Skiff_Group, Imperial_IFTX_Group, LAAT_Group, Teradoc_Skiff_Group, Teradoc_IFTX_Group, LAAT_Group_Teradoc, Zsinj_IDT_Squad, Zsinj_Armor_Group, Imperial_IDT_Squad, Imperial_Armor_Group</Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="KDY_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Generic_Praetor, Generic_Tector, Generic_Executor, Sovereign, Generic_Star_Destroyer_Two, Generic_Dominator, Generic_Star_Destroyer, Generic_Acclamator_Assault_ship, Escort_Carrier, Imperial_ATPT_Squad, Imperial_Heavy_Scout_Squad, Imperial_Artillery_Corp, Imperial_Heavy_Assault_Company, Generic_Bellator, Teradoc_Artillery_Corp, Teradoc_ATPT_Squad, Teradoc_Heavy_Assault_Company, Teradoc_ATPT_Squad, Zsinj_Heavy_Assault_Company, Delvardus_Heavy_Assault_Company, Delvardus_Heavy_Scout_Squad, Delvardus_Artillery_Corp, Penta_ATPT_Squad, Penta_Heavy_Assault_Company, Nebulon_B_Zsinj, Nebulon_B-2_Zsinj, Nebulon_B-2_Frigate, Nebulon_B_Frigate, Corona, Arquitens, Generic_Gladiator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Generic_Procursator, Crimson_Victory, Generic_Secutor, Generic_Venator, Generic_Imperial_II_Frigate, Generic_Allegiance, Generic_Praetor, Raider_Pentastar, Lancer_Frigate, Imperial_Anti_Aircraft_Company, Teradoc_Anti_Aircraft_Company, Delvardus_Anti_Aircraft_Company, Pentastar_Anti_Aircraft_Company, Pentastar_Walker_Group, Teradoc_Walker_Group, Zsinj_A6_Juggernaut_Company, Delvardus_A6_Juggernaut_Company, Fortress_Company, Fortress_Company_Delvardus, Fortress_Company_Teradoc, Delvardus_IDT_Squad, Delvardus_Saber_Group, Pentastar_Skiff_Group, Imperial_IFTX_Group, LAAT_Group, Teradoc_Skiff_Group, Teradoc_IFTX_Group, LAAT_Group_Teradoc, Zsinj_IDT_Squad, Zsinj_Armor_Group, Imperial_IDT_Squad, Imperial_Armor_Group</Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="KDY_Branch">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_KDY_BRANCH</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+	Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+	Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Empire, Rebel, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Gyndine, Jaemus, Balmorra</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_kdy.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_KDY_BRANCH_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="KDY_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Generic_Star_Destroyer_Two, Generic_Tector, Generic_Star_Destroyer, Generic_Acclamator_Assault_ship, Escort_Carrier, Imperial_ATPT_Squad, Imperial_Heavy_Scout_Squad, Imperial_Artillery_Corp, Imperial_Heavy_Assault_Company, Teradoc_Artillery_Corp, Teradoc_ATPT_Squad, Teradoc_Heavy_Assault_Company, Teradoc_ATPT_Squad, Zsinj_Heavy_Assault_Company, Delvardus_Heavy_Assault_Company, Delvardus_Heavy_Scout_Squad, Delvardus_Artillery_Corp, Penta_ATPT_Squad, Penta_Heavy_Assault_Company, Nebulon_B_Zsinj, Nebulon_B-2_Zsinj, Nebulon_B-2_Frigate, Nebulon_B_Frigate, Corona, Fortress_Company, Fortress_Company_Delvardus, Fortress_Company_Teradoc, Delvardus_IDT_Squad, Delvardus_Saber_Group, Pentastar_Skiff_Group, Imperial_IFTX_Group, LAAT_Group, Teradoc_Skiff_Group, Teradoc_IFTX_Group, LAAT_Group_Teradoc, Zsinj_IDT_Squad, Zsinj_Armor_Group, Imperial_IDT_Squad, Imperial_Armor_Group, Generic_Allegiance, Generic_Praetor, Lancer_Frigate, Raider_Pentastar </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="KDY_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Generic_Star_Destroyer_Two, Generic_Tector, Generic_Star_Destroyer, Generic_Acclamator_Assault_ship, Escort_Carrier, Imperial_ATPT_Squad, Imperial_Heavy_Scout_Squad, Imperial_Artillery_Corp, Imperial_Heavy_Assault_Company, Teradoc_Artillery_Corp, Teradoc_ATPT_Squad, Teradoc_Heavy_Assault_Company, Teradoc_ATPT_Squad, Zsinj_Heavy_Assault_Company, Delvardus_Heavy_Assault_Company, Delvardus_Heavy_Scout_Squad, Delvardus_Artillery_Corp, Penta_ATPT_Squad, Penta_Heavy_Assault_Company, Nebulon_B_Zsinj, Nebulon_B-2_Zsinj, Nebulon_B-2_Frigate, Nebulon_B_Frigate, Corona, Fortress_Company, Fortress_Company_Delvardus, Fortress_Company_Teradoc, Delvardus_IDT_Squad, Delvardus_Saber_Group, Pentastar_Skiff_Group, Imperial_IFTX_Group, LAAT_Group, Teradoc_Skiff_Group, Teradoc_IFTX_Group, LAAT_Group_Teradoc, Zsinj_IDT_Squad, Zsinj_Armor_Group, Imperial_IDT_Squad, Imperial_Armor_Group, Generic_Allegiance, Generic_Praetor, Lancer_Frigate, Raider_Pentastar </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="MCS_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_MCS</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>RB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Rebel</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>MonCalimari</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_mcs.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_MCS_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="MCS_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Calamari_Cruiser, MC80B, MC90, MC40a, Home_One_Type, Viscount </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="MCS_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Calamari_Cruiser, MC80B, MC90, MC40a, Home_One_Type, Viscount </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="SFS_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_SFS</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+	Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+	Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Underworld</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Syca</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>I_BUTTON_SYFS.TGA</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_SFS_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="SFS_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Syca_Bomber_Squadron, Kariek_Shieldship, Phalanx_Destroyer, Syndic_Destroyer, Warlord </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="SFS_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Syca_Bomber_Squadron, Kariek_Shieldship, Phalanx_Destroyer, Syndic_Destroyer, Warlord </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Tarkin_Estates">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_TARKIN_ESTATES</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+	Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+	Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Hutts</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Eriadu</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>I_BUTTON_TARKIN_ESTATE.TGA</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_TARKIN_ESTATES_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Tarkin_Estate_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types> </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.2</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Tarkin_Estate_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types> </Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.2</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Loronar_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_LORONAR</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+	Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+	Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Empire, Teradoc, Hutts</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Antem, Corellia, Denon</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>I_BUTTON_LORONAR.TGA</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_LORONAR_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Loronar_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Strike_Cruiser, Torpedo_Sphere </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Loronar_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Strike_Cruiser, Torpedo_Sphere </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Arakyd_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_ARAKYD</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+	Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+	Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Empire, Pentastar, Pirates, Teradoc, Hutts, Underworld</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Coruscant</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>I_BUTTON_ARAKYD.TGA</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_ARAKYD_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 800 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Arakyd_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Imperial_XR85_Tankdroid, Probe_Droid_Team </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Arakyd_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Imperial_XR85_Tankdroid, Probe_Droid_Team </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Rendili_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_RENDILI</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+	Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+	Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Empire, Rebel, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>7500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Sluis_Van, MonCalimari</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>I_BUTTON_RENDILI.TGA</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_RENDILI_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="SFS_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Dreadnaught_Empire, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, Generic_Gladiator, Neutron_Star, Dreadnaught_Rebel, Alliance_Assault_Frigate, Republic </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="SFS_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Dreadnaught_Empire, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, Generic_Gladiator, Neutron_Star, Dreadnaught_Rebel, Alliance_Assault_Frigate, Republic </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Incom_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_INCOM</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>RB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Rebel, Empire, Teradoc</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Fresia, CalSeti</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_incom.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_INCOM_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Incom_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Rebel_X-Wing_Squadron_Buildable, A-Wing_Squadron_Buildable, E-Wing_Squadron_Buildable, Rebel_Snowspeeder_Wing, ARC_170_Squadron_Buildable, Skyhopper_Squad, Howlrunner_Squadron_Buildable </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Incom_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Rebel_X-Wing_Squadron_Buildable, A-Wing_Squadron_Buildable, E-Wing_Squadron_Buildable, Rebel_Snowspeeder_Wing, ARC_170_Squadron_Buildable, Skyhopper_Squad, Howlrunner_Squadron_Buildable </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="SoroSuub_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_SOROSUUB</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>RB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Rebel, Pirates</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Sullust</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_sorosuub.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_SOROSUUB_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="SoroSuub_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Dauntless, Quaser, Quasar_Zsinj, Rebel_Light_Missile_Brigade </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="SoroSuub_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Dauntless, Quaser, Quasar_Zsinj, Rebel_Light_Missile_Brigade </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="REC_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_REC</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>RB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Rebel</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>2</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets> </Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_rec.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_REC_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="REC_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Sacheen, Majestic, Nebula, Endurance </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="REC_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Sacheen, Majestic, Nebula, Endurance </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="CEC_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_CEC</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>RB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Rebel, Pirates</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Corellia</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_cec.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_CEC_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="CEC_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Corellian_Corvette, Corellian_Gunboat, CC7700, CR90_Zsinj </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="CEC_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Corellian_Corvette, Corellian_Gunboat, CC7700, CR90_Zsinj </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Koensayr_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_KOENSAYR</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>RB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Rebel</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Corellia, Denon</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_koensayr.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_KOENSAYR_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Koensayr_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Y-Wing_Squadron_Buildable </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Koensayr_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Y-Wing_Squadron_Buildable </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Yutrane_Trackata_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_YUTRANE_TRACKATA</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>RB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Rebel</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>NewCov, Chardaan, Kalarba</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_yutrane_trackata.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_YUTRANE_TRACKATA_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Yutrane_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Rebel_Light_Tank_Brigade_T1, Rebel_Light_Tank_Brigade, Rebel_T3_Tank_Brigade, Rebel_Heavy_Tank_Brigade </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Yutrane_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Rebel_Light_Tank_Brigade_T1, Rebel_Light_Tank_Brigade, Rebel_T3_Tank_Brigade, Rebel_Heavy_Tank_Brigade </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Slayn_Korpil">
+		<Text_ID>TEXT_COMPANY_SLAYN_KORPIL</Text_ID>
+		<Space_Model_Name>RB_STATION_01.alo</Space_Model_Name>
+		<GUI_Row> 1 </GUI_Row>
+		<Select_Box_Scale>1000</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Build_Max_Instances_Per_Planet> 2 </Build_Max_Instances_Per_Planet>
+		<Size_Value>1</Size_Value>
+		<Base_Position>Orbital</Base_Position>
+		<Shield_Points>6000</Shield_Points>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Structure_Category_Dummy</Required_Special_Structures>
+		<Required_Planets>Roche</Required_Planets>
+		<Autoresolve_Health>8000</Autoresolve_Health>
+		<Reinforcement_Prevention_Radius> 2000 </Reinforcement_Prevention_Radius>
+
+		<Energy_Capacity>3000</Energy_Capacity>
+		<Energy_Refresh_Rate>500</Energy_Refresh_Rate>
+
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		<Shield_Refresh_Rate>20</Shield_Refresh_Rate>
+		<Energy_Capacity>3000</Energy_Capacity>
+		<Energy_Refresh_Rate>500</Energy_Refresh_Rate>
+		<Tactical_Health>3200</Tactical_Health>
+		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, POWERED, SHIELDED, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SIMPLE_SPACE_LOCOMOTOR </SpaceBehavior>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Icon_Name>i_button_slayn_korpil.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<AI_Combat_Power>700</AI_Combat_Power>
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
+
+		<Sabotage_Cost_Credits>5000</Sabotage_Cost_Credits>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Affiliation>Rebel</Affiliation>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Gravity_Control_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Gravity_Control_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select> Structure_Power_Gen_Select_SFX </SFXEvent_Select>
+
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Armor_Type> Armor_Station </Armor_Type>
+
+		<Modifies_Reveal_Range>no</Modifies_Reveal_Range>
+		<Reveal_Range_Modifier>-.50</Reveal_Range_Modifier>
+
+		<CategoryMask> Structure </CategoryMask>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Scale_Land>0.1</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>0.1</Radar_Icon_Scale_Space>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Radar_Icon_Name>i_radar_station1_r.tga</Radar_Icon_Name>
+
+		<HardPoints>
+			HP_Rebel_Station_One_CCM,
+			HP_Rebel_Station_One_LC,
+			HP_Rebel_Station_One_TBL,
+			HP_Rebel_Station_One_ShieldGen,
+			HP_Rebel_Station_One_Fighter_Bay,
+			HP_Rebel_Station_One_Supply_Dock,
+			HP_Rebel_Station_One_Supply_Dock_Dummy,
+			HP_Rebel_Station_One_Comm_Array,
+			HP_Rebel_Station_One_Comm_Array_Dummy
+		</HardPoints>
+		
+		<Encyclopedia_Text> TEXT_COMPANY_SLAYN_KORPIL_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 1500 </Score_Cost_Credits>
+		<Has_Space_Evaluator>True</Has_Space_Evaluator>
+		<Custom_Soft_Footprint_Radius> 30 </Custom_Soft_Footprint_Radius>
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Layer_Z_Adjust> -150 </Layer_Z_Adjust>
+		<Space_Layer> StaticObject </Space_Layer>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		<Damage>200</Damage>
+		<Death_Clone>Damage_Normal, Slayn_Korpil_Death_Clone</Death_Clone>
+
+
+		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
+		<Max_Thrust>1.5</Max_Thrust>
+		<Max_Speed>0.00001</Max_Speed>
+		<Max_Rate_Of_Roll>0.0</Max_Rate_Of_Roll>
+		<Lua_Script>GenericGameObject</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+				<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+
+				<Recharge_Seconds>60</Recharge_Seconds>
+
+				<!-- This is the radius within which we can "drop" the projectile (targeting radius) -->
+				<!-- The actual radius of ability is in projectile XML -->
+				<Effective_Radius> 10000.0 </Effective_Radius>
+			    <Spawned_Object_Type>Microjump_Marker</Spawned_Object_Type>
+	                <SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 300 </Area_Effect_Decal_Distance>
+				<Alternate_Name_Text>TEXT_ABILITY_ROTATE</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_ABILITY_ROTATE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_ASSAULT.TGA</Alternate_Icon_Name>
+			</Unit_Ability>
+	   </Unit_Abilities_Data>
+	   
+	   <Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Slayn_Korpil_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> B-Wing_Squadron_Buildable </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Slayn_Korpil_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> B-Wing_Squadron_Buildable </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+    </SpecialStructure>
+
+	<SpecialStructure Name="Olanji_Charubah_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_OLANJI_CHARUBAH</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>RB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Sarlacc</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>3000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Charubah</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_olanji_charubah.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_OLANJI_CHARUBAH_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Olanji_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> BattleDragon, Miytil_Squadron_Buildable, Miytil_Bomber_Squadron_Buildable </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Olanji_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> BattleDragon, Miytil_Squadron_Buildable, Miytil_Bomber_Squadron_Buildable </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="TaggeCo_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_TAGGECO</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+	Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+	Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Empire</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>3</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Brentaal</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>I_BUTTON_TAGGECO.TGA</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_TAGGECO_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="TaggeCo_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> MTC_Sensor </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="TaggeCo_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> MTC_Sensor </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Aratech_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_ARATECH</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+	Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+	Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Empire, Pentastar, Pirates, Teradoc </Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Carida</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>I_BUTTON_ARATECH.TGA</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_ARATECH_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Aratech_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Imperial_Light_Scout_Squad, Pentastar_Light_Scout_Squad, Zsinj_Light_Scout_Squad, Pentastar_Speeder_Group, Teradoc_Speeder_Group </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Aratech_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Imperial_Light_Scout_Squad, Pentastar_Light_Scout_Squad, Zsinj_Light_Scout_Squad, Pentastar_Speeder_Group, Teradoc_Speeder_Group,  </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<StarBase Name="Slayn_Korpil_Death_Clone">
+		<Text_ID>TEXT_COMPANY_SLAYN_KORPIL</Text_ID>
+		<Space_Model_Name>RB_station_01_break.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 34 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</StarBase>
+	
+	<SpecialStructure Name="Black_15">
+		<Variant_Of_Existing_Type>Generic_Golan_Three</Variant_Of_Existing_Type>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Text_ID>TEXT_COMPANY_BLACK_15</Text_ID>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Yevetha</Affiliation>
+		<Starting_Spawned_Units_Tech_0>Trifoil_Squadron, 4</Starting_Spawned_Units_Tech_0>
+		<GUI_Row> 0 </GUI_Row>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<AI_Combat_Power>10000</AI_Combat_Power>
+		<Build_Time_Seconds>150</Build_Time_Seconds>
+		
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Planets>Nzoth</Required_Planets>
+		
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>20000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
+		
+		<Select_Box_Scale>1800</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-50</Select_Box_Z_Adjust>
+		
+		<Scale_Factor>1.1</Scale_Factor>
+		
+		<HardPoints>
+			HP_Empire_Station_One_00,
+			HP_Empire_Station_One_01,
+			HP_Empire_Station_One_02,
+			HP_Empire_Station_One_Fighter_Bay,
+			HP_Empire_Station_One_Comm_Array_Dummy,
+			HP_Empire_Station_Two_00,
+			HP_Empire_Station_Two_01,
+			HP_Empire_Station_Two_02,
+			HP_Empire_Station_Three_00,
+			HP_Empire_Station_Three_01,
+			HP_Empire_Station_Three_02,
+			HP_Empire_Station_Four_00,
+			HP_Empire_Station_Four_01,
+			HP_Empire_Station_Four_02,
+			HP_Empire_Station_Four_03,
+			HP_Empire_Station_Five_00,
+			HP_Empire_Station_Five_01,
+			HP_Empire_Station_Five_02,
+			HP_Empire_Station_Five_03,
+			HP_Empire_Station_One_Supply_Dock_Dummy
+		</HardPoints>
+
+		<Encyclopedia_Text> TEXT_COMPANY_BLACK_15_DESCRIPTION </Encyclopedia_Text>
+				
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Ambient_Loop>Unit_Starbase_Engine_Loop</SFXEvent_Ambient_Loop>
+		<SFXEvent_Fire>Unit_Turbo_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Empire_Space_Station</SFXEvent_Select>
+		<SFXEvent_Attack>Unit_Attack_Empire_Space_Station</SFXEvent_Attack>
+		<SFXEvent_Barrage>Unit_Barrage_Empire_Space_Station</SFXEvent_Barrage>
+		<Death_SFXEvent_Start_Die>Unit_Space_Station_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Empire_Space_Station</SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+
+
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  Unit_Lost_Missile_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  Unit_Lost_Torpedo_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
+
+		
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+        <Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Radar_Icon_Name>i_radar_station5_e.tga</Radar_Icon_Name>
+		<Radar_Icon_Scale_Land>1.3</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.3</Radar_Icon_Scale_Space>
+		<Radar_Icon_Size>0.16  0.16</Radar_Icon_Size>
+		<Radar_Rotate_Icon>Yes</Radar_Rotate_Icon>
+		
+		<Death_Clone>Damage_Normal</Death_Clone>
+		
+		<Has_Space_Evaluator>True</Has_Space_Evaluator>
+
+		<Custom_Soft_Footprint_Radius> 250 </Custom_Soft_Footprint_Radius>
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset> 
+		<Space_Layer> StaticObject </Space_Layer>
+		<Layer_Z_Adjust>-350.0</Layer_Z_Adjust>
+		
+		<Shield_Points>14000</Shield_Points>
+		<Tactical_Health>7000</Tactical_Health>
+		<Shield_Refresh_Rate>170</Shield_Refresh_Rate>
+		<Energy_Capacity>5000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
+		<Icon_Name>i_button_black_15.tga</Icon_Name>
+		
+		<Space_Model_Name>EB_STATION_05.ALO</Space_Model_Name>
+				
+		<AI_Combat_Power>35000</AI_Combat_Power>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Space_Empire</Death_Explosions>
+		<Size_Value>50</Size_Value>
+		
+			<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Black15_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types> </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.2</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Black15_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types> </Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.2</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>	
+	</SpecialStructure>
+
+	<SpecialStructure Name="Damorian_HQ">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_DAMORIAN</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+	Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+	Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+				<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Empire, Pirates, Hutts</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures> </Required_Special_Structures>
+		<Required_Planets>Brentaal</Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>I_BUTTON_DAMORIAN.TGA</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_DAMORIAN_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Damorian_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Carrack_Cruiser, Tartan_Patrol_Cruiser </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Damorian_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Carrack_Cruiser, Tartan_Patrol_Cruiser </Applicable_Unit_Types>
+
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<!-- Capital Buildings -->
+	
+	<SpecialStructure Name="Remnant_Capital">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_EMPIRE_CAPITAL</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Empire</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>  </Required_Special_Structures>
+		<Required_Planets></Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_ir.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_CAPITAL_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+		
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_CAPITAL</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>2000</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="PA_Capital">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_ALIGNMENT_CAPITAL</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Pentastar</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>  </Required_Special_Structures>
+		<Required_Planets></Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_pa.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_CAPITAL_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+		
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_CAPITAL</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>2000</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Maldrood_Capital">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_MALDROOD_CAPITAL</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Teradoc</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>  </Required_Special_Structures>
+		<Required_Planets></Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_ir.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_CAPITAL_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+		
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_CAPITAL</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>2000</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Eriadu_Capital">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_ERIADU_CAPITAL</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Hutts</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>  </Required_Special_Structures>
+		<Required_Planets></Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_ir.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_CAPITAL_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+		
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_CAPITAL</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>2000</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="NewRep_Senate">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_NEWREP_CAPITAL</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>W_Corsenate.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Rebel</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>  </Required_Special_Structures>
+		<Required_Planets></Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_nr.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_CAPITAL_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_CAPITAL</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>2000</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Rancor_Base">	
+		<Variant_Of_Existing_Type>Generic_Golan_Three</Variant_Of_Existing_Type>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Text_ID>TEXT_COMPANY_ZSINJ_CAPITAL</Text_ID>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Pirates</Affiliation>
+		<Starting_Spawned_Units_Tech_0>TIE_Raptor_Squadron, 4</Starting_Spawned_Units_Tech_0>
+		<GUI_Row> 0 </GUI_Row>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+		
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+		<AI_Combat_Power>10000</AI_Combat_Power>
+		<Build_Time_Seconds>150</Build_Time_Seconds>
+		
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>20000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
+		
+		<Select_Box_Scale>1800</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-50</Select_Box_Z_Adjust>
+		
+		<Scale_Factor>1.1</Scale_Factor>
+		
+		<HardPoints>
+			HP_Empire_Station_One_00,
+			HP_Empire_Station_One_01,
+			HP_Empire_Station_One_02,
+			HP_Empire_Station_One_Fighter_Bay,
+			HP_Empire_Station_One_Comm_Array_Dummy,
+			HP_Empire_Station_Two_00,
+			HP_Empire_Station_Two_01,
+			HP_Empire_Station_Two_02,
+			HP_Empire_Station_Three_00,
+			HP_Empire_Station_Three_01,
+			HP_Empire_Station_Three_02,
+			HP_Empire_Station_Four_00,
+			HP_Empire_Station_Four_01,
+			HP_Empire_Station_Four_02,
+			HP_Empire_Station_Four_03,
+			HP_Empire_Station_Five_00,
+			HP_Empire_Station_Five_01,
+			HP_Empire_Station_Five_02,
+			HP_Empire_Station_Five_03,
+			HP_Empire_Station_One_Supply_Dock_Dummy
+		</HardPoints>
+
+		<Encyclopedia_Text> TEXT_COMPANY_RANCOR_DESCRIPTION TEXT_COMPANY_CAPITAL_DESCRIPTION  </Encyclopedia_Text>
+				
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Ambient_Loop>Unit_Starbase_Engine_Loop</SFXEvent_Ambient_Loop>
+		<SFXEvent_Fire>Unit_Turbo_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Empire_Space_Station</SFXEvent_Select>
+		<SFXEvent_Attack>Unit_Attack_Empire_Space_Station</SFXEvent_Attack>
+		<SFXEvent_Barrage>Unit_Barrage_Empire_Space_Station</SFXEvent_Barrage>
+		<Death_SFXEvent_Start_Die>Unit_Space_Station_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Empire_Space_Station</SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+
+
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  Unit_Lost_Missile_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  Unit_Lost_Torpedo_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
+
+		
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+        <Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Radar_Icon_Name>i_radar_station5_e.tga</Radar_Icon_Name>
+		<Radar_Icon_Scale_Land>1.3</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.3</Radar_Icon_Scale_Space>
+		<Radar_Icon_Size>0.16  0.16</Radar_Icon_Size>
+		<Radar_Rotate_Icon>Yes</Radar_Rotate_Icon>
+		
+		<Death_Clone>Damage_Normal</Death_Clone>
+		
+		<Has_Space_Evaluator>True</Has_Space_Evaluator>
+
+		<Custom_Soft_Footprint_Radius> 250 </Custom_Soft_Footprint_Radius>
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset> 
+		<Space_Layer> StaticObject </Space_Layer>
+		<Layer_Z_Adjust>-350.0</Layer_Z_Adjust>
+		
+		<Shield_Points>14000</Shield_Points>
+		<Tactical_Health>7000</Tactical_Health>
+		<Shield_Refresh_Rate>170</Shield_Refresh_Rate>
+		<Energy_Capacity>5000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
+		<Icon_Name>i_button_imperial_station.tga</Icon_Name>
+		
+		<Space_Model_Name>EB_STATION_05.ALO</Space_Model_Name>
+				
+		<AI_Combat_Power>35000</AI_Combat_Power>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Space_Empire</Death_Explosions>
+		<Size_Value>50</Size_Value>
+		
+			<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Sienar_Reduce_Production_Price">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types> </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.2</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Sienar_Production_Time_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types> </Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.2</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_CAPITAL</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>2000</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Yevetha_Capital">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_YEVETHA_CAPITAL</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Yevetha</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>  </Required_Special_Structures>
+		<Required_Planets></Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_ir.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_CAPITAL_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+		
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_CAPITAL</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>2000</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="CSA_Capital">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_CSA_HQ</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Corporate_Sector</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>  </Required_Special_Structures>
+		<Required_Planets></Required_Planets>
+		<Tactical_Health>2900</Tactical_Health>
+		<Icon_Name>i_button_csa_hq.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_CSA_HQ_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">
+		
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_CAPITAL</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>2000</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
+</SpecialStructures>

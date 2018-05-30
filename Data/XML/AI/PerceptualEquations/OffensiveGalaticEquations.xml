@@ -1,0 +1,569 @@
+<?xml version="1.0" ?>
+
+<Equations>
+
+	<!-- See if the target system is connected to a system owned by whatever faction I am.
+	-->
+	<Is_Connected_To_Me>
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "Empire"}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "Rebel"}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "Underworld"}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "Pirates"}	
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "Hutts"}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "Pentastar"}	
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "Teradoc"}	
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "Harrsk"}	
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "Hutt_Cartels"}	
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "SsiRuuvi_Imperium"}			
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "Yevetha"}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0} *
+		Variable_Self.IsFaction {Parameter_Faction = "Corporate_Sector"}
+	</Is_Connected_To_Me>
+
+	<!-- See if the target system is connected to a system owned by the AI faction's enemy
+	-->
+	<Is_Connected_To_Enemy>
+		(
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} 
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "Empire"}
+			+
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "Rebel"}
+			+
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} 
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "Underworld"}
+			+
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} 
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "Pirates"}
+			+
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} 
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "Hutts"}
+			+
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} 
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "Pentastar"}
+			+
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} 
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "Teradoc"}
+			+
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} 
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "Harrsk"}
+			+
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} 
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "Hutt_Cartels"}
+			+
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} 
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "SsiRuuvi_Imperium"}
+			+
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} 
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "Yevetha"}
+			+
+			(
+			Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0} 
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+			+ Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			) 
+			*
+			Variable_Self.IsFaction {Parameter_Faction = "Corporate_Sector"}
+		) > 0.0
+	</Is_Connected_To_Enemy>
+
+	<!-- This perception seeks to detect situations where our non-pirate opponent has neglected to reinforce a system.
+			Use this to respond to the enemy amassing all of their forces in one or few systems.
+		-->
+	<Is_Neglected_By_My_Opponent_Space>
+		((Variable_Target.EnemyForce.HasSpaceForce + Variable_Target.EnemyForce.HasGroundForce) > 0)
+		*
+		(1.0 - Variable_Target.EnemyForce.SpaceTotalNBPTM)
+	</Is_Neglected_By_My_Opponent_Space>
+
+	<Is_Neglected_By_My_Opponent_Ground>
+		((Variable_Target.EnemyForce.HasSpaceForce + Variable_Target.EnemyForce.HasGroundForce) > 0)
+		*
+		(1.0 - Variable_Target.EnemyForce.GroundTotalNBPTM)
+	</Is_Neglected_By_My_Opponent_Ground>
+
+	 <Allow_Blind_Ground_Production>
+		(
+			0.5
+			*
+			(Variable_Self.CreditsUnnormalized >= 2000)
+			+
+			0.5
+			*
+			(Function_Enemy_Global_Land_Unit_Raw_Total.Evaluate > (1.33 * Function_Friendly_Global_Land_Unit_Raw_Total.Evaluate))
+			+
+			0.5
+			*
+			(Function_Enemy_Global_Land_Unit_Raw_Total.Evaluate > (0.9 * Function_Friendly_Global_Land_Unit_Raw_Total.Evaluate))
+		) 
+		*
+		(3.0 > Function_Allow_Blind_Space_Production.Evaluate)
+		*
+		(Script_AnyFreeLandSlots.Evaluate)
+	 </Allow_Blind_Ground_Production>
+
+	 <Allow_Blind_Space_Production>
+		1.0
+		*
+		(Variable_Self.CreditsUnnormalized >= 2000)
+		+
+		(Function_Enemy_Global_Space_Unit_Raw_Total.Evaluate > (1.33 * Function_Friendly_Global_Space_Unit_Raw_Total.Evaluate))
+		+
+		(Function_Enemy_Global_Space_Unit_Raw_Total.Evaluate > (0.9 * Function_Friendly_Global_Space_Unit_Raw_Total.Evaluate))
+	 </Allow_Blind_Space_Production>
+	 
+	 <!-- Turns on supercap saving if the player has loads of credits, and appropriate starbase/tech level -->
+	 <Allow_SuperCapital_Production>
+		(Variable_Self.CreditsUnnormalized >= 40000)
+		*
+		(
+			Variable_Self.HasStructure {Parameter_Type = "NR_Star_Base_3"} * (Variable_Self.TechLevel >= 2)
+			+
+			Variable_Self.HasStructure {Parameter_Type = "Remnant_Star_Base_3"} * ((Variable_Self.TechLevel == 1) + (Variable_Self.TechLevel >= 4))
+			+
+			Variable_Self.HasStructure {Parameter_Type = "Delvardus_Star_Base_3",
+										Parameter_Type = "Teradoc_Star_Base_3",
+										Parameter_Type = "Pentastar_Star_Base_3",
+										Parameter_Type = "Zsinj_Star_Base_3" }
+		)
+	 </Allow_SuperCapital_Production>
+
+	<!-- Determine if we'd like to invade this system.
+
+		Choose unoccupied systems first (weighed by how current our info is)	
+		factor in systems that my non-pirate opponent has neglected to defended
+		factor in connected systems (the enemy_destination reachability already considers this, but this equation is also used for scouting needs)
+		factor in planets which would connect islands of ownership (all targets are 0 if there is only one island of ownership)
+      and add weight for having trade routes
+		factor in systems with high offensive value
+		bonus for chokepoint hints
+		bonus for targets which have been marked up by script (as on the path to a juicy target) if the player has started to attack us
+		dislike pirate systems under some circumstances (don't zero out desire entirely, because we want to expand through pirates toward the player)
+	 -->
+	<Is_Good_Invasion_Target>
+		50.0 * (Variable_Target.EnemyForce.HasGroundForce == 0.0) * (Variable_Target.EnemyForce.HasSpaceForce == 0.0)
+		+ 
+		5.0 * Function_Is_Neglected_By_My_Opponent_Space.Evaluate
+		+
+		8.0 * Function_GenericPlanetValue.Evaluate
+		+
+		5.0 * Variable_Target.Hints.Chokepoint
+		+
+		2.0 * Variable_Target.ConnectsIsolatedPlanetsByForce
+		+
+		3.0 * Variable_Target.TradeRoutes
+		+
+		Variable_Target.Markup
+		+ 
+		Variable_Target.Hints.PriorityTarget
+		-
+		5.0 * (Function_Is_AI_And_Should_Be_Ignored.Evaluate)
+		-
+		(5.0 + 5.0 * Variable_Self.AnyCurrentThreats) * Function_Opens_New_Front.Evaluate
+	</Is_Good_Invasion_Target>
+
+
+	<!-- We don't want to waste effort on AI systems under some circumstances.
+		Is this an AI system
+		AND
+		Do we not have have enough Space forces to spare spending some on AI
+		AND
+			Do we have any current threats (by being adjacent to systems with a human player presence)
+			OR
+			Would attacking this system put us adjacent to the human player
+	-->
+	<Is_AI_And_Should_Be_Ignored>
+		(Variable_Target.IsHumanControlled == 0.0)
+		*
+		(Function_Space_Contrast.Evaluate > (Game.FriendlyForce.SpaceTotalUnnormalized / 4.0))
+		* 
+		Variable_Self.AnyCurrentThreats
+	</Is_AI_And_Should_Be_Ignored>
+
+	<!--	Does the system have a human presence
+			AND
+			Is it connected to a system owned by the AI
+	-->
+	<Is_Target_A_Current_Threat>
+		Variable_Target.EnemyForce.HasSpaceForce
+		*
+		Function_Is_Connected_To_Me.Evaluate
+	</Is_Target_A_Current_Threat>
+
+	<!-- This perception is used to determine if we can no longer afford to trickle money into the MajorItem budget
+		If we don't have at least X% the space force of all of our enemies (including pirates)
+	-->
+	<Needs_More_Space_Force_Globally>
+		(Variable_Human.SpaceTotalUnnormalized > (Variable_Self.SpaceTotalUnnormalized * 1.0))
+	</Needs_More_Space_Force_Globally>
+
+	<!-- The AI can afford to spend on tech if it has X% space force over the human player
+		8/16/05 - reduced the amount by which AI has to be winning 
+	-->
+	<Has_Enough_Space_Force_Globally>
+		(0.9 * Function_Friendly_Global_Space_Unit_Raw_Total.Evaluate) > Function_Enemy_Global_Space_Unit_Raw_Total.Evaluate
+	</Has_Enough_Space_Force_Globally>
+
+	<!-- Desire to perform a basic ground assult
+
+	Make there's no starbase
+	AND
+	no space force
+	AND SCALE BY
+		base invasion worth PLUS bonus to prevent this from going negative
+		bonus for having no ground force (should be a quick win for Fast Expansion)
+	 -->
+	<Is_Good_Ground_Grab_Target>
+		(Variable_Target.StarbaseLevel == 0.0)
+		*
+		(1.0 - Variable_Target.EnemyForce.HasSpaceForce) 
+		*
+		(
+			Function_Is_Good_Invasion_Target.Evaluate + 30.0
+			+	
+			5.0 * (Variable_Target.EnemyForce.HasGroundForce == 0.0)
+		) 
+	</Is_Good_Ground_Grab_Target>
+	
+	<More_Planets_Needed>
+		(1.0 - (Variable_Self.PlanetsControlled >= 0.20))
+	</More_Planets_Needed>
+
+	<Enemy_Present>
+		((Variable_Target.EnemyForce.HasSpaceForce + Variable_Target.EnemyForce.HasGroundForce) > 0.0)
+	</Enemy_Present>
+	
+	<!-- 
+		Does this planet represent the connecting node between two islands of forces?
+		AND
+		Add X to the baseline invasion desire, so that we choose this custom goal over the standard
+		AND
+		Scale desirability by how many planets are stranded from the largest island so that
+		we'll add up to another X points of desire if we're split in half (less for smaller fragments)
+			
+		UNUSED
+		bonus if this is a chokepoint planet
+		*
+		(1.0 + Variable_Target.Hints.Chokepoint)
+	-->
+	<Need_To_Reconnect_Islands>
+		Variable_Target.ConnectsLargestIslands
+		*
+		Function_First_Attack_Allowed.Evaluate
+		*
+		(
+			5.0
+			+
+			clamp(Function_Is_Good_Invasion_Target.Evaluate, 0.0, 5.0)
+			+ 
+			5.0 * Variable_Target.ConnectsIsolatedPlanetsByForce
+			+
+			(10.0 * Variable_Self.WorstIslandFractionOfLargest)
+		)
+	</Need_To_Reconnect_Islands>
+
+	<Space_Contrast>
+		Variable_Target.EnemyForce.SpaceTotalUnnormalized + Variable_Target.EnemyForce.StarbaseTotalUnnormalized
+	</Space_Contrast>
+
+	<Ground_Contrast>
+		Variable_Target.EnemyForce.GroundTotalUnnormalized + Variable_Target.EnemyForce.GroundbaseTotalUnnormalized
+	</Ground_Contrast>
+
+	<Opens_New_Front>
+		(Variable_Target.IsHumanControlled == 0.0) *
+		Function_Is_Connected_To_Enemy.Evaluate
+	</Opens_New_Front>
+
+	<Should_Conquer_Pirate_Planet>
+		Function_Is_Good_Invasion_Target.Evaluate 
+		*
+		(Variable_Target.IsHumanControlled == 0.0)
+		*
+		(Variable_Target.IsFaction {Parameter_Faction = "Neutral"} + Function_Is_Connected_To_Me.Evaluate)
+	</Should_Conquer_Pirate_Planet>
+	
+	<Warlord_Should_Conquer_Pirate_Planet>
+		Function_Should_Conquer_Pirate_Planet.Evaluate
+		*
+		(1 + 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Empire"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Pirates"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Hutts"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Pentastar"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Teradoc"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Harrsk"}
+			+ 0.5 * Variable_Target.IsFaction{Parameter_Faction = "Warlords"})
+	</Warlord_Should_Conquer_Pirate_Planet>
+
+	<Should_Conquer_Opponent_Planet>
+		(
+			1.25
+			*
+			Function_Is_Good_Invasion_Target.Evaluate 
+			*
+			Variable_Target.IsHumanControlled
+		)
+		*
+		Function_First_Attack_Allowed.Evaluate
+		*
+		(1.0 - Function_Should_Perform_Unrestricted_Grab_Space.Evaluate)
+	</Should_Conquer_Opponent_Planet>
+
+	<Warlord_Should_Conquer_Opponent_Planet>
+		Function_Should_Conquer_Opponent_Planet.Evaluate
+		*
+		(1 + 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Empire"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Pirates"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Hutts"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Pentastar"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Teradoc"}
+			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Harrsk"})
+	</Warlord_Should_Conquer_Opponent_Planet>
+	
+	<First_Attack_Allowed>
+		Game.Age > Function_Initial_Grace_Period.Evaluate
+	</First_Attack_Allowed>
+
+	<Initial_Grace_Period>
+		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Easy]}
+		* (200.0 + (20.0 * Variable_Human.PlanetsControlledUnnormalized))
+		+
+		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Normal]}
+		* (100.0 + (10.0 * Variable_Human.PlanetsControlledUnnormalized))
+		+
+		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Hard]}
+		* (10.0 + (5.0  * Variable_Human.PlanetsControlledUnnormalized))
+	</Initial_Grace_Period>
+
+	<Should_Perform_Unrestricted_Grab_Space>
+		50.0
+		*
+		Function_First_Attack_Allowed.Evaluate
+		*
+		(Function_Space_Force_Limit_For_Unrestricted_Grab.Evaluate >= Variable_Target.EnemyForce.SpaceTotalUnnormalized)
+		*
+		(3 > Variable_Target.StarbaseLevelUnnormalized)
+		*
+		Function_Is_Connected_To_Me.Evaluate
+		*
+		(1.0 - Variable_Target.FriendlyForce.HasSpaceForce)
+		*
+		Variable_Target.IsHumanControlled
+		*
+		(1 - Function_Should_Perform_Unrestricted_Grab_Land.Evaluate)
+	</Should_Perform_Unrestricted_Grab_Space>
+
+	<Should_Perform_Unrestricted_Grab_Land>
+		50.0
+		*
+		Function_First_Attack_Allowed.Evaluate
+		*
+		(Function_Ground_Force_Limit_For_Unrestricted_Grab.Evaluate >= Variable_Target.EnemyForce.GroundTotalUnnormalized)
+		*
+		Function_Is_Connected_To_Me.Evaluate
+		*
+		Variable_Target.IsSurfaceAccessible 
+		*
+		(Variable_Target.StarbaseLevel == 0.0)
+		*
+		(1.0 - Variable_Target.EnemyForce.HasSpaceForce)
+		*
+		Variable_Target.IsHumanControlled
+	</Should_Perform_Unrestricted_Grab_Land>
+
+	<Space_Force_Limit_For_Unrestricted_Grab>
+		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Easy]}
+		* (1000.0)
+		+
+		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Normal]}
+		* (2000.0)
+		+
+		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Hard]}
+		* (4000.0)		
+	</Space_Force_Limit_For_Unrestricted_Grab>
+
+	<Ground_Force_Limit_For_Unrestricted_Grab>
+		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Easy]}
+		* (600.0)
+		+
+		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Normal]}
+		* (1200.0)
+		+
+		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Hard]}
+		* (1800.0)		
+	</Ground_Force_Limit_For_Unrestricted_Grab>
+
+</Equations>

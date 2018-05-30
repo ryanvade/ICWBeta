@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<!-- Equations that define perception functions -->
+<Equations>
+
+	<!--Value planets based mostly on income and trade routes.  Also consider structure and base capabilities -->
+	<GenericPlanetValue>
+		( 15.0 * Variable_Target.BaseIncome +
+		  1.0 * Variable_Target.MaxStructureSlots + 
+		  2.0 * Variable_Target.MaxGroundbaseLevel + 
+		  2.0 * Variable_Target.MaxStarbaseLevel +
+		  10.0 * Variable_Target.TradeRoutes) / 30.0 
+	</GenericPlanetValue>
+
+	<Is_Home_Planet>
+		Variable_Target.Type.Token == Variable_Self.HomePlanet.Type.Token
+	</Is_Home_Planet>
+	
+	<Is_Production_Planet>
+		5 * (Variable_Target.StarbaseLevel == 3)
+		+
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Barracks",
+													Parameter_Type = "R_Ground_Barracks",
+													Parameter_Type = "P_Ground_Barracks",
+													Parameter_Only_Consider_Complete = 1.0}
+		+
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "R_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Heavy_Vehicle_Factory",
+													Parameter_Only_Consider_Complete = 1.0}
+		+
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Advanced_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Advanced_Vehicle_Factory",
+													Parameter_Only_Consider_Complete = 1.0}
+		+
+		clamp(Function_Defense_Level.Evaluate, 0.0, 2.0)
+	</Is_Production_Planet>
+	
+	<One>
+		1.0
+	</One>
+
+    <ReallySmall>
+        0.000000001
+    </ReallySmall>
+
+	<ReallyBig>
+		50.0
+	</ReallyBig>
+
+	<Medium>
+		25.0
+	</Medium>
+
+	<Medium_High>
+		35.0
+	</Medium_High>
+
+	<High>
+		40.0
+	</High>
+
+	<Zero>
+		0.0
+	</Zero>
+
+	<Is_Connected_To_Player>
+		(Variable_Target.IsConnectedTo {Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Rebel", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Underworld", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Pirates", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Hutts", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Pentastar", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
+		+
+		Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}) > 0.0
+	</Is_Connected_To_Player>
+	
+	<Is_Company_Planet>
+		Variable_Target.Type.IsType {Parameter_Type = "Jaemus"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Lianna"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Corulag"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Kuat"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Gyndine"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Balmorra"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "MonCalimari"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Syca"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Eriadu"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Antem"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Corellia"} * 3
+		+ Variable_Target.Type.IsType {Parameter_Type = "Denon"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Coruscant"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Sluis_Van"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Fresia"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "CalSeti"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Sullust"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "NewCov"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Chardaan"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Kalarba"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Roche"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Charubah"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Brentaal"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Carida"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Nzoth"}
+	</Is_Company_Planet>
+	
+	<Has_Company>
+		Variable_Self.HasStructure {Parameter_Type = "Damorian_HQ"
+									,Parameter_Type = "Sienar_HQ"
+									,Parameter_Type = "KDY_HQ"
+									,Parameter_Type = "KDY_Branch"
+									,Parameter_Type = "MCS_HQ"
+									,Parameter_Type = "SFS_HQ"
+									,Parameter_Type = "Tarkin_Estates"
+									,Parameter_Type = "Loronar_HQ"
+									,Parameter_Type = "Arakyd_HQ"
+									,Parameter_Type = "Rendili_HQ"
+									,Parameter_Type = "Incom_HQ"
+									,Parameter_Type = "Sorosuub_HQ"
+									,Parameter_Type = "REC_HQ"
+									,Parameter_Type = "CEC_HQ"
+									,Parameter_Type = "Koensayr_HQ"
+									,Parameter_Type = "Yutrane_Trackata_HQ"
+									,Parameter_Type = "Olanji_Charubah_HQ"
+									,Parameter_Type = "TaggeCo_HQ"
+									,Parameter_Type = "Aratech_HQ"}
+	</Has_Company>
+	
+	<Planet_Ownership>
+		Variable_Self.PlanetsControlledUnnormalized
+	</Planet_Ownership>
+	
+	<Percent_Forces>
+		(Game.FriendlyForce.SpaceTotalUnnormalized + Game.FriendlyForce.GroundTotalUnnormalized)
+		/
+		(Game.FriendlyForce.SpaceTotalUnnormalized + Game.FriendlyForce.GroundTotalUnnormalized + Game.EnemyForce.SpaceTotalUnnormalized + Game.EnemyForce.GroundTotalUnnormalized)
+	</Percent_Forces>
+	
+	<Current_Income>
+		Variable_Self.NetIncomeUnnormalized
+	</Current_Income>
+	
+	<Has_Planetary_Weapon>
+		Variable_Target.HasStructure {Parameter_Type = "Ground_Ion_Cannon"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Ground_Empire_Hypervelocity_Gun"}
+		+ Variable_Target.HasStructure {Parameter_Type = "Ground_Pentastar_Hypervelocity_Gun"}
+	</Has_Planetary_Weapon>
+	
+</Equations>
