@@ -391,7 +391,7 @@ function PellaeonSpawns(message)
 	local start_planet = FindPlanet("ILC905")
   if TestValid(start_planet) then
   ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-    local  spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
+    local  spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer"}
     local Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
   end
 

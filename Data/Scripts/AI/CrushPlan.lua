@@ -115,6 +115,7 @@ function MainForce_Thread()
 	MainForce.Set_As_Goal_System_Removable(false)	
 	MainForce.Test_Target_Contrast(false)	
 
+	MainForce.Release_Forces(0.4)
 	FundBases(PlayerObject, Target)
 		
 	LandSecured = true

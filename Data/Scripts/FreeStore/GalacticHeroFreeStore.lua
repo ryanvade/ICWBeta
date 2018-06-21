@@ -126,7 +126,7 @@ function Definitions()
 		,YONKA_AVARICE = {nil, true}
 		,ZA_TEAM = {nil, false}
 		,["13X"] = {nil, true}
-		,["181ST_FEL"] = {nil, true}
+		,["181ST_FEL_SQUADRON"] = {nil, true}
 		,["181ST_STELE"] = {nil, true}
 		,["181ST_TIE_INTERCEPTOR_SQUADRON"] = {nil, true}
 		

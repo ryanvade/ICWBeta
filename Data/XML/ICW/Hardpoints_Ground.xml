@@ -1018,7 +1018,7 @@
 		<Fire_Bone_B>MUZZLEA_01</Fire_Bone_B>
 		<Randomize_Between_Fire_Bones> Yes </Randomize_Between_Fire_Bones>
         <Fire_Cone_Width>15.0</Fire_Cone_Width>
-        <Fire_Cone_Height>100.0</Fire_Cone_Height>
+        <Fire_Cone_Height>180.0</Fire_Cone_Height>
         <Fire_Projectile_Type>Proj_Blaster_Cannon_Green</Fire_Projectile_Type>
         <Fire_Min_Recharge_Seconds>1</Fire_Min_Recharge_Seconds>
         <Fire_Max_Recharge_Seconds>1</Fire_Max_Recharge_Seconds>
@@ -1029,7 +1029,7 @@
 
 		<Fire_Inaccuracy_Distance> Infantry, 10.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Vehicle, 5.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Vehicle, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Air, 70.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Structure, 2.0 </Fire_Inaccuracy_Distance>
     </HardPoint>
 	
@@ -1137,6 +1137,31 @@
 
     </HardPoint>
 
+	<HardPoint Name="HP_2M_Missile">
+			<Type> HARD_POINT_WEAPON_MISSILE </Type>
+            <Is_Targetable>No</Is_Targetable>
+            <Is_Destroyable>No</Is_Destroyable>
+
+            <Fire_Bone_A>PPTW_2MTANK</Fire_Bone_A>
+            <Fire_Bone_B>PPTW_2MTANK</Fire_Bone_B>
+            <Randomize_Between_Fire_Bones> Yes </Randomize_Between_Fire_Bones>
+            <Fire_Cone_Width>360.0</Fire_Cone_Width>
+            <Fire_Cone_Height>20.0</Fire_Cone_Height>
+            <Fire_Projectile_Type>Proj_IFX_MISSILE</Fire_Projectile_Type>
+            <Fire_Min_Recharge_Seconds>10.0</Fire_Min_Recharge_Seconds>
+            <Fire_Max_Recharge_Seconds>10.0</Fire_Max_Recharge_Seconds>
+            <Fire_Pulse_Count>1</Fire_Pulse_Count>
+            <Fire_Pulse_Delay_Seconds>0.3</Fire_Pulse_Delay_Seconds>
+            <Fire_Range_Distance>400.0</Fire_Range_Distance>
+
+			<Fire_SFXEvent>Unit_MPTL_Tank_Fire</Fire_SFXEvent>
+
+			<Fire_Inaccuracy_Distance> Infantry, 20.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Vehicle, 10.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Air, 10.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Structure, 5.0 </Fire_Inaccuracy_Distance>
+    </HardPoint>
+	
 	<!-- IDT -->
 	<HardPoint Name="HP_IDT_Missiles">
 			<Type> HARD_POINT_WEAPON_MISSILE </Type>
@@ -3229,30 +3254,268 @@
 		<Fire_Inaccuracy_Distance> Air, 2.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Structure, 10.0 </Fire_Inaccuracy_Distance>
     </HardPoint>
-		
+	
 	<HardPoint Name="HP_T2B">
 		<Type> HARD_POINT_WEAPON_LASER </Type>
-		<Is_Targetable>No</Is_Targetable>
+        <Is_Targetable>No</Is_Targetable>
         <Is_Destroyable>No</Is_Destroyable>
 
-        <Fire_Bone_A>MuzzleA_00</Fire_Bone_A>
-        <Fire_Bone_B>MuzzleA_03</Fire_Bone_B>
-		<Randomize_Between_Fire_Bones>Yes</Randomize_Between_Fire_Bones>
-        <Fire_Cone_Width>90.0</Fire_Cone_Width>
-        <Fire_Cone_Height>80.0</Fire_Cone_Height>
+        <Fire_Bone_A>MUZZLEA_00</Fire_Bone_A>
+		<Fire_Bone_B>MUZZLEA_03</Fire_Bone_B>
+		<Randomize_Between_Fire_Bones> Yes </Randomize_Between_Fire_Bones>
+        <Fire_Cone_Width>360.0</Fire_Cone_Width>
+        <Fire_Cone_Height>45.0</Fire_Cone_Height>
         <Fire_Projectile_Type>Proj_Blaster_Cannon_Red_T2B</Fire_Projectile_Type>
-        <Fire_Min_Recharge_Seconds>0</Fire_Min_Recharge_Seconds>
-        <Fire_Max_Recharge_Seconds>0</Fire_Max_Recharge_Seconds>
+        <Fire_Min_Recharge_Seconds>0.05</Fire_Min_Recharge_Seconds>
+        <Fire_Max_Recharge_Seconds>0.05</Fire_Max_Recharge_Seconds>
         <Fire_Pulse_Count>8</Fire_Pulse_Count>
-        <Fire_Pulse_Delay_Seconds>0.2</Fire_Pulse_Delay_Seconds>
+        <Fire_Pulse_Delay_Seconds>0.17</Fire_Pulse_Delay_Seconds>
         <Fire_Range_Distance>200.0</Fire_Range_Distance>
-
 		<Fire_SFXEvent>Unit_Tank_T2B_Fire</Fire_SFXEvent>
 
 		<Fire_Inaccuracy_Distance> Infantry, 10.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Vehicle, 5.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Air, 70.0 </Fire_Inaccuracy_Distance>
 		<Fire_Inaccuracy_Distance> Structure, 5.0 </Fire_Inaccuracy_Distance>
+    </HardPoint>
+	
+	<HardPoint Name="HP_MPTL_1">
+			<Type> HARD_POINT_WEAPON_MISSILE </Type>
+            <Is_Targetable>No</Is_Targetable>
+            <Is_Destroyable>No</Is_Destroyable>
+
+            <Fire_Bone_A>MUZZLEA_03</Fire_Bone_A>
+            <Fire_Bone_B>MUZZLEA_06</Fire_Bone_B>
+            <Fire_Cone_Width>50.0</Fire_Cone_Width>
+            <Fire_Cone_Height>80.0</Fire_Cone_Height>
+            <Fire_Projectile_Type>Proj_Ground_Proton_Torpedo</Fire_Projectile_Type>
+            <Fire_Min_Recharge_Seconds>10</Fire_Min_Recharge_Seconds>
+            <Fire_Max_Recharge_Seconds>10</Fire_Max_Recharge_Seconds>
+            <Fire_Pulse_Count>5</Fire_Pulse_Count>
+            <Fire_Pulse_Delay_Seconds>0.1</Fire_Pulse_Delay_Seconds>
+            <Fire_Range_Distance>800.0</Fire_Range_Distance>
+			<Fire_SFXEvent>Unit_MPTL_Tank_Fire</Fire_SFXEvent>
+			
+			<Fire_When_Deployed>Yes</Fire_When_Deployed>
+			<Fire_When_Undeployed>No</Fire_When_Undeployed>
+
+			<Fire_Inaccuracy_Distance> Infantry, 20.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Structure, 10.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Vehicle, 1.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Air, 2.0 </Fire_Inaccuracy_Distance>
+
+    </HardPoint>
+	
+	<HardPoint Name="HP_MPTL_2">
+			<Type> HARD_POINT_WEAPON_MISSILE </Type>
+            <Is_Targetable>No</Is_Targetable>
+            <Is_Destroyable>No</Is_Destroyable>
+
+            <Fire_Bone_A>MUZZLEA_00</Fire_Bone_A>
+            <Fire_Bone_B>MUZZLEA_08</Fire_Bone_B>
+            <Fire_Cone_Width>50.0</Fire_Cone_Width>
+            <Fire_Cone_Height>80.0</Fire_Cone_Height>
+            <Fire_Projectile_Type>Proj_Ground_Proton_Torpedo</Fire_Projectile_Type>
+            <Fire_Min_Recharge_Seconds>10</Fire_Min_Recharge_Seconds>
+            <Fire_Max_Recharge_Seconds>10</Fire_Max_Recharge_Seconds>
+            <Fire_Pulse_Count>5</Fire_Pulse_Count>
+            <Fire_Pulse_Delay_Seconds>0.1</Fire_Pulse_Delay_Seconds>
+            <Fire_Range_Distance>800.0</Fire_Range_Distance>
+			<Fire_SFXEvent>Unit_MPTL_Tank_Fire</Fire_SFXEvent>
+			
+			<Fire_When_Deployed>Yes</Fire_When_Deployed>
+			<Fire_When_Undeployed>No</Fire_When_Undeployed>
+
+			<Fire_Inaccuracy_Distance> Infantry, 20.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Structure, 10.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Vehicle, 1.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Air, 2.0 </Fire_Inaccuracy_Distance>
+
+    </HardPoint>
+	
+	<HardPoint Name="HP_Turbolaser_Tower">
+		<Type> HARD_POINT_WEAPON_LASER </Type>
+        <Is_Targetable>No</Is_Targetable>
+        <Is_Destroyable>No</Is_Destroyable>
+
+        <Fire_Bone_A>MUZZLEA_00</Fire_Bone_A>
+		<Fire_Bone_B>MUZZLEA_01</Fire_Bone_B>
+		<Randomize_Between_Fire_Bones> Yes </Randomize_Between_Fire_Bones>
+        <Fire_Cone_Width>30.0</Fire_Cone_Width>
+        <Fire_Cone_Height>40.0</Fire_Cone_Height>
+        <Fire_Projectile_Type>Proj_Ground_Turbolaser_Green</Fire_Projectile_Type>
+        <Fire_Min_Recharge_Seconds>4.0</Fire_Min_Recharge_Seconds>
+        <Fire_Max_Recharge_Seconds>4.0</Fire_Max_Recharge_Seconds>
+        <Fire_Pulse_Count>2</Fire_Pulse_Count>
+        <Fire_Pulse_Delay_Seconds>0.3</Fire_Pulse_Delay_Seconds>
+        <Fire_Range_Distance>400.0</Fire_Range_Distance>
+		<Fire_SFXEvent>Unit_Turbo_Tower_Fire</Fire_SFXEvent>
+
+		<Fire_Inaccuracy_Distance> Infantry, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> LandHero, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Vehicle, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Air, 10.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Structure, 1.0 </Fire_Inaccuracy_Distance>
+    </HardPoint>
+	
+	<HardPoint Name="HP_Empire_AA_Turret">
+		<Type> HARD_POINT_WEAPON_LASER </Type>
+        <Is_Targetable>No</Is_Targetable>
+        <Is_Destroyable>No</Is_Destroyable>
+
+        <Fire_Bone_A>MUZZLEA_00</Fire_Bone_A>
+		<Fire_Bone_B>MUZZLEA_01</Fire_Bone_B>
+		<Randomize_Between_Fire_Bones> Yes </Randomize_Between_Fire_Bones>
+        <Fire_Cone_Width>30.0</Fire_Cone_Width>
+        <Fire_Cone_Height>40.0</Fire_Cone_Height>
+        <Fire_Projectile_Type>Proj_Flak_Pod_Green</Fire_Projectile_Type>
+        <Fire_Min_Recharge_Seconds>0.01</Fire_Min_Recharge_Seconds>
+        <Fire_Max_Recharge_Seconds>0.01</Fire_Max_Recharge_Seconds>
+        <Fire_Pulse_Count>8</Fire_Pulse_Count>
+        <Fire_Pulse_Delay_Seconds>0.1</Fire_Pulse_Delay_Seconds>
+        <Fire_Range_Distance>500.0</Fire_Range_Distance>
+		<Fire_SFXEvent>Unit_TIE_Fighter_Fire</Fire_SFXEvent>
+
+		<Fire_Inaccuracy_Distance> Infantry, 60.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Vehicle, 35.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Air, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Structure, 25.0 </Fire_Inaccuracy_Distance>
+		
+		<Fire_Category_Restrictions> Infantry </Fire_Category_Restrictions>
+		<Fire_Category_Restrictions> Vehicle </Fire_Category_Restrictions>
+		<Fire_Category_Restrictions> Structure </Fire_Category_Restrictions>
+    </HardPoint>
+	
+	<HardPoint Name="HP_Rebel_AA_Turret">
+		<Type> HARD_POINT_WEAPON_LASER </Type>
+        <Is_Targetable>No</Is_Targetable>
+        <Is_Destroyable>No</Is_Destroyable>
+
+        <Fire_Bone_A>MUZZLEA_00</Fire_Bone_A>
+		<Fire_Bone_B>MUZZLEA_01</Fire_Bone_B>
+		<Randomize_Between_Fire_Bones> Yes </Randomize_Between_Fire_Bones>
+        <Fire_Cone_Width>30.0</Fire_Cone_Width>
+        <Fire_Cone_Height>40.0</Fire_Cone_Height>
+        <Fire_Projectile_Type>Proj_Flak_Pod_Red</Fire_Projectile_Type>
+        <Fire_Min_Recharge_Seconds>0.01</Fire_Min_Recharge_Seconds>
+        <Fire_Max_Recharge_Seconds>0.01</Fire_Max_Recharge_Seconds>
+        <Fire_Pulse_Count>8</Fire_Pulse_Count>
+        <Fire_Pulse_Delay_Seconds>0.1</Fire_Pulse_Delay_Seconds>
+        <Fire_Range_Distance>500.0</Fire_Range_Distance>
+		<Fire_SFXEvent>Unit_A_Wing_Fire</Fire_SFXEvent>
+
+		<Fire_Inaccuracy_Distance> Infantry, 60.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Vehicle, 35.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Air, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Structure, 25.0 </Fire_Inaccuracy_Distance>
+		
+		<Fire_Category_Restrictions> Infantry </Fire_Category_Restrictions>
+		<Fire_Category_Restrictions> Vehicle </Fire_Category_Restrictions>
+		<Fire_Category_Restrictions> Structure </Fire_Category_Restrictions>
+    </HardPoint>
+	
+	<HardPoint Name="HP_Empire_AI_Turret">
+		<Type> HARD_POINT_WEAPON_LASER </Type>
+        <Is_Targetable>No</Is_Targetable>
+        <Is_Destroyable>No</Is_Destroyable>
+
+        <Fire_Bone_A>MUZZLEA_00</Fire_Bone_A>
+		<Fire_Bone_B/>
+		<Randomize_Between_Fire_Bones> No </Randomize_Between_Fire_Bones>
+        <Fire_Cone_Width>30.0</Fire_Cone_Width>
+        <Fire_Cone_Height>40.0</Fire_Cone_Height>
+        <Fire_Projectile_Type>Proj_HRB_Cannon_Green</Fire_Projectile_Type>
+        <Fire_Min_Recharge_Seconds>0.1</Fire_Min_Recharge_Seconds>
+        <Fire_Max_Recharge_Seconds>0.1</Fire_Max_Recharge_Seconds>
+        <Fire_Pulse_Count>10</Fire_Pulse_Count>
+        <Fire_Pulse_Delay_Seconds>0.1</Fire_Pulse_Delay_Seconds>
+        <Fire_Range_Distance>220.0</Fire_Range_Distance>
+		<Fire_SFXEvent>Unit_Turret_Fire</Fire_SFXEvent>
+
+		<Fire_Inaccuracy_Distance> Infantry, 20.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Vehicle, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Air, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Structure, 0.0 </Fire_Inaccuracy_Distance>
+		
+		<Fire_Category_Restrictions> Air </Fire_Category_Restrictions>
+    </HardPoint>
+	
+	<HardPoint Name="HP_Rebel_AI_Turret">
+		<Type> HARD_POINT_WEAPON_LASER </Type>
+        <Is_Targetable>No</Is_Targetable>
+        <Is_Destroyable>No</Is_Destroyable>
+
+        <Fire_Bone_A>MUZZLEA_00</Fire_Bone_A>
+		<Fire_Bone_B/>
+		<Randomize_Between_Fire_Bones> No </Randomize_Between_Fire_Bones>
+        <Fire_Cone_Width>30.0</Fire_Cone_Width>
+        <Fire_Cone_Height>40.0</Fire_Cone_Height>
+        <Fire_Projectile_Type>Proj_HRB_Cannon_Red</Fire_Projectile_Type>
+        <Fire_Min_Recharge_Seconds>0.15</Fire_Min_Recharge_Seconds>
+        <Fire_Max_Recharge_Seconds>0.15</Fire_Max_Recharge_Seconds>
+        <Fire_Pulse_Count>14</Fire_Pulse_Count>
+        <Fire_Pulse_Delay_Seconds>0.15</Fire_Pulse_Delay_Seconds>
+        <Fire_Range_Distance>220.0</Fire_Range_Distance>
+		<Fire_SFXEvent>Unit_Turret_Fire</Fire_SFXEvent>
+
+		<Fire_Inaccuracy_Distance> Infantry, 20.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Vehicle, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Air, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Structure, 0.0 </Fire_Inaccuracy_Distance>
+		
+		<Fire_Category_Restrictions> Air </Fire_Category_Restrictions>
+    </HardPoint>
+	
+	<HardPoint Name="HP_Empire_AV_Turret">
+		<Type> HARD_POINT_WEAPON_LASER </Type>
+        <Is_Targetable>No</Is_Targetable>
+        <Is_Destroyable>No</Is_Destroyable>
+
+        <Fire_Bone_A>MUZZLEA_00</Fire_Bone_A>
+		<Fire_Bone_B/>
+		<Randomize_Between_Fire_Bones> No </Randomize_Between_Fire_Bones>
+        <Fire_Cone_Width>30.0</Fire_Cone_Width>
+        <Fire_Cone_Height>40.0</Fire_Cone_Height>
+        <Fire_Projectile_Type>Proj_Ground_AV_Turret_Laser_Green</Fire_Projectile_Type>
+        <Fire_Min_Recharge_Seconds>1.0</Fire_Min_Recharge_Seconds>
+        <Fire_Max_Recharge_Seconds>1.0</Fire_Max_Recharge_Seconds>
+        <Fire_Pulse_Count>2</Fire_Pulse_Count>
+        <Fire_Pulse_Delay_Seconds>0.3</Fire_Pulse_Delay_Seconds>
+        <Fire_Range_Distance>300.0</Fire_Range_Distance>
+		<Fire_SFXEvent>Unit_Turret_Fire</Fire_SFXEvent>
+
+		<Fire_Inaccuracy_Distance> Infantry, 20.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Vehicle, 2.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Air, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Structure, 0.0 </Fire_Inaccuracy_Distance>
+		
+		<Fire_Category_Restrictions> Air </Fire_Category_Restrictions>
+    </HardPoint>
+	
+	<HardPoint Name="HP_Rebel_AV_Turret">
+		<Type> HARD_POINT_WEAPON_LASER </Type>
+        <Is_Targetable>No</Is_Targetable>
+        <Is_Destroyable>No</Is_Destroyable>
+
+        <Fire_Bone_A>MUZZLEA_00</Fire_Bone_A>
+		<Fire_Bone_B/>
+		<Randomize_Between_Fire_Bones> No </Randomize_Between_Fire_Bones>
+        <Fire_Cone_Width>30.0</Fire_Cone_Width>
+        <Fire_Cone_Height>40.0</Fire_Cone_Height>
+        <Fire_Projectile_Type>Proj_Ground_AV_Turret_Laser_Red</Fire_Projectile_Type>
+        <Fire_Min_Recharge_Seconds>1.0</Fire_Min_Recharge_Seconds>
+        <Fire_Max_Recharge_Seconds>1.0</Fire_Max_Recharge_Seconds>
+        <Fire_Pulse_Count>2</Fire_Pulse_Count>
+        <Fire_Pulse_Delay_Seconds>0.3</Fire_Pulse_Delay_Seconds>
+        <Fire_Range_Distance>300.0</Fire_Range_Distance>
+		<Fire_SFXEvent>Unit_Turret_Fire</Fire_SFXEvent>
+
+		<Fire_Inaccuracy_Distance> Infantry, 20.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Vehicle, 2.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Air, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Structure, 0.0 </Fire_Inaccuracy_Distance>
+		
+		<Fire_Category_Restrictions> Air </Fire_Category_Restrictions>
     </HardPoint>
 		
 </HardPoints>	

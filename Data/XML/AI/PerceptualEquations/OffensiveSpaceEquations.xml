@@ -328,9 +328,9 @@
 			+
 			1.0 * (Variable_Target.Location.EnemyForce {Parameter_Category = GameObjectCategoryType[Corvette]} == 0)
 			+
-			2.0 * ((Variable_Target.Location.FriendlyForce {Parameter_Category = GameObjectCategoryType[Fighter|Corvette|Frigate|Capital|SuperCapital]} * 1) > Variable_Target.Location.EnemyForce)
+			2.0 * ((Variable_Target.Location.FriendlyForce {Parameter_Category = GameObjectCategoryType[Fighter|Corvette|Frigate|Capital|SuperCapital|Structure]} * 1) > Variable_Target.Location.EnemyForce)
 			+
-			0.5 * (1000 > Variable_Target.DistanceToNearestFriendly {Parameter_Category = GameObjectCategoryType[Fighter|Corvette|Frigate|Capital|SuperCapital]})
+			0.5 * (1000 > Variable_Target.DistanceToNearestFriendly {Parameter_Category = GameObjectCategoryType[Fighter|Corvette|Frigate|Capital|SuperCapital|Structure]})
 			+
 			2.0 * Variable_Target.Location.EnemyForce {Parameter_Category = GameObjectCategoryType[SuperCapital]}
 		)
@@ -738,11 +738,11 @@
 			(Game.IsCampaignGame == 0.0)
 			*
 			(
-				5 * Function_Is_Refinery_Pad_Space.Evaluate
+				Function_Is_Refinery_Pad_Space.Evaluate
 				+
-				(1 - Function_Is_Refinery_Pad_Space.Evaluate)
+				Variable_Target.Type.IsType {Parameter_Type = "N_Orbital_Construction_Pod"}
 				*
-				(Function_Number_Resource_Structures_Space.Evaluate)
+				(Function_Number_Resource_Structures_Space.Evaluate > 2)
 			)
 		)
 	</Need_To_Secure_Contestable_Space>
@@ -827,10 +827,6 @@
 
 	-->
 	<Should_Purchase_Ability_Generic_Space>
-		0.05
-		*
-		((Variable_Self.FriendlyForce > Variable_Self.EnemyForce) + (Variable_Self.CreditsUnnormalized > 5000))
-		*
 		(Game.IsCampaignGame == 0)
 		*
 		(1 - Function_Is_Saving_For_Refineries_Space.Evaluate)
@@ -841,8 +837,6 @@
 			1.0
 			+
 			10.0 * (Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (0.8 * Variable_Enemy.ForceUnnormalized{Parameter_Attenuator = 1.0}))
-			+
-			(5.0 * (0#1>0.5))
 		)
 		+
 		(Game.IsCampaignGame)
@@ -938,7 +932,7 @@
 	<Skirmish_Needs_New_Space_Station>
 		(Game.IsCampaignGame == 0.0)
 		*
-		(Function_Number_Resource_Structures_Space.Evaluate >= 1.0)
+		(Function_Number_Resource_Structures_Space.Evaluate >= 2)
 		*
 		(
 			(1 # 2) * (Game.Age > 60) * Function_Number_Resource_Structures_Space.Evaluate
@@ -950,9 +944,9 @@
 		*
 		(1 - Function_Is_Saving_For_Refineries_Space.Evaluate)
 		*
-		((Game.Age > 60.0) * (Variable_Self.TechLevel == 1.0)
+		((Game.Age > 180.0) * (Variable_Self.TechLevel == 1.0)
 		+
-		(Game.Age > 180.0) * (Variable_Self.TechLevel == 2.0)
+		(Game.Age > 300.0) * (Variable_Self.TechLevel == 2.0)
 		+
 		(3.0 > Variable_Self.TechLevel) * (Variable_Self.FriendlyForce > (2.0 * Variable_Self.EnemyForce))
 		+

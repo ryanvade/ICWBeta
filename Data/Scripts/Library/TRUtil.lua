@@ -17,9 +17,6 @@
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
-
-
-
 TRUtil = {
     PlayerAgnosticPlots = {
         Galactic = "Player_Agnostic_Plot.xml",
@@ -37,14 +34,14 @@ end
 function TRUtil.ShowScreenText(textId, time, var, color)
     local plot = TRUtil.GetPlayerAgnosticPlot()
     local screenTextEvent = plot.Get_Event(TRUtil.ShowTextEventName)
-
+    
     if not screenTextEvent then return end
-
+    
     local colorString = ""
     if color then
-        colorString = color.r.." "..color.g.." "..color.b
+        colorString = color.r .. " " .. color.g .. " " .. color.b
     end
-
+    
     if not var then
         var = ""
     end
@@ -59,9 +56,9 @@ end
 function TRUtil.RemoveScreenText(textId)
     local plot = TRUtil.GetPlayerAgnosticPlot()
     local screenTextEvent = plot.Get_Event(TRUtil.ShowTextEventName)
-
+    
     if not screenTextEvent then return end
-
+    
     screenTextEvent.Set_Reward_Parameter(0, textId)
     screenTextEvent.Set_Reward_Parameter(3, "remove")
     Story_Event(TRUtil.ShowTextNotificationName)
@@ -69,6 +66,41 @@ end
 
 function TRUtil.ValidGlobalValue(val)
     return val and val ~= ""
+end
+
+function TRUtil.FindFriendlyPlanet(player)
+    if type(player) == "string" then
+        player = Find_Player(player)
+    end
+
+    local allPlanets = TRUtil.GetAllPlanetsWithoutDummies()
+    
+    local random = 0
+    local planet = nil
+    
+    while table.getn(allPlanets) > 0 do
+        random = GameRandom(1, table.getn(allPlanets))
+        planet = allPlanets[random]
+        table.remove(allPlanets, random)
+        
+        if planet.Get_Owner() == player then
+            return planet
+        end
+    end
+    
+    return nil
+end
+
+function TRUtil.GetAllPlanetsWithoutDummies()
+    local allPlanets = FindPlanet.Get_All_Planets()
+    
+    for i, p in pairs(allPlanets) do
+        if p == FindPlanet("Dummy_Empire") or p == FindPlanet("Dummy_Rebel") or p == FindPlanet("Dummy_EotH") then
+            table.remove(allPlanets, i)
+        end
+    end
+    
+    return allPlanets
 end
 
 return TRUtil

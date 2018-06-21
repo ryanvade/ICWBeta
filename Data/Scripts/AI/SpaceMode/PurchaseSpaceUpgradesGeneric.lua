@@ -51,7 +51,8 @@ function Definitions()
 		"ReserveForce"
 		,"DenySpecialWeaponAttach"
 		,"DenyHeroAttach"
-		,"Upgrade = 1"
+		,"RS_Increased_Supplies_L1_Upgrade | RS_Increased_Supplies_L2_Upgrade | RS_Ion_Cannon_Use_Upgrade | ES_Increased_Supplies_L1_Upgrade | ES_Increased_Supplies_L2_Upgrade | ES_Hypervelocity_Gun_Use_Upgrade | US_Increased_Supplies_L1_Upgrade | US_Increased_Supplies_L2_Upgrade | PS_Increased_Supplies_L1_Upgrade | PS_Increased_Supplies_L2_Upgrade = 1"
+		--,"Upgrade = 1"
 	}
 	}
 	 
@@ -70,9 +71,9 @@ function ReserveForce_Thread()
 	tech_level = PlayerObject.Get_Tech_Level()
 	min_credits = 2000
 	if tech_level == 2 then
-		min_credits = 4000
+		min_credits = 8000
 	elseif tech_level >= 3 then
-		min_credits = 6000
+		min_credits = 10000
 	end
 	
 	max_sleep_seconds = 120

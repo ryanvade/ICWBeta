@@ -89,6 +89,7 @@ function MainForce_Thread()
 	end
 	
 	LandSecured = true
+	MainForce.Release_Forces(0.4)
 	FundBases(PlayerObject, Target)
 	
 	MainForce.Release_Forces(1.0)

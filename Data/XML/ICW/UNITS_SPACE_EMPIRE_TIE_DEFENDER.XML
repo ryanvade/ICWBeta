@@ -37,9 +37,9 @@
 		<Affiliation>Empire</Affiliation>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
-		<Shield_Points>25</Shield_Points>
-		<Tactical_Health>25</Tactical_Health>
-		<Shield_Refresh_Rate>1</Shield_Refresh_Rate>
+		<Shield_Points>30</Shield_Points>
+		<Tactical_Health>30</Tactical_Health>
+		<Shield_Refresh_Rate>3</Shield_Refresh_Rate>
 		<Energy_Capacity>999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
 		<Armor_Type> Armor_Fighter </Armor_Type>
@@ -133,6 +133,13 @@
 		<Strafe_Distance>500.0</Strafe_Distance>
 		<Population_Value>0</Population_Value>	
 		<No_Colorization_Color> 75, 75, 75, 255 </No_Colorization_Color>
+		
+				<!-- Test: Each TIE fighter will play a 3D ambient "flyby" sound every X to Y seconds -->
+		<!-- Note: To invoke SFXEvent_Ambient, AMBIENT_SFX behavior needs to be added to the behavior list -->
+		<SFXEvent_Ambient_Moving> Unit_TIE_Fighter_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_TIE_Fighter_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
 
  	
 	</SpaceUnit>

@@ -382,15 +382,15 @@ GameObjectLibrary = {
                 ["CLAWCRAFT_SQUADRON"]={
                     ["UNDERWORLD"] = {
                         Reserve=1,
-                        Initial=2
+                        Initial=1
                     },
 					["HOSTILE"] = {
                         Reserve=1,
-                        Initial=2
+                        Initial=1
                     },
 					["WARLORDS"] = {
                         Reserve=1,
-                        Initial=2
+                        Initial=1
                     }
                 },
 				["TIE_INTERCEPTOR_SQUADRON"]={
@@ -402,7 +402,7 @@ GameObjectLibrary = {
 				["TIE_FIGHTER_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=1,
-                        Initial=2
+                        Initial=1
                     }
                 },
 				["TIE_BOMBER_SQUADRON"]={
@@ -413,14 +413,14 @@ GameObjectLibrary = {
                 },
 				["TRIFOIL_SQUADRON"]={
                     ["YEVETHA"] = {
-                        Reserve=4,
+                        Reserve=3,
                         Initial=3
                     }
                 },
 				["REBEL_X-WING_SQUADRON"]={
                     ["REBEL"] = {
                         Reserve=1,
-                        Initial=2
+                        Initial=1
                     }
                 },
 				["A-WING_SQUADRON"]={
@@ -432,7 +432,7 @@ GameObjectLibrary = {
 				["Y-WING_SQUADRON"]={
                     ["REBEL"] = {
                         Reserve=1,
-                        Initial=2
+                        Initial=1
                     }
                 }
             }
@@ -858,16 +858,10 @@ GameObjectLibrary = {
                 HANGAR = true
             },
             Fighters={
-                ["E-WING_SQUADRON"]={
+                ["Defender_Starfighter_Squadron"]={
                     ["DEFAULT"] = {
-                        Reserve=0,
+                        Reserve=1,
                         Initial=2
-                    }
-                },
-                ["B-WING_SQUADRON"]={
-                    ["DEFAULT"] = {
-                        Reserve=0,
-                        Initial=1
                     }
                 }
             }
@@ -1581,19 +1575,19 @@ GameObjectLibrary = {
                 ["TORRENT_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=5,
-                        Initial=2
+                        Initial=5
                     }
                 },
                 ["SKIPRAY_SQUADRON"]={
                     ["DEFAULT"] = {
-                        Reserve=4,
-                        Initial=2
+                        Reserve=5,
+                        Initial=5
                     }
                 },
                 ["Z95_HEADHUNTER_SQUADRON"]={
                     ["DEFAULT"] = {
-                        Reserve=6,
-                        Initial=2
+                        Reserve=5,
+                        Initial=5
                     }
                 }
             }
@@ -2857,8 +2851,8 @@ GameObjectLibrary = {
                 },
                 ["MIYTIL_SQUADRON"]={
                     ["DEFAULT"] = {
-                        Reserve=0,
-                        Initial=2
+                        Reserve=1,
+                        Initial=1
                     }
                 }
             }
@@ -2886,35 +2880,35 @@ GameObjectLibrary = {
             Fighters={
                 ["SYCA_BOMBER_SQUADRON"]={
                     ["UNDERWORLD"] = {
-                        Reserve=2,
-                        Initial=2,
+                        Reserve=0,
+                        Initial=1,
                         TechLevel=LessOrEqualTo(3)
                     },
                     ["HOSTILE"] = {
-                        Reserve=2,
-                        Initial=2,
+                        Reserve=0,
+                        Initial=1,
                         TechLevel=LessOrEqualTo(3)
                     },
                     ["WARLORDS"] = {
-                        Reserve=2,
-                        Initial=2,
+                        Reserve=0,
+                        Initial=1,
                         TechLevel=LessOrEqualTo(3)
                     }
                 },
                 ["FURION_SQUADRON"]={
                     ["UNDERWORLD"] = {
-                        Reserve=2,
-                        Initial=2,
+                        Reserve=0,
+                        Initial=1,
                         TechLevel=GreaterThan(3)
                     },
                     ["HOSTILE"] = {
-                        Reserve=2,
-                        Initial=2,
+                        Reserve=0,
+                        Initial=1,
                         TechLevel=GreaterThan(3)
                     },
                     ["WARLORDS"] = {
-                        Reserve=2,
-                        Initial=2,
+                        Reserve=0,
+                        Initial=1,
                         TechLevel=GreaterThan(3)
                     }
                 },
@@ -2932,14 +2926,14 @@ GameObjectLibrary = {
                 },
                 ["TRIFOIL_SQUADRON"]={
                     ["YEVETHA"] = {
-                        Reserve=2,
-                        Initial=3
+                        Reserve=0,
+                        Initial=2
                     }
                 },
                 ["Y-WING_SQUADRON"]={
                     ["REBEL"] = {
-                        Reserve=2,
-                        Initial=2
+                        Reserve=0,
+                        Initial=1
                     }
                 },
                 ["SCARSISS_SQUADRON"]={
@@ -2961,8 +2955,8 @@ GameObjectLibrary = {
                 },
                 ["TIE_BOMBER_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=2,
-                        Initial=2
+                        Reserve=0,
+                        Initial=1
                     }
                 },
                 ["CLAWCRAFT_SQUADRON"]={
@@ -3250,14 +3244,14 @@ GameObjectLibrary = {
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2
+                        Reserve=1,
+                        Initial=1
                     }
                 },
                 ["TRIFOIL_SQUADRON"]={
                     ["YEVETHA"] = {
-                        Reserve=0,
-                        Initial=3
+                        Reserve=1,
+                        Initial=2
                     }
                 },
                 ["MIYTIL_BOMBER_SQUADRON"]={
@@ -3282,16 +3276,16 @@ GameObjectLibrary = {
                 },
                 ["MIYTIL_SQUADRON"]={
                     ["SARLACC"] = {
-                        Reserve=0,
-                        Initial=2
+                        Reserve=1,
+                        Initial=1
                     },
                     ["HOSTILE"] = {
-                        Reserve=0,
-                        Initial=2
+                        Reserve=1,
+                        Initial=1
                     },
                     ["WARLORDS"] = {
-                        Reserve=0,
-                        Initial=2
+                        Reserve=1,
+                        Initial=1
                     }
                 },
                 ["TIE_BOMBER_SQUADRON"]={
@@ -3302,8 +3296,8 @@ GameObjectLibrary = {
                 },
                 ["REBEL_X-WING_SQUADRON"]={
                     ["REBEL"] = {
-                        Reserve=0,
-                        Initial=2
+                        Reserve=1,
+                        Initial=1
                     }
                 }
             }

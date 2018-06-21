@@ -108,3 +108,46 @@ function UseTurboIfAllowed(units)
     end
   end
 end
+
+-- Creates a table of faction player objects where each entry is 
+-- a faction that owns at least one planet in the GC.
+-- In: string list of faction names e.g. CONSTANTS.ALL_FACTIONS
+-- Out: FactionTable
+function CreateFactionTable(factionList)
+	FactionTable = {}
+	for _, faction in factionList do
+		CreateFactionEntry(faction)
+	end
+	
+	return FactionTable
+end
+
+-- Creates an entry in  the FactionTable for factions that are present
+-- In: String name of a faction
+-- Out: Inserts faction into FactionTable
+function CreateFactionEntry(factionString)
+	if factionString == "NEUTRAL" or factionString == "HOSTILE" then
+		return
+	end
+
+	local factionObject = Find_Player(factionString)
+	if FactionOwnsPlanets(factionObject) then
+		table.insert(FactionTable, factionObject)
+	end
+end
+
+-- Returns true if a faction has some kind of AI control and 
+-- owns at least one planet
+-- In: faction playerObject
+-- Out: boolean
+function FactionOwnsPlanets(faction)
+	local planetsOwned = EvaluatePerception("Planet_Ownership", faction)
+
+	if planetsOwned ~= nil then
+		if planetsOwned > 0 then
+			return true
+		end
+	end
+
+	return false
+end

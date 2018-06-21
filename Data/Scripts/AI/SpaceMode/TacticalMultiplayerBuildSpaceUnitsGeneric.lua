@@ -53,10 +53,12 @@ function Definitions()
 		-- ,"EC_Level_Two_Tech_Upgrade | EC_Level_Three_Tech_Upgrade = 0,1"
 		-- ,"UC_Level_Two_Tech_Upgrade | UC_Level_Three_Tech_Upgrade = 0,1"
 		-- ,"PC_Level_Two_Tech_Upgrade | PC_Level_Three_Tech_Upgrade = 0,1"
-		,"Fighter | Bomber | Corvette | Frigate | Capital | SuperCapital | SpaceHero = 0,3"
+		,"Fighter | Bomber = 0, 1"
+		,"Corvette | Frigate = 1, 4"
+		,"Capital | SuperCapital | SpaceHero = 0, 2"
 		}
 	}
-	RequiredCategories = {"Fighter | Bomber | Corvette | Frigate | Capital"}
+	RequiredCategories = {"Corvette | Frigate | Capital"}
 	AllowFreeStoreUnits = false
 
 end

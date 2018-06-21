@@ -125,7 +125,7 @@
 
 		<Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
 
-		<Encyclopedia_Text> TEXT_HEALTH_OTO TEXT_LENGTH_OTO TEXT_TOOLTIP_NONE TEXT_ENCYCLOPEDIA_OTO </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_OTO TEXT_RANGE_OTO TEXT_ARMAMENT_OTO_ONE TEXT_ARMAMENT_OTO_TWO TEXT_HEALTH_OTO TEXT_LENGTH_OTO TEXT_TOOLTIP_NONE TEXT_ENCYCLOPEDIA_OTO </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_BATTLESTATION</Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 1500 </Score_Cost_Credits>
 		<Has_Space_Evaluator>True</Has_Space_Evaluator>
@@ -265,7 +265,7 @@
 
 		<Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
 
-		<Encyclopedia_Text> TEXT_HEALTH_VISVIA TEXT_LENGTH_VISVIA TEXT_TOOLTIP_NONE TEXT_ENCYCLOPEDIA_VISVIA </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_VISVIA TEXT_RANGE_VISVIA TEXT_ARMAMENT_VISVIA_ONE TEXT_ARMAMENT_VISVIA_TWO TEXT_HEALTH_VISVIA TEXT_LENGTH_VISVIA TEXT_TOOLTIP_NONE TEXT_ENCYCLOPEDIA_VISVIA </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 1500 </Score_Cost_Credits>
 		<Has_Space_Evaluator>True</Has_Space_Evaluator>
@@ -377,7 +377,7 @@
 			HP_Brask_Hangar_02,
 			HP_Brask_Hangar_03,
 		</HardPoints>
-		<Encyclopedia_Text> TEXT_HEALTH_BRASK TEXT_LENGTH_BRASK TEXT_TOOLTIP_NONE TEXT_TOOLTIP_BRASK  </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_BRASK TEXT_RANGE_BRASK TEXT_ARMAMENT_BRASK_ONE TEXT_HEALTH_BRASK TEXT_LENGTH_BRASK TEXT_TOOLTIP_NONE TEXT_TOOLTIP_BRASK  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HANGARDEFENSE</Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 1500 </Score_Cost_Credits>
 		<Has_Space_Evaluator>True</Has_Space_Evaluator>
@@ -583,7 +583,7 @@
 		<Max_Rate_Of_Turn>0.2</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Frigate </Space_Layer>
-		<Layer_Z_Adjust>50.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>8</Bank_Turn_Angle>
 		<OverrideAcceleration> .03 </OverrideAcceleration>
@@ -660,35 +660,34 @@
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>null</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Complete>Unit_Complete_Prosvoli</SFXEvent_Build_Complete>
 		<SFXEvent_Ambient_Loop>Unit_Victory_Destroyer_Moving_Engine_Loop</SFXEvent_Ambient_Loop>
-		<SFXEvent_Select>Unit_Select_Budirech</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Budirech</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Move_Budirech</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Budirech</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Move_Budirech</SFXEvent_Guard>
-		<SFXEvent_Stop>Unit_Move_Budirech</SFXEvent_Stop>
-		<SFXEvent_Barrage>Unit_Attack_Budirech</SFXEvent_Barrage>
-		<SFXEvent_Move_Into_Asteroid_Field> null </SFXEvent_Move_Into_Asteroid_Field>
-		<SFXEvent_Move_Into_Nebula> null </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Select>Unit_Select_Prosvoli</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Prosvoli</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Prosvoli</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Prosvoli</SFXEvent_Attack>
+		<SFXEvent_Barrage>Unit_Attack_Prosvoli</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Prosvoli </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Prosvoli </SFXEvent_Move_Into_Nebula>
 		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Budirech </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Budirech </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Budirech </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Budirech </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Budirech </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Budirech </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Budirech </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_AttackGuns_Prosvoli </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_AttackGuns_Prosvoli </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_AttackGuns_Prosvoli </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_AttackGuns_Prosvoli </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_AttackShields_Prosvoli </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_AttackEngines_Prosvoli </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Prosvoli </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_AttackHangar_Prosvoli </SFXEvent_Attack_Hardpoint>
 
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, null </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER,  </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,   </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,   </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, null </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, null </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, null </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_LoseShields_Prosvoli </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_LoseEngines_Prosvoli </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL,  </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, null </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_LoseHangar_Prosvoli </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
 
@@ -749,7 +748,7 @@
 		</Unit_Abilities_Data>
 
 
-		<Encyclopedia_Text> TEXT_HEALTH_PROSVOLI TEXT_LENGTH_BUDIRECH TEXT_TOOLTIP_NONE TEXT_TOOLTIP_BUDIRECH TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_BUDIRECH TEXT_RANGE_PROSVOLI TEXT_ARMAMENT_PROSVOLI_ONE TEXT_ARMAMENT_PROSVOLI_TWO TEXT_ARMAMENT_PROSVOLI_THREE TEXT_HEALTH_PROSVOLI TEXT_LENGTH_BUDIRECH TEXT_TOOLTIP_NONE TEXT_TOOLTIP_BUDIRECH TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HEAVYCRUISER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 2250</Score_Cost_Credits>
 
@@ -795,7 +794,7 @@
 		<Max_Rate_Of_Turn>0.2</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Frigate </Space_Layer>
-		<Layer_Z_Adjust>50.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>8</Bank_Turn_Angle>
 		<OverrideAcceleration> .03 </OverrideAcceleration>
@@ -944,7 +943,7 @@
 
 
 
-		<Encyclopedia_Text> TEXT_HEALTH_AFTHONIA TEXT_LENGTH_AFTHONIA TEXT_TOOLTIP_NONE TEXT_TOOLTIP_ALARIA TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_AFTHONIA TEXT_RANGE_AFTHONIA TEXT_ARMAMENT_AFTHONIA_ONE TEXT_HEALTH_AFTHONIA TEXT_LENGTH_AFTHONIA TEXT_TOOLTIP_NONE TEXT_TOOLTIP_ALARIA TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CARRIER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 2250</Score_Cost_Credits>
 
@@ -992,7 +991,7 @@
 		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn> <!-- was 1.6 -->
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Corvette </Space_Layer>
-		<Layer_Z_Adjust>20.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.8</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>30</Bank_Turn_Angle>
 		<OverrideAcceleration> .05 </OverrideAcceleration>
@@ -1059,24 +1058,24 @@
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Gunboat</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Complete>Unit_Complete_Asdroni</SFXEvent_Build_Complete>
 		<SFXEvent_Ambient_Loop>Unit_Gunboat_Moving_Engine_Loop</SFXEvent_Ambient_Loop>
-		<SFXEvent_Select>Unit_Select_Gunboat</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Gunboat</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Gunboat</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Gunboat</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Gunboat</SFXEvent_Guard>
-		<SFXEvent_Stop>Unit_Stop_Gunboat</SFXEvent_Stop>
-		<SFXEvent_Barrage>Unit_Barrage_Gunboat</SFXEvent_Barrage>
-		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Gunboat </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Select>Unit_Select_Asdroni</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Asdroni</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Asdroni</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Asdroni</SFXEvent_Attack>
+		<SFXEvent_Barrage>Unit_Attack_Asdroni</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Asdroni </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Asdroni </SFXEvent_Move_Into_Asteroid_Field>
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Gunboat </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_AttackGuns_Asdroni </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_AttackGuns_Asdroni </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_AttackGuns_Asdroni </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_AttackGuns_Asdroni </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_AttackShields_Asdroni </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_AttackEngines_Asdroni </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Asdroni </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_AttackHangar_Asdroni </SFXEvent_Attack_Hardpoint>
 
 		<SFXEvent_Engine_Idle_Loop> Unit_Gunboat_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
 		<SFXEvent_Engine_Moving_Loop> Unit_Gunboat_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
@@ -1098,7 +1097,7 @@
 
 
 
-		<Encyclopedia_Text>TEXT_HEALTH_ASDONI TEXT_LENGTH_ASDRONI TEXT_TOOLTIP_NONE TEXT_TOOLTIP_ASDONI</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_RANGE_ASDONI TEXT_ARMAMENT_ASDONI_ONE TEXT_HEALTH_ASDONI TEXT_LENGTH_ASDRONI TEXT_TOOLTIP_NONE TEXT_TOOLTIP_ASDONI</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 1350</Score_Cost_Credits>
 
@@ -1167,7 +1166,7 @@
 		<Max_Rate_Of_Turn>0.2</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Frigate </Space_Layer>
-		<Layer_Z_Adjust>50.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>8</Bank_Turn_Angle>
 		<OverrideAcceleration> .03 </OverrideAcceleration>
@@ -1242,35 +1241,34 @@
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Victory_Destroyer</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Complete>Unit_Complete_Nuruodo</SFXEvent_Build_Complete>
 		<SFXEvent_Ambient_Loop>Unit_Victory_Destroyer_Moving_Engine_Loop</SFXEvent_Ambient_Loop>
-		<SFXEvent_Select></SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Victory_Destroyer</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Victory_Destroyer</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Victory_Destroyer</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Victory_Destroyer</SFXEvent_Guard>
-		<SFXEvent_Stop>Unit_Stop_Victory_Destroyer</SFXEvent_Stop>
-		<SFXEvent_Barrage>Unit_Barrage_Victory_Destroyer</SFXEvent_Barrage>
-		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Victory_Destroyer </SFXEvent_Move_Into_Asteroid_Field>
-		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Victory_Destroyer </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Select>Unit_Select_Nuruodo</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Nuruodo</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Nuruodo</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Nuruodo</SFXEvent_Attack>
+		<SFXEvent_Barrage>Unit_Attack_Nuruodo</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Nuruodo </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Nuruodo </SFXEvent_Move_Into_Nebula>
 		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_AttackGuns_Nuruodo </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_AttackGuns_Nuruodo </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_AttackGuns_Nuruodo </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_AttackGuns_Nuruodo </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_AttackShields_Nuruodo </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_AttackEngines_Nuruodo </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Nuruodo </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_AttackHangar_Nuruodo </SFXEvent_Attack_Hardpoint>
 
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Victory_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER,  </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,   </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,   </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_Victory_Destroyer </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Victory_Destroyer </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_Victory_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_LoseShields_Nuruodo </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_LoseEngines_Nuruodo </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL,  </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_Victory_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_LoseHangar_Nuruodo </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
 
@@ -1349,7 +1347,7 @@
 		</Abilities>
 
 
-		<Encyclopedia_Text> TEXT_HEALTH_NURUODO TEXT_LENGTH_NURUODO TEXT_TOOLTIP_NONE TEXT_TOOLTIP_NURUODO TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_NURUODO TEXT_RANGE_NURUODO TEXT_ARMAMENT_NURUODO_ONE TEXT_ARMAMENT_NURUODO_TWO TEXT_HEALTH_NURUODO TEXT_LENGTH_NURUODO TEXT_TOOLTIP_NONE TEXT_TOOLTIP_NURUODO TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CRUISER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 2250</Score_Cost_Credits>
 
@@ -1368,7 +1366,7 @@
 		<Space_Model_Name>EOTH_Nuruodo_Die.ALO</Space_Model_Name>
 		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
 		<Scale_Factor> 0.4</Scale_Factor>
-		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Speed> 0.25 </Max_Speed>
 		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
 		<Max_Thrust> 0.05 </Max_Thrust>
@@ -1404,7 +1402,7 @@
 		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Capital </Space_Layer>
-		<Layer_Z_Adjust>-200.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<OverrideAcceleration> .02 </OverrideAcceleration>
 		<OverrideDeceleration> .02 </OverrideDeceleration>
 
@@ -1567,7 +1565,7 @@
 		<Space_Model_Name>UV_KRAYTCLASSDESTROYER_D.ALO</Space_Model_Name>
 		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
 		<Scale_Factor> 1.0 </Scale_Factor>
-		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Speed> 0.25 </Max_Speed>
 		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
 		<Max_Thrust> 0.05 </Max_Thrust>
@@ -1596,7 +1594,7 @@
 		<Max_Rate_Of_Turn>0.5</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Frigate </Space_Layer>
-		<Layer_Z_Adjust>-60.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>8</Bank_Turn_Angle>
 		<OverrideAcceleration> .03 </OverrideAcceleration>
@@ -1759,7 +1757,7 @@
 		</Abilities>
 
 
-		<Encyclopedia_Text> TEXT_HEALTH_FRUORO TEXT_LENGTH_FRUORO TEXT_TOOLTIP_NONE TEXT_TOOLTIP_KARIEK_SHIELDSHIP</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_FRUORO TEXT_RANGE_FRUORO TEXT_ARMAMENT_FRUORO_ONE TEXT_ARMAMENT_FRUORO_TWO TEXT_HEALTH_FRUORO TEXT_LENGTH_FRUORO TEXT_TOOLTIP_NONE TEXT_TOOLTIP_KARIEK_SHIELDSHIP</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 2250</Score_Cost_Credits>
 
@@ -1780,7 +1778,7 @@
 		<Space_Model_Name>EOTH_Kariek_Die.ALO</Space_Model_Name>
 		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
 		<Scale_Factor> 25</Scale_Factor>
-		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Speed> 0.25 </Max_Speed>
 		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
 		<Max_Thrust> 0.05 </Max_Thrust>
@@ -1810,7 +1808,7 @@
 		<Max_Rate_Of_Turn>0.5</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Frigate </Space_Layer>
-		<Layer_Z_Adjust>-240.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>8</Bank_Turn_Angle>
 		<OverrideAcceleration> .03 </OverrideAcceleration>
@@ -1882,35 +1880,34 @@
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Jedi_Cruiser</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Complete>Unit_Complete_Ormos</SFXEvent_Build_Complete>
 		<SFXEvent_Ambient_Loop>Unit_Jedi_Cruiser_Moving_Engine_Loop</SFXEvent_Ambient_Loop>
-		<SFXEvent_Select></SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Jedi_Cruiser</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Jedi_Cruiser</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Jedi_Cruiser</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Jedi_Cruiser</SFXEvent_Guard>
-		<SFXEvent_Stop>Unit_Stop_Jedi_Cruiser</SFXEvent_Stop>
-		<SFXEvent_Barrage>Unit_Barrage_Jedi_Cruiser</SFXEvent_Barrage>
-		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Jedi_Cruiser </SFXEvent_Move_Into_Asteroid_Field>
-		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Jedi_Cruiser </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Select>Unit_Select_Ormos</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Ormos</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Ormos</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Ormos</SFXEvent_Attack>
+		<SFXEvent_Barrage>Unit_Attack_Ormos</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Ormos </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Ormos </SFXEvent_Move_Into_Nebula>
 		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_AttackGuns_Ormos </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_AttackGuns_Ormos </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_AttackGuns_Ormos </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_AttackGuns_Ormos </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_AttackShields_Ormos </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_AttackEngines_Ormos </SFXEvent_Attack_Hardpoint>
 		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_AttackHangar_Ormos </SFXEvent_Attack_Hardpoint>
 
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Jedi_Cruiser </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER,  </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,   </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,   </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_Jedi_Cruiser </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Jedi_Cruiser </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_Jedi_Cruiser </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_LoseShields_Ormos </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_LoseEngines_Ormos </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL,  </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_Jedi_Cruiser </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_LoseHangar_Ormos </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
 
@@ -1968,7 +1965,7 @@
 
 
 	   </Unit_Abilities_Data>
-			<Encyclopedia_Text> TEXT_HEALTH_AURIETTE TEXT_LENGTH_AURIETTE TEXT_TOOLTIP_NONE TEXT_TOOLTIP_AURIETTE TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
+			<Encyclopedia_Text> TEXT_FIGHTERS_ORMOS TEXT_RANGE_AURIETTE TEXT_ARMAMENT_AURIETTE_ONE TEXT_HEALTH_AURIETTE TEXT_LENGTH_AURIETTE TEXT_TOOLTIP_NONE TEXT_TOOLTIP_AURIETTE TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CARRIER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 2250</Score_Cost_Credits>
 
@@ -2001,7 +1998,7 @@
 		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn> <!-- was 1.6 -->
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Frigate </Space_Layer>
-		<Layer_Z_Adjust>-20.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>15</Bank_Turn_Angle>
 		<OverrideAcceleration> .05 </OverrideAcceleration>
@@ -2068,24 +2065,23 @@
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Gunboat</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Complete>Unit_Complete_Warlord</SFXEvent_Build_Complete>
 		<SFXEvent_Ambient_Loop>Unit_Gunboat_Moving_Engine_Loop</SFXEvent_Ambient_Loop>
-		<SFXEvent_Select>Unit_Select_Gunboat</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Gunboat</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Gunboat</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Gunboat</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Gunboat</SFXEvent_Guard>
-		<SFXEvent_Stop>Unit_Stop_Gunboat</SFXEvent_Stop>
-		<SFXEvent_Barrage>Unit_Barrage_Gunboat</SFXEvent_Barrage>
-		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Gunboat </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Select>Unit_Select_Warlord</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Warlord</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Warlord</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Warlord</SFXEvent_Attack>
+		<SFXEvent_Barrage>Unit_Attack_Warlord</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Warlord </SFXEvent_Move_Into_Nebula>
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Gunboat </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_AttackGuns_Warlord </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_AttackGuns_Warlord </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_AttackGuns_Warlord </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_AttackGuns_Warlord </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_AttackShields_Warlord </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_AttackEngines_Warlord </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Gunboat </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_AttackHangar_Warlord </SFXEvent_Attack_Hardpoint>
 
 		<SFXEvent_Engine_Idle_Loop> Unit_Gunboat_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
 		<SFXEvent_Engine_Moving_Loop> Unit_Gunboat_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
@@ -2158,7 +2154,7 @@
 		</Abilities>
 
 
-		<Encyclopedia_Text>TEXT_HEALTH_WARLORD TEXT_LENGTH_WARLORD TEXT_TOOLTIP_NONE TEXT_TOOLTIP_WARLORD TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_NONE TEXT_RANGE_WARLORD TEXT_ARMAMENT_WARLORD_ONE TEXT_ARMAMENT_WARLORD_TWO TEXT_HEALTH_WARLORD TEXT_LENGTH_WARLORD TEXT_TOOLTIP_NONE TEXT_TOOLTIP_WARLORD TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FRIGATE</Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 1350</Score_Cost_Credits>
 
@@ -2181,7 +2177,7 @@
 		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 		<Scale_Factor>1.4</Scale_Factor>
-		<Layer_Z_Adjust>-40.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Speed>1.2</Max_Speed>
 		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
 		<Max_Thrust>1</Max_Thrust>
@@ -2211,7 +2207,7 @@
 		<Max_Rate_Of_Turn>1.2</Max_Rate_Of_Turn> <!-- was 1.6 -->
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Corvette </Space_Layer>
-		<Layer_Z_Adjust>-30.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>15</Bank_Turn_Angle>
 		<OverrideAcceleration> .05 </OverrideAcceleration>
@@ -2282,24 +2278,23 @@
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Gunboat</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Complete>Unit_Complete_Vigilance</SFXEvent_Build_Complete>
 		<SFXEvent_Ambient_Loop>Unit_Gunboat_Moving_Engine_Loop</SFXEvent_Ambient_Loop>
-		<SFXEvent_Select>Unit_Select_Gunboat</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Gunboat</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Gunboat</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Gunboat</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Gunboat</SFXEvent_Guard>
-		<SFXEvent_Stop>Unit_Stop_Gunboat</SFXEvent_Stop>
-		<SFXEvent_Barrage>Unit_Barrage_Gunboat</SFXEvent_Barrage>
-		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Gunboat </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Select>Unit_Select_Vigilance</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Vigilance</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Vigilance</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Vigilance</SFXEvent_Attack>
+		<SFXEvent_Barrage>Unit_Attack_Vigilance</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Vigilance </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Vigilance </SFXEvent_Move_Into_Asteroid_Field>
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Gunboat </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Gunboat </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Vigilance </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Vigilance </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Vigilance </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Vigilance </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Vigilance </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Vigilance </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Vigilance </SFXEvent_Attack_Hardpoint>
 
 		<SFXEvent_Engine_Idle_Loop> Unit_Gunboat_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
 		<SFXEvent_Engine_Moving_Loop> Unit_Gunboat_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
@@ -2378,7 +2373,7 @@
 			</Planet_Income_Bonus_Ability>
 		</Abilities>
 
-		<Encyclopedia_Text>TEXT_HEALTH_VIGILANCE TEXT_LENGTH_VIGILANCE TEXT_TOOLTIP_NONE TEXT_TOOLTIP_VIGILANCE_GUNBOAT</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_RANGE_VIGILANCE TEXT_ARMAMENT_VIGILANCE_ONE TEXT_ARMAMENT_VIGILANCE_TWO TEXT_HEALTH_VIGILANCE TEXT_LENGTH_VIGILANCE TEXT_TOOLTIP_NONE TEXT_TOOLTIP_VIGILANCE_GUNBOAT</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 1350</Score_Cost_Credits>
 
@@ -2410,7 +2405,7 @@
 		<Max_Rate_Of_Turn>0.6</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Frigate </Space_Layer>
-		<Layer_Z_Adjust>-160.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>15</Bank_Turn_Angle>
 		<OverrideAcceleration> .08 </OverrideAcceleration>
@@ -2489,31 +2484,30 @@
 		<Has_Space_Evaluator>True</Has_Space_Evaluator>
 		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
 
-		<SFXEvent_Select>Unit_Select_Interdictor</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Interdictor</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Interdictor</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Interdictor</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Interdictor</SFXEvent_Guard>
-		<SFXEvent_Stop>Unit_Stop_Interdictor</SFXEvent_Stop>
-		<SFXEvent_Barrage>Unit_Barrage_Interdictor</SFXEvent_Barrage>
-		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Interdictor </SFXEvent_Move_Into_Asteroid_Field>
-		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Interdictor </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Select>Unit_Select_Prolipsi</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Prolipsi</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Prolipsi</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Prolipsi</SFXEvent_Attack>
+		<SFXEvent_Barrage>Unit_Attack_Prolipsi</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Prolipsi </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Prolipsi </SFXEvent_Move_Into_Nebula>
 		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Interdictor </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Interdictor </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Interdictor </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Interdictor </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Interdictor </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Interdictor </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Interdictor </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_AttackGuns_Prolipsi </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_AttackGuns_Prolipsi </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_AttackGuns_Prolipsi </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_AttackGuns_Prolipsi </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_AttackShields_Prolipsi </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_AttackEngines_Prolipsi </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Prolipsi </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_AttackHangar_Prolipsi </SFXEvent_Attack_Hardpoint>
 
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Interdictor </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER,  </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,   </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,   </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON,  </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Interdictor </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_Interdictor </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_LoseShields_Prolipsi </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_LoseEngines_Prolipsi </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL, Unit_Lost_Grav_Interdictor </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY,  </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
@@ -2521,7 +2515,7 @@
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Interdictor</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Complete>Unit_Complete_Prolipsi</SFXEvent_Build_Complete>
 
 		<SFXEvent_Engine_Idle_Loop> Unit_Interdictor_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
 		<SFXEvent_Engine_Moving_Loop> Unit_Interdictor_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
@@ -2574,7 +2568,7 @@
 	   </Unit_Abilities_Data>
 
 
-		<Encyclopedia_Text> TEXT_HEALTH_MASSIAS TEXT_LENGTH_MASSIAS TEXT_TOOLTIP_NONE TEXT_TOOLTIP_MASSIAS_INTERDICTOR TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_MASSIAS TEXT_RANGE_MASSIAS TEXT_ARMAMENT_MASSIAS_ONE TEXT_ARMAMENT_MASSIAS_TWO TEXT_HEALTH_MASSIAS TEXT_LENGTH_MASSIAS TEXT_TOOLTIP_NONE TEXT_TOOLTIP_MASSIAS_INTERDICTOR TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CRUISER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 3000</Score_Cost_Credits>
 
@@ -2639,7 +2633,7 @@
 		<Max_Rate_Of_Turn>0.5</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Frigate </Space_Layer>
-		<Layer_Z_Adjust>50.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>8</Bank_Turn_Angle>
 		<OverrideAcceleration> .03 </OverrideAcceleration>
@@ -2829,7 +2823,7 @@
 			</Planet_Income_Bonus_Ability>
 		</Abilities>
 
-		<Encyclopedia_Text> TEXT_HEALTH_CHAF TEXT_LENGTH_CHAF TEXT_TOOLTIP_NONE TEXT_TOOLTIP_CHAF_DESTROYER TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_CHAF TEXT_RANGE_CHAF TEXT_ARMAMENT_CHAF_ONE TEXT_ARMAMENT_CHAF_TWO TEXT_ARMAMENT_CHAF_THREE TEXT_ARMAMENT_CHAF_FOUR TEXT_HEALTH_CHAF TEXT_LENGTH_CHAF TEXT_TOOLTIP_NONE TEXT_TOOLTIP_CHAF_DESTROYER TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 2250</Score_Cost_Credits>
 
@@ -2851,7 +2845,7 @@
 		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 		<Scale_Factor>3.0</Scale_Factor>
-		<Layer_Z_Adjust>50.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Speed>1.2</Max_Speed>
 		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
 		<Max_Thrust>1</Max_Thrust>
@@ -2886,7 +2880,7 @@
 		<Max_Rate_Of_Turn>0.5</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Capital </Space_Layer>
-		<Layer_Z_Adjust>-350.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>11</Bank_Turn_Angle>
 		<OverrideAcceleration> .03 </OverrideAcceleration>
@@ -2922,7 +2916,7 @@
 		<Transport_Capacity>12</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>9200</Build_Cost_Credits>
-		<AI_Combat_Power>3230</AI_Combat_Power>
+		<AI_Combat_Power>2860</AI_Combat_Power>
 		<Build_Time_Seconds>90</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
@@ -2974,35 +2968,34 @@
 		<Victory_Relevant>yes</Victory_Relevant>
 		<Has_Space_Evaluator>True</Has_Space_Evaluator>
 
-		<SFXEvent_Select>Unit_Select_Star_Destroyer</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Star_Destroyer</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Star_Destroyer</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Star_Destroyer</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Star_Destroyer</SFXEvent_Guard>
-		<SFXEvent_Move_Opposite>Unit_Move_Opposite_Star_Destroyer</SFXEvent_Move_Opposite>
-		<SFXEvent_Barrage>Unit_Barrage_Star_Destroyer</SFXEvent_Barrage>
-		<SFXEvent_Stop>Unit_Stop_Star_Destroyer</SFXEvent_Stop>
-		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Star_Destroyer </SFXEvent_Move_Into_Asteroid_Field>
-		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Star_Destroyer </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Select>Unit_Select_Phalanx</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Phalanx</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Phalanx</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Phalanx</SFXEvent_Attack>
+		<SFXEvent_Move_Opposite>Unit_Move_Phalanx</SFXEvent_Move_Opposite>
+		<SFXEvent_Barrage>Unit_Attack_Phalanx</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Phalanx </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Phalanx </SFXEvent_Move_Into_Nebula>
 		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Star_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Star_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Star_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Star_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Star_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Star_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_AttackGuns_Phalanx </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_AttackGuns_Phalanx </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_AttackGuns_Phalanx </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_AttackGuns_Phalanx </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_AttackShields_Phalanx </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_AttackEngines_Phalanx </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_AttackHangar_Phalanx </SFXEvent_Attack_Hardpoint>
 
 		<SFXEvent_Ambient_Loop>Unit_Star_Destroyer_Idle_Engine_Loop</SFXEvent_Ambient_Loop>
 
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Star_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER,  </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_Star_Destroyer </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Star_Destroyer </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_Star_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_LoseShields_Phalanx </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_LoseEngines_Phalanx </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL, </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_Star_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_LoseHangar_Phalanx </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
 
@@ -3010,7 +3003,7 @@
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Star_Destroyer</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Complete>Unit_Complete_Phalanx</SFXEvent_Build_Complete>
 
 		<SFXEvent_Engine_Idle_Loop> Unit_Star_Destroyer_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
 		<SFXEvent_Engine_Moving_Loop> Unit_Star_Destroyer_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
@@ -3053,7 +3046,7 @@
 	   </Unit_Abilities_Data>
 
 
-		<Encyclopedia_Text> TEXT_HEALTH_PHALANX TEXT_LENGTH_PHALANX	TEXT_TOOLTIP_NONE TEXT_TOOLTIP_PHALANX TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_PHALANX TEXT_RANGE_PHALANX TEXT_ARMAMENT_PHALANX_ONE TEXT_ARMAMENT_PHALANX_TWO TEXT_ARMAMENT_PHALANX_THREE TEXT_ARMAMENT_PHALANX_FOUR TEXT_HEALTH_PHALANX TEXT_LENGTH_PHALANX	TEXT_TOOLTIP_NONE TEXT_TOOLTIP_PHALANX TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BATTLECRUISER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 2250</Score_Cost_Credits>
 
@@ -3087,7 +3080,7 @@
 		<Space_Model_Name>Phalanx_Die.ALO</Space_Model_Name>
 		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
 		<Scale_Factor> 2.8 </Scale_Factor>
-		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Layer_Z_Adjust> -90.0 </Layer_Z_Adjust>
 		<Max_Speed> 0.25 </Max_Speed>
 		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
 		<Max_Thrust> 0.05 </Max_Thrust>
@@ -3124,7 +3117,7 @@
 		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Capital </Space_Layer>
-		<Layer_Z_Adjust>-350.0</Layer_Z_Adjust>
+				<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>11</Bank_Turn_Angle>
 		<OverrideAcceleration> .03 </OverrideAcceleration>
@@ -3339,7 +3332,7 @@
 		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> Capital </Space_Layer>
-		<Layer_Z_Adjust>-200.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>11</Bank_Turn_Angle>
 		<OverrideAcceleration> .03 </OverrideAcceleration>
@@ -3422,35 +3415,34 @@
 		<Victory_Relevant>yes</Victory_Relevant>
 		<Has_Space_Evaluator>True</Has_Space_Evaluator>
 
-		<SFXEvent_Select>Unit_Select_Star_Destroyer</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Star_Destroyer</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Star_Destroyer</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Star_Destroyer</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Star_Destroyer</SFXEvent_Guard>
-		<SFXEvent_Move_Opposite>Unit_Move_Opposite_Star_Destroyer</SFXEvent_Move_Opposite>
-		<SFXEvent_Barrage>Unit_Barrage_Star_Destroyer</SFXEvent_Barrage>
-		<SFXEvent_Stop>Unit_Stop_Star_Destroyer</SFXEvent_Stop>
-		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Star_Destroyer </SFXEvent_Move_Into_Asteroid_Field>
-		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Star_Destroyer </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Select>Unit_Select_Syndic</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Syndic</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Syndic</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Syndic</SFXEvent_Attack>
+		<SFXEvent_Move_Opposite>Unit_Move_Syndic</SFXEvent_Move_Opposite>
+		<SFXEvent_Barrage>Unit_Attack_Syndic</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Syndic </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Syndic </SFXEvent_Move_Into_Nebula>
 		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Star_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Star_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Star_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Star_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Star_Destroyer </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Star_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_AttackGuns_Syndic </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_AttackGuns_Syndic </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_AttackGuns_Syndic </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_AttackGuns_Syndic </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_AttackShields_Syndic </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_AttackEngines_Syndic </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_AttackHangar_Syndic </SFXEvent_Attack_Hardpoint>
 
 		<SFXEvent_Ambient_Loop>Unit_Star_Destroyer_Idle_Engine_Loop</SFXEvent_Ambient_Loop>
 
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Star_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER,  </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_Star_Destroyer </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Star_Destroyer </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_Star_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_LoseShields_Syndic </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_LoseEngines_Syndic </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL, </SFXEvent_Hardpoint_Destroyed>
-		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_Star_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_LoseHangar_Syndic </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
 		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
 
@@ -3458,7 +3450,7 @@
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Star_Destroyer</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Complete>Unit_Complete_Syndic</SFXEvent_Build_Complete>
 
 		<SFXEvent_Engine_Idle_Loop> Unit_Star_Destroyer_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
 		<SFXEvent_Engine_Moving_Loop> Unit_Star_Destroyer_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
@@ -3483,7 +3475,7 @@
 
 
 
-		<Encyclopedia_Text> TEXT_HEALTH_SYNDIC TEXT_LENGTH_SYNDIC TEXT_TOOLTIP_NONE TEXT_TOOLTIP_SYNDIC TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_SYNDIC TEXT_RANGE_SYNDIC TEXT_ARMAMENT_SYNDIC_ONE TEXT_ARMAMENT_SYNDIC_TWO TEXT_ARMAMENT_SYNDIC_THREE TEXT_ARMAMENT_SYNDIC_FOUR TEXT_HEALTH_SYNDIC TEXT_LENGTH_SYNDIC TEXT_TOOLTIP_NONE TEXT_TOOLTIP_SYNDIC TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 2250</Score_Cost_Credits>
 
@@ -3539,7 +3531,7 @@
 		<Space_Model_Name>Phalanx_Die.ALO</Space_Model_Name>
 		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
 		<Scale_Factor> 2.8 </Scale_Factor>
-		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Layer_Z_Adjust> -90.0 </Layer_Z_Adjust>
 		<Max_Speed> 0.25 </Max_Speed>
 		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
 		<Max_Thrust> 0.05 </Max_Thrust>
@@ -3606,7 +3598,7 @@
 		<Political_Faction>Underworld</Political_Faction>
 		<Squadron_Capacity>40</Squadron_Capacity>
 		<Build_Cost_Credits>6000</Build_Cost_Credits>
-		<AI_Combat_Power>2350</AI_Combat_Power>
+		<AI_Combat_Power>1960</AI_Combat_Power>
 		<Build_Time_Seconds>80</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>360</Size_Value>
@@ -3727,7 +3719,7 @@
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 		<Targeting_Priority_Set>Capital</Targeting_Priority_Set>
 
-		<Encyclopedia_Text> TEXT_HEALTH_ASCENDANCY TEXT_LENGTH_ASCENDANCY TEXT_TOOLTIP_NONE TEXT_TOOLTIP_ASCENDANCY_SD TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_ASCENDANCY TEXT_RANGE_ASCENDANCY TEXT_ARMAMENT_ASCENDANCY_ONE TEXT_ARMAMENT_ASCENDANCY_TWO TEXT_ARMAMENT_ASCENDANCY_THREE TEXT_HEALTH_ASCENDANCY TEXT_LENGTH_ASCENDANCY TEXT_TOOLTIP_NONE TEXT_TOOLTIP_ASCENDANCY_SD TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CARRIER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 42500 </Score_Cost_Credits>
 
@@ -3929,7 +3921,7 @@
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 		<Targeting_Priority_Set>Capital</Targeting_Priority_Set>
 
-		<Encyclopedia_Text> TEXT_RANGE_PELTAST TEXT_ARMAMENT_PELTAST_ONE TEXT_ARMAMENT_PELTAST_TWO TEXT_ARMAMENT_PELTAST_THREE TEXT_HEALTH_PELTAST TEXT_LENGTH_PELTAST TEXT_TOOLTIP_NONE TEXT_TOOLTIP_PELTAST TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_FIGHTERS_PELTAST TEXT_RANGE_PELTAST TEXT_ARMAMENT_PELTAST_ONE TEXT_ARMAMENT_PELTAST_TWO TEXT_ARMAMENT_PELTAST_THREE TEXT_HEALTH_PELTAST TEXT_LENGTH_PELTAST TEXT_TOOLTIP_PELTAST TEXT_TOOLTIP_BOARDABLE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 42500 </Score_Cost_Credits>
 

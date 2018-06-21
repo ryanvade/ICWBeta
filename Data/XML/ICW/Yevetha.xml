@@ -1891,7 +1891,7 @@
 		<Stealth_Capable>No</Stealth_Capable>
 		<Land_Model_Name>NI_YEVETHAPLEX.ALO</Land_Model_Name>
 
-		<Icon_Name>i_button_plex_soldier.tga</Icon_Name>
+		<Icon_Name>i_button_plex_yevetha.tga</Icon_Name>
 		<Behavior>SELECTABLE</Behavior>
 		<LandBehavior>SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
@@ -2058,7 +2058,7 @@
 		<Company_Units>Yevethan_Plex_Soldier, Yevethan_Plex_Soldier, Yevethan_Plex_Soldier </Company_Units>
 		<Company_Units> Yevethan_Plex_Soldier, Yevethan_Plex_Soldier, Yevethan_Plex_Soldier </Company_Units>
 		<Max_Squad_Size> 4 </Max_Squad_Size>
-		<Icon_Name>i_button_plex_soldier.tga</Icon_Name>
+		<Icon_Name>i_button_plex_yevetha.tga</Icon_Name>
 		<GUI_Model_Name>RI_PLEXSOLDIER.ALO</GUI_Model_Name>
 		<GUI_Offset>0 0 5</GUI_Offset>
 		<GUI_Velocity>90</GUI_Velocity>
@@ -2088,65 +2088,6 @@
 	</GroundCompany>
 
 	 <!-- Light Factory Unirs -->
-
-	<GroundVehicle Name="AT_ST_Duskhan">
-		<Variant_Of_Existing_Type> AT_ST_Walker </Variant_Of_Existing_Type>
-		<Text_ID>TEXT_UNIT_AT_ST_WALKER</Text_ID>
-		<Encyclopedia_Text>TEXT_TOOLTIP_ATST_YEVETHA</Encyclopedia_Text>
-
-
-		<Affiliation>Yevetha</Affiliation>
-		<Tactical_Health>270</Tactical_Health>
-		<Projectile_Types>Proj_ATST_Blaster_Cannon_Red</Projectile_Types>
-		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
-		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
-		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
-		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>240.0</Targeting_Max_Attack_Distance>
-		<Ranged_Target_Z_Adjust>30.0</Ranged_Target_Z_Adjust>
-		<Vehicle_Thief_Inside_Clone>Y_AT_ST_Walker_Captured</Vehicle_Thief_Inside_Clone>
-
-
-	</GroundVehicle>
-
-	<GroundVehicle Name="Y_AT_ST_Walker_Captured">
-		<Variant_Of_Existing_Type>AT_ST_Duskhan</Variant_Of_Existing_Type>
-		<Icon_Name>i_button_chewbacca_atst.tga</Icon_Name>
-		<LandBehavior> EJECT_THIEF, BARRAGE, ABILITY_COUNTDOWN,AFFECTED_BY_SHIELD,HUNT, WALK_LOCOMOTOR,TARGETING,IDLE,WEAPON,TURRET,POWERED,REVEAL,HIDE_WHEN_FOGGED,UNIT_AI,TELEKINESIS_TARGET,STUNNABLE,DAMAGE_TRACKING, SQUASH, GARRISON_UNIT</LandBehavior>
-		<!-- MUST have same abilities PLUS EJECT_THIEF -->
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<!--Oksana: commentig this out - the captured unit can only have TWO abilities, and one of them MUST be
-				"EJECT_THIEF". In addition, barrage must be the primary ability to be able to override the projectile.-->
-			<!-- <Unit_Ability>
-				<Type>HUNT</Type>
-			</Unit_Ability>-->
-			<Unit_Ability>
-				<Type>BARRAGE</Type>
-				<!-- This parameter is no longer used. Barrage radius is determined by
-					 Projectile_Max_Flight_Distance of the specific projectile for this aility -->
-				<!-- <Effective_Radius>1000.0</Effective_Radius> -->
-				<!-- Modify this projectile for blast damage and range, range of barrage mode etc -->
-				<Expiration_Seconds>10</Expiration_Seconds>
-				<Recharge_Seconds>60</Recharge_Seconds>
-				<Mod_Multiplier>FIRE_RATE_MULTIPLIER,			3.0f</Mod_Multiplier>
-				<SFXEvent_Target_Ability> Unit_Barrage_Interdictor </SFXEvent_Target_Ability>
-				<Projectile_Types_Override>AT_ST_Barrage</Projectile_Types_Override>
-				<!-- keep this the same as Targeting_Fire_Inaccuracy_Fixed_Radius_Override -->
-				<Area_Effect_Decal_Distance> 75.0 </Area_Effect_Decal_Distance>
-				<!-- keep this the same as Area_Effect_Decal_Distance -->
-				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>75</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
-				<Target_Position_Z_Offset>0</Target_Position_Z_Offset>
-			</Unit_Ability>
-			<Unit_Ability>
-				<Type>EJECT_VEHICLE_THIEF</Type>
-				<Recharge_Seconds>10</Recharge_Seconds>
-				<!-- time that the user can't eject thief, kicks in right away -->
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-	</GroundVehicle>
-
 
 	<GroundCompany Name="Yevethan_Anti_Infantry_Brigade">
 		<Text_ID>TEXT_IMPERIAL_ANTI_INFANTRY</Text_ID>
@@ -2236,7 +2177,7 @@
 		<Is_Escort>yes</Is_Escort>
 		<Ship_Class>infantry</Ship_Class>
 		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
-		<Company_Units>AT_ST_Duskhan, AT_ST_Duskhan, AT_ST_Duskhan</Company_Units>
+		<Company_Units>AT_ST_Walker, AT_ST_Walker, AT_ST_Walker</Company_Units>
 		<Max_Squad_Size> 1 </Max_Squad_Size>
 		<Icon_Name>i_button_atst.tga</Icon_Name>
 		<GUI_Model_Name>EV_AT-ST.ALO</GUI_Model_Name>
