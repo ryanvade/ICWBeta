@@ -30,9 +30,13 @@
 		)
 		/
 		7.0
-		*
-		(Variable_Target.MaxGroundbaseLevelUnnormalized - Variable_Target.GroundbaseLevelUnnormalized - Function_Is_Company_Planet.Evaluate)
 	</Needs_Groundbase_Upgrade>
+	
+	
+	<!-- Returns 0 to turn off production if slots need to be saved for a company. Returns 1 otherwise -->
+	<Needs_Build_Slots_Saved_For_Company>
+		(Variable_Target.MaxGroundbaseLevelUnnormalized - Variable_Target.GroundbaseLevelUnnormalized - Function_Is_Company_Planet.Evaluate) > 0.0
+	</Needs_Build_Slots_Saved_For_Company>
 
 	<!--
 	Bring this into line with ground base component building (since they share the infrastructure category)
@@ -123,6 +127,8 @@
 													Parameter_Only_Consider_Complete = 1.0})
 		*
 		(Function_Should_Save_For_Desirable_Structures.Evaluate == 0)
+		*
+		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Need_Light_Vehicle_Factory>
 
 	<!-- Same kind of deal as vehicle factory -->
@@ -148,6 +154,8 @@
 													Parameter_Only_Consider_Complete = 1.0})
 		*
 		(Function_Should_Save_For_Desirable_Structures.Evaluate == 0)
+		*
+		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Need_Barracks>
 
 	<!-- SCALE DOWN as we improve to the desired ratio of structures per planet
@@ -179,6 +187,8 @@
 													Parameter_Type = "P_Ground_Heavy_Vehicle_Factory",
 													Parameter_Type = "U_Ground_Vehicle_Factory",
 													Parameter_Only_Consider_Complete = 1.0})
+		*
+		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Need_Heavy_Vehicle_Factory>
 
 	<!-- Provided we're the Empire faction
@@ -212,6 +222,8 @@
 		(3 > Variable_Target.StructureCount {Parameter_Type = "E_Ground_Advanced_Vehicle_Factory",
 											Parameter_Type = "P_Ground_Advanced_Vehicle_Factory",
 											Parameter_Only_Consider_Complete = 1.0})
+		*
+		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Need_Advanced_Vehicle_Factory>
 
 	<!-- Does this planet have a starbase already? -->
@@ -256,30 +268,18 @@
 	<Needs_Mining_Facility>
 		(
 			(
-				10.0
+				20.0
 				*
-				(1.0 + Variable_Target.IncomeUnnormalized * Variable_Target.IncomeUnnormalized / 25000.0)
-				+
-				10 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility", 
-															Parameter_Type = "Rebel_Ground_Mining_Facility",
-															Parameter_Type = "U_Ground_Mining_Facility",
-															Parameter_Only_Consider_Complete = 1.0} / Variable_Self.PlanetsControlledUnnormalized))
+				(Variable_Target.IncomeUnnormalized * Variable_Target.IncomeUnnormalized / 25000.0)
 			)
 			*
-			clamp(Function_Defense_Level.Evaluate - 1, 0.1, 2.0)
-			*
-			((Variable_Target.MaxStructureSlotsUnnormalized / 2.0) > Variable_Target.StructureCount {Parameter_Type = "Empire_Ground_Mining_Facility",
-																									Parameter_Type = "Rebel_Ground_Mining_Facility",
-																									Parameter_Type = "U_Ground_Mining_Facility",
-																									Parameter_Only_Consider_Complete = 1.0})
+			clamp(Function_Defense_Level.Evaluate - 1, 0.5, 2.0)
 			*
 			Variable_Self.HasStructure {Parameter_Type = "E_Ground_Barracks",
 										Parameter_Type = "R_Ground_Barracks",
 										Parameter_Type = "P_Ground_Barracks",
 										Parameter_Type = "C_Ground_Barracks",
 										Parameter_Only_Consider_Complete = 1.0}
-			*
-			(Function_Should_Save_For_Desirable_Structures.Evaluate == 0)
 			+
 			50.0
 			*
@@ -301,17 +301,15 @@
 										Parameter_Type = "U_Ground_Mining_Facility",
 										Parameter_Only_Consider_Complete = 1.0})
 		*
-		(Variable_Target.MaxGroundbaseLevelUnnormalized - Variable_Target.GroundbaseLevelUnnormalized - Function_Is_Company_Planet.Evaluate)
+		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Needs_Mining_Facility>
 	
 	<Needs_Tradestation>
 		(
 			(
-				10.0
+				20.0
 				*
-				(1.0 + Variable_Target.IncomeUnnormalized * Variable_Target.IncomeUnnormalized / 25000.0)
-				+
-				10 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Generic_Tradestation", Parameter_Only_Consider_Complete = 1.0} / Variable_Self.PlanetsControlledUnnormalized))
+				(Variable_Target.IncomeUnnormalized * Variable_Target.IncomeUnnormalized / 25000.0)
 			)
 			*
 			clamp(Function_Defense_Level.Evaluate - 1, 0.1, 2.0)
@@ -361,6 +359,8 @@
 		(Function_Should_Save_For_Desirable_Structures.Evaluate == 0)
 		*
 		Function_Needs_Groundbase_Upgrade.Evaluate
+		*
+		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Needs_Ground_Infiltrator_Facility>
 
 	<Should_Save_For_Desirable_Structures>
@@ -402,7 +402,7 @@
 	<Need_Ground_Company>
 		(Variable_Target.StarbaseLevelUnnormalized > 1)
 		*
-		clamp(Function_Defense_Level.Evaluate, 0.0, 2.0)
+		clamp(Function_Defense_Level.Evaluate, 1.0, 2.0)
 		*
 		Function_Is_Company_Planet.Evaluate
 	</Need_Ground_Company>

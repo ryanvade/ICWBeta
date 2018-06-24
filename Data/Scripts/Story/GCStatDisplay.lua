@@ -15,6 +15,8 @@ function Definitions()
 	StoryModeEvents = {
 						Stat_Setup = Stat_Display_Setup
 					}
+					
+	setup_complete = false
 end
 
 function Stat_Display_Setup(message)
@@ -27,26 +29,27 @@ function Stat_Display_Setup(message)
 
 		DebugMessage("%s -- event is %s", tostring(Script), tostring(stat_display_event))
 		
-		liveFactionTable = CreateFactionTable(CONSTANTS.ALL_FACTIONS)
+		liveFactionTable = CreateFactionTable(CONSTANTS.ALL_FACTIONS_NOT_NEUTRAL)
+		
+		setup_complete = true
 	end
 end
 
 function Story_Mode_Service()
+	DebugMessage("%s -- Servicing script", tostring(Script))
 
-	if stat_display_event then
+	if setup_complete == true then
 		DebugMessage("%s -- Refreshing perceptions", tostring(Script))
 		stat_display_event.Clear_Dialog_Text()
 
 		for _, faction in pairs(liveFactionTable) do
-			local planet_stat = EvaluatePerception("Planet_Ownership", faction)
-			local force_stat = EvaluatePerception("Percent_Forces", faction)
-			local money_stat = EvaluatePerception("Current_Income", faction)
 			stat_display_event.Add_Dialog_Text("STAT_SEPARATOR")
 			stat_display_event.Add_Dialog_Text(CONSTANTS.ALL_FACTION_TEXTS[faction.Get_Faction_Name()])
 			stat_display_event.Add_Dialog_Text("STAT_SEPARATOR")
-			stat_display_event.Add_Dialog_Text("STAT_PLANET_COUNT", planet_stat)
-			stat_display_event.Add_Dialog_Text("STAT_FORCE_PERCENT", force_stat*100)
-			stat_display_event.Add_Dialog_Text("STAT_INCOME", money_stat)
+			stat_display_event.Add_Dialog_Text("STAT_PLANET_COUNT", EvaluatePerception("Planet_Ownership", faction))
+			stat_display_event.Add_Dialog_Text("STAT_FORCE_PERCENT", EvaluatePerception("Percent_Forces", faction))
+			stat_display_event.Add_Dialog_Text("STAT_INCOME", EvaluatePerception("Current_Income", faction))
+			DebugMessage("%s -- Faction %s, planets: %s, forces: %s, income %s", tostring(Script), faction.Get_Faction_Name(), tostring(EvaluatePerception("Planet_Ownership", faction)), tostring(EvaluatePerception("Percent_Forces", faction)), tostring(EvaluatePerception("Current_Income", faction)))
 		end
 	end
 end

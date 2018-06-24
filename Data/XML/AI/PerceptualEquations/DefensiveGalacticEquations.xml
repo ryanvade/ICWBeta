@@ -124,11 +124,11 @@
     </SpaceDefensiveValue>
 
 	<Needs_Weapon>
-		Variable_Target.StarbaseLevelUnnormalized
+		(Variable_Target.StarbaseLevelUnnormalized
 		+
 		Variable_Target.GroundbaseLevelUnnormalized
 		+
-		2.0 * Function_DefensiveValue.Evaluate
+		Function_DefensiveValue.Evaluate
 		+
 		4.0 * Function_Is_Connected_To_Enemy.Evaluate
 		+
@@ -136,7 +136,9 @@
 		+
 		Variable_Target.FriendlyForce.SpaceTotalUnnormalized / 10000.0 
 		+ 
-		Variable_Target.FriendlyForce.GroundTotalUnnormalized / 2500.0
+		Variable_Target.FriendlyForce.GroundTotalUnnormalized / 2500.0)
+		*
+		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Needs_Weapon>
 
 
@@ -148,17 +150,19 @@
 		bonus for having force here
 		-->
 	<Needs_Base_Shield>
-		2.0 * Variable_Target.GroundbaseLevelUnnormalized
+		(2.0 * Variable_Target.GroundbaseLevelUnnormalized
 		+
 		8.0 * Variable_Target.Hints.Chokepoint
 		+
-		2.0 * Function_DefensiveValue.Evaluate
+		Function_DefensiveValue.Evaluate
 		+
-		8.0 * Function_Is_Connected_To_Enemy.Evaluate
+		5.0 * Function_Is_Connected_To_Enemy.Evaluate
 		+
 		Variable_Target.FriendlyForce.GroundTotalUnnormalized / 2500.0
 		+
-		8.0 * Function_Planet_Has_Capital_Building.Evaluate
+		8.0 * Function_Planet_Has_Capital_Building.Evaluate)
+		*
+		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Needs_Base_Shield>
 
 	<!--
@@ -166,15 +170,15 @@
 	since turbolaser effectiveness isn't very dependent on other units being present.
 	-->
 	<Needs_Turbolasers>
-		2.0 * Variable_Target.GroundbaseLevelUnnormalized
+		(2.0 * Variable_Target.GroundbaseLevelUnnormalized
 		+
-		2.0 * Function_DefensiveValue.Evaluate
+		Function_DefensiveValue.Evaluate
 		+
-		8.0 * Function_Is_Connected_To_Enemy.Evaluate
+		5.0 * Function_Is_Connected_To_Enemy.Evaluate
 		+
-		8.0 * Function_Planet_Has_Capital_Building.Evaluate
-		+
-		5.0
+		8.0 * Function_Planet_Has_Capital_Building.Evaluate)
+		*
+		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Needs_Turbolasers>
 
 	<Defense_Level>
@@ -193,7 +197,6 @@
 		+ Variable_Target.HasStructure {Parameter_Type = "Visvia"}
 		+ Variable_Target.HasStructure {Parameter_Type = "Brask"}
 		+ Variable_Target.HasStructure {Parameter_Type = "NewRep_XQ"}
-		+ Variable_Target.HasStructure {Parameter_Type = "Alignment_XQ"}
 		+ Variable_Target.HasStructure {Parameter_Type = "Validusia"}
 		+ Variable_Target.HasStructure {Parameter_Type = "Empress_Station"}
 		+ Variable_Target.HasStructure {Parameter_Type = "Ground_Ion_Cannon"}
@@ -262,27 +265,27 @@
 	</Ground_Staging_Planet>
 	
 	<Friendly_Space_Unit_Raw_Total>
-		Variable_Target.FriendlyForce.SpaceTotalUnnormalized - Variable_Target.FriendlyForce.SpaceTotalUnnormalized {Parameter_Category = GameObjectCategoryType[SpaceHero]}
+		Variable_Target.FriendlyForce.SpaceTotalUnnormalized
 	</Friendly_Space_Unit_Raw_Total>
 
 	<Friendly_Global_Space_Unit_Raw_Total>
-		Variable_Self.SpaceTotalUnnormalized - Variable_Self.SpaceTotalUnnormalized {Parameter_Category = GameObjectCategoryType[SpaceHero]}
+		Variable_Self.SpaceTotalUnnormalized
 	</Friendly_Global_Space_Unit_Raw_Total>
 
 	<Friendly_Land_Unit_Raw_Total>
-		Variable_Target.FriendlyForce.GroundTotalUnnormalized - Variable_Target.FriendlyForce.GroundTotalUnnormalized {Parameter_Category = GameObjectCategoryType[LandHero]}
+		Variable_Target.FriendlyForce.GroundTotalUnnormalized
 	</Friendly_Land_Unit_Raw_Total>
 
 	<Friendly_Global_Land_Unit_Raw_Total>
-		Variable_Self.GroundTotalUnnormalized - Variable_Self.GroundTotalUnnormalized {Parameter_Category = GameObjectCategoryType[LandHero]}
+		Variable_Self.GroundTotalUnnormalized
 	</Friendly_Global_Land_Unit_Raw_Total>
 	
 	<Enemy_Global_Space_Unit_Raw_Total>
-		Game.EnemyForce.SpaceTotalUnnormalized - Game.EnemyForce.SpaceTotalUnnormalized {Parameter_Category = GameObjectCategoryType[SpaceHero]}
+		Game.EnemyForce.SpaceTotalUnnormalized
 	</Enemy_Global_Space_Unit_Raw_Total>
 
 	<Enemy_Global_Land_Unit_Raw_Total>
-		Game.EnemyForce.GroundTotalUnnormalized - Game.EnemyForce.GroundTotalUnnormalized {Parameter_Category = GameObjectCategoryType[LandHero]}
+		Game.EnemyForce.GroundTotalUnnormalized
 	</Enemy_Global_Land_Unit_Raw_Total>
 	
 </Equations>

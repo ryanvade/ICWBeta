@@ -51,7 +51,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"StructureForce",
-		"Rebel_Golan_One | Rebel_Golan_Two | Rebel_Golan_Three | Rebel_Golan_Two_Strategic | Rebel_Golan_Three_Strategic | Empire_Golan_One | Empire_Golan_Two | Empire_Golan_Three | Empire_Golan_Two_Strategic | Empire_Golan_Three_Strategic | Oto | Visvia | Brask | NewRep_XQ | Alignment_XQ | Validusia | Empress_Station = 1"
+		"Rebel_Golan_One | Rebel_Golan_Two | Rebel_Golan_Three | Rebel_Golan_Two_Strategic | Rebel_Golan_Three_Strategic | Empire_Golan_One | Empire_Golan_Two | Empire_Golan_Three | Empire_Golan_Two_Strategic | Empire_Golan_Three_Strategic | Oto | Visvia | Brask | NewRep_XQ | Validusia | Empress_Station = 1"
 	}
 	}
 

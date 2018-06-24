@@ -60,7 +60,7 @@ function Definitions()
 		"SpaceForce"	
 		,"MinimumTotalSize = 10"
 		,"MinimumTotalForce = 5000"					
-		,"SpaceHero | Frigate | Capital | Corvette | Bomber | Fighter = 100%"
+		,"SpaceHero | Frigate | Capital | Corvette | SuperCapital = 100%"
 	},
 	{
 		"GroundForce"

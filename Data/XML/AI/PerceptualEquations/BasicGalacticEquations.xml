@@ -90,31 +90,32 @@
 	</Is_Connected_To_Player>
 	
 	<Is_Company_Planet>
-		Variable_Target.Type.IsType {Parameter_Type = "Jaemus"} * 2
-		+ Variable_Target.Type.IsType {Parameter_Type = "Lianna"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Corulag"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Kuat"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Gyndine"}
+		Variable_Target.Type.IsType {Parameter_Type = "Antem"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Balmorra"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "MonCalimari"} * 2
-		+ Variable_Target.Type.IsType {Parameter_Type = "Syca"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Eriadu"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Antem"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Corellia"} * 3
-		+ Variable_Target.Type.IsType {Parameter_Type = "Denon"} * 2
-		+ Variable_Target.Type.IsType {Parameter_Type = "Coruscant"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Sluis_Van"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Fresia"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "CalSeti"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Sullust"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "NewCov"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Chardaan"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Kalarba"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Roche"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Charubah"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Brentaal"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "CalSeti"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Carida"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Chardaan"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Charubah"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Corellia"} * 3
+		+ Variable_Target.Type.IsType {Parameter_Type = "Corulag"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Coruscant"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Dathomir"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Denon"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Eriadu"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Fresia"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Gyndine"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Jaemus"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Kalarba"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Kuat"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Lianna"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "MonCalimari"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "NewCov"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Nzoth"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Roche"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Sluis_Van"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Sullust"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Syca"}
 	</Is_Company_Planet>
 	
 	<Has_Company>
@@ -144,9 +145,11 @@
 	</Planet_Ownership>
 	
 	<Percent_Forces>
-		(Game.FriendlyForce.SpaceTotalUnnormalized + Game.FriendlyForce.GroundTotalUnnormalized)
+		100.0
+		*
+		Game.FriendlyForce.SpaceTotalUnnormalized
 		/
-		(Game.FriendlyForce.SpaceTotalUnnormalized + Game.FriendlyForce.GroundTotalUnnormalized + Game.EnemyForce.SpaceTotalUnnormalized + Game.EnemyForce.GroundTotalUnnormalized)
+		(Game.FriendlyForce.SpaceTotalUnnormalized + Game.EnemyForce.SpaceTotalUnnormalized)
 	</Percent_Forces>
 	
 	<Current_Income>

@@ -52,9 +52,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"MainForce"						
-		, "Infantry | Vehicle | Air | Fighter | Bomber | Corvette | Frigate | SuperCapital | Capital = 100%"
-		,"-SpaceHero"
-		,"-LandHero"
+		, "Infantry | Vehicle | Air | Corvette | Frigate | SuperCapital | Capital = 100%"
 	}
 	}
 	RequiredCategories = { "Air | Infantry | Vehicle" }	

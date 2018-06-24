@@ -29,7 +29,8 @@ GameConstants = {
             "YEVETHA",
             "TERADOC",
             "PIRATES",
-            "HUTTS"
+            "HUTTS",
+			"CORPORATE_SECTOR"
         },
         ALL_FACTIONS = {
             "EMPIRE",
@@ -45,6 +46,20 @@ GameConstants = {
             "HARRSK",
             "NEUTRAL",
             "HOSTILE",
+            "SARLACC"
+        },
+		ALL_FACTIONS_NOT_NEUTRAL = {
+            "EMPIRE",
+            "REBEL",
+            "UNDERWORLD",
+            "PENTASTAR",
+            "YEVETHA",
+            "TERADOC",
+            "PIRATES",
+            "HUTTS",
+            "WARLORDS",
+            "CORPORATE_SECTOR",
+            "HARRSK",
             "SARLACC"
         },
         ALL_FACTION_TEXTS = {

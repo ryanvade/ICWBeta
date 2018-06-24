@@ -89,14 +89,14 @@
 	
 	<!-- Infrastructure budget. Usually evaluates to ~6 -->
 	<GenericInfrastructureBudgetAllocation>
-		3.0 
+		5.0 
 		* 
 		(2.5 - Variable_Self.MaxedStarbases - Variable_Self.MaxedGroundbases) 
 		*
-		(1.0 + 2.0 * (0.5 > (Variable_Self.StructureCount {Parameter_Type = "Rebel_Ground_Mining_Facility", 
+		(1.0 + 2.0 * (30 > (Variable_Self.StructureCount {Parameter_Type = "Rebel_Ground_Mining_Facility", 
 															Parameter_Type = "Empire_Ground_Mining_Facility", 
 															Parameter_Type = "U_Ground_Mining_Facility",
-															Parameter_Type = "Generic_Tradestation" } / Variable_Self.PlanetsControlledUnnormalized)))
+															Parameter_Type = "Generic_Tradestation" })))
 		+
 		3.0 * (Variable_Self.NumStarbaseOfLevel {Parameter_Level = 3} == 0)
 	</GenericInfrastructureBudgetAllocation>
