@@ -21,6 +21,26 @@
             <Model_Offset_Y>True</Model_Offset_Y>
             <Hidden> True </Hidden>
     </CommandBarComponent>
+	
+	<CommandBarComponent Name="b_save_fixer">
+            <Tooltip_Text>TEXT_TOOLTIP_ENABLE_AI</Tooltip_Text>
+	    <Mouse_Over_Texture_Name>cruel_button_over.tga</Mouse_Over_Texture_Name>
+            <Type>Button</Type>
+            <Blank_Texture_Name>cruel_button.tga</Blank_Texture_Name>
+            <Icon_Texture_Name>cruel_button.tga</Icon_Texture_Name>
+	    <Disabled_Texture_Name>cruel_button.tga</Disabled_Texture_Name>
+	    <Mouse_Over_SFX>GUI_Highlight_Mouse_Over</Mouse_Over_SFX>
+	    <Selected_Texture_Name>cruel_button_pressed.tga</Selected_Texture_Name>
+            <Click_SFX>GUI_Button_Press_2_SFX</Click_SFX>
+            <Selected_Alpha>True</Selected_Alpha>
+            <Click_Shift>True</Click_Shift>
+            <Scale>0.6</Scale>
+              <Tab>True</Tab>
+			  <Toggle>True</Toggle>
+            <!-- <Toggle>True</Toggle> -->
+            <Disabled_Darken>True</Disabled_Darken>
+		<Group>AIType</Group>
+    </CommandBarComponent>
 
 	    <CommandBarComponent Name="b_space_filter01">
             <Tooltip_Text>TEXT_TOOLTIP_FILTER_SMALL</Tooltip_Text>
@@ -1065,7 +1085,7 @@
 
     <CommandBarComponent Name="radar_galactic">
             <Type>Button</Type>
-            <Size>55 55</Size>
+            <Size>43 55</Size>
     </CommandBarComponent>
 
     <CommandBarComponent Name="Text_Tech_Level">
@@ -6735,7 +6755,7 @@
 
     <CommandBarComponent Name="g_planet_name">
             <Type>TextButton</Type>
-            <Scale>1.0</Scale>
+            <Scale>0.8</Scale>
             <Font_Name>EmpireAtWar-Bold</Font_Name>
             <Alternate_Font_Name>EmpireAtWar-Medium, EmpireAtWar-Medium, EmpireAtWar-Bold</Alternate_Font_Name>
             <Font_Point_Size>7</Font_Point_Size>
@@ -6768,7 +6788,7 @@
 
     <CommandBarComponent Name="g_planet_value">
             <Type>TextButton</Type>
-            <Scale>1.0</Scale>
+            <Scale>0.8</Scale>
             <Font_Name>EmpireAtWar-Medium</Font_Name>
             <Font_Point_Size>6</Font_Point_Size>
             <Text_Offset>0 0</Text_Offset>
@@ -6800,7 +6820,7 @@
             <Bar_Overlay_Name>i_bar_control_small0.tga i_bar_control_small1.tga i_bar_control_small2.tga i_bar_control_small3.tga i_bar_control_small4.tga</Bar_Overlay_Name>
             <No_Shell>True</No_Shell>
             <Base_Layer>0</Base_Layer>
-            <Scale>1.0</Scale>
+            <Scale>0.8</Scale>
             <Default_Offset>72 -26</Default_Offset>
     </CommandBarComponent>
 
@@ -6808,7 +6828,7 @@
             <Type>Button</Type>
             <Icon_Texture_Name>i_bar_icons_land.tga</Icon_Texture_Name>
             <No_Shell>True</No_Shell>
-            <Scale>1.0</Scale>
+            <Scale>0.8</Scale>
             <Default_Offset>32 0</Default_Offset>
             <Base_Layer>0</Base_Layer>
             <Tooltip_Text>TEXT_TOOLTIP_GROUND_LEVEL</Tooltip_Text>
@@ -6819,7 +6839,7 @@
             <Type>Button</Type>
             <Icon_Alternate_Texture_Name>i_bar_icons_land.tga i_bar_icons_land.tga</Icon_Alternate_Texture_Name>
             <No_Shell>True</No_Shell>
-            <Scale>1.0</Scale>
+            <Scale>0.8</Scale>
             <Base_Layer>0</Base_Layer>
             <Tooltip_Text>TEXT_TOOLTIP_GROUND_LEVEL</Tooltip_Text>
             <Default_Offset>34 -26</Default_Offset>
@@ -6831,7 +6851,7 @@
             <Bar_Overlay_Name>i_bar_control_small0.tga i_bar_control_small1.tga i_bar_control_small2.tga i_bar_control_small3.tga i_bar_control_small4.tga</Bar_Overlay_Name>
             <No_Shell>True</No_Shell>
             <Base_Layer>0</Base_Layer>
-            <Scale>1.0</Scale>
+            <Scale>0.8</Scale>
             <Default_Offset>72 -13</Default_Offset>
     </CommandBarComponent>
 
@@ -6849,7 +6869,7 @@
             <Type>Button</Type>
             <Icon_Alternate_Texture_Name>i_bar_icons_space.tga i_bar_icons_space.tga</Icon_Alternate_Texture_Name>
             <No_Shell>True</No_Shell>
-            <Scale>1.0</Scale>
+            <Scale>0.8</Scale>
             <Base_Layer>0</Base_Layer>
             <Tooltip_Text>TEXT_TOOLTIP_SPACE_LEVEL</Tooltip_Text>
             <Default_Offset>34 -13</Default_Offset>

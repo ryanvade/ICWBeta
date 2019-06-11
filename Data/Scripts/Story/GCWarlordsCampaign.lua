@@ -36,6 +36,7 @@ function Definitions()
     Maldrood_Kashyyyk = Kashyyyk_Maldrood,
     Maldrood_Commenor = Commenor_Maldrood,
     Eriadu_Elrood = Elrood_Eriadu,
+	Zsinj_Centares = Centares_Zsinj,
     Set_Subera_Isard = SubEra_Change,
     Talks_End = Pentastar_Talks
   }
@@ -52,7 +53,6 @@ function Find_Faction(message)
 	local p_pentastar = Find_Player("Pentastar")
 	local p_zsinj = Find_Player("Pirates")
 	local p_maldrood = Find_Player("Teradoc")
-	local p_yevetha = Find_Player("Yevetha")
 
 	if p_newrep.Is_Human() then
 		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
@@ -68,8 +68,6 @@ function Find_Faction(message)
 		Story_Event("ENABLE_BRANCH_ZSINJ_FLAG")
 	elseif p_maldrood.Is_Human() then
 		Story_Event("ENABLE_BRANCH_TERADOC_FLAG")
-	elseif p_yevetha.Is_Human() then
-		Story_Event("ENABLE_BRANCH_YEVETHA_FLAG")
 	end
 
   end
@@ -156,11 +154,31 @@ function Elrood_Eriadu(message)
 
 end
 
+function Centares_Zsinj(message)
+  if message == OnEnter then
+
+   p_zsinj = Find_Player("Pirates")
+   start_planet = FindPlanet("Centares")
+
+
+    if start_planet.Get_Owner() == Find_Player("Pirates") then
+		if p_zsinj.Is_Human() then
+			Story_Event("SELIT_JOINS_SPEECH")
+		end
+     	spawn_list_selit = { "Selit_Team"}
+     	SpawnList(spawn_list_selit, start_planet, p_zsinj,true,false)
+      --end
+    end
+
+
+  end
+end
+
 function SubEra_Change(message)
   if message == OnEnter then
 
 	p_empire = Find_Player("Empire")
-	p_harrsk = Find_Player("Harrsk")
+	p_harrsk = Find_Player("Warlords")
 
 	start_planet = FindPlanet("Coruscant")
 
@@ -182,7 +200,7 @@ function SubEra_Change(message)
     checkPestage.Despawn()
   end
 
-  checkHarrsk = Find_First_Object("Shockwave_Star_Destroyer")
+  checkHarrsk = Find_First_Object("Whirlwind_Star_Destroyer")
   if TestValid(checkHarrsk) then
     checkHarrsk.Despawn()
   end
@@ -200,7 +218,7 @@ function SubEra_Change(message)
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
 
-      spawn_list = { "Shockwave_Star_Destroyer" }
+      spawn_list = { "Whirlwind_Star_Destroyer" }
       HarrskForces = SpawnList(spawn_list, start_planet, p_harrsk, false, false)
     end
 

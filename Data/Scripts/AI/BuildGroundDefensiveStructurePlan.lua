@@ -51,7 +51,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"StructureForce",
-		"E_Ground_Base_Shield | R_Ground_Base_Shield | Empire_Ground_Shutter_Shield | Rebel_Ground_Shutter_Shield | E_Galactic_Turbolaser_Tower_Defenses | P_Galactic_Turbolaser_Tower_Defenses | R_Galactic_Turbolaser_Tower_Defenses | P_Ground_Base_Shield | U_Ground_Base_Shield | U_Galactic_Turbolaser_Tower_Defenses = 1"
+		"E_Ground_Base_Shield | R_Ground_Base_Shield | Empire_Ground_Shutter_Shield | Rebel_Ground_Shutter_Shield | E_Galactic_Turbolaser_Tower_Defenses | C_Galactic_Turbolaser_Tower_Defenses | P_Galactic_Turbolaser_Tower_Defenses | R_Galactic_Turbolaser_Tower_Defenses | P_Ground_Base_Shield | U_Ground_Base_Shield | U_Galactic_Turbolaser_Tower_Defenses = 1"
 	}
 	}
 

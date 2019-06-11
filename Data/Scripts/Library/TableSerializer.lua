@@ -20,6 +20,10 @@
 
 
 
+function Deserialize(str)
+  return loadstring(str)()
+end
+
 function Serialize(tab, nested)
   local result = ""
   if nested then

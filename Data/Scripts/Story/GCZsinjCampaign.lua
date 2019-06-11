@@ -39,6 +39,7 @@ function Definitions()
 	Spawn_Hapans = Get_Hapes,
     Maldrood_Antem = Antem_Maldrood,
 	Maldrood_Commenor = Commenor_Maldrood,
+	Zsinj_Centares = Centares_Zsinj,
   }
 
 end
@@ -53,7 +54,7 @@ function Find_Faction(message)
      p_pentastar = Find_Player("Pentastar")
      p_zsinj = Find_Player("Pirates")
      p_maldrood = Find_Player("Teradoc")
-     p_yevetha = Find_Player("Yevetha")
+	 p_csa = Find_Player("Corporate_Sector")
 
     if p_newrep.Is_Human() then
       Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
@@ -69,8 +70,8 @@ function Find_Faction(message)
       Story_Event("ENABLE_BRANCH_ZSINJ_FLAG")
     elseif p_maldrood.Is_Human() then
       Story_Event("ENABLE_BRANCH_TERADOC_FLAG")
-    elseif p_yevetha.Is_Human() then
-      Story_Event("ENABLE_BRANCH_YEVETHA_FLAG")
+	elseif p_csa.Is_Human() then
+      Story_Event("ENABLE_BRANCH_CSA_FLAG")
     end
   end
 end
@@ -102,7 +103,7 @@ function On_Zsinj_Death(message)
 --			Story_Event("CORPORATE_EMERGE_Etti")
       ChangePlanetOwnerAndRetreat(start_planet, p_corporate)
 
-		 spawn_list = { "Lucrehulk", "Lucrehulk" }
+		 spawn_list = { "Generic_Lucrehulk", "Generic_Lucrehulk" }
 
 		 ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, true, false)
     end
@@ -115,7 +116,7 @@ function On_Zsinj_Death(message)
 --			Story_Event("CORPORATE_EMERGE_Ession")
       ChangePlanetOwnerAndRetreat(start_planet, p_corporate)
 
-       spawn_list = { "Lucrehulk", "Lucrehulk" }
+       spawn_list = { "Generic_Lucrehulk", "Generic_Lucrehulk" }
        ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, true, false)
     end
 	end
@@ -126,7 +127,7 @@ function On_Zsinj_Death(message)
 --			Story_Event("CORPORATE_EMERGE_Bonadan")
       ChangePlanetOwnerAndRetreat(start_planet, p_corporate)
 
-        spawn_list = { "Lucrehulk", "Lucrehulk" }
+        spawn_list = { "Generic_Lucrehulk", "Generic_Lucrehulk" }
         ImperialForces = SpawnList(spawn_list, start_planet, p_corporate, true, false)
     end
 	end
@@ -239,6 +240,26 @@ function Antem_Maldrood(message)
     end
 
   elseif message == OnUpdate then
+
+  end
+end
+
+function Centares_Zsinj(message)
+  if message == OnEnter then
+
+   p_zsinj = Find_Player("Pirates")
+   start_planet = FindPlanet("Centares")
+
+
+    if start_planet.Get_Owner() == Find_Player("Pirates") then
+		if p_zsinj.Is_Human() then
+			Story_Event("SELIT_JOINS_SPEECH")
+		end
+     	spawn_list_selit = { "Selit_Team"}
+     	SpawnList(spawn_list_selit, start_planet, p_zsinj,true,false)
+      --end
+    end
+
 
   end
 end

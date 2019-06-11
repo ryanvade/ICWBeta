@@ -60,6 +60,7 @@
 		<Affiliation>Rebel</Affiliation>
 		<Tech_Level>0</Tech_Level>
 		<Prev_Level_Base>NR_Star_Base_2</Prev_Level_Base>
+		<Next_Level_Base>NR_Star_Base_4</Next_Level_Base>
 
 	<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
 		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
@@ -73,6 +74,41 @@
 
 		<Starting_Spawned_Units_Tech_0>Skirmish_Alliance_Assault_Frigate, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>Skirmish_Alliance_Assault_Frigate, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Tactical_Buildable_Objects_Campaign> 
+			Rebel,
+				RS_Enhanced_Shielding_L1_Upgrade,
+				RS_Enhanced_Shielding_L2_Upgrade,
+				RS_Improved_Weapons_L1_Upgrade,
+				RS_Improved_Weapons_L2_Upgrade,
+				RS_Reinforced_Armor_L1_Upgrade,
+				RS_Improved_Defenses_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+
+	</StarBase>
+	
+		<StarBase Name="NR_Star_Base_4">
+
+		<Variant_Of_Existing_Type>Generic_Star_Base_4</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Prev_Level_Base>NR_Star_Base_3</Prev_Level_Base>
+
+	<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_CR90, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_CR90, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_Alliance_Assault_Frigate, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Alliance_Assault_Frigate, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		
+		<Starting_Spawned_Units_Tech_0>MC80B, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>MC80B, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		<Tactical_Buildable_Objects_Campaign> 
 			Rebel,
@@ -143,6 +179,8 @@
 		<Variant_Of_Existing_Type>Generic_Star_Base_3</Variant_Of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
 		<Prev_Level_Base>Remnant_Star_Base_2</Prev_Level_Base>
+			<Next_Level_Base>Remnant_Star_Base_4</Next_Level_Base>
+
 
 		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
@@ -159,6 +197,45 @@
 	
 		<Starting_Spawned_Units_Tech_0>Skirmish_Dreadnaught_Empire, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>Skirmish_Dreadnaught_Empire, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+
+		<Tactical_Buildable_Objects_Campaign>
+			Empire,
+				ES_Enhanced_Reactors_L1_Upgrade,
+				ES_Enhanced_Reactors_L2_Upgrade,
+				ES_Reinforced_Armor_L1_Upgrade,
+				ES_Reinforced_Armor_L2_Upgrade,
+				ES_Improved_Weapons_L1_Upgrade,
+				ES_Improved_Weapons_L2_Upgrade,
+				ES_Improved_Defenses_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+
+	</StarBase>
+	
+	<StarBase Name="Remnant_Star_Base_4">
+
+		<Variant_Of_Existing_Type>Generic_Star_Base_4</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Prev_Level_Base>Remnant_Star_Base_3</Prev_Level_Base>
+
+		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_Lancer_Frigate, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Lancer_Frigate, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_Carrack_Cruiser, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Carrack_Cruiser, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+	
+		<Starting_Spawned_Units_Tech_0>Skirmish_Dreadnaught_Empire, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Dreadnaught_Empire, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->	
+
+		<Starting_Spawned_Units_Tech_0>Generic_Star_Destroyer_Two, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Generic_Star_Destroyer_Two, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 
 		<Tactical_Buildable_Objects_Campaign>
@@ -293,6 +370,8 @@
 				RS_Ion_Cannon_Use_Upgrade,
 				RC_Level_Two_Tech_Upgrade,
 				RC_Level_Three_Tech_Upgrade,
+				RC_Level_Four_Tech_Upgrade,
+				RC_Level_Five_Tech_Upgrade,
 				RS_Enhanced_Shielding_L1_Upgrade,
 				RS_Enhanced_Shielding_L2_Upgrade,
 				RS_Enhanced_Shielding_L3_Upgrade,
@@ -541,6 +620,8 @@
 				Skirmish_World_Devastator,
 				EC_Level_Two_Tech_Upgrade,
 				EC_Level_Three_Tech_Upgrade,
+				EC_Level_Four_Tech_Upgrade,
+				EC_Level_Five_Tech_Upgrade,
 				ES_Enhanced_Reactors_L1_Upgrade,
 				ES_Enhanced_Reactors_L2_Upgrade,
 				ES_Enhanced_Reactors_L3_Upgrade,

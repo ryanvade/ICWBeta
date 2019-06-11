@@ -1,6 +1,43 @@
 <?xml version="1.0" ?>
 <Story>
 
+<Event Name="Generic_Event_Template">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>GENERIC_EVENT</Event_Param2>
+		<Reward_Type></Reward_Type>
+		<Reward_Param1></Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Reward_Param3></Reward_Param3>
+		<Reward_Param4></Reward_Param4>
+		<Reward_Param5></Reward_Param5>
+		<Reward_Param6></Reward_Param6>
+		<Reward_Param7></Reward_Param7>
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9></Reward_Param9>
+		<Reward_Param10></Reward_Param10>
+		<Reward_Param11></Reward_Param11>
+		<Reward_Param12></Reward_Param12>
+		<Reward_Param13></Reward_Param13>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+<Event Name="Buildable_Unit_Template">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+	<Event_Param2>BUILDABLE_UNIT</Event_Param2>
+	<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+	<Reward_Param1></Reward_Param1>
+	<Reward_Param2></Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Lock_Unit_Template">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+	<Event_Param2>LOCK_UNIT</Event_Param2>
+	<Reward_Type>LOCK_UNIT</Reward_Type>
+	<Reward_Param1></Reward_Param1>
+	<Perpetual>true</Perpetual>
+</Event>
+
   <!-- ================================================================= -->
   <!-- ====================== BEGIN FILTER EVENTS ====================== -->
   <!-- ================================================================= -->
@@ -192,62 +229,7 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
-	<Event Name="Zoom_Into_DUMMY_SARLACC">
-		<Event_Type>STORY_SELECT_PLANET</Event_Type>
-		<Event_Param1>Dummy_Sarlacc</Event_Param1>
-		<Reward_Type>TRIGGER_AI</Reward_Type>
-		<Reward_Param1>ZOOMED_INTO_DUMMY_SARLACC</Reward_Param1>
-		<Reward_Param2></Reward_Param2>
-		<Perpetual>true</Perpetual>
-	</Event>
-	<Event Name="Zoom_Into_DUMMY_EMPIRE">
-		<Event_Type>STORY_SELECT_PLANET</Event_Type>
-		<Event_Param1>Dummy_Empire</Event_Param1>
-		<Reward_Type>TRIGGER_AI</Reward_Type>
-		<Reward_Param1>ZOOMED_INTO_DUMMY_EMPIRE</Reward_Param1>
-		<Reward_Param2></Reward_Param2>
-		<Perpetual>true</Perpetual>
-	</Event>
-	<Event Name="Zoom_Into_DUMMY_PENTASTAR">
-		<Event_Type>STORY_SELECT_PLANET</Event_Type>
-		<Event_Param1>Dummy_Pentastar</Event_Param1>
-		<Reward_Type>TRIGGER_AI</Reward_Type>
-		<Reward_Param1>ZOOMED_INTO_DUMMY_PENTASTAR</Reward_Param1>
-		<Reward_Param2></Reward_Param2>
-		<Perpetual>true</Perpetual>
-	</Event>
-	<Event Name="Zoom_Into_DUMMY_REBEL">
-		<Event_Type>STORY_SELECT_PLANET</Event_Type>
-		<Event_Param1>Dummy_Rebel</Event_Param1>
-		<Reward_Type>TRIGGER_AI</Reward_Type>
-		<Reward_Param1>ZOOMED_INTO_DUMMY_REBEL</Reward_Param1>
-		<Reward_Param2></Reward_Param2>
-		<Perpetual>true</Perpetual>
-	</Event>
-	<Event Name="Zoom_Into_DUMMY_EOTH">
-		<Event_Type>STORY_SELECT_PLANET</Event_Type>
-		<Event_Param1>Dummy_EotH</Event_Param1>
-		<Reward_Type>TRIGGER_AI</Reward_Type>
-		<Reward_Param1>ZOOMED_INTO_DUMMY_EOTH</Reward_Param1>
-		<Reward_Param2></Reward_Param2>
-		<Perpetual>true</Perpetual>
-	</Event>
-	<Event Name="Zoom_Into_DUMMY_PIRATES">
-		<Event_Type>STORY_SELECT_PLANET</Event_Type>
-		<Event_Param1>Dummy_Pirates</Event_Param1>
-		<Reward_Type>TRIGGER_AI</Reward_Type>
-		<Reward_Param1>ZOOMED_INTO_DUMMY_PIRATES</Reward_Param1>
-		<Reward_Param2></Reward_Param2>
-		<Perpetual>true</Perpetual>
-	</Event>
-	<Event Name="Zoom_Into_DUMMY_YEVETHA">
-		<Event_Type>STORY_SELECT_PLANET</Event_Type>
-		<Event_Param1>Dummy_Yevetha</Event_Param1>
-		<Reward_Type>TRIGGER_AI</Reward_Type>
-		<Reward_Param1>ZOOMED_INTO_DUMMY_YEVETHA</Reward_Param1>
-		<Reward_Param2></Reward_Param2>
-		<Perpetual>true</Perpetual>
-	</Event>
+
 
 	<!-- PLANETS -->
 
@@ -291,11 +273,59 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_AGOMAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Agomar</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_AGOMAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_ALDERAAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Alderaan</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ALDERAAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_ALSAKAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Alsakan</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ALSAKAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_ALZOC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Alzoc</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ALZOC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_AMRAC">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Amrac</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_AMRAC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_ANAXES">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Anaxes</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ANAXES</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_ANDO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Ando</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ANDO</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -312,6 +342,14 @@
 		<Event_Param1>AnxMinor</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_ANXMINOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_ATCHORB">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Atchorb</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ATCHORB</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -339,6 +377,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_BALAMAK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Balamak</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_BALAMAK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_BALMORRA">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Balmorra</Event_Param1>
@@ -363,11 +409,51 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_BARAB">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Barab</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_BARAB</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_BARLOK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Barlok</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_BARLOK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_BASILISK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Basilisk</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_BASILISK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_BASTION">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Bastion</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_BASTION</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_BELDERONE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Belderone</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_BELDERONE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_BELGAROTH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Belgaroth</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_BELGAROTH</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -392,6 +478,14 @@
 		<Event_Param1>Bespin</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_BESPIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_BESTINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Bestine</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_BESTINE</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -427,6 +521,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_BOMIS_KOORI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Bomis_Koori</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_BOMIS_KOORI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_BONADAN">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Bonadan</Event_Param1>
@@ -459,6 +561,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_BOZPITY">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BozPity</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_BOZPITY</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_BPFASSH">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Bpfassh</Event_Param1>
@@ -483,6 +593,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_CAAMAS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Caamas</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_CAAMAS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_CALSETI">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>CalSeti</Event_Param1>
@@ -504,6 +622,30 @@
 		<Event_Param1>Carida</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_CARIDA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_CASTELL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Castell</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_CASTELL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_CATO_NEIMOIDIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Cato_Neimoidia</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_CATO_NEIMOIDIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_CATTAMASCAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Cattamascar</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_CATTAMASCAR</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -536,6 +678,14 @@
 		<Event_Param1>Centares</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_CENTARES</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_CESTUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Cestus</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_CESTUS</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -603,11 +753,27 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_CHRISTOPHSIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Christophsis</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_CHRISTOPHSIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_CHRONDRE">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Chrondre</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_CHRONDRE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_CIRCUMTORE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Circumtore</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_CIRCUMTORE</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -664,6 +830,14 @@
 		<Event_Param1>Commenor</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_COMMENOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_CONCORD">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Concord</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_CONCORD</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -731,6 +905,22 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_CSILLA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Csilla</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_CSILLA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_CULARIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Cularin</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_CULARIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_DA_SOOCHAV">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Da_SoochaV</Event_Param1>
@@ -771,6 +961,22 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_DEKO_NEIMOIDIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Deko_Neimoidia</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_DEKO_NEIMOIDIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_DELACRIX">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Delacrix</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_DELACRIX</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_DENON">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Denon</Event_Param1>
@@ -795,6 +1001,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_DEVARON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Devaron</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_DEVARON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_DOLOMAR">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Dolomar</Event_Param1>
@@ -808,6 +1022,14 @@
 		<Event_Param1>Doornik</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_DOORNIK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_DROMUND">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Dromund</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_DROMUND</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -859,11 +1081,35 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_EMBERLENE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Emberlene</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_EMBERLENE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_EMMER">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Emmer</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_EMMER</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_EMPRESS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Empress</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_EMPRESS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_ENARC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Enarc</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ENARC</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -947,6 +1193,22 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_FLORRUM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Florrum</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_FLORRUM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_FOEROST">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Foerost</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_FOEROST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_FONDOR">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Fondor</Event_Param1>
@@ -982,6 +1244,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_PAMMANT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Pammant</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_PAMMANT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_PANTOLOMIN">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Pantolomin</Event_Param1>
@@ -995,6 +1265,14 @@
 		<Event_Param1>Pardron</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_PARDRON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_PEREGRINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Peregrine</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_PEREGRINE</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1030,6 +1308,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_POLIS_MASSA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Polis_Maasa</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_POLIS_MASSA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_POLNEYE">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Polneye</Event_Param1>
@@ -1043,6 +1329,14 @@
 		<Event_Param1>PorusVida</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_PORUSVIDA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_PRAESITLYN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Praesitlyn</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_PRAESITLYN</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1062,6 +1356,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_QIILURA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Qiilura</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_QIILURA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_QRETU">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Qretu</Event_Param1>
@@ -1070,11 +1372,51 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_QUELL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Quell</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_QUELL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_QUETHOLD">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Quethold</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_QUETHOLD</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_RAXUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Raxus</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_RAXUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_RAXUS_SECOND">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Raxus_Second</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_RAXUS_SECOND</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_RENDILI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Rendili</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_RENDILI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_RHEN_VAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Rhen_Var</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_RHEN_VAR</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1118,6 +1460,30 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_ROTHANA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Rothana</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ROTHANA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_ROXULI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Roxuli</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ROXULI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_RUUSAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Ruusan</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_RUUSAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_RYLOTH">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Ryloth</Event_Param1>
@@ -1142,6 +1508,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_SAFFALORE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Saffalore</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_SAFFALORE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_SAIJO">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Saijo</Event_Param1>
@@ -1150,11 +1524,27 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_SALEUCAMI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Saleucami</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_SALEUCAMI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_SANRAFSIX">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Sanrafsix</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_SANRAFSIX</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_SARAPIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Sarapin</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_SARAPIN</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1171,6 +1561,14 @@
 		<Event_Param1>Scarl</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_SCARL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_SCIPIO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Scipio</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_SCIPIO</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1206,6 +1604,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_SLEHEYRON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Sleheyron</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_SLEYEHRON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_SLUIS_VAN">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Sluis_Van</Event_Param1>
@@ -1227,6 +1633,14 @@
 		<Event_Param1>Svivren</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_SVIVREN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_SY_MYRTH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Sy_Myrth</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_SY_MYRTH</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1294,11 +1708,27 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_TELTI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Telti</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_TELTI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_TEREPHON">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Terephon</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_TEREPHON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_TETH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Teth</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_TETH</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1318,6 +1748,22 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_THOMORK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Thomork</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_THOMORK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_THULE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Thule</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_THULE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_THYFERRA">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Thyferra</Event_Param1>
@@ -1326,11 +1772,27 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_TIBRIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Tibrin</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_TIBRIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_TOGORIA">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Togoria</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_TOGORIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_TOYDARIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Toydaria</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_TOYDARIA</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1366,6 +1828,22 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_TYNNA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Tynna</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_TYNNA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_UBRIKKIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Ubrikkia</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_UBRIKKIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_UKIO">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Ukio</Event_Param1>
@@ -1374,11 +1852,35 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_ULICIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Ulicia</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ULICIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_UMBARA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Umbara</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_UMBARA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_UTAPAU">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Utapau</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_UTAPAU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_VASSEK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Vassek</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_VASSEK</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1398,11 +1900,27 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_VORPAYA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Vorpaya</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_VORPAYA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_VROS">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Vros</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_VROS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_VULPTER">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Vulpter</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_VULPTER</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1462,6 +1980,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_YINCHORR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Yinchorr</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_YINCHORR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_YLESIA">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Ylesia</Event_Param1>
@@ -1470,11 +1996,11 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
-	<Event Name="Zoom_Into_YINCHORR">
+	<Event Name="Zoom_Into_ZANBAR">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
-		<Event_Param1>Yinchorr</Event_Param1>
+		<Event_Param1>Zanbar</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
-		<Reward_Param1>ZOOMED_INTO_YINCHORR</Reward_Param1>
+		<Reward_Param1>ZOOMED_INTO_ZANBAR</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1505,6 +2031,22 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_GALIDRAAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Galidraan</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_GALIDRAAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_GAMORR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Gamorr</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_GAMORR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_GAROS_IV">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Garos_IV</Event_Param1>
@@ -1526,6 +2068,14 @@
 		<Event_Param1>Generis</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_GENERIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_GEONOSIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Geonosis</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_GEONOSIS</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1566,6 +2116,14 @@
 		<Event_Param1>Gravlex_Med</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_GRAVLEX_MED</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_GRHO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Grho</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_GRHO</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1641,6 +2199,22 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_HUMBARINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Humbarine</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_HUMBARINE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_HYPORI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Hypori</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_HYPORI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_ILC905">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>ILC905</Event_Param1>
@@ -1670,6 +2244,14 @@
 		<Event_Param1>Ithor</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_ITHOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_JABIIM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Jabiim</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_JABIIM</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1713,6 +2295,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_KAIKIELIUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Kaikielius</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_KAIKIELIUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_KALARBA">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Kalarba</Event_Param1>
@@ -1721,11 +2311,35 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_KALEE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Kalee</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_KALEE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_KALIST">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Kalist</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_KALIST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_KALLA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Kalla</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_KALLA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_KAMINO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Kamino</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_KAMINO</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1785,6 +2399,30 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_KLATOOINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Klatooine</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_KLATOOINE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_KOORIVA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Kooriva</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_KOORIVA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_KORDA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Korda</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_KORDA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_KORRIBAN">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Korriban</Event_Param1>
@@ -1801,11 +2439,27 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_KRANT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Krant</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_KRANT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_KUAT">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Kuat</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_KUAT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_KWENN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Kwenn</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_KWENN</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1841,11 +2495,27 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_LWHEKK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Lwhekk</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_LWHEKK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_M293">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>M293</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_M293</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_MALASTARE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Malastare</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_MALASTARE</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1873,6 +2543,22 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_MARYO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Maryo</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_MARYO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_MECHIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Mechis</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_MECHIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_METALORN">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Metalorn</Event_Param1>
@@ -1886,6 +2572,22 @@
 		<Event_Param1>Metellos</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_METELLOS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_MIMBAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Mimban</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_MIMBAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_MINNTOOINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Minntooine</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_MINNTOOINE</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -1945,6 +2647,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_MURKHANA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Murkhana</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_MURKHANA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_MUSTAFAR">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Mustafar</Event_Param1>
@@ -1977,11 +2687,51 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_MYTUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Mytus</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_MYTUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_NABOO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Naboo</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_NABOO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_NALHUTTA">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>NalHutta</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_NALHUTTA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_NARHAASKA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NarHaaska</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_NARHAASKA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_NARSHADDAA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NarShaddaa</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_NARSHADDAA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_NELVAAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Nelvaan</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_NELVAAN</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -2006,6 +2756,22 @@
 		<Event_Param1>NewCov</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_NEWCOV</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_NEWPLYMPTO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NewPlympto</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_NEWPLYMPTO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_NIMBAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Nimban</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_NIMBAN</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
@@ -2081,6 +2847,14 @@
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>
+	<Event Name="Zoom_Into_ORDO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Ordo</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ORDO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
 	<Event Name="Zoom_Into_ORINDA">
 		<Event_Type>STORY_SELECT_PLANET</Event_Type>
 		<Event_Param1>Orinda</Event_Param1>
@@ -2102,6 +2876,22 @@
 		<Event_Param1>Orocco</Event_Param1>
 		<Reward_Type>TRIGGER_AI</Reward_Type>
 		<Reward_Param1>ZOOMED_INTO_OROCCO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_ORRON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Orron</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_ORRON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Zoom_Into_OSLUMPEX">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>Oslumpex</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>ZOOMED_INTO_OSLUMPEX</Reward_Param1>
 		<Reward_Param2></Reward_Param2>
 		<Perpetual>true</Perpetual>
 	</Event>

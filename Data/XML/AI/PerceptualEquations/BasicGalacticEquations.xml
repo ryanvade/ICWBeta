@@ -78,13 +78,9 @@
 		+
 		Variable_Target.IsConnectedTo {Parameter_Faction = "Teradoc", Parameter_Attenuator = 0.0}
 		+
-		Variable_Target.IsConnectedTo {Parameter_Faction = "Harrsk", Parameter_Attenuator = 0.0}
-		+
 		Variable_Target.IsConnectedTo {Parameter_Faction = "Hutt_Cartels", Parameter_Attenuator = 0.0}
 		+
 		Variable_Target.IsConnectedTo {Parameter_Faction = "SsiRuuvi_Imperium", Parameter_Attenuator = 0.0}
-		+
-		Variable_Target.IsConnectedTo {Parameter_Faction = "Yevetha", Parameter_Attenuator = 0.0}
 		+
 		Variable_Target.IsConnectedTo {Parameter_Faction = "Corporate_Sector", Parameter_Attenuator = 0.0}) > 0.0
 	</Is_Connected_To_Player>
@@ -137,6 +133,7 @@
 									,Parameter_Type = "Yutrane_Trackata_HQ"
 									,Parameter_Type = "Olanji_Charubah_HQ"
 									,Parameter_Type = "TaggeCo_HQ"
+									,Parameter_Type = "Bothawui_HQ"
 									,Parameter_Type = "Aratech_HQ"}
 	</Has_Company>
 	
@@ -161,5 +158,9 @@
 		+ Variable_Target.HasStructure {Parameter_Type = "Ground_Empire_Hypervelocity_Gun"}
 		+ Variable_Target.HasStructure {Parameter_Type = "Ground_Pentastar_Hypervelocity_Gun"}
 	</Has_Planetary_Weapon>
+	
+	<MaxGroundbaseLevel>
+		Variable_Target.MaxStructureSlotsUnnormalized
+	</MaxGroundbaseLevel>
 	
 </Equations>

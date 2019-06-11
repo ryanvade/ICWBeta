@@ -90,8 +90,8 @@ end
 function RegisterCaptureEvent(name, event, reward)
   StoryEventManager:RegisterEvent(
     Event(name):
-    WithEventType(event):
-    WithRewardType(reward):
+    When(event):
+    Do(reward):
     Create())
 end
 

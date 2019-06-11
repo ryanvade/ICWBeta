@@ -47,12 +47,12 @@ ScriptPoolCount = 4
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 
-	Category = "Build_Initial_Groundbase_Only | Build_Base_Component_Barracks"
+	Category = "Build_Base_Component_Barracks"
 	IgnoreTarget = true
 	TaskForce = {
 	{
 		"BaseForce",
-		"E_Ground_Barracks | R_Ground_Barracks | U_Ground_Barracks | P_Ground_Barracks | Hapan_Ground_Barracks = 1"
+		"E_Ground_Barracks | A_Ground_Barracks | T_Ground_Barracks | Z_Ground_Barracks | C_Ground_Barracks | R_Ground_Barracks | U_Ground_Barracks | P_Ground_Barracks | Hapan_Ground_Barracks = 1"
 	}
 	}
 

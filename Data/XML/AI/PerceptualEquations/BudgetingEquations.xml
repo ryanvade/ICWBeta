@@ -87,13 +87,17 @@
 		(6.0 * (1.0 - Function_Has_Enough_Space_Force_Globally.Evaluate))
 	</GenericOffensiveBudgetAllocation>
 	
+	<GenericLowOffensiveBudgetAllocation>
+		0.1 * Function_GenericOffensiveBudgetAllocation.Evaluate
+	</GenericLowOffensiveBudgetAllocation>
+	
 	<!-- Infrastructure budget. Usually evaluates to ~6 -->
 	<GenericInfrastructureBudgetAllocation>
 		5.0 
 		* 
 		(2.5 - Variable_Self.MaxedStarbases - Variable_Self.MaxedGroundbases) 
 		*
-		(1.0 + 2.0 * (30 > (Variable_Self.StructureCount {Parameter_Type = "Rebel_Ground_Mining_Facility", 
+		(1.0 + 2.0 * (6 > (Variable_Self.StructureCount {Parameter_Type = "Rebel_Ground_Mining_Facility", 
 															Parameter_Type = "Empire_Ground_Mining_Facility", 
 															Parameter_Type = "U_Ground_Mining_Facility",
 															Parameter_Type = "Generic_Tradestation" })))
@@ -101,7 +105,7 @@
 		3.0 * (Variable_Self.NumStarbaseOfLevel {Parameter_Level = 3} == 0)
 	</GenericInfrastructureBudgetAllocation>
 	
-	<!-- Clean out the MajorItem budget if it gets bloated and isn't being used, or if we're Yevetha with a capital, or if we don't own many planets -->
+	<!-- Clean out the MajorItem budget if it gets bloated and isn't being used, or if we don't own many planets -->
 	<Flush_MajorItem_Budget>
 		(Variable_Self.ActiveGoals {Parameter_Category = AIGoalCategoryType[MajorItem]} == 0)
 		*
@@ -109,10 +113,6 @@
 			(Variable_Self.BudgetAllocation{Parameter_Category = AIGoalCategoryType[MajorItem]} * Variable_Self.CreditsUnnormalized > 20000)
 			*
 			(1 - Function_Allow_SuperCapital_Production.Evaluate)
-			+
-			(Variable_Self.IsFaction {Parameter_Faction = "Yevetha"})
-			*
-			Function_Has_Capital_Building.Evaluate
 			+
 			(0.1 > Variable_Self.PlanetsControlled)
 		)
@@ -136,7 +136,7 @@
 			*
 			4
 			+
-			Variable_Self.IsFaction {Parameter_Faction = "Rebel", Parameter_Faction = "Underworld", Parameter_Faction = "Pentastar", Parameter_Faction = "Hutts"}
+			Variable_Self.IsFaction {Parameter_Faction = "Rebel", Parameter_Faction = "Underworld", Parameter_Faction = "Pentastar", Parameter_Faction = "Hutts", Parameter_Faction = "Pirates", Parameter_Faction = "Empire"}
 			*
 			(5 > Variable_Self.StructureCount {Parameter_Type = "Oto", Parameter_Type = "Validusia", Parameter_Type = "Empress_Station", Parameter_Only_Consider_Complete = 1.0})
 			*
@@ -153,7 +153,7 @@
 			* 
 			10
 			+
-			Variable_Self.IsFaction {Parameter_Faction = "Rebel", Parameter_Faction = "Underworld", Parameter_Faction = "Pentastar", Parameter_Faction = "Hutts"}
+			Variable_Self.IsFaction {Parameter_Faction = "Rebel", Parameter_Faction = "Underworld", Parameter_Faction = "Pentastar", Parameter_Faction = "Hutts", Parameter_Faction = "Pirates", Parameter_Faction = "Empire"}
 			*
 			(5 > Variable_Self.StructureCount {Parameter_Type = "Oto", Parameter_Type = "Validusia", Parameter_Type = "Empress_Station", Parameter_Only_Consider_Complete = 1.0})
 		)
@@ -185,6 +185,36 @@
 		1.2 * Function_GenericMajorItemBudgetAllocation.Evaluate
 	</RemnantMajorItemBudgetAllocation>	
 	
+	<Era_One>
+		(Variable_Self.TechLevel == 1)
+		+
+		(Variable_Self.TechLevel == 0) * Variable_Self.IsFaction {Parameter_Faction = "Rebel"}
+	</Era_One>
+	
+	<Era_Two>
+		(Variable_Self.TechLevel == 2)
+		+
+		(Variable_Self.TechLevel == 1) * Variable_Self.IsFaction {Parameter_Faction = "Rebel"}
+	</Era_Two>
+	
+	<Era_Three>
+		(Variable_Self.TechLevel == 3)
+		+
+		(Variable_Self.TechLevel == 2) * Variable_Self.IsFaction {Parameter_Faction = "Rebel"}
+	</Era_Three>
+	
+	<Era_Four>
+		(Variable_Self.TechLevel == 4)
+		+
+		(Variable_Self.TechLevel == 3) * Variable_Self.IsFaction {Parameter_Faction = "Rebel"}
+	</Era_Four>
+	
+	<Era_Five>
+		(Variable_Self.TechLevel == 5)
+		+
+		(Variable_Self.TechLevel == 4) * Variable_Self.IsFaction {Parameter_Faction = "Rebel"}
+	</Era_Five>
+	
 	<Pentastar_Aggro_On>
 		Variable_Self.TechLevel == 3
 	</Pentastar_Aggro_On>
@@ -195,7 +225,7 @@
 	
 	<!-- Pentastar is very low aggro by default-->
 	<PentastarOffensiveBudgetAllocation>
-		0.5 * Function_GenericOffensiveBudgetAllocation.Evaluate
+		0.7 * Function_GenericOffensiveBudgetAllocation.Evaluate
 	</PentastarOffensiveBudgetAllocation>
 	
 	<PentastarInfrastructureBudgetAllocation>
@@ -207,7 +237,7 @@
 	</PentastarMajorItemBudgetAllocation>	
 	
 	<EotHDefaultOffensiveBudgetAllocation>
-		0.2 * Function_GenericOffensiveBudgetAllocation.Evaluate
+		0.5 * Function_GenericOffensiveBudgetAllocation.Evaluate
 	</EotHDefaultOffensiveBudgetAllocation>
 	
 	<EotHDefaultInfrastructureBudgetAllocation>

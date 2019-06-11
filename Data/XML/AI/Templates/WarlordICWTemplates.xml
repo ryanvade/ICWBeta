@@ -19,6 +19,13 @@
 			<Goal_Type>Conquer_Opponent</Goal_Type>
 			<Goal_Type>Conquer_Pirate</Goal_Type>
 		</Goals>
+		
+		<Plans>
+			<Name>ConquerOpponentPlan_EA</Name>
+			<Name>UnrestrictedGrabSpace_EA</Name>
+			<Name>CrushPlan_EA</Name>
+			<Name>ConquerPiratePlan_EA</Name>
+		</Plans>
 	</Turn_Off>
 	
 	<Turn_On>
@@ -38,6 +45,50 @@
 	</Turn_On>
 	
 </Warlord_Default>
+
+<EA_Default>
+
+	<Priority>1</Priority>
+	
+	<Trigger>One</Trigger>
+	
+	<Budget>
+		<Always>Zero</Always>
+		<Offensive>WarlordOffensiveBudgetAllocation</Offensive>
+		<Infrastructure>WarlordInfrastructureBudgetAllocation</Infrastructure>
+		<MajorItem>WarlordMajorItemBudgetAllocation</MajorItem>
+	</Budget>
+
+	<Turn_Off>
+		<Goals>
+			<Goal_Type>Conquer_Opponent</Goal_Type>
+			<Goal_Type>Conquer_Pirate</Goal_Type>
+		</Goals>
+		
+		<Plans>
+			<Name>ConquerOpponentPlan</Name>
+			<Name>UnrestrictedGrabSpace</Name>
+			<Name>ConquerPiratePlan</Name>
+		</Plans>
+	</Turn_Off>
+	
+	<Turn_On>
+		<Goals>
+			<Category>Always</Category>
+			<Category>Offensive</Category>
+			<Category>Infrastructure</Category>
+			<Category>MajorItem</Category>
+		</Goals>
+		
+		<Plans>
+			<Goal_Category>Always</Goal_Category>
+			<Goal_Category>Offensive</Goal_Category>
+			<Goal_Category>Infrastructure</Goal_Category>
+			<Goal_Category>MajorItem</Goal_Category>
+		</Plans>
+	</Turn_On>
+	
+</EA_Default>
 
 <Pentastar_Default>
 

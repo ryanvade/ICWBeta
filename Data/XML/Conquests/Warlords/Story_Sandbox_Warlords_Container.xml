@@ -158,6 +158,159 @@
 		<Reward_Param1>Faction_Branch_Yevetha</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 	</Event>
+
+	  <!-- ==================== BEGIN SAVE CRASH RE-ENABLE EVENTS ==================== -->
+
+	<Event Name="Filter_AI_Challenge_Clicked">
+		<Event_Type>STORY_CLICK_GUI</Event_Type>
+		<Event_Param1>b_save_fixer</Event_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>	
+		
+	<Event Name="Faction_Branch_Playing_NewRep">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_NewRep_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
+	</Event>
+	
+	<Event Name="Change_AI_NewRep">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_NewRep_Save</Branch>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Remnant">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Empire_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
+	</Event>
+	
+	<Event Name="Change_AI_Empire">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_Empire_Save</Branch>
+	</Event>
+		
+	<Event Name="Faction_Branch_Playing_EotH">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_EotH_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_EotH</Prereq>
+	</Event>
+	
+	<Event Name="Change_AI_EotH">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Underworld</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_EotH_Save</Branch>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Pentastar">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Pentastar_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Pentastar</Prereq>
+	</Event>
+		
+	<Event Name="Change_AI_Pentastar">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Pentastar</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_Pentastar_Save</Branch>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Teradoc">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Teradoc_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Teradoc</Prereq>
+	</Event>
+			
+	<Event Name="Change_AI_Teradoc">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Teradoc</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_Teradoc_Save</Branch>
+	</Event>
+	
+	
+	<Event Name="Faction_Branch_Playing_Zsinj">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Zsinj_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Zsinj</Prereq>
+	</Event>
+					
+	<Event Name="Change_AI_Zsinj">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Pirates</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_Zsinj_Save</Branch>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Eriadu">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Eriadu_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Eriadu</Prereq>
+	</Event>
+		
+	<Event Name="Change_AI_Eriadu">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Hutts</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_Eriadu_Save</Branch>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Corporate_Sector">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Corporate_Sector_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Corporate_Sector</Prereq>
+	</Event>
+	
+	<Event Name="Change_AI_CSA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Corporate_Sector</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_Corporate_Sector_Save</Branch>
+	</Event>
 	
 	<!--***********************************************************-->
 	<!--***********************************************************-->
@@ -559,6 +712,28 @@
 		<Prereq>Eriadu_Elrood</Prereq>
 	</Event>
 	
+	<Event Name="Zsinj_Centares">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>Centares</Event_Param1>
+		<Event_Param3>Pirates</Event_Param3>
+		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
+	</Event>
+	
+	<Event Name="Selit_Joins">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>SELIT_JOINS_SPEECH</Event_Param2>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_GENERIC_SELIT_JOINS</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Zsinj_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+	</Event>
 	
 	<!--**********************************************************-->
 	<!--***********	Empire of the Hand Events	******************-->

@@ -19,13 +19,9 @@
 --******************************************************************************
 
 
-
-require("GameObjectLibrary")
-
-
 function FindFriendlyStructuresOnPlanet(planet)
     local structuresOnPlanet = {}
-    for structure, structureInfo in pairs(GameObjectLibrary.Structures) do
+    for structure, structureInfo in pairs(GameObjectLibrary.OrbitalStructures) do
       CountStructuresOnPlanet(structuresOnPlanet, structure, structureInfo, planet)
     end
     return structuresOnPlanet

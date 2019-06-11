@@ -23,7 +23,13 @@ TRUtil = {
         Space = "Conquests\\Tactical_Raids.XML"
     },
     ShowTextEventName = "Show_Screen_Text",
-    ShowTextNotificationName = "SHOW_SCREEN_TEXT"
+    ShowTextNotificationName = "SHOW_SCREEN_TEXT",
+    BuildableUnitEventName = "Buildable_Unit_Template",
+    BuildableUnitNotificationName = "BUILDABLE_UNIT",
+    LockUnitEventName = "Lock_Unit_Template",
+    LockUnitNotificationName = "LOCK_UNIT",
+    GenericEventName = "Generic_Event_Template",
+    GenericEventNotificationName = "GENERIC_EVENT"
 }
 
 function TRUtil.GetPlayerAgnosticPlot()
@@ -62,6 +68,69 @@ function TRUtil.RemoveScreenText(textId)
     screenTextEvent.Set_Reward_Parameter(0, textId)
     screenTextEvent.Set_Reward_Parameter(3, "remove")
     Story_Event(TRUtil.ShowTextNotificationName)
+end
+
+function TRUtil.BuildableUnit(unitType)
+    local plot = TRUtil.GetPlayerAgnosticPlot()
+    local buildableUnitEvent = plot.Get_Event(TRUtil.BuildableUnitEventName)
+
+    if not buildableUnitEvent then return end
+
+    buildableUnitEvent.Set_Reward_Parameter(0, unitType)
+    Story_Event(TRUtil.BuildableUnitNotificationName)
+end
+
+function TRUtil.LockUnit(unitType)
+    local plot = TRUtil.GetPlayerAgnosticPlot()
+    local lockUnitEvent = plot.Get_Event(TRUtil.LockUnitEventName)
+
+    if not lockUnitEvent then return end
+
+    lockUnitEvent.Set_Reward_Parameter(0, unitType)
+    Story_Event(TRUtil.LockUnitNotificationName)
+end
+
+function TRUtil.SetTechLevel(player, level)
+    if type(player) == "string" then
+        player = Find_Player(player)
+    end
+    local event = TRUtil.GetGenericEvent()
+    event.Set_Reward_Type("SET_TECH_LEVEL")
+    event.Set_Reward_Parameter(0, player)
+    event.Set_Reward_Parameter(1, level)
+    TRUtil.TriggerGenericEvent()
+    TRUtil.ResetGenericEvent()
+end
+
+function TRUtil.GetGenericEvent()
+    local plot = TRUtil.GetPlayerAgnosticPlot()
+    return plot.Get_Event(TRUtil.GenericEventName)
+end
+
+function TRUtil.TriggerGenericEvent()
+    Story_Event(TRUtil.GenericEventNotificationName)
+end
+
+function TRUtil.ResetGenericEvent()
+    local plot = TRUtil.GetPlayerAgnosticPlot()
+    local genericEvent = plot.Get_Event(TRUtil.GenericEventName)
+
+    if not genericEvent then return end
+
+    genericEvent.Set_Reward_Type("")
+    genericEvent.Set_Reward_Parameter(0, "")
+    genericEvent.Set_Reward_Parameter(1, "")
+    genericEvent.Set_Reward_Parameter(2, "")
+    genericEvent.Set_Reward_Parameter(3, "")
+    genericEvent.Set_Reward_Parameter(4, "")
+    genericEvent.Set_Reward_Parameter(5, "")
+    genericEvent.Set_Reward_Parameter(6, "")
+    genericEvent.Set_Reward_Parameter(7, "")
+    genericEvent.Set_Reward_Parameter(8, "")
+    genericEvent.Set_Reward_Parameter(9, "")
+    genericEvent.Set_Reward_Parameter(10, "")
+    genericEvent.Set_Reward_Parameter(11, "")
+    genericEvent.Set_Reward_Parameter(12, "")
 end
 
 function TRUtil.ValidGlobalValue(val)

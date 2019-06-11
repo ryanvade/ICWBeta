@@ -24,13 +24,16 @@ require("PGDebug")
 require("PGStateMachine")
 require("PGStoryMode")
 
+
 CONSTANTS = require("GameConstants")
+require("GameObjectLibrary")
 require("TRGameModeTransactions")
 
 require("TRUtil")
 require("GalacticConquest")
 require("DisplayManager")
 require("CategoryFilter")
+
 
 
 function Definitions()

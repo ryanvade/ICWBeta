@@ -35,7 +35,13 @@ function Definitions()
       Determine_Faction_LUA = Find_Faction,
       Eclipse_Completed_Generic = Palpatine_Joins,
 	  Warlords_Breakoff = Empire_Fractures,
-      Empire_wins_Coruscant = Spawn_Empire_Reward
+	  Luke_Completed = Luke_Joins,
+	  Lose_Luke = Luke_Betrays_Empire,
+	  Save_Luke = Luke_Rejoins,
+      Empire_wins_Coruscant = Spawn_Empire_Reward,
+	  Balmorran_Revolt_Narrative = Spawn_Balmorrans,
+	  Conquer_Balmorra = Balmorran_Reward,
+	  Balmorra_Mission_Won = Noncanonical_Byss_Takeover
     }
 
 end
@@ -47,7 +53,7 @@ function Find_Faction(message)
     local p_empire = Find_Player("Empire")
 
     if p_newrep.Is_Human() then
-      Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
+      Story_Event("ENABLE_BRANCH_NR_FLAG")
     elseif p_empire.Is_Human() then
       Story_Event("ENABLE_BRANCH_EMPIRE_FLAG")
     end
@@ -63,8 +69,14 @@ function Palpatine_Joins(message)
 
     --ChangePlanetOwnerAndRetreat(start_planet, p_empire)
 
-    local spawn_list_emperor = { "Emperor_Palpatine_Team" }
+	start_planet.Change_Owner(p_empire)
+    local spawn_list_emperor = { "Emperor_Palpatine_Team", "Empire_MoffPalace", "E_Ground_Barracks", "E_Ground_Light_Vehicle_Factory", "E_Ground_Heavy_Vehicle_Factory", "E_Ground_Advanced_Vehicle_Factory", "E_Ground_Advanced_Vehicle_Factory", "Eclipse_Super_Star_Destroyer" }
     local EmperorSpawn = SpawnList(spawn_list_emperor, start_planet, p_empire,true,false)
+	
+	if p_newrep.Is_Human() then
+        spawn_list_luke = { "Luke_Skywalker_Darkside_Team" }
+        LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_empire,true,false)
+      end
 
 
   end
@@ -76,7 +88,7 @@ function Empire_Fractures(message)
     local p_empire = Find_Player("Empire")
     local p_maldrood = Find_Player("Teradoc")
     local p_eriadu = Find_Player("Hutts")
-    local p_harrsk = Find_Player("Harrsk")
+    local p_harrsk = Find_Player("Warlords")
     local p_pentastar = Find_Player("Pentastar")
 
 
@@ -175,7 +187,123 @@ function Spawn_Empire_Reward(message)
 
 
 	local spawn_list_coruscant = {"Generic_Star_Destroyer_Two", "Generic_Secutor", "Generic_Allegiance", "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "Generic_Interdictor_Cruiser", "Generic_Victory_Destroyer", "Vindicator_Cruiser", "Carrack_Cruiser", "Carrack_Cruiser", "Lancer_Frigate", "Lancer_Frigate", "Lancer_Frigate", "Raider_Pentastar", "Generic_Procursator", "Generic_Victory_Destroyer_Two", "Generic_Star_Destroyer", "Generic_Star_Destroyer", "Strike_Cruiser", "Strike_Cruiser", "Generic_Victory_Destroyer" }
-    local CoruscantSpawn = SpawnList(spawn_list_coruscant, start_planet, p_empire,true,false)
+    local CoruscantSpawn = SpawnList(spawn_list_coruscant, start_planet, p_empire,false,false)
 
+  end
+end
+
+function Luke_Joins(message)
+  if message == OnEnter then
+
+    local p_empire = Find_Player("Empire")
+    local start_planet = FindPlanet("Byss")
+
+    if start_planet.Get_Owner() ~= Find_Player("Empire") then
+      allPlanets = FindPlanet.Get_All_Planets()
+      random = GameRandom(1, table.getn(allPlanets))
+      start_planet = allPlanets[random]
+      while start_planet.Get_Owner() ~= Find_Player("Empire") do
+        random = GameRandom(1, table.getn(allPlanets))
+        start_planet = allPlanets[random]
+      end
+    end
+
+    local spawn_list_luke = { "Luke_Skywalker_Darkside_Team" }
+    local LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_empire,true,false)
+
+  end
+end
+
+function Luke_Betrays_Empire(message)
+  if message == OnEnter then
+
+    local p_rebel = Find_Player("Rebel")
+    local start_planet = FindPlanet("Yavin")
+
+    if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+      allPlanets = FindPlanet.Get_All_Planets()
+      random = GameRandom(1, table.getn(allPlanets))
+      start_planet = allPlanets[random]
+      while start_planet.Get_Owner() ~= Find_Player("Rebel") do
+        random = GameRandom(1, table.getn(allPlanets))
+        start_planet = allPlanets[random]
+      end
+    end
+
+    local spawn_list_luke = { "Luke_Skywalker_Jedi_Team" }
+    local LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_rebel,true,false)
+
+  end
+end
+
+function Luke_Rejoins(message)
+  if message == OnEnter then
+
+    local p_rebel = Find_Player("Rebel")
+    local start_planet = FindPlanet("Yavin")
+
+    if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+      local allPlanets = FindPlanet.Get_All_Planets()
+      random = GameRandom(1, table.getn(allPlanets))
+      start_planet = allPlanets[random]
+      while start_planet.Get_Owner() ~= Find_Player("Rebel") do
+        random = GameRandom(1, table.getn(allPlanets))
+        start_planet = allPlanets[random]
+      end
+    end
+
+    local spawn_list_luke = { "Luke_Skywalker_Jedi_Team" }
+    local LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_rebel,true,false)
+ 
+   end
+ end
+ 
+ function Spawn_Balmorrans(message)
+  if message == OnEnter then
+  
+	local p_empire = Find_Player("Empire")
+	local p_balmorra = Find_Player("Warlords")
+
+    local start_planet = FindPlanet("Balmorra")
+    if start_planet.Get_Owner() == p_empire then
+      ChangePlanetOwnerAndRetreat(start_planet, p_balmorra)
+
+      local spawn_list = { "Generic_Star_Destroyer", "Generic_Star_Destroyer_Two", "Generic_Procursator", "Generic_Procursator", "Dreadnaught_Empire", "Dreadnaught_Empire", "Dreadnaught_Empire", "Raider_Pentastar", "Raider_Pentastar", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_XR85_Tankdroid", "Imperial_XR85_Tankdroid", "Imperial_XR85_Tankdroid", "C_Hailfire_Company", "C_Hailfire_Company", "B1_Droid_Squad", "B1_Droid_Squad", "B1_Droid_Squad" }
+      local Balmorrans = SpawnList(spawn_list, start_planet, p_balmorra, false, false)
+    end
+
+  elseif message == OnUpdate then
+
+  end
+end
+
+function Balmorran_Reward(message)
+  if message == OnEnter then
+
+    local p_empire = Find_Player("Empire")
+    local start_planet = FindPlanet("Balmorra")
+
+
+    if start_planet.Get_Owner() == Find_Player("Empire") then
+      local spawn_list_balmorra = { "Imperial_Heavy_Assault_Company" , "Imperial_Heavy_Assault_Company", "Imperial_XR85_Tankdroid", "Imperial_XR85_Tankdroid", "Imperial_XR85_Tankdroid" }
+      local BalmorraSpawn = SpawnList(spawn_list_balmorra, start_planet, p_empire,true, false)
+    end
+
+  elseif message == OnUpdate then
+  end
+end
+
+function Noncanonical_Byss_Takeover(message)
+  if message == OnEnter then
+
+    local p_rebel = Find_Player("Rebel")
+    local start_planet = FindPlanet("Byss")
+
+	--start_planet.Change_Owner(p_rebel)
+	ChangePlanetOwnerAndRetreat(start_planet, p_rebel)
+    local spawn_list_unlikely_conquerors = { "Delvardus_Heavy_Assault_Company", "Imperial_XR85_Tankdroid" }
+    local BalmorraSpawn = SpawnList(spawn_list_unlikely_conquerors, start_planet, p_rebel,true, false)
+
+  elseif message == OnUpdate then
   end
 end

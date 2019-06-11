@@ -117,9 +117,9 @@
 			Commenor_Kashyyyk,
 			Contruum_MistThree,
 			Corellia_Duro,
+			Coruscant_Farrfin,
 			Coruscant_Graveyard,
 			Endor_Sullust,
-			Hapes_MistTwo,
 			Hapes_Terephon,
 			Hast_MonCal,
 			Kashyyyk_MistOne,
@@ -132,6 +132,7 @@
 			MonCal_Yavin,
 			Ossus_Yavin,
 			Rodia_Ryloth,
+			Rodia_Tatooine,
 			Telos_Yavin,
 			Brentaal_Chandrila,
 			Byss_Coruscant,
@@ -143,7 +144,6 @@
 			Corellia_Kuat,
 			Corellia_Fondor,
 			Dagobah_Sluis,
-			Eriadu_Sluis,
 			Eriadu_Sullust,
 			Fondor_Kampe,
 			Graveyard_Kuat,
@@ -156,7 +156,6 @@
 			Rodia_Sluis,
 			Sullust_YagDhul,
 			Bespin_Sluis,
-			Bilbringi_Crustai,
 			Bilbringi_Entralla,
 			Bilbringi_Orinda,
 			Bimmisaari_Roche,
@@ -167,9 +166,10 @@
 			Abregado_Fondor,
 			Chandrila_Farrfin,
 			Crustai_Ilum,
-			Crustai_Noquivzor,
+			Crustai_Pesitiin,
 			Charubah_Hapes,
 			Charubah_MistOne,
+			Charubah_MistTwo,
 			Ciutric_Tangrene,
 			Clakdor_Eriadu,
 			Clakdor_Sluis,
@@ -189,7 +189,8 @@
 			Ilum_Pesitiin,
 			Ithor_Mandalore,
 			Contruum_Mandalore,
-			Agamar_Ithor
+			Agamar_Ithor,
+			Noquivzor_Pesitiin
 		</Trade_Routes>
 		
         <Home_Location> Rebel, Yavin </Home_Location>
@@ -215,8 +216,7 @@
 		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
 		<AI_Player_Control> Hutts, None </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
-		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
+		<AI_Player_Control> Warlords, None </AI_Player_Control>				
 
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -227,7 +227,6 @@
 		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
 		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
 		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
-		<Markup_Filename>Harrsk, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Hostile, DefaultGalacticHints </Markup_Filename>
@@ -294,6 +293,7 @@
 		<Starting_Forces> Rebel, Yavin, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- Yavin Land Forces -->
+		<Starting_Forces> Rebel, Yavin, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, Rebel_Infantry_Squad </Starting_Forces>
@@ -314,6 +314,7 @@
 		<Starting_Forces> Empire, Coruscant, Vindicator_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Dreadnaught_Empire </Starting_Forces>
 		<!-- Coruscant Land Forces -->
+		<Starting_Forces> Empire, Coruscant, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Remnant_Capital </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Imperial_EWEB_Squad </Starting_Forces>
@@ -321,12 +322,13 @@
 		<Starting_Forces> Empire, Coruscant, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		
 		<!-- Bastion Space Forces -->		
-		<Starting_Forces> Empire, Bastion, Generic_Victory_Destroyer_TWO </Starting_Forces>
+		<Starting_Forces> Empire, Bastion, Generic_Victory_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Empire, Bastion, Dreadnaught_Empire </Starting_Forces>
 		<Starting_Forces> Empire, Bastion, Strike_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Bastion, Lancer_Frigate</Starting_Forces>
 		<Starting_Forces> Empire, Bastion, Lancer_Frigate </Starting_Forces>
 		<!-- Bastion Land Forces -->
+		<Starting_Forces> Empire, Bastion, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Bastion, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Bastion, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Bastion, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -352,6 +354,7 @@
 		<Starting_Forces> Empire, Ciutric, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Ciutric, Carrack_Cruiser </Starting_Forces>
 		<!-- Ciutric Land Forces -->
+		<Starting_Forces> Empire, Ciutric, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Ciutric, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Ciutric, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Ciutric, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -363,6 +366,7 @@
 		<Starting_Forces> Empire, Borleais, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Borleais, Carrack_Cruiser </Starting_Forces>
 		<!-- Borleais Land Forces -->
+		<Starting_Forces> Empire, Borleais, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Borleais, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Borleais, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Borleais, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -374,6 +378,7 @@
 		<Starting_Forces> Empire, Eriadu, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Eriadu, Lancer_Frigate </Starting_Forces>
 		<!-- Eriadu Land Forces -->
+		<Starting_Forces> Empire, Eriadu, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Eriadu, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Eriadu, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Eriadu, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -385,6 +390,7 @@
 		<Starting_Forces> Empire, Kuat, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Lancer_Frigate </Starting_Forces>
 		<!-- Kuat Land Forces -->
+		<Starting_Forces> Empire, Kuat, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -403,6 +409,7 @@
 		<Starting_Forces> Underworld, Crustai, Asdoni </Starting_Forces>
 		<Starting_Forces> Underworld, Crustai, Nuruodo </Starting_Forces>
 		<!-- Crustai Land Forces -->
+		<Starting_Forces> Underworld, Crustai, Hand_GovernorOffice </Starting_Forces>
 		<Starting_Forces> Underworld, Crustai, U_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Underworld, Crustai, U_Ground_Palace </Starting_Forces>
 		<Starting_Forces> Underworld, Crustai, Phalanx_Trooper_Squad </Starting_Forces>
@@ -426,6 +433,7 @@
 		<Starting_Forces> Underworld, Ilum, Asdoni</Starting_Forces>
 		<Starting_Forces> Underworld, Ilum, Asdoni </Starting_Forces>
 		<!-- Ilum Land Forces -->
+		<Starting_Forces> Underworld, Ilum, Hand_GovernorOffice </Starting_Forces>
 		<Starting_Forces> Underworld, Ilum, U_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Underworld, Ilum, Phalanx_trooper_Squad </Starting_Forces>
 		<Starting_Forces> Underworld, Ilum, Phalanx_trooper_Squad </Starting_Forces>
@@ -535,8 +543,7 @@
         <Camera_Shift_Y> 0.0 </Camera_Shift_Y>
         <Camera_Distance> 1200.0 </Camera_Distance>
 
-     	<Locations>
-			Galaxy_Core_Art_Model,
+		<Locations>
 			Aargau,
 			Adumar,
 			Agamar,
@@ -547,10 +554,12 @@
 			Bimmisaari,
 			Bonadan,
 			Bothawui,
+			Bpfassh,
 			Brentaal,
 			Carida,
 			Chardaan,
 			Charubah,
+			Chazwa,
 			Ciutric,
 			Clakdor,
 			Commenor,
@@ -570,20 +579,8 @@
 			Ession,
 			Etti_IV,
 			Fondor,
-			Pesitiin,
-			Phind,
-			Quethold,
-			Roche,
-			Rodia,
-			Sluis_Van,
-			Syca,
-			Telos,
-			Terephon,
-			Woostri,
-			YagDhul,
-			Yavin,
-			Ylesia,
-			Yinchorr,
+			Galaxy_Core_Art_Model,
+			Generis,
 			GlomTho,
 			Gyndine,
 			Hakassi,
@@ -598,112 +595,134 @@
 			Kothlis,
 			Kuat,
 			MistOne,
-			MistTwo,
 			MistThree,
+			MistTwo,
 			MonCalimari,
 			Mygeeto,
 			NalHutta,
 			Nirauan,
 			Nzoth,
-			Oristrom
-		</Locations>
+			Orinda,
+			Oristrom,
+			Orocco,
+			Pesitiin,
+			Phind,
+			Quethold,
+			Roche,
+			Rodia,
+			Sluis_Van,
+			Syca,
+			Telos,
+			Terephon,
+			Woostri,
+			YagDhul,
+			Yavin,
+			Yinchorr,
+			Ylesia,
+</Locations>
+
 		<Trade_Routes>
-			Aargau_Coruscant,
-			Commenor_Corellia,
-			Aargau_Ebaq,
-			Corellia_Fondor,
-			Corellia_Hakassi,
-			Ebaq_Hakassi,
-			Eriadu_Woostri,
-			Fondor_YagDhul,
-			Woostri_YagDhul,
-			Crustai_Syca,
-			Crustai_Pesitiin,
-			Quethold_Syca,
+		Aargau_Commenor,
+		Aargau_Kashyyyk,
+		Aargau_Gyndine,
+			Adumar_Nirauan,
+			Adumar_Orinda,
 			Adumar_Pesitiin,
-			Nirauan_Quethold,
-			Bilbringi_Pesitiin,
-			Bilbringi_Yinchorr,
-			Bilbringi_Entralla,
-			Bastion_Jaemus,
-			Entralla_Jaemus,
-			Bastion_Dubrillion,
-			AnxMinor_Dubrillion,
-			AnxMinor_Mygeeto,
-			Entralla_Mygeeto,
-			Bonadan_Ession,
-			Bonadan_Etti,
-			Emmer_Ession,
-			Telos_Yavin,
-			Etti_Telos,
-			Ession_Telos,
-			Contruum_Phind,
-			Phindar_Yavin,
-			MistThree_Terephon,
-			Hapes_Terephon,
-			Hapes_MistTwo,
-			Charubah_Hapes,
-			Charubah_MistOne,
-			MistThree_Roche,
-			Contruum_Roche,
-			Bandomeer_Contruum,
-			Coruscant_Fondor,
-			Hakassi_Kuat,
-			Bilbringi_Corulag,
-			Brentaal_Corulag,
-			Corulag_Coruscant,
-			Chazwa_Yinchorr,
-			Carida_MistTwo,
-			Carida_Yinchorr,
-			Brentaal_Carida,
-			Bandomeer_Hewett,
-			AnxMinor_Ciutric,
 			Agamar_Ciutric,
 			Agamar_Hewett,
-			Hast_MonCal,
-			Emmer_MonCal,
-			Ession_Hast,
-			Jomark_MonCal,
-			Jomark_Phindar,
-			MonCal_Yavin,
-			Bimmisaari_Jomark,
-			Bimmisaari_Roche,
-			Bimmisaari_Kashyyyk,
-			Kuat_MistOne,
-			Commenor_Kashyyyk,
-			Kashyyyk_MistThree,
-			Kashyyyk_MistOne,
-			Kashyyyk_Kessel,
-			NalHutta_Ylesia,
-			Kessel_Ylesia,
-			Bothawui_Kashyyyk,
-			Bothawui_NalHutta,
-			Coruscant_Nzoth,
-			Doornik_Nzoth,
-			Doornik_Jtptan,
-			Crustai_Oristrom,
-			Doornik_Oristrom,
-			Carida_Yinchorr,
-			Bilbringi_Yinchorr,
-			Adumar_Nirauan,
-			Orocco_Yinchorr,
+			AnxMinor_Ciutric,
+			AnxMinor_Dubrillion,
+			AnxMinor_Mygeeto,
+			Bandomeer_Contruum,
+			Bandomeer_Hewett,
+			Bastion_Dubrillion,
+			Bastion_Jaemus,
+			Bilbringi_Corulag,
+			Bilbringi_Doornik,
+			Bilbringi_Entralla,
 			Bilbringi_Orinda,
+			Bilbringi_Pesitiin,
+			Bilbringi_Yinchorr,
+			Bimmisaari_Jomark,
+			Bimmisaari_Kashyyyk,
+			Bimmisaari_Kessel,
+			Bimmisaari_Roche,
+			Bonadan_Ession,
+			Bonadan_Etti,
+			Bothawui_Druckenwell,
+			Bothawui_Kashyyyk,
+			Bothawui_Kothlis,
+			Bothawui_NalHutta,
+			Bpfassh_Sluis,
+			Brentaal_Carida,
+			Brentaal_Corulag,
+			Carida_MistTwo,
+			Carida_Yinchorr,
+			Chardaan_Derra,
+			Chardaan_Fondor,
+			Chardaan_Gyndine,
+			Chardaan_Woostri,
+			Charubah_Hapes,
+			Charubah_MistOne,
+			Chazwa_Yinchorr,
 			Ciutric_Generis,
 			Clakdor_Eriadu,
 			Clakdor_Sluis,
-			Bpfassh_Sluis,
-			Rodia_Sluis,
-			Bothawui_Druckenwell,
-			Druckenwell_GlomTho,
-			Bothawui_Kothlis,
-			Kothlis_Rodia,
+			Commenor_Corellia,
+			Commenor_Gyndine,
+			Contruum_MistThree,
+			Contruum_Phind,
+			Contruum_Roche,
+			Corellia_Fondor,
+			Corellia_Hakassi,
+			Corulag_Coruscant,
+			Coruscant_Fondor,
+			Coruscant_Nzoth,
+			Crustai_Pesitiin,
+			Crustai_Syca,
 			Derra_GlomTho,
-			Chardaan_Derra,
-			Chardaan_Fondor,
-			Chardaan_Woostri,
-			Chardaan_Gyndine,
-			Commenor_Gyndine
-		</Trade_Routes>
+			Doornik_Jtptan,
+			Doornik_Nzoth,
+			Druckenwell_GlomTho,
+			Ebaq_Hakassi,
+			Emmer_Ession,
+			Emmer_MonCal,
+			Entralla_Jaemus,
+			Entralla_Mygeeto,
+			Eriadu_Woostri,
+			Ession_Hast,
+			Ession_Telos,
+			Etti_Telos,
+			Fondor_YagDhul,
+			Hakassi_Kuat,
+			Hapes_MistTwo,
+			Hapes_Terephon,
+			Hast_MonCal,
+			Hewett_Orocco,
+			Generis_Orinda,
+			Generis_Mygeeto,
+			Jomark_MonCal,
+			Jomark_Phindar,
+			Jtptan_Nzoth,
+			Kashyyyk_Kessel,
+			Kashyyyk_MistOne,
+			Kashyyyk_MistThree,
+			Kessel_Ylesia,
+			Kothlis_Rodia,
+			Kuat_MistOne,
+			MistThree_Roche,
+			MistThree_Terephon,
+			MonCal_Yavin,
+			NalHutta_Ylesia,
+			Nirauan_Oristrom,
+			Nirauan_Quethold,
+			Orocco_Yinchorr,
+			Phindar_Yavin,
+			Quethold_Syca,
+			Rodia_Sluis,
+			Telos_Yavin,
+			Woostri_YagDhul,
+</Trade_Routes>
         <Home_Location> Rebel, Bothawui </Home_Location>
         <Home_Location> Underworld, Nirauan </Home_Location>
 		 <Home_Location> Empire, Coruscant </Home_Location>
@@ -728,8 +747,7 @@
 		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
 		<AI_Player_Control> Hutts, None </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
-		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
+		<AI_Player_Control> Warlords, None </AI_Player_Control>			
 
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -740,7 +758,6 @@
 		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
 		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
 		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
-		<Markup_Filename>Harrsk, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Hostile, DefaultGalacticHints </Markup_Filename>
@@ -804,6 +821,7 @@
 		<Starting_Forces> Empire, Carida, Lancer_Frigate </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Vindicator_Cruiser </Starting_Forces>
 		<!-- Carida Land Forces -->
+		<Starting_Forces> Empire, Carida, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Carida, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Remnant_Capital </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Imperial_EWEB_Squad </Starting_Forces>
@@ -826,6 +844,7 @@
 		<Starting_Forces> Rebel, Bothawui, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- Bothawui Land Forces -->
+		<Starting_Forces> Rebel, Bothawui, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Rebel_Infantry_Squad </Starting_Forces>
@@ -839,6 +858,7 @@
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Gunboat</Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Corvette </Starting_Forces>
 		<!-- Kashyyyk Land Forces -->
+		<Starting_Forces> Rebel, Kashyyyk, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Rebel_Infantry_Squad </Starting_Forces>
@@ -851,6 +871,7 @@
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Gunboat</Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<!-- Mon Cal Land Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
@@ -863,6 +884,7 @@
 		<Starting_Forces> Rebel, Woostri, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Woostri, Corellian_Corvette </Starting_Forces>
 		<!-- Woostri Land Forces -->
+		<Starting_Forces> Rebel, Woostri, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Woostri, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Woostri, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Woostri, Rebel_Infantry_Squad </Starting_Forces>
@@ -875,6 +897,7 @@
 		<Starting_Forces> Rebel, Kothlis, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Corellian_Corvette </Starting_Forces>
 		<!-- Kothlis Land Forces -->
+		<Starting_Forces> Rebel, Kothlis, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Rebel_Infantry_Squad </Starting_Forces>
@@ -887,6 +910,7 @@
 		<Starting_Forces> Rebel, Hast, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Corellian_Corvette </Starting_Forces>
 		<!-- Hast Land Forces -->
+		<Starting_Forces> Rebel, Hast, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Rebel_Infantry_Squad </Starting_Forces>
@@ -899,6 +923,7 @@
 		<Starting_Forces> Rebel, NewAlderaan, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Corellian_Corvette </Starting_Forces>
 		<!-- AnxMinor Land Forces -->
+		<Starting_Forces> Rebel, NewAlderaan, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
@@ -911,6 +936,7 @@
 		<Starting_Forces> Rebel, Adumar, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Adumar, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- Adumar Land Forces -->
+		<Starting_Forces> Rebel, Adumar, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Adumar, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Adumar, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Adumar, R_Ground_Barracks </Starting_Forces>
@@ -921,6 +947,7 @@
 		<Starting_Forces> Rebel, Bimmisaari, Corona </Starting_Forces>
 		<Starting_Forces> Rebel, Bimmisaari, Dreadnaught_Rebel </Starting_Forces>
 		<!-- Bimmisaari Land Forces -->
+		<Starting_Forces> Rebel, Bimmisaari, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Bimmisaari, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Bimmisaari, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Bimmisaari, R_Ground_Barracks </Starting_Forces>
@@ -939,6 +966,7 @@
 		<Starting_Forces> Underworld, Nirauan, Asdoni </Starting_Forces>
 		<Starting_Forces> Underworld, Nirauan, Nuruodo </Starting_Forces>
 		<!-- Nirauan Land Forces -->
+		<Starting_Forces> Underworld, Nirauan, Hand_GovernorOffice </Starting_Forces>
 		<Starting_Forces> Underworld, Nirauan, U_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Underworld, Nirauan, U_Ground_Palace </Starting_Forces>
 		<Starting_Forces> Underworld, Nirauan, Phalanx_Trooper_Squad </Starting_Forces>
@@ -952,6 +980,7 @@
 		<Starting_Forces> Underworld, Quethold, Asdoni</Starting_Forces>
 		<Starting_Forces> Underworld, Quethold, Asdoni </Starting_Forces>
 		<!-- Quethold Land Forces -->
+		<Starting_Forces> Underworld, Quethold, Hand_GovernorOffice </Starting_Forces>
 		<Starting_Forces> Underworld, Quethold, U_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Underworld, Quethold, Phalanx_trooper_Squad </Starting_Forces>
 		<Starting_Forces> Underworld, Quethold, Phalanx_trooper_Squad </Starting_Forces>
@@ -964,6 +993,7 @@
 		<Starting_Forces> Underworld, Oristrom, Asdoni</Starting_Forces>
 		<Starting_Forces> Underworld, Oristrom, Asdoni </Starting_Forces>
 		<!-- Oristrom Land Forces -->
+		<Starting_Forces> Underworld, Oristrom, Hand_GovernorOffice </Starting_Forces>
 		<Starting_Forces> Underworld, Oristrom, U_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Underworld, Oristrom, Phalanx_trooper_Squad </Starting_Forces>
 		<Starting_Forces> Underworld, Oristrom, Phalanx_trooper_Squad </Starting_Forces>
@@ -1171,28 +1201,29 @@
 			Adumar_Nirauan,
 			Adumar_Pesitiin,
 			Amrac_Rhigar,
-			Amrac_Riette,
-			Bilbringi_Crustai,
+			Amrac_Syca,
 			Bilbringi_Darkon,
 			Bilbringi_Palanhi,
 			Bilbringi_Pesitiin,
-			Coruscant_Nzoth,
+			Crustai_Pesitiin,
 			Crustai_Ilum,
-			Crustai_Oristrom,
 			Crustai_Sarvchi,
 			Crustai_Syca,
-			Doornik_ILC905,
-			Doornik_Nzoth,
+			Doornik_Jtptan,
 			Galantos_Jtptan,
+			Galantos_Metellos,
+			Galantos_Nzoth,
 			ILC905_Jtptan,
-			ILC905_Oristrom,
+			ILC905_Nzoth,
 			Ilum_Quethold,
+			Ilum_Syca,
 			Jtptan_Riette,
+			Jtptan_Pesitiin,
 			Kariek_Nirauan,
 			Kariek_Quethold,
 			Quethold_Syca,
+			Rhigar_Riette,
 			Rhigar_Sarvchi,
-			Coruscant_Galantos,
 			Corthenia_Traval,
 			Darkon_Traval,
 			Doornik_Mrisst,
@@ -1200,16 +1231,16 @@
 			Mantell_Tyan,
 			Corthenia_Tyan,
 			Levian_Mantell,
-			Levian_Wayland,
+			Levian_Myrkr,
 			Levian_Obroa,
-			Myrkr_Obroa,
 			Myrkr_Wayland,
+			Obroa_Wayland,
 			Mantell_Poderis,
 			Corulag_Coruscant,
 			Charubah_Hapes,
 			Charubah_MistOne,
+			Charubah_MistTwo,
 			Corulag_MistOne,
-			Hapes_MistTwo,
 			Hapes_Terephon,
 			MistThree_Terephon,
 			MistTwo_Obroa,
@@ -1255,7 +1286,8 @@
 			Dolomar_Metellos,
 			Centares_Jomark,
 			Centares_Columex,
-			Centares_Metalorn
+			Centares_Metalorn,
+			Nirauan_Oristrom
 		</Trade_Routes>
 		
         <Home_Location> Rebel, MonCalimari </Home_Location>
@@ -1283,8 +1315,7 @@
 		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
 		<AI_Player_Control> Hutts, None </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
-		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
+		<AI_Player_Control> Warlords, None </AI_Player_Control>				
 
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -1295,7 +1326,6 @@
 		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
 		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
 		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
-		<Markup_Filename>Harrsk, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Hostile, DefaultGalacticHints </Markup_Filename>
@@ -1361,6 +1391,7 @@
 		<Starting_Forces> Underworld, Quethold, Asdoni </Starting_Forces>
 		<Starting_Forces> Underworld, Quethold, Nuruodo </Starting_Forces>
 		<!-- Quethold Land Forces -->
+		<Starting_Forces> Underworld, Quethold, Hand_GovernorOffice </Starting_Forces>
 		<Starting_Forces> Underworld, Quethold, U_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Underworld, Quethold, U_Ground_Palace </Starting_Forces>
 		<Starting_Forces> Underworld, Quethold, Phalanx_Trooper_Squad </Starting_Forces>
@@ -1380,6 +1411,7 @@
 		<Starting_Forces> Empire, Carida, Lancer_Frigate </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Vindicator_Cruiser </Starting_Forces>
 		<!-- Carida Land Forces -->
+		<Starting_Forces> Empire, Carida, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Carida, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Remnant_Capital </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Imperial_EWEB_Squad </Starting_Forces>
@@ -1393,17 +1425,19 @@
 		<Starting_Forces> Empire, Ilum, Lancer_Frigate</Starting_Forces>
 		<Starting_Forces> Empire, Ilum, Lancer_Frigate </Starting_Forces>
 		<!-- Ilum Land Forces -->
+		<Starting_Forces> Empire, Ilum, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Ilum, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Ilum, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Ilum, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
 		<!-- Coruscant Space Forces -->
-		<Starting_Forces> Empire, Coruscant, Generic_Victory_Destroyer_TWO </Starting_Forces>
+		<Starting_Forces> Empire, Coruscant, Generic_Victory_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Dreadnaught_Empire </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Strike_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Lancer_Frigate</Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Lancer_Frigate </Starting_Forces>
 		<!-- Coruscant Land Forces -->
+		<Starting_Forces> Empire, Coruscant, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1415,6 +1449,7 @@
 		<Starting_Forces> Empire, Corulag, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Corulag, Carrack_Cruiser </Starting_Forces>
 		<!-- Corulag Land Forces -->
+		<Starting_Forces> Empire, Corulag, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Corulag, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Corulag, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Corulag, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1426,6 +1461,7 @@
 		<Starting_Forces> Empire, Wayland, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Wayland, Carrack_Cruiser </Starting_Forces>
 		<!-- Wayland Land Forces -->
+		<Starting_Forces> Empire, Wayland, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Wayland, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Wayland, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Wayland, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1444,6 +1480,7 @@
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- Mon Cal Land Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
@@ -1456,6 +1493,7 @@
 		<Starting_Forces> Rebel, Corellia, Corellian_Gunboat</Starting_Forces>
 		<Starting_Forces> Rebel, Corellia, Corellian_Corvette </Starting_Forces>
 		<!-- Corellia Land Forces -->
+		<Starting_Forces> Rebel, Corellia, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Corellia, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Corellia, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Corellia, Rebel_Infantry_Squad </Starting_Forces>
@@ -1469,6 +1507,7 @@
 		<Starting_Forces> Rebel, Farrfin, Corellian_Gunboat</Starting_Forces>
 		<Starting_Forces> Rebel, Farrfin, Corellian_Corvette </Starting_Forces>
 		<!-- Farrfin Land Forces -->
+		<Starting_Forces> Rebel, Farrfin, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Farrfin, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Farrfin, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Farrfin, Rebel_Infantry_Squad </Starting_Forces>
@@ -1706,18 +1745,18 @@
 			Bastion_Dubrillion,
 			Bastion_Helska_4,
 			Bastion_Jaemus,
-			Bimmiel_Trasi,
+			Bimmiel_RZ7,
 			Biniir_Trasi,
 			Borosk_Morishim,
 			Borosk_Wistril,
 			Borosk_Yaga,
 			Cantrell_Garqi,
+			Cantrell_Lonnaw,
 			Dantooine_Dubrillion,
-			Dantooine_Muunilinst,
+			Dantooine_Gabredor,
 			Dubrillion_Gabredor,
 			Dubrillion_Gravlex,
 			Dubrillion_Sernpidal,
-			Entralla_Jaemus,
 			Entralla_Muunilinst,
 			Entralla_Yaga,
 			Gabredor_Muunilinst,
@@ -1726,7 +1765,7 @@
 			Helska_Sernpidal,
 			Morishim_Trasi,
 			Mygeeto_Trasi,
-			RZ7_Trasi,
+			Gravlex_RZ7,
 			Borosk_Mygeeto,
 			Cantrell_Phaeda,
 			Lonnaw_Obredaan,
@@ -1735,15 +1774,17 @@
 			Crustai_Syca,
 			Quethold_Syca,
 			Kariek_Quethold,
+			Paarin_Phaeda,
 			Paarin_Tartaglia,
 			Coruscant_Noquivzor,
 			Crustai_Noquivzor,
-			Lonnaw_Tyan,
+			Obredaan_Tyan,
 			Orocco_Tartaglia,
 			Orocco_Tyan,
 			Ithor_Phaeda,
 			Ithor_Obredaan,
 			Ithor_Orocco,
+			Jaemus_Muunilinst,
 			Mantell_Wistril,
 			Mantell_Tyan,
 			Mantell_Noquivzor,
@@ -1754,18 +1795,17 @@
 			Ciutric_Vros,
 			Ciutric_Generis,
 			Corvis_Tangrene,
-			Chazwa_Noquivzor,
+			Champala_Noquivzor,
 			Champala_Mantell,
-			Ciutric_Comkin,
+			Comkin_Vros,
 			Comkin_Mantell,
 			Comkin_Gravan,
 			Korriban_Telos,
 			Bonadan_Ession,
 			Bonadan_Etti,
-			Ciutric_Phaeda,
 			Desevro_Emmer,
 			Desevro_Ession,
-			Desevro_Etti,
+			Ession_Etti,
 			Desevro_Lianna,
 			Emmer_Ession,
 			Etti_Telos,
@@ -1775,6 +1815,7 @@
 			Kauron_Tangrene,
 			Korriban_Yavin,
 			CauldronNebula_Kauron,
+			Cauldron_EolSha,
 			Chandrila_Coruscant,
 			Belsmuth_Felucia,
 			Belsmuth_Tangrene,
@@ -1782,10 +1823,10 @@
 			Belsmuth_Dathomir,
 			Ession_Hast,
 			Hast_MonCal,
-			T_Coruscant_MonCalimari,
+			Chandrila_MonCalimari,
 			Dathomir_Gravan,
-			Corvis_RZ7,
-			M293_Vros,
+			Corvis_Gravlex,
+			Ciutric_M293,
 			M293_Paarin,
 			EolSha_Etti_IV,
 			Chandrila_Chazwa,
@@ -1817,8 +1858,7 @@
 		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
 		<AI_Player_Control> Hutts, None </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
-		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
+		<AI_Player_Control> Warlords, None </AI_Player_Control>				
 
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -1829,7 +1869,6 @@
 		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
 		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
 		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
-		<Markup_Filename>Harrsk, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Hostile, DefaultGalacticHints </Markup_Filename>
@@ -1864,6 +1903,7 @@
 		<Starting_Forces> Pentastar, Muunilinst, Raider_Pentastar </Starting_Forces>
 		<Starting_Forces> Pentastar, Muunilinst, Raider_Pentastar </Starting_Forces>
 		<!-- Muunilinst Land Forces -->
+		<Starting_Forces> Pentastar, Muunilinst, Pentastar_MoffPalace </Starting_Forces>
 		<Starting_Forces> Pentastar, Muunilinst, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pentastar, Muunilinst, PA_Capital </Starting_Forces>
 		<Starting_Forces> Pentastar, Muunilinst, Pentastar_trooper_Squad </Starting_Forces>
@@ -1885,6 +1925,7 @@
 		<Starting_Forces> Underworld, Nirauan, Asdoni </Starting_Forces>
 		<Starting_Forces> Underworld, Nirauan, Nuruodo </Starting_Forces>
 		<!-- Nirauan Land Forces -->
+		<Starting_Forces> Underworld, Nirauan, Hand_GovernorOffice </Starting_Forces>
 		<Starting_Forces> Underworld, Nirauan, U_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Underworld, Nirauan, U_Ground_Palace </Starting_Forces>
 		<Starting_Forces> Underworld, Nirauan, Phalanx_Trooper_Squad </Starting_Forces>
@@ -1902,6 +1943,7 @@
 		<Starting_Forces> Empire, Coruscant, Lancer_Frigate </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Vindicator_Cruiser </Starting_Forces>
 		<!-- Coruscant Land Forces -->
+		<Starting_Forces> Empire, Coruscant, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Remnant_Capital </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Imperial_EWEB_Squad </Starting_Forces>
@@ -1915,17 +1957,19 @@
 		<Starting_Forces> Empire, Chazwa, Lancer_Frigate</Starting_Forces>
 		<Starting_Forces> Empire, Chazwa, Lancer_Frigate </Starting_Forces>
 		<!-- Chazwa Land Forces -->
+		<Starting_Forces> Empire, Chazwa, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Chazwa, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Chazwa, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Chazwa, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
 		<!-- Ciutric Space Forces -->
-		<Starting_Forces> Empire, Ciutric, Generic_Victory_Destroyer_TWO </Starting_Forces>
+		<Starting_Forces> Empire, Ciutric, Generic_Victory_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Empire, Ciutric, Dreadnaught_Empire </Starting_Forces>
 		<Starting_Forces> Empire, Ciutric, Strike_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Ciutric, Lancer_Frigate</Starting_Forces>
 		<Starting_Forces> Empire, Ciutric, Lancer_Frigate </Starting_Forces>
 		<!-- Ciutric Land Forces -->
+		<Starting_Forces> Empire, Ciutric, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Ciutric, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Ciutric, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Ciutric, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1951,6 +1995,7 @@
 		<Starting_Forces> Empire, Wayland, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Wayland, Carrack_Cruiser </Starting_Forces>
 		<!-- Wayland Land Forces -->
+		<Starting_Forces> Empire, Wayland, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Wayland, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Wayland, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Wayland, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1962,6 +2007,7 @@
 		<Starting_Forces> Empire, Dathomir, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, Carrack_Cruiser </Starting_Forces>
 		<!-- Dathomir Land Forces -->
+		<Starting_Forces> Empire, Dathomir, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1973,6 +2019,7 @@
 		<Starting_Forces> Empire, Felucia, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Felucia, Lancer_Frigate </Starting_Forces>
 		<!-- Felucia Land Forces -->
+		<Starting_Forces> Empire, Felucia, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Felucia, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Felucia, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Felucia, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1984,6 +2031,7 @@
 		<Starting_Forces> Empire, Morishim, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Morishim, Lancer_Frigate </Starting_Forces>
 		<!-- Morishim Land Forces -->
+		<Starting_Forces> Empire, Morishim, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Morishim, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Morishim, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Morishim, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1999,6 +2047,7 @@
 		<Starting_Forces> Rebel, Yavin, Corellian_Gunboat</Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, Corellian_Corvette </Starting_Forces>
 		<!-- Yavin Land Forces -->
+		<Starting_Forces> Rebel, Yavin, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, Rebel_Infantry_Squad </Starting_Forces>
@@ -2011,6 +2060,7 @@
 		<Starting_Forces> Rebel, Wistril, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Wistril, Corellian_Corvette </Starting_Forces>
 		<!-- Wistril Land Forces -->
+		<Starting_Forces> Rebel, Wistril, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Wistril, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Wistril, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Wistril, Rebel_Infantry_Squad </Starting_Forces>
@@ -2023,6 +2073,7 @@
 		<Starting_Forces> Rebel, MonCalimari, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<!-- Mon Cal Land Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
@@ -2035,6 +2086,7 @@
 		<Starting_Forces> Rebel, Chandrila, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Chandrila, Corellian_Corvette </Starting_Forces>
 		<!-- Chandrila Land Forces -->
+		<Starting_Forces> Rebel, Chandrila, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Chandrila, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Chandrila, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Chandrila, Rebel_Infantry_Squad </Starting_Forces>
@@ -2048,6 +2100,7 @@
 		<Starting_Forces> Rebel, Ithor, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Ithor, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- Ithor Land Forces -->
+		<Starting_Forces> Rebel, Ithor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Ithor, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Ithor, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Ithor, R_Ground_Barracks </Starting_Forces>
@@ -2181,7 +2234,7 @@
 			Eaittu_Vondarc,
 			Elrood_Exocron,
 			Elrood_Glova,
-			Endor_Moorja,
+			Endor_Qretu,
 			Eriadu_Sanrafsix,
 			Eriadu_Sullust,
 			Exocron_Utapau,
@@ -2198,18 +2251,18 @@
 			Gyndine_Talasea,
 			Honoghr_Kessel,
 			Honoghr_Maw,
+			Honoghr_Ylesia,
 			Kalist_Kampe,
 			Kampe_Ojom,
 			Kashyyyk_Kessel,
 			Kessel_Maw,
-			Kessel_Ylesia,
 			Kothlis_Rishi,
-			Maw_Ylesia,
 			Moorja_YagDhul,
 			Mustafar_Saijo,
 			NalHutta_Ylesia,
 			Nkllon_Qat,
 			Nkllon_Woostri,
+			Pardron_Tatooine,
 			Pardron_Ukio,
 			Qat_Woostri,
 			Qretu_YagDhul,
@@ -2234,7 +2287,7 @@
 			Kaal_Nkllon,
 			Nkllon_Qretu,
 			Ryloth_Svivren,
-			Bpfassh_Svivren,
+			Sluis_Svivren,
 			Commenor_Coruscant,
 			Columus_Corellia
 		</Trade_Routes>
@@ -2262,8 +2315,7 @@
 		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
 		<AI_Player_Control> Teradoc, None </AI_Player_Control>      			
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
-		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
+		<AI_Player_Control> Warlords, None </AI_Player_Control>			
 
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -2274,7 +2326,6 @@
 		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
 		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
 		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
-		<Markup_Filename>Harrsk, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Hostile, DefaultGalacticHints </Markup_Filename>
@@ -2309,7 +2360,8 @@
 		<Starting_Forces> Hutts, Eriadu, Tartan_Patrol_Cruiser </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Tartan_Patrol_Cruiser </Starting_Forces>
 		<!-- Muunilinst Land Forces -->
-		<Starting_Forces> Hutts, Eriadu, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Hutts, Eriadu, Eriadu_MoffPalace </Starting_Forces>
+		<Starting_Forces> Hutts, Eriadu, A_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Eriadu_Capital </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_Trooper_Squad </Starting_Forces>
 		<Starting_Forces> Hutts, Eriadu, Delvardus_Trooper_Squad </Starting_Forces>
@@ -2332,6 +2384,7 @@
 		<Starting_Forces> Empire, Coruscant, Lancer_Frigate </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Vindicator_Cruiser </Starting_Forces>
 		<!-- Coruscant Land Forces -->
+		<Starting_Forces> Empire, Coruscant, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Remnant_Capital </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Imperial_EWEB_Squad </Starting_Forces>
@@ -2345,17 +2398,19 @@
 		<Starting_Forces> Empire, Byss, Lancer_Frigate</Starting_Forces>
 		<Starting_Forces> Empire, Byss, Lancer_Frigate </Starting_Forces>
 		<!-- Chazwa Land Forces -->
+		<Starting_Forces> Empire, Byss, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Byss, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Byss, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Byss, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
 		<!-- Ciutric Space Forces -->
-		<Starting_Forces> Empire, Kessel, Generic_Victory_Destroyer_TWO </Starting_Forces>
+		<Starting_Forces> Empire, Kessel, Generic_Victory_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Dreadnaught_Empire </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Strike_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Lancer_Frigate</Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Lancer_Frigate </Starting_Forces>
 		<!-- Ciutric Land Forces -->
+		<Starting_Forces> Empire, Kessel, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2366,6 +2421,8 @@
 		<Starting_Forces> Empire, The_Maw, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Empire, The_Maw, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, The_Maw, Carrack_Cruiser </Starting_Forces>
+		
+		<Starting_Forces> Empire, The_Maw, Empire_MoffPalace </Starting_Forces>
 		
 		<!-- Kauron Space Forces -->
 		<Starting_Forces> Empire, Ojom, Generic_Venator </Starting_Forces>
@@ -2381,6 +2438,7 @@
 		<Starting_Forces> Empire, Thyferra, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Carrack_Cruiser </Starting_Forces>
 		<!-- Wayland Land Forces -->
+		<Starting_Forces> Empire, Thyferra, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Thyferra, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2392,6 +2450,7 @@
 		<Starting_Forces> Empire, Dathomir, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, Carrack_Cruiser </Starting_Forces>
 		<!-- Dathomir Land Forces -->
+		<Starting_Forces> Empire, Dathomir, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2403,6 +2462,7 @@
 		<Starting_Forces> Empire, Denon, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Denon, Lancer_Frigate </Starting_Forces>
 		<!-- Felucia Land Forces -->
+		<Starting_Forces> Empire, Denon, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Denon, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Denon, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Denon, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2414,6 +2474,7 @@
 		<Starting_Forces> Empire, Kampe, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Kampe, Lancer_Frigate </Starting_Forces>
 		<!-- Morishim Land Forces -->
+		<Starting_Forces> Empire, Kampe, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Kampe, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Kampe, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kampe, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2429,6 +2490,7 @@
 		<Starting_Forces> Rebel, Endor, Corellian_Gunboat</Starting_Forces>
 		<Starting_Forces> Rebel, Endor, Corellian_Corvette </Starting_Forces>
 		<!-- Yavin Land Forces -->
+		<Starting_Forces> Rebel, Endor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Endor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Endor, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Endor, Rebel_Infantry_Squad </Starting_Forces>
@@ -2441,6 +2503,7 @@
 		<Starting_Forces> Rebel, Corellia, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Corellia, Corellian_Corvette </Starting_Forces>
 		<!-- Wistril Land Forces -->
+		<Starting_Forces> Rebel, Corellia, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Corellia, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Corellia, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Corellia, Rebel_Infantry_Squad </Starting_Forces>
@@ -2453,6 +2516,7 @@
 		<Starting_Forces> Rebel, Kashyyyk, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Corvette </Starting_Forces>
 		<!-- Mon Cal Land Forces -->
+		<Starting_Forces> Rebel, Kashyyyk, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Rebel_Infantry_Squad </Starting_Forces>
@@ -2465,6 +2529,7 @@
 		<Starting_Forces> Rebel, Bothawui, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Corellian_Corvette </Starting_Forces>
 		<!-- Chandrila Land Forces -->
+		<Starting_Forces> Rebel, Bothawui, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Rebel_Infantry_Squad </Starting_Forces>
@@ -2478,6 +2543,7 @@
 		<Starting_Forces> Rebel, Ryloth, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Ryloth, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- Ithor Land Forces -->
+		<Starting_Forces> Rebel, Ryloth, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Ryloth, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Ryloth, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Ryloth, R_Ground_Barracks </Starting_Forces>
@@ -2566,12 +2632,16 @@
 			Ossus
 		</Locations>
 		<Trade_Routes>
-			Antem_Bimmisaari,
-			Antem_Ryvester,
+			Abhean_Metalorn,
+			Antem_Centares,
+			Antem_Chorios,
+			Antem_Jomark,
 			Belsmuth_Celanon,
 			Belsmuth_Dathomir,
 			Belsmuth_Phind,
+			Bimmisaari_Cejansij,
 			Bimmisaari_Charros,
+			Bimmisaari_Jomark,
 			Bimmisaari_Kessel,
 			Bonadan_Ession,
 			Bonadan_Etti,
@@ -2584,11 +2654,13 @@
 			Celanon_Dathomir,
 			Celanon_Junction,
 			Centares_Jomark,
-			Centares_Phind,
 			Charubah_Hapes,
 			Charubah_MistOne,
+			Charubah_MistTwo,
+			Chorios_Ryvester,
 			Columex_Felucia,
 			Columex_Maridun,
+			Columex_Ossus,
 			Commenor_Kashyyyk,
 			Commenor_Onderon,
 			Contruum_Garos,
@@ -2600,37 +2672,36 @@
 			Dathomir_Kauron,
 			Desevro_Emmer,
 			Desevro_Ession,
-			Desevro_Etti,
 			Desevro_Lianna,
 			Emmer_Ession,
 			Emmer_MonCal,
+			Ession_Etti,
 			Ession_Hast,
 			Etti_Telos,
 			Felucia_Lianna,
 			Felucia_Yavin,
+			Garos_Phindar,
 			Garos_Roche,
 			Hapes_Terephon,
 			Hast_MonCal,
 			Honoghr_Kessel,
 			Honoghr_Maw,
 			Honoghr_MonCal,
+			Honoghr_Ylesia,
 			Jomark_Metalorn,
 			Jomark_Nespis,
-			Jomark_Ryvester,
 			Junction_Serenno,
 			Kashyyyk_Porus,
 			Kashyyyk_Onderon,
+			Kauron_Serenno,
 			Kauron_Telos,
-			Kauron_Yavin,
-			Kessel_Ylesia,
+			Kessel_Maw,
 			Korriban_Telos,
 			Korriban_Yavin,
 			Kothlis_Rishi,
 			Maridun_Phind,
 			Maridun_Yavin,
-			Maw_Ylesia,
 			Metalorn_Roche,
-			Metalorn_Ryvester,
 			MistThree_Porus,
 			MistThree_Roche,
 			MistThree_Terephon,
@@ -2641,6 +2712,7 @@
 			Nespis_NewAlderaan,
 			Nespis_Ossus,
 			Onderon_Porus,
+			Phindar_Ryvester,
 			Rishi_Ukio,
 			Roche_Thanos,
 			Serenno_Yavin,
@@ -2656,11 +2728,9 @@
 			Bandomeer_Dathomir,
 			Bandomeer_Mandalore,
 			Gravan_MistTwo,
-			Hapes_MistTwo,
 			Abhean_Garos_IV,
 			Abhean_Centares,
 			Chorios_Ossus,
-			Chorios_Phind,
 			Bandomeer_Gravan
 		</Trade_Routes>
 		
@@ -2687,8 +2757,7 @@
 		<AI_Player_Control> Sarlacc, None </AI_Player_Control>     
 		<AI_Player_Control> Hutts, None </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
-		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
+		<AI_Player_Control> Warlords, None </AI_Player_Control>				
 
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -2699,7 +2768,6 @@
 		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
 		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
 		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
-		<Markup_Filename>Harrsk, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Hostile, DefaultGalacticHints </Markup_Filename>
@@ -2723,7 +2791,8 @@
 		<Starting_Forces> Teradoc, Centares, Arquitens </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Neutron_Star </Starting_Forces>
 		<!-- Muunilinst Land Forces -->
-		<Starting_Forces> Teradoc, Centares, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, T_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Maldrood_Capital </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2746,6 +2815,7 @@
 		<Starting_Forces> Empire, Coruscant, Lancer_Frigate </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Vindicator_Cruiser </Starting_Forces>
 		<!-- Coruscant Land Forces -->
+		<Starting_Forces> Empire, Coruscant, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Remnant_Capital </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Imperial_EWEB_Squad </Starting_Forces>
@@ -2759,17 +2829,19 @@
 		<Starting_Forces> Empire, Bonadan, Lancer_Frigate</Starting_Forces>
 		<Starting_Forces> Empire, Bonadan, Lancer_Frigate </Starting_Forces>
 		<!-- Chazwa Land Forces -->
+		<Starting_Forces> Empire, Bonadan, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Bonadan, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Bonadan, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Bonadan, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
 		<!-- Ciutric Space Forces -->
-		<Starting_Forces> Empire, Kessel, Generic_Victory_Destroyer_TWO </Starting_Forces>
+		<Starting_Forces> Empire, Kessel, Generic_Victory_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Dreadnaught_Empire </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Strike_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Lancer_Frigate</Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Lancer_Frigate </Starting_Forces>
 		<!-- Ciutric Land Forces -->
+		<Starting_Forces> Empire, Kessel, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kessel, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2781,12 +2853,16 @@
 		<Starting_Forces> Empire, The_Maw, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, The_Maw, Carrack_Cruiser </Starting_Forces>
 		
+		<Starting_Forces> Empire, The_Maw, Empire_MoffPalace </Starting_Forces>
+		
 		<!-- Kauron Space Forces -->
 		<Starting_Forces> Empire, Kuat, Generic_Venator </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Generic_Venator </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Lancer_Frigate </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Carrack_Cruiser </Starting_Forces>
+		
+		<Starting_Forces> Empire, Kuat, Empire_MoffPalace </Starting_Forces>
 		
 		<!-- Wayland -->
 		<Starting_Forces> Empire, Bandomeer, Generic_Venator </Starting_Forces>
@@ -2795,6 +2871,7 @@
 		<Starting_Forces> Empire, Bandomeer, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Bandomeer, Carrack_Cruiser </Starting_Forces>
 		<!-- Wayland Land Forces -->
+		<Starting_Forces> Empire, Bandomeer, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Bandomeer, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Bandomeer, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Bandomeer, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2806,6 +2883,7 @@
 		<Starting_Forces> Empire, Dathomir, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, Carrack_Cruiser </Starting_Forces>
 		<!-- Dathomir Land Forces -->
+		<Starting_Forces> Empire, Dathomir, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Dathomir, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2817,6 +2895,7 @@
 		<Starting_Forces> Empire, Ession, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Ession, Lancer_Frigate </Starting_Forces>
 		<!-- Felucia Land Forces -->
+		<Starting_Forces> Empire, Ession, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Ession, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Ession, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Ession, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2832,6 +2911,7 @@
 		<Starting_Forces> Rebel, Ylesia, Corellian_Gunboat</Starting_Forces>
 		<Starting_Forces> Rebel, Ylesia, Corellian_Corvette </Starting_Forces>
 		<!-- Yavin Land Forces -->
+		<Starting_Forces> Rebel, Ylesia, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Ylesia, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Ylesia, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Ylesia, Rebel_Infantry_Squad </Starting_Forces>
@@ -2844,6 +2924,7 @@
 		<Starting_Forces> Rebel, MonCalimari, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<!-- Wistril Land Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
@@ -2856,6 +2937,7 @@
 		<Starting_Forces> Rebel, Kashyyyk, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Corvette </Starting_Forces>
 		<!-- Mon Cal Land Forces -->
+		<Starting_Forces> Rebel, Kashyyyk, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Rebel_Infantry_Squad </Starting_Forces>
@@ -2868,6 +2950,7 @@
 		<Starting_Forces> Rebel, Bothawui, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Corellian_Corvette </Starting_Forces>
 		<!-- Chandrila Land Forces -->
+		<Starting_Forces> Rebel, Bothawui, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Bothawui, Rebel_Infantry_Squad </Starting_Forces>
@@ -2881,6 +2964,7 @@
 		<Starting_Forces> Rebel, Kothlis, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- Ithor Land Forces -->
+		<Starting_Forces> Rebel, Kothlis, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Kothlis, R_Ground_Barracks </Starting_Forces>
@@ -3102,7 +3186,8 @@
 			Ossus
 		</Locations>
 		<Trade_Routes>
-			Antem_Bimmisaari,
+			Antem_Centares,
+			Antem_Columex,
 			Antem_Ryvester,
 			Axxila_Celanon,
 			Axxila_Dathomir,
@@ -3110,12 +3195,13 @@
 			Axxila_Tangrene,
 			Bandomeer_Dathomir,
 			Bandomeer_Mandalore,
-			Bandomeer_Myrkr,
+			Bandomeer_Wayland,
 			Belsmuth_Celanon,
 			Belsmuth_Phind,
 			Belsmuth_Yavin,
 			Bimmiel_CauldronNebula,
 			Bimmisaari_Charros,
+			Bimmisaari_Jomark,
 			Bimmisaari_MonCal,
 			Bonadan_Ession,
 			Bonadan_Etti,
@@ -3125,40 +3211,44 @@
 			Carida_Gravan,
 			Carida_Togoria,
 			CauldronNebula_Kauron,
+			Cauldron_EolSha,
 			Celanon_Junction,
-			Centares_Columex,
 			Centares_Jomark,
 			Centares_Phind,
 			Centares_Roche,
 			Chandrila_Corulag,
 			Charros_Thanos,
 			Ciutric_Corvis,
+			Ciutric_Hewett,
 			Ciutric_Liinade,
 			Ciutric_Vros,
 			Columex_Lianna,
 			Columex_Maridun,
 			Columex_Ossus,
-			Comkin_Gravan,
+			Comkin_Corsin,
 			Comkin_Levian,
 			Contruum_Garos,
+			Contruum_Gravan,
 			Contruum_Mandalore,
 			Contruum_Roche,
+			Contruum_Thanos,
+			Corsin_Tartaglia,
 			Corulag_Coruscant,
 			Corvis_Tangrene,
 			Dathomir_Garos,
 			Dathomir_Selaggis,
 			Desevro_Emmer,
 			Desevro_Ession,
-			Desevro_Etti,
 			Desevro_Lianna,
 			Emmer_Ession,
 			Emmer_MonCal,
 			EolSha_Etti_IV,
-			EolSha_Kauron,
+			Ession_Etti,
 			Ession_Hast,
 			Etti_Telos,
 			Felucia_Yavin,
-			Gravan_Togoria,
+			Garos_Phindar,
+			Gravan_Obroa,
 			Hast_MonCal,
 			Hewett_Paarin,
 			Jomark_Metalorn,
@@ -3168,7 +3258,7 @@
 			Junction_Tangrene,
 			Kauron_Tangrene,
 			Kauron_Telos,
-			Kauron_Yavin,
+			Kauron_Serenno,
 			Korriban_Yavin,
 			Levian_Myrkr,
 			Levian_Obroa,
@@ -3177,14 +3267,13 @@
 			MonCal_Nespis,
 			MonCal_Ossus,
 			Myrkr_Wayland,
+			Nespis_Ossus,
 			Paarin_Tartaglia,
-			Roche_Togoria,
 			Roche_Thanos,
 			Serenno_Yavin,
+			Thanos_Togoria,
 			Obroa_Poderis,
-			Sif_Tartaglia,
 			Levian_Sif,
-			Hewett_Vros,
 			Korriban_Telos,
 			Felucia_Lianna,
 			Corsin_Hewett,
@@ -3218,8 +3307,7 @@
 		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
 		<AI_Player_Control> Hutts, None </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
-		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
+		<AI_Player_Control> Warlords, None </AI_Player_Control>			
 
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -3230,7 +3318,6 @@
 		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
 		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
 		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
-		<Markup_Filename>Harrsk, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Hostile, DefaultGalacticHints </Markup_Filename>
@@ -3255,7 +3342,8 @@
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
 		<!-- Muunilinst Land Forces -->
-		<Starting_Forces> Pirates, Celanon, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Celanon, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Celanon, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Rancor_Base </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -3278,6 +3366,7 @@
 		<Starting_Forces> Empire, Coruscant, Lancer_Frigate </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Vindicator_Cruiser </Starting_Forces>
 		<!-- Coruscant Land Forces -->
+		<Starting_Forces> Empire, Coruscant, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Remnant_Capital </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Imperial_EWEB_Squad </Starting_Forces>
@@ -3291,17 +3380,19 @@
 		<Starting_Forces> Empire, Bonadan, Lancer_Frigate</Starting_Forces>
 		<Starting_Forces> Empire, Bonadan, Lancer_Frigate </Starting_Forces>
 		<!-- Chazwa Land Forces -->
+		<Starting_Forces> Empire, Bonadan, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Bonadan, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Bonadan, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Bonadan, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
 		<!-- Ciutric Space Forces -->
-		<Starting_Forces> Empire, Centares, Generic_Victory_Destroyer_TWO </Starting_Forces>
+		<Starting_Forces> Empire, Centares, Generic_Victory_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Empire, Centares, Dreadnaught_Empire </Starting_Forces>
 		<Starting_Forces> Empire, Centares, Strike_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Centares, Lancer_Frigate</Starting_Forces>
 		<Starting_Forces> Empire, Centares, Lancer_Frigate </Starting_Forces>
 		<!-- Ciutric Land Forces -->
+		<Starting_Forces> Empire, Centares, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Centares, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Centares, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Centares, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -3327,6 +3418,7 @@
 		<Starting_Forces> Empire, Bandomeer, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Bandomeer, Carrack_Cruiser </Starting_Forces>
 		<!-- Wayland Land Forces -->
+		<Starting_Forces> Empire, Bandomeer, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Bandomeer, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Bandomeer, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Bandomeer, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -3338,6 +3430,7 @@
 		<Starting_Forces> Empire, Columex, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Columex, Carrack_Cruiser </Starting_Forces>
 		<!-- Dathomir Land Forces -->
+		<Starting_Forces> Empire, Columex, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Columex, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Columex, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Columex, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -3349,6 +3442,7 @@
 		<Starting_Forces> Empire, Carida, Escort_Carrier</Starting_Forces>
 		<Starting_Forces> Empire, Carida, Lancer_Frigate </Starting_Forces>
 		<!-- Felucia Land Forces -->
+		<Starting_Forces> Empire, Carida, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Carida, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -3364,6 +3458,7 @@
 		<Starting_Forces> Rebel, Yavin, Corellian_Gunboat</Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, Corellian_Corvette </Starting_Forces>
 		<!-- Yavin Land Forces -->
+		<Starting_Forces> Rebel, Yavin, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Yavin, Rebel_Infantry_Squad </Starting_Forces>
@@ -3376,6 +3471,7 @@
 		<Starting_Forces> Rebel, MonCalimari, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<!-- Wistril Land Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
@@ -3388,6 +3484,7 @@
 		<Starting_Forces> Rebel, Chandrila, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Chandrila, Corellian_Corvette </Starting_Forces>
 		<!-- Mon Cal Land Forces -->
+		<Starting_Forces> Rebel, Chandrila, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Chandrila, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Chandrila, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Chandrila, Rebel_Infantry_Squad </Starting_Forces>
@@ -3400,6 +3497,7 @@
 		<Starting_Forces> Rebel, Contruum, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Contruum, Corellian_Corvette </Starting_Forces>
 		<!-- Chandrila Land Forces -->
+		<Starting_Forces> Rebel, Contruum, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Contruum, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Contruum, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Contruum, Rebel_Infantry_Squad </Starting_Forces>
@@ -3413,10 +3511,374 @@
 		<Starting_Forces> Rebel, Hast, Quaser </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- Ithor Land Forces -->
+		<Starting_Forces> Rebel, Hast, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Hast, R_Ground_Barracks </Starting_Forces>
 
+	</Campaign>
+ 
+ 	<Campaign Name="Sandbox_FTGU_CSA">
+
+		<Campaign_Set> Sandbox_FTGU </Campaign_Set>
+		<Sort_Order>29</Sort_Order>
+
+        <Text_ID> TEXT_CAMPAIGN_SINGLE_FTGU </Text_ID>
+        <Description_Text> TEXT_CAMPAIGN_SINGLE_DESCRIPTION_FTGU </Description_Text>
+
+        <Camera_Shift_X> 40.0 </Camera_Shift_X>
+        <Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+        <Camera_Distance> 1200.0 </Camera_Distance>
+	
+		<Locations>
+			Galaxy_Core_Art_Model,
+			Atchorb,
+			Axxila,
+			Bandomeer,
+			Belderone,
+			Belsmuth
+			Bonadan,
+			CauldronNebula,
+			Celanon,
+			Cestus,
+			Chorios,
+			Ciutric,
+			Columex,
+			Concord,
+			Corvis,
+			Dathomir,
+			Desevro,
+			Dromund,
+			Emmer,
+			EolSha,
+			Etti_IV,
+			Ession,
+			Felucia,
+			Florrum,
+			Galidraan,
+			Garos_IV,
+			Hast,
+			Junction,
+			Kalla,
+			Kauron,
+			Korriban,
+			Lianna,
+			Liinade,
+			Mandalore,
+			Maridun,
+			Maryo,
+			Minntooine,
+			MonCalimari,
+			Murkhana,
+			Mytus,
+			NespisVIII,
+			NewAlderaan,
+			Ordo,
+			Orron,
+			Oslumpex,
+			Ossus,
+			Phind,
+			Quell,
+			Raxus,
+			Raxus_Second,
+			Rhen_Var,
+			Ryvester,
+			Saffalore,
+			Selaggis,
+			Serenno,
+			Tangrene,
+			Telos,
+			Thule,
+			Ulicia,
+			Vorpaya,
+			Vros,
+			Yavin,
+			Zanbar
+		</Locations>
+		<Trade_Routes>
+			Atchorb_Bonadan,
+			Atchorb_Etti,
+			Atchorb_Mytus,
+			Atchorb_Ulicia,
+			Axxila_Liinade,
+			Axxila_Selaggis,
+			Axxila_Tangrene,
+			Bandomeer_Dathomir,
+			Bandomeer_Vorpaya,
+			Belderone_Ossus,
+			Belderone_Chorios,
+			Belsmuth_Celanon,
+			Belsmuth_Dathomir,
+			Belsmuth_Phind,
+			Bonadan_Saffalore,
+			Bonadan_Ulicia,
+			Cauldron_EolSha,
+			CauldronNebula_Kauron,
+			Celanon_Junction,
+			Cestus_Dathomir,
+			Chorios_Ryvester,
+			Ciutric_Corvis,
+			Ciutric_Liinade,
+			Ciutric_Vros,
+			Columex_Galidraan,
+			Columex_Maridun,
+			Columex_Ossus,
+			Concord_Mandalore,
+			Corvis_Kauron,
+			Dathomir_Selaggis,
+			Desevro_Emmer,
+			Desevro_Ession,
+			Desevro_Felucia,
+			Desevro_Lianna,
+			Desevro_Raxus,
+			Dromund_Korriban,
+			Dromund_Thule,
+			Emmer_Ession,
+			EolSha_Etti_IV,
+			EolSha_Telos,
+			Ession_Etti,
+			Ession_Kalla,
+			Ession_Maryo,
+			Ession_Saffalore,
+			Felucia_Florrum,
+			Felucia_Lianna,
+			Florrum_Korriban,
+			Galidraan_Lianna,
+			Galidraan_Rhen_Var,
+			Garos_IV_Maridun,
+			Garos_Ordo,
+			Hast_MonCal,
+			Hast_Orron,
+			Junction_Serenno,
+			Junction_Tangrene,
+			Kalla_Oslumpex,
+			Kauron_Serenno,
+			Kauron_Tangrene,
+			Kauron_Telos,
+			Korriban_Thule,
+			Korriban_Yavin,
+			Mandalore_Ordo,
+			Mandalore_Vorpaya,
+			Mandalore_Zanbar,
+			Maridun_Phind,
+			Maridun_Quell,
+			Maridun_Yavin,
+			Maryo_Telos,
+			Minntooine_MonCal,
+			Minntooine_Murkhana,
+			MonCal_NewAlderaan,
+			Nespis_NewAlderaan,
+			Nespis_Ossus,
+			Orron_Saffalore,
+			Orron_Raxus_Second,
+			Oslumpex_Saffalore,
+			Ossus_Murkhana,
+			Phindar_Yavin,
+			Phindar_Zanbar,
+			Quell_Ryvester,
+			Raxus_Raxus_Second,
+			Serenno_Tangrene,
+			Serenno_Yavin,
+			Telos_Thule,
+			Telos_Yavin
+		</Trade_Routes>
+		
+		<Home_Location> Rebel, Bothawui </Home_Location>
+		<Home_Location> Empire, Coruscant </Home_Location>
+		<Home_Location> Corporate_Sector, Ulicia </Home_Location>
+
+		 
+        <Starting_Active_Player> Corporate_Sector </Starting_Active_Player>
+
+		<Rebel_Story_Name>Conquests\FTGU\Story_Plots_Sandbox_FTGU_Rebel.xml</Rebel_Story_Name>
+        <Empire_Story_Name>Conquests\FTGU\Story_Plots_Sandbox_FTGU_Empire.xml</Empire_Story_Name>
+		<Underworld_Story_Name>Conquests\FTGU\Story_Plots_Sandbox_FTGU_Container.xml</Underworld_Story_Name>
+		
+		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
+		<AI_Player_Control> Empire, GenericAI </AI_Player_Control>
+		<AI_Player_Control> Corporate_Sector, SandboxHuman </AI_Player_Control>
+		<AI_Player_Control> Pirates, GenericAI </AI_Player_Control>
+		<AI_Player_Control> Hostile, None </AI_Player_Control>
+		
+		<AI_Player_Control> Pentastar, None</AI_Player_Control>
+		<AI_Player_Control> Underworld, None </AI_Player_Control>
+		<AI_Player_Control> Yevetha, None </AI_Player_Control>
+		<AI_Player_Control> Sarlacc, None </AI_Player_Control>     
+		<AI_Player_Control> Hutts, None </AI_Player_Control>				
+		<AI_Player_Control> Teradoc, None </AI_Player_Control>		
+		<AI_Player_Control> Warlords, None </AI_Player_Control>				
+
+		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Underworld, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Pirates, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Teradoc, DefaultMaldroodHints </Markup_Filename>			
+		<Markup_Filename>Pentastar, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
+		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
+		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
+		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Hostile, DefaultGalacticHints </Markup_Filename>
+		
+		<Supports_Custom_Settings>False</Supports_Custom_Settings>
+		<Show_Completed_Tab>True</Show_Completed_Tab>
+		
+		<Starting_Credits> Hostile,  50000 </Starting_Credits>
+		
+		<!-- CSA Starting Forces -->
+
+		<Starting_Credits> Corporate_Sector,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Corporate_Sector, 4 </Starting_Tech_Level>
+		<Max_Tech_Level> Corporate_Sector, 4 </Max_Tech_Level>
+		
+		
+		<!-- Muunilinst Space Forces -->
+		<Starting_Forces> Corporate_Sector, Ulicia, CSA_Star_Base_2 </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Ulicia, Generic_Gladiator</Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Ulicia, Generic_Gladiator </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Ulicia, Marauder_Missile_Cruiser </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Ulicia, Neutron_Star </Starting_Forces>
+		<!-- Muunilinst Land Forces -->
+		<Starting_Forces> Corporate_Sector, Ulicia, CSA_LocalOffice </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Ulicia, C_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Ulicia, CSA_Capital </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Ulicia, Espo_Squad </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Ulicia, Espo_Squad </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Ulicia, Espo_Squad </Starting_Forces>
+
+		<!-- EotH Starting Forces -->
+
+		<Starting_Credits> Pirates,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Pirates, 5 </Max_Tech_Level>
+		
+		<!-- Serenno Space Forces -->
+		<Starting_Forces> Pirates, Serenno, Generic_Victory_Destroyer </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Neutron_Star </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, CR90_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Dreadnaught_Empire </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Rancor_Base </Starting_Forces>
+		<!-- Serenno Land Forces -->
+		<Starting_Forces> Pirates, Serenno, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Zsinj_Raptor_Squad </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Zsinj_Raptor_Squad </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Zsinj_Heavy_Scout_Squad </Starting_Forces>
+		
+		<!-- Desevro Space Forces -->
+		<Starting_Forces> Pirates, Desevro, Zsinj_Star_Base_2 </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Nebulon_B_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Nebulon_B_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, CR90_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Quasar_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Dreadnaught_Empire </Starting_Forces>
+		<!-- Desevro Land Forces -->
+		<Starting_Forces> Pirates, Desevro, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Zsinj_Raptor_Squad </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Zsinj_Raptor_Squad </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Zsinj_Heavy_Scout_Squad </Starting_Forces>
+		
+		<!-- Maridun Space Forces -->
+		<Starting_Forces> Pirates, Maridun, Zsinj_Star_Base_2 </Starting_Forces>
+		<Starting_Forces> Pirates, Maridun, Quasar_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Maridun, CR90_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Maridun, Generic_Gladiator </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Nebulon_B-2_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Maridun, Neutron_Star </Starting_Forces>
+		<!-- Maridun Land Forces -->
+		<Starting_Forces> Pirates, Maridun, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Maridun, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Maridun, Zsinj_Raptor_Squad </Starting_Forces>
+		<Starting_Forces> Pirates, Maridun, Zsinj_Raptor_Squad </Starting_Forces>
+		
+		<Starting_Credits> Empire,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Empire, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Empire, 3 </Max_Tech_Level>
+		
+		
+		<!-- Ciutric Space Forces -->
+		<Starting_Forces> Empire, Ciutric, Remnant_Star_Base_2 </Starting_Forces>
+		<Starting_Forces> Empire, Ciutric, Escort_Carrier </Starting_Forces>
+		<Starting_Forces> Empire, Ciutric, Lancer_Frigate </Starting_Forces>
+		<Starting_Forces> Empire, Ciutric, Vindicator_Cruiser </Starting_Forces>
+		<!-- Ciutric Land Forces -->
+		<Starting_Forces> Empire, Ciutric, Empire_MoffPalace </Starting_Forces>
+		<Starting_Forces> Empire, Ciutric, E_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Empire, Ciutric, Remnant_Capital </Starting_Forces>
+		<Starting_Forces> Empire, Ciutric, Imperial_EWEB_Squad </Starting_Forces>
+		<Starting_Forces> Empire, Ciutric, Imperial_Stormtrooper_Squad </Starting_Forces>
+		<Starting_Forces> Empire, Ciutric, Imperial_Heavy_Scout_Squad </Starting_Forces>
+		
+		<!-- Corvis Space Forces -->
+		<Starting_Forces> Empire, Corvis, Generic_Victory_Destroyer_Two </Starting_Forces>
+		<Starting_Forces> Empire, Corvis, Dreadnaught_Empire </Starting_Forces>
+		<Starting_Forces> Empire, Corvis, Strike_Cruiser </Starting_Forces>
+		<Starting_Forces> Empire, Corvis, Lancer_Frigate</Starting_Forces>
+		<Starting_Forces> Empire, Corvis, Lancer_Frigate </Starting_Forces>
+		<!-- Corvis Land Forces -->
+		<Starting_Forces> Empire, Corvis, Empire_MoffPalace </Starting_Forces>
+		<Starting_Forces> Empire, Corvis, E_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Empire, Corvis, Imperial_Stormtrooper_Squad </Starting_Forces>
+		<Starting_Forces> Empire, Corvis, Imperial_Stormtrooper_Squad </Starting_Forces>
+		
+		<!-- Felucia Space Forces -->
+		<Starting_Forces> Empire, Maryo, Katana_Dreadnaught_Empire </Starting_Forces>
+		<Starting_Forces> Empire, Maryo, Katana_Dreadnaught_Empire </Starting_Forces>
+		<Starting_Forces> Empire, Maryo, Strike_Cruiser </Starting_Forces>
+		<Starting_Forces> Empire, Maryo, Escort_Carrier</Starting_Forces>
+		<Starting_Forces> Empire, Maryo, Lancer_Frigate </Starting_Forces>
+		<!-- Felucia Land Forces -->
+		<Starting_Forces> Empire, Maryo, Empire_MoffPalace </Starting_Forces>
+		<Starting_Forces> Empire, Maryo, E_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Empire, Maryo, Imperial_Stormtrooper_Squad </Starting_Forces>
+		<Starting_Forces> Empire, Maryo, Imperial_Stormtrooper_Squad </Starting_Forces>
+		
+		<Starting_Credits> Rebel,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
+		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
+		
+		<!-- Yavin Space Forces -->
+		<Starting_Forces> Rebel, NewAlderaan, Alliance_Assault_frigate </Starting_Forces>
+		<Starting_Forces> Rebel, NewAlderaan, Sacheen </Starting_Forces>
+		<Starting_Forces> Rebel, NewAlderaan, Sacheen </Starting_Forces>
+		<Starting_Forces> Rebel, NewAlderaan, Corellian_Gunboat</Starting_Forces>
+		<Starting_Forces> Rebel, NewAlderaan, Corellian_Corvette </Starting_Forces>
+		<!-- Yavin Land Forces -->
+		<Starting_Forces> Rebel, NewAlderaan, NewRep_SenatorsOffice </Starting_Forces>
+		<Starting_Forces> Rebel, NewAlderaan, R_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
+		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
+		<Starting_Forces> Rebel, NewAlderaan, Rebel_Light_Tank_Brigade </Starting_Forces>
+		
+		<!-- Wistril Space Forces -->
+		<Starting_Forces> Rebel, MonCalimari, Alliance_Assault_frigate </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, BAC </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, Sacheen </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, Quaser </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
+		<!-- Wistril Land Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, NewRep_Senate </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, R_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, Rebel_Light_Tank_Brigade </Starting_Forces>
+		
+		<!-- Chandrila Space Forces -->	
+		<Starting_Forces> Rebel, Hast, Dreadnaught_Rebel </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, BAC </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, Sacheen </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, Quaser </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, Corellian_Corvette </Starting_Forces>
+		<!-- Chandrila Land Forces -->
+		<Starting_Forces> Rebel, Hast, NewRep_SenatorsOffice </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, R_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, Rebel_Infantry_Squad </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, Rebel_Infantry_Squad </Starting_Forces>
+		<Starting_Forces> Rebel, Hast, Rebel_Light_Tank_Brigade </Starting_Forces>
+		
 	</Campaign>
  
 	<Campaign Name="Sandbox_FTGU_Yevetha">
@@ -3626,8 +4088,7 @@
 		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
 		<AI_Player_Control> Hutts, None </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>		
-		<AI_Player_Control> Warlords, None </AI_Player_Control>		
-		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
+		<AI_Player_Control> Warlords, None </AI_Player_Control>				
 
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -3638,7 +4099,6 @@
 		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
 		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
 		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
-		<Markup_Filename>Harrsk, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Hostile, DefaultGalacticHints </Markup_Filename>
@@ -3671,7 +4131,7 @@
 		<Starting_Forces> Yevetha, Polneye, P_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Yevetha, Polneye, Yevetha_Capital </Starting_Forces>
 		<Starting_Forces> Yevetha, Polneye, Yevetha_Infantry_Squad </Starting_Forces>
-		<Starting_Forces> Yevetha, Polneye, Yevethan_Heavy_Scout_Squad </Starting_Forces>
+		<Starting_Forces> Yevetha, Polneye, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		
 		<!-- EotH Starting Forces -->
 		<Starting_Credits> Underworld,  8000 </Starting_Credits>
@@ -3724,7 +4184,7 @@
 		<Starting_Forces> Empire, Ilum, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
 		<!-- Coruscant Space Forces -->
-		<Starting_Forces> Empire, Coruscant, Generic_Victory_Destroyer_TWO </Starting_Forces>
+		<Starting_Forces> Empire, Coruscant, Generic_Victory_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Dreadnaught_Empire </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Strike_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Coruscant, Lancer_Frigate</Starting_Forces>

@@ -47,12 +47,12 @@ ScriptPoolCount = 4
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 
-	Category = "Build_Base_Component_Light_Vehicle_Factory | Build_Initial_Groundbase_Only"
+	Category = "Build_Base_Component_Light_Vehicle_Factory"
 	IgnoreTarget = true
 	TaskForce = {
 	{
 		"BaseForce",
-		"E_Ground_Light_Vehicle_Factory | R_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | U_Ground_Vehicle_Factory | Hapan_Ground_Factory = 1"
+		"E_Ground_Light_Vehicle_Factory | A_Ground_Light_Vehicle_Factory | T_Ground_Light_Vehicle_Factory | Z_Ground_Light_Vehicle_Factory | C_Ground_Light_Vehicle_Factory |  R_Ground_Light_Vehicle_Factory | P_Ground_Light_Vehicle_Factory | U_Ground_Vehicle_Factory | Hapan_Ground_Factory = 1"
 	}
 	}
 

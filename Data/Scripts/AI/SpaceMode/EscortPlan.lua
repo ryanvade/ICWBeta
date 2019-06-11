@@ -55,8 +55,10 @@ function Definitions()
 	-- First Task Force
 	{
 		"MainForce"
-		,"Fighter = 1,4"
+		,"Fighter | Corvette = 1,4"
 		,"Generic_Interdictor_Cruiser = 0,1"
+		,"Massias_Interdictor = 0,1"
+        ,"CC7700 = 0,1"
 	}
 	}
 end

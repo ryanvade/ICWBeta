@@ -1,6 +1,74 @@
 <?xml version="1.0" ?>
 <Remnant_Space_Units>
 
+	<GroundCompany Name="Delvardus_Light_Scout_Squad">
+		<LOD_Bias>5</LOD_Bias>
+		<Text_ID>TEXT_IMPERIAL_LIGHT_SCOUT_SQUAD</Text_ID>
+		<!--<Encyclopedia_Good_Against> Rebel_Trooper MPTL </Encyclopedia_Good_Against>-->
+		<!--<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>-->
+		<GUI_Row> 0 </GUI_Row>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Damage>10</Damage>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Hutts</Affiliation>
+		<Build_Cost_Credits>75</Build_Cost_Credits>
+		<Piracy_Value_Credits>50</Piracy_Value_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>A_Ground_Barracks</Required_Special_Structures>
+		<Required_Planets />
+		<Behavior>ABILITY_COUNTDOWN, DUMMY_GROUND_COMPANY</Behavior>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>yes</Is_Escort>
+		<Ship_Class>infantry</Ship_Class>
+		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
+		<Company_Units>Scout_Trooper, Scout_Trooper</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_scout_trooper.tga</Icon_Name>
+		<GUI_Model_Name>EV_Bike.ALO</GUI_Model_Name>
+		<GUI_Distance>65</GUI_Distance>
+		<GUI_Offset>0 0 5</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Scout_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Scout_Trooper</SFXEvent_Fleet_Move>
+
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>650</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>6.5</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_SCOUTTROOPER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>UNTARGETED_STICKY_BOMB</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Spawned_Object_Type>Proj_Speeder_Bomb</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>3</Bomb_Countdown_Seconds>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Maintenance_Cost>0.05</Maintenance_Cost>
+		<Population_Value>1</Population_Value>
+		<Score_Cost_Credits>150</Score_Cost_Credits>
+	</GroundCompany>
+
 	<GroundInfantry Name="Storm_Commando">
 		<Text_ID>TEXT_UNIT_STORM_COMMANDO</Text_ID>
 		<!--<Encyclopedia_Good_Against> Stormtrooper Underworld_Merc</Encyclopedia_Good_Against>-->
@@ -9,6 +77,16 @@
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_COMMANDO</Encyclopedia_Unit_Class>
 		<Stealth_Capable>Yes</Stealth_Capable>
 		<Land_Model_Name>PA_StormCommando.alo</Land_Model_Name>
+		
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			PA_StormCommando.ALO,
+			Urban, 				PA_StormCommando.ALO,
+			Arctic, 			EI_BIKER.ALO,
+			Volcanic, 			PA_StormCommando.ALO,
+			Desert, 			PA_StormCommando.ALO,
+			Forest, 			PA_StormCommando.ALO,
+			Swamp, 				PA_StormCommando.ALO
+		</Land_Terrain_Model_Mapping>
 		<Land_Model_Anim_Override_Name>EI_TROOPER.ALo</Land_Model_Anim_Override_Name>
 		<Behavior>SELECTABLE</Behavior>
 		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, IDLE, GARRISON_UNIT</LandBehavior>
@@ -24,7 +102,7 @@
 		<Movement_Animation_Speed> 0.7 </Movement_Animation_Speed>
 		<Walk_Animation_Speed> .40 </Walk_Animation_Speed>
 		<Crouch_Animation_Speed> .537 </Crouch_Animation_Speed>
-		<Max_Speed>2.5</Max_Speed>
+		<Max_Speed>1.2</Max_Speed>
 		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
 		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
 		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
@@ -37,7 +115,7 @@
 		<OverrideDeceleration> .1 </OverrideDeceleration>
 		<FormationOrder> 3 </FormationOrder>
 		<Armor_Type> Armor_Infantry </Armor_Type>
-		<Scale_Factor>1.5</Scale_Factor>
+		<Scale_Factor>1.1</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
 		<Deploys>No</Deploys>
@@ -65,7 +143,7 @@
 		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
-		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
+		<CategoryMask> Infantry | AntiInfantry </CategoryMask>
 		<MovementClass> Infantry </MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
@@ -94,7 +172,7 @@
 		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
 		<Is_Squashable> Yes </Is_Squashable>
 		<Create_Team>No</Create_Team>
-		<AI_Combat_Power>100</AI_Combat_Power>
+		<AI_Combat_Power>20</AI_Combat_Power>
 		<Idle_Chase_Range>50.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
@@ -172,9 +250,11 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Barracks</Required_Special_Structures>
 		<Required_Planets/>
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Units> Storm_Commando, Storm_Commando</Company_Units>
+		<Company_Units> Storm_Commando, Storm_Commando</Company_Units>
 		<Company_Units> Storm_Commando, Storm_Commando</Company_Units>
 		<Max_Squad_Size> 1 </Max_Squad_Size>
 		<Formation_Priority>1</Formation_Priority>
@@ -247,7 +327,7 @@
 		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Barracks</Required_Special_Structures>
 		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>2</Formation_Priority>
@@ -473,8 +553,8 @@
 		<Autoresolve_Health>100</Autoresolve_Health>
 
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>650</Build_Cost_Credits>
-		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
@@ -484,7 +564,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
@@ -492,7 +572,7 @@
 		<Is_Escort>yes</Is_Escort>
 		<Ship_Class>walker</Ship_Class>
 
-		<Company_Transport_Unit>Imperial_Landing_Craft_Heavy</Company_Transport_Unit>
+		<Company_Transport_Unit>Imperial_ATAT_Barge_Heavy</Company_Transport_Unit>
 		<Company_Units>A6_Juggernaut</Company_Units>
 		<Max_Squad_Size> 1 </Max_Squad_Size>
 
@@ -503,7 +583,7 @@
 
 		<Score_Cost_Credits>600</Score_Cost_Credits>
         <Maintenance_Cost>0.05</Maintenance_Cost>
-		<Population_Value>1</Population_Value>
+		<Population_Value>2</Population_Value>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1350</Tactical_Build_Cost_Multiplayer>
@@ -531,7 +611,7 @@
 		<Damage>24</Damage>
 		<Autoresolve_Health>200</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Build_Cost_Credits>400</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>35</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -541,7 +621,7 @@
 		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>1</Formation_Priority>
@@ -584,7 +664,7 @@
 		<Damage>20</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>180</Build_Cost_Credits>
+		<Build_Cost_Credits>350</Build_Cost_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -593,7 +673,7 @@
 		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Light_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>2</Formation_Priority>
@@ -632,56 +712,10 @@
 
 	</GroundCompany>
 
-	<GroundInfantry Name="Delvardus_Sergeant">
-		<Variant_Of_Existing_Type>Stormtrooper</Variant_Of_Existing_Type>
-		<Text_ID>TEXT_UNIT_STORMTROOPER_SERGEANT</Text_ID>
-		<Tactical_Health>21</Tactical_Health>
-		<Land_Model_Name>EI_STORMTROOPER.ALO</Land_Model_Name>
-		<Affiliation>Hutts</Affiliation>
-		<Land_Terrain_Model_Mapping>
-			Temperate, 			EI_STORMTROOPER.ALO,
-			Urban, 				EI_STORMTROOPER.ALO,
-			Arctic, 			EI_SNOWTROOPER.ALO,
-			Volcanic, 			EI_STORMTROOPER.ALO,
-			Desert, 			EI_SANDTROOPER.ALO,
-			Forest, 			EI_STORMTROOPER.ALO,
-			Swamp, 				EI_STORMTROOPER.ALO
-		</Land_Terrain_Model_Mapping>
-		<Encyclopedia_Text>TEXT_TOOLTIP_STORMTROOPER_SERGEANT TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
-		<No_Colorization_Color> 251, 174, 1, 255 </No_Colorization_Color>
-		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
-		<Is_Squashable> Yes </Is_Squashable>
-		<Max_Speed> 1.7 </Max_Speed>
-		<Space_Layer> None </Space_Layer>
-		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
-		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
-		<FormationRaggedness> .2 </FormationRaggedness>
-		<MaxJiggleDistance> 2 </MaxJiggleDistance>
-		<Influences_Capture_Point>True</Influences_Capture_Point>
-		<Icon_Name>i_button_navy_trooper.tga</Icon_Name>
-
-	</GroundInfantry>
-
-	<GroundInfantry Name="Delvardus_Stormtrooper">
-		<Variant_Of_Existing_Type>Stormtrooper</Variant_Of_Existing_Type>
-		<Text_ID>TEXT_UNIT_STORMTROOPER</Text_ID>
-		<Affiliation>Hutts</Affiliation>
-		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
-		<Is_Squashable> Yes </Is_Squashable>
-		<Max_Speed> 1.6 </Max_Speed>
-		<Space_Layer> None </Space_Layer>
-		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
-		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
-		<FormationRaggedness> .2 </FormationRaggedness>
-		<MaxJiggleDistance> 2 </MaxJiggleDistance>
-		<Icon_Name>i_button_navy_trooper.tga</Icon_Name>
-
-	</GroundInfantry>
-
 	<GroundCompany Name="Delvardus_trooper_Squad">
 		<Variant_Of_Existing_Type>Imperial_Stormtrooper_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
-		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Barracks</Required_Special_Structures>
 		 <!-- AI  Changed to 18 troopers in squads of 9 -->
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -720,7 +754,7 @@
 
 		<Variant_Of_Existing_Type>Army_Trooper_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
-		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Barracks</Required_Special_Structures>
 
 		<Create_Team_Type> Armytrooper_Team </Create_Team_Type>
         <!-- AI  Changed to 18 troopers in squads of 9 -->
@@ -734,64 +768,6 @@
 
 	</GroundCompany>
 
-	<GroundCompany Name="Delvardus_Destruction_Squad">
-		<LOD_Bias>5</LOD_Bias>
-		<Text_ID>TEXT_UNIT_PENTASTAR_SQUAD</Text_ID>
-		<!--<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>-->
-		<Encyclopedia_Text>TEXT_TOOLTIP_PENTASTAR_COMPANY TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>18</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health> <!-- changed to reflect the real health of the units-->
-		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>60</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>15</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>99</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>1</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Troops</Company_Transport_Unit>
-		<Create_Team_Type> Navytrooper_Team </Create_Team_Type>
-        <!-- AI  Changed to 18 troopers in squads of 9 -->
-		<Company_Units> Alignment_Sergeant, Navytrooper, Navytrooper, Navytrooper, Navytrooper, Navytrooper, Navytrooper, Navytrooper, Navytrooper</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_navy_trooper.tga</Icon_Name>
-		<GUI_Model_Name>EI_TROOPER.ALO</GUI_Model_Name>
-		<Land_Model_Name>EI_TROOPER.ALO</Land_Model_Name>
-		<Scale_Factor>5</Scale_Factor>
-		<GUI_Offset>0 0 5</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Storm_Trooper</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>2</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-		<Population_Value>1</Population_Value>
-		<Score_Cost_Credits>54</Score_Cost_Credits>
-
-	</GroundCompany>
-
 	<GroundCompany Name="TIE_Crawler_Company_Delvardus">
 		<Text_ID>TEXT_UNIT_CRAWLER</Text_ID>
 		<!--<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>-->
@@ -801,7 +777,7 @@
 		<Damage>20</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>180</Build_Cost_Credits>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -811,7 +787,7 @@
 		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>2</Formation_Priority>
@@ -837,7 +813,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CRAWLER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_TANK</Encyclopedia_Unit_Class>
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 
 	<!-- Non-Hero unit abilities description -->
@@ -852,12 +828,12 @@
 	</GroundCompany>
 
 	<GroundCompany Name="Fortress_Company_Delvardus">
-		<Text_ID>TEXT_UNIT_FORTRESS</Text_ID>
+		<Text_ID>TEXT_UNIT_PX4</Text_ID>
 		<!--<Encyclopedia_Good_Against> Stormtrooper Underworld_Merc </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> AT_AA_Walker Underworld_Mass_Driver_Turret </Encyclopedia_Vulnerable_To>-->
-  		<Encyclopedia_Text>TEXT_TOOLTIP_FORTRESS</Encyclopedia_Text>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_PX4</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
-		<Icon_Name>i_button_fortress.tga</Icon_Name>
+		<Icon_Name>i_button_px4.tga</Icon_Name>
 
 		<GUI_Row> 1 </GUI_Row>
 		<Is_Dummy>Yes</Is_Dummy>
@@ -865,7 +841,7 @@
 		<Autoresolve_Health>450</Autoresolve_Health>
 
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Cost_Credits>400</Build_Cost_Credits>
 		<Build_Time_Seconds>40</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -873,7 +849,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
@@ -885,7 +861,7 @@
 		<Ship_Class>walker</Ship_Class>
 
 		<Company_Transport_Unit>Imperial_Landing_Craft_Heavy</Company_Transport_Unit>
-		<Company_Units>Floating_Fortress</Company_Units>
+		<Company_Units>PX4</Company_Units>
 
 		<Score_Cost_Credits>1000</Score_Cost_Credits>
 		<Maintenance_Cost>0.05</Maintenance_Cost>
@@ -932,7 +908,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>3</Formation_Priority>
@@ -999,7 +975,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>4</Formation_Priority>
@@ -1045,7 +1021,7 @@
 		<Damage>24</Damage>
 		<Autoresolve_Health>200</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>150</Build_Cost_Credits>
+		<Build_Cost_Credits>700</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>40</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1055,7 +1031,7 @@
 		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Light_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>1</Formation_Priority>
@@ -1109,7 +1085,7 @@
 		<Damage>30</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Cost_Credits>350</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>70</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1118,7 +1094,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>5</Formation_Priority>
@@ -1172,7 +1148,7 @@
 		<Damage>60</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>80</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1181,14 +1157,14 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>6</Formation_Priority>
 		<Is_Escort>no</Is_Escort>
 		<Ship_Class>artillery</Ship_Class>
 		<Company_Transport_Unit>Imperial_Landing_Craft_Artillery</Company_Transport_Unit>
-		<Company_Units>SPMAT_Walker, SPMAT_Walker</Company_Units>
+		<Company_Units>SPMAT_Walker</Company_Units>
 		<Max_Squad_Size> 1 </Max_Squad_Size>
 		<Icon_Name>i_button_spha_t.tga</Icon_Name>
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
@@ -1284,6 +1260,8 @@
 		<!--This must be less than the drain life radius-->
 		<Targeting_Max_Attack_Distance>140.0</Targeting_Max_Attack_Distance>
 
+		<Target_Bones> P_ELECTRICALSTATIC_ALT2, P_SMOKE_SMALL_SPUTTER_ALT1 </Target_Bones>
+		
 		<Hardpoints>
 			HP_Lancet_Turret_00,
 			HP_Lancet_Turret_01
@@ -1387,7 +1365,7 @@
 		<Damage>60</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>750</Build_Cost_Credits>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
 		<Build_Time_Seconds>40</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -1395,7 +1373,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>A_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>6</Formation_Priority>
@@ -1441,5 +1419,675 @@
         </Abilities>
 
 	</GroundCompany>
+	
+	<SpecialStructure Name="A_Ground_Barracks">
+		<Obstacle_Proxy_Type> P_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Required_Special_Structures>Eriadu_MoffPalace</Required_Special_Structures>
+
+			<Destruction_Survivors>
+
+		</Destruction_Survivors>
+
+		<Starting_Spawned_Units_Tech_0>Delvardus_Army_Trooper_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Delvardus_Army_Trooper_Squad, -1</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>Scout_Trooper, 4</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Scout_Trooper, -1</Reserve_Spawned_Units_Tech_0>
+
+			<GUI_Bounds_Scale>0.3</GUI_Bounds_Scale>
+		<Text_ID>TEXT_GROUND_BARRACKS</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BARRACKS_EMPIRE_00, TEXT_ENCYCLOPEDIA_BARRACKS_EMPIRE_01 TEXT_TOOLTIP_GARRISON_E_BARRACKS </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_BARRACKS_EMPIRE_00, MP_TEXT_ENCYCLOPEDIA_BARRACKS_EMPIRE_01 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_InfantryBarracks.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE, TURRET, TARGETING,WEAPON, POWERED</LandBehavior>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Obstacle_Proxy_Type> E_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+
+				<Damage>20</Damage>
+
+		<HardPoints>
+			HP_Barracks_Laser
+		</HardPoints>
+				<Should_Be_Destroyed_When_All_Hardpoints_Destroyed> No </Should_Be_Destroyed_When_All_Hardpoints_Destroyed>
+		<Land_FOW_Reveal_Range>220.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>220.0</Targeting_Max_Attack_Distance>
+		<Attack_Category_Restrictions> Structure </Attack_Category_Restrictions>
+
+		<Damage_Type> Damage_AI_Turret </Damage_Type>
+		<Projectile_Damage>14.0</Projectile_Damage>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<SFXEvent_Fire>Unit_Turret_Fire</SFXEvent_Fire>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>50</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_TURRET_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>MUZZLEA_00</Barrel_Bone_Name>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+
+		<!-- Ground infantry priority 1, ground vehicles priority 2, air vehicles N/A (9999) -->
+		<Targeting_Priority_Set>AntiInfantryTurret</Targeting_Priority_Set>
+		<Attack_Category_Restrictions> Air </Attack_Category_Restrictions>
+		<Targeting_Stickiness_Time_Threshold>30.0</Targeting_Stickiness_Time_Threshold>
+
+
+				<Projectile_Types>Proj_HRB_Cannon_Green</Projectile_Types>
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 30.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy>
+
+		<Projectile_Fire_Recharge_Seconds>0.1</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+				<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	<!-- Event for turret while rotating to fire  -->
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Sabotage_Cost_Credits>1000</Sabotage_Cost_Credits>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+		<!--<Destruction_Survivors>
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0
+		</Destruction_Survivors>-->
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Hutts</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures />
+		<Required_Planets />
+		<Tactical_Health>400</Tactical_Health>
+		<Icon_Name>i_button_e_infantry_barracks.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Barracks_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Barracks_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Score_Cost_Credits> 5000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+
+		<!--<Tactical_Buildable_Objects_Multiplayer>
+			Empire,
+				Imperial_Stormtrooper_Squad,
+				EL_Scout_Trooper_Research_Upgrade,
+				Imperial_Light_Scout_Squad,
+				Field_Com_Empire_Team,
+				EL_Increased_Mobility_Upgrade,
+				EL_Stamina_Boost_Upgrade,
+		</Tactical_Buildable_Objects_Multiplayer>-->
+
+		<AI_Combat_Power>300</AI_Combat_Power>
+
+		<Spawned_Squadron_Delay_Seconds>25</Spawned_Squadron_Delay_Seconds>
+		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
+		<Spawned_Squadron_Location_Flyout_Distances>180.0</Spawned_Squadron_Location_Flyout_Distances>
+		<Spawn_Garrison_On_Load>True</Spawn_Garrison_On_Load>
+
+
+		<Abilities SubObjectList="Yes">
+			<Force_Healing_Ability Name="E_Barracks_Self_Repair">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.025</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types />
+				<SFXEvent_Target_Affected />
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+
+			<Redirect_Blaster_Ability Name="E_Magnetically_Sealed_Structure">
+				<Initially_Enabled> No </Initially_Enabled>
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<!-- We can block/redirect shots from the following units types: -->
+				<Applicable_Unit_Categories>Hero | Infantry | Vehicle | Structure</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+	
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="A_Ground_Light_Vehicle_Factory">
+		<Affiliation>Hutts</Affiliation>
+		<Required_Special_Structures>Eriadu_MoffPalace</Required_Special_Structures>
+		
+				<Obstacle_Proxy_Type> P_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tech_Level>0</Tech_Level>
+			<Destruction_Survivors>
+		</Destruction_Survivors>
+
+					<Starting_Spawned_Units_Tech_0>AT_ST_Walker, 4</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AT_ST_Walker, -1</Reserve_Spawned_Units_Tech_0>
+
+
+		<GUI_Bounds_Scale>0.45</GUI_Bounds_Scale>
+		<Text_ID>TEXT_GROUND_LIGHT_VEHICLE_FACTORY</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_LIGHT_FACTORY_EMPIRE_00, TEXT_ENCYCLOPEDIA_LIGHT_FACTORY_EMPIRE_01 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_LIGHT_FACTORY_EMPIRE_00, MP_TEXT_ENCYCLOPEDIA_LIGHT_FACTORY_EMPIRE_01 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_LightFactory.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE, TURRET, TARGETING,WEAPON, POWERED</LandBehavior>
+
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+						<HardPoints>
+			HP_Barracks_Laser, HP_Barracks_LaserTwo
+		</HardPoints>
+
+				<Should_Be_Destroyed_When_All_Hardpoints_Destroyed> No </Should_Be_Destroyed_When_All_Hardpoints_Destroyed>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.25</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures />
+		<Required_Planets />
+		<Tactical_Health>700</Tactical_Health>
+		<Icon_Name>i_button_e_vehicle_factory.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Light_Vehicle_Factory_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Light_Vehicle_Factory_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Light_Factory_Select_SFX</SFXEvent_Select>
+
+		<Sabotage_Cost_Credits>1000</Sabotage_Cost_Credits>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Score_Cost_Credits> 5000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+
+
+		<AI_Combat_Power>500</AI_Combat_Power>
+
+		<Spawned_Squadron_Delay_Seconds>25</Spawned_Squadron_Delay_Seconds>
+		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
+		<Spawned_Squadron_Location_Flyout_Distances>110.0</Spawned_Squadron_Location_Flyout_Distances>
+		<Spawn_Garrison_On_Load>True</Spawn_Garrison_On_Load>
+
+		<Abilities SubObjectList="Yes">
+			<Force_Healing_Ability Name="E_Light_Vehicle_Factory_Self_Repair">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.025</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types />
+				<SFXEvent_Target_Affected />
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			<Redirect_Blaster_Ability Name="E_Magnetically_Sealed_Structure">
+				<Initially_Enabled> No </Initially_Enabled>
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<!-- We can block/redirect shots from the following units types: -->
+				<Applicable_Unit_Categories>Hero | Infantry | Vehicle | Structure</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+		</Abilities>
+		
+	</SpecialStructure>
+
+	<SpecialStructure Name="A_Ground_Heavy_Vehicle_Factory">
+	<Affiliation>Hutts</Affiliation>
+				<Obstacle_Proxy_Type> P_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+				<Required_Special_Structures>A_Ground_Light_Vehicle_Factory, Eriadu_MoffPalace</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+			<Destruction_Survivors>
+
+		</Destruction_Survivors>
+
+		<Starting_Spawned_Units_Tech_0>M1_Repulsor_Tank, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>M1_Repulsor_Tank, -1</Reserve_Spawned_Units_Tech_0>
+
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_GROUND_HEAVY_VEHICLE_FACTORY</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_HEAVY_FACTORY_EMPIRE_00, TEXT_ENCYCLOPEDIA_HEAVY_FACTORY_EMPIRE_01 TEXT_TOOLTIP_GARRISON_E_HVYFAC </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_HEAVY_FACTORY_EMPIRE_00, MP_TEXT_ENCYCLOPEDIA_HEAVY_FACTORY_EMPIRE_01 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_VehicleFactory.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+	<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE, TURRET, TARGETING,WEAPON, POWERED</LandBehavior>
+								<HardPoints>
+			HP_Barracks_Laser, HP_Barracks_LaserTwo
+		</HardPoints>
+
+				<Should_Be_Destroyed_When_All_Hardpoints_Destroyed> No </Should_Be_Destroyed_When_All_Hardpoints_Destroyed>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.50</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Planets />
+		<Tactical_Health>1200</Tactical_Health>
+		<Icon_Name>i_button_e_advanced_weapons.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>2000</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Heavy_Vehicle_Factory_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Heavy_Vehicle_Factory_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Heavy_Factory_Select_SFX</SFXEvent_Select>
+
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Score_Cost_Credits> 10000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+
+
+      <AI_Combat_Power>800</AI_Combat_Power>
+
+		<Spawned_Squadron_Delay_Seconds>25</Spawned_Squadron_Delay_Seconds>
+		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
+		<Spawned_Squadron_Location_Flyout_Distances>180.0</Spawned_Squadron_Location_Flyout_Distances>
+		<Spawn_Garrison_On_Load>True</Spawn_Garrison_On_Load>
+
+		<Abilities SubObjectList="Yes">
+			<Force_Healing_Ability Name="E_Heavy_Vehicle_Factory_Self_Repair">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.025</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types />
+				<SFXEvent_Target_Affected />
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			<Redirect_Blaster_Ability Name="E_Magnetically_Sealed_Structure">
+				<Initially_Enabled> No </Initially_Enabled>
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<!-- We can block/redirect shots from the following units types: -->
+				<Applicable_Unit_Categories>Hero | Infantry | Vehicle | Structure</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="A_Ground_Advanced_Vehicle_Factory">
+	<Affiliation>Hutts</Affiliation>
+		<Obstacle_Proxy_Type> P_Ground_Advanced_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+				<Required_Special_Structures>A_Ground_Light_Vehicle_Factory, A_Ground_Heavy_Vehicle_Factory, Eriadu_MoffPalace</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Destruction_Survivors>
+
+		</Destruction_Survivors>
+					<Starting_Spawned_Units_Tech_0>AT_AT_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AT_AT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_GROUND_ADVANCED_VEHICLE_FACTORY</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_ADVANCED_FACTORY_EMPIRE_00 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+			<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE, TURRET, TARGETING,WEAPON, POWERED</LandBehavior>
+								<HardPoints>
+			HP_Barracks_Laser, HP_Barracks_LaserTwo
+		</HardPoints>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+				<Should_Be_Destroyed_When_All_Hardpoints_Destroyed> No </Should_Be_Destroyed_When_All_Hardpoints_Destroyed>
+
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>2.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Planets />
+		<Tactical_Health>900</Tactical_Health>
+		<Icon_Name>i_button_e_mega_advanced_weapons.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Advanced_Vehicle_Factory_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Advanced_Vehicle_Factory_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Advanced_Factory_Select_SFX</SFXEvent_Select>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Sabotage_Cost_Credits>3000</Sabotage_Cost_Credits>
+
+		<Score_Cost_Credits> 15000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+
+      <AI_Combat_Power>800</AI_Combat_Power>
+
+		<Spawned_Squadron_Delay_Seconds>60</Spawned_Squadron_Delay_Seconds>
+		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
+		<Spawned_Squadron_Location_Flyout_Distances>180.0</Spawned_Squadron_Location_Flyout_Distances>
+		<Spawn_Garrison_On_Load>True</Spawn_Garrison_On_Load>
+
+		<Abilities SubObjectList="Yes">
+			<Force_Healing_Ability Name="E_Advanced_Vehicle_Factory_Self_Repair">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.025</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types />
+				<SFXEvent_Target_Affected />
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			</Abilities>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="A_Galactic_Turbolaser_Tower_Defenses">
+		<Variant_Of_Existing_Type>Template_Galactic_Turbolaser_Tower_Defenses</Variant_Of_Existing_Type>
+
+		<Affiliation>Hutts</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>1</Tech_Level>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Tactical_Additional_Structure_Type>Power_Generator_P</Tactical_Additional_Structure_Type>
+		<Required_Special_Structures>A_Ground_Barracks</Required_Special_Structures>
+		<!-- When one of these objects is created in galactic mode, we will populate every marker in land mode
+		that is a specific marker for E_Ground_Turbolaser_Tower. The galactic object will persist unless all
+		instances of those tactical objects have been destroyed. -->
+		<Place_Other_Type_At_Every_Specific_Marker_Position>P_Ground_Turbolaser_Tower</Place_Other_Type_At_Every_Specific_Marker_Position>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpecialStructure>
 
 </Remnant_Space_Units>

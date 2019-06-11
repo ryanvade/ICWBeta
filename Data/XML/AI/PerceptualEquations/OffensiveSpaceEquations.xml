@@ -9,32 +9,37 @@
 	Variable_Target.DistanceToNearestFriendly {	Parameter_Type = "NR_Star_Base_1",
 												Parameter_Type = "NR_Star_Base_2",
 												Parameter_Type = "NR_Star_Base_3",
+												Parameter_Type = "NR_Star_Base_4",
 												Parameter_Type = "Remnant_Star_Base_1",
 												Parameter_Type = "Remnant_Star_Base_2",
 												Parameter_Type = "Remnant_Star_Base_3",
+												Parameter_Type = "Remnant_Star_Base_4",
 												Parameter_Type = "EotH_Star_Base_1",
 												Parameter_Type = "EotH_Star_Base_2",
 												Parameter_Type = "EotH_Star_Base_3",
+												Parameter_Type = "EotH_Star_Base_4",
 												Parameter_Type = "CSA_Star_Base_1",
 												Parameter_Type = "CSA_Star_Base_2",
 												Parameter_Type = "CSA_Star_Base_3",
+												Parameter_Type = "CSA_Star_Base_4",
 												Parameter_Type = "Delvardus_Star_Base_1",
 												Parameter_Type = "Delvardus_Star_Base_2",
 												Parameter_Type = "Delvardus_Star_Base_3",
+												Parameter_Type = "Delvardus_Star_Base_4",
 												Parameter_Type = "Teradoc_Star_Base_1",
 												Parameter_Type = "Teradoc_Star_Base_2",
 												Parameter_Type = "Teradoc_Star_Base_3",
+												Parameter_Type = "Teradoc_Star_Base_4",
 												Parameter_Type = "Hapan_Star_Base_1",
 												Parameter_Type = "Hapan_Star_Base_2",
 												Parameter_Type = "Pentastar_Star_Base_1",
 												Parameter_Type = "Pentastar_Star_Base_2",
 												Parameter_Type = "Pentastar_Star_Base_3",
-												Parameter_Type = "Y_Star_Base_1",
-												Parameter_Type = "Y_Star_Base_2",
-												Parameter_Type = "Y_Star_Base_3",
+												Parameter_Type = "Pentastar_Star_Base_4",
 												Parameter_Type = "Zsinj_Star_Base_1",
 												Parameter_Type = "Zsinj_Star_Base_2",
 												Parameter_Type = "Zsinj_Star_Base_3",
+												Parameter_Type = "Zsinj_Star_Base_4",
 												Parameter_Type = "Skirmish_NR_Star_Base_1",
 												Parameter_Type = "Skirmish_NR_Star_Base_5",
 												Parameter_Type = "Skirmish_Remnant_Star_Base_1",
@@ -337,6 +342,15 @@
 
 	</Unit_Needs_To_Be_Bombed>
 
+	
+	<Low_Health_Unit>
+		(
+			(1.0 - Variable_Target.Health)
+			+		
+			(1.0 - Variable_Target.Shield)
+		) > 1.7
+	</Low_Health_Unit>
+
 
     <Unit_Needs_Escort>
         30.0
@@ -365,9 +379,13 @@
 		*
 		(
 			 Variable_Target.EnemyForceNBTD {Parameter_Category = GameObjectCategoryType[Fighter | Bomber | Transport]}
+			 *
+			 Function_Fighter_Location_Isolated.Evaluate
 			 +
 			 0.001 * Variable_Target.EnemyForce
 		)
+		*
+		(1 - (4000 > Script_GetDistanceToFirstWithProperty.Evaluate {Parameter_Script_String = "Structure", Parameter_Script_String = "ENEMY"}))
 	</Area_Needs_Sweeping>
 
 	<!-- Desire to uncover the fog of war in a zone depends on:
@@ -474,14 +492,10 @@
 			areas with nebulae
 		-->
 	<Good_Space_Artillery_Area>
-		(Game.Age > (60 # 120))
-		*
-		(4000 > Variable_Target.DistanceToNearestEnemy)
-		*
 		(Variable_Target.DistanceToNearestEnemy > 2000)
 		*
 		(
-			30.0
+			50.0
 			+
 			2.0 * Function_Space_Area_Is_Friendly.Evaluate
 			+
@@ -525,8 +539,12 @@
 					(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (4.0 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0}))
 					+
 					(Variable_Self.IsDefender *
-					(Variable_Self.BaseLevel == 0) *
+					(1 >= Variable_Self.BaseLevel) *
 					(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (4.0 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0})))
+					+
+					(Variable_Self.IsDefender *
+					(3 >= Variable_Self.BaseLevel) *
+					(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (8.0 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0})))
 					+
 					((3.0 * Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Transport]}) >= Variable_Self.FriendlyForceUnnormalized)
 					+

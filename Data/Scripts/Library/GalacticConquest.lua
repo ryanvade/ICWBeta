@@ -23,16 +23,18 @@
 require("TRUtil")
 require("Class")
 require("GalacticEvents")
+require("Planet")
 
 GalacticConquest = Class {
   Constructor = function(self, player_agnostic_plot, playableFactions)
     self.HumanPlayer = self:FindHumanPlayerInTable(playableFactions)
-    self.Planets = FindPlanet.Get_All_Planets()
+
+    self.Planets = self:GetPlanets()
     self:InitializeEvents(player_agnostic_plot)
     self.Events = {
-        SelectedPlanetChanged = SelectedPlanetChangedEvent:New(self.HumanPlayer),
-        PlanetOwnerChanged = PlanetOwnerChangedEvent:New(),
-        GalacticProductionFinished = ProductionFinishedEvent:New()
+        SelectedPlanetChanged = SelectedPlanetChangedEvent:New(self.HumanPlayer, self.Planets),
+        PlanetOwnerChanged = PlanetOwnerChangedEvent:New(self.Planets),
+        GalacticProductionFinished = ProductionFinishedEvent:New(self.Planets)
     }
   end,
 
@@ -47,7 +49,8 @@ GalacticConquest = Class {
     if not TRUtil.ValidGlobalValue(selectedPlanetName) then
         return nil
     end
-    return FindPlanet(selectedPlanetName)
+
+    return self.Planets[selectedPlanetName]
   end,
 
   FindHumanPlayerInTable = function(self, factions)
@@ -61,13 +64,25 @@ GalacticConquest = Class {
 
   InitializeEvents = function(self, plot)
     for _, planet in pairs(self.Planets) do
-        local planetName = planet.Get_Type().Get_Name()
+        local planetName = planet:get_name()
         local event = plot.Get_Event("Zoom_Into_"..planetName)
         if event then
             event.Set_Reward_Parameter(1, self.HumanPlayer.Get_Faction_Name())
         end
     end
-  end
+  end;
+
+  GetPlanets = function(self)
+    local all_planets = FindPlanet.Get_All_Planets()
+
+    local planets = {}
+    for _, planet in pairs(all_planets) do
+      local planet_name = planet.Get_Type().Get_Name()
+      planets[planet_name] = Planet(planet_name)
+    end
+
+    return planets
+  end;
 
 }
 

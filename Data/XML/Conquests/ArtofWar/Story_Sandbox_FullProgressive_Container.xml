@@ -8,18 +8,112 @@
 
 <Story>
 	
-	<Event Name="Universal_Story_Start">
+	<Event Name="Progressive_Story_Start">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="GC_Starts_01">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>1</Event_Param1>
+		<Branch>Era_Start_Checker</Branch>
+	</Event>		
+
+	<Event Name="GC_Starts_02">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>2</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Era_One</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Branch>Era_Start_Checker</Branch>
+	</Event>
+	
+	<Event Name="GC_Starts_03">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Era_Two</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Branch>Era_Start_Checker</Branch>
+	</Event>
+	
+	<Event Name="GC_Starts_04">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Era_Three</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Branch>Era_Start_Checker</Branch>
+	</Event>
+	
+	<Event Name="GC_Starts_05">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>5</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Era_Four</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Branch>Era_Start_Checker</Branch>
+	</Event>
+	
+   	<Event Name="Level_Check">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Era_Start_Checker</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="GC_Progress_01">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+
+		<Prereq>GC_Starts_01</Prereq>
+		
+		<Branch>Era_One</Branch>
+	</Event>
+	
+	<Event Name="GC_Progress_02">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+
+		<Prereq>GC_Starts_02</Prereq>
+		
+		<Branch>Era_Two</Branch>
+	</Event>
+	
+	<Event Name="GC_Progress_03">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+
+		<Prereq>GC_Starts_03</Prereq>
+		
+		<Branch>Era_Three</Branch>
+	</Event>
+	
+	<Event Name="GC_Progress_04">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+
+		<Prereq>GC_Starts_04</Prereq>
+		
+		<Branch>Era_Four</Branch>
+	</Event>
+	
+	<Event Name="GC_Progress_05">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+
+		<Prereq>GC_Starts_05</Prereq>
+
+		<Branch>Era_Five</Branch>
 	</Event>
 	
 	<Event Name="Reveal_All_Planets">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>REVEAL_ALL_PLANETS</Reward_Type>
-		<Prereq>Universal_Story_Start</Prereq>
+		<Prereq>Progressive_Story_Start</Prereq>
 	</Event>
-   
-	
+   	
 <!--******************************************************-->
 <!--***************	Faction Determiners	******************-->
 <!--******************************************************-->
@@ -81,13 +175,14 @@
 		<Reward_Param2>1</Reward_Param2>
 	</Event>
 	
-	<Event Name="Faction_Branch_Disabler_Yevetha">
+	<Event Name="Faction_Branch_Disabler_Corporate_Sector">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>0</Event_Param1>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Yevetha</Reward_Param1>
+		<Reward_Param1>Faction_Branch_Corporate_Sector</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
 	</Event>
+
 	
 	<Event Name="Determine_Faction_LUA">
 		<Event_Type>STORY_ELAPSED</Event_Type>
@@ -103,6 +198,76 @@
 		<Reward_Param2>0</Reward_Param2>
 	</Event>
 	
+	<Event Name="Faction_Branch_Enabler_Remnant">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_EMPIRE_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Remnant</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Enabler_EotH">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_EOTH_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_EotH</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Enabler_Eriadu">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_ERIADU_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Eriadu</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+
+	<Event Name="Faction_Branch_Enabler_Zsinj">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_ZSINJ_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Zsinj</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+
+	
+	<Event Name="Faction_Branch_Enabler_Teradoc">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_TERADOC_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Teradoc</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+
+	
+	<Event Name="Faction_Branch_Enabler_Pentastar">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_PENTASTAR_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Pentastar</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>	
+	
+	<Event Name="Faction_Branch_Enabler_Corporate_Sector">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_CORPORATE_SECTOR_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Corporate_Sector</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+
+
+  <!-- ==================== BEGIN SAVE CRASH RE-ENABLE EVENTS ==================== -->
+
+	<Event Name="Filter_AI_Challenge_Clicked">
+		<Event_Type>STORY_CLICK_GUI</Event_Type>
+		<Event_Param1>b_save_fixer</Event_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>	
+		
 	<Event Name="Faction_Branch_Playing_NewRep">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 
@@ -112,13 +277,13 @@
 		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
 	</Event>
 	
-	
-	<Event Name="Faction_Branch_Enabler_Remnant">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_EMPIRE_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Remnant</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
+	<Event Name="Change_AI_NewRep">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_NewRep_Save</Branch>
 	</Event>
 	
 	<Event Name="Faction_Branch_Playing_Remnant">
@@ -130,14 +295,15 @@
 		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
 	</Event>
 	
-	<Event Name="Faction_Branch_Enabler_EotH">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_EOTH_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_EotH</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
+	<Event Name="Change_AI_Empire">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_Empire_Save</Branch>
 	</Event>
-	
+		
 	<Event Name="Faction_Branch_Playing_EotH">
 			<Event_Type>STORY_TRIGGER</Event_Type>
 
@@ -147,46 +313,31 @@
 		<Prereq>Faction_Branch_Enabler_EotH</Prereq>
 	</Event>
 	
-	<Event Name="Faction_Branch_Enabler_Eriadu">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_ERIADU_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Eriadu</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
+	<Event Name="Change_AI_EotH">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Underworld</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_EotH_Save</Branch>
 	</Event>
 	
-	<Event Name="Faction_Branch_Playing_Eriadu">
+	<Event Name="Faction_Branch_Playing_Pentastar">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Eriadu_Save</Reward_Param1>
+		<Reward_Param1>Faction_Branch_Pentastar_Save</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
-		<Prereq>Faction_Branch_Enabler_Eriadu</Prereq>
+		<Prereq>Faction_Branch_Enabler_Pentastar</Prereq>
 	</Event>
-	
-	<Event Name="Faction_Branch_Enabler_Zsinj">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_ZSINJ_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Zsinj</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-	
-	<Event Name="Faction_Branch_Playing_Zsinj">
+		
+	<Event Name="Change_AI_Pentastar">
 		<Event_Type>STORY_TRIGGER</Event_Type>
-
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Zsinj_Save</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-		<Prereq>Faction_Branch_Enabler_Zsinj</Prereq>
-	</Event>
-	
-	<Event Name="Faction_Branch_Enabler_Teradoc">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_TERADOC_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Teradoc</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Pentastar</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_Pentastar_Save</Branch>
 	</Event>
 	
 	<Event Name="Faction_Branch_Playing_Teradoc">
@@ -197,278 +348,72 @@
 		<Reward_Param2>1</Reward_Param2>
 		<Prereq>Faction_Branch_Enabler_Teradoc</Prereq>
 	</Event>
-	
-	<Event Name="Faction_Branch_Enabler_Pentastar">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_PENTASTAR_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Pentastar</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>	
-	
-	<Event Name="Faction_Branch_Playing_Pentastar">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Pentastar_Save</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-		<Prereq>Faction_Branch_Enabler_Pentastar</Prereq>
-	</Event>
-	
-	<Event Name="Faction_Branch_Enabler_Yevetha">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_YEVETHA_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Yevetha</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-	
-	<Event Name="Faction_Branch_Playing_Yevetha">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Yevetha_Save</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-		<Prereq>Faction_Branch_Enabler_Yevetha</Prereq>
-	</Event>
-	
- <!-- ================================================================= -->
-  <!-- ==================== BEGIN SAVE CRASH EVENTS ==================== -->
-  <!-- ================================================================= -->
-
-	<Event Name="Filter_Save_Fixer_Enable">
-		<Event_Type>STORY_CLICK_GUI</Event_Type>
-		<Event_Param1>b_save_fixer</Event_Param1>
-		<Perpetual>true</Perpetual>
-	</Event>
-  
-	<Event Name="Save_AI_Disable_Rebel">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Rebel</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
-		<Branch>Faction_Branch_NewRep_Save</Branch>
-		<Perpetual>true</Perpetual>
-	</Event>
-
-	<Event Name="Save_AI_Disable_Empire">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Empire</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
-		<Branch>Faction_Branch_Empire_Save</Branch>
-
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Save_AI_Disable_EotH">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Underworld</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
-		<Branch>Faction_Branch_EotH_Save</Branch>
-		<Perpetual>true</Perpetual>
-
-	</Event>
-	
-	<Event Name="Save_AI_Disable_Pentastar">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Pentastar</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
-		<Branch>Faction_Branch_Pentastar_Save</Branch>
-
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Save_AI_Disable_Pirates">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Pirates</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
-		<Branch>Faction_Branch_Zsinj_Save</Branch>
-
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Save_AI_Disable_Eriadu">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Hutts</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
-		<Branch>Faction_Branch_Eriadu_Save</Branch>
-
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Save_AI_Disable_Teradoc">
+			
+	<Event Name="Change_AI_Teradoc">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SWITCH_CONTROL</Reward_Type>
 		<Reward_Param1>Teradoc</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
 		<Branch>Faction_Branch_Teradoc_Save</Branch>
-
-		<Perpetual>true</Perpetual>
-	</Event>
-
-	<Event Name="Save_AI_Disable_Yevetha">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Yevetha</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
-		<Branch>Faction_Branch_Yevetha_Save</Branch>
-
-		<Perpetual>true</Perpetual>
 	</Event>
 	
-	<Event Name="Save_AI_Disable_Harrsk">
+	
+	<Event Name="Faction_Branch_Playing_Zsinj">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Zsinj_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Zsinj</Prereq>
+	</Event>
+					
+	<Event Name="Change_AI_Zsinj">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Harrsk</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
-		<Perpetual>true</Perpetual>
+		<Reward_Param1>Pirates</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_Zsinj_Save</Branch>
 	</Event>
 	
-	<Event Name="Save_AI_Disable_Warlords">
+	<Event Name="Faction_Branch_Playing_Eriadu">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Eriadu_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Eriadu</Prereq>
+	</Event>
+		
+	<Event Name="Change_AI_Eriadu">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Warlords</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
-		<Perpetual>true</Perpetual>
+		<Reward_Param1>Hutts</Reward_Param1>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_Eriadu_Save</Branch>
 	</Event>
 	
-	<Event Name="Save_AI_Disable_CSA">
+	<Event Name="Faction_Branch_Playing_Corporate_Sector">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Corporate_Sector_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Corporate_Sector</Prereq>
+	</Event>
+	
+	<Event Name="Change_AI_CSA">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SWITCH_CONTROL</Reward_Type>
 		<Reward_Param1>Corporate_Sector</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Save_AI_Disable_Saracc">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Sarlacc</Reward_Param1>
-		<Reward_Param2>Fucking_Nothing</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Enable</Prereq>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-  <!-- ==================== BEGIN SAVE CRASH RE-ENABLE EVENTS ==================== -->
-
-  
-	<Event Name="Filter_Save_Fixer_Disable">
-		<Event_Type>STORY_CLICK_GUI</Event_Type>
-		<Event_Param1>b_save_fixer01</Event_Param1>
-		<Perpetual>true</Perpetual>
-	</Event>
-  
-  	<Event Name="Save_AI_Enable_Rebel">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Rebel</Reward_Param1>
-		<Reward_Param2>GenericAI</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Disable</Prereq>
-		<Branch>Faction_Branch_NewRep_Save</Branch>
-		<Perpetual>true</Perpetual>
+		<Reward_Param2>SkynetAI</Reward_Param2>
+		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
+		<Branch>Faction_Branch_Corporate_Sector_Save</Branch>
 	</Event>
 
-	<Event Name="Save_AI_Enable_Empire">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Empire</Reward_Param1>
-		<Reward_Param2>GenericAI</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Disable</Prereq>
-		<Branch>Faction_Branch_Empire_Save</Branch>
 
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Save_AI_Enable_EotH">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Underworld</Reward_Param1>
-		<Reward_Param2>GenericAI</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Disable</Prereq>
-		<Branch>Faction_Branch_EotH_Save</Branch>
-
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Save_AI_Enable_Pentastar">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Pentastar</Reward_Param1>
-		<Reward_Param2>GenericAI</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Disable</Prereq>
-		<Branch>Faction_Branch_Pentastar_Save</Branch>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Save_AI_Enable_Pirates">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Pirates</Reward_Param1>
-		<Reward_Param2>GenericAI</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Disable</Prereq>
-		<Branch>Faction_Branch_Zsinj_Save</Branch>
-
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Save_AI_Enable_Eriadu">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Hutts</Reward_Param1>
-		<Reward_Param2>GenericAI</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Disable</Prereq>
-		<Branch>Faction_Branch_Eriadu_Save</Branch>
-
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Save_AI_Enable_Teradoc">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Teradoc</Reward_Param1>
-		<Reward_Param2>GenericAI</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Disable</Prereq>
-		<Branch>Faction_Branch_Teradoc_Save</Branch>
-		<Perpetual>true</Perpetual>
-	</Event>
-
-	<Event Name="Save_AI_Enable_Yevetha">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Yevetha</Reward_Param1>
-		<Reward_Param2>GenericAI</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Disable</Prereq>
-		<Branch>Faction_Branch_Yevetha_Save</Branch>
-
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Save_AI_Enable_Harrsk">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Harrsk</Reward_Param1>
-		<Reward_Param2>None</Reward_Param2>
-		<Prereq>Filter_Save_Fixer_Disable</Prereq>
-		<Perpetual>true</Perpetual>
-	</Event>
-
-	
 	<!--***********************************************************-->
 	<!--***********************************************************-->
 	<!--******************* IMPERIAL STORYLINE ********************-->
@@ -488,8 +433,9 @@
 		<Reward_Param8>Pestage_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Pestage_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
+		<Prereq>GC_Progress_01</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
+		
 	</Event>
 	
 	<Event Name="Intro_Welcome_Empire_Dialog">
@@ -516,7 +462,7 @@
 		<Reward_Param8>Isard_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Isard_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
+		<Prereq>Intro_Welcome_Empire</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -604,7 +550,7 @@
 		<Reward_Param8>Isard_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Thrawn_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Thrawn_Option_Completed</Prereq>
+		<Prereq>GC_Progress_02</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -622,7 +568,7 @@
 		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Palpatine_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Set_Subera_Thrawn</Prereq>
+		<Prereq>Thrawn_Recruit_Finished</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -657,7 +603,7 @@
 		<Reward_Param8>Isard_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Palpatine_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Palpatine_Option_Completed</Prereq>
+		<Prereq>GC_Progress_03</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -763,7 +709,7 @@
 		<Reward_Param8>Isard_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Daala_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Daala_Option_Completed</Prereq>
+		<Prereq>GC_Progress_04</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -781,7 +727,7 @@
 		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Daala_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Set_Subera_Daala</Prereq>
+		<Prereq>GC_Progress_04</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -816,7 +762,7 @@
 		<Reward_Param8>Isard_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Pellaeon_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Pellaeon_Option_Completed</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -839,7 +785,7 @@
 		<Reward_Param8>Mothma_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
+		<Prereq>GC_Progress_01</Prereq>
 		<Branch>Faction_Branch_NewRep</Branch>
 	</Event>
 	
@@ -893,7 +839,7 @@
 		<Reward_Param8 />
 		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>NR_Level_Two</Prereq>
+		<Prereq>GC_Progress_02</Prereq>
 		<Branch>Faction_Branch_NewRep</Branch>
 	</Event>
 	
@@ -921,7 +867,7 @@
 		<Reward_Param8 />
 		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>NR_Level_Three</Prereq>
+		<Prereq>GC_Progress_03</Prereq>
 		<Branch>Faction_Branch_NewRep</Branch>
 
 	</Event>
@@ -956,7 +902,7 @@
 	</Event>
 	
 		
-	<Event Name="Jax_Welcome_Mon">
+	<Event Name="NewRep_Jax_Dialog">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>15</Event_Param1>
 		<Story_Dialog>Dialog_NewRep_FullProgressive</Story_Dialog>
@@ -981,7 +927,7 @@
 		<Reward_Param8 />
 		<Reward_Param9>Leia_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>NR_Level_Four</Prereq>
+		<Prereq>GC_Progress_04</Prereq>
 			<Branch>Faction_Branch_NewRep</Branch>
 
 	</Event>
@@ -1010,7 +956,7 @@
 		<Reward_Param8 />
 		<Reward_Param9>Leia_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>NR_Level_Five</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
 			<Branch>Faction_Branch_NewRep</Branch>
 
 	</Event>
@@ -1046,7 +992,7 @@
 		<Reward_Param8></Reward_Param8>
 		<Reward_Param9>Kaine_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Faction_Branch_Enabler_Pentastar</Prereq>
+		<Prereq>GC_Progress_01</Prereq>
 		<Branch>Faction_Branch_Pentastar</Branch>
 	</Event>
   
@@ -1079,7 +1025,7 @@
 		<Reward_Param8>Mothma_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Delvardus_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Faction_Branch_Enabler_Eriadu</Prereq>
+		<Prereq>GC_Progress_01</Prereq>
 		<Branch>Faction_Branch_Eriadu</Branch>
 	</Event>
 	
@@ -1112,7 +1058,7 @@
 		<Reward_Param8>Teradoc_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Teradoc_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Faction_Branch_Enabler_Teradoc</Prereq>
+		<Prereq>GC_Progress_01</Prereq>
 		<Branch>Faction_Branch_Teradoc</Branch>
 	</Event>
 	
@@ -1125,30 +1071,6 @@
 		<Prereq>Intro_Welcome_Teradoc</Prereq>
 		<Branch>Faction_Branch_Teradoc</Branch>
 	</Event>
-	
-		<!--***********************************************************-->
-	<!--***********************************************************-->
-	<!--***************** Greater Maldrood Story ******************-->
-	<!--***********************************************************-->	
-	<!--***********************************************************-->	
-	
-	<Event Name="Intro_Welcome_Yevetha">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_BFC_DL_INTRO_ONE</Reward_Param1>
-		<Reward_Param2>15</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8>Teradoc_Intro_Speech</Reward_Param8>
-		<Reward_Param9>Teradoc_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Faction_Branch_Enabler_Yevetha</Prereq>
-		<Branch>Faction_Branch_Yevetha</Branch>
-	</Event>
-	
 
 	<!--***********************************************************-->
 	<!--***********************************************************-->
@@ -1167,9 +1089,9 @@
 		<Reward_Param6 />
 		<Reward_Param7 />
 		<Reward_Param8>Teradoc_Intro_Speech</Reward_Param8>
-		<Reward_Param9>Teradoc_Loop</Reward_Param9>
+		<Reward_Param9>Zsinj_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Faction_Branch_Enabler_Zsinj</Prereq>
+		<Prereq>GC_Progress_01</Prereq>
 		<Branch>Faction_Branch_Zsinj</Branch>
 	</Event>
 	
@@ -1204,7 +1126,7 @@
 		<Reward_Param8>Thrawn_Intro_Speech2</Reward_Param8>
 		<Reward_Param9>Thrawn_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Faction_Branch_Enabler_EotH</Prereq>
+		<Prereq>GC_Progress_01</Prereq>
 		<Branch>Faction_Branch_EotH</Branch>
 	</Event>
 		
@@ -1222,7 +1144,7 @@
 		<Reward_Param8>Parck_Intro_Speech2</Reward_Param8>
 		<Reward_Param9>Parck_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Hand_Level_Two</Prereq>
+		<Prereq>GC_Progress_02</Prereq>
 		<Branch>Faction_Branch_EotH</Branch>
 	</Event>
 	
@@ -1241,7 +1163,7 @@
 		<Reward_Param8>Parck_Intro_Speech3</Reward_Param8>
 		<Reward_Param9>Parck_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Hand_Level_Three</Prereq>
+		<Prereq>GC_Progress_03</Prereq>
 		<Branch>Faction_Branch_EotH</Branch>
 	</Event>
 	
@@ -1260,7 +1182,7 @@
 		<Reward_Param8>Parck_Intro_Speech4</Reward_Param8>
 		<Reward_Param9>Parck_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Hand_Level_Four</Prereq>
+		<Prereq>GC_Progress_04</Prereq>
 		<Branch>Faction_Branch_EotH</Branch>
 	</Event>
 
@@ -1277,7 +1199,7 @@
 		<Reward_Param8>Parck_Intro_Speech5</Reward_Param8>
 		<Reward_Param9>Parck_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Hand_Level_Five</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
 		<Branch>Faction_Branch_EotH</Branch>
 	</Event>
 	
@@ -1372,11 +1294,18 @@
 	
 	<!--******************** Sub-Era Change - Isard *********************-->
 	
-	<Event Name="Trigger_Isard_Lusankya_Construct">
+	 <Event Name="Trigger_Isard_Lusankya_Construct">
 		<Event_Type>STORY_CONSTRUCT</Event_Type>
 		<Event_Param1>Project_Ambition_Dummy</Event_Param1>
 		<Event_Param2>1</Event_Param2>
 		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+	</Event>
+	
+	<Event Name="Trigger_Isard_Coruscant_Falls_Safety">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>10</Event_Param1>
+		
+
 	</Event>
 	
 	<Event Name="Trigger_Isard_Coruscant_Falls">
@@ -1384,7 +1313,10 @@
 		<Event_Param1>Coruscant</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Trigger_Isard_Coruscant_Falls_Safety</Prereq>
+		<Branch>Isard_Branch</Branch>
 	</Event>
+	
 	
 	<Event Name="Trigger_Isard_Pestage_Death">
   		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
@@ -1397,15 +1329,34 @@
 	<Event Name="Trigger_Isard_Pestage_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>3200</Event_Param1>
-	</Event>
+	</Event> 
 		
-	<!-- <Event Name="Set_Subera_Isard">
+	 <Event Name="Set_Subera_Isard">
   		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Prereq>Trigger_Isard_Lusankya_Construct</Prereq>
 		<Prereq>Trigger_Isard_Coruscant_Falls</Prereq>
 		<Prereq>Trigger_Isard_Pestage_Death</Prereq>
 		<Prereq>Trigger_Isard_Pestage_Timer</Prereq>
-	</Event> -->
+		<Branch>Isard_Branch</Branch>
+	</Event>
+	
+	<Event Name="Zero_Command_Split"> <!-- This was split off for mysterious stablity reasons -->
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+		<Prereq>Set_Subera_Isard</Prereq>
+	</Event> 
+	
+	<Event Name="Disable_Branch_Isard">
+  		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Isard_Branch</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Trigger_Isard_Lusankya_Construct</Prereq>
+		<Prereq>GC_Starts_02</Prereq>
+		<Prereq>GC_Starts_03</Prereq>
+		<Prereq>GC_Starts_04</Prereq>
+		<Prereq>GC_Starts_05</Prereq>
+	</Event>
 	
 	<!--******************** Sub-Era Change - Thrawn  *********************-->
 	
@@ -1434,16 +1385,15 @@
 		<Prereq>Trigger_Thrawn_Regicide_Construct</Prereq>
 		<Prereq>Trigger_Thrawn_Isard_Death</Prereq>
 		<Prereq>Trigger_Thrawn_Isard_Timer</Prereq>
-	</Event>
+	</Event> 
 	
-	<Event Name="E_Level_Two">
+	 <Event Name="E_Level_Two">
   		<Event_Type>STORY_TRIGGER</Event_Type>
  		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
   		<Reward_Param1>Empire</Reward_Param1>
 		<Reward_Param2>2</Reward_Param2>	
 		<Prereq>Set_Subera_Thrawn</Prereq>
-	</Event>
-	 
+	</Event> 
 	<Event Name="P_Level_Two">
   		<Event_Type>STORY_TRIGGER</Event_Type>
  		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
@@ -1492,10 +1442,10 @@
 		<Prereq>Set_Subera_Thrawn</Prereq>
 	</Event>
 	
-	<Event Name="Y_Level_Two">
+	<Event Name="CSA_Level_Two">
   		 <Event_Type>STORY_TRIGGER</Event_Type>
  		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
-  		<Reward_Param1>Yevetha</Reward_Param1>
+  		<Reward_Param1>Corporate_Sector</Reward_Param1>
 		<Reward_Param2>2</Reward_Param2>	
 		<Prereq>Set_Subera_Thrawn</Prereq>
 	</Event>
@@ -1506,7 +1456,7 @@
   		<Reward_Param1>Hutts</Reward_Param1>
 		<Reward_Param2>2</Reward_Param2>	
 		<Prereq>Set_Subera_Thrawn</Prereq>
-	</Event>
+	</Event> 
 	
 	<!--******************** Sub-Era Change - Nobody / Palptine *********************-->
 	
@@ -1528,15 +1478,15 @@
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>600</Event_Param1>
 		<Prereq>Trigger_Council_Thrawn_Death</Prereq>
-	</Event>
+	</Event> 
 	
-	<Event Name="Trigger_Palpatine_Thrawn_Timer">
+	 <Event Name="Trigger_Palpatine_Thrawn_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>3200</Event_Param1>
 		<Prereq>Set_Subera_Thrawn</Prereq>
 	</Event>
 	
-	<Event Name="Byss_Locked">
+	 <Event Name="Byss_Locked">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>0</Event_Param1>
 		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
@@ -1553,6 +1503,9 @@
 		<Prereq>Trigger_Palpatine_Thrawn_Voluntary</Prereq>
 		<Prereq>Trigger_Palpatine_Thrawn_Death_Timer</Prereq>
 		<Prereq>Trigger_Palpatine_Thrawn_Timer</Prereq>
+		<Prereq>GC_Progress_03</Prereq>
+		<Prereq>GC_Progress_04</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
 	</Event>
 		
 	<Event Name="Set_Subera_Palpatine">
@@ -1626,10 +1579,10 @@
 		<Prereq>Set_Subera_Palpatine</Prereq>
 	</Event>
 	
-	<Event Name="Y_Level_Three">
+	<Event Name="CSA_Level_Three">
   		 <Event_Type>STORY_TRIGGER</Event_Type>
  		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
-  		<Reward_Param1>Yevetha</Reward_Param1>
+  		<Reward_Param1>Corporate_Sector</Reward_Param1>
 		<Reward_Param2>3</Reward_Param2>	
 		<Prereq>Set_Subera_Palpatine</Prereq>
 	</Event>
@@ -1643,6 +1596,8 @@
   		<Event_Param1>Emperor_Palpatine_Team</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
+		
+		<Branch>Era_Three</Branch>
 	</Event>
 	
 	<Event Name="Trigger_Jax_Regicide_Construct">
@@ -1718,6 +1673,8 @@
 		<Prereq>Trigger_Daala_Regicide_Construct</Prereq>
 		<Prereq>Trigger_Daala_Jax_Death</Prereq>
 		<Prereq>Trigger_Jax_Daala_Timer</Prereq>
+		<Prereq>GC_Progress_04</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
 	</Event>
 	
 	<Event Name="Set_Subera_Daala">
@@ -1790,10 +1747,10 @@
 		<Prereq>Set_Subera_Daala</Prereq>
 	</Event>
 	
-	<Event Name="Y_Level_Four">
+	<Event Name="CSA_Level_Four">
   		 <Event_Type>STORY_TRIGGER</Event_Type>
  		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
-  		<Reward_Param1>Yevetha</Reward_Param1>
+  		<Reward_Param1>Corporate_Sector</Reward_Param1>
 		<Reward_Param2>4</Reward_Param2>	
 		<Prereq>Set_Subera_Daala</Prereq>
 	</Event>
@@ -1888,7 +1845,7 @@
   		<Event_Type>STORY_CONQUER</Event_Type>
   		<Event_Param1>Antem</Event_Param1>
 		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
-		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
+		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<Event Name="Getelles_Joins">
@@ -1911,7 +1868,8 @@
     <Event Name="Maldrood_Commenor">
   		<Event_Type>STORY_CONQUER</Event_Type>
   		<Event_Param1>Commenor</Event_Param1>
-		<Event_Param3>Teradoc</Event_Param3>
+		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+		<Perpetual>true</Perpetual>
 	 </Event>
 	
 	<Event Name="Gendarr_Joins">
@@ -1929,14 +1887,13 @@
 		<Reward_Param9>Teradoc_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<!--<Prereq>Maldrood_Commenor</Prereq>-->
-		<Perpetual>true</Perpetual>
     </Event>
 	
 	<Event Name="Maldrood_Kashyyyk">
   		<Event_Type>STORY_CONQUER</Event_Type>
   		<Event_Param1>Kashyyyk</Event_Param1>
-		<Event_Param3>Teradoc</Event_Param3>
-		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
+		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<Event Name="Syn_Joins">
@@ -1960,7 +1917,8 @@
 	<Event Name="Eriadu_Elrood">
   		<Event_Type>STORY_CONQUER</Event_Type>
   		<Event_Param1>Elrood</Event_Param1>
-		<Event_Param3>Hutts</Event_Param3>
+		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+		<Perpetual>true</Perpetual>
 	 </Event>
 	 
 	 <Event Name="Elrood_Joins">
@@ -1978,6 +1936,29 @@
 		<Reward_Param9>Delvardus_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Eriadu_Elrood</Prereq>
+	</Event>
+	
+	<Event Name="Zsinj_Centares">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>Centares</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Selit_Joins">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>SELIT_JOINS_SPEECH</Event_Param2>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_GENERIC_SELIT_JOINS</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Zsinj_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
 	</Event>
 	
 	<!-- Yevetha Emergent Faction Event -->
@@ -2021,6 +2002,7 @@
 		<Reward_Param1>Doornik</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Set_Subera_Pellaeon</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
 	</Event>
 
 	<Event Name="Zfell_Locked">
@@ -2050,6 +2032,7 @@
 		<Reward_Param1>Zfell</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Set_Subera_Pellaeon</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
 	</Event>
 	
 	<Event Name="Nzoth_Locked">
@@ -2079,6 +2062,7 @@
 		<Reward_Param1>Nzoth</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Set_Subera_Pellaeon</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
 	</Event>
 	
 		<Event Name="Jtptan_Locked">
@@ -2108,6 +2092,8 @@
 		<Reward_Param1>Jtptan</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Set_Subera_Pellaeon</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
+
 	</Event>
 
 	<Event Name="Polneye_Locked">
@@ -2137,6 +2123,8 @@
 		<Reward_Param1>Polneye</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Set_Subera_Pellaeon</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
+
 	</Event>
 	
 	<Event Name="ILC905_Locked">
@@ -2167,6 +2155,7 @@
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Set_Subera_Pellaeon</Prereq>
 		<Prereq>Faction_Branch_Enabler_Yevetha</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
 
 	</Event>
 	
@@ -2174,6 +2163,8 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Prereq>Set_Subera_Pellaeon</Prereq>
 		<Prereq>Faction_Branch_Enabler_Yevetha</Prereq>
+		<Prereq>GC_Progress_05</Prereq>
+
 	</Event>
 	
 

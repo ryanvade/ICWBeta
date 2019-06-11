@@ -17,7 +17,7 @@
 		<SpaceBehavior>SPECIAL_WEAPON</SpaceBehavior>
 		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,SELECTABLE,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
 
-		<Affiliation>Rebel, Corporate_Sector</Affiliation>
+		<Affiliation>Rebel</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Build_Cost_Credits>2000</Build_Cost_Credits>
 		<Build_Time_Seconds>90</Build_Time_Seconds>
@@ -2206,7 +2206,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures></Required_Special_Structures>
+		<Required_Special_Structures>NewRep_SenatorsOffice</Required_Special_Structures>
 		<Required_Planets />
 		<Tactical_Health>800</Tactical_Health>
 		<GUI_Bracket_Size>2</GUI_Bracket_Size>
@@ -2465,8 +2465,8 @@
 		<Build_Cost_Credits>500</Build_Cost_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
-		<Build_Max_Instances_Per_Planet> 3 </Build_Max_Instances_Per_Planet>
-		<Build_Limit_Current_Per_Player>20</Build_Limit_Current_Per_Player>
+		<Build_Max_Instances_Per_Planet> 2 </Build_Max_Instances_Per_Planet>
+		<Build_Limit_Current_Per_Player>15</Build_Limit_Current_Per_Player>
 		<Size_Value>50</Size_Value>
 		<Base_Position>In_Base</Base_Position>
 		<Tech_Level>0</Tech_Level>
@@ -2593,11 +2593,11 @@
 		<Build_Cost_Credits>500</Build_Cost_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
-		<Build_Max_Instances_Per_Planet> 3 </Build_Max_Instances_Per_Planet>
+		<Build_Max_Instances_Per_Planet> 2 </Build_Max_Instances_Per_Planet>
 		<Size_Value>50</Size_Value>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Build_Limit_Current_Per_Player>20</Build_Limit_Current_Per_Player>
+		<Build_Limit_Current_Per_Player>15</Build_Limit_Current_Per_Player>
 		<Slice_Cost_Credits>250</Slice_Cost_Credits>
 		<Base_Position>In_Base</Base_Position>
 		<Tech_Level>0</Tech_Level>
@@ -2666,7 +2666,7 @@
 				<!-- plus an absolute 0 credits to planetary income -->
 				<Absolute_Income_Modifier>0</Absolute_Income_Modifier>
 				<!-- net effect of +( (base income * 0%) + 20) credits -->
-				<Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies>
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
 			<Income_Stream_Ability Name="Rebel_Mining_Income_Stream">
@@ -2799,6 +2799,8 @@
 		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 10.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>-->
+		
+		<Target_Bones> ALT0, P_SMOKE_TINY01_ALT3 </Target_Bones>
 		
 		<Hardpoints>
 			HP_Turbolaser_Tower,
@@ -2967,6 +2969,7 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Tactical_Additional_Structure_Type>Power_Generator_E</Tactical_Additional_Structure_Type>
+		<Required_Special_Structures>E_Ground_Barracks</Required_Special_Structures>
 
 		<!-- When one of these objects is created in galactic mode, we will populate every marker in land mode
 		that is a specific marker for E_Ground_Turbolaser_Tower. The galactic object will persist unless all
@@ -2988,6 +2991,7 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Tactical_Additional_Structure_Type>Power_Generator_R</Tactical_Additional_Structure_Type>
+		<Required_Special_Structures>R_Ground_Barracks</Required_Special_Structures>
 
 		<!-- When one of these objects is created in galactic mode, we will populate every marker in land mode
 		that is a specific marker for R_Ground_Turbolaser_Tower. The galactic object will persist unless all
@@ -3011,6 +3015,7 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Tactical_Additional_Structure_Type>Power_Generator_U</Tactical_Additional_Structure_Type>
+		<Required_Special_Structures>U_Ground_Barracks</Required_Special_Structures>
 
 		<!-- When one of these objects is created in galactic mode, we will populate every marker in land mode
 		that is a specific marker for R_Ground_Turbolaser_Tower. The galactic object will persist unless all
@@ -3024,6 +3029,7 @@
 	<!-- New Customized Base Buildings -->
 
 	<SpecialStructure Name="E_Ground_Barracks">
+		<Required_Special_Structures>Empire_MoffPalace</Required_Special_Structures>
 		<GUI_Bounds_Scale>0.3</GUI_Bounds_Scale>
 		<Text_ID>TEXT_GROUND_BARRACKS</Text_ID>
 		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BARRACKS_EMPIRE_00, TEXT_ENCYCLOPEDIA_BARRACKS_EMPIRE_01 TEXT_TOOLTIP_GARRISON_E_BARRACKS </Encyclopedia_Text>
@@ -3242,7 +3248,6 @@
 				<Applicable_Unit_Types />
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
-
 		</Abilities>
 	</SpecialStructure>
 
@@ -3314,7 +3319,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures />
+		<Required_Special_Structures>NewRep_SenatorsOffice</Required_Special_Structures>
 		<Required_Planets />
 		<Tactical_Health>500</Tactical_Health>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -3363,6 +3368,14 @@
 				RL_Combat_Armor_L1_Upgrade,
 				RL_Combat_Armor_L2_Upgrade,
 				RL_Weatherproof_Upgrade,
+			Corporate_Sector,
+			    Espo_Squad,
+				CSA_Plex_Squad,
+				B1_Droid_Squad,
+				CSA_Destroyer_Droid_Company,
+				PL_Increased_Mobility_Upgrade,
+				PL_Stamina_Boost_Upgrade,
+				PL_Weatherproof_Upgrade,
 		</Tactical_Buildable_Objects_Multiplayer>
 
 
@@ -3421,7 +3434,6 @@
 				<Applicable_Unit_Types />
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
-
 		</Abilities>
 	</SpecialStructure>
 
@@ -3438,7 +3450,8 @@
 		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
 		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
 	<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE, TURRET, TARGETING,WEAPON, POWERED</LandBehavior>
-
+		<Required_Special_Structures>Empire_MoffPalace</Required_Special_Structures>
+	
 		<Obstacle_Proxy_Type> E_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
 		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
 		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
@@ -3578,7 +3591,7 @@
 
 		<AI_Combat_Power>500</AI_Combat_Power>
 		<Starting_Spawned_Units_Tech_0>AT_ST_Walker, 4</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>AT_ST_Walker, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AT_ST_Walker, -1</Reserve_Spawned_Units_Tech_0>
 
 		<Spawned_Squadron_Delay_Seconds>25</Spawned_Squadron_Delay_Seconds>
 		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
@@ -3695,7 +3708,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures />
+		<Required_Special_Structures>NewRep_SenatorsOffice</Required_Special_Structures>
 		<Required_Planets />
 		<Tactical_Health>750</Tactical_Health>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -3727,7 +3740,7 @@
 
 		<AI_Combat_Power>600</AI_Combat_Power>
 		<Starting_Spawned_Units_Tech_0>T2B_Tank, 4</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>T2B_Tank, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>T2B_Tank, -1</Reserve_Spawned_Units_Tech_0>
 
 		<Spawned_Squadron_Delay_Seconds>25</Spawned_Squadron_Delay_Seconds>
 		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
@@ -3755,6 +3768,16 @@
 				RL_Enhanced_Repulsors_L1_Upgrade,
 				RL_Enhanced_Repulsors_L2_Upgrade,
 				RL_Weatherproof_Upgrade,
+			Corporate_Sector,
+			    Espo_Walker_Squad,
+				SX20_Company,
+				X10_Group,
+				GX12_Company,
+				PL_Light_Reflective_Armor_L1_Upgrade,
+				PL_Light_Reflective_Armor_L2_Upgrade,
+				PL_Enhanced_Reactors_L1_Upgrade,
+				PL_Enhanced_Reactors_L2_Upgrade,
+				PL_Weatherproof_Upgrade,
 		</Tactical_Buildable_Objects_Multiplayer>
 
 
@@ -3789,7 +3812,6 @@
 				<Applicable_Unit_Types />
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
-
 		</Abilities>
 	</SpecialStructure>
 
@@ -3872,7 +3894,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>E_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>E_Ground_Light_Vehicle_Factory, Empire_MoffPalace</Required_Special_Structures>
 		<Required_Planets />
 		<Tactical_Health>1200</Tactical_Health>
 		<Icon_Name>i_button_e_advanced_weapons.tga</Icon_Name>
@@ -3944,7 +3966,7 @@
 
       <AI_Combat_Power>800</AI_Combat_Power>
 		<Starting_Spawned_Units_Tech_0>M1_Repulsor_Tank, 3</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>M1_Repulsor_Tank, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>M1_Repulsor_Tank, -1</Reserve_Spawned_Units_Tech_0>
 
 		<Spawned_Squadron_Delay_Seconds>25</Spawned_Squadron_Delay_Seconds>
 		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
@@ -4059,7 +4081,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>R_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>R_Ground_Light_Vehicle_Factory, NewRep_SenatorsOffice</Required_Special_Structures>
 		<Required_Planets />
 		<Tactical_Health>1000</Tactical_Health>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -4088,8 +4110,8 @@
 		<Property_Flags>InBase</Property_Flags>
 
       <AI_Combat_Power>600</AI_Combat_Power>
-		<Starting_Spawned_Units_Tech_0>T4B_Tank, 2</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>T4B_Tank, 2</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>T4B_Tank, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>T4B_Tank, 10</Reserve_Spawned_Units_Tech_0>
 
 
 		<Spawned_Squadron_Delay_Seconds>25</Spawned_Squadron_Delay_Seconds>
@@ -4116,6 +4138,7 @@
 				Rebel_T3_Tank_Brigade,
 				Rebel_Speeder_Wing,
 				Tracker_Company,
+				Rebel_AA5_Brigade,
 				RL_Heavy_Armor_L1_Upgrade,
 				RL_Heavy_Armor_L2_Upgrade,
 				RL_Improved_Treads_L1_Upgrade,
@@ -4123,6 +4146,18 @@
 				RL_Improved_T4B_Damage_L1_Upgrade,
 				RL_Improved_T4B_Damage_L2_Upgrade,
 				RL_Weatherproof_Upgrade,
+			Corporate_Sector,
+			    C_Hailfire_Company,
+				Aratech_Battle_Platform_Company,
+				JX40_Group,
+				Strikebreaker_Group,
+				K222_Wing,
+				Persuader_Company,
+				PL_Heavy_Reflective_Armor_L1_Upgrade,
+				PL_Heavy_Reflective_Armor_L2_Upgrade,
+				PL_Improved_ATAT_Reactors_L1_Upgrade,
+				PL_Improved_ATAT_Reactors_L2_Upgrade,
+				PL_Weatherproof_Upgrade,
 		</Tactical_Buildable_Objects_Multiplayer>
 
 		<!--<Tactical_Buildable_Objects_Multiplayer>
@@ -4250,7 +4285,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>E_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		<Required_Special_Structures>E_Ground_Light_Vehicle_Factory, E_Ground_Heavy_Vehicle_Factory, Empire_MoffPalace</Required_Special_Structures>
 		<Required_Planets />
 		<Tactical_Health>900</Tactical_Health>
 		<Icon_Name>i_button_e_mega_advanced_weapons.tga</Icon_Name>
@@ -4283,7 +4318,7 @@
 
       <AI_Combat_Power>800</AI_Combat_Power>
 		<Starting_Spawned_Units_Tech_0>AT_AT_Walker, 1</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>AT_AT_Walker, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AT_AT_Walker, -1</Reserve_Spawned_Units_Tech_0>
 
 		<Spawned_Squadron_Delay_Seconds>60</Spawned_Squadron_Delay_Seconds>
 		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
@@ -6873,13 +6908,13 @@
 		<Victory_Relevant>yes</Victory_Relevant>
 		<Influences_Capture_Point>False</Influences_Capture_Point>
 
-		<Tech_Level>99</Tech_Level>
+		<Tech_Level>0</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures />
 		<Required_Planets />
-		<Affiliation>Rebel, Empire, Underworld, Pirates, Hutts, Teradoc, Pentastar</Affiliation>
+		<Affiliation>Rebel, Empire, Underworld, Pirates, Hutts, Teradoc, Pentastar, Corporate_Sector</Affiliation>
 		
 		<GUI_Row>0</GUI_Row>
 		<Political_Control>0</Political_Control>

@@ -8,7 +8,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"StructureForce",
-		"Remnant_Capital | PA_Capital | Maldrood_Capital | Eriadu_Capital | NewRep_Senate | Rancor_Base | Yevetha_Capital | CSA_Capital | U_Ground_Palace = 1"
+		"Remnant_Capital | PA_Capital | Maldrood_Capital | Eriadu_Capital | NewRep_Senate | Rancor_Base | CSA_Capital | U_Ground_Palace = 1"
 	}
 	}
 

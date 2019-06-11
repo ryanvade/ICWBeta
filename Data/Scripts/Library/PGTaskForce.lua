@@ -54,7 +54,12 @@ function AssembleForce(taskforce, stage_at_strongest_space)
 		DebugMessage("%s -- Using default system %s (nearest faction system) for staging.", tostring(Script), tostring(stage))
 	end
 	
-	if not stage then 
+	if not stage and stage_at_strongest_space then
+		stage = taskforce.Get_Stage()
+		DebugMessage("%s -- Using default system %s (nearest faction system) for staging.", tostring(Script), tostring(stage))
+	end
+	
+	if not stage then
 		DebugMessage("%s -- Unable to find a staging area.  Abandonning plan.", tostring(Script))
 		ScriptExit()
 	end
@@ -327,26 +332,27 @@ function QuickReinforce(player, target, tf_to_reinforce, second_try_tf)
 			BlockOnCommand(tf_to_reinforce.Reinforce(target), lib_reinforce_timeout)
 		end
 	
-		-- Try to land near the default starting point, or some base building, or finally the target itself.
+		-- Try to land near some structure, a friendly capital ship, the target itself, or finally the start location.
+		lib_base_list = Find_All_Objects_Of_Type(player, "Structure")
+		if lib_base_list[1] then
+			DebugMessage("%s-- Trying to reinforce by friendly structure", tostring(Script))
+			BlockOnCommand(tf_to_reinforce.Reinforce(lib_base_list[1]), lib_reinforce_timeout)
+		else
+			lib_base_list = Find_All_Objects_Of_Type(player, "Capital")
+			if lib_base_list[1] then
+				DebugMessage("%s-- Trying to reinforce by friendly capital", tostring(Script))
+				BlockOnCommand(tf_to_reinforce.Reinforce(lib_base_list[1]), lib_reinforce_timeout)
+			else
+				DebugMessage("%s-- Trying to reinforce by plan target", tostring(Script))
+				BlockOnCommand(tf_to_reinforce.Reinforce(target), lib_reinforce_timeout)
+			end
+		end
+		
 		lib_start_loc = FindTarget(tf_to_reinforce, "Is_Friendly_Start", "Tactical_Location", 1.0)
+		
 		if lib_start_loc then
 			DebugMessage("%s-- Trying to reinforce by start point", tostring(Script))
 			BlockOnCommand(tf_to_reinforce.Reinforce(lib_start_loc), lib_reinforce_timeout)
-		else
-			lib_base_list = Find_All_Objects_Of_Type(player, "Structure")
-			if lib_base_list[1] then
-				DebugMessage("%s-- Trying to reinforce by friendly structure", tostring(Script))
-				BlockOnCommand(tf_to_reinforce.Reinforce(lib_base_list[1]), lib_reinforce_timeout)
-			else
-				lib_base_list = Find_All_Objects_Of_Type(player, "Capital")
-				if lib_base_list[1] then
-					DebugMessage("%s-- Trying to reinforce by friendly capital", tostring(Script))
-					BlockOnCommand(tf_to_reinforce.Reinforce(lib_base_list[1]), lib_reinforce_timeout)
-				else
-					DebugMessage("%s-- Trying to reinforce by plan target", tostring(Script))
-					BlockOnCommand(tf_to_reinforce.Reinforce(target), lib_reinforce_timeout)
-				end
-			end
 		end
 		
 		-- If we were unable to bring in any reinforcements within a reasonable amount of time
@@ -411,6 +417,9 @@ function SetClassPriorities(tf, priority_set_type)
 
 	priority_set_name = "Capital" .. "_" .. priority_set_type
 	tf.Set_Targeting_Priorities(priority_set_name, "Capital")
+	
+	priority_set_name = "SuperCapital" .. "_" .. priority_set_type
+	tf.Set_Targeting_Priorities(priority_set_name, "SuperCapital")
 
 end
 

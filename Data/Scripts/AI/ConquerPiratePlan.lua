@@ -48,7 +48,7 @@ function Definitions()
 	MinContrastScale = 1.15
 	MaxContrastScale = 1.2
 		
-	Category = "Conquer_Pirate | Warlord_Conquer_Pirate"
+	Category = "Conquer_Pirate | Warlord_Conquer_Pirate | EotH_Retake_Planet"
 	TaskForce = {
 	{
 		"MainForce"						

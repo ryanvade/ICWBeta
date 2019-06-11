@@ -19,7 +19,7 @@
 --******************************************************************************
 
 
-
+---@param num number
 function EqualTo (num)
   return {
     number = num,

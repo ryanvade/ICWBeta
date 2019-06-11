@@ -25,22 +25,30 @@ require("TRUtil")
 require("Observable")
 
 PlanetOwnerChangedEvent = Class {
-    Extends = Observable,
+    Extends = Observable;
+    Constructor = function(self, planets)
+        self.Planets = planets
+    end;
     Check = function(self)
         local planetOwnerChangedData = GlobalValue.Get("PLANET_OWNER_CHANGED")
         if TRUtil.ValidGlobalValue(planetOwnerChangedData) then
-            self:Notify(FindPlanet(planetOwnerChangedData))
+            local planet = self.Planets[planetOwnerChangedData]
+            self:Notify(planet)
             GlobalValue.Set("PLANET_OWNER_CHANGED", "")
         end
     end
 }
 
 ProductionFinishedEvent = Class {
-    Extends = Observable,
+    Extends = Observable;
+    Constructor = function(self, planets)
+        self.Planets = planets
+    end;
     Check = function(self)
         local productionPlanet = GlobalValue.Get("PRODUCTION_FINISHED")
         if TRUtil.ValidGlobalValue(productionPlanet) then
-            self:Notify(FindPlanet(productionPlanet))
+            local planet = self.Planets[productionPlanet]
+            self:Notify(planet)
             GlobalValue.Set("PRODUCTION_FINISHED", "")
         end
     end
@@ -48,15 +56,15 @@ ProductionFinishedEvent = Class {
 
 SelectedPlanetChangedEvent = Class {
     Extends = Observable,
-    Constructor = function(self, player)
+    Constructor = function(self, player, planets)
         self.Player = player
+        self.Planets = planets
     end,
 
     Check = function(self)
-        local allPlanets = FindPlanet.Get_All_Planets()
-        for i, planet in pairs(allPlanets) do
-            if Check_Story_Flag(self.Player, "ZOOMED_INTO_"..planet.Get_Type().Get_Name(), nil, true) then
-                GlobalValue.Set("SELECTED_PLANET", planet.Get_Type().Get_Name())
+        for _, planet in pairs(self.Planets) do
+            if Check_Story_Flag(self.Player, "ZOOMED_INTO_"..planet:get_name(), nil, true) then
+                GlobalValue.Set("SELECTED_PLANET", planet:get_name())
                 self:Notify(planet)
                 break
             end

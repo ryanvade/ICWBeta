@@ -46,7 +46,6 @@ function Find_Faction(message)
 	local p_pentastar = Find_Player("Pentastar")
 	 local p_zsinj = Find_Player("Pirates")
 	 local p_maldrood = Find_Player("Teradoc")
-	 local p_yevetha = Find_Player("Yevetha")
 
 	if p_newrep.Is_Human() then
 		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
@@ -62,8 +61,6 @@ function Find_Faction(message)
 		Story_Event("ENABLE_BRANCH_ZSINJ_FLAG")
 	elseif p_maldrood.Is_Human() then
 		Story_Event("ENABLE_BRANCH_TERADOC_FLAG")
-	elseif p_yevetha.Is_Human() then
-		Story_Event("ENABLE_BRANCH_YEVETHA_FLAG")
 	end
 
   end

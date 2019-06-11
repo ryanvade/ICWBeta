@@ -15,6 +15,12 @@
 		<Event_Param1>0</Event_Param1>
 	</Event>
 	
+	<Event Name="Reveal_All_Planets">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REVEAL_ALL_PLANETS</Reward_Type>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
 	<Event Name="NR_Level_Two">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>1</Event_Param1>
@@ -62,7 +68,7 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Chimera</Reward_Param1>
-		<Reward_Param2>ObroaSkai</Reward_Param2>
+		<Reward_Param2>Myrkr</Reward_Param2>
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 
@@ -98,13 +104,6 @@
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 
-	<Event Name="Spawn_Jorus">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Joruus_Cboath_Team</Reward_Param1>
-		<Reward_Param2>Jomark</Reward_Param2>
-		<Prereq>Universal_Story_Start</Prereq>
-	</Event>
 	<!--<Event Name="Spawn_Rukh">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SPAWN_HERO</Reward_Type>
@@ -335,4 +334,111 @@
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Conquer_Pantolomin</Prereq>
 	</Event>
+	
+	<Event Name="Wayland_Locked">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Wayland</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Obroa_Skai_Raid">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>ObroaSkai</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Branch_Obroa_Text</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
+	</Event>
+	
+	<Event Name="Wayland_Unlocked">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Wayland</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Obroa_Skai_Raid</Prereq>
+	</Event>
+	
+	<Event Name="Wayland_Conquer">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>Wayland</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
+	</Event>
+	
+	<Event Name="Spawn_Jorus">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Joruus_Cboath_Team</Reward_Param1>
+		<Reward_Param2>Wayland</Reward_Param2>
+		<Prereq>Wayland_Conquer</Prereq>
+	</Event>
+	
+	<Event Name="Obroa_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>30</Event_Param1>
+		<Branch>Branch_Obroa_Text</Branch>
+	</Event>
+	
+	<Event Name="Obroa_Skai_Intro">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_THRAWN_OBROA_INTRO</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Thrawn_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Branch>Branch_Obroa_Text</Branch>
+		<Prereq>Obroa_Start</Prereq>
+	</Event>
+  
+    <Event Name="Obroa_Skai_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Remnant_Thrawn</Story_Dialog>
+		<Story_Chapter>2</Story_Chapter>
+		<Branch>Branch_Obroa_Text</Branch>
+		<Story_Tag>Obroa_Start</Story_Tag>
+	</Event>
+	
+	<Event Name="Obroa_Skai_Conquer_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_THRAWN_OBROA_CONCLUSION</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Thrawn_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Obroa_Skai_Raid</Prereq>
+	</Event>
+	
+	<Event Name="Wayland_Conquer_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_THRAWN_TAKE_WAYLAND</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Thrawn_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Wayland_Conquer</Prereq>
+	</Event>
+ 
 </Story>

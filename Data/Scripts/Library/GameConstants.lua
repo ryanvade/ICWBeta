@@ -26,7 +26,6 @@ GameConstants = {
             "REBEL",
             "UNDERWORLD",
             "PENTASTAR",
-            "YEVETHA",
             "TERADOC",
             "PIRATES",
             "HUTTS",
@@ -37,15 +36,14 @@ GameConstants = {
             "REBEL",
             "UNDERWORLD",
             "PENTASTAR",
-            "YEVETHA",
             "TERADOC",
             "PIRATES",
             "HUTTS",
             "WARLORDS",
             "CORPORATE_SECTOR",
-            "HARRSK",
             "NEUTRAL",
             "HOSTILE",
+            "HUTT_CARTELS",
             "SARLACC"
         },
 		ALL_FACTIONS_NOT_NEUTRAL = {
@@ -53,13 +51,12 @@ GameConstants = {
             "REBEL",
             "UNDERWORLD",
             "PENTASTAR",
-            "YEVETHA",
             "TERADOC",
             "PIRATES",
             "HUTTS",
             "WARLORDS",
             "CORPORATE_SECTOR",
-            "HARRSK",
+            --"HUTT_CARTELS",
             "SARLACC"
         },
         ALL_FACTION_TEXTS = {
@@ -67,15 +64,14 @@ GameConstants = {
             REBEL = "TEXT_FACTION_REBELS",
             UNDERWORLD = "TEXT_FACTION_EOTH",
             PENTASTAR = "TEXT_FACTION_PENTASTAR",
-            YEVETHA = "TEXT_FACTION_YEVETHA",
             TERADOC = "TEXT_FACTION_TERADOC",
             PIRATES = "TEXT_FACTION_ZSINJ",
             HUTTS = "TEXT_FACTION_DELVARDUS",
             WARLORDS = "TEXT_FACTION_WARLORDS",
             CORPORATE_SECTOR = "TEXT_FACTION_CSA",
-            HARRSK = "TEXT_FACTION_HARRSK",
             NEUTRAL = "TEXT_FACTION_NEUTRAL",
             HOSTILE = "TEXT_FACTION_HOSTILE",
+            HUTT_CARTELS = "TEXT_FACTION_HUTTS",
             SARLACC = "TEXT_FACTION_HAPES"
         }
 }

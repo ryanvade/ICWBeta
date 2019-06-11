@@ -5,9 +5,12 @@
 	<Should_Garrison_Bunker>
 		20.0
 		*
+		(1000 > Script_GetDistanceToFirstWithProperty.Evaluate {Parameter_Script_String = "InBase", Parameter_Script_String = "FRIENDLY"})
+		*
 		(Variable_Target.GarrisonSlotsAvailable > 0)
 		*
-		(Variable_Self.IsDefender + 
+		(Variable_Self.IsDefender
+			+ 
 			((Game.IsCampaignGame == 0)
 			* 
 			Function_Is_Initial_Skirmish_State_Established.Evaluate
@@ -23,18 +26,16 @@
 		Variable_Self.IsFaction {Parameter_Faction = "EMPIRE"}
 		+
 		Variable_Target.Type.IsType {Parameter_Type = "Garrison_Bunker_Underworld" } *
-		Variable_Self.IsFaction {Parameter_Faction = "UNDERWORLD"})
+		Variable_Self.IsFaction {Parameter_Faction = "UNDERWORLD"}
 		+
-		(Variable_Target.Type.IsType {Parameter_Type = "Garrison_Bunker_Pentastar" } *
-		Variable_Self.IsFaction {Parameter_Faction = "Pirates"}
+		Variable_Target.Type.IsType {Parameter_Type = "Garrison_Bunker_Pentastar" } *
+		(Variable_Self.IsFaction {Parameter_Faction = "Pirates"}
 		+
 		Variable_Self.IsFaction {Parameter_Faction = "Hutts"}
 		+
 		Variable_Self.IsFaction {Parameter_Faction = "Pentastar"}
 		+
-		Variable_Self.IsFaction {Parameter_Faction = "Teradoc"}
-		+
-		Variable_Self.IsFaction {Parameter_Faction = "Yevetha"})
+		Variable_Self.IsFaction {Parameter_Faction = "Teradoc"}))
 	</Should_Garrison_Bunker>
 
 	<Should_Fire_Orbital_Bombardment>

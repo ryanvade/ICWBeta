@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Fractured Empire (Isard) *****-->
+<!--******************************************************-->
+
+
+
+<Story>
+	
+	<Event Name="Filter_Frigate_Enable">
+		<Event_Type>STORY_CLICK_GUI</Event_Type>
+		<Event_Param1>b_space_filter01</Event_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>	
+	<Event Name="Filter_Capital_Enable">
+		<Event_Type>STORY_CLICK_GUI</Event_Type>
+		<Event_Param1>b_space_filter02</Event_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>
+	<Event Name="Filter_Station_Enable">
+		<Event_Type>STORY_CLICK_GUI</Event_Type>
+		<Event_Param1>b_space_filter03</Event_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Force_Space_Tab">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>FORCE_CLICK_GUI</Reward_Type>
+		<Reward_Param1>b_space_tab</Reward_Param1>
+		<Prereq>Filter_Station_Enable</Prereq>
+		<Prereq>Filter_Capital_Enable</Prereq>
+		<Prereq>Filter_Frigate_Enable</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+</Story>

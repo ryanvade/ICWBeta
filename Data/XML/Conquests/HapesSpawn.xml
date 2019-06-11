@@ -10,12 +10,47 @@
 	
 	
 		
-	<Event Name="Universal_Story_Start">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>0</Event_Param1>
-	</Event>
+
 
 	<!-- Hapes Consortium Spawns -->
+	
+	<Event Name="Hapes_Enter_Tech_02">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>2</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Pentastar_Talks</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Hapes_Enter_Tech_03">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Hapes_Spawns</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Hapes_Enter_Tech_04">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Hapes_Spawns</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+		<Event Name="Hapes_Enter_Tech_05">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>5</Event_Param1>
+			<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Hapes_Spawns</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+		<Branch>Hapes_Spawns</Branch>
+	</Event>
 	
 	<Event Name="Hapes_Unlocks">
 		<Event_Type>STORY_ELAPSED</Event_Type>
@@ -49,6 +84,10 @@
 		<Reward_Param1>MistOne</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Hapes_Unlocks</Prereq>
+		<Prereq>Hapes_Enter_Tech_02</Prereq>
+		<Prereq>Hapes_Enter_Tech_03</Prereq>
+		<Prereq>Hapes_Enter_Tech_04</Prereq>
+		<Prereq>Hapes_Enter_Tech_05</Prereq>
 	</Event>
 	
 	<Event Name="MistTwo_Bouncer">
@@ -78,6 +117,10 @@
 		<Reward_Param1>MistTwo</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Hapes_Unlocks</Prereq>
+		<Prereq>Hapes_Enter_Tech_02</Prereq>
+		<Prereq>Hapes_Enter_Tech_03</Prereq>
+		<Prereq>Hapes_Enter_Tech_04</Prereq>
+		<Prereq>Hapes_Enter_Tech_05</Prereq>
 	</Event>
 	
 	<Event Name="MistThree_Bouncer">
@@ -107,6 +150,10 @@
 		<Reward_Param1>MistThree</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Hapes_Unlocks</Prereq>
+		<Prereq>Hapes_Enter_Tech_02</Prereq>
+		<Prereq>Hapes_Enter_Tech_03</Prereq>
+		<Prereq>Hapes_Enter_Tech_04</Prereq>
+		<Prereq>Hapes_Enter_Tech_05</Prereq>
 	</Event>
 	
 		<Event Name="Hapes_Bouncer">
@@ -136,6 +183,10 @@
 		<Reward_Param1>Hapes</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Hapes_Unlocks</Prereq>
+		<Prereq>Hapes_Enter_Tech_02</Prereq>
+		<Prereq>Hapes_Enter_Tech_03</Prereq>
+		<Prereq>Hapes_Enter_Tech_04</Prereq>
+		<Prereq>Hapes_Enter_Tech_05</Prereq>
 	</Event>
 	
 	<Event Name="Charubah_Bouncer">
@@ -165,6 +216,10 @@
 		<Reward_Param1>Charubah</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Hapes_Unlocks</Prereq>
+		<Prereq>Hapes_Enter_Tech_02</Prereq>
+		<Prereq>Hapes_Enter_Tech_03</Prereq>
+		<Prereq>Hapes_Enter_Tech_04</Prereq>
+		<Prereq>Hapes_Enter_Tech_05</Prereq>
 	</Event>
 	
 	<Event Name="Terephon_Bouncer">
@@ -194,6 +249,10 @@
 		<Reward_Param1>Terephon</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 		<Prereq>Hapes_Unlocks</Prereq>
+		<Prereq>Hapes_Enter_Tech_02</Prereq>
+		<Prereq>Hapes_Enter_Tech_03</Prereq>
+		<Prereq>Hapes_Enter_Tech_04</Prereq>
+		<Prereq>Hapes_Enter_Tech_05</Prereq>
 	</Event>
 	
 	<Event Name="Hapes_Spawns">

@@ -1,4 +1,4 @@
-/<?xml version="1.0"?>
+<?xml version="1.0"?>
 <GroundInfantry_Units>
 
 	<GroundInfantry Name="Phalanx_Commando">
@@ -22,7 +22,7 @@
 		<Rotation_Animation_Speed> 8.0 </Rotation_Animation_Speed>
 		<Walk_Animation_Speed> .40 </Walk_Animation_Speed>
 		<Crouch_Animation_Speed> .537 </Crouch_Animation_Speed>
-		<Max_Speed>2.2</Max_Speed>
+		<Max_Speed>1.2</Max_Speed>
 		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
 		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
 		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
@@ -37,7 +37,7 @@
 
 		<Armor_Type> Armor_Infantry </Armor_Type>
 
-		<Scale_Factor>0.07</Scale_Factor> <!-- Temp scale change for scale test - change back once models resized -->
+		<Scale_Factor>0.0525</Scale_Factor> <!-- Temp scale change for scale test - change back once models resized -->
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
 		<Deploys>No</Deploys>
@@ -69,7 +69,7 @@
 		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
 
-		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
+		<CategoryMask> Infantry | AntiInfantry | AntiVehicle</CategoryMask>
 		<MovementClass> Infantry </MovementClass>
 
 		<OccupationStyle>1x1</OccupationStyle>
@@ -100,7 +100,7 @@
 
 		<Is_Squashable> Yes </Is_Squashable>
 		<Create_Team>No</Create_Team>
-		<AI_Combat_Power>10</AI_Combat_Power>
+		<AI_Combat_Power>20</AI_Combat_Power>
 
 		<Idle_Chase_Range>50.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
@@ -179,7 +179,7 @@
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Underworld</Affiliation>
 		<Garrison_Category> Infantry </Garrison_Category>
-		<Build_Cost_Credits>100</Build_Cost_Credits>
+		<Build_Cost_Credits>150</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -257,7 +257,7 @@
 
         <Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
         <Movement_Animation_Speed> 25.0 </Movement_Animation_Speed>
-        <Max_Speed> 1.7 </Max_Speed>
+        <Max_Speed> 1.2 </Max_Speed>
         <Alternate_Max_Speed> 2.0 </Alternate_Max_Speed>
         <Max_Rate_Of_Turn> 20.0 </Max_Rate_Of_Turn>
         <Alternate_Max_Rate_Of_Turn> 6.0 </Alternate_Max_Rate_Of_Turn>
@@ -273,7 +273,7 @@
         <OverrideDeceleration> .1 </OverrideDeceleration>
         <Max_Lift> .6 </Max_Lift>
 
-        <Scale_Factor>0.07</Scale_Factor> <!-- Temp scale change for scale test - change back once models resized -->
+        <Scale_Factor>0.0525</Scale_Factor> <!-- Temp scale change for scale test - change back once models resized -->
         <!--<Is_Sprite>No</Is_Sprite>-->
         <Type>Walk</Type>
         <Deploys>No</Deploys>
@@ -435,7 +435,7 @@
 		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
 		<Walk_Animation_Speed> .40 </Walk_Animation_Speed>
 		<Crouch_Animation_Speed> .537 </Crouch_Animation_Speed>
-		<Max_Speed>1.7</Max_Speed>
+		<Max_Speed>1.0</Max_Speed>
 		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
 		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
 		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
@@ -448,7 +448,7 @@
 		<OverrideDeceleration> 0.05 </OverrideDeceleration>
 		<FormationOrder> 2 </FormationOrder>
 
-		<Scale_Factor>1.65</Scale_Factor>
+		<Scale_Factor>1.24</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
 		<Deploys>No</Deploys>
@@ -475,8 +475,10 @@
 		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.17</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		
+		<HardPoints>HP_Charric_Rifle</HardPoints>
 
-		<Projectile_Types>Proj_Charric</Projectile_Types>
+		<!--<Projectile_Types>Proj_Charric</Projectile_Types>-->
 
 		<Turret_Rotate_Extent_Degrees>45.0</Turret_Rotate_Extent_Degrees>
  	 	<Turret_Elevate_Extent_Degrees>120.0</Turret_Elevate_Extent_Degrees>
@@ -517,7 +519,7 @@
 		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
 		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
 		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
-		<CategoryMask> Infantry </CategoryMask>
+		<CategoryMask> Infantry | AntiInfantry</CategoryMask>
 		<MovementClass> Infantry </MovementClass>
 		<Property_Flags>Fodder</Property_Flags>
 		<OccupationStyle>1x1</OccupationStyle>
@@ -601,6 +603,25 @@
 	</GroundInfantry>
 
 
+	<GroundInfantry Name="Phalanx_Plex">
+		<Variant_Of_Existing_Type>Phalanx_Trooper</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PHALANX_TROOPER</Text_ID>
+		<Icon_Name>i_button_phalanxtrooper.tga</Icon_Name>
+		<HardPoints>HP_PLX</HardPoints>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PHALANX_SERGEANT TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<No_Colorization_Color> 251, 174, 1, 255 </No_Colorization_Color>
+
+		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
+		
+		<Max_Speed> 1.7 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	</GroundInfantry>
+	
+
 	<GroundInfantry Name="Phalanx_Sergeant">
 		<Variant_Of_Existing_Type>Stormtrooper</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_PHALANX_TROOPER</Text_ID>
@@ -617,6 +638,8 @@
 		<FormationRaggedness> .2 </FormationRaggedness>
 		<MaxJiggleDistance> 2 </MaxJiggleDistance>
 	</GroundInfantry>
+	
+
 
 	<GroundCompany Name="Phalanx_Trooper_Squad">
 		<LOD_Bias>5</LOD_Bias>
@@ -646,11 +669,12 @@
 		<Ship_Class>infantry</Ship_Class>
 		<Company_Transport_Unit>Imperial_Landing_Craft_Troops</Company_Transport_Unit>
 		<!-- AI  Changed to 18 troopers in squads of 9 -->
-		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Sergeant</Company_Units>
-		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Sergeant</Company_Units>
-		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Sergeant</Company_Units>
-		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Sergeant</Company_Units>
-		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Sergeant</Company_Units>
+		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Plex, Phalanx_Sergeant</Company_Units>
+		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Plex, Phalanx_Sergeant</Company_Units>
+		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Plex, Phalanx_Sergeant</Company_Units>
+		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Plex, Phalanx_Sergeant</Company_Units>
+		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Plex, Phalanx_Sergeant</Company_Units>
+		<Company_Units> Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Trooper, Phalanx_Plex, Phalanx_Sergeant</Company_Units>
 		<Max_Squad_Size> 6 </Max_Squad_Size>
 		<Icon_Name>i_button_phalanxtrooper.tga</Icon_Name>
 		<GUI_Model_Name>EOTH_PHALANXSOLD.ALO</GUI_Model_Name>

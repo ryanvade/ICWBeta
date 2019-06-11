@@ -17,41 +17,28 @@
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
-
-
-
 require("PGBase")
 require("PGStateMachine")
 require("PGStoryMode")
 require("PGSpawnUnits")
 require("ChangeOwnerUtilities")
+require("StoryEventManager")
+require("StoryEvents")
+require("Conquests/GlobalEvents")
 
 function Definitions()
-
-  DebugMessage("%s -- In Definitions", tostring(Script))
-
-  StoryModeEvents =
-  {
-  Universal_Story_Start = Begin_GC,
-    Determine_Faction_LUA = Find_Faction
-  }
-
+    DebugMessage("%s -- In Definitions", tostring(Script))
+    
+    StoryModeEvents = {
+        Universal_Story_Start = Begin_GC
+    }
 end
 
-function Find_Faction(message)
-  if message == OnEnter then
-
-	local p_newrep = Find_Player("Rebel")
-	local p_empire = Find_Player("Empire")
-
-	if p_newrep.Is_Human() then
-		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
-	elseif p_empire.Is_Human() then
-		Story_Event("ENABLE_BRANCH_EMPIRE_FLAG")
-	end
-
-  end
+function Begin_GC(message)
+    if message == OnEnter then
+        RegisterGlobalEvents()
+        RegisterEvents()
+    elseif message == OnUpdate then
+        StoryEventManager:ProcessEvents()
+    end
 end
-
-
-

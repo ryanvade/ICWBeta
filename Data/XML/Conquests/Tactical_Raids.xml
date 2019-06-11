@@ -232,11 +232,20 @@
 	<Perpetual>true</Perpetual>
 	</Event>
 	
-<Event Name="Disable_Retreat_Yevetha">
+<!-- <Event Name="Disable_Retreat_Yevetha">
 	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>NO_RETREAT</Event_Param2>
 	<Reward_Type>DISABLE_RETREAT</Reward_Type>
 		<Reward_Param1>Yevetha</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event> -->
+
+<Event Name="Disable_Retreat_CSA">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NO_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Corporate_Sector</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
 	<Perpetual>true</Perpetual>
 </Event>
@@ -303,11 +312,20 @@
 	<Perpetual>true</Perpetual>
 	</Event>
 	
-<Event Name="Enable_Retreat_Yevetha">
+<!-- <Event Name="Enable_Retreat_Yevetha">
 	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>YES_RETREAT</Event_Param2>
 	<Reward_Type>DISABLE_RETREAT</Reward_Type>
 		<Reward_Param1>Yevetha</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event> -->
+
+<Event Name="Enable_Retreat_CSA">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>YES_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Corporate_Sector</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
 	<Perpetual>true</Perpetual>
 </Event>

@@ -21,6 +21,7 @@
 require("PGStoryMode")
 require("PGSpawnUnits")
 require("ChangeOwnerUtilities")
+TRUtil = require("TRUtil")
 
 function Definitions()
 
@@ -29,16 +30,19 @@ function Definitions()
   StoryModeEvents =
   {
     Determine_Faction_LUA = Find_Faction,
+    Level_Check = Determine_Start_Era,
     Maldrood_Antem = Antem_Maldrood,
     Maldrood_Kashyyyk = Kashyyyk_Maldrood,
     Maldrood_Commenor = Commenor_Maldrood,
     Eriadu_Elrood = Elrood_Eriadu,
+	Zsinj_Centares = Centares_Zsinj,
     Set_Subera_Isard = SubEra_Change,
-    Set_Subera_Palpatine = DarkEmpireSpawns,
-    Set_Subera_Daala = DaalaSpawns,
-    Set_Subera_Thrawn = ThrawnSpawns,
+	Zero_Command_Split = Spawn_Harrsk,
+	E_Level_Two = ThrawnSpawns,
+    E_Level_Three = DarkEmpireSpawns,
+    E_Level_Four = DaalaSpawns,
     Set_Subera_Jax = Empire_Fractures,
-	Yevetha_Spawns = PellaeonSpawns
+    E_Level_Five = PellaeonSpawns
   }
 
 end
@@ -53,7 +57,7 @@ function Find_Faction(message)
 	p_pentastar = Find_Player("Pentastar")
 	p_zsinj = Find_Player("Pirates")
 	p_maldrood = Find_Player("Teradoc")
-	p_yevetha = Find_Player("Yevetha")
+	p_corporate = Find_Player("Corporate_Sector")
 
 	if p_newrep.Is_Human() then
 		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
@@ -69,8 +73,188 @@ function Find_Faction(message)
 		Story_Event("ENABLE_BRANCH_ZSINJ_FLAG")
 	elseif p_maldrood.Is_Human() then
 		Story_Event("ENABLE_BRANCH_TERADOC_FLAG")
-	elseif p_yevetha.Is_Human() then
-		Story_Event("ENABLE_BRANCH_YEVETHA_FLAG")
+	elseif p_corporate.Is_Human() then
+		Story_Event("ENABLE_BRANCH_CORPORATE_SECTOR_FLAG")
+	end
+
+  end
+end
+
+function Determine_Start_Era(message)
+  if message == OnEnter then
+
+	p_newrep = Find_Player("Rebel")
+	p_empire = Find_Player("Empire")
+	p_eoth = Find_Player("Underworld")
+	p_eriadu = Find_Player("Hutts")
+	p_pentastar = Find_Player("Pentastar")
+	p_zsinj = Find_Player("Pirates")
+	p_maldrood = Find_Player("Teradoc")
+	p_corporate = Find_Player("Corporate_Sector")
+	
+	techLevel = p_empire.Get_Tech_Level()
+	
+	if techLevel == 2 then
+		-- Empire
+		start_planet = FindPlanet("Coruscant")
+		if start_planet.Get_Owner() ~= Find_Player("Empire") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+		end
+		if start_planet then
+			spawn_list_thrawn = { "Chimera" , "Corellian_Gunboat_Ferrier" }
+			SpawnList(spawn_list_thrawn, start_planet, p_empire, true, false)
+		end
+		
+		start_planet = FindPlanet("Coruscant")
+		if start_planet.Get_Owner() ~= Find_Player("Empire") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+		end
+		if start_planet then
+			spawn_list_Thrawn = { "181st_TIE_Interceptor_Squadron", "General_Covell_Team", "Judicator_Star_Destroyer", "Relentless_Star_Destroyer", "Joruus_Cboath_Team" }
+			SpawnList(spawn_list_Thrawn, start_planet, p_empire, true, false)
+		end
+		
+		-- New Republic
+		start_planet = FindPlanet("Coruscant")
+		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+		end
+		if start_planet then
+			spawn_list_Thrawn = { "Iblis_Peregrine" }
+			SpawnList(spawn_list_Thrawn, start_planet, p_newrep, true, false)
+		end
+		
+		start_planet = FindPlanet("Myrkr")
+		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+		end
+		if start_planet then
+			spawn_list_Thrawn = { "Errant_Venture", "Mara_Saber_Team", "Wild_karrde" }
+			SpawnList(spawn_list_Thrawn, start_planet, p_newrep, true, false)
+		end
+	elseif techLevel == 3 then
+		-- Empire
+		start_planet = FindPlanet("Byss")
+		ChangePlanetOwnerAndRetreat(start_planet, p_empire)
+		spawn_list_Palpatine = {  "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "Sedriss_Team", "Emperor_Palpatine_Team", "General_Veers_Team", "Chimera_Pellaeon_Vice", "Klev_Silencer7" }
+		SpawnList(spawn_list_Palpatine, start_planet, p_empire,true,false)
+		
+		-- New Republic
+		
+		start_planet = FindPlanet("MonCalimari")
+		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+		end
+
+		checkLeia = Find_First_Object("Princess_Leia")
+		if TestValid(checkLeia) then
+			checkLeia.Despawn()
+			spawn_list_Leia = { "Princess_Leia_Team_Noghri" }
+			SpawnList(spawn_list_Leia, start_planet, p_newrep, true, false)
+		end
+
+		checkAckbar = Find_First_Object("Home_One")
+		if TestValid(checkAckbar) then
+			checkAckbar.Despawn()
+			spawn_list_Ackbar = { "Galactic_Voyager" }
+			SpawnList(spawn_list_Ackbar, start_planet, p_newrep, true, false)
+		end
+
+
+		RegicideObject = Find_First_Object("Dummy_Regicide_Palpatine")
+		if TestValid(RegicideObject) then
+			RegicideObject.Despawn()
+		end
+		
+		-- Hand
+		start_planet = FindPlanet("Nirauan")
+		if start_planet.Get_Owner() ~= Find_Player("Underworld") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+		end
+		if start_planet then
+			spawn_list_Hand = { "Siath_Battlehammer" }
+			SpawnList(spawn_list_Hand, start_planet, p_eoth,true,false)
+		end
+	elseif techLevel == 4 then
+		-- Empire
+		start_planet = FindPlanet("The_Maw")
+		ChangePlanetOwnerAndRetreat(start_planet, p_empire)
+
+		spawn_list_Daala = { "Imperial_Stormtrooper_Squad", "Gorgon", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two"  }
+		SpawnList(spawn_list_Daala, start_planet, p_empire,true,false)
+		
+		start_planet = FindPlanet("Byss")
+		if start_planet.Get_Owner() ~= Find_Player("Empire") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+		end
+		if start_planet then
+			spawn_list_Brakiss = { "Brakiss_Team", "Ardax_Vendetta" }
+			SpawnList(spawn_list_Brakiss, start_planet, p_empire,true,false)
+		end
+		
+		-- New Republic
+		start_planet = FindPlanet("Yavin")
+		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+		end
+		if start_planet then
+			spawn_list_Palpatine = { "Cilghal_Team" }
+			SpawnList(spawn_list_Palpatine, start_planet, p_newrep, true, false)
+		end
+		
+		start_planet = FindPlanet("Coruscant")
+		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+		end
+		if start_planet then
+			spawn_list_Thrawn = { "Bell_Endurance" }
+			SpawnList(spawn_list_Palpatine, start_planet, p_newrep, true, false)
+		end
+		
+		-- Hand
+		start_planet = FindPlanet("Nirauan")
+		if start_planet.Get_Owner() ~= Find_Player("Underworld") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+		end
+		if start_planet then
+			spawn_list_Hand = { "Chak_Fel_Krsiss_Squadron_Association" , "Ashik_Team" }
+			SpawnList(spawn_list_Hand, start_planet, p_eoth,true,false)
+		end
+	elseif techLevel == 5 then
+		-- Empire
+		local RegicideObject = Find_First_Object("Dummy_Regicide_Pellaeon")
+		if RegicideObject then
+			RegicideObject.Despawn()
+		end
+		
+		start_planet = FindPlanet("Coruscant")
+		if start_planet.Get_Owner() ~= Find_Player("Empire") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+		end
+		if start_planet then
+			spawn_list_Pellaeon = { "Chimera_Pellaeon_Grand", "Disra_Team", "Tierce_Team", "Ascian", "Rogriss_Dominion", "Navett_Team", "181st_Stele" }
+			SpawnList(spawn_list_Pellaeon, start_planet, p_empire,true,false)
+		end
+		
+		-- New Republic
+		start_planet = FindPlanet("Coruscant")
+		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+		end
+		if start_planet then
+			spawn_list_Palpatine = { "Gavrisom_Team" }
+			SpawnList(spawn_list_Palpatine, start_planet, p_newrep, true, false)
+		end
+		
+		-- Hand
+		start_planet = FindPlanet("Nirauan")
+		if start_planet.Get_Owner() ~= Find_Player("Underworld") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+		end
+		if start_planet then
+			spawn_list_Hand = { "Aurek_Seven_Team" }
+			SpawnList(spawn_list_Hand, start_planet, p_eoth,true,false)
+		end
 	end
 
   end
@@ -79,17 +263,20 @@ end
 function Commenor_Maldrood(message)
   if message == OnEnter then
 
-   p_maldrood = Find_Player("Teradoc")
-   start_planet = FindPlanet("Commenor")
+	p_maldrood = Find_Player("Teradoc")
+	start_planet = FindPlanet("Commenor")
 
-
-    if start_planet.Get_Owner() == Find_Player("Teradoc") then
-		if p_maldrood.Is_Human() then
-			Story_Event("GENDARR_JOINS_SPEECH")
+	p_empire = Find_Player("Empire")
+	techLevel = p_empire.Get_Tech_Level()
+	if techLevel == 1 then
+		if start_planet.Get_Owner() == Find_Player("Teradoc") then
+			if p_maldrood.Is_Human() then
+				Story_Event("GENDARR_JOINS_SPEECH")
+			end
+		 spawn_list_commenor = { "Lott_Team" , "Gendarr_Reliance" }
+		 SpawnList(spawn_list_commenor, start_planet, p_maldrood,true,false)
 		end
-     spawn_list_commenor = { "Lott_Team" , "Gendarr_Reliance" }
-     SpawnList(spawn_list_commenor, start_planet, p_maldrood,true,false)
-    end
+	end
 
   end
 end
@@ -100,16 +287,18 @@ function Antem_Maldrood(message)
    p_maldrood = Find_Player("Teradoc")
    start_planet = FindPlanet("Antem")
 
-
-    if start_planet.Get_Owner() == Find_Player("Teradoc") then
-		if p_maldrood.Is_Human() then
-			Story_Event("GETELLES_JOINS_SPEECH")
+	p_empire = Find_Player("Empire")
+	techLevel = p_empire.Get_Tech_Level()
+	if techLevel == 1 then
+		if start_planet.Get_Owner() == Find_Player("Teradoc") then
+			if p_maldrood.Is_Human() then
+				Story_Event("GETELLES_JOINS_SPEECH")
+			end
+			spawn_list_kosh = { "Getelles_Team" , "Larm_Carrack" }
+			SpawnList(spawn_list_kosh, start_planet, p_maldrood,true,false)
+		  --end
 		end
-     	spawn_list_kosh = { "Getelles_Team" , "Larm_Carrack" }
-     	SpawnList(spawn_list_kosh, start_planet, p_maldrood,true,false)
-      --end
-    end
-
+	end
 
   end
 end
@@ -120,16 +309,18 @@ function Kashyyyk_Maldrood(message)
    p_maldrood = Find_Player("Teradoc")
    start_planet = FindPlanet("Kashyyyk")
 
-
-    if start_planet.Get_Owner() == Find_Player("Teradoc") then
-		if p_maldrood.Is_Human() then
-			Story_Event("SYN_JOINS_SPEECH")
+	p_empire = Find_Player("Empire")
+	techLevel = p_empire.Get_Tech_Level()
+	if techLevel == 1 then
+		if start_planet.Get_Owner() == Find_Player("Teradoc") then
+			if p_maldrood.Is_Human() then
+				Story_Event("SYN_JOINS_SPEECH")
+			end
+			spawn_list_syn = { "Syn_Silooth" }
+			SpawnList(spawn_list_syn, start_planet, p_maldrood,true,false)
+		  --end
 		end
-     	spawn_list_syn = { "Syn_Silooth" }
-    	SpawnList(spawn_list_syn, start_planet, p_maldrood,true,false)
-      --end
-    end
-
+	end
 
   end
 end
@@ -140,56 +331,87 @@ function Elrood_Eriadu(message)
    p_eriadu = Find_Player("Hutts")
    start_planet = FindPlanet("Elrood")
 
-	if start_planet.Get_Owner() == Find_Player("Hutts") then
-		if p_eriadu.Is_Human() then
-			Story_Event("ELROOD_JOINS_SPEECH")
+   	p_empire = Find_Player("Empire")
+	techLevel = p_empire.Get_Tech_Level()
+	if techLevel == 1 then
+		if start_planet.Get_Owner() == Find_Player("Hutts") then
+			if p_eriadu.Is_Human() then
+				Story_Event("ELROOD_JOINS_SPEECH")
+			end
+			spawn_list_elrood = { "Andal_Team" , "Zed_Stalker" , "Pryl_Thunderflare" }
+			SpawnList(spawn_list_elrood, start_planet, p_eriadu,true,false)
 		end
-		spawn_list_elrood = { "Andal_Team" , "Zed_Stalker" , "Pryl_Thunderflare" }
-		SpawnList(spawn_list_elrood, start_planet, p_eriadu,true,false)
-    end
-
+	end
 
   end
 
+end
+
+function Centares_Zsinj(message)
+  if message == OnEnter then
+
+   p_zsinj = Find_Player("Pirates")
+   start_planet = FindPlanet("Centares")
+
+	p_empire = Find_Player("Empire")
+	techLevel = p_empire.Get_Tech_Level()
+	if techLevel == 1 then
+		if start_planet.Get_Owner() == Find_Player("Pirates") then
+			if p_zsinj.Is_Human() then
+				Story_Event("SELIT_JOINS_SPEECH")
+			end
+			spawn_list_selit = { "Selit_Team"}
+			SpawnList(spawn_list_selit, start_planet, p_zsinj,true,false)
+		  --end
+		end
+	end
+
+  end
 end
 
 function SubEra_Change(message)
   if message == OnEnter then
 
 	p_empire = Find_Player("Empire")
-    p_harrsk = Find_Player("Harrsk")
 
 	start_planet = FindPlanet("Coruscant")
-
 	if start_planet.Get_Owner() ~= Find_Player("Empire") then
-		allPlanets = FindPlanet.Get_All_Planets()
-		random = GameRandom(1, table.getn(allPlanets))
-		start_planet = allPlanets[random]
-	  while start_planet.Get_Owner() ~= Find_Player("Empire") do
-			random = GameRandom(1, table.getn(allPlanets))
-			start_planet = allPlanets[random]
+		start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+	end
+	if start_planet then
+		spawn_list_isard = { "Lusankya" }
+		IsardSpawn = SpawnList(spawn_list_isard, start_planet, p_empire,true,false)
+		
+		ProjectAmbition = Find_First_Object("Project_Ambition_Dummy")
+		if TestValid(ProjectAmbition) then
+			spawn_list_ambition = { "Makati_Steadfast" , "Takel_MagicDragon" , "Corrupter_Star_Destroyer" , "Elite_Squadron" }
+			SpawnList(spawn_list_ambition, start_planet, p_empire,true,false)
+			ProjectAmbition.Despawn()
 		end
 	end
-
-	spawn_list_isard = { "Lusankya" }
-	IsardSpawn = SpawnList(spawn_list_isard, start_planet, p_empire,true,false)
 
 	checkPestage = Find_First_Object("Sate_Pestage")
   if TestValid(checkPestage) then
     checkPestage.Despawn()
   end
 
-  checkHarrsk = Find_First_Object("Shockwave_Star_Destroyer")
+
+  end
+end
+
+function Spawn_Harrsk(message)
+  if message == OnEnter then
+
+	p_empire = Find_Player("Empire")
+    p_harrsk = Find_Player("Warlords")
+
+
+  checkHarrsk = Find_First_Object("Whirlwind_Star_Destroyer")
   if TestValid(checkHarrsk) then
     checkHarrsk.Despawn()
   end
 
-	ProjectAmbition = Find_First_Object("Project_Ambition_Dummy")
-	if TestValid(ProjectAmbition) then
-		spawn_list_ambition = { "Makati_Steadfast" , "Takel_MagicDragon" , "Corrupter_Star_Destroyer" }
-		SpawnList(spawn_list_ambition, start_planet, p_empire,true,false)
-		ProjectAmbition.Despawn()
-	end
+
 
     --Harrsk spawns
 
@@ -198,7 +420,7 @@ function SubEra_Change(message)
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
 
-     spawn_list = { "Shockwave_Star_Destroyer" }
+     spawn_list = { "Whirlwind_Star_Destroyer" }
      SpawnList(spawn_list, start_planet, p_harrsk, true, false)
     end
   end
@@ -212,21 +434,135 @@ function SubEra_Change(message)
        SpawnList(spawn_list, start_planet, p_harrsk, true, false)
       end
     end
+	
+	--CCoGM spawns
+	
+	start_planet = FindPlanet("Kessel")
+  if TestValid(start_planet) then
+    if start_planet.Get_Owner() == p_empire then
+      ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
+
+     spawn_list = { "Tigellinus_Avatar", "Hissa_Moffship" }
+     SpawnList(spawn_list, start_planet, p_harrsk, true, false)
+    end
+  end
 
 
   end
 end
 
+function ThrawnSpawns(message)
+  if message == OnEnter then
+  
+	p_empire = Find_Player("Empire")
+	p_newrep = Find_Player("Rebel")
+	p_maldrood = Find_Player("Teradoc")
+  	
+	-- Maldrood
+	start_planet = FindPlanet("Centares")
+	if start_planet.Get_Owner() ~= Find_Player("Teradoc") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_maldrood)
+	end
+	if start_planet then
+		spawn_list_thrawn = { "Tavira_Invidious" }
+		SpawnList(spawn_list_thrawn, start_planet, p_maldrood, true, false)
+	end	
+	
+	-- Empire
+	start_planet = FindPlanet("Coruscant")
+	if start_planet.Get_Owner() ~= Find_Player("Empire") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+	end
+	if start_planet then
+		spawn_list_thrawn = { "Chimera" , "Corellian_Gunboat_Ferrier" }
+		SpawnList(spawn_list_thrawn, start_planet, p_empire, true, false)
+	end
+	
+	start_planet = FindPlanet("Coruscant")
+	if start_planet.Get_Owner() ~= Find_Player("Empire") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+	end
+	if start_planet then
+		spawn_list_Thrawn = { "181st_TIE_Interceptor_Squadron", "General_Covell_Team", "Judicator_Star_Destroyer", "Relentless_Star_Destroyer", "Joruus_Cboath_Team" }
+		SpawnList(spawn_list_Thrawn, start_planet, p_empire, true, false)
+	end
+	
+	-- New Republic
+	start_planet = FindPlanet("Coruscant")
+	if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+	end
+	if start_planet then
+		spawn_list_Thrawn = { "Iblis_Peregrine" }
+		SpawnList(spawn_list_Thrawn, start_planet, p_newrep, true, false)
+	end
+	
+	start_planet = FindPlanet("Myrkr")
+	if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+	end
+	if start_planet then
+		spawn_list_Thrawn = { "Errant_Venture", "Mara_Saber_Team", "Wild_karrde" }
+		SpawnList(spawn_list_Thrawn, start_planet, p_newrep, true, false)
+	end
+
+    RegicideObject = Find_First_Object("Dummy_Regicide_Thrawn")
+    if TestValid(RegicideObject) then
+        RegicideObject.Despawn()
+    end
+	
+	end
+end
+
 function DarkEmpireSpawns(message)
   if message == OnEnter then
 
-    p_Empire = Find_Player("Empire")
-    start_planet = FindPlanet("Byss")
+    p_newrep = Find_Player("Rebel")
+	p_empire = Find_Player("Empire")
+	p_eoth = Find_Player("Underworld")
+    
+	-- Empire
+	start_planet = FindPlanet("Byss")
+    ChangePlanetOwnerAndRetreat(start_planet, p_empire)
+    spawn_list_Palpatine = { "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "Sedriss_Team", "Emperor_Palpatine_Team", "General_Veers_Team", "Chimera_Pellaeon_Vice", "Klev_Silencer7"  }
+    SpawnList(spawn_list_Palpatine, start_planet, p_empire,true,false)
+	
+	-- New Republic
+	
+	start_planet = FindPlanet("MonCalimari")
+	if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+	end
 
-    ChangePlanetOwnerAndRetreat(start_planet, p_Empire)
+	checkLeia = Find_First_Object("Princess_Leia")
+	if TestValid(checkLeia) then
+		checkLeia.Despawn()
+		spawn_list_Leia = { "Princess_Leia_Team_Noghri" }
+		SpawnList(spawn_list_Leia, start_planet, p_newrep, true, false)
+	end
 
-    spawn_list_Palpatine = { "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "Sedriss_Team", "Emperor_Palpatine_Team"  }
-    SpawnList(spawn_list_Palpatine, start_planet, p_Empire,true,false)
+	checkAckbar = Find_First_Object("Home_One")
+	if TestValid(checkAckbar) then
+		checkAckbar.Despawn()
+		spawn_list_Ackbar = { "Galactic_Voyager" }
+		SpawnList(spawn_list_Ackbar, start_planet, p_newrep, true, false)
+	end
+
+
+    RegicideObject = Find_First_Object("Dummy_Regicide_Palpatine")
+    if TestValid(RegicideObject) then
+        RegicideObject.Despawn()
+    end
+	
+	-- Hand
+	start_planet = FindPlanet("Nirauan")
+	if start_planet.Get_Owner() ~= Find_Player("Underworld") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+	end
+	if start_planet then
+		spawn_list_Hand = { "Siath_Battlehammer" }
+		SpawnList(spawn_list_Hand, start_planet, p_eoth,true,false)
+	end
 
 
     RegicideObject = Find_First_Object("Dummy_Regicide_Palpatine")
@@ -237,47 +573,23 @@ function DarkEmpireSpawns(message)
   end
 end
 
-
-function DaalaSpawns(message)
-  if message == OnEnter then
-
-    p_Empire = Find_Player("Empire")
-    start_planet = FindPlanet("The_Maw")
-
-    ChangePlanetOwnerAndRetreat(start_planet, p_Empire)
-
-    spawn_list_Daala = { "Imperial_Stormtrooper_Squad", "Gorgon", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two"  }
-    SpawnList(spawn_list_Daala, start_planet, p_Empire,true,false)
-
-    RegicideObject = Find_First_Object("Dummy_Regicide_Daala")
-    if TestValid(RegicideObject) then
-        RegicideObject.Despawn()
-    end
-
-
-  end
-end
-
-function ThrawnSpawns(message)
-  if message == OnEnter then
-
-    RegicideObject = Find_First_Object("Dummy_Regicide_Thrawn")
-    if TestValid(RegicideObject) then
-        RegicideObject.Despawn()
-    end
-
-
-  end
-end
-
 function Empire_Fractures(message)
   if message == OnEnter then
 
     p_empire = Find_Player("Empire")
     p_maldrood = Find_Player("Teradoc")
     p_eriadu = Find_Player("Hutts")
-    p_harrsk = Find_Player("Harrsk")
+    p_harrsk = Find_Player("Warlords")
     p_pentastar = Find_Player("Pentastar")
+	
+	start_planet = FindPlanet("Byss")
+	if start_planet.Get_Owner() ~= Find_Player("Empire") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+	end
+	if start_planet then
+		spawn_list_Jax = { "Emperors_Revenge_Star_Destroyer", "Jeratai_Allegiance", "Xexus_Shev_Team", "Kooloota_Team", "Carnor_Jax_Team", "Windcaller_Team", "Manos_Team", "Za_Team", "Immodet_Fortress_Company"  }
+		SpawnList(spawn_list_Jax, start_planet, p_empire,true,false)
+	end
 
     RegicideObject = Find_First_Object("Dummy_Regicide_Jax")
     if RegicideObject then
@@ -357,57 +669,112 @@ function Empire_Fractures(message)
   end
 end
 
-function PellaeonSpawns(message)
+
+function DaalaSpawns(message)
   if message == OnEnter then
 
+  	p_newrep = Find_Player("Rebel")
+	p_empire = Find_Player("Empire")
+	p_eoth = Find_Player("Underworld")
+
+	-- Empire
+	start_planet = FindPlanet("The_Maw")
+    ChangePlanetOwnerAndRetreat(start_planet, p_empire)
+
+    spawn_list_Daala = { "Imperial_Stormtrooper_Squad", "Gorgon", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two"  }
+    SpawnList(spawn_list_Daala, start_planet, p_empire,true,false)
+	
+	start_planet = FindPlanet("Byss")
+	if start_planet.Get_Owner() ~= Find_Player("Empire") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+	end
+	if start_planet then
+		spawn_list_Brakiss = { "Brakiss_Team", "Ardax_Vendetta" }
+		SpawnList(spawn_list_Brakiss, start_planet, p_empire,true,false)
+	end
+	
+	-- New Republic
+	start_planet = FindPlanet("Yavin")
+	if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+	end
+	if start_planet then
+		spawn_list_Palpatine = { "Cilghal_Team" }
+		SpawnList(spawn_list_Palpatine, start_planet, p_newrep, true, false)
+	end
+	
+	start_planet = FindPlanet("Coruscant")
+	if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+	end
+	if start_planet then
+		spawn_list_Thrawn = { "Bell_Endurance" }
+		SpawnList(spawn_list_Palpatine, start_planet, p_newrep, true, false)
+	end
+	
+	-- Hand
+	start_planet = FindPlanet("Nirauan")
+	if start_planet.Get_Owner() ~= Find_Player("Underworld") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+	end
+	if start_planet then
+		spawn_list_Hand = { "Chak_Fel_Krsiss_Squadron_Association" , "Ashik_Team" }
+		SpawnList(spawn_list_Hand, start_planet, p_eoth,true,false)
+	end
+
+    RegicideObject = Find_First_Object("Dummy_Regicide_Daala")
+    if TestValid(RegicideObject) then
+        RegicideObject.Despawn()
+    end
+
+
+  end
+end
+
+
+
+function PellaeonSpawns(message)
+  if message == OnEnter then
+  
+  	p_newrep = Find_Player("Rebel")
+	p_empire = Find_Player("Empire")
+	p_eoth = Find_Player("Underworld")
+
+	-- Empire
     local RegicideObject = Find_First_Object("Dummy_Regicide_Pellaeon")
     if RegicideObject then
         RegicideObject.Despawn()
     end
-
-    local p_yevetha = Find_Player("Yevetha")
-
-    local start_planet = FindPlanet("Nzoth")
-    if TestValid(start_planet) then
-      ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-      local spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer_Two", "Spaar_Aramadia", "Toorr_Devotion", "Voota_Splendor", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
-      local Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-    end
-
-	local start_planet = FindPlanet("Doornik")
-  if TestValid(start_planet) then
-  ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-	local spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Attan_Beauty", "Noorr_Purity", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad" }
-    local Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-  end
-
-	local start_planet = FindPlanet("Zfell")
-  if TestValid(start_planet) then
-  ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-	local spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
-    local Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-  end
-
-	local start_planet = FindPlanet("ILC905")
-  if TestValid(start_planet) then
-  ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-    local  spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer"}
-    local Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-  end
-
-	local start_planet = FindPlanet("Polneye")
-  if TestValid(start_planet) then
-  ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-	local spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
-   local Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-  end
-
-	local start_planet = FindPlanet("Jtptan")
-  if TestValid(start_planet) then
-  ChangePlanetOwnerAndRetreat(start_planet, p_yevetha)
-	local spawn_list_Yevethans = { "Generic_Star_Destroyer_Two", "Generic_Star_Destroyer_Two", "Generic_Victory_Destroyer", "Generic_Victory_Destroyer", "Bille_Pride", "Yevethan_Heavy_Scout_Squad", "Yevethan_Heavy_Scout_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad", "Yevetha_Infantry_Squad"}
-    local Yevethanspawn = SpawnList(spawn_list_Yevethans, start_planet, p_yevetha,true,false)
-  end
+	
+	start_planet = FindPlanet("Coruscant")
+	if start_planet.Get_Owner() ~= Find_Player("Empire") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+	end
+	if start_planet then
+		spawn_list_Pellaeon = { "Chimera_Pellaeon_Grand", "Disra_Team", "Tierce_Team", "Ascian", "Rogriss_Dominion", "Navett_Team", "181st_Stele" }
+		SpawnList(spawn_list_Pellaeon, start_planet, p_empire,true,false)
+	end
+	
+	-- New Republic
+	start_planet = FindPlanet("Coruscant")
+	if start_planet.Get_Owner() ~= Find_Player("Rebel") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+	end
+	if start_planet then
+		spawn_list_Palpatine = { "Gavrisom_Team" }
+		SpawnList(spawn_list_Palpatine, start_planet, p_newrep, true, false)
+	end
+	
+	-- Hand
+	start_planet = FindPlanet("Nirauan")
+	if start_planet.Get_Owner() ~= Find_Player("Underworld") then
+		start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+	end
+	if start_planet then
+		spawn_list_Hand = { "Aurek_Seven_Team" }
+		SpawnList(spawn_list_Hand, start_planet, p_eoth,true,false)
+	end
+	
 
   end
 end

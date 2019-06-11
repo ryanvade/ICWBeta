@@ -52,6 +52,7 @@ function Definitions()
 		,"UC_Rebel_Mineral_Processor | UC_Rebel_Ground_Mining_Facility = 0,1"
 		,"UC_Empire_Mineral_Processor | UC_Empire_Ground_Mining_Facility = 0,1"	
 		,"UC_Underworld_Mineral_Processor | UC_Underwold_Ground_Mining_Facility = 0,1"
+		,"UC_Pentastar_Mineral_Processor | UC_Pentastar_Ground_Mining_Facility = 0,1"
 	}
 	}
 	RequiredCategories = {"Structure"}

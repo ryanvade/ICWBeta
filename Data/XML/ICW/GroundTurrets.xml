@@ -68,6 +68,8 @@
 		<Targeting_Min_Attack_Distance>30.0</Targeting_Min_Attack_Distance>
 	</GroundStructure>
 
+	
+	
 	<GroundStructure Name="Abstract_Anti_Aircraft_Turret">
 	
 		<Variant_Of_Existing_Type> Abstract_Turret </Variant_Of_Existing_Type>
@@ -130,6 +132,8 @@
 		<!--<Projectile_Fire_Recharge_Seconds>0.01</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>-->
+		
+		<Target_Bones> B_TURRET </Target_Bones>
 		
 		<Hardpoints>
 			HP_Empire_AA_Turret,
@@ -199,6 +203,8 @@
 		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds> -->
 		
+		<Target_Bones> B_TURRET </Target_Bones>
+		
 		<Hardpoints>
 			HP_Empire_AA_Turret,
 		</Hardpoints>
@@ -232,7 +238,7 @@
 		<Land_Model_Name>EB_AATURRET.ALO</Land_Model_Name>
 		<Icon_Name>i_button_e_anti_aircraft.tga</Icon_Name>
 
-		<Affiliation>Underworld</Affiliation>
+		<Affiliation>Underworld, Chiss</Affiliation>
 
 		<Ranged_Target_Z_Adjust>8.0</Ranged_Target_Z_Adjust>
 		
@@ -267,6 +273,8 @@
 		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds> -->
 		
+		<Target_Bones> B_TURRET </Target_Bones>
+		
 		<Hardpoints>
 			HP_Empire_AA_Turret,
 		</Hardpoints>
@@ -300,7 +308,7 @@
 		<Land_Model_Name>EB_AATURRET.ALO</Land_Model_Name>
 		<Icon_Name>i_button_e_anti_aircraft.tga</Icon_Name>
 
-		<Affiliation>Pentastar, Warlords, Harrsk</Affiliation>
+		<Affiliation>Pentastar, Warlords</Affiliation>
 
 		<Ranged_Target_Z_Adjust>8.0</Ranged_Target_Z_Adjust>
 		
@@ -327,6 +335,8 @@
 
 		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
 		<!-- <Projectile_Types>Proj_Flak_Pod_Red</Projectile_Types> -->
+		
+		<Target_Bones> TURRET_00 </Target_Bones>
 		<Hardpoints>
 			HP_Rebel_AA_Turret,
 		</Hardpoints>
@@ -349,10 +359,12 @@
 		<Land_Model_Name>RB_AA-TURRET.ALO</Land_Model_Name>
 		<Icon_Name>i_button_r_anti_aircraft.tga</Icon_Name>
 		
-		<Affiliation>Pirates, Hutt_Cartels, Corporate_Sector</Affiliation>
+		<Affiliation>Pirates, Corporate_Sector</Affiliation>
 
 		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
 		<!-- <Projectile_Types>Proj_Flak_Pod_Red</Projectile_Types> -->
+		
+		<Target_Bones> TURRET_00 </Target_Bones>
 		<Hardpoints>
 			HP_Rebel_AA_Turret,
 		</Hardpoints>
@@ -371,28 +383,76 @@
 
 	<GroundStructure Name="Hutt_Anti_Aircraft_Turret">
 
-		<Variant_Of_Existing_Type> Abstract_Anti_Aircraft_Turret </Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type> Abstract_Turret </Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_STRUCTURE_TURRET_AA</Text_ID>
+
+		<Tactical_Health>200</Tactical_Health>
+		<Tactical_Sell_Credits> 600 </Tactical_Sell_Credits>
+
+		<Damage>20</Damage>
+		
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Attack_Category_Restrictions> Structure </Attack_Category_Restrictions>
+
+		<!-- <Projectile_Fire_Recharge_Seconds>0.01</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds> -->
+		
+		<Target_Bones> B_TURRET </Target_Bones>
+		
+		<Hardpoints>
+			HP_Empire_AA_Turret,
+		</Hardpoints>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+
+		<!-- Air vehicles priority 1, ground vehicles and infantry are N/A (9999) -->
+		<Targeting_Priority_Set>AntiAirTurret</Targeting_Priority_Set>
+		<Attack_Category_Restrictions> Infantry | Vehicle | LandHero </Attack_Category_Restrictions>	
+		<Targeting_Stickiness_Time_Threshold>30.0</Targeting_Stickiness_Time_Threshold>
+
+		<!-- <Targeting_Fire_Inaccuracy> Infantry, 60.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 25.0 </Targeting_Fire_Inaccuracy> -->
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_AA_TURRET</Encyclopedia_Text>
+		
+		<CategoryMask> Structure | AntiAir </CategoryMask>
+
+		<AI_Combat_Power>125</AI_Combat_Power>
+		<Score_Cost_Credits> 1300 </Score_Cost_Credits>
+
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	<!-- Event for turret while rotating to fire  -->
+		<SFXEvent_Select>Structure_Turret_Select_SFX</SFXEvent_Select>
+		
 		<Scale_Factor>1.25</Scale_Factor>
 		<Land_Model_Name>EB_AATURRET.ALO</Land_Model_Name>
 		<Icon_Name>i_button_e_anti_aircraft.tga</Icon_Name>
 
-		<Affiliation>Hutts</Affiliation>
+		<Affiliation>Hutt_Cartels, Mandalorians</Affiliation>
 
 		<Ranged_Target_Z_Adjust>8.0</Ranged_Target_Z_Adjust>
+		
+		<!-- <Projectile_Types>Proj_Flak_Pod_Green</Projectile_Types> -->
+		
+		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
 
 		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
 	
 		<Blob_Shadow_Scale>40.0, 40.0</Blob_Shadow_Scale>
 		<Blob_Shadow_Material_Name>Square_Shadow</Blob_Shadow_Material_Name>
-		<SFXEvent_Sold_Tactical> UHD_Turret_Sold </SFXEvent_Sold_Tactical>
+		<SFXEvent_Sold_Tactical> EHD_Turret_Sold </SFXEvent_Sold_Tactical>
 		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	<!-- Event for turret while rotating to fire  -->
 
 	</GroundStructure>
 
 
-
-
-
+	
 	<GroundStructure Name="Abstract_Anti_Infantry_Turret">
 	
 		<Variant_Of_Existing_Type> Abstract_Turret </Variant_Of_Existing_Type>
@@ -443,6 +503,8 @@
 
 	</GroundStructure>
 
+	
+	
 	<GroundStructure Name="Empire_Anti_Infantry_Turret">
 		<GUI_Bias>5</GUI_Bias>
 
@@ -465,6 +527,8 @@
 		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds> -->
 		
+		<Target_Bones> B_TURRET </Target_Bones>
+		
 		<Hardpoints>HP_Empire_AI_Turret</Hardpoints>
 
 		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
@@ -485,7 +549,7 @@
 		<Land_Model_Name>EB_INFANTRYTURRET.ALO</Land_Model_Name>
 		<Icon_Name>i_button_e_anti_infantry.tga</Icon_Name>
 
-		<Affiliation>Pentastar, Warlords, Harrsk</Affiliation>
+		<Affiliation>Pentastar, Warlords</Affiliation>
 
 		<!-- <Projectile_Types>Proj_HRB_Cannon_Green</Projectile_Types> -->
 		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
@@ -498,6 +562,8 @@
 		<Projectile_Fire_Recharge_Seconds>0.1</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds> -->
+		
+		<Target_Bones> B_TURRET </Target_Bones>
 		
 		<Hardpoints>HP_Empire_AI_Turret</Hardpoints>
 
@@ -520,7 +586,7 @@
 		<Land_Model_Name>UB_FLAMETURRET.ALO</Land_Model_Name>
 		<Icon_Name>i_button_e_anti_infantry.tga</Icon_Name>
 
-		<Affiliation>Underworld</Affiliation>
+		<Affiliation>Underworld, Chiss</Affiliation>
 
 		<Projectile_Types>Proj_Flamer</Projectile_Types>
 		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
@@ -563,6 +629,8 @@
 		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy> -->
 		
+		<Target_Bones> B_TURRET </Target_Bones>
+		
 		<Hardpoints>HP_Rebel_AI_Turret</Hardpoints>
 
 		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
@@ -592,7 +660,7 @@
 
 		<Tactical_Health>200</Tactical_Health>
 
-		<Affiliation>Pirates, Hutt_Cartels, Corporate_Sector</Affiliation>
+		<Affiliation>Pirates, Corporate_Sector</Affiliation>
 
 		<!-- <Projectile_Types>Proj_HRB_Cannon_Red</Projectile_Types>
 
@@ -600,6 +668,47 @@
 		<Targeting_Fire_Inaccuracy> Vehicle, 30.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy> -->
+		
+		<Target_Bones> B_TURRET </Target_Bones>
+		
+		<Hardpoints>HP_Rebel_AI_Turret</Hardpoints>
+
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<!-- <Projectile_Fire_Recharge_Seconds>1</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.05</Projectile_Fire_Pulse_Delay_Seconds> -->
+
+		<Turret_Rotate_Speed>2.0</Turret_Rotate_Speed>
+
+		<Blob_Shadow_Scale>25.0, 25.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	<!-- Event for turret while rotating to fire  -->
+
+	</GroundStructure>
+
+	<GroundStructure Name="Hutt_Anti_Infantry_Turret">
+
+		<Variant_Of_Existing_Type> Abstract_Anti_Infantry_Turret </Variant_Of_Existing_Type>
+
+		<Land_Model_Name>RB_TURRET.ALO</Land_Model_Name>
+		<Icon_Name>i_button_r_anti_infantry.tga</Icon_Name>
+		
+		<Scale_Factor>1.3</Scale_Factor>
+
+		<Tactical_Health>200</Tactical_Health>
+
+		<Affiliation>Hutt_Cartels, Mandalorians</Affiliation>
+
+		<!-- <Projectile_Types>Proj_HRB_Cannon_Red</Projectile_Types>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 30.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy> -->
+		
+		<Target_Bones> B_TURRET </Target_Bones>
 		
 		<Hardpoints>HP_Rebel_AI_Turret</Hardpoints>
 
@@ -670,6 +779,8 @@
 
 	</GroundStructure>
   
+	
+	
 	<GroundStructure Name="Empire_Anti_Vehicle_Turret">
 
 		<Variant_Of_Existing_Type> Abstract_Anti_Vehicle_Turret </Variant_Of_Existing_Type>
@@ -689,6 +800,8 @@
 		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy> -->
 		
+		<Target_Bones> PI_DAMAGE_ELEC_SD00 </Target_Bones>
+		
 		<Hardpoints>HP_Empire_AV_Turret</Hardpoints>
 
 		<Blob_Shadow_Scale>45.0, 45.0</Blob_Shadow_Scale>
@@ -705,7 +818,7 @@
 		<Land_Model_Name>EB_VEHICLETURRET.ALO</Land_Model_Name>
 		<Icon_Name>i_button_e_anti_vehicle.tga</Icon_Name>
 
-		<Affiliation>Underworld</Affiliation>
+		<Affiliation>Underworld, Chiss</Affiliation>
 
 		<!-- <Projectile_Types>Proj_Ground_AV_Turret_Laser_Green</Projectile_Types> -->
 		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
@@ -716,6 +829,8 @@
 		<Targeting_Fire_Inaccuracy> Vehicle, 2.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy> -->
+		
+		<Target_Bones> PI_DAMAGE_ELEC_SD00 </Target_Bones>
 		
 		<Hardpoints>HP_Empire_AV_Turret</Hardpoints>
 
@@ -733,7 +848,7 @@
 		<Land_Model_Name>EB_VEHICLETURRET.ALO</Land_Model_Name>
 		<Icon_Name>i_button_e_anti_vehicle.tga</Icon_Name>
 
-		<Affiliation>Pentastar, Warlords, Harrsk</Affiliation>
+		<Affiliation>Pentastar, Warlords</Affiliation>
 
 		<!-- <Projectile_Types>Proj_Ground_AV_Turret_Laser_Green</Projectile_Types> -->
 		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
@@ -745,6 +860,8 @@
 		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy> -->
 		
+		<Target_Bones> PI_DAMAGE_ELEC_SD00 </Target_Bones>
+		
 		<Hardpoints>HP_Empire_AV_Turret</Hardpoints>
 
 		<Blob_Shadow_Scale>45.0, 45.0</Blob_Shadow_Scale>
@@ -754,7 +871,7 @@
 
 	</GroundStructure>
 
-   <GroundStructure Name="Rebel_Anti_Vehicle_Turret">
+	<GroundStructure Name="Rebel_Anti_Vehicle_Turret">
 
 		<Variant_Of_Existing_Type> Abstract_Anti_Vehicle_Turret </Variant_Of_Existing_Type>
 
@@ -773,6 +890,8 @@
 		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy> -->
 		
+		<Target_Bones>B_BARREL, P_SMOKE_SMALL_THIN_ALT2</Target_Bones>
+		
 		<Hardpoints>HP_Rebel_AV_Turret</Hardpoints>
 
 		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
@@ -784,7 +903,7 @@
 
    </GroundStructure>
    
-   <GroundStructure Name="Rebel_EMP_Turret">
+	<GroundStructure Name="Rebel_EMP_Turret">
 
 		<Variant_Of_Existing_Type> Abstract_Anti_Vehicle_Turret </Variant_Of_Existing_Type>
 		<Text_ID>TEXT_STRUCTURE_RF_LASER_TURRET</Text_ID>
@@ -822,7 +941,7 @@
 
    </GroundStructure>
    
-   <GroundBuildable Name="UC_Rebel_EMP_Turret">
+	<GroundBuildable Name="UC_Rebel_EMP_Turret">
 
 		<Variant_Of_Existing_Type> UC_Rebel_Buildable_Abstract_Type </Variant_Of_Existing_Type>
 
@@ -852,7 +971,7 @@
 
 	</GroundBuildable>
 
-   <GroundStructure Name="Pirate_Anti_Vehicle_Turret">
+	<GroundStructure Name="Pirate_Anti_Vehicle_Turret">
 
 		<Variant_Of_Existing_Type> Abstract_Anti_Vehicle_Turret </Variant_Of_Existing_Type>
 
@@ -863,7 +982,7 @@
 
 		<Tactical_Health>200</Tactical_Health>
 
-		<Affiliation>Pirates, Hutt_Cartels, Corporate_Sector</Affiliation>
+		<Affiliation>Pirates, Corporate_Sector</Affiliation>
 		<Base_Level_Available>3</Base_Level_Available>
 		<!-- <Projectile_Types>Proj_Ground_AV_Turret_Laser_Red</Projectile_Types>
 		
@@ -872,7 +991,9 @@
 		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy> -->
 		
-		<Hardpoints>Proj_Ground_AV_Turret_Laser_Red</Hardpoints>
+		<Target_Bones>B_BARREL, P_SMOKE_SMALL_THIN_ALT2</Target_Bones>
+		
+		<Hardpoints>HP_Rebel_AV_Turret</Hardpoints>
 
 		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
 
@@ -885,7 +1006,42 @@
 
    </GroundStructure>
 
+	<GroundStructure Name="Hutt_Anti_Vehicle_Turret">
 
+		<Variant_Of_Existing_Type> Abstract_Anti_Vehicle_Turret </Variant_Of_Existing_Type>
+
+		<Land_Model_Name>RB_VEHICLETURRET.ALO</Land_Model_Name>
+		<Icon_Name>i_button_r_anti_vehicle.tga</Icon_Name>
+		
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Tactical_Health>200</Tactical_Health>
+
+		<Affiliation>Hutt_Cartels, Mandalorians</Affiliation>
+		<Base_Level_Available>3</Base_Level_Available>
+		<!-- <Projectile_Types>Proj_Ground_AV_Turret_Laser_Red</Projectile_Types>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 15.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 2.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy> -->
+		
+		<Target_Bones>B_BARREL, P_SMOKE_SMALL_THIN_ALT2</Target_Bones>
+		
+		<Hardpoints>HP_Rebel_AV_Turret</Hardpoints>
+
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<Turret_Rotate_Speed>2.0</Turret_Rotate_Speed>
+				
+		<Blob_Shadow_Scale>20.0, 20.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	<!-- Event for turret while rotating to fire  -->
+
+	</GroundStructure>
+
+   
 
 	<GroundStructure Name="Abstract_Mass_Driver_Turret">
 	
@@ -933,6 +1089,8 @@
 
 	</GroundStructure>
 
+	
+	
 	<GroundStructure Name="Underworld_Mass_Driver_Turret">
 		
 		<Variant_Of_Existing_Type> Abstract_Anti_Vehicle_Turret </Variant_Of_Existing_Type>
@@ -940,17 +1098,21 @@
 		<Land_Model_Name>EB_VEHICLETURRET.ALO</Land_Model_Name>
 		<Icon_Name>i_button_e_anti_vehicle.tga</Icon_Name>
 
-		<Affiliation>Underworld</Affiliation>
+		<Affiliation>Underworld, Chiss</Affiliation>
 
-		<Projectile_Types>Proj_Ground_AV_Turret_Laser_Green</Projectile_Types>
+		<!--<Projectile_Types>Proj_Ground_AV_Turret_Laser_Green</Projectile_Types> -->
 		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
 
 		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
 		
-		<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
+		<!--<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Vehicle, 2.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy> -->
+		
+		<Target_Bones> PI_DAMAGE_ELEC_SD00 </Target_Bones>
+		
+		<Hardpoints>HP_Empire_AV_Turret</Hardpoints>
 
 		<Blob_Shadow_Scale>45.0, 45.0</Blob_Shadow_Scale>
 		<Blob_Shadow_Material_Name>Square_Shadow</Blob_Shadow_Material_Name>
@@ -1097,6 +1259,7 @@
 	</GroundStructure>
 
 
+	
 	<GroundStructure Name="Empire_Buildable_Repair_Facility">
 
 		<Variant_Of_Existing_Type> Abstract_Repair_Facility </Variant_Of_Existing_Type>
@@ -1123,7 +1286,7 @@
 		<Dense_FOW_Reveal_Range_Multiplier> 0.0 </Dense_FOW_Reveal_Range_Multiplier>
 		<SFXEvent_Sold_Tactical> EHD_Repair_Station_Sold </SFXEvent_Sold_Tactical>
 
-		<Affiliation> Pentastar, Warlords, Harrsk </Affiliation>
+		<Affiliation> Pentastar, Warlords </Affiliation>
 		
 		<Icon_Name>i_button_e_repair_facility.tga</Icon_Name>
 
@@ -1138,7 +1301,7 @@
 		<Land_FOW_Reveal_Range> 300.0 </Land_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier> 1.0 </Dense_FOW_Reveal_Range_Multiplier>
 		
-		<Affiliation> Pirates, Hutt_Cartels, Corporate_Sector </Affiliation>
+		<Affiliation> Pirates, Corporate_Sector </Affiliation>
 
 		<Icon_Name>i_button_r_repair_facility.tga</Icon_Name>
 
@@ -1168,7 +1331,7 @@
 		<Land_FOW_Reveal_Range> 200.0 </Land_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier> 0.0 </Dense_FOW_Reveal_Range_Multiplier>
 	   <SFXEvent_Sold_Tactical> UHD_Repair_Station_Sold </SFXEvent_Sold_Tactical> 		
-		<Affiliation> Underworld </Affiliation>
+		<Affiliation> Underworld, Chiss </Affiliation>
 		
 		<Icon_Name>i_button_r_repair_facility.tga</Icon_Name>
 
@@ -1183,7 +1346,7 @@
 		<Land_FOW_Reveal_Range> 200.0 </Land_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier> 0.0 </Dense_FOW_Reveal_Range_Multiplier>
 		<SFXEvent_Sold_Tactical> UHD_Repair_Station_Sold </SFXEvent_Sold_Tactical> 		
-		<Affiliation> Hutts </Affiliation>
+		<Affiliation> Hutt_Cartels, Mandalorians </Affiliation>
 		
 		<Icon_Name>i_button_r_repair_facility.tga</Icon_Name>
 
@@ -1325,6 +1488,8 @@
 		
 	</GroundStructure>
 
+	
+	
 	<GroundStructure Name="Rebel_Buildable_Bacta_Tank">
 
 		<Variant_Of_Existing_Type> Abstract_Bacta_Tank </Variant_Of_Existing_Type>
@@ -1360,7 +1525,7 @@
 		<Land_FOW_Reveal_Range> 200.0 </Land_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier> 0.0 </Dense_FOW_Reveal_Range_Multiplier>
 		<SFXEvent_Sold_Tactical> EHD_Bacta_Tank_Sold </SFXEvent_Sold_Tactical>
-		<Affiliation> Pentastar, Warlords, Harrsk </Affiliation>
+		<Affiliation> Pentastar, Warlords </Affiliation>
 
 	</GroundStructure>
 
@@ -1373,7 +1538,7 @@
 		<Land_FOW_Reveal_Range> 300.0 </Land_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier> 1.0 </Dense_FOW_Reveal_Range_Multiplier>
 		
-		<Affiliation> Pirates, Hutt_Cartels, Corporate_Sector </Affiliation>
+		<Affiliation> Pirates, Corporate_Sector </Affiliation>
 
 	</GroundStructure>
 
@@ -1387,7 +1552,7 @@
 		<Dense_FOW_Reveal_Range_Multiplier> 1.0 </Dense_FOW_Reveal_Range_Multiplier>
 		<SFXEvent_Sold_Tactical> UHD_Bacta_Tank_Sold </SFXEvent_Sold_Tactical>
 
-		<Affiliation> Underworld </Affiliation>
+		<Affiliation> Underworld, Chiss </Affiliation>
 
 	</GroundStructure>
 
@@ -1400,7 +1565,7 @@
 		<Land_FOW_Reveal_Range> 300.0 </Land_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier> 1.0 </Dense_FOW_Reveal_Range_Multiplier>
 		
-		<Affiliation> Hutts </Affiliation>
+		<Affiliation> Hutt_Cartels, Mandalorians </Affiliation>
 
 	</GroundStructure>
 	
@@ -1481,7 +1646,6 @@
 		</Abilities>
 
 	</GroundStructure>
-
 
 	<GroundBuildable Name="UC_Underworld_Sensor_Scrambler">
 
@@ -1591,7 +1755,6 @@
 
 
 	
-
 	<GroundStructure Name="Empire_EM_Field_Generator">
    		<Text_ID>TEXT_STRUCTURE_EMF_GEN</Text_ID>
 		<Encyclopedia_Text>TEXT_TOOLTIP_EMF_GEN</Encyclopedia_Text>
@@ -1740,7 +1903,7 @@
 		<Tactical_Health>250</Tactical_Health>
 		<Tactical_Sell_Credits> 600 </Tactical_Sell_Credits>
 
-		<Affiliation> Hutts </Affiliation>
+		<Affiliation> Hutt_Cartels </Affiliation>
 
 		<Damage>20</Damage>
 		
@@ -1776,8 +1939,6 @@
 		<SFXEvent_Select>Structure_Turret_Select_SFX</SFXEvent_Select>
 
 	</GroundStructure>
-
-
 
 	<GroundBuildable Name="UC_Empire_Grenade_Mortar">
 
@@ -1816,7 +1977,7 @@
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TURRET</Encyclopedia_Unit_Class>
 		<Icon_Name>i_button_ev_mdu_grenade mortar.tga</Icon_Name>
 
-		<Affiliation> Hutts </Affiliation>
+		<Affiliation> Hutt_Cartels </Affiliation>
 
 		<Land_Model_Name>EV_MDU_CGM.alo</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
@@ -1838,11 +1999,7 @@
 
 	</GroundBuildable>
 
-	<GroundStructure Name="Hutt_Offensive_Sensor_Node">
-		<Variant_Of_Existing_Type> Empire_Offensive_Sensor_Node </Variant_Of_Existing_Type>
-		<Affiliation> Hutts </Affiliation>
-	</GroundStructure>
-
+	
 
 	<GroundStructure Name="Empire_Offensive_Sensor_Node">
    		<Text_ID>TEXT_STRUCTURE_OFFENSIVE_SENSOR_NODE</Text_ID>
@@ -1923,8 +2080,11 @@
 
 		</Abilities>
 
-        
-
+	</GroundStructure>
+	
+	<GroundStructure Name="Hutt_Offensive_Sensor_Node">
+		<Variant_Of_Existing_Type> Empire_Offensive_Sensor_Node </Variant_Of_Existing_Type>
+		<Affiliation> Hutt_Cartels </Affiliation>
 	</GroundStructure>
 
 	<GroundBuildable Name="UC_Empire_Offensive_Sensor_Node">
@@ -1956,7 +2116,6 @@
 	</GroundBuildable>
 
 
-	
 	
 	<GroundStructure Name="Rebel_Mobile_Shield_Generator">
    		<Text_ID>TEXT_STRUCTURE_MOBILE_SHIELD_GENERATOR</Text_ID>
@@ -2053,6 +2212,7 @@
 	</GroundBuildable>
 
 
+	
 	<GroundStructure Name="Rebel_Rapid_Fire_Laser_Turret">
 
 		<Variant_Of_Existing_Type> Abstract_Anti_Infantry_Turret </Variant_Of_Existing_Type>
@@ -2106,7 +2266,7 @@
 		<Icon_Name>i_button_rv_mdu_rapid fire laser cannon.tga</Icon_Name>
 
 
-		<Affiliation>Hutts</Affiliation>
+		<Affiliation>Hutt_Cartels</Affiliation>
 
 		<Targeting_Fire_Inaccuracy> Infantry, 15.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
@@ -2129,7 +2289,6 @@
 		<SFXEvent_Turret_Rotating_Loop>Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>
 
 	</GroundStructure>
-
 
 	<GroundBuildable Name="UC_Rebel_Rapid_Fire_Laser_Turret">
 
@@ -2180,7 +2339,7 @@
 		<Tactical_Build_Start_Lower_Z> 0 </Tactical_Build_Start_Lower_Z>
 		<Tactical_Health> 150 </Tactical_Health>
 
-		<Affiliation>Hutts</Affiliation>
+		<Affiliation>Hutt_Cartels</Affiliation>
 
 		<SFXEvent_Build_Started>UHD_Turret_Build</SFXEvent_Build_Started>
 		<SFXEvent_Select>Structure_Turret_Select_SFX</SFXEvent_Select>
@@ -2190,12 +2349,6 @@
 		<Armor_Type> Armor_Turret </Armor_Type>
 
 	</GroundBuildable>
-
-
-
-
-
-
 
 
 </GroundStructures>

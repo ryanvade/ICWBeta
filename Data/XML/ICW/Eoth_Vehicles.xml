@@ -71,7 +71,7 @@
 
 		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
 		<Land_FOW_Reveal_Range>450.0</Land_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
 		
 		<Turret_Rotate_Extent_Degrees>20.0</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>50.0</Turret_Elevate_Extent_Degrees>
@@ -86,6 +86,8 @@
 		<Targeting_Fire_Inaccuracy>Vehicle, 1.0</Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy>Air, 2.0</Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy>Structure, 10.0</Targeting_Fire_Inaccuracy>-->
+		
+		<Target_Bones> ROOT </Target_Bones>
 		
 		<Hardpoints>
 				HP_Airstraeker,
@@ -193,7 +195,7 @@
 		<Autoresolve_Health>100</Autoresolve_Health>
 		
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>900</Build_Cost_Credits>
+		<Build_Cost_Credits>450</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -264,8 +266,10 @@
         <Ranking_In_Category>6</Ranking_In_Category>
 		
 		<Max_Speed> 0.8 </Max_Speed>
-		<Max_Rate_Of_Turn>3.5</Max_Rate_Of_Turn>
-		<Stopped_Rate_Of_Turn> 3.1 </Stopped_Rate_Of_Turn>
+		<Max_Rate_Of_Turn>1.8</Max_Rate_Of_Turn>
+				<OverrideAcceleration> .001 </OverrideAcceleration>
+		<OverrideDeceleration> .002 </OverrideDeceleration>
+		<Stopped_Rate_Of_Turn> 1.0 </Stopped_Rate_Of_Turn>
 		<Walk_Transition>Yes</Walk_Transition>
 		<Has_Pre_Turn_Anim> yes </Has_Pre_Turn_Anim>
 		<Min_Speed_Fraction_For_Turn> .25 </Min_Speed_Fraction_For_Turn>
@@ -320,12 +324,12 @@
 		<Turret_Targets_Anything_Else> 1 </Turret_Targets_Anything_Else>
 		
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
-		<Targeting_Min_Attack_Distance> 250. </Targeting_Min_Attack_Distance>
+		<Targeting_Max_Attack_Distance>2200.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 250 </Targeting_Min_Attack_Distance>
 		<Targeting_Fire_Inaccuracy_Fixed_Radius> 40 </Targeting_Fire_Inaccuracy_Fixed_Radius>
 
 		<Projectile_Types>Proj_Ground_Mortar</Projectile_Types>
-		<Projectile_Fire_Recharge_Seconds>20.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Recharge_Seconds>25.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
 
@@ -443,7 +447,7 @@
 		<Autoresolve_Health>100</Autoresolve_Health>
 		
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
 		<Build_Time_Seconds>20</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -509,14 +513,14 @@
 		
 		<Death_Projectiles>Proj_Heavy_Vehicle</Death_Projectiles>
         
-		<Max_Speed>1.3</Max_Speed>
+		<Max_Speed>2.0</Max_Speed>
 		<Movement_Animation_Speed> 1.0 </Movement_Animation_Speed>
 		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>
 		<Size_Value>60</Size_Value>
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
-		<OverrideAcceleration> .2 </OverrideAcceleration>
-		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<OverrideAcceleration> .004 </OverrideAcceleration>
+		<OverrideDeceleration> .008 </OverrideDeceleration>
 
 		<Behavior> SELECTABLE </Behavior>
 		<LandBehavior>SELF_DESTRUCT, ABILITY_COUNTDOWN, TREAD_SCROLL, LURE, AFFECTED_BY_SHIELD, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, TURRET, POWERED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE, SURFACE_FX,DAMAGE_TRACKING,SQUASH</LandBehavior>
@@ -860,12 +864,12 @@
 		<Affiliation>Underworld</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Ranking_In_Category>5</Ranking_In_Category>
-		<Max_Speed>1.7</Max_Speed>
+		<Max_Speed>2.2</Max_Speed>
 		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
-		<OverrideAcceleration> .05 </OverrideAcceleration>
-		<OverrideDeceleration> .05 </OverrideDeceleration>
+		<OverrideAcceleration> .005 </OverrideAcceleration>
+		<OverrideDeceleration> .005 </OverrideDeceleration>
 		<FormationSpacing> 1 </FormationSpacing>
 		<FormationOrder> 8 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
@@ -903,7 +907,7 @@
 		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
 		<!--<Projectile_Types>Proj_Mauler_Cannon_Green</Projectile_Types> -->
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>200.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>340.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
 		<!--<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>15</Projectile_Fire_Pulse_Count>
@@ -912,6 +916,8 @@
 		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy> -->
+		
+		<Target_Bones> TURRET_00 </Target_Bones>
 		
 		<Hardpoints>
 				HP_RFT_01,
@@ -942,7 +948,7 @@
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 		<Remove_Upon_Death>true</Remove_Upon_Death>
-		<CategoryMask> Vehicle </CategoryMask>
+		<CategoryMask> Vehicle | AntiInfantry </CategoryMask>
 		<MovementClass>Tracked</MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -1002,7 +1008,7 @@
 		<Damage>30</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>550</Build_Cost_Credits>
+		<Build_Cost_Credits>700</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -1069,12 +1075,12 @@
 		<Affiliation>Underworld</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Ranking_In_Category>5</Ranking_In_Category>
-		<Max_Speed>0.8</Max_Speed>
-		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
+		<Max_Speed>0.5</Max_Speed>
+		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
-		<OverrideAcceleration> .05 </OverrideAcceleration>
-		<OverrideDeceleration> .05 </OverrideDeceleration>
+		<OverrideAcceleration> .001 </OverrideAcceleration>
+		<OverrideDeceleration> .002 </OverrideDeceleration>
 		<FormationSpacing> 1 </FormationSpacing>
 		<FormationOrder> 8 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
@@ -1088,7 +1094,7 @@
 		<Size_Value>75</Size_Value>
 		<Damage>20</Damage>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>600</Tactical_Health>
+		<Tactical_Health>250</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
@@ -1098,6 +1104,7 @@
 		<SurfaceFX_Name>Generic_Track</SurfaceFX_Name>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Movement_Directions_Count>2</Movement_Directions_Count>
 		
 		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
@@ -1112,7 +1119,7 @@
 		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
 		<!--<Projectile_Types>Proj_MMT_Beam</Projectile_Types>-->
 		<Land_FOW_Reveal_Range>450.0</Land_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>350.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>540.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
 		<!--<Projectile_Fire_Recharge_Seconds>3.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
@@ -1123,6 +1130,8 @@
 		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Appearance_Delay_Frames> 30 </Projectile_Appearance_Delay_Frames>-->
+		
+		<Target_Bones> CHASSIS, TURRET_00 </Target_Bones>
 		
 		<Hardpoints>
 				HP_MMT
@@ -1152,7 +1161,7 @@
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 		<Remove_Upon_Death>true</Remove_Upon_Death>
-		<CategoryMask> Vehicle </CategoryMask>
+		<CategoryMask> Vehicle | AntiVehicle | AntiStructure </CategoryMask>
 		<MovementClass>Tracked</MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -1229,7 +1238,7 @@
 		<Damage>30</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>1100</Build_Cost_Credits>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
 		<Build_Time_Seconds>40</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -1353,6 +1362,8 @@
 		
 		<SFXEvent_Fire>Unit_Scout_Trooper_Fire</SFXEvent_Fire>
 		
+		<Target_Bones> BOX01, BONE28, BONE12 </Target_Bones>
+		
 		<HardPoints> HP_Scout_Rocket, HP_Scout_EotH </HardPoints>
 
 		<Death_SFXEvent_Start_Die>Unit_Speeder_Bike_Death_SFX</Death_SFXEvent_Start_Die>
@@ -1417,7 +1428,7 @@
 		<Damage>30</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>300</Build_Cost_Credits>
+		<Build_Cost_Credits>75</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -1489,12 +1500,12 @@
 		 <!--<Fire_Projectile_Type>Proj_Ground_Kirov_Laser_Green</Fire_Projectile_Type>-->
 
         <Ranking_In_Category>7</Ranking_In_Category>
-		<Max_Speed>1.6</Max_Speed>
-		<Max_Rate_Of_Turn>10.0</Max_Rate_Of_Turn>
+		<Max_Speed>1.5</Max_Speed>
+		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
-		<OverrideAcceleration> .2 </OverrideAcceleration>
-		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<OverrideAcceleration> .08 </OverrideAcceleration>
+		<OverrideDeceleration> .04 </OverrideDeceleration>
 		<FormationSpacing> 3.0 </FormationSpacing>
 		<FormationOrder> 3 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
@@ -1532,7 +1543,7 @@
 
 		<SurfaceFX_Name>Hover</SurfaceFX_Name>
 		<Land_FOW_Reveal_Range>500</Land_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>220.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>350.0</Targeting_Max_Attack_Distance>
 
 		
 		<Targeting_Land_Model_Stay_Horiz_Flat> No </Targeting_Land_Model_Stay_Horiz_Flat>	<!-- This does not apply to units with turrets -->
@@ -1542,7 +1553,7 @@
 		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
 
 		
-		<CategoryMask> Vehicle | AntiInfantry</CategoryMask>
+		<CategoryMask> Vehicle | AntiAir</CategoryMask>
 		<Icon_Name />
 		<MovementClass>Hover</MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
@@ -1603,6 +1614,8 @@
 		<No_Colorization_Color> 33, 33, 33, 255 </No_Colorization_Color>
 		<Base_Shield_Penetration_Particle>Shield_Penetration_Effect_Particle</Base_Shield_Penetration_Particle>
 		
+		<Target_Bones> BOX02, MUZZLEB_00, MUZZLEB_01, MUZZLEA_00, MUZZLEA_01 </Target_Bones>
+		
 		<Hardpoints> HP_Kirov_00, HP_Kirov_01</Hardpoints>
 		
 		<Vehicle_Thief_Inside_Clone>Kirov_Captured</Vehicle_Thief_Inside_Clone>
@@ -1633,7 +1646,7 @@
 		<Damage>30</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Cost_Credits>400</Build_Cost_Credits>
 		<Build_Time_Seconds>45</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -1706,12 +1719,12 @@
 		<Affiliation>Underworld</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Ranking_In_Category>5</Ranking_In_Category>
-		<Max_Speed>1.3</Max_Speed>
-		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
+		<Max_Speed>1.4</Max_Speed>
+		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
-		<OverrideAcceleration> .05 </OverrideAcceleration>
-		<OverrideDeceleration> .05 </OverrideDeceleration>
+		<OverrideAcceleration> .004 </OverrideAcceleration>
+		<OverrideDeceleration> .008 </OverrideDeceleration>
 		<FormationSpacing> 1 </FormationSpacing>
 		<FormationOrder> 8 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
@@ -1749,7 +1762,7 @@
 		<Turret_Targets_Anything_Else> 4 </Turret_Targets_Anything_Else>
 		<!--<Projectile_Types>Proj_Ground_AV_Turret_Laser_Green</Projectile_Types>-->
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>350.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
 		<!--<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
@@ -1758,6 +1771,8 @@
 			<Fire_Inaccuracy_Distance> Vehicle, 10.0 </Fire_Inaccuracy_Distance>
 			<Fire_Inaccuracy_Distance> Structure, 2.0 </Fire_Inaccuracy_Distance>
 		<Targeting_Fire_Inaccuracy> Air, 10.0 </Targeting_Fire_Inaccuracy>-->
+		
+		<Target_Bones> B_TURRET_00 </Target_Bones>
 		
 		<Hardpoints>
 				HP_Gilzean
@@ -1788,7 +1803,7 @@
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 		<Remove_Upon_Death>true</Remove_Upon_Death>
-		<CategoryMask> Vehicle </CategoryMask>
+		<CategoryMask> Vehicle I AntiVehicle</CategoryMask>
 		<MovementClass>Tracked</MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Victory_Relevant>yes</Victory_Relevant>

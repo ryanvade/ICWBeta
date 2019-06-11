@@ -23,6 +23,7 @@
 require("PGSpawnUnits")
 require("Class")
 
+---@class CategoryFilter
 CategoryFilter = Class {
 
         EventNames = {
@@ -80,7 +81,7 @@ CategoryFilter = Class {
                         break
                     end
                     self.ActiveFilter = categoryFlag
-                    self:SpawnCategoryDummy(self.GalacticConquest.GetSelectedPlanet())
+                    self:SpawnCategoryDummy(self.GalacticConquest:GetSelectedPlanet())
                     break
                 end
             end
@@ -92,9 +93,9 @@ CategoryFilter = Class {
             end
 
             self:ClearAiDummies(planet)
-            if planet.Get_Owner().Is_Human() then
-                if planet == self.GalacticConquest.GetSelectedPlanet() then
-                    self:SpawnCategoryDummy(self.GalacticConquest.GetSelectedPlanet())
+            if planet:get_owner().Is_Human() then
+                if planet == self.GalacticConquest:GetSelectedPlanet() then
+                    self:SpawnCategoryDummy(self.GalacticConquest:GetSelectedPlanet())
                 end
             else
                 self:SpawnAiDummies(planet)
@@ -107,7 +108,7 @@ CategoryFilter = Class {
             end
 
             for _, planet in pairs(self.GalacticConquest.Planets) do
-                if not planet.Get_Owner().Is_Human() then
+                if not planet:get_owner().Is_Human() then
                     self:CreateAiEntry(planet)
                     self:RemoveInvalidEntries(self.SpawnedAiDummies[planet])
                     if table.getn(self.SpawnedAiDummies[planet]) == 0 then
@@ -140,7 +141,7 @@ CategoryFilter = Class {
                 return
             end
 
-            if not selectedPlanet.Get_Owner().Is_Human() then
+            if not selectedPlanet:get_owner().Is_Human() then
                 return
             end
 
@@ -154,18 +155,18 @@ CategoryFilter = Class {
                 self.Placeholder
             }
 
-            local dummies = SpawnList(typeList, selectedPlanet, self.GalacticConquest.HumanPlayer, false, false)
+            local dummies = SpawnList(typeList, selectedPlanet:get_game_object(), self.GalacticConquest.HumanPlayer, false, false)
         end,
 
         SpawnAiDummies = function(self, planet)
-            local owner = planet.Get_Owner()
+            local owner = planet:get_owner()
             if owner.Is_Human() or owner == Find_Player("Neutral") then
                 return
             end
 
             --hopefully prevents perception evaluation crashes
             if owner and planet then
-                if EvaluatePerception("Has_Starbase", self.GalacticConquest.HumanPlayer, planet) == 0 then
+                if EvaluatePerception("Has_Starbase", self.GalacticConquest.HumanPlayer, planet:get_game_object()) == 0 then
                     return
                 end
             end
@@ -179,7 +180,7 @@ CategoryFilter = Class {
                 "Structure_Category_Dummy"
             }
 
-            local dummies = SpawnList(typeList, planet, planet.Get_Owner(), false, false)
+            local dummies = SpawnList(typeList, planet:get_game_object(), planet:get_owner(), false, false)
             for _, dummy in pairs(dummies) do
                 table.insert(self.SpawnedAiDummies[planet], dummy)
             end

@@ -28,7 +28,7 @@
 				<!--Zsinj-->
 				Belsmuth, Bonadan, Celanon, Comkin, Corsin, Dathomir, Desevro, Emmer, Ession, Etti_IV, Felucia, Garos_IV, Gravan, Junction, Lianna, Phind, Selaggis, Serenno, Tangrene, Telos, Yavin, 
 				<!-- Ammalgamation -->
-				Borleais, Carida, Charubah, Commenor, Coruscant, Fondor, Graveyard, Hapes, Kashyyyk, Kuat, Levian, MonCalimari, Mrisst, NewAlderaan, Noquivzor, PorusVida, Talasea, Terephon, MistOne, MistTwo, MistThree, 
+				Borleais, Carida, Charubah, Commenor, Coruscant, Fondor, Graveyard, Hapes, Kashyyyk, Kuat, Levian, MonCalimari, Mrisst, NewAlderaan, Noquivzor, Talasea, Terephon, MistOne, MistTwo, MistThree, 
 				<!-- Teradoc -->
 				Antem,
 				Bimmisaari,
@@ -47,11 +47,14 @@
 
         	<Trade_Routes> 
 Antem_Bimmisaari,
-Antem_Metalorn,
+Antem_Centares,
+Antem_Columex,
 Belsmuth_Celanon,
+Belsmuth_Dathomir,
 Belsmuth_Phind,
 Bimmisaari_Metalorn,
 Bimmisaari_NewAlderaan,
+Bimmisaari_Cejansij
 Bimmisaari_Charros,
 Bimmisaari_Metalorn,
 Bonadan_Ession,
@@ -66,19 +69,16 @@ Carida_MistTwo,
 Celanon_Dathomir,
 Celanon_Junction,
 Cejansij_Kashyyyk,
-Cejansij_Thanos,
-Cejansij_Togoria,
-Centares_Columex,
 Centares_Metalorn,
 Centares_Contruum,
 Centares_Phind,
 Charros_Thanos,
 Charubah_Hapes,
 Charubah_MistOne,
+Charubah_MistTwo,
 Columex_Maridun,
 Columex_Lianna,
 Comkin_Corsin,
-Comkin_Gravan,
 Comkin_Levian,
 Comkin_Selaggis,
 Commenor_Kuat,
@@ -86,15 +86,15 @@ Commenor_Kashyyyk,
 Commenor_Talasea,
 Contruum_Garos,
 Contruum_Roche,
-Corsin_Levian,
-Coruscant_Fondor,
+Contruum_MistThree,
 Coruscant_Graveyard,
-Dathomir_Garos,
+Coruscant_Tsoss,
 Dathomir_Selaggis,
 Dathomir_Tangrene,
-Desevro_Etti,
 Desevro_Emmer,
+Desevro_Ession,
 Desevro_Lianna,
+Ession_Etti,
 Etti_Telos,
 Emmer_MonCal,
 Emmer_Ession,
@@ -104,14 +104,15 @@ Felucia_Yavin,
 Fondor_Talasea,
 Fondor_Tsoss,
 Garos_Gravan,
+Garos_Phindar,
 Gravan_MistTwo,
+Gravan_Levian,
 Graveyard_Kuat,
 Graveyard_Tsoss,
-Hapes_MistTwo,
 Hapes_Terephon,
 Kashyyyk_MistOne,
-Kashyyyk_Porus,
 Kuat_MistOne,
+Kashyyyk_Togoria,
 Junction_Serenno,
 Levian_Noquivzor,
 Maridun_Yavin,
@@ -122,7 +123,6 @@ MistThree_Togoria,
 MonCal_NewAlderaan,
 Mrisst_Noquivzor,
 Phindar_Yavin,
-Porus_Togoria,
 Thanos_Togoria,
 Roche_Thanos,
 Serenno_Tangrene,
@@ -145,17 +145,16 @@ Telos_Yavin,
         	 
 		<AI_Player_Control> Pirates, SandboxHuman </AI_Player_Control>      
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
-		<AI_Player_Control> Teradoc, GenericAI </AI_Player_Control>
+		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Empire, None </AI_Player_Control>
-		<AI_Player_Control> Corporate_Sector, GenericAI </AI_Player_Control>
+		<AI_Player_Control> Corporate_Sector, GenericAILowOffense </AI_Player_Control>
 		<AI_Player_Control> Warlords, None </AI_Player_Control>
 		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
 									
 		<AI_Player_Control> Pentastar, None</AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
 		<AI_Player_Control> Yevetha, None </AI_Player_Control>    
-		<AI_Player_Control> Hutts, None </AI_Player_Control>				
-		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
+		<AI_Player_Control> Hutts, None </AI_Player_Control>					
 
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -166,7 +165,6 @@ Telos_Yavin,
 		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
 		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
 		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
-		<Markup_Filename>Harrsk, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
 		
@@ -199,6 +197,7 @@ Telos_Yavin,
 		<Starting_Forces> Empire, Carida, Carrack_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Carrack_Cruiser </Starting_Forces>
 		<!-- Remnant Ground Forces -->
+		<Starting_Forces> Empire, Carida, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Carida, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Carida, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Imperial_Heavy_Scout_Squad </Starting_Forces>
@@ -221,6 +220,7 @@ Telos_Yavin,
 		<!-- Kuat Land Forces -->
 		<Starting_Forces> Empire, Kuat, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Remnant_Capital </Starting_Forces>
+		<Starting_Forces> Empire, Kuat, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -236,74 +236,77 @@ Telos_Yavin,
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, Hapes, NR_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, Star_Home </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
+		<Starting_Forces> Rebel, Hapes, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, Rebel_Light_Missile_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, Rebel_Light_Missile_Brigade </Starting_Forces>
 
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, Charubah, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
+		<Starting_Forces> Rebel, Charubah, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Charubah, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Charubah, Rebel_Light_Missile_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Charubah, Rebel_Light_Missile_Brigade </Starting_Forces>
 
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, Terephon, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
+		<Starting_Forces> Rebel, Terephon, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Terephon, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Terephon, Rebel_Light_Missile_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Terephon, Rebel_Light_Missile_Brigade </Starting_Forces>
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, MistOne, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Nova_Cruiser </Starting_Forces>
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, MistTwo, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Nova_Cruiser </Starting_Forces>
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, MistThree, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Nova_Cruiser </Starting_Forces>
 		
 			<!-- Remnant Space Forces -->
 		<Starting_Forces> Rebel, Coruscant, NR_Star_Base_1 </Starting_Forces>
@@ -315,6 +318,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Coruscant, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Corellian_Corvette </Starting_Forces>
 		<!-- Remnant Ground Forces -->
+		<Starting_Forces> Rebel, Coruscant, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, R_Ground_Barracks </Starting_Forces>
 		
@@ -327,6 +331,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Talasea, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Talasea, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Rebel_Infantry_Squad </Starting_Forces>
@@ -342,6 +347,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Kashyyyk, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Rebel_Infantry_Squad </Starting_Forces>
@@ -355,6 +361,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, NewAlderaan, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, NewAlderaan, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
@@ -373,6 +380,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Noquivzor, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Noquivzor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Rebel_Light_Tank_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -383,6 +391,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Levian, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Levian, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -396,6 +405,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Commenor, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Commenor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Rebel_Infantry_Squad </Starting_Forces>
@@ -409,6 +419,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Fondor, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Fondor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, R_Ground_Heavy_Vehicle_Factory </Starting_Forces>
@@ -424,6 +435,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
@@ -436,6 +448,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Borleais, Marauder_Missile_Cruiser </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Marauder_Missile_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Borleais, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Rebel_Light_Tank_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -454,9 +467,10 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Serenno, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Serenno, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Pirates, Serenno, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Heavy_Vehicle_Factory </Starting_Forces>
 
 		<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Dathomir, Zsinj_Star_Base_3 </Starting_Forces>
@@ -469,8 +483,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Dathomir, Banjeer </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Implacable_Star_Destroyer </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Dathomir, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Dathomir, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Lanu_Team </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Netbers_Team </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -484,7 +499,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Celanon, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Celanon, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Celanon, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Celanon, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Melvar_Team </Starting_Forces>
@@ -496,7 +512,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Telos, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Telos, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Telos, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Telos, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, Century_Brigade </Starting_Forces>
 
@@ -507,7 +524,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Comkin, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Comkin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Comkin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Comkin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		
@@ -518,8 +536,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Garos_IV, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Garos_IV, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Garos_IV, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		
@@ -530,7 +549,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Phind, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Demolisher </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Phind, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Phind, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Phind, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Imperial_Heavy_Scout_Squad </Starting_Forces>
 
@@ -542,7 +562,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Gravan, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, 181st_Cowall </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Gravan, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Gravan, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Gravan, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Imperial_Heavy_Scout_Squad </Starting_Forces>
 
@@ -553,7 +574,8 @@ Telos_Yavin,
 		<!--<Starting_Forces> Pirates, Bonadan, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Bonadan, Nebulon_B-2_Zsinj </Starting_Forces>-->
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Bonadan, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Bonadan, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Bonadan, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Bonadan, Imperial_ATPT_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Bonadan, Imperial_ATPT_Squad </Starting_Forces>
 
@@ -565,7 +587,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Etti_IV, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Etti_IV, Generic_Victory_Destroyer </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Etti_IV, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Etti_IV, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Etti_IV, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Etti_IV, Chariot_LAV_Company </Starting_Forces>
 		<Starting_Forces> Pirates, Etti_IV, Teubbo_Team </Starting_Forces>
 
@@ -576,7 +599,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Ession, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Ession, Nebulon_B_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Ession, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Ession, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Ession, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Ession, Imperial_Anti_Infantry_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Ession, Imperial_Anti_Infantry_Brigade </Starting_Forces>
 		
@@ -586,11 +610,19 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Generic_Victory_Destroyer_TWO </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Heavy_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Imperial_Armor_Group </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Imperial_Armor_Group </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Tangrene, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Victory_Destroyer_TWO </Starting_Forces>
@@ -598,7 +630,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Tangrene, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Victory_Destroyer_TWO </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Tangrene, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Tangrene, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Tangrene, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Imperial_Armor_Group </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Imperial_Armor_Group </Starting_Forces>
 
@@ -617,7 +650,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Yavin, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Generic_Victory_Destroyer_TWO </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Yavin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Yavin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Yavin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Imperial_Light_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Imperial_Light_Scout_Squad </Starting_Forces>
 		
@@ -628,7 +662,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Desevro, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Desevro, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -638,8 +673,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Emmer, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Emmer, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Emmer, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -649,7 +685,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Felucia, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Felucia, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Felucia, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Felucia, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -659,7 +696,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Corsin, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Corsin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Corsin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Corsin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
@@ -670,19 +708,10 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Junction, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Junction, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Junction, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Junction, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, Imperial_Stormtrooper_Squad </Starting_Forces>
-			<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, Zsinj_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
-		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
 			<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Belsmuth, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
@@ -690,7 +719,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Belsmuth, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Belsmuth, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
@@ -700,6 +730,7 @@ Telos_Yavin,
 		
 				<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Therbon_Allegiance </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -708,9 +739,10 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
 		<!-- Hakassi Land Forces -->
+		<Starting_Forces> Teradoc, Centares, Maldrood_MoffPalace </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Maldrood_Capital </Starting_Forces>
-		<Starting_Forces> Teradoc, Centares, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Centares, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, TIE_Crawler_Company_Teradoc </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_IFTX_Group </Starting_Forces>
@@ -721,11 +753,12 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Metalorn, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Generic_Gladiator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
+		<Starting_Forces> Teradoc, Metalorn, Maldrood_MoffPalace </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Teradoc_IFTX_Group </Starting_Forces>
-		<Starting_Forces> Teradoc, Metalorn, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Metalorn, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Metalorn, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Metalorn, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		
 				<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
@@ -733,8 +766,9 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Togoria, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Togoria, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Teradoc_IFTX_Group </Starting_Forces>
@@ -747,8 +781,9 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Columex, Generic_Procursator </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Generic_Procursator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Columex, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Columex, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Teradoc_IFTX_Group </Starting_Forces>
@@ -764,22 +799,11 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Bimmisaari, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Generic_Gladiator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Bimmisaari, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Bimmisaari, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Bimmisaari, T_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
-		
-								<!-- Hakassi Space Forces -->
-		<Starting_Forces> Teradoc, Jomark, Teradoc_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Secutor </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Procursator </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Procursator </Starting_Forces>
-		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
 						<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Cejansij, Teradoc_Star_Base_2 </Starting_Forces>
@@ -788,7 +812,8 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Cejansij, Arquitens </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Arquitens </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Cejansij, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Cejansij, T_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, TIE_Crawler_Company_Teradoc </Starting_Forces>
@@ -801,9 +826,10 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Thanos, Generic_Procursator </Starting_Forces>
 
 		<!-- Thanos Land Forces -->
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Heavy_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -850,7 +876,7 @@ Telos_Yavin,
 				<!--Zsinj-->
 				Belsmuth, Bonadan, Celanon, Comkin, Corsin, Dathomir, Desevro, Emmer, Ession, Etti_IV, Felucia, Garos_IV, Gravan, Junction, Lianna, Phind, Selaggis, Serenno, Tangrene, Telos, Yavin, 
 				<!-- Ammalgamation -->
-				Borleais, Carida, Charubah, Commenor, Coruscant, Fondor, Graveyard, Hapes, Kashyyyk, Kuat, Levian, MonCalimari, Mrisst, NewAlderaan, Noquivzor, PorusVida, Talasea, Terephon, MistOne, MistTwo, MistThree, 
+				Borleais, Carida, Charubah, Commenor, Coruscant, Fondor, Graveyard, Hapes, Kashyyyk, Kuat, Levian, MonCalimari, Mrisst, NewAlderaan, Noquivzor, Talasea, Terephon, MistOne, MistTwo, MistThree, 
 				<!-- Teradoc -->
 				Antem,
 				Bimmisaari,
@@ -869,11 +895,14 @@ Telos_Yavin,
 
         	<Trade_Routes> 
 Antem_Bimmisaari,
-Antem_Metalorn,
+Antem_Centares,
+Antem_Columex,
 Belsmuth_Celanon,
+Belsmuth_Dathomir,
 Belsmuth_Phind,
 Bimmisaari_Metalorn,
 Bimmisaari_NewAlderaan,
+Bimmisaari_Cejansij
 Bimmisaari_Charros,
 Bimmisaari_Metalorn,
 Bonadan_Ession,
@@ -888,19 +917,16 @@ Carida_MistTwo,
 Celanon_Dathomir,
 Celanon_Junction,
 Cejansij_Kashyyyk,
-Cejansij_Thanos,
-Cejansij_Togoria,
-Centares_Columex,
 Centares_Metalorn,
 Centares_Contruum,
 Centares_Phind,
 Charros_Thanos,
 Charubah_Hapes,
 Charubah_MistOne,
+Charubah_MistTwo,
 Columex_Maridun,
 Columex_Lianna,
 Comkin_Corsin,
-Comkin_Gravan,
 Comkin_Levian,
 Comkin_Selaggis,
 Commenor_Kuat,
@@ -908,15 +934,15 @@ Commenor_Kashyyyk,
 Commenor_Talasea,
 Contruum_Garos,
 Contruum_Roche,
-Corsin_Levian,
-Coruscant_Fondor,
+Contruum_MistThree,
 Coruscant_Graveyard,
-Dathomir_Garos,
+Coruscant_Tsoss,
 Dathomir_Selaggis,
 Dathomir_Tangrene,
-Desevro_Etti,
 Desevro_Emmer,
+Desevro_Ession,
 Desevro_Lianna,
+Ession_Etti,
 Etti_Telos,
 Emmer_MonCal,
 Emmer_Ession,
@@ -926,14 +952,15 @@ Felucia_Yavin,
 Fondor_Talasea,
 Fondor_Tsoss,
 Garos_Gravan,
+Garos_Phindar,
 Gravan_MistTwo,
+Gravan_Levian,
 Graveyard_Kuat,
 Graveyard_Tsoss,
-Hapes_MistTwo,
 Hapes_Terephon,
 Kashyyyk_MistOne,
-Kashyyyk_Porus,
 Kuat_MistOne,
+Kashyyyk_Togoria,
 Junction_Serenno,
 Levian_Noquivzor,
 Maridun_Yavin,
@@ -944,7 +971,6 @@ MistThree_Togoria,
 MonCal_NewAlderaan,
 Mrisst_Noquivzor,
 Phindar_Yavin,
-Porus_Togoria,
 Thanos_Togoria,
 Roche_Thanos,
 Serenno_Tangrene,
@@ -967,7 +993,7 @@ Telos_Yavin,
 		<Empire_Story_Name>Conquests\Zsinj\Story_Plots_Sandbox_ZsinjHunt_Empire.xml</Empire_Story_Name>
 		<Underworld_Story_Name>Conquests\Zsinj\Story_Plots_Sandbox_ZsinjHunt_Container.xml</Underworld_Story_Name>
         	 
-		<AI_Player_Control> Pirates, GenericAI </AI_Player_Control>      
+		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>      
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Teradoc, SandboxHuman </AI_Player_Control>
 		<AI_Player_Control> Empire, None </AI_Player_Control>
@@ -978,8 +1004,7 @@ Telos_Yavin,
 		<AI_Player_Control> Pentastar, None</AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
 		<AI_Player_Control> Yevetha, None </AI_Player_Control>    
-		<AI_Player_Control> Hutts, None </AI_Player_Control>				
-		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
+		<AI_Player_Control> Hutts, None </AI_Player_Control>					
 
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -990,7 +1015,6 @@ Telos_Yavin,
 		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
 		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
 		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
-		<Markup_Filename>Harrsk, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
 				
@@ -1023,6 +1047,7 @@ Telos_Yavin,
 		<Starting_Forces> Empire, Carida, Carrack_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Carrack_Cruiser </Starting_Forces>
 		<!-- Remnant Ground Forces -->
+		<Starting_Forces> Empire, Carida, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Carida, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Carida, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Imperial_Heavy_Scout_Squad </Starting_Forces>
@@ -1045,6 +1070,7 @@ Telos_Yavin,
 		<!-- Kuat Land Forces -->
 		<Starting_Forces> Empire, Kuat, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Remnant_Capital </Starting_Forces>
+		<Starting_Forces> Empire, Kuat, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1060,74 +1086,77 @@ Telos_Yavin,
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, Hapes, NR_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, Star_Home </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
+		<Starting_Forces> Rebel, Hapes, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, Rebel_Light_Missile_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, Rebel_Light_Missile_Brigade </Starting_Forces>
 
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, Charubah, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
+		<Starting_Forces> Rebel, Charubah, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Charubah, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Charubah, Rebel_Light_Missile_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Charubah, Rebel_Light_Missile_Brigade </Starting_Forces>
 
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, Terephon, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
+		<Starting_Forces> Rebel, Terephon, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Terephon, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Terephon, Rebel_Light_Missile_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Terephon, Rebel_Light_Missile_Brigade </Starting_Forces>
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, MistOne, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Nova_Cruiser </Starting_Forces>
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, MistTwo, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Nova_Cruiser </Starting_Forces>
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, MistThree, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Nova_Cruiser </Starting_Forces>
 		
 			<!-- Remnant Space Forces -->
 		<Starting_Forces> Rebel, Coruscant, NR_Star_Base_1 </Starting_Forces>
@@ -1139,6 +1168,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Coruscant, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Corellian_Corvette </Starting_Forces>
 		<!-- Remnant Ground Forces -->
+		<Starting_Forces> Rebel, Coruscant, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, R_Ground_Barracks </Starting_Forces>
 		
@@ -1151,6 +1181,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Talasea, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Talasea, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Rebel_Infantry_Squad </Starting_Forces>
@@ -1166,6 +1197,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Kashyyyk, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Rebel_Infantry_Squad </Starting_Forces>
@@ -1179,6 +1211,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, NewAlderaan, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, NewAlderaan, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
@@ -1197,6 +1230,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Noquivzor, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Noquivzor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Rebel_Light_Tank_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -1207,6 +1241,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Levian, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Levian, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -1220,10 +1255,11 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Commenor, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Commenor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Rebel_Infantry_Squad </Starting_Forces>
-	
+		
 		<!-- NR Space Forces -->
 		<Starting_Forces> Rebel, MonCalimari, NR_Star_Base_3 </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Calamari_Cruiser </Starting_Forces>
@@ -1233,6 +1269,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
@@ -1245,6 +1282,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Borleais, Marauder_Missile_Cruiser </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Marauder_Missile_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Borleais, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Rebel_Light_Tank_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -1263,9 +1301,10 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Serenno, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Serenno, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Pirates, Serenno, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Heavy_Vehicle_Factory </Starting_Forces>
 
 		<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Dathomir, Zsinj_Star_Base_3 </Starting_Forces>
@@ -1278,8 +1317,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Dathomir, Banjeer </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Implacable_Star_Destroyer </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Dathomir, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Dathomir, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Lanu_Team </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Netbers_Team </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1293,7 +1333,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Celanon, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Celanon, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Celanon, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Celanon, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Melvar_Team </Starting_Forces>
@@ -1305,7 +1346,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Telos, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Telos, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Telos, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Telos, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, Century_Brigade </Starting_Forces>
 
@@ -1316,7 +1358,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Comkin, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Comkin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Comkin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Comkin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		
@@ -1327,8 +1370,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Garos_IV, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Garos_IV, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Garos_IV, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		
@@ -1339,7 +1383,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Phind, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Demolisher </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Phind, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Phind, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Phind, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Imperial_Heavy_Scout_Squad </Starting_Forces>
 
@@ -1351,7 +1396,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Gravan, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, 181st_Cowall </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Gravan, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Gravan, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Gravan, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Imperial_Heavy_Scout_Squad </Starting_Forces>
 
@@ -1362,7 +1408,8 @@ Telos_Yavin,
 		<!--<Starting_Forces> Pirates, Bonadan, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Bonadan, Nebulon_B-2_Zsinj </Starting_Forces>-->
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Bonadan, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Bonadan, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Bonadan, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Bonadan, Imperial_ATPT_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Bonadan, Imperial_ATPT_Squad </Starting_Forces>
 
@@ -1374,7 +1421,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Etti_IV, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Etti_IV, Generic_Victory_Destroyer </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Etti_IV, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Etti_IV, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Etti_IV, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Etti_IV, Chariot_LAV_Company </Starting_Forces>
 		<Starting_Forces> Pirates, Etti_IV, Teubbo_Team </Starting_Forces>
 
@@ -1385,7 +1433,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Ession, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Ession, Nebulon_B_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Ession, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Ession, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Ession, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Ession, Imperial_Anti_Infantry_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Ession, Imperial_Anti_Infantry_Brigade </Starting_Forces>
 		
@@ -1395,11 +1444,19 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Generic_Victory_Destroyer_TWO </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Heavy_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Imperial_Armor_Group </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Imperial_Armor_Group </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Tangrene, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Victory_Destroyer_TWO </Starting_Forces>
@@ -1407,7 +1464,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Tangrene, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Victory_Destroyer_TWO </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Tangrene, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Tangrene, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Tangrene, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Imperial_Armor_Group </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Imperial_Armor_Group </Starting_Forces>
 
@@ -1426,7 +1484,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Yavin, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Generic_Victory_Destroyer_TWO </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Yavin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Yavin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Yavin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Imperial_Light_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Imperial_Light_Scout_Squad </Starting_Forces>
 		
@@ -1437,7 +1496,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Desevro, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Desevro, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -1447,8 +1507,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Emmer, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Emmer, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Emmer, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -1458,7 +1519,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Felucia, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Felucia, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Felucia, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Felucia, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -1468,7 +1530,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Corsin, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Corsin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Corsin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Corsin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
@@ -1479,19 +1542,10 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Junction, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Junction, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Junction, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Junction, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, Imperial_Stormtrooper_Squad </Starting_Forces>
-			<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, Zsinj_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
-		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
 			<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Belsmuth, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
@@ -1499,7 +1553,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Belsmuth, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Belsmuth, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
@@ -1509,6 +1564,7 @@ Telos_Yavin,
 		
 				<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Therbon_Allegiance </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -1517,9 +1573,10 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
 		<!-- Hakassi Land Forces -->
+		<Starting_Forces> Teradoc, Centares, Maldrood_MoffPalace </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Maldrood_Capital </Starting_Forces>
-		<Starting_Forces> Teradoc, Centares, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Centares, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, TIE_Crawler_Company_Teradoc </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_IFTX_Group </Starting_Forces>
@@ -1530,11 +1587,12 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Metalorn, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Generic_Gladiator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
+		<Starting_Forces> Teradoc, Metalorn, Maldrood_MoffPalace </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Teradoc_IFTX_Group </Starting_Forces>
-		<Starting_Forces> Teradoc, Metalorn, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Metalorn, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Metalorn, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Metalorn, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		
 				<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
@@ -1542,8 +1600,9 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Togoria, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Togoria, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Teradoc_IFTX_Group </Starting_Forces>
@@ -1556,8 +1615,9 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Columex, Generic_Procursator </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Generic_Procursator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Columex, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Columex, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Teradoc_IFTX_Group </Starting_Forces>
@@ -1573,22 +1633,11 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Bimmisaari, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Generic_Gladiator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Bimmisaari, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Bimmisaari, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Bimmisaari, T_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
-		
-								<!-- Hakassi Space Forces -->
-		<Starting_Forces> Teradoc, Jomark, Teradoc_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Secutor </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Procursator </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Procursator </Starting_Forces>
-		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
 						<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Cejansij, Teradoc_Star_Base_2 </Starting_Forces>
@@ -1597,7 +1646,8 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Cejansij, Arquitens </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Arquitens </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Cejansij, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Cejansij, T_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, TIE_Crawler_Company_Teradoc </Starting_Forces>
@@ -1610,9 +1660,10 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Thanos, Generic_Procursator </Starting_Forces>
 
 		<!-- Thanos Land Forces -->
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Heavy_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1656,7 +1707,7 @@ Telos_Yavin,
 				<!--Zsinj-->
 				Belsmuth, Bonadan, Celanon, Comkin, Corsin, Dathomir, Desevro, Emmer, Ession, Etti_IV, Felucia, Garos_IV, Gravan, Junction, Lianna, Phind, Selaggis, Serenno, Tangrene, Telos, Yavin, 
 				<!-- Ammalgamation -->
-				Borleais, Carida, Charubah, Commenor, Coruscant, Fondor, Graveyard, Hapes, Kashyyyk, Kuat, Levian, MonCalimari, Mrisst, NewAlderaan, Noquivzor, PorusVida, Talasea, Terephon, MistOne, MistTwo, MistThree, 
+				Borleais, Carida, Charubah, Commenor, Coruscant, Fondor, Graveyard, Hapes, Kashyyyk, Kuat, Levian, MonCalimari, Mrisst, NewAlderaan, Noquivzor, Talasea, Terephon, MistOne, MistTwo, MistThree, 
 				<!-- Teradoc -->
 				Antem,
 				Bimmisaari,
@@ -1675,11 +1726,14 @@ Telos_Yavin,
 
         	<Trade_Routes> 
 Antem_Bimmisaari,
-Antem_Metalorn,
+Antem_Centares,
+Antem_Columex,
 Belsmuth_Celanon,
+Belsmuth_Dathomir,
 Belsmuth_Phind,
 Bimmisaari_Metalorn,
 Bimmisaari_NewAlderaan,
+Bimmisaari_Cejansij
 Bimmisaari_Charros,
 Bimmisaari_Metalorn,
 Bonadan_Ession,
@@ -1694,19 +1748,16 @@ Carida_MistTwo,
 Celanon_Dathomir,
 Celanon_Junction,
 Cejansij_Kashyyyk,
-Cejansij_Thanos,
-Cejansij_Togoria,
-Centares_Columex,
 Centares_Metalorn,
 Centares_Contruum,
 Centares_Phind,
 Charros_Thanos,
 Charubah_Hapes,
 Charubah_MistOne,
+Charubah_MistTwo,
 Columex_Maridun,
 Columex_Lianna,
 Comkin_Corsin,
-Comkin_Gravan,
 Comkin_Levian,
 Comkin_Selaggis,
 Commenor_Kuat,
@@ -1714,15 +1765,15 @@ Commenor_Kashyyyk,
 Commenor_Talasea,
 Contruum_Garos,
 Contruum_Roche,
-Corsin_Levian,
-Coruscant_Fondor,
+Contruum_MistThree,
 Coruscant_Graveyard,
-Dathomir_Garos,
+Coruscant_Tsoss,
 Dathomir_Selaggis,
 Dathomir_Tangrene,
-Desevro_Etti,
 Desevro_Emmer,
+Desevro_Ession,
 Desevro_Lianna,
+Ession_Etti,
 Etti_Telos,
 Emmer_MonCal,
 Emmer_Ession,
@@ -1732,14 +1783,15 @@ Felucia_Yavin,
 Fondor_Talasea,
 Fondor_Tsoss,
 Garos_Gravan,
+Garos_Phindar,
 Gravan_MistTwo,
+Gravan_Levian,
 Graveyard_Kuat,
 Graveyard_Tsoss,
-Hapes_MistTwo,
 Hapes_Terephon,
 Kashyyyk_MistOne,
-Kashyyyk_Porus,
 Kuat_MistOne,
+Kashyyyk_Togoria,
 Junction_Serenno,
 Levian_Noquivzor,
 Maridun_Yavin,
@@ -1750,7 +1802,6 @@ MistThree_Togoria,
 MonCal_NewAlderaan,
 Mrisst_Noquivzor,
 Phindar_Yavin,
-Porus_Togoria,
 Thanos_Togoria,
 Roche_Thanos,
 Serenno_Tangrene,
@@ -1772,9 +1823,9 @@ Telos_Yavin,
 		<Empire_Story_Name>Conquests\Zsinj\Story_Plots_Sandbox_ZsinjHunt_Empire.xml</Empire_Story_Name>
 		<Underworld_Story_Name>Conquests\Zsinj\Story_Plots_Sandbox_ZsinjHunt_Container.xml</Underworld_Story_Name>
         	 
-		<AI_Player_Control> Pirates, GenericAI </AI_Player_Control>      
+		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>      
 		<AI_Player_Control> Rebel, SandboxHuman </AI_Player_Control>
-		<AI_Player_Control> Teradoc, GenericAI </AI_Player_Control>
+		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Empire, None </AI_Player_Control>
 		<AI_Player_Control> Corporate_Sector, None </AI_Player_Control>
 		<AI_Player_Control> Warlords, None </AI_Player_Control>
@@ -1817,6 +1868,7 @@ Telos_Yavin,
 		<Starting_Forces> Empire, Carida, Carrack_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Carrack_Cruiser </Starting_Forces>
 		<!-- Remnant Ground Forces -->
+		<Starting_Forces> Empire, Carida, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Carida, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Carida, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Imperial_Heavy_Scout_Squad </Starting_Forces>
@@ -1839,6 +1891,7 @@ Telos_Yavin,
 		<!-- Kuat Land Forces -->
 		<Starting_Forces> Empire, Kuat, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Remnant_Capital </Starting_Forces>
+		<Starting_Forces> Empire, Kuat, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -1854,12 +1907,12 @@ Telos_Yavin,
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Sarlacc, Hapes, NR_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Sarlacc, Hapes, Star_Home </Starting_Forces>
-		<Starting_Forces> Sarlacc, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, Hapes, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, Hapes, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, Hapes, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, Hapes, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, Hapes, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, Hapes, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
 		<Starting_Forces> Sarlacc, Hapes, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Sarlacc, Hapes, Rebel_Light_Missile_Brigade </Starting_Forces>
@@ -1867,13 +1920,13 @@ Telos_Yavin,
 
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Sarlacc, Charubah, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Sarlacc, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, Charubah, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, Charubah, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, Charubah, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, Charubah, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, Charubah, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, Charubah, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
 		<Starting_Forces> Sarlacc, Charubah, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Sarlacc, Charubah, Rebel_Light_Missile_Brigade </Starting_Forces>
@@ -1881,13 +1934,13 @@ Telos_Yavin,
 
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Sarlacc, Terephon, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Sarlacc, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, Terephon, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, Terephon, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, Terephon, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, Terephon, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, Terephon, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, Terephon, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
 		<Starting_Forces> Sarlacc, Terephon, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Sarlacc, Terephon, Rebel_Light_Missile_Brigade </Starting_Forces>
@@ -1895,33 +1948,33 @@ Telos_Yavin,
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Sarlacc, MistOne, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistOne, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistOne, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistOne, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistOne, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistOne, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistOne, Nova_Cruiser </Starting_Forces>
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Sarlacc, MistTwo, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistTwo, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistTwo, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistTwo, Nova_Cruiser </Starting_Forces>
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Sarlacc, MistThree, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistThree, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistThree, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Sarlacc, MistThree, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistThree, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistThree, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Sarlacc, MistThree, Nova_Cruiser </Starting_Forces>
 		
 			<!-- Remnant Space Forces -->
 		<Starting_Forces> Rebel, Coruscant, NR_Star_Base_1 </Starting_Forces>
@@ -1933,6 +1986,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Coruscant, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Corellian_Corvette </Starting_Forces>
 		<!-- Remnant Ground Forces -->
+		<Starting_Forces> Rebel, Coruscant, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, R_Ground_Barracks </Starting_Forces>
 		
@@ -1945,6 +1999,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Talasea, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Talasea, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Rebel_Infantry_Squad </Starting_Forces>
@@ -1960,6 +2015,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Kashyyyk, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Rebel_Infantry_Squad </Starting_Forces>
@@ -1973,6 +2029,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, NewAlderaan, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, NewAlderaan, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
@@ -1991,6 +2048,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Noquivzor, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Noquivzor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Rebel_Light_Tank_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -2001,6 +2059,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Levian, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Levian, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -2014,6 +2073,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Commenor, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Commenor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Rebel_Infantry_Squad </Starting_Forces>
@@ -2027,6 +2087,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Fondor, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Fondor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, R_Ground_Heavy_Vehicle_Factory </Starting_Forces>
@@ -2042,6 +2103,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
@@ -2054,6 +2116,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Borleais, Marauder_Missile_Cruiser </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Marauder_Missile_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Borleais, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Rebel_Light_Tank_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -2072,9 +2135,10 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Serenno, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Serenno, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Pirates, Serenno, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Heavy_Vehicle_Factory </Starting_Forces>
 
 		<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Dathomir, Zsinj_Star_Base_3 </Starting_Forces>
@@ -2087,8 +2151,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Dathomir, Banjeer </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Implacable_Star_Destroyer </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Dathomir, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Dathomir, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Lanu_Team </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Netbers_Team </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2102,7 +2167,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Celanon, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Celanon, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Celanon, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Celanon, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Melvar_Team </Starting_Forces>
@@ -2114,7 +2180,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Telos, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Telos, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Telos, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Telos, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, Century_Brigade </Starting_Forces>
 
@@ -2125,7 +2192,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Comkin, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Comkin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Comkin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Comkin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		
@@ -2136,8 +2204,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Garos_IV, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Garos_IV, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Garos_IV, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		
@@ -2148,7 +2217,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Phind, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Demolisher </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Phind, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Phind, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Phind, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Imperial_Heavy_Scout_Squad </Starting_Forces>
 
@@ -2160,7 +2230,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Gravan, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, 181st_Cowall </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Gravan, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Gravan, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Gravan, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Imperial_Heavy_Scout_Squad </Starting_Forces>
 
@@ -2171,7 +2242,8 @@ Telos_Yavin,
 		<!--<Starting_Forces> Pirates, Bonadan, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Bonadan, Nebulon_B-2_Zsinj </Starting_Forces>-->
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Bonadan, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Bonadan, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Bonadan, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Bonadan, Imperial_ATPT_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Bonadan, Imperial_ATPT_Squad </Starting_Forces>
 
@@ -2183,7 +2255,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Etti_IV, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Etti_IV, Generic_Victory_Destroyer </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Etti_IV, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Etti_IV, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Etti_IV, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Etti_IV, Chariot_LAV_Company </Starting_Forces>
 		<Starting_Forces> Pirates, Etti_IV, Teubbo_Team </Starting_Forces>
 
@@ -2194,7 +2267,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Ession, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Ession, Nebulon_B_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Ession, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Ession, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Ession, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Ession, Imperial_Anti_Infantry_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Ession, Imperial_Anti_Infantry_Brigade </Starting_Forces>
 		
@@ -2204,11 +2278,19 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Generic_Victory_Destroyer_TWO </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Heavy_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Imperial_Armor_Group </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Imperial_Armor_Group </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Tangrene, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Victory_Destroyer_TWO </Starting_Forces>
@@ -2216,7 +2298,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Tangrene, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Victory_Destroyer_TWO </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Tangrene, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Tangrene, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Tangrene, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Imperial_Armor_Group </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Imperial_Armor_Group </Starting_Forces>
 
@@ -2235,7 +2318,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Yavin, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Generic_Victory_Destroyer_TWO </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Yavin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Yavin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Yavin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Imperial_Light_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Imperial_Light_Scout_Squad </Starting_Forces>
 		
@@ -2246,7 +2330,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Desevro, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Desevro, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -2256,8 +2341,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Emmer, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Emmer, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Emmer, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -2267,7 +2353,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Felucia, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Felucia, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Felucia, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Felucia, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -2277,7 +2364,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Corsin, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Corsin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Corsin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Corsin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
@@ -2288,19 +2376,10 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Junction, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Junction, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Junction, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Junction, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, Imperial_Stormtrooper_Squad </Starting_Forces>
-			<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, Zsinj_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
-		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
 			<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Belsmuth, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
@@ -2308,7 +2387,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Belsmuth, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Belsmuth, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
@@ -2318,6 +2398,7 @@ Telos_Yavin,
 		
 				<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Therbon_Allegiance </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -2326,9 +2407,10 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
 		<!-- Hakassi Land Forces -->
+		<Starting_Forces> Teradoc, Centares, Maldrood_MoffPalace </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Maldrood_Capital </Starting_Forces>
-		<Starting_Forces> Teradoc, Centares, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Centares, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, TIE_Crawler_Company_Teradoc </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_IFTX_Group </Starting_Forces>
@@ -2339,11 +2421,12 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Metalorn, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Generic_Gladiator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
+		<Starting_Forces> Teradoc, Metalorn, Maldrood_MoffPalace </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Teradoc_IFTX_Group </Starting_Forces>
-		<Starting_Forces> Teradoc, Metalorn, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Metalorn, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Metalorn, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Metalorn, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		
 				<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
@@ -2351,8 +2434,9 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Togoria, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Togoria, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Teradoc_IFTX_Group </Starting_Forces>
@@ -2365,8 +2449,9 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Columex, Generic_Procursator </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Generic_Procursator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Columex, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Columex, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Teradoc_IFTX_Group </Starting_Forces>
@@ -2382,22 +2467,11 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Bimmisaari, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Generic_Gladiator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Bimmisaari, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Bimmisaari, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Bimmisaari, T_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
-		
-								<!-- Hakassi Space Forces -->
-		<Starting_Forces> Teradoc, Jomark, Teradoc_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Secutor </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Procursator </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Procursator </Starting_Forces>
-		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
 						<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Cejansij, Teradoc_Star_Base_2 </Starting_Forces>
@@ -2406,7 +2480,8 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Cejansij, Arquitens </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Arquitens </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Cejansij, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Cejansij, T_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, TIE_Crawler_Company_Teradoc </Starting_Forces>
@@ -2419,9 +2494,10 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Thanos, Generic_Procursator </Starting_Forces>
 
 		<!-- Thanos Land Forces -->
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Heavy_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2464,7 +2540,7 @@ Telos_Yavin,
 				<!--Zsinj-->
 				Belsmuth, Bonadan, Celanon, Comkin, Corsin, Dathomir, Desevro, Emmer, Ession, Etti_IV, Felucia, Garos_IV, Gravan, Junction, Lianna, Phind, Selaggis, Serenno, Tangrene, Telos, Yavin, 
 				<!-- Ammalgamation -->
-				Borleais, Carida, Charubah, Commenor, Coruscant, Fondor, Graveyard, Hapes, Kashyyyk, Kuat, Levian, MonCalimari, Mrisst, NewAlderaan, Noquivzor, PorusVida, Talasea, Terephon, MistOne, MistTwo, MistThree, 
+				Borleais, Carida, Charubah, Commenor, Coruscant, Fondor, Graveyard, Hapes, Kashyyyk, Kuat, Levian, MonCalimari, Mrisst, NewAlderaan, Noquivzor, Talasea, Terephon, MistOne, MistTwo, MistThree, 
 				<!-- Teradoc -->
 				Antem,
 				Bimmisaari,
@@ -2483,11 +2559,14 @@ Telos_Yavin,
 
         	<Trade_Routes> 
 Antem_Bimmisaari,
-Antem_Metalorn,
+Antem_Centares,
+Antem_Columex,
 Belsmuth_Celanon,
+Belsmuth_Dathomir,
 Belsmuth_Phind,
 Bimmisaari_Metalorn,
 Bimmisaari_NewAlderaan,
+Bimmisaari_Cejansij
 Bimmisaari_Charros,
 Bimmisaari_Metalorn,
 Bonadan_Ession,
@@ -2502,19 +2581,16 @@ Carida_MistTwo,
 Celanon_Dathomir,
 Celanon_Junction,
 Cejansij_Kashyyyk,
-Cejansij_Thanos,
-Cejansij_Togoria,
-Centares_Columex,
 Centares_Metalorn,
 Centares_Contruum,
 Centares_Phind,
 Charros_Thanos,
 Charubah_Hapes,
 Charubah_MistOne,
+Charubah_MistTwo,
 Columex_Maridun,
 Columex_Lianna,
 Comkin_Corsin,
-Comkin_Gravan,
 Comkin_Levian,
 Comkin_Selaggis,
 Commenor_Kuat,
@@ -2522,15 +2598,15 @@ Commenor_Kashyyyk,
 Commenor_Talasea,
 Contruum_Garos,
 Contruum_Roche,
-Corsin_Levian,
-Coruscant_Fondor,
+Contruum_MistThree,
 Coruscant_Graveyard,
-Dathomir_Garos,
+Coruscant_Tsoss,
 Dathomir_Selaggis,
 Dathomir_Tangrene,
-Desevro_Etti,
 Desevro_Emmer,
+Desevro_Ession,
 Desevro_Lianna,
+Ession_Etti,
 Etti_Telos,
 Emmer_MonCal,
 Emmer_Ession,
@@ -2540,14 +2616,15 @@ Felucia_Yavin,
 Fondor_Talasea,
 Fondor_Tsoss,
 Garos_Gravan,
+Garos_Phindar,
 Gravan_MistTwo,
+Gravan_Levian,
 Graveyard_Kuat,
 Graveyard_Tsoss,
-Hapes_MistTwo,
 Hapes_Terephon,
 Kashyyyk_MistOne,
-Kashyyyk_Porus,
 Kuat_MistOne,
+Kashyyyk_Togoria,
 Junction_Serenno,
 Levian_Noquivzor,
 Maridun_Yavin,
@@ -2558,7 +2635,6 @@ MistThree_Togoria,
 MonCal_NewAlderaan,
 Mrisst_Noquivzor,
 Phindar_Yavin,
-Porus_Togoria,
 Thanos_Togoria,
 Roche_Thanos,
 Serenno_Tangrene,
@@ -2579,9 +2655,9 @@ Telos_Yavin,
 		<Empire_Story_Name>Conquests\Zsinj\Story_Plots_Sandbox_ZsinjHunt_Empire.xml</Empire_Story_Name>
 		<Underworld_Story_Name>Conquests\Zsinj\Story_Plots_Sandbox_ZsinjHunt_Container.xml</Underworld_Story_Name>
         	 
-		<AI_Player_Control> Pirates, GenericAI </AI_Player_Control>      
+		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>      
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
-		<AI_Player_Control> Teradoc, GenericAI </AI_Player_Control>
+		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Empire, None </AI_Player_Control>
 		<AI_Player_Control> Corporate_Sector, SandboxHuman </AI_Player_Control>
 		<AI_Player_Control> Warlords, None </AI_Player_Control>
@@ -2590,8 +2666,7 @@ Telos_Yavin,
 		<AI_Player_Control> Pentastar, None</AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
 		<AI_Player_Control> Yevetha, None </AI_Player_Control>    
-		<AI_Player_Control> Hutts, None </AI_Player_Control>				
-		<AI_Player_Control> Harrsk, None </AI_Player_Control>		
+		<AI_Player_Control> Hutts, None </AI_Player_Control>					
 
 		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
@@ -2602,7 +2677,6 @@ Telos_Yavin,
 		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
 		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
 		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
-		<Markup_Filename>Harrsk, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Sarlacc, DefaultGalacticHints </Markup_Filename>
 		<Markup_Filename>Yevetha, DefaultGalacticHints </Markup_Filename>
 		
@@ -2635,6 +2709,7 @@ Telos_Yavin,
 		<Starting_Forces> Empire, Carida, Carrack_Cruiser </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Carrack_Cruiser </Starting_Forces>
 		<!-- Remnant Ground Forces -->
+		<Starting_Forces> Empire, Carida, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Carida, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Carida, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Carida, Imperial_Heavy_Scout_Squad </Starting_Forces>
@@ -2657,6 +2732,7 @@ Telos_Yavin,
 		<!-- Kuat Land Forces -->
 		<Starting_Forces> Empire, Kuat, E_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Remnant_Capital </Starting_Forces>
+		<Starting_Forces> Empire, Kuat, Empire_MoffPalace </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Empire, Kuat, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2672,74 +2748,77 @@ Telos_Yavin,
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, Hapes, NR_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, Star_Home </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Hapes, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Hapes, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
+		<Starting_Forces> Rebel, Hapes, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, Rebel_Light_Missile_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Hapes, Rebel_Light_Missile_Brigade </Starting_Forces>
 
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, Charubah, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Charubah, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Charubah, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
+		<Starting_Forces> Rebel, Charubah, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Charubah, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Charubah, Rebel_Light_Missile_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Charubah, Rebel_Light_Missile_Brigade </Starting_Forces>
 
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, Terephon, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, Terephon, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, Terephon, Nova_Cruiser </Starting_Forces>
 		<!-- Hapes Ground Forces -->
+		<Starting_Forces> Rebel, Terephon, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Terephon, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Terephon, Rebel_Light_Missile_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Terephon, Rebel_Light_Missile_Brigade </Starting_Forces>
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, MistOne, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistOne, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistOne, Nova_Cruiser </Starting_Forces>
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, MistTwo, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistTwo, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistTwo, Nova_Cruiser </Starting_Forces>
 		
 		<!-- Hapes Space Forces -->
 		<Starting_Forces> Rebel, MistThree, NR_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Battledragon </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Nova_Cruiser </Starting_Forces>
-		<Starting_Forces> Rebel, MistThree, AMM_Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Battledragon </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Nova_Cruiser </Starting_Forces>
+		<Starting_Forces> Rebel, MistThree, Nova_Cruiser </Starting_Forces>
 		
 			<!-- Remnant Space Forces -->
 		<Starting_Forces> Rebel, Coruscant, NR_Star_Base_1 </Starting_Forces>
@@ -2751,6 +2830,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Coruscant, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, Corellian_Corvette </Starting_Forces>
 		<!-- Remnant Ground Forces -->
+		<Starting_Forces> Rebel, Coruscant, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, NewRep_Senate </Starting_Forces>
 		<Starting_Forces> Rebel, Coruscant, R_Ground_Barracks </Starting_Forces>
 		
@@ -2763,6 +2843,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Talasea, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Talasea, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Talasea, Rebel_Infantry_Squad </Starting_Forces>
@@ -2778,6 +2859,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Kashyyyk, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, Kashyyyk, Rebel_Infantry_Squad </Starting_Forces>
@@ -2791,6 +2873,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, NewAlderaan, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Corellian_Corvette </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, NewAlderaan, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, NewAlderaan, Rebel_Infantry_Squad </Starting_Forces>
@@ -2809,6 +2892,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Noquivzor, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Noquivzor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Rebel_Light_Tank_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Noquivzor, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -2819,6 +2903,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Levian, Alliance_Assault_Frigate </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, Alliance_Assault_Frigate </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Levian, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, Levian, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -2832,6 +2917,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Commenor, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Commenor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Rebel_Infantry_Squad </Starting_Forces>
 		<Starting_Forces> Rebel, Commenor, Rebel_Infantry_Squad </Starting_Forces>
@@ -2845,6 +2931,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Fondor, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Fondor, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, Fondor, R_Ground_Heavy_Vehicle_Factory </Starting_Forces>
@@ -2860,6 +2947,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, MonCalimari, Corellian_Corvette </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Calamari_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, R_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Rebel, MonCalimari, Rebel_Infantry_Squad </Starting_Forces>
@@ -2872,6 +2960,7 @@ Telos_Yavin,
 		<Starting_Forces> Rebel, Borleais, Marauder_Missile_Cruiser </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Marauder_Missile_Cruiser </Starting_Forces>
 		<!-- NRt Ground Forces -->
+		<Starting_Forces> Rebel, Borleais, NewRep_SenatorsOffice </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, R_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Rebel_Light_Tank_Brigade </Starting_Forces>
 		<Starting_Forces> Rebel, Borleais, Rebel_Light_Tank_Brigade </Starting_Forces>
@@ -2890,9 +2979,10 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Serenno, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Serenno, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Serenno, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Pirates, Serenno, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Z_Ground_Heavy_Vehicle_Factory </Starting_Forces>
 
 		<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Dathomir, Zsinj_Star_Base_3 </Starting_Forces>
@@ -2905,8 +2995,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Dathomir, Banjeer </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Implacable_Star_Destroyer </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Dathomir, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Dathomir, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Dathomir, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Lanu_Team </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Netbers_Team </Starting_Forces>
 		<Starting_Forces> Pirates, Dathomir, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -2920,7 +3011,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Celanon, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Celanon, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Celanon, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Celanon, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Celanon, Melvar_Team </Starting_Forces>
@@ -2932,7 +3024,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Telos, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Telos, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Telos, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Telos, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, Century_Brigade </Starting_Forces>
 		<Starting_Forces> Pirates, Telos, Century_Brigade </Starting_Forces>
 
@@ -2943,7 +3036,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Comkin, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Comkin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Comkin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Comkin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Comkin, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		
@@ -2954,8 +3048,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Garos_IV, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Garos_IV, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Garos_IV, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Garos_IV, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Garos_IV, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		
@@ -2966,7 +3061,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Phind, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Demolisher </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Phind, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Phind, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Phind, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Phind, Imperial_Heavy_Scout_Squad </Starting_Forces>
 
@@ -2978,21 +3074,32 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Gravan, CR90_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, 181st_Cowall </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Gravan, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Gravan, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Gravan, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Imperial_Heavy_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Gravan, Imperial_Heavy_Scout_Squad </Starting_Forces>
-		
+
 		<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Lianna, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Generic_Victory_Destroyer_TWO </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Generic_Victory_Destroyer_TWO </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Night_Caller </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Teubbo_Team </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Imperial_Armor_Group </Starting_Forces>
 		<Starting_Forces> Pirates, Lianna, Imperial_Armor_Group </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
+		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Tangrene, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Victory_Destroyer_TWO </Starting_Forces>
@@ -3000,7 +3107,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Tangrene, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Generic_Victory_Destroyer_TWO </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Tangrene, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Tangrene, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Tangrene, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Imperial_Armor_Group </Starting_Forces>
 		<Starting_Forces> Pirates, Tangrene, Imperial_Armor_Group </Starting_Forces>
 
@@ -3019,7 +3127,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Yavin, Nebulon_B_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Generic_Victory_Destroyer_TWO </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Yavin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Yavin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Yavin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Imperial_Light_Scout_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Yavin, Imperial_Light_Scout_Squad </Starting_Forces>
 		
@@ -3030,7 +3139,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Desevro, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Desevro, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Desevro, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Desevro, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -3040,8 +3150,9 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Emmer, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Emmer, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Emmer, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Z_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Emmer, Z_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Emmer, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -3051,7 +3162,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Felucia, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Felucia, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Felucia, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Felucia, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Felucia, Imperial_Stormtrooper_Squad </Starting_Forces>
 				<!-- Zsinj Space Forces -->
@@ -3061,7 +3173,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Corsin, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Corsin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Corsin, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Corsin, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Corsin, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
@@ -3072,21 +3185,10 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Junction, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Junction, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Junction, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Junction, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Junction, Imperial_Stormtrooper_Squad </Starting_Forces>
-			<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, Zsinj_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Nebulon_B-2_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, CR90_Zsinj </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Night_Caller </Starting_Forces>
-		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Lianna, Teubbo_Team </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Pirates, Lianna, Imperial_Stormtrooper_Squad </Starting_Forces>
 			<!-- Zsinj Space Forces -->
 		<Starting_Forces> Pirates, Belsmuth, Zsinj_Star_Base_1 </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
@@ -3094,7 +3196,8 @@ Telos_Yavin,
 		<Starting_Forces> Pirates, Belsmuth, Nebulon_B-2_Zsinj </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, CR90_Zsinj </Starting_Forces>
 		<!-- Zsinj Space Forces -->
-		<Starting_Forces> Pirates, Belsmuth, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Zsinj_MoffPalace </Starting_Forces>
+		<Starting_Forces> Pirates, Belsmuth, Z_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Pirates, Belsmuth, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
@@ -3104,6 +3207,7 @@ Telos_Yavin,
 		
 				<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Centares, 13x_Teradoc </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, Therbon_Allegiance </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Generic_Star_Destroyer_Two </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_Star_Base_2 </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
@@ -3112,9 +3216,10 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Crimson_Victory </Starting_Forces>
 		<!-- Hakassi Land Forces -->
+		<Starting_Forces> Teradoc, Centares, Maldrood_MoffPalace </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Maldrood_Capital </Starting_Forces>
-		<Starting_Forces> Teradoc, Centares, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Centares, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Centares, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, TIE_Crawler_Company_Teradoc </Starting_Forces>
 		<Starting_Forces> Teradoc, Centares, Teradoc_IFTX_Group </Starting_Forces>
@@ -3125,11 +3230,12 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Metalorn, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Generic_Gladiator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
+		<Starting_Forces> Teradoc, Metalorn, Maldrood_MoffPalace </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Metalorn, Teradoc_IFTX_Group </Starting_Forces>
-		<Starting_Forces> Teradoc, Metalorn, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Metalorn, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Metalorn, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Metalorn, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		
 				<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Togoria, Teradoc_Star_Base_1 </Starting_Forces>
@@ -3137,8 +3243,9 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Togoria, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Generic_Providence </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Togoria, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Togoria, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Togoria, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Togoria, Teradoc_IFTX_Group </Starting_Forces>
@@ -3151,8 +3258,9 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Columex, Generic_Procursator </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Generic_Procursator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Columex, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Columex, P_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Columex, T_Ground_Light_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Columex, Teradoc_IFTX_Group </Starting_Forces>
@@ -3168,22 +3276,11 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Bimmisaari, Generic_Gladiator </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Generic_Gladiator </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Bimmisaari, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Bimmisaari, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Bimmisaari, T_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Bimmisaari, Imperial_Stormtrooper_Squad </Starting_Forces>
-		
-								<!-- Hakassi Space Forces -->
-		<Starting_Forces> Teradoc, Jomark, Teradoc_Star_Base_1 </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Secutor </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Procursator </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Generic_Procursator </Starting_Forces>
-		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
-		<Starting_Forces> Teradoc, Jomark, Imperial_Stormtrooper_Squad </Starting_Forces>
 		
 						<!-- Hakassi Space Forces -->
 		<Starting_Forces> Teradoc, Cejansij, Teradoc_Star_Base_2 </Starting_Forces>
@@ -3192,7 +3289,8 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Cejansij, Arquitens </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Arquitens </Starting_Forces>
 		<!-- Hakassi Land Forces -->
-		<Starting_Forces> Teradoc, Jomark, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Cejansij, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Cejansij, T_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Cejansij, TIE_Crawler_Company_Teradoc </Starting_Forces>
@@ -3205,9 +3303,10 @@ Telos_Yavin,
 		<Starting_Forces> Teradoc, Thanos, Generic_Procursator </Starting_Forces>
 
 		<!-- Thanos Land Forces -->
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Light_Vehicle_Factory </Starting_Forces>
-		<Starting_Forces> Teradoc, Thanos, P_Ground_Heavy_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, Maldrood_MoffPalace </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Light_Vehicle_Factory </Starting_Forces>
+		<Starting_Forces> Teradoc, Thanos, T_Ground_Heavy_Vehicle_Factory </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
 		<Starting_Forces> Teradoc, Thanos, Imperial_Stormtrooper_Squad </Starting_Forces>
@@ -3223,9 +3322,10 @@ Telos_Yavin,
 		<Starting_Forces> Corporate_Sector, Bonadan, Marauder_Missile_Cruiser </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Bonadan, Marauder_Missile_Cruiser </Starting_Forces>
 		<!-- CSA Space Forces -->
+		<Starting_Forces> Corporate_Sector, Bonadan, CSA_LocalOffice </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Bonadan, C_Ground_Barracks </Starting_Forces>
-		<Starting_Forces> Corporate_Sector, Bonadan, CSA_ATPT_Squad </Starting_Forces>
-		<Starting_Forces> Corporate_Sector, Bonadan, CSA_ATPT_Squad </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Bonadan, Espo_Walker_Squad </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Bonadan, Espo_Walker_Squad </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Bonadan, Espo_Squad </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Bonadan, Espo_Squad </Starting_Forces>
 
@@ -3237,9 +3337,16 @@ Telos_Yavin,
 		<Starting_Forces> Corporate_Sector, Etti_IV, Marauder_Missile_Cruiser </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Etti_IV, Generic_Victory_Destroyer </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Etti_IV, Grumby_Notropis </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Etti_IV, Sparhawk_Squadron </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Etti_IV, Sloane_Enforce </Starting_Forces>
-		<Starting_Forces> Corporate_Sector, Etti_IV, Krin_Lucrehulk </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Etti_IV, Krin_Invincible </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Etti_IV, Fiolla_Team </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Etti_IV, Odumin_Team </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Etti_IV, Karrek_Flim_Team </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Etti_IV, Fasser_Team </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Etti_IV, Nieler_Team </Starting_Forces>
 		<!-- CSA Space Forces -->
+		<Starting_Forces> Corporate_Sector, Etti_IV, CSA_LocalOffice </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Etti_IV, C_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Etti_IV, CSA_Capital </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Etti_IV, Espo_Squad </Starting_Forces>
@@ -3252,6 +3359,7 @@ Telos_Yavin,
 		<Starting_Forces> Corporate_Sector, Ession, Marauder_Missile_Cruiser </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Ession, Marauder_Missile_Cruiser </Starting_Forces>
 		<!-- CSA Space Forces -->
+		<Starting_Forces> Corporate_Sector, Ession, CSA_LocalOffice </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Ession, C_Ground_Barracks </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Ession, CSA_Destroyer_Droid_Company </Starting_Forces>
 		<Starting_Forces> Corporate_Sector, Ession, CSA_Destroyer_Droid_Company </Starting_Forces>

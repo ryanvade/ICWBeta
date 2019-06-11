@@ -60,7 +60,7 @@
 	
 	<Event Name="Trigger_Isard_Pestage_Death">
   		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Pestage_Team</Event_Param1>
+  		<Event_Param1>Sate_Pestage</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
 				<Reward_Type>LOCK_UNIT</Reward_Type>
@@ -85,11 +85,35 @@
 		<Prereq>Trigger_Isard_Coruscant_Falls</Prereq>
 	</Event>
 
-		<Event Name="Spawn_Harrsk">
+	<Event Name="Spawn_Harrsk">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Shockwave_Star_Destroyer</Reward_Param1>
+		<Reward_Param1>Whirlwind_Star_Destroyer</Reward_Param1>
 		<Reward_Param2>Kalist</Reward_Param2>
+		<Prereq>Empire_Enters_Tech_01</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Okins">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Okins_Allegiance</Reward_Param1>
+		<Reward_Param2>Carida</Reward_Param2>
+		<Prereq>Empire_Enters_Tech_01</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Carvin">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Carvin_Team</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Empire_Enters_Tech_01</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Rogriss">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Agonizer_Star_Destroyer</Reward_Param1>
+		<Reward_Param2>Bilbringi</Reward_Param2>
 		<Prereq>Empire_Enters_Tech_01</Prereq>
 	</Event>
 	
@@ -114,6 +138,25 @@
 		<Reward_Param1>Derricote_Team</Reward_Param1>
 		<Reward_Param2>Thyferra</Reward_Param2>
 		<Prereq>Empire_Enters_Tech_01</Prereq>
+	</Event>
+	
+	
+	<Event Name="ByeBye_Okins">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Okins_Allegiance</Reward_Param1>
+		<Prereq>Ambition_Researched</Prereq>
+		<Prereq>Trigger_Isard_Pestage_Death</Prereq>
+		<Prereq>Trigger_Isard_Coruscant_Falls</Prereq>
+	</Event>
+	
+	<Event Name="ByeBye_Carvin">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Carvin_Team</Reward_Param1>
+		<Prereq>Ambition_Researched</Prereq>
+		<Prereq>Trigger_Isard_Pestage_Death</Prereq>
+		<Prereq>Trigger_Isard_Coruscant_Falls</Prereq>
 	</Event>
 	
 

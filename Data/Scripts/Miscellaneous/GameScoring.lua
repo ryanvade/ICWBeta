@@ -800,7 +800,7 @@ end
 
 function Calc_Score_For_Efficiency(eff_val)
 	if eff_val > 1.0 then
-		return 40000
+		return 50000
 	elseif eff_val > 0.98 then
 		return 30000
 	elseif eff_val > 0.94 then

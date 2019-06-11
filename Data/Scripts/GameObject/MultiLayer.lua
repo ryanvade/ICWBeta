@@ -55,6 +55,7 @@ function MultiLayer:Init(globals)
   zLayerDummy.Despawn()
   Object.Prevent_All_Fire(false)
   Object.Make_Invulnerable(false)
+  Object.Prevent_AI_Usage(false)
 end
 
 function MultiLayer:Update(globals)

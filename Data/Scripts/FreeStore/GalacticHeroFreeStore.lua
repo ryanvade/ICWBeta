@@ -88,7 +88,7 @@ function Definitions()
 		,DARRON_DIREPTION = {nil, true}
 		,ELITE_SQUADRON = {nil, true}
 		,EMPERORS_REVENGE_STAR_DESTROYER = {nil, true}
-		,EMPEROR_PALPATINE_TEAM = {"Is_Home_Planet", true}
+		,EMPEROR_PALPATINE_TEAM = {"Is_Home_Planet", false}
 		,GENERAL_COVELL_TEAM = {nil, false}
 		,GENERAL_VEERS_TEAM = {nil, false}
 		,GORGON = {nil, true}
@@ -192,13 +192,19 @@ function Definitions()
 		,GETHZERION_TEAM = {nil, false}
 		,IMPLACABLE_STAR_DESTROYER = {nil, true}
 		,IRON_FIST = {"Is_Home_Planet", true}
-		,KRIN_LUCREHULK = {nil, true}
+		,KRIN_INVINCIBLE = {nil, true}
 		,LANU_TEAM = {nil, false}
 		,NETBERS_TEAM = {nil, false}
 		,NIGHT_CALLER = {nil, true}
 		,RAZORS_KISS = {"Is_Home_Planet", true}
 		,TEUBBO_TEAM = {"Is_Production_Planet", false}
 		,["181ST_COWALL"] = {nil, true}
+		
+		,CARVIN_TEAM = {nil, false}
+		,THERBON_ALLEGIANCE = {nil, true}
+		,NEOMEN_ION_STORM = {nil, true}
+		,GRUMBY_NOTROPIS = {nil, true}
+		,SLOANE_ENFORCE = {nil, true}
 	}
 	
 end

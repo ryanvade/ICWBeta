@@ -67,7 +67,8 @@
 	
 		<Variant_Of_Existing_Type>Generic_Star_Base_3</Variant_Of_Existing_Type>
 		<Prev_Level_Base>EotH_Star_Base_2</Prev_Level_Base>
-		<Next_Level_Base />
+		<Next_Level_Base>EotH_Star_Base_4</Next_Level_Base>
+
 		<Tech_Level>0</Tech_Level>
 		<Affiliation>Underworld</Affiliation>
 	
@@ -83,6 +84,43 @@
 		<Reserve_Spawned_Units_Tech_0>Skirmish_Budirech, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		
+
+		<Tactical_Buildable_Objects_Campaign>
+			Underworld,
+				EOTHS_Enhanced_Reactors_L1_Upgrade,
+				EOTHS_Enhanced_Reactors_L2_Upgrade,
+				EOTHS_Reinforced_Armor_L1_Upgrade,
+				EOTHS_Reinforced_Armor_L2_Upgrade,
+				EOTHS_Improved_Weapons_L1_Upgrade,
+				EOTHS_Improved_Weapons_L2_Upgrade,
+				EOTHS_Improved_Defenses_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+
+	
+		
+	</StarBase>
+	
+		<StarBase Name="EotH_Star_Base_4">
+	
+		<Variant_Of_Existing_Type>Generic_Star_Base_4</Variant_Of_Existing_Type>
+		<Prev_Level_Base>EotH_Star_Base_3</Prev_Level_Base>
+		<Next_Level_Base />
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Underworld</Affiliation>
+	
+		
+					<!-- Set to continuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>Clawcraft_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Clawcraft_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Syca_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Syca_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_Budirech, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Budirech, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+						<Starting_Spawned_Units_Tech_0>Syndic_Destroyer, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Syndic_Destroyer, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		<Tactical_Buildable_Objects_Campaign>
 			Underworld,
@@ -196,6 +234,8 @@
 				Skirmish_Peltast,
 				UC_Level_Two_Tech_Upgrade,
 				UC_Level_Three_Tech_Upgrade,
+				UC_Level_Four_Tech_Upgrade,
+				UC_Level_Five_Tech_Upgrade,
 				EOTHS_Enhanced_Reactors_L1_Upgrade,
 				EOTHS_Enhanced_Reactors_L2_Upgrade,
 				EOTHS_Reinforced_Armor_L1_Upgrade,

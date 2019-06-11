@@ -36,7 +36,6 @@ OrbitalStructureDisplay = Class {
         ["HUTTS"] = {r = 255, g = 255, b = 255},
         ["WARLORDS"] = {r = 142, g = 195, b = 0},
         ["CORPORATE_SECTOR"] = {r = 176, g = 124, b = 172},
-        ["HARRSK"] = {r = 142, g = 195, b = 0},
         ["NEUTRAL"] = {r = 100, g = 100, b = 100},
         ["HOSTILE"] = {r = 153, g = 21, b = 223}
     },
@@ -59,20 +58,20 @@ OrbitalStructureDisplay = Class {
 
     Update = function(self, planet)
         self.SelectedPlanet = planet
-        local owner = planet.Get_Owner()
+        local owner = planet:get_owner()
         local ownerName = owner.Get_Faction_Name()
         local color = self.FACTION_COLORS[ownerName]
 
         self:Clear()
 
-        TRUtil.ShowScreenText("TEXT_SELECTED_PLANET", -1, planet, color)
+        TRUtil.ShowScreenText("TEXT_SELECTED_PLANET", -1, planet:get_game_object(), color)
         self.CurrentText = {"TEXT_SELECTED_PLANET"}
 
-        if not planet.Get_Owner().Is_Human() then
+        if not planet:get_owner().Is_Human() then
           return
         end
 
-        local structuresOnPlanet = FindFriendlyStructuresOnPlanet(planet)
+        local structuresOnPlanet = planet:get_orbital_structure_information()
 
         for structureText, amount in pairs(structuresOnPlanet) do
             table.insert(self.CurrentText, structureText)

@@ -55,7 +55,7 @@
 		<Variant_Of_Existing_Type>Generic_Star_Base_3</Variant_Of_Existing_Type>
 		<Affiliation>Pirates</Affiliation>
 		<Prev_Level_Base>Zsinj_Star_Base_2</Prev_Level_Base>
-		<Next_Level_Base></Next_Level_Base>
+		<Next_Level_Base>Zsinj_Star_Base_4</Next_Level_Base>
 
 		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
@@ -71,6 +71,42 @@
 		<Reserve_Spawned_Units_Tech_0>Skirmish_Gladiator, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 
+		<Tactical_Buildable_Objects_Campaign>
+			Pirates,
+				ES_Enhanced_Reactors_L1_Upgrade,
+				ES_Enhanced_Reactors_L2_Upgrade,
+				ES_Reinforced_Armor_L1_Upgrade,
+				ES_Reinforced_Armor_L2_Upgrade,
+				ES_Improved_Weapons_L1_Upgrade,
+				ES_Improved_Weapons_L2_Upgrade,
+				ES_Improved_Defenses_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+
+	</StarBase>
+	
+		<StarBase Name="Zsinj_Star_Base_4">
+
+		<Variant_Of_Existing_Type>Generic_Star_Base_4</Variant_Of_Existing_Type>
+		<Affiliation>Pirates</Affiliation>
+		<Prev_Level_Base>Zsinj_Star_Base_3</Prev_Level_Base>
+		<Next_Level_Base></Next_Level_Base>
+
+		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_CR90, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_CR90, 4</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_Gladiator, 4</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Gladiator, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+				<Starting_Spawned_Units_Tech_0>Generic_Star_Destroyer_Two, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Generic_Star_Destroyer_Two, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		
 		<Tactical_Buildable_Objects_Campaign>
 			Pirates,
 				ES_Enhanced_Reactors_L1_Upgrade,
@@ -119,10 +155,11 @@
 				Skirmish_Victory_Destroyer_Two,
 				Skirmish_Star_Destroyer,
 				Skirmish_Star_Destroyer_Two,
-				Skirmish_Lucrehulk,
 				Skirmish_Allegiance,
 				EC_Level_Two_Tech_Upgrade,
 				EC_Level_Three_Tech_Upgrade,
+				EC_Level_Four_Tech_Upgrade,
+				EC_Level_Five_Tech_Upgrade,
 				ES_Enhanced_Reactors_L1_Upgrade,
 				ES_Enhanced_Reactors_L2_Upgrade,
 				ES_Enhanced_Reactors_L3_Upgrade,
@@ -254,16 +291,16 @@
 		<Select_Box_Scale>70</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
 
-		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
+				<Mouse_Collide_Override_Sphere_Radius> 5.0 </Mouse_Collide_Override_Sphere_Radius>
 
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Mass>0.985</Mass>
-		<Max_Speed>4.5</Max_Speed>
+		<Max_Speed>6.0</Max_Speed>
 		<Min_Speed>2.5</Min_Speed>
-		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Turn>4.5</Max_Rate_Of_Turn>
 		<Max_Lift>4</Max_Lift>
-		<Max_Thrust>2</Max_Thrust>
+		<Max_Thrust>2.1</Max_Thrust>
 		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
 		<Hyperspace>no</Hyperspace>
@@ -300,8 +337,8 @@
 		</HardPoints>
 
         <Damage_Type>Damage_Fighter</Damage_Type>
-		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Green</Projectile_Types>
-		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Types>Proj_Ship_Fighter_Laser_Cannon_Green</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>2</Projectile_Fire_Recharge_Seconds>
 
@@ -361,7 +398,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>35</AI_Combat_Power>
+		<AI_Combat_Power>3.58</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -405,6 +442,9 @@
 		<Affiliation>Pirates, Corporate_Sector</Affiliation>
 		<Tech_Level>1</Tech_Level>
 				<Lua_Script>GenericGameObject</Lua_Script>
+				
+		<Starting_Spawned_Units_Tech_0>TIE_Raptor_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
 
 	</SpaceUnit>
 
@@ -416,23 +456,16 @@
 				<Lua_Script>GenericGameObject</Lua_Script>
 	</SpaceUnit>
 
-	<SpaceUnit Name="Lucrehulk">
-		<Variant_Of_Existing_Type>Generic_Lucrehulk</Variant_Of_Existing_Type>
-		<Affiliation>Pirates</Affiliation>
-		<Tech_Level>1</Tech_Level>
-				<Lua_Script>GenericGameObject</Lua_Script>
-				<CategoryMask> Capital | AntiFrigate </CategoryMask>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Required_Planets>Ession, Bonadan, Etti_IV</Required_Planets>
-		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
-	</SpaceUnit>
-
 	<SpaceUnit Name="Quasar_Zsinj">
 
 		<Variant_Of_Existing_Type>Generic_Quaser</Variant_Of_Existing_Type>
 		<Affiliation>Pirates, Corporate_Sector</Affiliation>
 		<Tech_Level>1</Tech_Level>
 				<Lua_Script>GenericGameObject</Lua_Script>
+				
+		<Starting_Spawned_Units_Tech_0>TIE_Raptor_Squadron, 3</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_0>
 	</SpaceUnit>
 
 	<!-- ******************************************************************** -->
@@ -462,17 +495,17 @@
 		<Squadron_Units>TIE_Raptor, TIE_Raptor, TIE_Raptor, TIE_Raptor</Squadron_Units>
 		<Squadron_Units>TIE_Raptor, TIE_Raptor, TIE_Raptor, TIE_Raptor</Squadron_Units>
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
- 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+ 		<Squadron_Offsets>55.0,10.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-5.0,-40.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-5.0,40.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-65.0,-70.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-65.0,70.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-120.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-125.0,-10.0,0.0</Squadron_Offsets>
 		<Max_Squad_Size> 12 </Max_Squad_Size>
 		<Icon_Name>i_button_tie_raptor.tga</Icon_Name>
 		<GUI_Model_Name>EV_Tieraptor.ALO</GUI_Model_Name>
@@ -485,7 +518,7 @@
 		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
 
 		<FormationOrder>1</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
 		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
 		<Idle_Chase_Range>200.0</Idle_Chase_Range>
 		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>

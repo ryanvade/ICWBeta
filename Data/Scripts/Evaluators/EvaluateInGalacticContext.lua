@@ -54,7 +54,7 @@ end
 function Evaluate(perception_name)
 
 	-- Galactic perceptions have no context in skirmish mode
-	if EvaluatePerception("Is_Skirmish_Mode", PlayerObject) == 0 then
+	if EvaluatePerception("Is_Skirmish_Mode", PlayerObject) == 0 and PlayerObject.Get_Faction_Name() ~= "HOSTILE" then
 		ret_value = Evaluate_In_Galactic_Context(perception_name, PlayerObject)
 	else
 		ret_value = nil
@@ -62,7 +62,7 @@ function Evaluate(perception_name)
 	
 	-- handle the case where no value is found
 	if not ret_value then
-		DebugMessage("%s -- Error, unable to evaluate perception %s.", tostring(Script), perception_name)
+		--DebugMessage("%s -- Error, unable to evaluate perception %s.", tostring(Script), perception_name)
 		ret_value = 0.0
 	end
 	

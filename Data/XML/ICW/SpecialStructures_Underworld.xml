@@ -4,6 +4,9 @@
 
 
 	<SpecialStructure Name="U_Ground_Palace">
+	
+		<Additional_Population_Capacity>100</Additional_Population_Capacity>
+	
 		<GUI_Bounds_Scale>0.3</GUI_Bounds_Scale>
 		<Text_ID>TEXT_GROUND_HAND_OF_THRAWN</Text_ID>
 		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_HAND_OF_THRAWN </Encyclopedia_Text>
@@ -197,6 +200,107 @@
 
 	</SpecialStructure>
 
+	<SpecialStructure Name="Hand_GovernorOffice">
+
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_COMPANY_HAND_GOVERNOROFFICE</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> E_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+
+		<Target_Bones> Point01, Point02, Point03, Point04, Point05, Point06,
+			Point07, Point08, Point09, Point10, Point11, Point11, Point12,
+			Point13, Point14, Point15, Point16 </Target_Bones>
+
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>	
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Affiliation>Underworld</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>  </Required_Special_Structures>
+		<Required_Planets></Required_Planets>
+		<Tactical_Health>2000</Tactical_Health>
+		<Icon_Name>i_button_eoth.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Sabotage_Cost_Credits>1600</Sabotage_Cost_Credits>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Encyclopedia_Text> TEXT_COMPANY_GOVERNOROFFICE_DESCRIPTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
+		<Property_Flags>InBase</Property_Flags>
+		<Abilities SubObjectList="Yes">		
+		
+			<Political_Transition_Bonus_Ability Name="Pacification_Bonus">
+				<Time_Reduction_Percentage>0.05</Time_Reduction_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Political_Transition_Bonus_Ability>
+		
+		</Abilities>
+
+	</SpecialStructure>
+	
 	<SpecialStructure Name="U_Ground_Research_Facility">
 		<GUI_Bounds_Scale>0.35</GUI_Bounds_Scale>
 		<Text_ID>TEXT_GROUND_RESEARCH_FACILITY</Text_ID>
@@ -258,7 +362,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures />
+		<Required_Special_Structures>Hand_GovernorOffice</Required_Special_Structures>
 		<Required_Planets />
 		<Tactical_Health>750</Tactical_Health>
 		<Icon_Name>i_button_e_research_facility.tga</Icon_Name>
@@ -401,7 +505,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures />
+		<Required_Special_Structures>Hand_GovernorOffice</Required_Special_Structures>
 		<Required_Planets />
 		<Tactical_Health>350</Tactical_Health>
 		<Shield_Points>600</Shield_Points>
@@ -620,7 +724,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures />
+		<Required_Special_Structures>Hand_GovernorOffice, U_Ground_Vehicle_Factory</Required_Special_Structures>
 		<Required_Planets />
 		<Tactical_Health>2350</Tactical_Health>
 		<Shield_Points>700</Shield_Points>
@@ -670,7 +774,7 @@
 		<AI_Combat_Power>300</AI_Combat_Power>
 
 		<Starting_Spawned_Units_Tech_0>MMT, 1</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>MMT, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>MMT, -1</Reserve_Spawned_Units_Tech_0>
 
 		<Spawned_Squadron_Delay_Seconds>15</Spawned_Squadron_Delay_Seconds>
 		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
@@ -789,7 +893,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures />
+		<Required_Special_Structures>Hand_GovernorOffice</Required_Special_Structures>
 		<Required_Planets />
 		<Tactical_Health>1000</Tactical_Health>
 		<Shield_Points>900</Shield_Points>
@@ -848,7 +952,7 @@
    	<AI_Combat_Power>1000</AI_Combat_Power>
 
 		<Starting_Spawned_Units_Tech_0>RFT, 4</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>RFT, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>RFT, -1</Reserve_Spawned_Units_Tech_0>
 
 		<Spawned_Squadron_Delay_Seconds>15</Spawned_Squadron_Delay_Seconds>
 		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
@@ -998,7 +1102,7 @@
 		<Variant_Of_Existing_Type>Garrison_Bunker_Template</Variant_Of_Existing_Type>
 		<Land_Model_Name>UB_Bunker.alo</Land_Model_Name>
 		<Icon_Name>i_button_ui_bunker.tga</Icon_Name>
-		<Affiliation>Underworld</Affiliation>
+		<Affiliation>Underworld, Chiss</Affiliation>
 		<Scale_Factor>1.0</Scale_Factor>
 	</SpecialStructure>
 
@@ -1006,7 +1110,7 @@
 		<Variant_Of_Existing_Type>Garrison_Bunker_Template</Variant_Of_Existing_Type>
 		<Land_Model_Name>EB_TestBunker.alo</Land_Model_Name>
 		<Icon_Name>i_button_bunker.tga</Icon_Name>
-		<Affiliation>Pentastar, Warlords, Harrsk</Affiliation>
+		<Affiliation>Pentastar, Warlords</Affiliation>
 		<Scale_Factor>1.0</Scale_Factor>
 	</SpecialStructure>
 
@@ -1014,7 +1118,7 @@
 		<Variant_Of_Existing_Type>Garrison_Bunker_Template</Variant_Of_Existing_Type>
 		<Land_Model_Name>EB_TestBunker.alo</Land_Model_Name>
 		<Icon_Name>i_button_bunker.tga</Icon_Name>
-		<Affiliation>Pirates, Hutt_Cartels, Corporate_Sector</Affiliation>
+		<Affiliation>Pirates, Hutt_Cartels, Corporate_Sector, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		<Scale_Factor>1.0</Scale_Factor>
 	</SpecialStructure>
 
@@ -1025,7 +1129,7 @@
         <Ownership_Sticks>No</Ownership_Sticks>
 		<Capture_Point_Transition_Time_Seconds>3</Capture_Point_Transition_Time_Seconds>
 		<Capture_Point_Radius>220</Capture_Point_Radius>
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Harrsk</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
 		<Initial_State_Visible_Under_FOW>True</Initial_State_Visible_Under_FOW>
       <Include_In_UI_Map_Header>True</Include_In_UI_Map_Header>
@@ -1048,7 +1152,7 @@
 		<Build_Cost_Credits>950</Build_Cost_Credits>
 		<Build_Time_Seconds>27</Build_Time_Seconds>
 		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
-		<Build_Max_Instances_Per_Planet> 3 </Build_Max_Instances_Per_Planet>
+		<Build_Max_Instances_Per_Planet> 2 </Build_Max_Instances_Per_Planet>
 		<Build_Limit_Current_Per_Player>20</Build_Limit_Current_Per_Player>
 		<Size_Value>50</Size_Value>
 		<Base_Position>In_Base</Base_Position>
@@ -1469,7 +1573,7 @@
 		<Modifies_Reveal_Range>no</Modifies_Reveal_Range>
 		<Reveal_Range_Modifier>-.50</Reveal_Range_Modifier>
 
-		<CategoryMask> Structure </CategoryMask>
+		<CategoryMask> SpaceStructure </CategoryMask>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Radar_Icon_Scale_Land>0.1</Radar_Icon_Scale_Land>
 		<Radar_Icon_Scale_Space>0.1</Radar_Icon_Scale_Space>
@@ -1606,7 +1710,7 @@
 		<Modifies_Reveal_Range>no</Modifies_Reveal_Range>
 		<Reveal_Range_Modifier>-.50</Reveal_Range_Modifier>
 
-		<CategoryMask> Structure </CategoryMask>
+		<CategoryMask> SpaceStructure </CategoryMask>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Radar_Icon_Scale_Land>0.1</Radar_Icon_Scale_Land>
 		<Radar_Icon_Scale_Space>0.1</Radar_Icon_Scale_Space>
@@ -1773,7 +1877,7 @@
 		<Modifies_Reveal_Range>no</Modifies_Reveal_Range>
 		<Reveal_Range_Modifier>-.50</Reveal_Range_Modifier>
 		<Damage>200</Damage>
-		<CategoryMask> Structure </CategoryMask>
+		<CategoryMask> SpaceStructure </CategoryMask>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Radar_Icon_Scale_Land>0.1</Radar_Icon_Scale_Land>
 		<Radar_Icon_Scale_Space>0.1</Radar_Icon_Scale_Space>
@@ -1886,6 +1990,8 @@
 		<Tech_Level>0</Tech_Level>
 		<Affiliation>Rebel</Affiliation>
 		<GUI_Row> 1 </GUI_Row>
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 	</SpecialStructure>
 
 	<SpecialStructure Name="Rebel_Golan_Two">
@@ -1893,6 +1999,8 @@
 		<Tech_Level>0</Tech_Level>
 		<Affiliation>Rebel</Affiliation>
 		<GUI_Row> 0 </GUI_Row>
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 	</SpecialStructure>
 
 	<SpecialStructure Name="Rebel_Golan_Two_Strategic">
@@ -1900,6 +2008,8 @@
 		<Tech_Level>0</Tech_Level>
 		<Affiliation>Rebel</Affiliation>
 		<GUI_Row> 0 </GUI_Row>
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 	</SpecialStructure>
 
 	<SpecialStructure Name="Rebel_Golan_Three">
@@ -1919,6 +2029,8 @@
 				RC_Level_Two_Tech_Upgrade,
 				RC_Level_Three_Tech_Upgrade,
 		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 
 	</SpecialStructure>
 
@@ -1928,30 +2040,41 @@
 		<Affiliation>Rebel</Affiliation>
 		<GUI_Row> 0 </GUI_Row>
 
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		
 	</SpecialStructure>
 
 	<SpecialStructure Name="Empire_Golan_One">
 		<Variant_Of_Existing_Type>Generic_Golan_One</Variant_Of_Existing_Type>
 		<Tech_Level>1</Tech_Level>
 		<Affiliation>Empire, Teradoc, Hutts, Pirates, Pentastar, Yevetha, Corporate_Sector</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
 	</SpecialStructure>
 
 	<SpecialStructure Name="Empire_Golan_Two">
 		<Variant_Of_Existing_Type>Generic_Golan_Two</Variant_Of_Existing_Type>
 		<Tech_Level>1</Tech_Level>
 		<Affiliation>Empire, Teradoc, Hutts, Pirates, Pentastar, Yevetha, Corporate_Sector</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
 	</SpecialStructure>
 
 	<SpecialStructure Name="Empire_Golan_Two_Strategic">
 		<Variant_Of_Existing_Type>Generic_Golan_Two_Strategic</Variant_Of_Existing_Type>
 		<Tech_Level>1</Tech_Level>
 		<Affiliation>Empire, Teradoc, Hutts, Pirates, Pentastar, Yevetha, Corporate_Sector</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
 	</SpecialStructure>
 
 	<SpecialStructure Name="Empire_Golan_Three">
 		<Variant_Of_Existing_Type>Generic_Golan_Three</Variant_Of_Existing_Type>
 		<Tech_Level>1</Tech_Level>
 		<Affiliation>Empire, Teradoc, Hutts, Pirates, Pentastar, Yevetha, Corporate_Sector</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		
 		<Tactical_Buildable_Objects_Multiplayer>
 			Empire,
 				Chimera_Pellaeon_Grand,
@@ -1970,6 +2093,8 @@
 		<Variant_Of_Existing_Type>Generic_Golan_Three_Strategic</Variant_Of_Existing_Type>
 		<Tech_Level>1</Tech_Level>
 		<Affiliation>Empire, Teradoc, Hutts, Pirates, Pentastar, Yevetha, Corporate_Sector</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
 	</SpecialStructure>
 
 
@@ -2062,7 +2187,7 @@
 			</Planet_Income_Gambling_Ability>
 		</Abilities>
 
- 		<CategoryMask> Structure </CategoryMask>
+ 		<CategoryMask> SpaceStructure </CategoryMask>
  		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
  		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
 
@@ -2148,9 +2273,9 @@
 			<Planet_Income_Bonus_Ability Name="Station_Income_Bonus">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_TRADE_FACILITIES</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
-				<Percentage_Income_Modifier>0.30</Percentage_Income_Modifier>
+				<Percentage_Income_Modifier>1</Percentage_Income_Modifier>
 				<!-- plus an absolute 0 credits to planetary income -->
-				<Absolute_Income_Modifier>0</Absolute_Income_Modifier>
+				<Absolute_Income_Modifier>20</Absolute_Income_Modifier>
 				<!-- net effect of +( (base income * 0%) + 20) credits -->
 				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
@@ -2193,7 +2318,7 @@
 
 	</SpecialStructure>
 
-	<SpecialStructure Name="Generic_XQ">
+	<SpecialStructure Name="NewRep_XQ">
 		<Text_ID>TEXT_XQ_STATION</Text_ID>
 		<Space_Model_Name>NR_XQ.alo</Space_Model_Name>
 		<GUI_Row> 1 </GUI_Row>
@@ -2228,6 +2353,9 @@
 		<Tactical_Health>2400</Tactical_Health>
 		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SIMPLE_SPACE_LOCOMOTOR </SpaceBehavior>
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 13</Starting_Spawned_Units_Tech_0>
+		
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
 		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
@@ -2260,12 +2388,14 @@
 		<Modifies_Reveal_Range>no</Modifies_Reveal_Range>
 		<Reveal_Range_Modifier>-.50</Reveal_Range_Modifier>
 
-		<CategoryMask> Structure </CategoryMask>
+		<CategoryMask> SpaceStructure </CategoryMask>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Radar_Icon_Scale_Land>0.1</Radar_Icon_Scale_Land>
 		<Radar_Icon_Scale_Space>0.1</Radar_Icon_Scale_Space>
 		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
 		<Radar_Icon_Name>i_radar_golanone.tga</Radar_Icon_Name>
+		
+		<Affiliation>Rebel, Pentastar, Corporate_Sector</Affiliation>
 
 		<HardPoints>
 			HP_XQ_Hangar_01,
@@ -2330,18 +2460,6 @@
 	   </Unit_Abilities_Data>
     </SpecialStructure>
 
-	<SpecialStructure Name="NewRep_XQ">
-		<Variant_Of_Existing_Type>Generic_XQ</Variant_Of_Existing_Type>
-		<Tech_Level>0</Tech_Level>
-		<Affiliation>Rebel</Affiliation>
-	</SpecialStructure>
-
-	<SpecialStructure Name="Alignment_XQ">
-		<Variant_Of_Existing_Type>Generic_XQ</Variant_Of_Existing_Type>
-		<Tech_Level>0</Tech_Level>
-		<Affiliation>Pentastar</Affiliation>
-	</SpecialStructure>
-
 	<SpecialStructure Name="Validusia">
 		<Text_ID>TEXT_UNIT_VALIDUSIA</Text_ID>
 		<Space_Model_Name>PA_Validusia.alo</Space_Model_Name>
@@ -2374,7 +2492,12 @@
 		<Required_Planets></Required_Planets>
         <Tactical_Health>10010</Tactical_Health>
 		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE, SHIELDED</Behavior>
-		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 11</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 11</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 8</Starting_Spawned_Units_Tech_0>
+		
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
 		<Space_FOW_Reveal_Range>28000.0</Space_FOW_Reveal_Range>
@@ -2409,7 +2532,7 @@
 		<Modifies_Reveal_Range>no</Modifies_Reveal_Range>
 		<Reveal_Range_Modifier>-.50</Reveal_Range_Modifier>
 		<Damage>200</Damage>
-		<CategoryMask> Structure </CategoryMask>
+		<CategoryMask> SpaceStructure </CategoryMask>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Radar_Icon_Scale_Land>0.1</Radar_Icon_Scale_Land>
 		<Radar_Icon_Scale_Space>0.1</Radar_Icon_Scale_Space>
@@ -2553,7 +2676,13 @@
 		<Required_Planets></Required_Planets>
         <Tactical_Health>18010</Tactical_Health>
 		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE, SHIELDED</Behavior>
-		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 12</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 12</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 12</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 12</Starting_Spawned_Units_Tech_0>
+		
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
 		<Space_FOW_Reveal_Range>28000.0</Space_FOW_Reveal_Range>
@@ -2571,7 +2700,7 @@
 
 		<Sabotage_Cost_Credits>5000</Sabotage_Cost_Credits>
 
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Rebel, Corporate_Sector</Affiliation>
 
 		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
@@ -2588,7 +2717,7 @@
 		<Modifies_Reveal_Range>no</Modifies_Reveal_Range>
 		<Reveal_Range_Modifier>-.50</Reveal_Range_Modifier>
 		<Damage>200</Damage>
-		<CategoryMask> Structure </CategoryMask>
+		<CategoryMask> SpaceStructure </CategoryMask>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Radar_Icon_Scale_Land>0.1</Radar_Icon_Scale_Land>
 		<Radar_Icon_Scale_Space>0.1</Radar_Icon_Scale_Space>

@@ -14,6 +14,13 @@
 		<Event_Param1>0</Event_Param1>
 	</Event>
 	
+	<Event Name="E_Lock_Preybird_Open">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Preybird_Squadron_Buildable</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
 	<Event Name="E_Lock_Crimson_Victory_Open">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
@@ -42,7 +49,28 @@
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 	
-		<Event Name="E_Lock_Venator_Open">
+	<Event Name="E_Lock_TaggeCo_Open">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>TaggeCo_HQ</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="E_Lock_Incom_Open">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Incom_HQ</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="E_Lock_SoroSuub_Open">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>SoroSuub_HQ</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="E_Lock_Venator_Open">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Venator</Reward_Param1>
@@ -100,21 +128,24 @@
 	</Event>
 	
 	<Event Name="Unlock_Vindicator_Thrawn">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Vindicator_Cruiser</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_02</Prereq>
 	</Event>
 	
 	<Event Name="Unlock_Dominator_Thrawn">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Dominator</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_02</Prereq>
 	</Event>
 	
 	<Event Name="E_Lock_Tector_Thrawn">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Tector</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_02</Prereq>
@@ -122,14 +153,16 @@
 	
 
 	<Event Name="E_Lock_Executor_Thrawn">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Executor</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_02</Prereq>
 	</Event>
 	
-		<Event Name="Unlock_Allegiance_Thrawn">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+	<Event Name="Unlock_Allegiance_Thrawn">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Allegiance</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_02</Prereq>
@@ -146,58 +179,90 @@
 	</Event>
 	
 	<Event Name="E_Lock_Noghri">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Noghri_Assassin_Squad</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 	
 	<Event Name="E_Lock_Scimmy_Palpatine">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Scimmy_Squadron_Buildable</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 	
 	<Event Name="E_Lock_Boarding">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Imperial_Boarding_Shuttle</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
+	
+	<Event Name="E_Lock_Ysalamiri">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Ysalamiri_Stormtrooper_Squad</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_03</Prereq>
+	</Event>
 		
 	<Event Name="E_Lock_Vindicator_Palpatine">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Vindicator_Cruiser</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 	
 	<Event Name="Unlock_MTC_Palpatine">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>MTC_Sensor</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 	
+	<Event Name="Unlock_TaggeCo_Palpatine"> <!-- TaggeCo is only relevant in Era 3 for the Empire, but all eras for the New Republic -->
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>TaggeCo_HQ</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_03</Prereq>
+	</Event>
+	
 	<Event Name="E_Lock_Dominator_Palpatine">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Dominator</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 	
 		<Event Name="Unlock_Sovereign_Palpatine">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Sovereign</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 	
 	<Event Name="Unlock_World_Devastator">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>World_Devastator</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_03</Prereq>
+	</Event>
+	
+	<Event Name="Unlock_Eclipse">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Eclipse_Star_Destroyer</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 	
@@ -232,63 +297,91 @@
 	</Event>
 	
 	<Event Name="Unlock_Venator_Daala">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Venator</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 	</Event>
 	
+
+	
+	<Event Name="E_Lock_Eclipse_Daala">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Eclipse_Star_Destroyer</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_04</Prereq>
+	</Event>
+	
+	
 	
 	<Event Name="Unlock_Crimson_Daala">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Crimson_Victory</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 	</Event>
 	
 	<Event Name="Unlock_Executor_Daala">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Executor</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 	</Event>
 	
 	<Event Name="E_Lock_Allegiance_Daala">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Allegiance</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 	</Event>
 	
 	<Event Name="E_Lock_MTC_Daala">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>MTC_Sensor</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 	</Event>
+	
+	<Event Name="E_Lock_TaggeCo_Daala">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>TaggeCo_HQ</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_04</Prereq>
+	</Event>
 
 	<Event Name="Unlock_Tector_Daala">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Tector</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 	</Event>
 	
 		<Event Name="Unlock_Praetor_Daala">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Praetor</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 	</Event>
 	
 	<Event Name="E_Lock_WorldDevastator_Daala">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>World_Devastator</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 	</Event>
 		<Event Name="E_Lock_Sovereign_Daala">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Sovereign</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
@@ -305,29 +398,47 @@
 	</Event>
 	
 	<Event Name="E_Lock_Crimson_Victory_Pellaeon">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Crimson_Victory</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_05</Prereq>
 	</Event>
 	
 	<Event Name="Unlock_Dominator_Pellaeon">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Dominator</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_05</Prereq>
 	</Event>
 	
+	<Event Name="Unlock_Preybird_Pellaeon">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1><!-- An option for the CSA at all tech levels -->
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Preybird_Squadron_Buildable</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_05</Prereq>
+	</Event>	
 	
 	<Event Name="Unlock_Incom_Pellaeon"> <!-- Incom is only relevant in Era 5 for the Empire, but all eras for the New Republic and Greater Maldrood -->
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Incom_HQ</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_05</Prereq>
 	</Event>
 	
+	<Event Name="Unlock_SoroSuub_Pellaeon"> <!-- SoroSuub is only relevant in Era 5 for the Empire, but all eras for the New Republic, CSA, and Zsinj -->
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>SoroSuub_HQ</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_05</Prereq>
+	</Event>
+	
 <!--******************************************************-->
-<!--******	Skirmish                                 *****-->
+<!--******	MP GC                                 *****-->
 <!--******************************************************-->
 	<Event Name="R_Lock_Placeholder">
 		<Event_Type>STORY_TRIGGER</Event_Type>

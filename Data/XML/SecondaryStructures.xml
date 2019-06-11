@@ -185,7 +185,7 @@
 
 		<Scale_Factor>0.55</Scale_Factor>
 		<GUI_Bracket_Size>2</GUI_Bracket_Size>
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Harrsk</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Build_Cost_Credits>500</Build_Cost_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
@@ -364,7 +364,7 @@
 		<Land_Damage_Alternates>1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
 
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Harrsk</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Size_Value>50</Size_Value>
 		<Tactical_Health>600</Tactical_Health>
@@ -438,7 +438,7 @@
 		<Land_Damage_Alternates>1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
 
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Harrsk</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Size_Value>50</Size_Value>
 		<Tactical_Health>600</Tactical_Health>
@@ -514,7 +514,7 @@
 		<Land_Damage_Alternates>1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
 
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Harrsk</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		<Political_Control>0</Political_Control>
 		
 		<Size_Value>50</Size_Value>
@@ -565,7 +565,7 @@
 		<Scale_Factor>0.5</Scale_Factor>
 
         <Ownership_Sticks>Yes</Ownership_Sticks>
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Harrsk</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		<Tactical_Health>700</Tactical_Health>
 		<Behavior> CAPTURE_POINT, SELECTABLE, DUMMY_GROUND_STRUCTURE</Behavior>
 		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,</LandBehavior>
@@ -665,16 +665,22 @@
 		<Tactical_Health>700</Tactical_Health>
 		<Energy_Capacity>500</Energy_Capacity>
 		<Energy_Refresh_Rate>40</Energy_Refresh_Rate>
-		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		<!-- <Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types> -->
+		
+		<Target_Bones> ALT0, P_SMOKE_TINY01_ALT3 </Target_Bones>
+		
+		<Hardpoints>
+			HP_Turbolaser_Tower,
+		</Hardpoints>
 
 		<Land_FOW_Reveal_Range>700.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>300.0</Targeting_Max_Attack_Distance>
 
 		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
 
-		<Projectile_Fire_Recharge_Seconds>4.0</Projectile_Fire_Recharge_Seconds>
+		<!-- <Projectile_Fire_Recharge_Seconds>4.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
-		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds> -->
 
 		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
 		
@@ -692,11 +698,11 @@
 		<Turret_Targets_Air_Vehicles> 3 </Turret_Targets_Air_Vehicles>       
 		<Turret_Targets_Anything_Else> 9999 </Turret_Targets_Anything_Else>    
 
-		<Targeting_Fire_Inaccuracy> Infantry, 15.0 </Targeting_Fire_Inaccuracy>
+		<!-- <Targeting_Fire_Inaccuracy> Infantry, 15.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> LandHero, 15.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 10.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy> -->
 
 		<Icon_Name>i_button_turbolaser_tower.tga</Icon_Name>
 		<Victory_Relevant>no</Victory_Relevant>
@@ -714,7 +720,7 @@
 		<SFXEvent_Unit_Lost> EHD_Turbo_Tower_Destroyed </SFXEvent_Unit_Lost>
 	
 		<CategoryMask> Structure </CategoryMask>
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Harrsk</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		<Death_Clone_Is_Obstacle>True</Death_Clone_Is_Obstacle>
 		<Targeting_Priority_Set>AntiVehicleAir</Targeting_Priority_Set>
 	</SecondaryStructure>
@@ -817,7 +823,7 @@
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>1000</Energy_Capacity>
 		<Energy_Refresh_Rate>50</Energy_Refresh_Rate>
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Harrsk</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		<Victory_Relevant>No</Victory_Relevant>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
@@ -858,7 +864,7 @@
 		<Select_Box_Scale>330</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
 		<Is_Dummy>Yes</Is_Dummy>
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Harrsk</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
 		
 		<Tech_Level>0</Tech_Level>
@@ -1000,7 +1006,7 @@
 		<Behavior>CAPTURE_POINT, DUMMY_STAR_BASE, SELECTABLE</Behavior>
 		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
 		<Victory_Relevant>no</Victory_Relevant>
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Harrsk</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		
 		<Capture_Point_Transition_Time_Seconds>20</Capture_Point_Transition_Time_Seconds>
 		<Capture_Point_Radius>800</Capture_Point_Radius>
@@ -1066,7 +1072,7 @@
 				Star_Home_E,
 				BattleDragon_E,
 				Nova_Cruiser_E,	
-				Okins_Allegiance,
+				Therbon_Allegiance,
 				Lancet_Kosh,
 				13X_Teradoc,
 				Boba_Fett_Team_Space_MP,
@@ -1087,7 +1093,16 @@
 				Demolisher,
 				Implacable_Star_Destroyer,
 				Banjeer,
-				Krin_Lucrehulk,
+				Night_Caller,
+			Corporate_Sector,
+				Armadia_E,
+				Star_Home_E,
+				BattleDragon_E,
+				Nova_Cruiser_E,	
+				Sparhawk_Squadron,
+				Sloane_Enforce,
+				Krin_Invincible,
+				Grumby_Notropis,
 		</Tactical_Buildable_Objects_Multiplayer>
 	
 		<Tech_Level>0</Tech_Level>
@@ -1146,7 +1161,7 @@
 		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
 				
 		
-		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Harrsk</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Sarlacc, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
 		<Tactical_Buildable_Objects_Multiplayer> 
 			Empire,
 				Armadia_E,
@@ -1189,7 +1204,7 @@
 				Star_Home_E,
 				BattleDragon_E,
 				Nova_Cruiser_E,	
-				Okins_Allegiance,
+				Therbon_Allegiance,
 				Lancet_Kosh,
 				13X_Teradoc,
 				Boba_Fett_Team_Space_MP,
@@ -1210,7 +1225,16 @@
 				Demolisher,
 				Implacable_Star_Destroyer,
 				Banjeer,
-				Krin_Lucrehulk,
+				Night_Caller,
+			Corporate_Sector,
+				Armadia_E,
+				Star_Home_E,
+				BattleDragon_E,
+				Nova_Cruiser_E,	
+				Sparhawk_Squadron,
+				Sloane_Enforce,
+				Krin_Invincible,
+				Grumby_Notropis,
 		</Tactical_Buildable_Objects_Multiplayer>
 	
 		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>

@@ -28,6 +28,40 @@
 	</Event>
 	
 
+	<!-- Move to higher tech, Kaine shouldn't still be away -->
+	<Event Name="PA_Enter_Tech_02">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>2</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Pentastar_Talks</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+		<Event Name="PA_Enter_Tech_03">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Pentastar_Talks</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="PA_Enter_Tech_04">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Pentastar_Talks</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+		<Event Name="PA_Enter_Tech_05">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>5</Event_Param1>
+			<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Pentastar_Talks</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+
 	<Event Name="Faction_Branch_Enabler_Pentastar">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>ENABLE_BRANCH_PENTASTAR_FLAG</Event_Param2>
@@ -48,6 +82,8 @@
 	<Event Name="Talks_End">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>760</Event_Param1>
+		<Branch>Pentastar_Talks</Branch>
+
 	</Event>
 
 	<Event Name="Kaine_Return_Speech">

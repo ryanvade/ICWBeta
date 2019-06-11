@@ -26,25 +26,29 @@ function MakeRaidFleet(chance)
   RaidFleet.spawnList = {}
   RaidFleet.completedListener = nil
 
-  RaidFleet.factions = {"Rebel", "Empire", "Underworld", "Pirates", "Pentastar", "Yevetha", "Teradoc", "Hutts", "Sarlacc"}
+  RaidFleet.factions = {"Rebel", "Empire", "Underworld", "Pirates", "Pentastar", "Warlords", "Teradoc", "Hutts", "Sarlacc", "Corporate_Sector", "Mandalorians"}
   RaidFleet.unit_types = {{"Skirmish_CR90", "Skirmish_MC80B", "Skirmish_MC40a", "Skirmish_Alliance_Assault_Frigate"},
     {"Skirmish_Lancer_Frigate", "Skirmish_Carrack_Cruiser", "Skirmish_Star_Destroyer_Two", "Skirmish_Victory_Destroyer_Two"},
     {"Skirmish_Vigilance_Gunship", "Skirmish_Auriette_Carrier", "Skirmish_Warlord", "Skirmish_Chiss_Star_Destroyer"},
-     {"Skirmish_Lancer_Frigate", "Skirmish_Neutron_Star", "Skirmish_Star_Destroyer_Two", "Skirmish_Victory_Destroyer_Two"},
-    {"Skirmish_Enforcer", "Skirmish_Raider_Pentastar", "Skirmish_Procursator", "Skirmish_Star_Destroyer_Two"},
+    {"Skirmish_CR90", "Skirmish_Neutron_Star", "Skirmish_Star_Destroyer_Two", "Skirmish_Victory_Destroyer_Two", "Skirmish_Quasar_Zsinj"},
+    {"Skirmish_Enforcer", "Skirmish_Raider_Pentastar", "Skirmish_Procursator", "Skirmish_Star_Destroyer_Two", "Skirmish_Munificent"},
     {"Armadia", "Skirmish_Dreadnaught_Empire", "Skirmish_Victory_Destroyer_Two", "Skirmish_Star_Destroyer_Two"},
-    {"Skirmish_IPV1_Teradoc", "Skirmish_Carrack_Cruiser", "Skirmish_Star_Destroyer_Two", "Skirmish_Crimson_Victory"},
-    {"Skirmish_Tartan_Patrol_Cruiser", "Skirmish_Carrack_Cruiser", "Skirmish_Tector", "Skirmish_Victory_Destroyer_Two"},
-    {"Nova_Cruiser", "BattleDragon"}
+    {"Skirmish_IPV1_Teradoc", "Skirmish_Arquitens", "Skirmish_Star_Destroyer_Two", "Skirmish_Crimson_Victory"},
+    {"Skirmish_Tartan_Patrol_Cruiser", "Skirmish_Victory_II_Frigate", "Skirmish_Tector", "Skirmish_Victory_Destroyer_Two", "Skirmish_Broadside_Cruiser", "Skirmish_Imperial_II_Frigate"},
+    {"Nova_Cruiser", "BattleDragon"},
+	{"Skirmish_Invincible_Cruiser", "Skirmish_Recusant", "Skirmish_Bulwark_I", "Skirmish_Gladiator"},
+    {"Skirmish_Crusader", "Skirmish_Dreadnaught_Mando", "Skirmish_Keldabe"}
   }
-  RaidFleet.starbases = {{"NR_Star_Base_1", "NR_Star_Base_2", "NR_Star_Base_3"},
-    {"Remnant_Star_Base_1", "Remnant_Star_Base_2", "Remnant_Star_Base_3"},
-    {"EotH_Star_Base_1", "EotH_Star_Base_2", "EotH_Star_Base_3"},
-    {"Zsinj_Star_Base_1", "Zsinj_Star_Base_2", "Zsinj_Star_Base_3"},
-    {"Pentastar_Star_Base_1", "Pentastar_Star_Base_2", "Pentastar_Star_Base_3"},
-    {"Y_Star_Base_1", "Y_Star_Base_2", "Y_Star_Base_3"},
-    {"Teradoc_Star_Base_1", "Teradoc_Star_Base_2", "Teradoc_Star_Base_3"},
-    {"Delvardus_Star_Base_1", "Delvardus_Star_Base_2", "Delvardus_Star_Base_3"},
+  RaidFleet.starbases = {{"NR_Star_Base_1", "NR_Star_Base_2", "NR_Star_Base_3", "NR_Star_Base_4"},
+    {"Remnant_Star_Base_1", "Remnant_Star_Base_2", "Remnant_Star_Base_3", "Remnant_Star_Base_4"},
+    {"EotH_Star_Base_1", "EotH_Star_Base_2", "EotH_Star_Base_3", "EotH_Star_Base_4"},
+    {"Zsinj_Star_Base_1", "Zsinj_Star_Base_2", "Zsinj_Star_Base_3", "Zsinj_Star_Base_4"},
+    {"Pentastar_Star_Base_1", "Pentastar_Star_Base_2", "Pentastar_Star_Base_3", "Pentastar_Star_Base_4"},
+    {"Y_Star_Base_1", "Y_Star_Base_2", "Y_Star_Base_3", "Y_Star_Base_4"},
+    {"Teradoc_Star_Base_1", "Teradoc_Star_Base_2", "Teradoc_Star_Base_3", "Teradoc_Star_Base_4"},
+    {"Delvardus_Star_Base_1", "Delvardus_Star_Base_2", "Delvardus_Star_Base_3", "Delvardus_Star_Base_4"},
+    {"Hapan_Star_Base_1", "Hapan_Star_Base_2"},
+	{"CSA_Star_Base_1", "CSA_Star_Base_2", "CSA_Star_Base_3", "CSA_Star_Base_4"},
     {"Hapan_Star_Base_1", "Hapan_Star_Base_2"}
   }
 

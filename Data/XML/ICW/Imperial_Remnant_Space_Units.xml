@@ -30,7 +30,7 @@
 		<Scale_Factor>.72</Scale_Factor>
 		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
 
-		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
+				<Mouse_Collide_Override_Sphere_Radius> 5.0 </Mouse_Collide_Override_Sphere_Radius>
 
         <Ranking_In_Category>6</Ranking_In_Category>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
@@ -59,7 +59,7 @@
 		<Energy_Capacity>3000</Energy_Capacity>
 		<Energy_Refresh_Rate>500</Energy_Refresh_Rate>
 
-		<Affiliation>Empire, Harrsk</Affiliation>
+		<Affiliation>Empire</Affiliation>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>Yes</Build_Can_Be_Unlocked_By_Slicer>
 		<Slice_Cost_Credits>1400</Slice_Cost_Credits>
@@ -77,7 +77,7 @@
 		<Squadron_Capacity>12</Squadron_Capacity>
 		<Transport_Capacity>12</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
-		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Cost_Credits>890</Build_Cost_Credits>
 		<AI_Combat_Power>200</AI_Combat_Power>
 		<Build_Time_Seconds>25</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
@@ -273,7 +273,7 @@
 		<Tech_Level>3</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
 		<Autoresolve_Health>22910</Autoresolve_Health>
 		<Tactical_Health>22910</Tactical_Health>
@@ -295,8 +295,11 @@
 		<Lua_Script>GenericGameObject</Lua_Script>
 
         <Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
-        <SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+        <SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 
+		<Starting_Spawned_Units_Tech_0>TIE_Droid_Squadron, 30</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 8</Starting_Spawned_Units_Tech_0>
+		
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
@@ -384,7 +387,7 @@
 				<GUI_Activated_Ability_Name> Sovereign_Super_Laser_Attack_Ability </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
 				<Recharge_Seconds>360</Recharge_Seconds><!-- jdg was 5  -->
 				<Expiration_Seconds>360</Expiration_Seconds>
-				<SFXEvent_Target_Ability> Unit_Attack_Tyber_Zann</SFXEvent_Target_Ability>
+				<SFXEvent_Target_Ability> Unit_Attack_Sovereign</SFXEvent_Target_Ability>
 				<SFXEvent_Special_Ability_Loop> Unit_Death_Star_2_Fire </SFXEvent_Special_Ability_Loop>
 				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
 			</Unit_Ability>
@@ -404,7 +407,7 @@
 			<Super_Laser_Ability Name="Sovereign_Super_Laser_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
-				<Applicable_Unit_Categories> SuperCapital | Capital | Corvette | Frigate | Structure </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories> SuperCapital | Capital | Corvette | Frigate | Structure | SpaceStructure </Applicable_Unit_Categories>
 				<Applicable_Unit_Types />
                 <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
                 <Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>
@@ -419,7 +422,17 @@
 				<Line_Width>45</Line_Width>
 				<Line_Color>0 237 119 255</Line_Color>
 			</Super_Laser_Ability>
-
+			
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-220</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
 		</Abilities>
 
 		<Encyclopedia_Text> TEXT_TOOLTIP_SOVEREIGN </Encyclopedia_Text>
@@ -435,7 +448,7 @@
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>4</Build_Limit_Lifetime_Per_Player>
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		<Population_Value>22</Population_Value>
+		<Population_Value>60</Population_Value>
 
 	</SpaceUnit>
 
@@ -465,7 +478,7 @@
 
 		<GUI_Row> 1 </GUI_Row>
 		<Space_Model_Name>IR_WorldDevastator.ALO</Space_Model_Name>
-		<Population_Value>15</Population_Value>
+		<Population_Value>30</Population_Value>
 
 		<Ranking_In_Category>5</Ranking_In_Category>
 
@@ -482,8 +495,8 @@
 		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
 
 		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
-		<Armor_Type> Armor_SSD </Armor_Type>
-		<Shield_Armor_Type>Shield_SSD</Shield_Armor_Type>
+		<Armor_Type> Armor_Capital </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 
 		<Max_Speed>2.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
@@ -519,7 +532,7 @@
 		<!--<Political_Control>1</Political_Control>-->
 		<Political_Faction>Empire</Political_Faction>
 		<Squadron_Capacity>40</Squadron_Capacity>
-		<Build_Cost_Credits>17000</Build_Cost_Credits>
+		<Build_Cost_Credits>13000</Build_Cost_Credits>
 		<AI_Combat_Power>3790</AI_Combat_Power>
 		<Build_Time_Seconds>90</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
@@ -528,13 +541,14 @@
 		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Droid_Squadron, 16</Starting_Spawned_Units_Tech_0>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 
 		<Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
 		<Space_FOW_Reveal_Range>40000.0</Space_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>2400.0</Targeting_Max_Attack_Distance>
 
 		<HardPoints>
 			HP_WorldDevastator_Turbo01,
@@ -563,7 +577,8 @@
 			HP_WorldDev_Engines02,
 			HP_WorldDev_Engines03,
 			HP_WorldDev_Engines04,
-			HP_WorldDev_Hangar
+			HP_WorldDev_Hangar,
+			Generic_Untargetable_Tractor_Beam
 		</HardPoints>
 
 		<SFXEvent_Select>Unit_Select_Praetor</SFXEvent_Select>
@@ -642,6 +657,17 @@
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+					<Type>TRACTOR_BEAM</Type>
+					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
+					<GUI_Activated_Ability_Name>WD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+					<Recharge_Seconds>30</Recharge_Seconds>
+					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
+					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+			</Unit_Ability>
+       </Unit_Abilities_Data>
+	   
 			<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
@@ -653,6 +679,19 @@
 				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="WD_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 	</SpaceUnit>
@@ -666,7 +705,7 @@
 
 
 	<SpaceUnit Name="Strike_Cruiser">
-		<Population_Value>3</Population_Value>
+		<Population_Value>6</Population_Value>
 		<Text_ID>TEXT_UNIT_STRIKE_CRUISER</Text_ID>
 		<!--<Encyclopedia_Good_Against> Corellian_Corvette Corellian_Gunboat Nebulon_B_Frigate </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Y-wing Calamari_Cruiser </Encyclopedia_Vulnerable_To>-->
@@ -719,19 +758,22 @@
 		<Squadron_Capacity>15</Squadron_Capacity>
 		<Transport_Capacity>12</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
-		<Build_Cost_Credits>1600</Build_Cost_Credits>
+		<Build_Cost_Credits>1850</Build_Cost_Credits>
 		<AI_Combat_Power>650</AI_Combat_Power>
 		<Build_Time_Seconds>25</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
 		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
-		<SpaceBehavior>SPAWN_SQUADRON, ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 
+		<Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>2500.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>2550.0</Targeting_Max_Attack_Distance>
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 
 		<Death_Clone>Damage_Normal, Large_Explosion_Space</Death_Clone>
@@ -871,15 +913,12 @@
 
 	<SpaceUnit Name="Crimson_Victory">
 
-	    <Variant_Of_Existing_Type>Generic_Victory_Destroyer</Variant_Of_Existing_Type>
+	    <Variant_Of_Existing_Type>Generic_Victory_Destroyer_Two</Variant_Of_Existing_Type>
 		<Tech_Level>1</Tech_Level>
 		<Affiliation>Empire, Teradoc</Affiliation>
 
 		<Text_ID>TEXT_UNIT_CRIMSON</Text_ID>
 		<Lua_Script>GenericGameObject</Lua_Script>
-		<HardPoints>
-        HP_13X_1, HP_13X_2, HP_13X_3, HP_13X_4, HP_Victory_Destroyer_Fighter_Bay, HP_Mark2_Weap01, HP_Mark2_Weap02, HP_Mark2_Weap07, HP_Mark2_Weap08, HP_Mark2_Weap09, HP_Mark2_Weap10, HP_Mark2_Weap13, HP_Mark2_Weap14, HP_Mark2_Weap21, HP_Mark2_Weap22, HP_Mark2_Engines, HP_Mark2_Shield_Generator
-        </HardPoints>
 
 
         <Space_Model_Name>EV_13x.alo</Space_Model_Name>
@@ -891,13 +930,9 @@
 
 		<Required_Star_Base_Level>2</Required_Star_Base_Level>
 
-        <Build_Cost_Credits>4200</Build_Cost_Credits>
-        <AI_Combat_Power>1750</AI_Combat_Power>
-        <Build_Time_Seconds>35</Build_Time_Seconds>
 
 		<CategoryMask> Frigate | AntiFrigate | Boardable </CategoryMask>
 
-		<Build_Limit_Lifetime_Per_Player>50</Build_Limit_Lifetime_Per_Player>
 
         <Icon_Name>i_button_crimson.tga</Icon_Name>
         <GUI_Model_Name>EV_VictoryStarDestroyerMark2.alo</GUI_Model_Name>
@@ -933,7 +968,7 @@
         <Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
         <Mass>0.9995</Mass>
         <Scale_Factor>1.63</Scale_Factor>
-	 			<Population_Value>3</Population_Value>
+	 			<Population_Value>6</Population_Value>
 
         <Ranking_In_Category>6</Ranking_In_Category>
         <Dense_FOW_Reveal_Range_Multiplier>1</Dense_FOW_Reveal_Range_Multiplier>
@@ -976,22 +1011,23 @@
         <Political_Control>0</Political_Control>
         <Transport_Capacity>12</Transport_Capacity>
         <Number_per_Squadron>1</Number_per_Squadron>
-        <Build_Cost_Credits>1500</Build_Cost_Credits>
+        <Build_Cost_Credits>3500</Build_Cost_Credits>
         <AI_Combat_Power>320</AI_Combat_Power>
         <Build_Time_Seconds>30</Build_Time_Seconds>
         <Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
         <Size_Value>8</Size_Value>
         <Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
-        <SpaceBehavior>ABILITY_COUNTDOWN, BARRAGE, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, SPAWN_SQUADRON, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+        <SpaceBehavior>ABILITY_COUNTDOWN, BARRAGE, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 
         <Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
         <Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
         <Space_FOW_Reveal_Range>35000.0</Space_FOW_Reveal_Range>
-        <Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
+        <Targeting_Max_Attack_Distance>2500.0</Targeting_Max_Attack_Distance>
         <Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 
-		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 4</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Droid_Squadron, 5</Starting_Spawned_Units_Tech_0>
 
         <Death_Clone>Damage_Normal, MTC_Death_Clone</Death_Clone>
 
@@ -1119,6 +1155,8 @@
 	<SpaceUnit Name="Dreadnaught_Empire">
 		<Variant_Of_Existing_Type>Dreadnaught</Variant_Of_Existing_Type>
 		<Affiliation>Empire, Pirates, Corporate_Sector </Affiliation>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<!--<Encyclopedia_Good_Against> MC40a Carrack_Cruiser Vigilance_Gunship </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Generic_Star_Destroyer TIE_Bomber K-Wing </Encyclopedia_Vulnerable_To>-->
 		<Variant_Of_Existing_Type>Dreadnaught</Variant_Of_Existing_Type>
@@ -1149,11 +1187,13 @@
 		<Variant_Of_Existing_Type>Katana_Dreadnaught</Variant_Of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
 
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		
 		<Required_Orbiting_Units>Corellian_Gunboat_Ferrier</Required_Orbiting_Units>
 		<!--<Encyclopedia_Good_Against> Star_Galleon Carrack_Cruiser Vigilance_Gunship </Encyclopedia_Good_Against>-->
 		<Tech_Level>99</Tech_Level>
 
-		<Population_Value>2</Population_Value>
+		<Population_Value>6</Population_Value>
 		<Lua_Script>GenericGameObject</Lua_Script>
 		<Tactical_Build_Prerequisites />
 	</SpaceUnit>
@@ -1177,16 +1217,16 @@
 		<Select_Box_Scale>70</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
 
-		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
+				<Mouse_Collide_Override_Sphere_Radius> 5.0 </Mouse_Collide_Override_Sphere_Radius>
 
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Mass>0.985</Mass>
 		<Max_Speed>8.0</Max_Speed>
 		<Min_Speed>1.5</Min_Speed>
-		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Turn>4.5</Max_Rate_Of_Turn>
 		<Max_Lift>4</Max_Lift>
-		<Max_Thrust>2.0</Max_Thrust>
+		<Max_Thrust>2.4</Max_Thrust>
 		<Max_Rate_Of_Roll>6.0</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
 		<Hyperspace>no</Hyperspace>
@@ -1199,7 +1239,7 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>7.5</Tactical_Health>
+		<Tactical_Health>20</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>500</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
@@ -1268,7 +1308,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>20</AI_Combat_Power>
+		<AI_Combat_Power>2.76</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -1307,7 +1347,7 @@
 		<Select_Box_Scale>70</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
 
-		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
+				<Mouse_Collide_Override_Sphere_Radius> 5.0 </Mouse_Collide_Override_Sphere_Radius>
 
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
@@ -1316,10 +1356,10 @@
 		<Turret_Rotate_Extent_Degrees>20</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
 		<Max_Lift>3</Max_Lift>
-		<Max_Speed>4.0</Max_Speed>
+		<Max_Speed>6.0</Max_Speed>
 		<Min_Speed>1.5</Min_Speed>
-		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn>
-		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Turn>2.25</Max_Rate_Of_Turn>
+		<Max_Thrust>1.8</Max_Thrust>
 		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>70</Bank_Turn_Angle>
 		<Begin_Turn_Towards_Distance>500.0</Begin_Turn_Towards_Distance>
@@ -1402,7 +1442,7 @@
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>30</AI_Combat_Power>
+		<AI_Combat_Power>3.97</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -1441,16 +1481,16 @@
 		<Select_Box_Scale>70</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
 
-		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
+				<Mouse_Collide_Override_Sphere_Radius> 5.0 </Mouse_Collide_Override_Sphere_Radius>
 
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Mass>0.985</Mass>
-		<Max_Speed>7.5</Max_Speed>
+		<Max_Speed>7.25</Max_Speed>
 		<Min_Speed>1.5</Min_Speed>
-		<Max_Rate_Of_Turn>4.2</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Turn>4.5</Max_Rate_Of_Turn>
 		<Max_Lift>4</Max_Lift>
-		<Max_Thrust>3.0</Max_Thrust>
+		<Max_Thrust>2.1</Max_Thrust>
 		<Max_Rate_Of_Roll>6.0</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
 		<Hyperspace>no</Hyperspace>
@@ -1533,7 +1573,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>20</AI_Combat_Power>
+		<AI_Combat_Power>3.28</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -1564,10 +1604,10 @@
 		<Text_ID>TEXT_UNIT_SHIELDED_INTERCEPTOR</Text_ID>
 		<Encyclopedia_Text>TEXT_TOOLTIP_SHIELDED_INTERCEPTOR</Encyclopedia_Text>
 		<Variant_Of_Existing_Type>TIE_Interceptor</Variant_Of_Existing_Type>
-		<Max_Speed>7.2</Max_Speed>
-		<Max_Rate_Of_Turn>4.1</Max_Rate_Of_Turn>
-		<Max_Thrust>2.9</Max_Thrust>
-		<Shield_Points>8</Shield_Points>
+		<Max_Speed>7</Max_Speed>
+		<Max_Rate_Of_Turn>4.2</Max_Rate_Of_Turn>
+		<Max_Thrust>4</Max_Thrust>
+		<Shield_Points>10</Shield_Points>
 		<Shield_Refresh_Rate>1</Shield_Refresh_Rate>
 		<SpaceBehavior>HUNT, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
 	</SpaceUnit>
@@ -1584,7 +1624,7 @@
 		<Select_Box_Scale>70</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
 
-		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
+				<Mouse_Collide_Override_Sphere_Radius> 5.0 </Mouse_Collide_Override_Sphere_Radius>
 
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
@@ -1593,7 +1633,7 @@
 		<Min_Speed>1.5</Min_Speed>
 		<Max_Rate_Of_Turn>3.5</Max_Rate_Of_Turn>
 		<Max_Lift>4</Max_Lift>
-		<Max_Thrust>2.0</Max_Thrust>
+		<Max_Thrust>3.5</Max_Thrust>
 		<Max_Rate_Of_Roll>6.5</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
 		<Hyperspace>Yes</Hyperspace>
@@ -1675,7 +1715,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>20</AI_Combat_Power>
+		<AI_Combat_Power>2.87</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -1711,10 +1751,10 @@
 		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
 		<Space_Model_Name>EV_Preybird.ALO</Space_Model_Name>
 		<Scale_Factor>1.5</Scale_Factor>
-		<Select_Box_Scale>70</Select_Box_Scale>
+		<Select_Box_Scale>14</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
 
-		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
+				<Mouse_Collide_Override_Sphere_Radius> 5.0 </Mouse_Collide_Override_Sphere_Radius>
 
 		<HardPoints>
 			HP_Preybird_conc, HP_Preybird_00
@@ -1727,7 +1767,7 @@
 		<Min_Speed>1.5</Min_Speed>
 		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
 		<Max_Lift>4</Max_Lift>
-		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Thrust>2.0</Max_Thrust>
 		<Max_Rate_Of_Roll>6.5</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
 		<Hyperspace>Yes</Hyperspace>
@@ -1808,7 +1848,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>30</AI_Combat_Power>
+		<AI_Combat_Power>3.13</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -1846,14 +1886,14 @@
 		<Select_Box_Scale>70</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
 
-		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
+				<Mouse_Collide_Override_Sphere_Radius> 5.0 </Mouse_Collide_Override_Sphere_Radius>
 
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Mass>0.985</Mass>
 		<Max_Speed>5.0</Max_Speed>
 		<Min_Speed>1.5</Min_Speed>
-		<Max_Rate_Of_Turn>3.8</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
 		<Max_Lift>4</Max_Lift>
 		<Max_Thrust>2.0</Max_Thrust>
 		<Max_Rate_Of_Roll>6.0</Max_Rate_Of_Roll>
@@ -1937,7 +1977,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>20</AI_Combat_Power>
+		<AI_Combat_Power>1.62</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -1976,16 +2016,16 @@
 		<Select_Box_Scale>70</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
 
-		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
+				<Mouse_Collide_Override_Sphere_Radius> 5.0 </Mouse_Collide_Override_Sphere_Radius>
 
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Mass>0.985</Mass>
-		<Max_Speed>2.7</Max_Speed>
+		<Max_Speed>5.0</Max_Speed>
 		<Min_Speed>1.5</Min_Speed>
-		<Max_Rate_Of_Turn>1.3</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Turn>2.25</Max_Rate_Of_Turn>
 		<Max_Lift>3</Max_Lift>
-		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Thrust>2.19</Max_Thrust>
 		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>30</Bank_Turn_Angle>
 		<Hyperspace>no</Hyperspace>
@@ -2065,7 +2105,7 @@
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>30</AI_Combat_Power>
+		<AI_Combat_Power>3.95</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -2104,16 +2144,16 @@
 		<Select_Box_Scale>70</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
 
-		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
+				<Mouse_Collide_Override_Sphere_Radius> 5.0 </Mouse_Collide_Override_Sphere_Radius>
 
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Mass>0.985</Mass>
-		<Max_Speed>4.5</Max_Speed>
-		<Min_Speed>1.5</Min_Speed>
-		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
+		<Max_Speed>6.0</Max_Speed>
+		<Min_Speed>2.5</Min_Speed>
+		<Max_Rate_Of_Turn>3.75</Max_Rate_Of_Turn>
 		<Max_Lift>4</Max_Lift>
-		<Max_Thrust>2.0</Max_Thrust>
+		<Max_Thrust>1.85</Max_Thrust>
 		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
 		<Hyperspace>no</Hyperspace>
@@ -2195,7 +2235,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>20</AI_Combat_Power>
+		<AI_Combat_Power>2.15</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -2225,9 +2265,9 @@
 		<Text_ID>TEXT_UNIT_SHIELDED_TIE</Text_ID>
 		<Encyclopedia_Text>TEXT_TOOLTIP_SHIELDED_TIE</Encyclopedia_Text>
 		<Variant_Of_Existing_Type>TIE_Fighter</Variant_Of_Existing_Type>
-		<Max_Speed>4.3</Max_Speed>
-		<Max_Rate_Of_Turn>2.9</Max_Rate_Of_Turn>
-		<Shield_Points>7</Shield_Points>
+		<Max_Speed>5.5</Max_Speed>
+		<Max_Rate_Of_Turn>3.25</Max_Rate_Of_Turn>
+		<Shield_Points>5</Shield_Points>
 		<Shield_Refresh_Rate>1</Shield_Refresh_Rate>
 		<SpaceBehavior>HUNT, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
 	</SpaceUnit>
@@ -2277,17 +2317,17 @@
 		<Squadron_Units>TIE_Interceptor, TIE_Interceptor, TIE_Interceptor, TIE_Interceptor</Squadron_Units>
 		<Squadron_Units>TIE_Interceptor, TIE_Interceptor, TIE_Interceptor, TIE_Interceptor</Squadron_Units>
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
- 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+ 		<Squadron_Offsets>55.0,10.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-5.0,-40.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-5.0,40.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-65.0,-70.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-65.0,70.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-120.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-125.0,-10.0,0.0</Squadron_Offsets>
 		<Max_Squad_Size> 12 </Max_Squad_Size>
 		<Icon_Name>i_button_tie_Interceptor.tga</Icon_Name>
 		<GUI_Model_Name>TIE_Interceptor.ALO</GUI_Model_Name>
@@ -2301,7 +2341,7 @@
 		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
 
 		<FormationOrder>1</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
 		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
 		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
 		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
@@ -2368,17 +2408,17 @@
 		<Squadron_Units>Shielded_Interceptor, Shielded_Interceptor, Shielded_Interceptor, Shielded_Interceptor</Squadron_Units>
 		<Squadron_Units>Shielded_Interceptor, Shielded_Interceptor, Shielded_Interceptor, Shielded_Interceptor</Squadron_Units>
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
- 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+ 		<Squadron_Offsets>55.0,10.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-5.0,-40.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-5.0,40.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-65.0,-70.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-65.0,70.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-120.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-125.0,-10.0,0.0</Squadron_Offsets>
 		<Max_Squad_Size> 12 </Max_Squad_Size>
 		<Icon_Name>i_button_tie_Interceptor.tga</Icon_Name>
 		<GUI_Model_Name>TIE_Interceptor.ALO</GUI_Model_Name>
@@ -2392,7 +2432,7 @@
 		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
 
 		<FormationOrder>1</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
 		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
 		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
 		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
@@ -2455,17 +2495,17 @@
 		<Squadron_Units>Howlrunner, Howlrunner, Howlrunner</Squadron_Units>
 		<Squadron_Units>Howlrunner, Howlrunner, Howlrunner</Squadron_Units>
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
- 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+ 		<Squadron_Offsets>55.0,10.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-5.0,-40.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-5.0,40.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-65.0,-70.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-65.0,70.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-120.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-125.0,-10.0,0.0</Squadron_Offsets>
 		<Max_Squad_Size> 12 </Max_Squad_Size>
 
 		<Icon_Name>i_button_howlrunner.tga</Icon_Name>
@@ -2479,7 +2519,7 @@
 		<SFXEvent_Build_Complete></SFXEvent_Build_Complete>
 
 		<FormationOrder>2</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
 		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
 		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
 		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
@@ -2529,7 +2569,7 @@
 		<Is_Bomber>No</Is_Bomber>
 		<Autoresolve_Health>50</Autoresolve_Health>
 		<Damage>25</Damage>
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Corporate_Sector</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Build_Cost_Credits>400</Build_Cost_Credits>
 		<Build_Time_Seconds>10</Build_Time_Seconds>
@@ -2548,17 +2588,17 @@
 		<Squadron_Units>Preybird, Preybird, Preybird</Squadron_Units>
 		<Squadron_Units>Preybird, Preybird, Preybird</Squadron_Units>
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
- 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+ 		<Squadron_Offsets>50.0,15.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-10.0,-45.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-10.0,45.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-70.0,-75.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-70.0,75.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-120.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-130.0,-15.0,0.0</Squadron_Offsets>
 		<Max_Squad_Size> 12 </Max_Squad_Size>
 
 		<Icon_Name>i_button_preybird.tga</Icon_Name>
@@ -2572,7 +2612,7 @@
 		<SFXEvent_Build_Complete></SFXEvent_Build_Complete>
 
 		<FormationOrder>2</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
 		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
 		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
 		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
@@ -2603,7 +2643,7 @@
 	<Squadron Name="Preybird_Squadron_Buildable">
 		<Variant_Of_Existing_Type>Preybird_Squadron</Variant_Of_Existing_Type>
 		<Victory_Relevant>yes</Victory_Relevant>
-		<Tech_Level>5</Tech_Level>
+		<Tech_Level>1</Tech_Level>
 		<Population_Value>1</Population_Value>
 
 	</Squadron>
@@ -2636,17 +2676,17 @@
 		<Squadron_Units>A9, A9, A9, A9</Squadron_Units>
 		<Squadron_Units>A9, A9, A9, A9</Squadron_Units>
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
- 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+ 		<Squadron_Offsets>55.0,10.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-5.0,-40.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-5.0,40.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-65.0,-70.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-65.0,70.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-120.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-125.0,-10.0,0.0</Squadron_Offsets>
 		<Max_Squad_Size> 12 </Max_Squad_Size>
 		<Icon_Name>i_button_a9.tga</Icon_Name>
 		<GUI_Model_Name>TIE_Interceptor.ALO</GUI_Model_Name>
@@ -2660,7 +2700,7 @@
 		<SFXEvent_Build_Complete></SFXEvent_Build_Complete>
 
 		<FormationOrder>1</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
 		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
 		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
 		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
@@ -2726,18 +2766,18 @@
 		<Squadron_Units>TIE_Droid, TIE_Droid, TIE_Droid, TIE_Droid</Squadron_Units>
 		<Squadron_Units>TIE_Droid, TIE_Droid, TIE_Droid, TIE_Droid</Squadron_Units>
 		<Squadron_Units>TIE_Droid, TIE_Droid, TIE_Droid, TIE_Droid</Squadron_Units>
-		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
- 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,15.0</Squadron_Offsets>
+ 		<Squadron_Offsets>0.0,30.0,5.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,-5.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,25.0</Squadron_Offsets>
+ 		<Squadron_Offsets>0.0,-30.0,5.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,-30.0,-5.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,-30.0,-25.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,0.0,15.0</Squadron_Offsets>
+ 		<Squadron_Offsets>0.0,0.0,5.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,0.0,-5.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,0.0,-15.0</Squadron_Offsets>
 		<Max_Squad_Size> 12 </Max_Squad_Size>
 		<Icon_Name>i_button_tie_droid.tga</Icon_Name>
 		<GUI_Model_Name>TIE_Interceptor.ALO</GUI_Model_Name>
@@ -2751,7 +2791,7 @@
 		<SFXEvent_Build_Complete></SFXEvent_Build_Complete>
 
 		<FormationOrder>1</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
 		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
 		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
 		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
@@ -2839,7 +2879,7 @@
 		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
 
 		<FormationOrder>1</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
 		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
 		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
 		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
@@ -2895,18 +2935,18 @@
 		<Squadron_Units>Shielded_TIE, Shielded_TIE, Shielded_TIE, Shielded_TIE</Squadron_Units>
 		<Squadron_Units>Shielded_TIE, Shielded_TIE, Shielded_TIE, Shielded_TIE</Squadron_Units>
 		<Squadron_Units>Shielded_TIE, Shielded_TIE, Shielded_TIE, Shielded_TIE</Squadron_Units>
-		<Squadron_Offsets>60.0,0.0,45.0</Squadron_Offsets>
- 		<Squadron_Offsets>60.0,0.0,15.0</Squadron_Offsets>
-  		<Squadron_Offsets>60.0,0.0,-15.0</Squadron_Offsets>
-  		<Squadron_Offsets>60.0,0.0,-45.0</Squadron_Offsets>
-		<Squadron_Offsets>-60.0,0.0,45.0</Squadron_Offsets>
- 		<Squadron_Offsets>-60.0,0.0,15.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,0.0,-15.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,0.0,-45.0</Squadron_Offsets>
-  		<Squadron_Offsets>0.0,0.0,45.0</Squadron_Offsets>
- 		<Squadron_Offsets>0.0,0.0,15.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,15.0</Squadron_Offsets>
+ 		<Squadron_Offsets>0.0,30.0,5.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,-5.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,25.0</Squadron_Offsets>
+ 		<Squadron_Offsets>0.0,-30.0,5.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,-30.0,-5.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,-30.0,-25.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,0.0,15.0</Squadron_Offsets>
+ 		<Squadron_Offsets>0.0,0.0,5.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,0.0,-5.0</Squadron_Offsets>
   		<Squadron_Offsets>0.0,0.0,-15.0</Squadron_Offsets>
-  		<Squadron_Offsets>0.0,0.0,-45.0</Squadron_Offsets>
 		<Max_Squad_Size> 12 </Max_Squad_Size>
 		<Icon_Name>i_button_tie_fighter.tga</Icon_Name>
 		<GUI_Model_Name>EV_TieFighter.ALO</GUI_Model_Name>
@@ -2919,7 +2959,7 @@
 		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
 
 		<FormationOrder>1</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
 		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
 		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
 		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
@@ -2981,37 +3021,34 @@
 		<Required_Star_Base_Level>2</Required_Star_Base_Level>
 		<Required_Special_Structures />
 		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
-		<Squadron_Units>TIE_Bomber, TIE_Bomber</Squadron_Units>
-		<Squadron_Units>TIE_Bomber, TIE_Bomber</Squadron_Units>
-		<Squadron_Units>TIE_Bomber, TIE_Bomber</Squadron_Units>
-		<Squadron_Units>TIE_Bomber, TIE_Bomber</Squadron_Units>
-		<Squadron_Units>TIE_Bomber, TIE_Bomber</Squadron_Units>
-		<Squadron_Units>TIE_Bomber, TIE_Bomber</Squadron_Units>
+		<Squadron_Units>TIE_Bomber, TIE_Bomber, TIE_Bomber</Squadron_Units>
+		<Squadron_Units>TIE_Bomber, TIE_Bomber, TIE_Bomber</Squadron_Units>
+		<Squadron_Units>TIE_Bomber, TIE_Bomber, TIE_Bomber</Squadron_Units>
+		<Squadron_Units>TIE_Bomber, TIE_Bomber, TIE_Bomber</Squadron_Units>
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
- 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+ 		<Squadron_Offsets>50.0,10.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>50.0,-10.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-10.0,20.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-10.0,40.0,0.0</Squadron_Offsets>
   		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
-  		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
-		<Max_Squad_Size> 12 </Max_Squad_Size>
+  		<Squadron_Offsets>-10.0,-40.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-10.0,-20.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-60.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-70.0,-10.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-70.0,10.0,0.0</Squadron_Offsets>
 		<Icon_Name>i_button_tie_bomber.tga</Icon_Name>
 		<GUI_Model_Name>EV_TieBomber.ALO</GUI_Model_Name>
 		<GUI_Distance>120</GUI_Distance>
 		<GUI_Offset>0 0 0</GUI_Offset>
 		<GUI_Velocity>45</GUI_Velocity>
-
+		<Max_Squad_Size> 12 </Max_Squad_Size>
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
 		<SFXEvent_Build_Complete>Unit_Complete_Tie_Bomber</SFXEvent_Build_Complete>
 
 		<FormationOrder>2</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
 		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
 		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
 		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
@@ -3081,17 +3118,17 @@
 		<Squadron_Units>scimitar_assault_bomber, scimitar_assault_bomber, scimitar_assault_bomber</Squadron_Units>
 		<Squadron_Units>scimitar_assault_bomber, scimitar_assault_bomber, scimitar_assault_bomber</Squadron_Units>
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
-		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+ 		<Squadron_Offsets>50.0,10.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>50.0,-10.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-10.0,20.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-10.0,40.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-10.0,-40.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-10.0,-20.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-60.0,0.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-70.0,-10.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-70.0,10.0,0.0</Squadron_Offsets>
 		<Icon_Name>i_button_TIE_scimitar.tga</Icon_Name>
 		<GUI_Model_Name>scimitar.ALO</GUI_Model_Name>
 		<GUI_Distance>120</GUI_Distance>
@@ -3103,7 +3140,7 @@
 		<SFXEvent_Build_Complete></SFXEvent_Build_Complete>
 
 		<FormationOrder>3</FormationOrder>
-		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
 		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
 		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
 		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>

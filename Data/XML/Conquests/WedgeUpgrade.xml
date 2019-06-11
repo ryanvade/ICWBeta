@@ -33,14 +33,16 @@
 	</Event>
 	
 	<Event Name="R_Destroy_Wedge">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Wedge_Rogue_Squadron_Space</Reward_Param1>
 		<Prereq>Rebels_Enter_Tech_05</Prereq>
 	</Event>
 	
-		<Event Name="Spawn_Rogue_Squadron">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+	<Event Name="Spawn_Rogue_Squadron">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Rogue_Squadron_Space</Reward_Param1>
 		<Reward_Param2>Coruscant</Reward_Param2>

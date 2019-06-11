@@ -103,6 +103,19 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
 			
+			<Tractor_Beam_Attack_Ability Name="VSD_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			
 		</Abilities>
 		
 	</UniqueUnit>	
@@ -118,19 +131,13 @@
 		
 		<Text_ID>TEXT_HERO_KOSH</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND2 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_KOSH TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_LANCET </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_GRAND_ADMIRAL </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Affiliation>Teradoc</Affiliation>
 		
-		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
-		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
-		<Starting_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-
-		<Reserve_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 2</Reserve_Spawned_Units_Tech_1>
-		<Reserve_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_1>
 		
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
@@ -293,7 +300,7 @@
 	
 		<Text_ID>TEXT_HERO_SYN</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_SYN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_SILOOTH </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_GRAND_ADMIRAL </Encyclopedia_Unit_Class>
 
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Lua_Script></Lua_Script>
@@ -376,7 +383,7 @@
 	<HeroUnit Name="Getelles">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_GETELLES</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_GETELLES </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GETELLES </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_MOFF </Encyclopedia_Unit_Class>
 		
 		<Icon_Name>i_button_getelles.tga</Icon_Name>
@@ -439,7 +446,7 @@
 		<Company_Transport_Unit>Alliance_Shuttle</Company_Transport_Unit>
 		<Company_Units>Getelles</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<Encyclopedia_Text>TEXT_TOOLTIP_GETELLES</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GETELLES</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_MOFF </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
@@ -531,11 +538,39 @@
 		
 		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
-		<Starting_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Scimmy_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 		<Reserve_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 2</Reserve_Spawned_Units_Tech_1>
-		<Reserve_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		<Reserve_Spawned_Units_Tech_1>Scimmy_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		
+		<Starting_Spawned_Units_Tech_2>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Scimmy_Squadron, 1</Starting_Spawned_Units_Tech_2>
+
+		<Reserve_Spawned_Units_Tech_2>TIE_Fighter_Squadron, 2</Reserve_Spawned_Units_Tech_2>
+		<Reserve_Spawned_Units_Tech_2>Scimmy_Squadron, 1</Reserve_Spawned_Units_Tech_2>
+		
+		<Starting_Spawned_Units_Tech_3>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Scimmy_Squadron, 1</Starting_Spawned_Units_Tech_3>
+
+		<Reserve_Spawned_Units_Tech_3>TIE_Fighter_Squadron, 2</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>Scimmy_Squadron, 1</Reserve_Spawned_Units_Tech_3>
+		
+		<Starting_Spawned_Units_Tech_4>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Scimmy_Squadron, 1</Starting_Spawned_Units_Tech_4>
+
+		<Reserve_Spawned_Units_Tech_4>TIE_Fighter_Squadron, 2</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>Scimmy_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		
+		<Starting_Spawned_Units_Tech_5>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Scimmy_Squadron, 1</Starting_Spawned_Units_Tech_5>
+
+		<Reserve_Spawned_Units_Tech_5>TIE_Fighter_Squadron, 2</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>Scimmy_Squadron, 1</Reserve_Spawned_Units_Tech_5>
 		
 		
 		<Affiliation>Teradoc</Affiliation>
@@ -879,7 +914,18 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
 		
+			<Tractor_Beam_Attack_Ability Name="VSD_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 		
 	</UniqueUnit>	
@@ -899,12 +945,40 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		
-	<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 3</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 10</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>TIE_Interceptor_Squadron, 10</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 10</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 3</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_1>
+		<Reserve_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 10</Reserve_Spawned_Units_Tech_1>
+		<Reserve_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 10</Reserve_Spawned_Units_Tech_1>
+		<Reserve_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 10</Reserve_Spawned_Units_Tech_1>
+		
+		<Starting_Spawned_Units_Tech_2>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>TIE_Interceptor_Squadron, 3</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_2>
+		<Reserve_Spawned_Units_Tech_2>TIE_Fighter_Squadron, 10</Reserve_Spawned_Units_Tech_2>
+		<Reserve_Spawned_Units_Tech_2>TIE_Interceptor_Squadron, 10</Reserve_Spawned_Units_Tech_2>
+		<Reserve_Spawned_Units_Tech_2>TIE_Bomber_Squadron, 10</Reserve_Spawned_Units_Tech_2>
+		
+		<Starting_Spawned_Units_Tech_3>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>TIE_Interceptor_Squadron, 3</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>TIE_Fighter_Squadron, 10</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>TIE_Interceptor_Squadron, 10</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>TIE_Bomber_Squadron, 10</Reserve_Spawned_Units_Tech_3>
+		
+		<Starting_Spawned_Units_Tech_4>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>TIE_Interceptor_Squadron, 3</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>TIE_Fighter_Squadron, 10</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>TIE_Interceptor_Squadron, 10</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>TIE_Bomber_Squadron, 10</Reserve_Spawned_Units_Tech_4>
+		
+		<Starting_Spawned_Units_Tech_5>TIE_Fighter_Squadron, 3</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>TIE_Interceptor_Squadron, 3</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>TIE_Bomber_Squadron, 2</Starting_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>TIE_Fighter_Squadron, 10</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>TIE_Interceptor_Squadron, 10</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>TIE_Bomber_Squadron, 10</Reserve_Spawned_Units_Tech_5>
 		
 		<Affiliation>Teradoc</Affiliation>
 		
@@ -948,6 +1022,18 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 
+			<Tractor_Beam_Attack_Ability Name="Secutor_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 		
 	</UniqueUnit>
@@ -963,7 +1049,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 
 		<Tech_Level>99</Tech_Level>
-		<Affiliation>Teradoc</Affiliation>
+		<Affiliation>Empire</Affiliation>
 		<Lua_Script></Lua_Script>
 		
 		<CategoryMask> Capital | SpaceHero | AntiCapital </CategoryMask>
@@ -1006,6 +1092,98 @@
 				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="Allegiance_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			  </Tractor_Beam_Attack_Ability>
+
+		</Abilities>
+
+	</UniqueUnit>
+	
+	<UniqueUnit Name="Therbon_Allegiance">
+		<Variant_Of_Existing_Type>Generic_Allegiance</Variant_Of_Existing_Type>
+		
+		<Icon_Name>i_button_therbon.tga</Icon_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+	
+		<Text_ID>TEXT_HERO_THERBON</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_TRAIT_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_THERBON TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_THERBON </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_GRAND_MOFF </Encyclopedia_Unit_Class>
+
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Teradoc</Affiliation>
+		<Lua_Script></Lua_Script>
+		
+		<CategoryMask> Capital | SpaceHero | AntiCapital </CategoryMask>
+		
+						<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>10000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>70</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Therbon_Self_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types> Therbon_Allegiance </Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Therbon_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types> </Excluded_Unit_Types>
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Reduce_Production_Price_Ability Name="Therbon_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Price_Reduction_Percentage>0.10</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="Allegiance_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			  </Tractor_Beam_Attack_Ability>
 
 		</Abilities>
 
@@ -1014,7 +1192,7 @@
 	<HeroUnit Name="Ramier">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_RAMIER</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_RAMIER </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_RAMIER </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_MOFF </Encyclopedia_Unit_Class>
 		
 		<Icon_Name>i_button_ramier.tga</Icon_Name>
@@ -1049,7 +1227,7 @@
 
 		<Abilities SubObjectList="Yes">
 			
-			<Reduce_Production_Price_Ability Name="Getelles_Reduce_Production_Price">
+			<Reduce_Production_Price_Ability Name="Ramier_Reduce_Production_Price">
 				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
 				<Applicable_Unit_Types />
 				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
@@ -1077,7 +1255,7 @@
 		<Company_Transport_Unit>Alliance_Shuttle</Company_Transport_Unit>
 		<Company_Units>Ramier</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<Encyclopedia_Text>TEXT_TOOLTIP_RAMIER</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_RAMIER</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_MOFF </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
@@ -1489,7 +1667,6 @@
 		<Required_Special_Structures>Structure_Category_Dummy</Required_Special_Structures>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
-		<Required_Special_Structures></Required_Special_Structures>
 				
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Company_Transport_Unit>Slave_I</Company_Transport_Unit>
@@ -1728,27 +1905,26 @@
 		<Damage>50</Damage>
 		<Affiliation>Teradoc</Affiliation>
 		<Build_Cost_Credits>1500</Build_Cost_Credits>
-		<Required_Planets>Bespin</Required_Planets>
 		<Is_Buildable>Yes</Is_Buildable>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<Required_Special_Structures>R_Ground_Officer_Academy</Required_Special_Structures>
+		<Required_Special_Structures>Structure_Category_Dummy</Required_Special_Structures>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Combat_Power_Value>0</Combat_Power_Value>
-		<Tech_Level>99</Tech_Level>
+		<Tech_Level>0</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Transport_Unit>Punishing_One</Company_Transport_Unit>
 		<Company_Units>Dengar</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Is_Stealth_Company>Yes</Is_Stealth_Company>
-		<Available_In_Skirmish>yes</Available_In_Skirmish>
+		<Available_In_Skirmish>no</Available_In_Skirmish>
 		<!-- <Build_Cost_Credits>10000</Build_Cost_Credits> -->
 		<Can_Be_Only_One>true</Can_Be_Only_One>
 
 
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 
 		
@@ -1781,5 +1957,249 @@
 		<Ranking_In_Category> 3 </Ranking_In_Category>
 		
 	</HeroCompany>
+	
+	<UniqueUnit Name="Punishing_One">
+		<Text_ID>TEXT_HERO_DENGAR</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DENGAR TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOUNTY_HUNTER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_dengar.tga</Icon_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
 
+		<Land_Model_Name>EV_LAMBDASHUTTLE.ALO</Land_Model_Name>
+		<Space_Model_Name>GM_Jumpmaster.ALO</Space_Model_Name>
+		<Scale_Factor>0.08</Scale_Factor>
+		<Select_Box_Scale>150</Select_Box_Scale>
+		<Select_Box_Z_Adjust>1.0f</Select_Box_Z_Adjust>
+		<Mass>0.98</Mass>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+
+        <Ranking_In_Category>2</Ranking_In_Category>
+		<MovementClass> Space </MovementClass>
+		<Ship_Class>fighter</Ship_Class>
+		<Mass>0.98</Mass>
+		<Max_Speed>6.0</Max_Speed>
+		<Min_Speed>3.5</Min_Speed>
+		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn>
+		<Max_Thrust>0.1</Max_Thrust>
+		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>50</Bank_Turn_Angle>
+		<Begin_Turn_Towards_Distance>300.0</Begin_Turn_Towards_Distance>
+		<Fires_Forward>no</Fires_Forward>
+		<Turret_Rotate_Extent_Degrees>20</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		<Max_Lift>1.5</Max_Lift>
+
+		<Build_Cost_Credits>3000</Build_Cost_Credits>
+
+		<AI_Combat_Power>1500</AI_Combat_Power>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>2.0</Hyperspace_Speed>
+		<OverrideAcceleration> .3 </OverrideAcceleration>
+		<OverrideDeceleration> .3 </OverrideDeceleration>
+		<Layer_Z_Adjust> -20 </Layer_Z_Adjust>
+		
+		<Armor_Type> Armor_Hero_Transport </Armor_Type>
+
+		<Affiliation>Teradoc</Affiliation>
+		<Shield_Points>300</Shield_Points>
+		<Tactical_Health>600</Tactical_Health>
+		<Autoresolve_Health>350</Autoresolve_Health>
+		<Damage>15</Damage>
+		<Shield_Refresh_Rate>10</Shield_Refresh_Rate>
+		<Energy_Capacity>99999</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Political_Control>0</Political_Control>
+		<Squadron_Capacity>0</Squadron_Capacity>
+		<Number_per_Squadron>1</Number_per_Squadron>
+		<Size_Value>8</Size_Value>
+		<Behavior>DUMMY_STARSHIP, TRANSPORT </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, TARGETING, POWERED, SHIELDED, WEAPON, REVEAL, HIDE_WHEN_FOGGED, AMBIENT_SFX, UNIT_AI, NEBULA, SELECTABLE </SpaceBehavior>
+		<LandBehavior>REVEAL, HIDE_WHEN_FOGGED, IDLE</LandBehavior> 
+
+		<GUI_Bracket_Size>1</GUI_Bracket_Size>
+	
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Damage_Type>Damage_Fighter</Damage_Type>
+		<Death_Explosions>Medium_Explosion_Space</Death_Explosions>
+		<Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
+
+		<!-- <Projectile_Damage>16.0</Projectile_Damage>
+		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Red_Quad</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Fire_Inaccuracy_Distance> Fighter, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> SuperCapital, 30.0 </Fire_Inaccuracy_Distance> -->
+		
+		<HardPoints> 
+				HP_Jumpmaster_laser, HP_Jumpmaster_Ion, HP_Jumpmaster_Torp
+		</HardPoints>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>1400.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+
+		<SFXEvent_Fire>Unit_Falcon_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Ambient_Moving> Unit_Falcon_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_Falcon_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Falcon_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Falcon_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Score_Cost_Credits> 15000 </Score_Cost_Credits>
+		<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>200.0, 100.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<Fire_Category_Restrictions> Infantry, Vehicle, Structure, Air, Transport </Fire_Category_Restrictions>
+
+		<Ranged_Target_Z_Adjust>-3.0</Ranged_Target_Z_Adjust>
+
+		<MovementClass> Space </MovementClass>
+		<CategoryMask> Fighter | SpaceHero </CategoryMask>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Hover_Offset>5</Hover_Offset>
+		<Landing_Transport_Variant>Punishing_One_Landing</Landing_Transport_Variant>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
+
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>400.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>400.0</Attack_Move_Response_Range>
+		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+		<Targeting_Priority_Set>Corvette</Targeting_Priority_Set>
+		<Autonomous_Move_Extension_Vs_Attacker>300.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>3800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>38</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Space_Override_Population_Value>1</Space_Override_Population_Value>
+
+	</UniqueUnit>
+
+	<UniqueUnit Name="Punishing_One_LandingO">
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Variant_Of_Existing_Type>Punishing_One</Variant_Of_Existing_Type>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Scale_Factor>2.5</Scale_Factor>
+	</UniqueUnit>
+	
+	<UniqueUnit Name="Punishing_One_Landing">
+		<Variant_Of_Existing_Type>Punishing_One</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>1.2</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior> 
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</UniqueUnit>
+
+	<UniqueUnit Name="Neomen_Ion_Storm">
+		<Variant_Of_Existing_Type>Strike_Cruiser</Variant_Of_Existing_Type>
+		
+		<Icon_Name>i_button_neomen.tga</Icon_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Lua_Script></Lua_Script>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SPAWN_SQUADRON, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+	
+		<Text_ID>TEXT_HERO_NEOMEN</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_NEOMEN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ION_STORM </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPTAIN </Encyclopedia_Unit_Class>
+
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Teradoc</Affiliation>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures></Required_Special_Structures>
+		
+		<CategoryMask> Frigate | SpaceHero | AntiCorvette </CategoryMask>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+			<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Neomen_Self_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types> Neomen_Ion_Storm </Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Neomen_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types> </Excluded_Unit_Types>
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+		</Abilities>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-3f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Recharge_Seconds>65</Recharge_Seconds>
+
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Acclamator</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+	</UniqueUnit>
+	
 </Remnant_Space_Units>

@@ -139,32 +139,41 @@ end
 
 function Service_Attack(object)
 
-    --Move to the enemy position rather than the enemy itself in order to leave us free
-    --to run autonomous targeting.  While this doesn't provide chase behavior we're probably
-    --repeating this enough that we don't care
     closest_enemy = Find_Nearest(object, object.Get_Owner(), false)
+	--damaged_enemy = FindTarget.Reachable_Target(PlayerObject, "Low_Health_Unit", "Enemy_Unit", "Any_Threat", 0.9, object, 0.75 * object.Get_Type().Get_Max_Range())
 
-    if TestValid(closest_enemy) and not closest_enemy.Is_Good_Against(object) then
-        if object.Get_Distance(closest_enemy) < FREE_STORE_ATTACK_RANGE then
-            object.Attack_Move(closest_enemy.Get_Position())
-            return true
-        elseif aggressive_mode then
-            if not Try_Garrison(nil, object, false, FREE_STORE_ATTACK_RANGE / 2.0) then
-                object.Attack_Move(closest_enemy.Get_Position())
-            end
-            return true
-        end
-    elseif TestValid(enemy_location) then
-        if aggressive_mode then
-            object.Attack_Move(enemy_location)
-            return true
-        end
-    end
+	--if TestValid(damaged_enemy) then
+		--object.Attack_Target(damaged_enemy)
+		--return true
+	--end
+	
+	if TestValid(closest_enemy) then
+		if object.Get_Distance(closest_enemy) < FREE_STORE_ATTACK_RANGE then
+			if object.Get_Distance(closest_enemy) > object.Get_Type().Get_Max_Range() then
+				object.Attack_Target(closest_enemy)
+			else
+				object.Attack_Move(Project_By_Unit_Range(object, closest_enemy.Get_Position()))
+			end
+			return true		
+		elseif aggressive_mode then
+			object.Attack_Move(Project_By_Unit_Range(object, closest_enemy.Get_Position()))
+			return true
+		end
+	elseif TestValid(enemy_location) then
+		if aggressive_mode or object.Is_Category("SuperCapital") then
+			object.Attack_Move(Project_By_Unit_Range(object, enemy_location))
+			return true
+		end
+	end			
 
     return false
 end
 
 function Service_Guard(object)
+
+	if object.Is_Category("SuperCapital") then
+		return false
+	end
 
     closest_friendly_structure = Find_Nearest(object, "Structure", object.Get_Owner(), true)
     if TestValid(closest_friendly_structure) then
@@ -187,6 +196,10 @@ function Service_Guard(object)
 end
 
 function Service_Kite(object)
+
+	if object.Is_Category("SuperCapital") then
+		return false
+	end
 
     if object.Get_Hull() > 0.5 or not object.Are_Engines_Online() or object.Get_Hull() < 0.1 then
         return false

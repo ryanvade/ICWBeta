@@ -7979,10 +7979,10 @@
 
 	<SpaceProp Name="Star_Destroyer_Construction">
 		<Text_ID>TEXT_UNIT_STAR_DESTROYER</Text_ID>
-		<Space_Model_Name>W_Star_Destroyer_Construction.ALO</Space_Model_Name>
+		<Space_Model_Name>ISD_I_build.ALO</Space_Model_Name>
 		<Is_Decoration> No </Is_Decoration>
         <Is_Discardable> No </Is_Discardable>
-		<Scale_Factor>1.0</Scale_Factor>
+		<Scale_Factor>4.48</Scale_Factor>
 		<Behavior>SPACE_OBSTACLE, IDLE</Behavior>
 		<Sort_Order_Adjust>-1</Sort_Order_Adjust>
 		<Layer_Z_Adjust>0</Layer_Z_Adjust>
@@ -7996,10 +7996,10 @@
 
 	<SpaceProp Name="Mon_Cal_Cruiser_Under_Repair">
 		<Text_ID>TEXT_UNIT_CALAMARI_CRUISER</Text_ID>
-		<Space_Model_Name>RV_MonCalCruiser_Hulk.ALO</Space_Model_Name>
+		<Space_Model_Name>MonCalCruiser_Build.ALO</Space_Model_Name>
 		<Is_Decoration>No</Is_Decoration>
         <Is_Discardable> No </Is_Discardable>
-		<Scale_Factor>1.0</Scale_Factor>
+		<Scale_Factor>1.2</Scale_Factor>
 		<Behavior>SPACE_OBSTACLE, IDLE</Behavior>
 		<Sort_Order_Adjust>-1</Sort_Order_Adjust>
 		<Layer_Z_Adjust>0</Layer_Z_Adjust>
@@ -8012,21 +8012,41 @@
 	</SpaceProp>
 
 
+	<SpaceProp Name="TR_Venator_Construction">
+		<Text_ID>TEXT_UNIT_STAR_DESTROYER</Text_ID>
+		<Space_Model_Name>Venator_build.ALO</Space_Model_Name>
+		<Is_Decoration> No </Is_Decoration>
+        <Is_Discardable> No </Is_Discardable>
+		<Scale_Factor>7.61</Scale_Factor>
+		<Behavior>SPACE_OBSTACLE, IDLE</Behavior>
+		<Sort_Order_Adjust>-1</Sort_Order_Adjust>
+		<Layer_Z_Adjust>0</Layer_Z_Adjust>
+		<Is_Visible_On_Radar> No </Is_Visible_On_Radar>
 
+		<Is_Impassable_Asteroid> true </Is_Impassable_Asteroid>
+		<Space_Obstacle_Radius> 300 </Space_Obstacle_Radius>
+		<Space_Obstacle_Offset> 100 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> StaticObject </Space_Layer>
+	</SpaceProp>
 
+	<SpaceProp Name="TR_Providence_Construction">
+		<Text_ID>TEXT_UNIT_STAR_DESTROYER</Text_ID>
+		<Space_Model_Name>Providence_build.ALO</Space_Model_Name>
+		<Is_Decoration> No </Is_Decoration>
+        <Is_Discardable> No </Is_Discardable>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Behavior>SPACE_OBSTACLE, IDLE</Behavior>
+		<Sort_Order_Adjust>-1</Sort_Order_Adjust>
+		<Layer_Z_Adjust>0</Layer_Z_Adjust>
+		<Is_Visible_On_Radar> No </Is_Visible_On_Radar>
 
+		<Is_Impassable_Asteroid> true </Is_Impassable_Asteroid>
+		<Space_Obstacle_Radius> 300 </Space_Obstacle_Radius>
+		<Space_Obstacle_Offset> 100 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> StaticObject </Space_Layer>
+	</SpaceProp>
 
-
-
-
-
-
-
-
-
-
-
-
+	
 
 	<!-- =================================================================================== -->
 	<!-- Break-off pieces from destroyed hard points, there are referenced in HardPoints.xml -->

@@ -191,7 +191,9 @@
 
 	<Priority_Set Name="Bomber_Attack_Move">
 		<Attack_Priorities>
-			Corvette, 3.0,
+			SuperCapital, 1.0,
+			Capital, 1.5,
+			Frigate, 2.0,
 			Transport, 4.0,
 			SpaceHero, 4.5,
 			Bomber, 5.0
@@ -200,7 +202,7 @@
 			Shield_Generator, Engine, FIGHTER_BAY, WEAPON_LASER, WEAPON_ION_CANNON, TRACTOR_BEAM
 		</Hard_Point_Priorities>
 		<Category_Exclusions>
-			Frigate, Capital
+			Corvette
 		</Category_Exclusions>
 		<Unit_Exclusions>
 			Destroyable_Asteroid_Small,
@@ -234,8 +236,8 @@
 	<Priority_Set Name="Frigate_Attack_Move">
 		<Attack_Priorities>
 			Transport, 1.0,
-			Bomber, 2.0,
-			Corvette, 3.0,
+			Corvette, 2.0,
+			Capital, 3.0,
 			SpaceHero, 3.5,
 			Fighter, 4.0
 		</Attack_Priorities>
@@ -243,7 +245,7 @@
 			Shield_Generator, Engine, FIGHTER_BAY, WEAPON_LASER, WEAPON_ION_CANNON, TRACTOR_BEAM
 		</Hard_Point_Priorities>
 		<Category_Exclusions>
-			Capital
+			Bomber
 		</Category_Exclusions>
 		<Unit_Exclusions>
 			Destroyable_Asteroid_Small,
@@ -256,6 +258,7 @@
 	<Priority_Set Name="Capital_Attack_Move">
 		<Attack_Priorities>
 			Transport, 1.0,
+			Capital, 1.5,
 			Frigate, 2.0,
 			SpaceHero, 2.5,
 			Corvette, 3.0,
@@ -265,6 +268,28 @@
 		<Hard_Point_Priorities>
 			Shield_Generator, Engine, FIGHTER_BAY, WEAPON_LASER, WEAPON_ION_CANNON, TRACTOR_BEAM
 		</Hard_Point_Priorities>
+		<Unit_Exclusions>
+			Destroyable_Asteroid_Small,
+			Destroyable_Asteroid_Medium,
+			Destroyable_Asteroid_Large,
+			Destroyable_Asteroid_Huge
+		</Unit_Exclusions>
+	</Priority_Set>	
+	
+	<Priority_Set Name="SuperCapital_Attack_Move">
+		<Attack_Priorities>
+			Transport, 1.0,
+			Capital, 1.5,
+			Frigate, 2.0,
+			SpaceHero, 2.5,
+			Corvette, 3.0
+		</Attack_Priorities>
+		<Hard_Point_Priorities>
+			Shield_Generator, Engine, FIGHTER_BAY, WEAPON_LASER, WEAPON_ION_CANNON, TRACTOR_BEAM
+		</Hard_Point_Priorities>
+		<Category_Exclusions>
+			Fighter, Bomber
+		</Category_Exclusions>
 		<Unit_Exclusions>
 			Destroyable_Asteroid_Small,
 			Destroyable_Asteroid_Medium,

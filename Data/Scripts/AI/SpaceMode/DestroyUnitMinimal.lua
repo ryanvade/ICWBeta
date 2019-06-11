@@ -71,10 +71,22 @@ function MainForce_Thread()
 
 	MainForce.Enable_Attack_Positioning(true)
 	DebugMessage("MainForce constructed at stage area!")
-
-	MainForce.Enable_Attack_Positioning(true)
+	
 	DebugMessage("%s -- Attacking %s", tostring(Script), tostring (AITarget))
 	SetClassPriorities(MainForce, "Attack_Move")
+	
+	closest_enemy = Find_Nearest(MainForce, "Corvette | Frigate | Capital | SuperCapital | SpaceHero | Structure", PlayerObject, false)
+	
+	while TestValid(closest_enemy) do
+		if MainForce.Get_Distance(closest_enemy) < MainForce.Get_Distance(AITarget) then
+			BlockOnCommand(MainForce.Attack_Target(closest_enemy, MainForce.Get_Self_Threat_Max()))
+		else
+			break
+		end
+		Sleep(5)
+		closest_enemy = Find_Nearest(MainForce, "Corvette | Frigate | Capital | SuperCapital | SpaceHero | Structure", PlayerObject, false)
+	end
+
 	BlockOnCommand(MainForce.Attack_Move(AITarget))
 
 	MainForce.Set_Plan_Result(true)

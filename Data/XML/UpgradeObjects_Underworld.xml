@@ -233,7 +233,7 @@
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
 		<Previous_Upgrade_Level_Type>UC_Level_Two_Tech_Upgrade</Previous_Upgrade_Level_Type>
-		<Next_Upgrade_Level_Type />
+		<Next_Upgrade_Level_Type>UC_Level_Four_Tech_Upgrade</Next_Upgrade_Level_Type>
 		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
 		<Show_In_Sidebar_While_Building> Yes </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
@@ -250,7 +250,63 @@
 		<Is_Community_Property>Yes</Is_Community_Property>
 	</UpgradeObject>
 
+<UpgradeObject Name="UC_Level_Four_Tech_Upgrade">
+		<Behavior>DUMMY_UPGRADE</Behavior>
+		<Affiliation>Underworld</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> UC_Level_Three_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Previous_Upgrade_Level_Type>UC_Level_Three_Tech_Upgrade</Previous_Upgrade_Level_Type>
+		<Next_Upgrade_Level_Type />
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Show_In_Sidebar_While_Building> Yes </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>i_button_u_tech_upgrade_4.tga</Icon_Name>
+		
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_FOUR  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FOUR_COMMAND_CENTER</Text_ID>
+		
+		<SFXEvent_Build_Started>UHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<CategoryMask>Upgrade</CategoryMask>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
 	
+	<UpgradeObject Name="UC_Level_Five_Tech_Upgrade">
+		<Behavior>DUMMY_UPGRADE</Behavior>
+		<Affiliation>Underworld</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> UC_Level_Four_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Previous_Upgrade_Level_Type>UC_Level_Four_Tech_Upgrade</Previous_Upgrade_Level_Type>
+		<Next_Upgrade_Level_Type />
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Show_In_Sidebar_While_Building> Yes </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>i_button_u_tech_upgrade_5.tga</Icon_Name>
+		
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_FIVE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FIVE_COMMAND_CENTER</Text_ID>
+		
+		<SFXEvent_Build_Started>UHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<CategoryMask>Upgrade</CategoryMask>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
 
 
 
@@ -361,7 +417,7 @@
   	
   	<UpgradeObject Name="PL_Planetary_Bombard_Use_Upgrade">
 		<Behavior>DUMMY_UPGRADE, DUMMY_DESTROY_AFTER_PLANETARY_BOMBARD</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 7500 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 123 </Tactical_Build_Time_Seconds>
@@ -472,7 +528,7 @@
   	
   	<UpgradeObject Name="P_Magnetically_Sealed_Structure_Upgrade">
 		<Variant_Of_Existing_Type>U_Magnetically_Sealed_Structure_Upgrade</Variant_Of_Existing_Type>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Encyclopedia_Text> TEXT_UPGRADE_TOOLTIP_MERC_MAGNETIC_STRUCTURE TEXT_UPGRADE_TOOLTIP_MERC_MAGNETIC_EMPIRE </Encyclopedia_Text>
 
 		<SFXEvent_Build_Started>EHD_Upgrade_Progress</SFXEvent_Build_Started>
@@ -562,7 +618,7 @@
   	
   	<UpgradeObject Name="P_Secure_Area_Upgrade">
 		<Variant_Of_Existing_Type>U_Secure_Area_Upgrade</Variant_Of_Existing_Type>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 
 		<SFXEvent_Build_Started>EHD_Upgrade_Progress</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
@@ -696,7 +752,7 @@
 	<!-- Reinforcement Enhacements (Level 1): Affects Reinforcment Deployment -->
 	<UpgradeObject Name="PL_Enhanced_Deployment_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 2300 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>1500</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 35 </Tactical_Build_Time_Seconds>
@@ -1446,7 +1502,7 @@
 	
 	<UpgradeObject Name="PC_Level_Two_Tech_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 2500 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
@@ -1475,7 +1531,7 @@
 
 	<UpgradeObject Name="PC_Level_Three_Tech_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 4000 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 85 </Tactical_Build_Time_Seconds>
@@ -1508,7 +1564,7 @@
 	<!-- Increased Mobility: Stormtroopers move 30% faster. -->
 	<UpgradeObject Name="PL_Increased_Mobility_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 475 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>150</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 12 </Tactical_Build_Time_Seconds>
@@ -1532,7 +1588,7 @@
 			<Combat_Bonus_Ability Name="PL_Increased_Mobility_Bonus">
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Applicable_Unit_Categories />
-				<Applicable_Unit_Types>Penta_Stormtrooper, Navytrooper, Alignment_Sergeant, Pentastar_Trooper_Squad</Applicable_Unit_Types>
+				<Applicable_Unit_Types>Navytrooper, Pentastar_Trooper_Squad, Stormtrooper, Stormtrooper_Sergeant, Stormtrooper_Captain</Applicable_Unit_Types>
 				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
 				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
 				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
@@ -1548,7 +1604,7 @@
 	<!-- Stamina Boost: Stormtroopers have 35% more health. -->
 	<UpgradeObject Name="PL_Stamina_Boost_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 550 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>170</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 18 </Tactical_Build_Time_Seconds>
@@ -1572,7 +1628,7 @@
 			<Combat_Bonus_Ability Name="PL_Stamina_Boost_Bonus">
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Applicable_Unit_Categories />
-				<Applicable_Unit_Types>Penta_Stormtrooper, Navytrooper, Alignment_Sergeant, Pentastar_Trooper_Squad</Applicable_Unit_Types>
+				<Applicable_Unit_Types>Navytrooper, Pentastar_Trooper_Squad, Stormtrooper, Stormtrooper_Sergeant, Stormtrooper_Captain</Applicable_Unit_Types>
 				<Health_Bonus_Percentage>0.35</Health_Bonus_Percentage>
 				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
 				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
@@ -1588,7 +1644,7 @@
 	<!-- Light Reflective Armor (Level 1): Light vehicles deflect 25% of incoming blaster fire. -->
 	<UpgradeObject Name="PL_Light_Reflective_Armor_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 775 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>240</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 14 </Tactical_Build_Time_Seconds>
@@ -1622,7 +1678,7 @@
 	<!-- Light Reflective Armor (Level 2): Light vehicles deflect 50% of incoming blaster fire. -->
 	<UpgradeObject Name="PL_Light_Reflective_Armor_L2_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>380</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 22 </Tactical_Build_Time_Seconds>
@@ -1655,7 +1711,7 @@
 	<!-- Enhanced Reactors (Level 1): Light vehicles move 15% faster. -->
 	<UpgradeObject Name="PL_Enhanced_Reactors_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 400 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>130</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 15 </Tactical_Build_Time_Seconds>
@@ -1695,7 +1751,7 @@
 	<!-- Enhanced Reactors (Level 2): Light vehicles move 30% faster. -->
 	<UpgradeObject Name="PL_Enhanced_Reactors_L2_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 825 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>180</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 20 </Tactical_Build_Time_Seconds>
@@ -1735,7 +1791,7 @@
 	<!-- Heavy Reflective Armor (Level 1): Heavy vehicles deflect 25% of incoming blaster fire. -->
 	<UpgradeObject Name="PL_Heavy_Reflective_Armor_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 550 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 20 </Tactical_Build_Time_Seconds>
@@ -1769,7 +1825,7 @@
 	<!-- Heavy Reflective Armor (Level 2): Heavy vehicles deflect 50% of incoming blaster fire. -->
 	<UpgradeObject Name="PL_Heavy_Reflective_Armor_L2_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 825 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>400</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
@@ -1803,7 +1859,7 @@
 	<!-- Improved AT-AT Reactors (Level 1): AT-AT units move 25% faster. -->
 	<UpgradeObject Name="PL_Improved_ATAT_Reactors_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 675 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>220</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 20 </Tactical_Build_Time_Seconds>
@@ -1843,7 +1899,7 @@
 	<!-- Improved AT-AT Reactors (Level 2): AT-AT units do 25% more damage. -->
 	<UpgradeObject Name="PL_Improved_ATAT_Reactors_L2_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 1000 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>440</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
@@ -1883,7 +1939,7 @@
 	<!-- Increased Production (Level 1): Mining Facility provides 20% more income. -->
 	<UpgradeObject Name="PL_Increased_Production_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 250 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>130</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 35 </Tactical_Build_Time_Seconds>
@@ -1920,7 +1976,7 @@
 	<!-- Increased Production (Level 2): Mining Facility provides 40% more income. -->
 	<UpgradeObject Name="PL_Increased_Production_L2_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 500 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>360</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 45 </Tactical_Build_Time_Seconds>
@@ -1957,7 +2013,7 @@
 	<!-- Bombing Runs: Lets the player call in a bombing run, must be purchased for each bombing run. -->
 	<UpgradeObject Name="PL_Bombing_Run_Use_Upgrade">
 		<Behavior>DUMMY_UPGRADE, DUMMY_DESTROY_AFTER_BOMBING_RUN</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 45 </Tactical_Build_Time_Seconds>
@@ -1991,7 +2047,7 @@
 	<!-- Reinforced Structures: Structures take 25% less damage. -->
 	<UpgradeObject Name="PL_Reinforced_Structures_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 750 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>400</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 20 </Tactical_Build_Time_Seconds>
@@ -2031,7 +2087,7 @@
 	<!-- Enhanced Turret Firepower (Level 1): Increases Anti-Infantry turret damage by 25% -->
 	<UpgradeObject Name="PL_Enhanced_Turret_Firepower_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 675 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>200</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 18 </Tactical_Build_Time_Seconds>
@@ -2071,7 +2127,7 @@
 	<!-- Enhanced Turret Firepower (Level 2): Increases Anti-Infantry, Anti-Vehicle and Anti-Aircraft turret damage by 25% -->
 	<UpgradeObject Name="PL_Enhanced_Turret_Firepower_L2_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 900 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>380</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>
@@ -2111,7 +2167,7 @@
 	<!-- Enhanced Base Shield: Prevents all enemy weapons from penetrating the base shields. -->
 	<UpgradeObject Name="PL_Enhanced_Base_Shield_Upgrade_NoPre">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 1800 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>900</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
@@ -2151,7 +2207,7 @@
 	<!-- More Garrison Units: Adds an AT-ST company and a 2M Repulsor Tank brigade to your set of free garrison units. -->
 	<UpgradeObject Name="PL_More_Garrisons_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 500 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>170</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 15 </Tactical_Build_Time_Seconds>
@@ -2184,7 +2240,7 @@
 	<!-- Immunity to the gameplay effects of Weather. -->
 	<UpgradeObject Name="PL_Weatherproof_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 500 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>170</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 15 </Tactical_Build_Time_Seconds>
@@ -2218,7 +2274,7 @@
 	<!-- Enhanced Reactors (Level 1): Fighters gain a 25% movement speed increase. -->
 	<UpgradeObject Name="PS_Enhanced_Reactors_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 650 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 20 </Tactical_Build_Time_Seconds>
@@ -2258,7 +2314,7 @@
 	<!-- Enhanced Reactors (Level 2): Frigates gain a 25% movement speed increase. -->
 	<UpgradeObject Name="PS_Enhanced_Reactors_L2_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 1400 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 30 </Tactical_Build_Time_Seconds>
@@ -2310,7 +2366,7 @@
 	<!-- Enhanced Reactors (Level 3): Capital Ships gain a 25% movement speed increase. -->
 	<UpgradeObject Name="PS_Enhanced_Reactors_L3_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 2700 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 40 </Tactical_Build_Time_Seconds>
@@ -2346,7 +2402,7 @@
 			<Combat_Bonus_Ability Name="ES_Enhanced_Reactors_L3_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Applicable_Unit_Categories />
-				<Applicable_Unit_Types>Raider_Pentastar, Enforcer, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Munificent, Generic_Acclamator_Assault_Ship, Combat_Escort_Carrier, Recusant, Generic_Gladiator, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Lucrehulk, Generic_Venator</Applicable_Unit_Types>
+				<Applicable_Unit_Types>Raider_Pentastar, Enforcer, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Munificent, Generic_Acclamator_Assault_Ship, Combat_Escort_Carrier, Recusant, Generic_Gladiator, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Generic_Lucrehulk, Lucrehulk_CSA, Generic_Venator</Applicable_Unit_Types>
 				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
 				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
 				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
@@ -2362,7 +2418,7 @@
 	<!-- Reinforced Armor (Level 1): Corvettes take 25% less damage. -->
 	<UpgradeObject Name="PS_Reinforced_Armor_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 750 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 30 </Tactical_Build_Time_Seconds>
@@ -2402,7 +2458,7 @@
 	<!-- Reinforced Armor (Level 2): Frigates take 25% less damage. -->
 	<UpgradeObject Name="PS_Reinforced_Armor_L2_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 35 </Tactical_Build_Time_Seconds>
@@ -2442,7 +2498,7 @@
 	<!-- Reinforced Armor (Level 3): Capital Ships take 25% less damage. -->
 	<UpgradeObject Name="PS_Reinforced_Armor_L3_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 3200 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 45 </Tactical_Build_Time_Seconds>
@@ -2466,7 +2522,7 @@
 			<Combat_Bonus_Ability Name="PS_Reinforced_Armor_L3_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Applicable_Unit_Categories />
-				<Applicable_Unit_Types>Raider_Pentastar, Enforcer, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Munificent, Generic_Acclamator_Assault_Ship, Combat_Escort_Carrier, Recusant, Generic_Gladiator, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Lucrehulk, Generic_Venator</Applicable_Unit_Types>
+				<Applicable_Unit_Types>Raider_Pentastar, Enforcer, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Munificent, Generic_Acclamator_Assault_Ship, Combat_Escort_Carrier, Recusant, Generic_Gladiator, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Generic_Lucrehulk, Lucrehulk_CSA, Generic_Venator</Applicable_Unit_Types>
 				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
 				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
 				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
@@ -2483,7 +2539,7 @@
 	<UpgradeObject Name="PS_Increased_Supplies_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
 		<Tactical_Build_Cost_Multiplayer> 250 </Tactical_Build_Cost_Multiplayer>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 40 </Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites />
@@ -2555,7 +2611,7 @@
 	<!-- Increased Supplies (Level 2): Increases starbase income by 40%. -->
 	<UpgradeObject Name="PS_Increased_Supplies_L2_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 500 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 65 </Tactical_Build_Time_Seconds>
@@ -2628,7 +2684,7 @@
 	<!-- Improved Weapons (Level 1): Fighters deal 25% more damage. -->
 	<UpgradeObject Name="PS_Improved_Weapons_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 800 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>
@@ -2668,7 +2724,7 @@
 	<!-- Improved Weapons (Level 2): Corvettes deal 25% more damage. -->
 	<UpgradeObject Name="PS_Improved_Weapons_L2_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 1800 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 35 </Tactical_Build_Time_Seconds>
@@ -2708,7 +2764,7 @@
 	<!-- Improved Weapons (Level 3): Capital Ships deal 25% more damage. -->
 	<UpgradeObject Name="PS_Improved_Weapons_L3_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 3000 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 45 </Tactical_Build_Time_Seconds>
@@ -2732,7 +2788,7 @@
 			<Combat_Bonus_Ability Name="PS_Improved_Weapons_L3_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Applicable_Unit_Categories />
-				<Applicable_Unit_Types>TIE_Hunter, TIE_Interceptor, TIE_Fighter, TIE_Bomber, Torrent, Skipray_Blastboat, Raider_Pentastar, Enforcer, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Munificent, Generic_Acclamator_Assault_Ship, Combat_Escort_Carrier, Recusant, Generic_Gladiator, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Lucrehulk, Generic_Venator</Applicable_Unit_Types>
+				<Applicable_Unit_Types>TIE_Hunter, TIE_Interceptor, TIE_Fighter, TIE_Bomber, Torrent, Skipray_Blastboat, Raider_Pentastar, Enforcer, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Munificent, Generic_Acclamator_Assault_Ship, Combat_Escort_Carrier, Recusant, Generic_Gladiator, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Generic_Lucrehulk, Lucrehulk_CSA, Generic_Venator</Applicable_Unit_Types>
 				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
 				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
 				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
@@ -2749,7 +2805,7 @@
 	<!-- More Garrison Units: Adds three squadrons of TIE-Fighters and one squadron of TIE-Bombers to your set of free garrison units. -->
 	<UpgradeObject Name="PS_More_Garrisons_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>80</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 30 </Tactical_Build_Time_Seconds>
@@ -2782,7 +2838,7 @@
 	<!-- Improved Defenses (Level 1): The starbase deals 15% more damage. -->
 	<UpgradeObject Name="PS_Improved_Defenses_L1_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha </Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 950 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>160</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>

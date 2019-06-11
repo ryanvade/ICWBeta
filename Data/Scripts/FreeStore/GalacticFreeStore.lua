@@ -231,6 +231,7 @@ function Find_Ground_Unit_Target(object)
 	end
 	
 	if my_planet and EvaluatePerception("Low_Ground_Defense_Score", PlayerObject, my_planet) > 0.5 then
+		DebugMessage("%s -- Object: %s, current planet undefended.", tostring(Script), tostring(object))
 		return nil
 	end
 	
@@ -272,7 +273,7 @@ function Find_Space_Unit_Target(object)
 		leader_planet = leader_object.Get_Planet_Location()
 	end
 		
-	max_force_target = 10000 
+	max_force_target = 8000 
 	force_target = EvaluatePerception("Friendly_Global_Space_Unit_Raw_Total", PlayerObject)
 	if not force_target then
 		return nil
@@ -312,6 +313,7 @@ function Find_Space_Unit_Target(object)
 	end
 	
 	if my_planet and EvaluatePerception("Low_Space_Defense_Score", PlayerObject, my_planet) > 0.5 then
+		DebugMessage("%s -- Object: %s, current planet undefended.", tostring(Script), tostring(object))
 		return nil
 	end	
 	

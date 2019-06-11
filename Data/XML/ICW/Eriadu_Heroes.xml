@@ -35,7 +35,7 @@
 		
 				<Text_ID>TEXT_HERO_DELVARDUS </Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_DELVARDUS TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_NIGHT_HAMMER </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPTAIN </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIOR_GENERAL </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 42500 </Score_Cost_Credits>
 
 				<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
@@ -71,6 +71,29 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 	
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-350</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 	
 	</UniqueUnit>
@@ -151,6 +174,19 @@
 				<Movement_Speed_Bonus_Percentage>0.05</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="Praetor_Tractor_Beam_Attack_Ability">
+					<Activation_Style> User_Input </Activation_Style>
+					<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+					<Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+					<Activation_Min_Range>2</Activation_Min_Range>
+					<Activation_Max_Range>1500</Activation_Max_Range>
+
+					<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+					<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+					<Stacking_Category>0</Stacking_Category>
+				</Tractor_Beam_Attack_Ability>
 	
 		</Abilities>
 
@@ -171,14 +207,6 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Affiliation>Hutts</Affiliation>
-		
-		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
-		<Starting_Spawned_Units_Tech_1>TIE_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
-		<Starting_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_1>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-
-		<Reserve_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 2</Reserve_Spawned_Units_Tech_1>
-		<Reserve_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_1>
 		
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 		
@@ -351,13 +379,43 @@
 		<Lua_Script></Lua_Script>
 		<Affiliation>Hutts</Affiliation>
 	
-		<Starting_Spawned_Units_Tech_0>Sword_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Shielded_Interceptor_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_1>Sword_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Shielded_Interceptor_Squadron, 2</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>TIE_Punisher_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
-		<Reserve_Spawned_Units_Tech_0>Shielded_Interceptor_Squadron, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_1>Shielded_Interceptor_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		<Reserve_Spawned_Units_Tech_1>TIE_Punisher_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		
+		<Starting_Spawned_Units_Tech_2>Sword_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Shielded_Interceptor_Squadron, 2</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>TIE_Punisher_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+
+		<Reserve_Spawned_Units_Tech_2>Shielded_Interceptor_Squadron, 1</Reserve_Spawned_Units_Tech_2>
+		<Reserve_Spawned_Units_Tech_2>TIE_Punisher_Squadron, 1</Reserve_Spawned_Units_Tech_2>
+		
+		<Starting_Spawned_Units_Tech_3>Sword_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Shielded_Interceptor_Squadron, 2</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>TIE_Punisher_Squadron, 1</Starting_Spawned_Units_Tech_3>
+
+		<Reserve_Spawned_Units_Tech_3>Shielded_Interceptor_Squadron, 1</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>TIE_Punisher_Squadron, 1</Reserve_Spawned_Units_Tech_3>
+		
+		<Starting_Spawned_Units_Tech_4>Sword_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Shielded_Interceptor_Squadron, 2</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>TIE_Punisher_Squadron, 1</Starting_Spawned_Units_Tech_4>
+
+
+		<Reserve_Spawned_Units_Tech_4>Shielded_Interceptor_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>TIE_Punisher_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		
+		<Starting_Spawned_Units_Tech_5>Sword_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Shielded_Interceptor_Squadron, 2</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>TIE_Punisher_Squadron, 1</Starting_Spawned_Units_Tech_5>
+
+		<Reserve_Spawned_Units_Tech_5>Shielded_Interceptor_Squadron, 1</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>TIE_Punisher_Squadron, 1</Reserve_Spawned_Units_Tech_5>
 	
 		<Text_ID>TEXT_HUBLIN_SQUADRON</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_HUBLIN </Encyclopedia_Text>
@@ -420,14 +478,45 @@
 		<Lua_Script></Lua_Script>
 		<Affiliation>Hutts</Affiliation>
 	
-		<Starting_Spawned_Units_Tech_0>White_Death, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Starting_Spawned_Units_Tech_1>White_Death, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_1>
 
-		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		<Reserve_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		
+		<Starting_Spawned_Units_Tech_2>White_Death, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_2>
+
+		<Reserve_Spawned_Units_Tech_2>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_2>
+		<Reserve_Spawned_Units_Tech_2>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_2>
+		
+		<Starting_Spawned_Units_Tech_3>White_Death, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_3>
+
+		<Reserve_Spawned_Units_Tech_3>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_3>
+		
+		<Starting_Spawned_Units_Tech_4>White_Death, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_4>
+
+		<Reserve_Spawned_Units_Tech_4>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		
+		<Starting_Spawned_Units_Tech_5>White_Death, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_5>
+
+		<Reserve_Spawned_Units_Tech_5>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_5>
 	
 		<Text_ID>TEXT_HERO_RESUUN</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_RESUUN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_RETRIBUTION </Encyclopedia_Text>
@@ -638,14 +727,45 @@
 		<Lua_Script></Lua_Script>
 		<Affiliation>Hutts</Affiliation>
 	
-		<Starting_Spawned_Units_Tech_0>Obsidian_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Starting_Spawned_Units_Tech_1>Obsidian_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_1>
 
-		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_1>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		<Reserve_Spawned_Units_Tech_1>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		
+		<Starting_Spawned_Units_Tech_2>Obsidian_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_2>
+
+		<Reserve_Spawned_Units_Tech_2>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_2>
+		<Reserve_Spawned_Units_Tech_2>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_2>
+		
+		<Starting_Spawned_Units_Tech_3>Obsidian_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_3>
+
+		<Reserve_Spawned_Units_Tech_3>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_3>
+		
+		<Starting_Spawned_Units_Tech_4>Obsidian_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_4>
+
+		<Reserve_Spawned_Units_Tech_4>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		
+		<Starting_Spawned_Units_Tech_5>Obsidian_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Shielded_Interceptor_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_5>
+
+		<Reserve_Spawned_Units_Tech_5>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_5>
 	
 		<Text_ID>TEXT_HERO_PRYL</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_TRAIT_FORCESENSITIVE TEXT_TOOLTIP_BIO TEXT_TOOLTIP_PRYL TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_THUNDERFLARE </Encyclopedia_Text>
@@ -879,6 +999,29 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 			
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-350</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 	
 	</UniqueUnit>
@@ -886,7 +1029,7 @@
 	<HeroUnit Name="Andal">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_ANDAL</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_ANDAL </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ANDAL </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_MOFF </Encyclopedia_Unit_Class>
 		
 		<Icon_Name>i_button_andal.tga</Icon_Name>
@@ -951,7 +1094,7 @@
 		<Company_Transport_Unit>Alliance_Shuttle</Company_Transport_Unit>
 		<Company_Units>Andal</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<Encyclopedia_Text>TEXT_TOOLTIP_ANDAL</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ANDAL</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COMMISSIONER </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
@@ -969,7 +1112,9 @@
 		
 		<Icon_Name>i_button_zed.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<Lua_Script>GenericGameObject</Lua_Script>
+		<Lua_Script></Lua_Script>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 	
 		<Text_ID>TEXT_HERO_ZED</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ZED TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_STALKER </Encyclopedia_Text>
@@ -987,14 +1132,7 @@
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		
-		<Starting_Spawned_Units_Tech_0>Shielded_Interceptor_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-
-		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		
 		<Abilities SubObjectList="Yes">
 

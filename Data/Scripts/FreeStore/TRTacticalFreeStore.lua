@@ -25,7 +25,7 @@ function TR_On_Unit_Service(object)
         return false
     end
 
-    local TR_ATTACK_RANGE = 3500
+    local TR_ATTACK_RANGE = 5000
 
     if object.Is_Category("Corvette") or object.Is_Category("AntiFighter") then
         if AttackNearestWhenInRange(object, "Fighter", TR_ATTACK_RANGE) then
@@ -50,6 +50,19 @@ function TR_On_Unit_Service(object)
         end
 
     elseif object.Is_Category("Capital") then
+        if AttackNearestWhenInRange(object, "SuperCapital", TR_ATTACK_RANGE) then
+            return true
+        end
+
+        if AttackNearestWhenInRange(object, "Capital", TR_ATTACK_RANGE) then
+            return true
+        end
+
+        if AttackNearestWhenInRange(object, "Frigate", TR_ATTACK_RANGE) then
+            return true
+        end
+		
+	elseif object.Is_Category("SuperCapital") then
         if AttackNearestWhenInRange(object, "SuperCapital", TR_ATTACK_RANGE) then
             return true
         end

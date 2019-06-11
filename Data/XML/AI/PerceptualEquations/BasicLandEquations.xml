@@ -140,8 +140,9 @@
 			(10 * Variable_Target.Type.IsType { Parameter_Type = "E_Ground_Base_Shield",
 												Parameter_Type = "R_Ground_Base_Shield",
 												Parameter_Type = "U_Ground_Base_Shield",
-												Parameter_Type = "P_Ground_Base_Shield",
-												Parameter_Type = "Power_Generator_E",
+												Parameter_Type = "P_Ground_Base_Shield"})
+			+									
+			(15 * Variable_Target.Type.IsType {Parameter_Type = "Power_Generator_E",
 												Parameter_Type = "Power_Generator_R",
 												Parameter_Type = "Power_Generator_P",
 												Parameter_Type = "Power_Generator_U"})
@@ -164,6 +165,8 @@
 											Parameter_Type = "U_Ground_Turbolaser_Tower"}))
 		*
 		(1.0 - Function_May_Lose_Land_Control_Game.Evaluate)
+		*
+		(1.0 - Variable_Target.IsContestable)
 	</Should_Destroy_Structure>
 
 	<Should_Destroy_Turbolaser>
@@ -233,8 +236,6 @@
 
 	-->
 	<Want_To_Retreat_From_Land>
-		(1 - Game.IsSetupPhase)
-		*
 		(Game.Age > 30)
 		*
 		(
@@ -252,12 +253,9 @@
 				(Variable_Enemy.LandedForceUnnormalized{Parameter_Attenuator = 1.0} >= (2.5 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0})) 
 				*
 				(
-					((Variable_Self.BaseLevel == 0)
+					((Variable_Self.FriendlyForceUnnormalized - Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Structure]}) == 0)
 					+
-					(1 > Variable_Self.BaseLevel) *
-					(Variable_Enemy.LandedForceUnnormalized >= (5.0 * Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Structure]})))
-					>
-					0
+					Variable_Self.HasUnit {Parameter_Type = "Ground_Ion_Cannon"}
 				)
 			)
 			
@@ -954,6 +952,15 @@
 		Variable_Target.EnemyUnitConcentration
 	</Current_Enemy_Location>
 
+	<Need_Units_Landed>
+		50
+		*
+		(1 - Function_Should_Burn_Units_Land.Evaluate)
+		*
+		(Variable_Self.ReinforcementsUnnormalized > 0)
+		*
+		Variable_Self.UnitSpaceAvailable
+	</Need_Units_Landed>	
 
 	<Current_Friendly_Location>
 		Variable_Target.FriendlyUnitConcentration
@@ -1013,21 +1020,20 @@
 			*
 			(
 				(Game.IsCampaignGame == 1)
-				+
-				(Game.IsCampaignGame == 0)
-				*
-				(Game.Age > 300)
-				*
-				(1 - Function_Is_Saving_For_Refineries_Land.Evaluate)
 				*
 				(Variable_Self.HasUnit {Parameter_Type = "Remnant_Capital", 
 										Parameter_Type = "NewRep_Senate",
 										Parameter_Type = "PA_Capital",
 										Parameter_Type = "Maldrood_Capital",
 										Parameter_Type = "Eriadu_Capital",
-										Parameter_Type = "Yevetha_Capital",
 										Parameter_Type = "CSA_Capital",
 										Parameter_Type = "U_Ground_Palace"} == 0.0)
+				+
+				(Game.IsCampaignGame == 0)
+				*
+				(Game.Age > 300)
+				*
+				(1 - Function_Is_Saving_For_Refineries_Land.Evaluate)
 				*
 				(Function_Num_Refineries.Evaluate == 0)
 				*

@@ -46,11 +46,11 @@
 		<Affiliation>Empire</Affiliation>
 		<Size_Value>10</Size_Value>
 		<Armor_Type> Armor_ATAT </Armor_Type>
-		<Damage>90</Damage>
-		<Tactical_Health>450</Tactical_Health>
+		<Damage>100</Damage>
+		<Tactical_Health>500</Tactical_Health>
 		<Autoresolve_Health>900</Autoresolve_Health>
 
-		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
 		<Ranged_Target_Z_Adjust>25.0</Ranged_Target_Z_Adjust>
 
@@ -105,7 +105,7 @@
 		<Unit_Abilities_Data SubObjectList="Yes">
             <Unit_Ability>
                 <Type>DRAIN_LIFE</Type>
-                <Recharge_Seconds>40.0</Recharge_Seconds>
+                <Recharge_Seconds>30.0</Recharge_Seconds>
                 <GUI_Activated_Ability_Name> NightSister_Drain_Life </GUI_Activated_Ability_Name> 
                 <Alternate_Icon_Name>i_sa_minor_drain_life.tga</Alternate_Icon_Name>
                 <Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MINOR_DRAIN_LIFE_NAME</Alternate_Name_Text>
@@ -132,7 +132,7 @@
 				<Applicable_Unit_Types />
 			</Generic_Attack_Ability>
 			
-		<!-- Commented out due to censorship issues...
+
 			<Eat_Attack_Ability Name="NS_Rancor_Eat_Infantry">
 				<Activation_Chance>1.0</Activation_Chance>
 				<Activation_Min_Range>40.0</Activation_Min_Range>
@@ -159,7 +159,7 @@
                     Cuddles_The_Rancor
                 </Excluded_Unit_Types>
 			</Eat_Attack_Ability>
-		-->
+
 		
 			<Arc_Sweep_Attack_Ability Name="NS_Rancor_Swat_Infantry_Left">
 				<Activation_Chance>0.5</Activation_Chance>
@@ -257,7 +257,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
+		<Required_Special_Structures>Z_Ground_Barracks</Required_Special_Structures>
 		<Required_Planets>Dathomir</Required_Planets>
 		
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>

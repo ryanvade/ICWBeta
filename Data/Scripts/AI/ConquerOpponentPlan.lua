@@ -58,14 +58,12 @@ function Definitions()
 	-- First Task Force
 	{
 		"SpaceForce"	
-		,"MinimumTotalSize = 10"
-		,"MinimumTotalForce = 5000"					
+		,"MinimumTotalSize = 5"				
 		,"SpaceHero | Frigate | Capital | Corvette | SuperCapital = 100%"
 	},
 	{
 		"GroundForce"
-		,"MinimumTotalSize = 15"
-		,"MinimumTotalForce = 2000"
+		,"MinimumTotalForce = 2500"
 		,"LandHero | Vehicle | Infantry | Air = 100%"
 	}
 	}
@@ -122,7 +120,7 @@ function SpaceForce_Thread()
 			Sleep(5)
 		end
 		
-		SpaceForce.Release_Forces(1.0)
+		SpaceForce.Release_Forces(0.5)
 	end
 end
 

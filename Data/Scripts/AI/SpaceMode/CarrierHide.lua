@@ -5,11 +5,11 @@ function Definitions()
 	
 	AllowEngagedUnits = false
 	IgnoreTarget = true
-	Category = "Move_Carrier"
+	Category = "Move_Carriers"
 	TaskForce = {
 	{
 		"MainForce"						
-		,"Carrier = 1,3"
+		,"Auriette_Carrier | Combat_Escort_Carrier | Generic_Quaser | Escort_Carrier | Broadside_Cruiser = 1,3"
 	},
 	{
 		"EscortForce"		
@@ -39,8 +39,8 @@ function MainForce_Thread()
 	QuickReinforce(PlayerObject, AITarget, tf)
 
 	-- Set up proximities on each member of the main task force
-	for i, unit in (tf.Get_Unit_Table()) do
-	
+	for _, unit in (tf.Get_Unit_Table()) do
+		
 		-- discover the range of the unit if we need to
 		if not carrier_attack_range then
 			carrier_attack_range = unit.Get_Type().Get_Max_Range()
