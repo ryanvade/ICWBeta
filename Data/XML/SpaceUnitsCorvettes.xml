@@ -2,6 +2,50 @@
 <SpaceCorvettes>
 
 	
+	
+	
+	<SpaceUnit Name="Empire_Pirate_IPV">  <!--Multiplayer Only-->
+		<Variant_Of_Existing_Type>IPV1_System_Patrol_Craft</Variant_Of_Existing_Type>
+		
+		<Affiliation>Empire</Affiliation>
+		
+        <Ranking_In_Category>7</Ranking_In_Category>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+	
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Rebel_Pirate_IPV"> <!--Multiplayer Only-->
+		<Variant_Of_Existing_Type>IPV1_System_Patrol_Craft</Variant_Of_Existing_Type>
+		
+		<Affiliation>Rebel</Affiliation>
+		
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+	
+	</SpaceUnit>
+
+	
 	<SpaceUnit Name="Merchant_Freighter">
 		<Text_ID>TEXT_UNIT_MERCHANT</Text_ID>
 		<Encyclopedia_Good_Against>  </Encyclopedia_Good_Against>
@@ -158,5 +202,11 @@
 
 	</SpaceUnit>
 	
+<!-- jdg 8/24/05 making a Tantive_IV entry here (based on Corellian Crusier) -->
+
+
+	
+
+
 
 </SpaceCorvettes>

@@ -118,15 +118,14 @@
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>1</Event_Param1>
 		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Whirlwind_Star_Destroyer</Reward_Param1>
+		<Reward_Param1>Shockwave_Star_Destroyer</Reward_Param1>
 		<Reward_Param2>Thyferra</Reward_Param2>
 		<Prereq>Empire_Enters_Tech_01</Prereq>
 		<Branch>Empire_Alive</Branch>
 	</Event>
 	
 	<Event Name="Spawn_Okins">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Okins_Allegiance</Reward_Param1>
 		<Reward_Param2>Carida</Reward_Param2>
@@ -134,8 +133,7 @@
 	</Event>
 	
 	<Event Name="Spawn_Carvin">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Carvin_Team</Reward_Param1>
 		<Reward_Param2>Coruscant</Reward_Param2>
@@ -143,8 +141,7 @@
 	</Event>
 	
 	<Event Name="Spawn_Rogriss_ISD">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Agonizer_Star_Destroyer</Reward_Param1>
 		<Reward_Param2>Bilbringi</Reward_Param2>
@@ -203,8 +200,7 @@
 	</Event>
 	
 	<Event Name="Lock_Thrawn_Regicide">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Dummy_Regicide_Thrawn</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_02</Prereq>
@@ -264,7 +260,7 @@
 				<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>3</Event_Param1>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Whirlwind_Star_Destroyer</Reward_Param1>
+		<Reward_Param1>Shockwave_Star_Destroyer</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_02</Prereq>
 	</Event>
 	
@@ -367,8 +363,7 @@
 	</Event>
 	
 	<Event Name="Lock_Palpatine_Regicide">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>2</Event_Param1>
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Dummy_Regicide_Palpatine</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
@@ -387,16 +382,16 @@
   		<Event_Param1>Emperor_Palpatine_Team</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
-
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Dummy_Regicide_Jax</Reward_Param1>
 	</Event>
+
 	
 	<Event Name="Lock_Jax_Regicide">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>3</Event_Param1>
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Dummy_Regicide_Jax</Reward_Param1>
 		<Prereq>Trigger_Palpatine_Jax_Timer</Prereq>
-		<Prereq>Trigger_Jax_Palpatine_Death</Prereq>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 		<Prereq>Empire_Enters_Tech_05</Prereq>
 	</Event>		
@@ -550,13 +545,6 @@
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 	</Event>
 	
-	<Event Name="Unlock_Knight_Hammer_Daala">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Knight_Hammer</Reward_Param1>
-		<Prereq>Empire_Enters_Tech_04</Prereq>
-	</Event>
-	
 		<!-- Destroy the Palpateam -->
 	<Event Name="E_Destroy_Sedriss">
 						<Event_Type>STORY_ELAPSED</Event_Type>
@@ -667,14 +655,50 @@
 <Prereq>Empire_Enters_Tech_05</Prereq>
 	</Event>
 	
-<Event Name="Lock_Daala_Regicide">
+	<Event Name="Branch_Disabler_Knight_Hammer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>3</Event_Param1>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Branch_Daala_Hammer</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Branch_Enabler_Hammer">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Thalassa</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Branch_Daala_Hammer</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Destroy_Daala_For_Hammer">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>5</Event_Param1>	
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Gorgon</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_04</Prereq>
+		<Branch>Branch_Daala_Hammer</Branch>
+	</Event>
+
+	<Event Name="Spawn_Daala_Hammer">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>5</Event_Param1>	
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Knight_Hammer</Reward_Param1>
+		<Reward_Param2>Bastion</Reward_Param2>
+		<Prereq>Empire_Enters_Tech_04</Prereq>
+		<Branch>Branch_Daala_Hammer</Branch>
+	</Event>
+	
+	<Event Name="Lock_Daala_Regicide">
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
-		<Reward_Param1>Dummy_Regicide_Pellaeon</Reward_Param1>
+		<Reward_Param1>Dummy_Regicide_Daala</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_04</Prereq>
 		<Prereq>Empire_Enters_Tech_05</Prereq>
 	</Event>	
-	
 	
 
 		
@@ -691,8 +715,7 @@
 	</Event>
 	
 	<Event Name="Lock_Pellaeon_Regicide">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>4</Event_Param1>
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Dummy_Regicide_Pellaeon</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_05</Prereq>

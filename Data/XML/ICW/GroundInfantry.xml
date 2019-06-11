@@ -679,7 +679,7 @@
 		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
 		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
 		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
-		<CategoryMask> Vehicle | AntiInfantry</CategoryMask>
+		<CategoryMask> Vehicle </CategoryMask>
 		<MovementClass> Hover </MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
@@ -1478,7 +1478,7 @@
 		<Damage>0.6</Damage>
 		<Sensor_Range>20</Sensor_Range>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>8</Tactical_Health>
+		<Tactical_Health>7</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>0</Energy_Capacity>
 		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
@@ -1494,10 +1494,8 @@
 		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.17</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
-		
-		<HardPoints>HP_E11_Rifle</HardPoints>
 
-		<!--<Projectile_Types>Proj_Hand_Blaster_Redx2</Projectile_Types>-->
+		<Projectile_Types>Proj_Hand_Blaster_Redx2</Projectile_Types>
 
 		<Turret_Rotate_Extent_Degrees>45.0</Turret_Rotate_Extent_Degrees>
  	 	<Turret_Elevate_Extent_Degrees>120.0</Turret_Elevate_Extent_Degrees>
@@ -1538,7 +1536,7 @@
 		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
 		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
 		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
-		<CategoryMask> Infantry | AntiInfantry </CategoryMask>
+		<CategoryMask> Infantry </CategoryMask>
 		<MovementClass> Infantry </MovementClass>
 		<Property_Flags>Fodder</Property_Flags>
 		<OccupationStyle>1x1</OccupationStyle>
@@ -1627,13 +1625,6 @@
 		<Variant_Of_Existing_Type>Stormtrooper</Variant_Of_Existing_Type>
 		<LandBehavior>LANDING, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TURRET,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DEMOLITION, DISABLE_FORCE_ABILITIES</LandBehavior>
 		<Disable_Force_Abilities_Range>250</Disable_Force_Abilities_Range>
-	</GroundInfantry>
-	
-	<GroundInfantry Name="Stormtrooper_Plex">
-		<Variant_Of_Existing_Type>Stormtrooper</Variant_Of_Existing_Type>
-		<HardPoints>HP_PLX</HardPoints>
-		
-		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
 	</GroundInfantry>
 	
 	<GroundInfantry Name="Stormtrooper_Sergeant">
@@ -1764,7 +1755,7 @@
 		<Damage>0.6</Damage>
 		<Sensor_Range>20</Sensor_Range>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>5</Tactical_Health>
+		<Tactical_Health>12</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>0</Energy_Capacity>
 		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
@@ -1775,11 +1766,10 @@
 		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
 		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
 		<Victory_Relevant>yes</Victory_Relevant>
-
-		
-				<HardPoints>HP_E11_Rifle</HardPoints>
-
-		<!--<Projectile_Types>Proj_Hand_Blaster_Redx2</Projectile_Types>-->
+		<Projectile_Fire_Pulse_Count>18</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.75</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
 
 		<Turret_Rotate_Extent_Degrees>30.0</Turret_Rotate_Extent_Degrees>
  	 	<Turret_Elevate_Extent_Degrees>30.0</Turret_Elevate_Extent_Degrees>
@@ -1872,7 +1862,16 @@
 	<GroundInfantry Name="Armytrooper_Lieutenant">
 		<Variant_Of_Existing_Type>Armytrooper</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_ARMYTROOPER_LIEUTENANT</Text_ID>
-		
+		<Land_Model_Name>Ei_ArmyTrooperArmoredLieutenant.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_ArmyTrooperArmoredLieutenant.ALO,
+			Urban, 				Ei_ArmyTrooperArmoredLieutenant.ALO,
+			Arctic, 			Ei_ArmyTrooperArmoredLieutenant.ALO,
+			Volcanic, 			Ei_ArmyTrooperArmoredLieutenant.ALO,
+			Desert, 			Ei_ArmyTrooperArmoredLieutenant.ALO,
+			Forest, 			Ei_ArmyTrooperArmoredLieutenant.ALO,
+			Swamp, 				Ei_ArmyTrooperArmoredLieutenant.ALO
+		</Land_Terrain_Model_Mapping>
 		<Tactical_Health>21</Tactical_Health>
 		<Encyclopedia_Text>TEXT_TOOLTIP_ARMYTROOPER_LIEUTENANT TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<Is_Squashable> Yes </Is_Squashable>
@@ -2016,11 +2015,6 @@
 		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
-	</GroundInfantry>
-	<GroundInfantry Name="NewRepublic_Plex">
-		<Variant_Of_Existing_Type>Rebel_Trooper</Variant_Of_Existing_Type>
-		<HardPoints>HP_PLX_2M</HardPoints>
-
 	</GroundInfantry>
 	<GroundInfantry Name="NewRepublic_Lt">
 		<Variant_Of_Existing_Type>Rebel_Trooper</Variant_Of_Existing_Type>
@@ -2395,9 +2389,7 @@
 		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.18</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
-		<!--<Projectile_Types>Proj_Hand_Blaster_Redx2</Projectile_Types>-->
-		
-		<HardPoints>HP_A280_Rifle</HardPoints>
+		<Projectile_Types>Proj_Hand_Blaster_Redx2</Projectile_Types>
 
 		<Turret_Rotate_Extent_Degrees>45.0</Turret_Rotate_Extent_Degrees>
  	 	<Turret_Elevate_Extent_Degrees>45.0</Turret_Elevate_Extent_Degrees>
@@ -2438,7 +2430,7 @@
 		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
 		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
 		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
-		<CategoryMask> Infantry | AntiInfantry </CategoryMask>
+		<CategoryMask> Infantry </CategoryMask>
 		<MovementClass>Infantry</MovementClass>
 		<Property_Flags>Fodder</Property_Flags>
 		<Pause_During_Cinematic_Anim>yes</Pause_During_Cinematic_Anim>
@@ -2775,7 +2767,7 @@
 		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
-		<CategoryMask> Infantry | AntiInfantry | AntiVehicle</CategoryMask>
+		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
 		<MovementClass> Infantry </MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
@@ -2805,7 +2797,7 @@
 		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
 		<Is_Squashable> Yes </Is_Squashable>
 		<Create_Team>No</Create_Team>
-		<AI_Combat_Power>20</AI_Combat_Power>
+		<AI_Combat_Power>100</AI_Combat_Power>
 		<Idle_Chase_Range>50.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>

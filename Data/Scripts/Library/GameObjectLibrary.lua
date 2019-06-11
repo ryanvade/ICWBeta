@@ -480,53 +480,15 @@ GameObjectLibrary = {
                         Initial=2
                     }
                 },
-				["TIE_BOMBER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
-                    ["PENTASTAR"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
-                    ["PIRATES"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
-                    ["TERADOC"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
                 ["SHIELDED_TIE_SQUADRON"]={
                     ["REBEL"] = {
-                        Reserve=1,
+                        Reserve=2,
                         Initial=2
-                    }
-                },
-				["TIE_PUNISHER_SQUADRON"]={
-                    ["HUTTS"] = {
-                        Reserve=0,
-                        Initial=1
-                    },
-                    ["HOSTILE"] = {
-                        Reserve=0,
-                        Initial=1
-                    },
-                    ["WARLORDS"] = {
-                        Reserve=0,
-                        Initial=1
-                    }
-                },
-				["Y-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=1,
-                        Initial=1
                     }
                 },
                 ["REBEL_X-WING_SQUADRON"]={
                     ["REBEL"] = {
-                        Reserve=0,
+                        Reserve=1,
                         Initial=1
                     }
                 }
@@ -684,7 +646,7 @@ GameObjectLibrary = {
                 },
                 ["TIE_PUNISHER_SQUADRON"]={
      				["HUTTS"] = {
-                        Reserve=0,
+                        Reserve=1,
                         Initial=1
                     }
                 },
@@ -957,7 +919,7 @@ GameObjectLibrary = {
                 },
                 ["TIE_PUNISHER_SQUADRON"]={
                     ["HUTTS"] = {
-                        Reserve=0,
+                        Reserve=1,
                         Initial=1
                     }
                 },
@@ -3335,6 +3297,10 @@ GameObjectLibrary = {
                     }
                 },
                 ["TIE_BOMBER_SQUADRON"]={
+                    ["HUTTS"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
                     ["EMPIRE"] = {
                         Reserve=1,
                         Initial=1
@@ -3365,12 +3331,6 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=1,
                         TechLevel=EqualTo(2)
-                    }
-                },
-				["TIE_PUNISHER_SQUADRON"]={
-                    ["HUTTS"] = {
-                        Reserve=0,
-                        Initial=1
                     }
                 },
                 ["SHIELDED_INTERCEPTOR_SQUADRON"]={
@@ -3478,6 +3438,9 @@ GameObjectLibrary = {
             Scripts={
                 "MultiLayer",
                 "FighterSpawn"
+            },
+            Flags = {
+                HANGAR = true
             },
             Fighters={
                 ["TRIFOIL_SQUADRON"]={
@@ -3651,6 +3614,9 @@ GameObjectLibrary = {
                 "MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat"
+            },
+            Flags = {
+                HANGAR = true
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
@@ -4458,6 +4424,14 @@ GameObjectLibrary = {
                     ["PIRATES"] = {
                         Reserve=0,
                         Initial=1
+                    },
+                    ["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=1
                     }
                 },
                 ["Z95_HEADHUNTER_SQUADRON"]={
@@ -4477,15 +4451,7 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=1
                     }
-                },
-                    ["HOSTILE"] = {
-                        Reserve=0,
-                        Initial=1
-                },
-                    ["WARLORDS"] = {
-                        Reserve=0,
-                        Initial=1
-                    }
+                }
             }
         },
         ["GENERIC_TECTOR"]={
@@ -4588,14 +4554,6 @@ GameObjectLibrary = {
             }
         },
         ["CARRACK_CRUISER"]={
-            Scripts={
-                "MultiLayer",
-                "SingleUnitRetreat"
-            },
-            Fighters={
-            }
-        },
-		["VICTORY_II_FRIGATE"]={
             Scripts={
                 "MultiLayer",
                 "SingleUnitRetreat"

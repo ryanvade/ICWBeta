@@ -54,7 +54,6 @@ function Find_Faction(message)
      p_pentastar = Find_Player("Pentastar")
      p_zsinj = Find_Player("Pirates")
      p_maldrood = Find_Player("Teradoc")
-	 p_csa = Find_Player("Corporate_Sector")
 
     if p_newrep.Is_Human() then
       Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
@@ -70,8 +69,6 @@ function Find_Faction(message)
       Story_Event("ENABLE_BRANCH_ZSINJ_FLAG")
     elseif p_maldrood.Is_Human() then
       Story_Event("ENABLE_BRANCH_TERADOC_FLAG")
-	elseif p_csa.Is_Human() then
-      Story_Event("ENABLE_BRANCH_CSA_FLAG")
     end
   end
 end

@@ -58,7 +58,7 @@ function Definitions()
 	},
 	{
 		"GroundForce"
-		,"MinimumTotalForce = 1500"				
+		,"MinimumTotalSize = 4"				
 		,"Vehicle | Infantry | Air = 100%"
 	}
 	}
@@ -111,7 +111,7 @@ function SpaceForce_Thread()
 		Sleep(5)
 	end
 	
-	SpaceForce.Release_Forces(0.5)
+	SpaceForce.Release_Forces(1.0)
 	DebugMessage("%s -- SpaceForce Done!  Exiting Script!", tostring(Script))
 end
 

@@ -17,7 +17,7 @@
 		<SpaceBehavior>SPECIAL_WEAPON</SpaceBehavior>
 		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,SELECTABLE,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
 
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Rebel, Corporate_Sector</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Build_Cost_Credits>2000</Build_Cost_Credits>
 		<Build_Time_Seconds>90</Build_Time_Seconds>
@@ -2593,7 +2593,7 @@
 		<Build_Cost_Credits>500</Build_Cost_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
-		<Build_Max_Instances_Per_Planet> 2 </Build_Max_Instances_Per_Planet>
+		<Build_Max_Instances_Per_Planet> 3 </Build_Max_Instances_Per_Planet>
 		<Size_Value>50</Size_Value>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
@@ -2969,7 +2969,6 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Tactical_Additional_Structure_Type>Power_Generator_E</Tactical_Additional_Structure_Type>
-		<Required_Special_Structures>E_Ground_Barracks</Required_Special_Structures>
 
 		<!-- When one of these objects is created in galactic mode, we will populate every marker in land mode
 		that is a specific marker for E_Ground_Turbolaser_Tower. The galactic object will persist unless all
@@ -2991,7 +2990,6 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Tactical_Additional_Structure_Type>Power_Generator_R</Tactical_Additional_Structure_Type>
-		<Required_Special_Structures>R_Ground_Barracks</Required_Special_Structures>
 
 		<!-- When one of these objects is created in galactic mode, we will populate every marker in land mode
 		that is a specific marker for R_Ground_Turbolaser_Tower. The galactic object will persist unless all
@@ -3015,7 +3013,6 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Tactical_Additional_Structure_Type>Power_Generator_U</Tactical_Additional_Structure_Type>
-		<Required_Special_Structures>U_Ground_Barracks</Required_Special_Structures>
 
 		<!-- When one of these objects is created in galactic mode, we will populate every marker in land mode
 		that is a specific marker for R_Ground_Turbolaser_Tower. The galactic object will persist unless all
@@ -3368,14 +3365,6 @@
 				RL_Combat_Armor_L1_Upgrade,
 				RL_Combat_Armor_L2_Upgrade,
 				RL_Weatherproof_Upgrade,
-			Corporate_Sector,
-			    Espo_Squad,
-				CSA_Plex_Squad,
-				B1_Droid_Squad,
-				CSA_Destroyer_Droid_Company,
-				PL_Increased_Mobility_Upgrade,
-				PL_Stamina_Boost_Upgrade,
-				PL_Weatherproof_Upgrade,
 		</Tactical_Buildable_Objects_Multiplayer>
 
 
@@ -3768,16 +3757,6 @@
 				RL_Enhanced_Repulsors_L1_Upgrade,
 				RL_Enhanced_Repulsors_L2_Upgrade,
 				RL_Weatherproof_Upgrade,
-			Corporate_Sector,
-			    Espo_Walker_Squad,
-				SX20_Company,
-				X10_Group,
-				GX12_Company,
-				PL_Light_Reflective_Armor_L1_Upgrade,
-				PL_Light_Reflective_Armor_L2_Upgrade,
-				PL_Enhanced_Reactors_L1_Upgrade,
-				PL_Enhanced_Reactors_L2_Upgrade,
-				PL_Weatherproof_Upgrade,
 		</Tactical_Buildable_Objects_Multiplayer>
 
 
@@ -4146,18 +4125,6 @@
 				RL_Improved_T4B_Damage_L1_Upgrade,
 				RL_Improved_T4B_Damage_L2_Upgrade,
 				RL_Weatherproof_Upgrade,
-			Corporate_Sector,
-			    C_Hailfire_Company,
-				Aratech_Battle_Platform_Company,
-				JX40_Group,
-				Strikebreaker_Group,
-				K222_Wing,
-				Persuader_Company,
-				PL_Heavy_Reflective_Armor_L1_Upgrade,
-				PL_Heavy_Reflective_Armor_L2_Upgrade,
-				PL_Improved_ATAT_Reactors_L1_Upgrade,
-				PL_Improved_ATAT_Reactors_L2_Upgrade,
-				PL_Weatherproof_Upgrade,
 		</Tactical_Buildable_Objects_Multiplayer>
 
 		<!--<Tactical_Buildable_Objects_Multiplayer>

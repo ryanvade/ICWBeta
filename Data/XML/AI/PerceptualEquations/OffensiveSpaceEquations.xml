@@ -492,10 +492,14 @@
 			areas with nebulae
 		-->
 	<Good_Space_Artillery_Area>
+		(Game.Age > (60 # 120))
+		*
+		(4000 > Variable_Target.DistanceToNearestEnemy)
+		*
 		(Variable_Target.DistanceToNearestEnemy > 2000)
 		*
 		(
-			50.0
+			30.0
 			+
 			2.0 * Function_Space_Area_Is_Friendly.Evaluate
 			+

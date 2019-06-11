@@ -53,7 +53,7 @@ function Find_Faction(message)
     local p_empire = Find_Player("Empire")
 
     if p_newrep.Is_Human() then
-      Story_Event("ENABLE_BRANCH_NR_FLAG")
+      Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
     elseif p_empire.Is_Human() then
       Story_Event("ENABLE_BRANCH_EMPIRE_FLAG")
     end
@@ -70,7 +70,7 @@ function Palpatine_Joins(message)
     --ChangePlanetOwnerAndRetreat(start_planet, p_empire)
 
 	start_planet.Change_Owner(p_empire)
-    local spawn_list_emperor = { "Emperor_Palpatine_Team", "Empire_MoffPalace", "E_Ground_Barracks", "E_Ground_Light_Vehicle_Factory", "E_Ground_Heavy_Vehicle_Factory", "E_Ground_Advanced_Vehicle_Factory", "E_Ground_Advanced_Vehicle_Factory", "Eclipse_Super_Star_Destroyer" }
+    local spawn_list_emperor = { "Emperor_Palpatine_Team", "Empire_MoffPalace", "E_Ground_Barracks", "E_Ground_Light_Vehicle_Factory", "E_Ground_Heavy_Vehicle_Factory", "E_Ground_Advanced_Vehicle_Factory", "E_Ground_Advanced_Vehicle_Factory" }
     local EmperorSpawn = SpawnList(spawn_list_emperor, start_planet, p_empire,true,false)
 	
 	if p_newrep.Is_Human() then
@@ -195,8 +195,8 @@ end
 function Luke_Joins(message)
   if message == OnEnter then
 
-    local p_empire = Find_Player("Empire")
-    local start_planet = FindPlanet("Byss")
+    p_empire = Find_Player("Empire")
+    start_planet = FindPlanet("Byss")
 
     if start_planet.Get_Owner() ~= Find_Player("Empire") then
       allPlanets = FindPlanet.Get_All_Planets()
@@ -208,8 +208,8 @@ function Luke_Joins(message)
       end
     end
 
-    local spawn_list_luke = { "Luke_Skywalker_Darkside_Team" }
-    local LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_empire,true,false)
+    spawn_list_luke = { "Luke_Skywalker_Darkside_Team" }
+    LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_empire,true,false)
 
   end
 end
@@ -217,8 +217,8 @@ end
 function Luke_Betrays_Empire(message)
   if message == OnEnter then
 
-    local p_rebel = Find_Player("Rebel")
-    local start_planet = FindPlanet("Yavin")
+    p_rebel = Find_Player("Rebel")
+    start_planet = FindPlanet("Yavin")
 
     if start_planet.Get_Owner() ~= Find_Player("Rebel") then
       allPlanets = FindPlanet.Get_All_Planets()
@@ -230,8 +230,8 @@ function Luke_Betrays_Empire(message)
       end
     end
 
-    local spawn_list_luke = { "Luke_Skywalker_Jedi_Team" }
-    local LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_rebel,true,false)
+    spawn_list_luke = { "Luke_Skywalker_Jedi_Team" }
+    LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_rebel,true,false)
 
   end
 end
@@ -239,11 +239,11 @@ end
 function Luke_Rejoins(message)
   if message == OnEnter then
 
-    local p_rebel = Find_Player("Rebel")
-    local start_planet = FindPlanet("Yavin")
+    p_rebel = Find_Player("Rebel")
+    start_planet = FindPlanet("Yavin")
 
     if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-      local allPlanets = FindPlanet.Get_All_Planets()
+      allPlanets = FindPlanet.Get_All_Planets()
       random = GameRandom(1, table.getn(allPlanets))
       start_planet = allPlanets[random]
       while start_planet.Get_Owner() ~= Find_Player("Rebel") do
@@ -252,8 +252,8 @@ function Luke_Rejoins(message)
       end
     end
 
-    local spawn_list_luke = { "Luke_Skywalker_Jedi_Team" }
-    local LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_rebel,true,false)
+    spawn_list_luke = { "Luke_Skywalker_Jedi_Team" }
+    LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_rebel,true,false)
  
    end
  end
@@ -299,8 +299,7 @@ function Noncanonical_Byss_Takeover(message)
     local p_rebel = Find_Player("Rebel")
     local start_planet = FindPlanet("Byss")
 
-	--start_planet.Change_Owner(p_rebel)
-	ChangePlanetOwnerAndRetreat(start_planet, p_rebel)
+	start_planet.Change_Owner(p_rebel)
     local spawn_list_unlikely_conquerors = { "Delvardus_Heavy_Assault_Company", "Imperial_XR85_Tankdroid" }
     local BalmorraSpawn = SpawnList(spawn_list_unlikely_conquerors, start_planet, p_rebel,true, false)
 

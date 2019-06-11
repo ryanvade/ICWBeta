@@ -129,7 +129,7 @@
 		+
 		Function_DefensiveValue.Evaluate / 8.0
 		+
-		Function_Is_Connected_To_Enemy.Evaluate
+		1.5 * Function_Is_Connected_To_Enemy.Evaluate
 		+
 		8.0 * Function_Planet_Has_Capital_Building.Evaluate
 		+
@@ -149,13 +149,13 @@
 		bonus for having force here
 		-->
 	<Needs_Base_Shield>
-		(Variable_Target.GroundbaseLevel
+		(2.0 * Variable_Target.GroundbaseLevelUnnormalized
 		+
 		8.0 * Variable_Target.Hints.Chokepoint
 		+
 		Function_DefensiveValue.Evaluate
 		+
-		Function_Is_Connected_To_Enemy.Evaluate
+		2.0 * Function_Is_Connected_To_Enemy.Evaluate
 		+
 		Variable_Target.FriendlyForce.GroundTotalUnnormalized / 2500.0
 		+
@@ -169,11 +169,11 @@
 	since turbolaser effectiveness isn't very dependent on other units being present.
 	-->
 	<Needs_Turbolasers>
-		(Variable_Target.GroundbaseLevel
+		(2.0 * Variable_Target.GroundbaseLevelUnnormalized
 		+
 		Function_DefensiveValue.Evaluate
 		+
-		Function_Is_Connected_To_Enemy.Evaluate
+		3.0 * Function_Is_Connected_To_Enemy.Evaluate
 		+
 		8.0 * Function_Planet_Has_Capital_Building.Evaluate)
 		*
@@ -224,9 +224,7 @@
 	</Low_Ground_Defense_Score>
 
 	<Low_Space_Defense_Score>
-		(1.0 - Variable_Target.FriendlyForce.SpaceTotalNBTD)
-		*
-		Function_Is_Connected_To_Enemy.Evaluate
+		1.0 - Variable_Target.FriendlyForce.SpaceTotalNBTD		
 	</Low_Space_Defense_Score>
 
 	<Ground_Priority_Defense_Score>

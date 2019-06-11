@@ -272,7 +272,6 @@
 		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
 		<Company_Units>Sariss</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<Is_Stealth_Company>Yes</Is_Stealth_Company>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
 		<Available_In_Skirmish>yes</Available_In_Skirmish>
 		<Can_Be_Only_One>true</Can_Be_Only_One>
@@ -286,7 +285,7 @@
 		<Land_Override_Population_Value>1</Land_Override_Population_Value>
 
 		<Encyclopedia_Text> TEXT_HERO_SARISS_DESCRIPTION </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_KNIGHT </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
 		<CategoryMask>Infantry</CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
 		<Score_Cost_Credits> 10000 </Score_Cost_Credits>
@@ -530,12 +529,8 @@
 				<Causes_Despawn>No</Causes_Despawn>
 				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
 			</Remove_Corruption_Ability>
-			
-			<Galactic_Stealth_Ability Name="Sariss_Galactic_Stealth">
-				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
-			</Galactic_Stealth_Ability>
 
-			<System_Spy_Ability Name="Sariss_System_Spy">
+			<System_Spy_Ability Name="Sariss_Jade_System_Spy">
 				<Initially_Enabled>Yes</Initially_Enabled>
 				<Activation_Style>Galactic_Automatic</Activation_Style>
 				<Causes_Despawn>No</Causes_Despawn>
@@ -651,29 +646,6 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Reduce_Production_Price_Ability>
 			
-			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
-				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
-				<!-- 3% bonus to base planetary income -->
-				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
-				<!-- plus an absolute 0 credits to planetary income -->
-				<Absolute_Income_Modifier>-350</Absolute_Income_Modifier>
-				<!-- net effect of +( (base income * 0%) + 20) credits -->
-				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
-				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
-			</Planet_Income_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
-	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-				<Activation_Min_Range>2</Activation_Min_Range>
-	            <Activation_Max_Range>1500</Activation_Max_Range>
-
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 	
 	</UniqueUnit>
@@ -853,18 +825,6 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 	
-			<Tractor_Beam_Attack_Ability Name="Praetor_Tractor_Beam_Attack_Ability">
-					<Activation_Style> User_Input </Activation_Style>
-					<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
-					<Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-					<Activation_Min_Range>2</Activation_Min_Range>
-					<Activation_Max_Range>1500</Activation_Max_Range>
-
-					<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-					<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-					<Stacking_Category>0</Stacking_Category>
-				</Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 	</UniqueUnit>
@@ -1154,21 +1114,6 @@
                 <Berserker_Duration_In_Secs>4.0</Berserker_Duration_In_Secs>
 				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
             </Berserker_Ability>
-			
-			<Galactic_Stealth_Ability Name="Sariss_Galactic_Stealth">
-				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
-			</Galactic_Stealth_Ability>
-
-			<System_Spy_Ability Name="Sariss_Limited_Spy">
-				<Initially_Enabled>Yes</Initially_Enabled>
-				<Activation_Style>Galactic_Automatic</Activation_Style>
-				<Causes_Despawn>No</Causes_Despawn>
-				<Duration_In_Secs>-1.0</Duration_In_Secs>
-				<See_Num_Fleets>Yes</See_Num_Fleets>
-				<See_Minor_Stealth_Heroes>Yes</See_Minor_Stealth_Heroes>
-				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
-			</System_Spy_Ability>
-
 		</Abilities>
 		<Population_Value>1</Population_Value>
 	</HeroUnit>
@@ -1237,30 +1182,6 @@
 				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
-			
-			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
-				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
-				<!-- 3% bonus to base planetary income -->
-				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
-				<!-- plus an absolute 0 credits to planetary income -->
-				<Absolute_Income_Modifier>-350</Absolute_Income_Modifier>
-				<!-- net effect of +( (base income * 0%) + 20) credits -->
-				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
-				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
-			</Planet_Income_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
-	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-				<Activation_Min_Range>2</Activation_Min_Range>
-	            <Activation_Max_Range>1500</Activation_Max_Range>
-
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 	</UniqueUnit>
@@ -1665,7 +1586,7 @@
 		<Autoresolve_Health>400</Autoresolve_Health>
 		<Damage>5</Damage>
 		<Shield_Points>150</Shield_Points>
-		<Tactical_Health>600</Tactical_Health><!-- Reverted to original value of 1800 from 5000 for MP  -->
+		<Tactical_Health>1000</Tactical_Health><!-- Reverted to original value of 1800 from 5000 for MP  -->
 		<Shield_Refresh_Rate>15</Shield_Refresh_Rate>
 		<Energy_Capacity>9999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>

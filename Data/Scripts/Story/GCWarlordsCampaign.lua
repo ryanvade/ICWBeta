@@ -200,7 +200,7 @@ function SubEra_Change(message)
     checkPestage.Despawn()
   end
 
-  checkHarrsk = Find_First_Object("Whirlwind_Star_Destroyer")
+  checkHarrsk = Find_First_Object("Shockwave_Star_Destroyer")
   if TestValid(checkHarrsk) then
     checkHarrsk.Despawn()
   end
@@ -218,7 +218,7 @@ function SubEra_Change(message)
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
 
-      spawn_list = { "Whirlwind_Star_Destroyer" }
+      spawn_list = { "Shockwave_Star_Destroyer" }
       HarrskForces = SpawnList(spawn_list, start_planet, p_harrsk, false, false)
     end
 

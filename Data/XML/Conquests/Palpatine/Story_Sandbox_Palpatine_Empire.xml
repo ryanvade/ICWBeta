@@ -45,7 +45,7 @@
 		<Reward_Param1>Lancet_Kosh</Reward_Param1>
 		<Reward_Param2>Byss</Reward_Param2>
 		<Prereq>Universal_Story_Start</Prereq>
-	</Event>	
+	</Event>
 	
 	<Event Name="Spawn_Kaine">
 		<Event_Type>STORY_TRIGGER</Event_Type>
@@ -100,6 +100,13 @@
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 		
+	<Event Name="Kaine_Death">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>700</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Reaper_Kaine</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
 	
 	<Event Name="Byss_Bounces">
 		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>

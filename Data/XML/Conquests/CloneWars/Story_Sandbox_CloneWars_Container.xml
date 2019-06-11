@@ -150,42 +150,6 @@
 		<Reward_Param2>0</Reward_Param2>
 	</Event>
 	
-
-	
-	<Event Name="Faction_Branch_Enabler_Republic">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_GAR_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Republic</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-	
-	 <!-- ==================== BEGIN SAVE CRASH RE-ENABLE EVENTS ==================== -->
-
-	<Event Name="Filter_AI_Challenge_Clicked">
-		<Event_Type>STORY_CLICK_GUI</Event_Type>
-		<Event_Param1>b_save_fixer</Event_Param1>
-		<Perpetual>true</Perpetual>
-	</Event>	
-		
-	<Event Name="Faction_Branch_Playing_Republic">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_GAR_Save</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-		<Prereq>Faction_Branch_Enabler_Republic</Prereq>
-	</Event>
-	
-	<Event Name="Change_AI_Republic">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Empire</Reward_Param1>
-		<Reward_Param2>SkynetAI</Reward_Param2>
-		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
-		<Branch>Faction_Branch_GAR_Save</Branch>
-	</Event>
-	
 	<Event Name="Faction_Branch_Playing_CIS">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 
@@ -195,17 +159,23 @@
 		<Prereq>Faction_Branch_Enabler_CIS</Prereq>
 	</Event>
 	
-	<Event Name="Change_AI_CIS">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Rebel</Reward_Param1>
-		<Reward_Param2>SkynetAI</Reward_Param2>
-		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
-		<Branch>Faction_Branch_CIS_Save</Branch>
-	</Event>
-		
-
 	
+	<Event Name="Faction_Branch_Enabler_Republic">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_REPUBLIC_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Republic</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Republic">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Republic_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Republic</Prereq>
+	</Event>
 	
 	
 	<!--***********************************************************-->

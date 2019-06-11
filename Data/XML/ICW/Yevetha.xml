@@ -783,7 +783,7 @@
 
 	<SpaceUnit Name="Armadia_E">
 		<Variant_of_Existing_Type>Armadia</Variant_of_Existing_Type>
-		<Affiliation>Empire, Teradoc, Pirates, Hutts, Corporate_Sector</Affiliation>
+		<Affiliation>Empire</Affiliation>
 		<Tech_Level>99</Tech_Level>
 	</SpaceUnit>
 
@@ -1058,30 +1058,6 @@
 				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
-			
-			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
-				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
-				<!-- 3% bonus to base planetary income -->
-				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
-				<!-- plus an absolute 0 credits to planetary income -->
-				<Absolute_Income_Modifier>-350</Absolute_Income_Modifier>
-				<!-- net effect of +( (base income * 0%) + 20) credits -->
-				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
-				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
-			</Planet_Income_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
-	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-				<Activation_Min_Range>2</Activation_Min_Range>
-	            <Activation_Max_Range>1500</Activation_Max_Range>
-
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 		<SFXEvent_Select>Ship_Select_Yevetha</SFXEvent_Select>
@@ -1263,30 +1239,6 @@
 				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
-			
-			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
-				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
-				<!-- 3% bonus to base planetary income -->
-				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
-				<!-- plus an absolute 0 credits to planetary income -->
-				<Absolute_Income_Modifier>-260</Absolute_Income_Modifier>
-				<!-- net effect of +( (base income * 0%) + 20) credits -->
-				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
-				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
-			</Planet_Income_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="Bellator_Tractor_Beam_Attack_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
-	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-				<Activation_Min_Range>2</Activation_Min_Range>
-	            <Activation_Max_Range>1500</Activation_Max_Range>
-
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 	</UniqueUnit>
@@ -1339,19 +1291,6 @@
 				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="VSD_Tractor_Beam_Attack_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
-	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-				<Activation_Min_Range>2</Activation_Min_Range>
-	            <Activation_Max_Range>1500</Activation_Max_Range>
-
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
@@ -1577,19 +1516,6 @@
 				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="Allegiance_Tractor_Beam_Attack_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
-	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-				<Activation_Min_Range>2</Activation_Min_Range>
-	            <Activation_Max_Range>1500</Activation_Max_Range>
-
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 		
 		<Tactical_Build_Cost_Multiplayer>10000</Tactical_Build_Cost_Multiplayer>
@@ -1652,19 +1578,6 @@
 				<Movement_Speed_Bonus_Percentage>0.05</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="Allegiance_Tractor_Beam_Attack_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
-	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-				<Activation_Min_Range>2</Activation_Min_Range>
-	            <Activation_Max_Range>1500</Activation_Max_Range>
-
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 		<Icon_Name>i_button_yev2.tga</Icon_Name>
@@ -2554,7 +2467,7 @@
 			</Political_Transition_Bonus_Ability>
 			
 							<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
-				<Specific_Mod_Source_Text>TEXT_ECONOMY_PALACE</Specific_Mod_Source_Text>
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_CAPITAL</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
 				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
 				<!-- plus an absolute 0 credits to planetary income -->

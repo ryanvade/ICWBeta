@@ -35,8 +35,8 @@
 	<Object_Max_Speed_Multiplier_Land> 1.36 </Object_Max_Speed_Multiplier_Land>
 
 	<!-- GameObjectType and Hard Point Max Health multiplier factors per mode: 1.0 = no change, 0.5 = half, 2.0 = double, etc. -->
-	<Object_Max_Health_Multiplier_Space> 2.2 </Object_Max_Health_Multiplier_Space> <!-- AI  changed from 3 and 2 respectively -->
-	<Object_Max_Health_Multiplier_Land> 2.2 </Object_Max_Health_Multiplier_Land>
+	<Object_Max_Health_Multiplier_Space> 2.0 </Object_Max_Health_Multiplier_Space> <!-- AI  changed from 3 and 2 respectively -->
+	<Object_Max_Health_Multiplier_Land> 1.6 </Object_Max_Health_Multiplier_Land>
 
 	<Use_Neutral_UI_Color>true</Use_Neutral_UI_Color>
 	<Neutral_UI_Color>150, 150, 150, 255</Neutral_UI_Color>
@@ -47,10 +47,10 @@
 	<Enemy_Color>239, 9, 9, 255</Enemy_Color>
 
 	<!-- Units are more vulnerable right after being unloaded... time is in Seconds -->
-	<Elevated_Vulnerability_Duration>2.0</Elevated_Vulnerability_Duration>
+	<Elevated_Vulnerability_Duration>3.0</Elevated_Vulnerability_Duration>
 	<Elevated_Vulnerability_Factor>-2.0</Elevated_Vulnerability_Factor>
     <Space_Elevated_Vulnerability_Duration>2.0</Space_Elevated_Vulnerability_Duration>
-    <Space_Elevated_Vulnerability_Factor>-2.0</Space_Elevated_Vulnerability_Factor>
+    <Space_Elevated_Vulnerability_Factor>-3.0</Space_Elevated_Vulnerability_Factor>
 
 	<Fleet_Movement_Line_Texture_Name>w_galaxy_line.tga</Fleet_Movement_Line_Texture_Name>
 	<Fleet_Hyperspace_Band_Texture_Name>w_galaxy_line.tga</Fleet_Hyperspace_Band_Texture_Name>
@@ -399,7 +399,6 @@
 	<HardPoint_Target_Reticle_Friendly_Disabled_Texture> HARD_POINT_DUMMY_ART, I_Hard_Point_Reticle_Generic </HardPoint_Target_Reticle_Friendly_Disabled_Texture>
 	<HardPoint_Target_Reticle_Friendly_Disabled_Tracked_Texture> HARD_POINT_DUMMY_ART, I_Hard_Point_Reticle_Generic_Tracked </HardPoint_Target_Reticle_Friendly_Disabled_Tracked_Texture>
 
-	
 	<!-- -->
 
 	<!-- End Hard Point Friendly and Ememy Reticle Textures by Hard Point Type -->
@@ -1978,33 +1977,33 @@
 	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Default, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Shield_Default, 1.2 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_MPTL, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Infantry, 1.0 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Infantry, 1.3 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Mauler, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Hero, 0.5 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Vehicle_LT, 0.25 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Vehicle, 0.15 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_2M, 0.15 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_T2B, 0.15 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_SPMAT, 0.15 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_ATAA, 0.15 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_ATST, 0.15 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_T4B, 0.15 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Speeder, 0.15 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Structure, 0.25 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Turret, 0.15 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Vehicle_LT, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Vehicle, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_2M, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_T2B, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_SPMAT, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_ATAA, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_ATST, 1.1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_T4B, 0.10 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Speeder, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Structure, 1.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Turret, 1.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Wall, 1.5 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_ATAT, 0.15 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_ATAT, 0.10 </Damage_To_Armor_Mod>
     <Damage_To_Armor_Mod> Damage_Blaster_Hand, Shield_Capital, 1 </Damage_To_Armor_Mod>
     <Damage_To_Armor_Mod> Damage_Blaster_Hand, Shield_Frigate, 1 </Damage_To_Armor_Mod>
     <Damage_To_Armor_Mod> Damage_Blaster_Hand, Shield_Corvette, 1 </Damage_To_Armor_Mod>
     <Damage_To_Armor_Mod> Damage_Blaster_Hand, Shield_Fighter, 1 </Damage_To_Armor_Mod>
     <Damage_To_Armor_Mod> Damage_Blaster_Hand, Shield_Tank, 0.1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Scout_Bike, 1.0 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Juggernaut, 0.15 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Juggernaut, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Dark_Trooper, 0.7 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Vornskr, 1.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Destroyer_Droid, 0.8 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Bunker, 0.15 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Blaster_Hand, Armor_Bunker, 0.75 </Damage_To_Armor_Mod>
 
 
 	<!-- PLEX Missile Damage Type - Ground Only -->
@@ -3875,8 +3874,6 @@
 		Generic_Star_Destroyer, 			Data\ShipNames\Star_Destroyer.txt,
 		Broadside_Cruiser, 					Data\ShipNames\Broadside_Class_Cruiser.txt,
 		Generic_Acclamator_Assault_ship, 	Data\ShipNames\Acclamator_Assault_Ship.txt,
-		Generic_Acclamator_Assault_Ship_I, 	Data\ShipNames\acclamator_I.txt,
-		Generic_Acclamator_Assault_Ship_Leveler, 	Data\ShipNames\Leveler.txt,
 		Generic_Interdictor_Cruiser, 		Data\ShipNames\Interdictor_Cruiser.txt,
 		Generic_Star_Destroyer_Two, 		Data\ShipNames\Imperial_Star_Destroyer_Two.txt,
 		Katana_Dreadnaught_Empire, 			Data\ShipNames\Katana.txt,
@@ -3918,7 +3915,6 @@
 		Combat_Escort_Carrier, 				Data\ShipNames\Imperial_Escort_Carrier.txt,
 		Torpedo_Sphere, 					Data\ShipNames\Torpedo_Sphere.txt,
 		Vigil, 								Data\ShipNames\Vigil.txt,
-		Victory_II_Frigate, 				Data\ShipNames\victory_frigate.txt,
 	</ShipNameTextFiles>
 
 	<!-- Imperial Skirmish Names -->
@@ -4037,10 +4033,7 @@
 		Recusant, 							Data\ShipNames\Recusant.txt,
 		MTC_CSA, 							Data\ShipNames\MTC.txt,
 		Bulwark_I, 							Data\ShipNames\Bulwark_I.txt,
-		Bulwark_II, 						Data\ShipNames\Bulwark_II.txt,
 		Bulwark_III, 						Data\ShipNames\Bulwark_III.txt,
-		Diamond_Frigate, 					Data\ShipNames\Diamond.txt,
-		Geonosian_Cruiser, 					Data\ShipNames\Geonosian.txt,
 		
 		Skirmish_Invincible_Cruiser, 		Data\ShipNames\Invincible.txt,
 		Skirmish_Recusant, 					Data\ShipNames\Recusant.txt,

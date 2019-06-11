@@ -35,7 +35,7 @@
 		
 				<Text_ID>TEXT_HERO_DELVARDUS </Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND3 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_DELVARDUS TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_NIGHT_HAMMER </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIOR_GENERAL </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPTAIN </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 42500 </Score_Cost_Credits>
 
 				<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
@@ -71,29 +71,6 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 	
-			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
-				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
-				<!-- 3% bonus to base planetary income -->
-				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
-				<!-- plus an absolute 0 credits to planetary income -->
-				<Absolute_Income_Modifier>-350</Absolute_Income_Modifier>
-				<!-- net effect of +( (base income * 0%) + 20) credits -->
-				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
-				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
-			</Planet_Income_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
-	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-				<Activation_Min_Range>2</Activation_Min_Range>
-	            <Activation_Max_Range>1500</Activation_Max_Range>
-
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 	
 	</UniqueUnit>
@@ -174,19 +151,6 @@
 				<Movement_Speed_Bonus_Percentage>0.05</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="Praetor_Tractor_Beam_Attack_Ability">
-					<Activation_Style> User_Input </Activation_Style>
-					<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
-					<Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-					<Activation_Min_Range>2</Activation_Min_Range>
-					<Activation_Max_Range>1500</Activation_Max_Range>
-
-					<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-					<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-					<Stacking_Category>0</Stacking_Category>
-				</Tractor_Beam_Attack_Ability>
 	
 		</Abilities>
 
@@ -999,29 +963,6 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 			
-			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
-				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
-				<!-- 3% bonus to base planetary income -->
-				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
-				<!-- plus an absolute 0 credits to planetary income -->
-				<Absolute_Income_Modifier>-350</Absolute_Income_Modifier>
-				<!-- net effect of +( (base income * 0%) + 20) credits -->
-				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
-				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
-			</Planet_Income_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
-	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-				<Activation_Min_Range>2</Activation_Min_Range>
-	            <Activation_Max_Range>1500</Activation_Max_Range>
-
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 	
 	</UniqueUnit>

@@ -41,7 +41,6 @@ function Story_Mode_Service()
 	if setup_complete == true then
 		DebugMessage("%s -- Refreshing perceptions", tostring(Script))
 		stat_display_event.Clear_Dialog_Text()
-		liveFactionTable = CreateFactionTable(CONSTANTS.ALL_FACTIONS_NOT_NEUTRAL)
 
 		for _, faction in pairs(liveFactionTable) do
 			stat_display_event.Add_Dialog_Text("STAT_SEPARATOR")

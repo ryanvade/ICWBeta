@@ -37,7 +37,6 @@ function Definitions()
     Eriadu_Elrood = Elrood_Eriadu,
 	Zsinj_Centares = Centares_Zsinj,
     Set_Subera_Isard = SubEra_Change,
-	Zero_Command_Split = Spawn_Harrsk,
 	E_Level_Two = ThrawnSpawns,
     E_Level_Three = DarkEmpireSpawns,
     E_Level_Four = DaalaSpawns,
@@ -136,7 +135,7 @@ function Determine_Start_Era(message)
 		-- Empire
 		start_planet = FindPlanet("Byss")
 		ChangePlanetOwnerAndRetreat(start_planet, p_empire)
-		spawn_list_Palpatine = {  "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "Sedriss_Team", "Emperor_Palpatine_Team", "General_Veers_Team", "Chimera_Pellaeon_Vice", "Klev_Silencer7" }
+		spawn_list_Palpatine = { "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "Sedriss_Team", "Emperor_Palpatine_Team", "General_Veers_Team", "Chimera_Pellaeon_Vice", "Klev_Silencer7"  }
 		SpawnList(spawn_list_Palpatine, start_planet, p_empire,true,false)
 		
 		-- New Republic
@@ -263,20 +262,17 @@ end
 function Commenor_Maldrood(message)
   if message == OnEnter then
 
-	p_maldrood = Find_Player("Teradoc")
-	start_planet = FindPlanet("Commenor")
+   p_maldrood = Find_Player("Teradoc")
+   start_planet = FindPlanet("Commenor")
 
-	p_empire = Find_Player("Empire")
-	techLevel = p_empire.Get_Tech_Level()
-	if techLevel == 1 then
-		if start_planet.Get_Owner() == Find_Player("Teradoc") then
-			if p_maldrood.Is_Human() then
-				Story_Event("GENDARR_JOINS_SPEECH")
-			end
-		 spawn_list_commenor = { "Lott_Team" , "Gendarr_Reliance" }
-		 SpawnList(spawn_list_commenor, start_planet, p_maldrood,true,false)
+
+    if start_planet.Get_Owner() == Find_Player("Teradoc") then
+		if p_maldrood.Is_Human() then
+			Story_Event("GENDARR_JOINS_SPEECH")
 		end
-	end
+     spawn_list_commenor = { "Lott_Team" , "Gendarr_Reliance" }
+     SpawnList(spawn_list_commenor, start_planet, p_maldrood,true,false)
+    end
 
   end
 end
@@ -287,18 +283,16 @@ function Antem_Maldrood(message)
    p_maldrood = Find_Player("Teradoc")
    start_planet = FindPlanet("Antem")
 
-	p_empire = Find_Player("Empire")
-	techLevel = p_empire.Get_Tech_Level()
-	if techLevel == 1 then
-		if start_planet.Get_Owner() == Find_Player("Teradoc") then
-			if p_maldrood.Is_Human() then
-				Story_Event("GETELLES_JOINS_SPEECH")
-			end
-			spawn_list_kosh = { "Getelles_Team" , "Larm_Carrack" }
-			SpawnList(spawn_list_kosh, start_planet, p_maldrood,true,false)
-		  --end
+
+    if start_planet.Get_Owner() == Find_Player("Teradoc") then
+		if p_maldrood.Is_Human() then
+			Story_Event("GETELLES_JOINS_SPEECH")
 		end
-	end
+     	spawn_list_kosh = { "Getelles_Team" , "Larm_Carrack" }
+     	SpawnList(spawn_list_kosh, start_planet, p_maldrood,true,false)
+      --end
+    end
+
 
   end
 end
@@ -309,18 +303,16 @@ function Kashyyyk_Maldrood(message)
    p_maldrood = Find_Player("Teradoc")
    start_planet = FindPlanet("Kashyyyk")
 
-	p_empire = Find_Player("Empire")
-	techLevel = p_empire.Get_Tech_Level()
-	if techLevel == 1 then
-		if start_planet.Get_Owner() == Find_Player("Teradoc") then
-			if p_maldrood.Is_Human() then
-				Story_Event("SYN_JOINS_SPEECH")
-			end
-			spawn_list_syn = { "Syn_Silooth" }
-			SpawnList(spawn_list_syn, start_planet, p_maldrood,true,false)
-		  --end
+
+    if start_planet.Get_Owner() == Find_Player("Teradoc") then
+		if p_maldrood.Is_Human() then
+			Story_Event("SYN_JOINS_SPEECH")
 		end
-	end
+     	spawn_list_syn = { "Syn_Silooth" }
+    	SpawnList(spawn_list_syn, start_planet, p_maldrood,true,false)
+      --end
+    end
+
 
   end
 end
@@ -331,17 +323,14 @@ function Elrood_Eriadu(message)
    p_eriadu = Find_Player("Hutts")
    start_planet = FindPlanet("Elrood")
 
-   	p_empire = Find_Player("Empire")
-	techLevel = p_empire.Get_Tech_Level()
-	if techLevel == 1 then
-		if start_planet.Get_Owner() == Find_Player("Hutts") then
-			if p_eriadu.Is_Human() then
-				Story_Event("ELROOD_JOINS_SPEECH")
-			end
-			spawn_list_elrood = { "Andal_Team" , "Zed_Stalker" , "Pryl_Thunderflare" }
-			SpawnList(spawn_list_elrood, start_planet, p_eriadu,true,false)
+	if start_planet.Get_Owner() == Find_Player("Hutts") then
+		if p_eriadu.Is_Human() then
+			Story_Event("ELROOD_JOINS_SPEECH")
 		end
-	end
+		spawn_list_elrood = { "Andal_Team" , "Zed_Stalker" , "Pryl_Thunderflare" }
+		SpawnList(spawn_list_elrood, start_planet, p_eriadu,true,false)
+    end
+
 
   end
 
@@ -353,18 +342,16 @@ function Centares_Zsinj(message)
    p_zsinj = Find_Player("Pirates")
    start_planet = FindPlanet("Centares")
 
-	p_empire = Find_Player("Empire")
-	techLevel = p_empire.Get_Tech_Level()
-	if techLevel == 1 then
-		if start_planet.Get_Owner() == Find_Player("Pirates") then
-			if p_zsinj.Is_Human() then
-				Story_Event("SELIT_JOINS_SPEECH")
-			end
-			spawn_list_selit = { "Selit_Team"}
-			SpawnList(spawn_list_selit, start_planet, p_zsinj,true,false)
-		  --end
+
+    if start_planet.Get_Owner() == Find_Player("Pirates") then
+		if p_zsinj.Is_Human() then
+			Story_Event("SELIT_JOINS_SPEECH")
 		end
-	end
+     	spawn_list_selit = { "Selit_Team"}
+     	SpawnList(spawn_list_selit, start_planet, p_zsinj,true,false)
+      --end
+    end
+
 
   end
 end
@@ -373,6 +360,7 @@ function SubEra_Change(message)
   if message == OnEnter then
 
 	p_empire = Find_Player("Empire")
+    p_harrsk = Find_Player("Warlords")
 
 	start_planet = FindPlanet("Coruscant")
 	if start_planet.Get_Owner() ~= Find_Player("Empire") then
@@ -395,18 +383,7 @@ function SubEra_Change(message)
     checkPestage.Despawn()
   end
 
-
-  end
-end
-
-function Spawn_Harrsk(message)
-  if message == OnEnter then
-
-	p_empire = Find_Player("Empire")
-    p_harrsk = Find_Player("Warlords")
-
-
-  checkHarrsk = Find_First_Object("Whirlwind_Star_Destroyer")
+  checkHarrsk = Find_First_Object("Shockwave_Star_Destroyer")
   if TestValid(checkHarrsk) then
     checkHarrsk.Despawn()
   end
@@ -420,7 +397,7 @@ function Spawn_Harrsk(message)
     if start_planet.Get_Owner() == p_empire then
       ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
 
-     spawn_list = { "Whirlwind_Star_Destroyer" }
+     spawn_list = { "Shockwave_Star_Destroyer" }
      SpawnList(spawn_list, start_planet, p_harrsk, true, false)
     end
   end
@@ -434,18 +411,6 @@ function Spawn_Harrsk(message)
        SpawnList(spawn_list, start_planet, p_harrsk, true, false)
       end
     end
-	
-	--CCoGM spawns
-	
-	start_planet = FindPlanet("Kessel")
-  if TestValid(start_planet) then
-    if start_planet.Get_Owner() == p_empire then
-      ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
-
-     spawn_list = { "Tigellinus_Avatar", "Hissa_Moffship" }
-     SpawnList(spawn_list, start_planet, p_harrsk, true, false)
-    end
-  end
 
 
   end
@@ -456,18 +421,7 @@ function ThrawnSpawns(message)
   
 	p_empire = Find_Player("Empire")
 	p_newrep = Find_Player("Rebel")
-	p_maldrood = Find_Player("Teradoc")
   	
-	-- Maldrood
-	start_planet = FindPlanet("Centares")
-	if start_planet.Get_Owner() ~= Find_Player("Teradoc") then
-		start_planet = TRUtil.FindFriendlyPlanet(p_maldrood)
-	end
-	if start_planet then
-		spawn_list_thrawn = { "Tavira_Invidious" }
-		SpawnList(spawn_list_thrawn, start_planet, p_maldrood, true, false)
-	end	
-	
 	-- Empire
 	start_planet = FindPlanet("Coruscant")
 	if start_planet.Get_Owner() ~= Find_Player("Empire") then

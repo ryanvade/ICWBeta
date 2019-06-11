@@ -198,76 +198,6 @@
 		<Reward_Param2>0</Reward_Param2>
 	</Event>
 	
-	<Event Name="Faction_Branch_Enabler_Remnant">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_EMPIRE_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Remnant</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-	
-	<Event Name="Faction_Branch_Enabler_EotH">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_EOTH_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_EotH</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-	
-	<Event Name="Faction_Branch_Enabler_Eriadu">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_ERIADU_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Eriadu</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-	
-
-	<Event Name="Faction_Branch_Enabler_Zsinj">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_ZSINJ_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Zsinj</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-
-	
-	<Event Name="Faction_Branch_Enabler_Teradoc">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_TERADOC_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Teradoc</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-	
-
-	
-	<Event Name="Faction_Branch_Enabler_Pentastar">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_PENTASTAR_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Pentastar</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>	
-	
-	<Event Name="Faction_Branch_Enabler_Corporate_Sector">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ENABLE_BRANCH_CORPORATE_SECTOR_FLAG</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Corporate_Sector</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-	
-
-
-  <!-- ==================== BEGIN SAVE CRASH RE-ENABLE EVENTS ==================== -->
-
-	<Event Name="Filter_AI_Challenge_Clicked">
-		<Event_Type>STORY_CLICK_GUI</Event_Type>
-		<Event_Param1>b_save_fixer</Event_Param1>
-		<Perpetual>true</Perpetual>
-	</Event>	
-		
 	<Event Name="Faction_Branch_Playing_NewRep">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 
@@ -277,13 +207,13 @@
 		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
 	</Event>
 	
-	<Event Name="Change_AI_NewRep">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Rebel</Reward_Param1>
-		<Reward_Param2>SkynetAI</Reward_Param2>
-		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
-		<Branch>Faction_Branch_NewRep_Save</Branch>
+	
+	<Event Name="Faction_Branch_Enabler_Remnant">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_EMPIRE_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Remnant</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
 	</Event>
 	
 	<Event Name="Faction_Branch_Playing_Remnant">
@@ -295,15 +225,14 @@
 		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
 	</Event>
 	
-	<Event Name="Change_AI_Empire">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Empire</Reward_Param1>
-		<Reward_Param2>SkynetAI</Reward_Param2>
-		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
-		<Branch>Faction_Branch_Empire_Save</Branch>
+	<Event Name="Faction_Branch_Enabler_EotH">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_EOTH_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_EotH</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
 	</Event>
-		
+	
 	<Event Name="Faction_Branch_Playing_EotH">
 			<Event_Type>STORY_TRIGGER</Event_Type>
 
@@ -313,68 +242,12 @@
 		<Prereq>Faction_Branch_Enabler_EotH</Prereq>
 	</Event>
 	
-	<Event Name="Change_AI_EotH">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Underworld</Reward_Param1>
-		<Reward_Param2>SkynetAI</Reward_Param2>
-		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
-		<Branch>Faction_Branch_EotH_Save</Branch>
-	</Event>
-	
-	<Event Name="Faction_Branch_Playing_Pentastar">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-
+	<Event Name="Faction_Branch_Enabler_Eriadu">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_ERIADU_FLAG</Event_Param2>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Pentastar_Save</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-		<Prereq>Faction_Branch_Enabler_Pentastar</Prereq>
-	</Event>
-		
-	<Event Name="Change_AI_Pentastar">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Pentastar</Reward_Param1>
-		<Reward_Param2>SkynetAI</Reward_Param2>
-		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
-		<Branch>Faction_Branch_Pentastar_Save</Branch>
-	</Event>
-	
-	<Event Name="Faction_Branch_Playing_Teradoc">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Teradoc_Save</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-		<Prereq>Faction_Branch_Enabler_Teradoc</Prereq>
-	</Event>
-			
-	<Event Name="Change_AI_Teradoc">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Teradoc</Reward_Param1>
-		<Reward_Param2>SkynetAI</Reward_Param2>
-		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
-		<Branch>Faction_Branch_Teradoc_Save</Branch>
-	</Event>
-	
-	
-	<Event Name="Faction_Branch_Playing_Zsinj">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Faction_Branch_Zsinj_Save</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-		<Prereq>Faction_Branch_Enabler_Zsinj</Prereq>
-	</Event>
-					
-	<Event Name="Change_AI_Zsinj">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Pirates</Reward_Param1>
-		<Reward_Param2>SkynetAI</Reward_Param2>
-		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
-		<Branch>Faction_Branch_Zsinj_Save</Branch>
+		<Reward_Param1>Faction_Branch_Eriadu</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
 	</Event>
 	
 	<Event Name="Faction_Branch_Playing_Eriadu">
@@ -385,14 +258,64 @@
 		<Reward_Param2>1</Reward_Param2>
 		<Prereq>Faction_Branch_Enabler_Eriadu</Prereq>
 	</Event>
-		
-	<Event Name="Change_AI_Eriadu">
+	
+	<Event Name="Faction_Branch_Enabler_Zsinj">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_ZSINJ_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Zsinj</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Zsinj">
 		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Hutts</Reward_Param1>
-		<Reward_Param2>SkynetAI</Reward_Param2>
-		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
-		<Branch>Faction_Branch_Eriadu_Save</Branch>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Zsinj_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Zsinj</Prereq>
+	</Event>
+	
+	<Event Name="Faction_Branch_Enabler_Teradoc">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_TERADOC_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Teradoc</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Faction_Branch_Playing_Teradoc">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Teradoc_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Teradoc</Prereq>
+	</Event>
+	
+	<Event Name="Faction_Branch_Enabler_Pentastar">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_PENTASTAR_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Pentastar</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>	
+	
+	<Event Name="Faction_Branch_Playing_Pentastar">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Pentastar_Save</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Faction_Branch_Enabler_Pentastar</Prereq>
+	</Event>
+	
+	<Event Name="Faction_Branch_Enabler_Corporate_Sector">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ENABLE_BRANCH_CORPORATE_SECTOR_FLAG</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Faction_Branch_Corporate_Sector</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
 	</Event>
 	
 	<Event Name="Faction_Branch_Playing_Corporate_Sector">
@@ -403,17 +326,10 @@
 		<Reward_Param2>1</Reward_Param2>
 		<Prereq>Faction_Branch_Enabler_Corporate_Sector</Prereq>
 	</Event>
+
+  <!-- ==================== BEGIN SAVE CRASH RE-ENABLE EVENTS ==================== -->
+
 	
-	<Event Name="Change_AI_CSA">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Corporate_Sector</Reward_Param1>
-		<Reward_Param2>SkynetAI</Reward_Param2>
-		<Prereq>Filter_AI_Challenge_Clicked</Prereq>
-		<Branch>Faction_Branch_Corporate_Sector_Save</Branch>
-	</Event>
-
-
 	<!--***********************************************************-->
 	<!--***********************************************************-->
 	<!--******************* IMPERIAL STORYLINE ********************-->
@@ -1340,12 +1256,6 @@
 		<Branch>Isard_Branch</Branch>
 	</Event>
 	
-	<Event Name="Zero_Command_Split"> <!-- This was split off for mysterious stablity reasons -->
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Prereq>Set_Subera_Isard</Prereq>
-	</Event> 
-	
 	<Event Name="Disable_Branch_Isard">
   		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
@@ -1845,7 +1755,7 @@
   		<Event_Type>STORY_CONQUER</Event_Type>
   		<Event_Param1>Antem</Event_Param1>
 		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
-		<Perpetual>true</Perpetual>
+		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
 	</Event>
 	
 	<Event Name="Getelles_Joins">
@@ -1868,8 +1778,7 @@
     <Event Name="Maldrood_Commenor">
   		<Event_Type>STORY_CONQUER</Event_Type>
   		<Event_Param1>Commenor</Event_Param1>
-		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
-		<Perpetual>true</Perpetual>
+		<Event_Param3>Teradoc</Event_Param3>
 	 </Event>
 	
 	<Event Name="Gendarr_Joins">
@@ -1887,13 +1796,14 @@
 		<Reward_Param9>Teradoc_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<!--<Prereq>Maldrood_Commenor</Prereq>-->
+		<Perpetual>true</Perpetual>
     </Event>
 	
 	<Event Name="Maldrood_Kashyyyk">
   		<Event_Type>STORY_CONQUER</Event_Type>
   		<Event_Param1>Kashyyyk</Event_Param1>
-		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
-		<Perpetual>true</Perpetual>
+		<Event_Param3>Teradoc</Event_Param3>
+		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
 	</Event>
 	
 	<Event Name="Syn_Joins">
@@ -1917,8 +1827,7 @@
 	<Event Name="Eriadu_Elrood">
   		<Event_Type>STORY_CONQUER</Event_Type>
   		<Event_Param1>Elrood</Event_Param1>
-		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
-		<Perpetual>true</Perpetual>
+		<Event_Param3>Hutts</Event_Param3>
 	 </Event>
 	 
 	 <Event Name="Elrood_Joins">
@@ -1941,8 +1850,8 @@
 	<Event Name="Zsinj_Centares">
   		<Event_Type>STORY_CONQUER</Event_Type>
   		<Event_Param1>Centares</Event_Param1>
-		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
-		<Perpetual>true</Perpetual>
+		<Event_Param3>Pirates</Event_Param3>
+		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
 	</Event>
 	
 	<Event Name="Selit_Joins">

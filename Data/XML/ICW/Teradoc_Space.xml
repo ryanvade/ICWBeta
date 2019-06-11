@@ -525,7 +525,7 @@
 
 		<Max_Thrust>2.0</Max_Thrust>
 		<Hyperspace>Yes</Hyperspace>
-		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
+		<Ranged_Target_Z_Adjust>35.0</Ranged_Target_Z_Adjust>
 		<Hyperspace_Speed>1.8</Hyperspace_Speed>
 		<Maintenance_Cost>0.2</Maintenance_Cost>
 
@@ -731,7 +731,7 @@
 		<Squadron_Capacity>0</Squadron_Capacity>
 		<Number_per_Squadron>12</Number_per_Squadron>
 		<Size_Value>8</Size_Value>
-		<SpaceBehavior>HUNT, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+		<SpaceBehavior>FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Damage>5</Damage>
 
@@ -791,7 +791,7 @@
 		<CategoryMask> Fighter | AntiBomber</CategoryMask>
 		<Property_Flags> SmallShip </Property_Flags>
 		<Icon_Name>i_button_arc170.tga</Icon_Name>
-		<Victory_Relevant>No</Victory_Relevant>
+		<Victory_Relevant>yes</Victory_Relevant>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 
 		<Custom_Footprint_Radius> 7.0 </Custom_Footprint_Radius>
@@ -820,10 +820,6 @@
 			<Mod_Multiplier>SPEED_MULTIPLIER,		            1.3</Mod_Multiplier>
 			<SFXEvent_GUI_Unit_Ability_Activated>Unit_Ability_On_X_Wing</SFXEvent_GUI_Unit_Ability_Activated>
 			<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Ability_Off_X_Wing</SFXEvent_GUI_Unit_Ability_Deactivated>
-			</Unit_Ability>
-			
-			<Unit_Ability>
-				<Type>HUNT</Type>
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 
@@ -909,10 +905,6 @@
 			<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
 			<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
 			<Mod_Multiplier>SPEED_MULTIPLIER,		2</Mod_Multiplier>
-			</Unit_Ability>
-			
-			<Unit_Ability>
-				<Type>HUNT</Type>
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 
@@ -1054,7 +1046,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>25.0</Minimum_Follow_Distance> <!-- 50 -->
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>3.89</AI_Combat_Power>
+		<AI_Combat_Power>20</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 

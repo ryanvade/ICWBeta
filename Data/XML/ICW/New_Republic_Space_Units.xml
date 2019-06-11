@@ -873,13 +873,12 @@
 		<SpaceBehavior>BARRAGE,ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, TARGETING, POWERED, SHIELDED, WEAPON, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		
-		<!--		<Projectile_Types>Proj_Ship_Turbolaser_Green</Projectile_Types>
+				<Projectile_Types>Proj_Ship_Turbolaser_Green</Projectile_Types>
 		<Turret_Rotate_Extent_Degrees>30</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
 		<Projectile_Fire_Pulse_Count>24</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
-		<Projectile_Fire_Recharge_Seconds>4</Projectile_Fire_Recharge_Seconds> -->
-		<Hardpoints>HP_Marauder_Turbo</Hardpoints>
+		<Projectile_Fire_Recharge_Seconds>4</Projectile_Fire_Recharge_Seconds>
 
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 
@@ -1043,7 +1042,6 @@
 		<Starting_Spawned_Units_Tech_0>K-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>E-Wing_Squadron, 4</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>K-Wing_Squadron, 3</Reserve_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
@@ -1064,7 +1062,7 @@
 			HP_Endurance_Ion_Two,
 			HP_Endurance_Turbo_One
 			HP_Endurance_Turbo_Two,
-			Generic_Untargetable_Tractor_Beam
+			Super_Awesome_Tractor_Beam
 		</HardPoints>
 
 		<Icon_Name>i_button_Endurance.tga</Icon_Name>
@@ -1146,19 +1144,24 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		<Population_Value>12</Population_Value>
       
-	  <Unit_Abilities_Data SubObjectList="Yes">
-        <Unit_Ability>
+	  <Unit_Abilities_Data SubjectList="Yes">
+      
+	  <Unit_Ability>
 	            <Type>TRACTOR_BEAM</Type>
 	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>Endurance_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <GUI_Activated_Ability_Name>ISD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
 	            <Recharge_Seconds>30</Recharge_Seconds>
 	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 				   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-	      </Unit_Ability>
-       </Unit_Abilities_Data>
+	  
+	  </Unit_Ability>
 
-	    <Abilities SubObjectList="Yes">
-		<Tractor_Beam_Attack_Ability Name="Endurance_Tractor_Beam_Attack_Ability">
+       </Unit_Abilities_Data>
+		
+		
+		  <Abilities SubObjectList="Yes">
+		
+		<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
@@ -1170,16 +1173,13 @@
 				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
 				<Stacking_Category>0</Stacking_Category>
 			  </Tractor_Beam_Attack_Ability>
-
+			  
+			 
+			 
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
-				<!-- 3% bonus to base planetary income -->
 				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
-				<!-- plus an absolute 0 credits to planetary income -->
 				<Absolute_Income_Modifier>-60</Absolute_Income_Modifier>
-				<!-- net effect of +( (base income * 0%) + 20) credits -->
-				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
-				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
 		</Abilities>
 	</SpaceUnit>
@@ -1237,7 +1237,7 @@
 		<OverrideDeceleration> .02 </OverrideDeceleration>
 		<Lua_Script>GenericGameObject</Lua_Script>
 
-		<Armor_Type> Armor_Capital </Armor_Type>
+		<Armor_Type> Armor_Frigate </Armor_Type>
 		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>25</Bank_Turn_Angle>
@@ -1303,7 +1303,7 @@
 			HP_Nebula_Dual_Heavy_Four,
 			HP_Nebula_Conc_One,
 			HP_Nebula_Conc_Two,
-			Generic_Untargetable_Tractor_Beam
+			Super_Awesome_Tractor_Beam
 		</HardPoints>
 
 		<Icon_Name>i_button_nebula.tga</Icon_Name>
@@ -1388,11 +1388,11 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		<Population_Value>16</Population_Value>
           
-		  <Unit_Abilities_Data SubObjectList="Yes">
+		  <Unit_Abilities_Data SubjectList="Yes">
           <Unit_Ability>
 	            <Type>TRACTOR_BEAM</Type>
 	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>Nebula_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <GUI_Activated_Ability_Name>ISD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
 	            <Recharge_Seconds>30</Recharge_Seconds>
 	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 				   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
@@ -1401,7 +1401,7 @@
 		
 		
 		  <Abilities SubObjectList="Yes">
-		<Tractor_Beam_Attack_Ability Name="Nebula_Tractor_Beam_Attack_Ability">
+		<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
@@ -1735,7 +1735,7 @@
 			HP_Majestic_Ion_Two,
 			HP_Majestic_Conc,
 			HP_Majestic_Hangar,
-			Generic_Untargetable_Tractor_Beam
+			Super_Awesome_Tractor_Beam
 		</HardPoints>
 
 
@@ -1817,11 +1817,11 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		<Population_Value>9</Population_Value>
 			
-		<Unit_Abilities_Data SubObjectList="Yes">
+		<Unit_Abilities_Data SubjectList="Yes">
 			<Unit_Ability>
 	            <Type>TRACTOR_BEAM</Type>
 	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>Majestic_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <GUI_Activated_Ability_Name>ISD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
 	            <Recharge_Seconds>30</Recharge_Seconds>
 	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 				   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
@@ -1830,9 +1830,9 @@
 		
 		
 		  <Abilities SubObjectList="Yes">
-		<Tractor_Beam_Attack_Ability Name="Majestic_Tractor_Beam_Attack_Ability">
+		<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
 				<Activation_Min_Range>2</Activation_Min_Range>
@@ -1952,7 +1952,7 @@
      			HP_Viscount_Turbo_1, HP_Viscount_Turbo_2, HP_Viscount_Turbo_3, HP_Viscount_Turbo_4, HP_Viscount_Turbo_5, HP_Viscount_Turbo_6, HP_Viscount_Turbo_7, HP_Viscount_Turbo_8, HP_Viscount_Turbo_9, HP_Viscount_Turbo_10, HP_Viscount_Turbo_11, HP_Viscount_Turbo_12, HP_Viscount_Turbo_13, HP_Viscount_Turbo_14, HP_Viscount_Turbo_15, HP_Viscount_Turbo_16, HP_Viscount_Turbo_17, HP_Viscount_Turbo_18, HP_Viscount_Turbo_19, HP_Viscount_Turbo_20, HP_Viscount_Turbo_21, HP_Viscount_Turbo_22, HP_Viscount_Turbo_23, HP_Viscount_Turbo_24, HP_Viscount_Turbo_25, HP_Viscount_Turbo_26, HP_Viscount_Turbo_27, HP_Viscount_Turbo_28, HP_Viscount_Turbo_29, HP_Viscount_Turbo_30, HP_Viscount_Turbo_31, HP_Viscount_Turbo_32, HP_Viscount_Turbo_33, HP_Viscount_Turbo_34, HP_Viscount_Turbo_35, HP_Viscount_Turbo_36, HP_Viscount_Turbo_37, HP_Viscount_Turbo_38, HP_Viscount_Turbo_39, HP_Viscount_Turbo_40, HP_Viscount_Turbo_41, HP_Viscount_Turbo_42, HP_Viscount_Turbo_43, HP_Viscount_Turbo_44, HP_Viscount_Turbo_45, HP_Viscount_Turbo_46,
 			HP_Viscount_Turbo_47, HP_Viscount_Turbo_48, HP_Viscount_Turbo_49, HP_Viscount_Turbo_50, HP_Viscount_Turbo_51, HP_Viscount_Turbo_52, HP_Viscount_Turbo_53, HP_Viscount_Turbo_54, HP_Viscount_Turbo_Heavy_1, HP_Viscount_Turbo_Heavy_2, HP_Viscount_Turbo_Heavy_3, HP_Viscount_Turbo_Heavy_4, HP_Viscount_Turbo_Heavy_5, HP_Viscount_Turbo_Heavy_6, HP_Viscount_Turbo_Heavy_7, HP_Viscount_Turbo_Heavy_8, HP_Viscount_Turbo_Heavy_9, HP_Viscount_Turbo_Heavy_10, HP_Viscount_Turbo_Heavy_11, HP_Viscount_Turbo_Heavy_12, HP_Viscount_Turbo_Heavy_13, HP_Viscount_Turbo_Heavy_14, HP_Viscount_Turbo_Heavy_15, HP_Viscount_Turbo_Heavy_16, HP_Viscount_Turbo_Heavy_17, HP_Viscount_Turbo_Heavy_18, HP_Viscount_Turbo_Heavy_19, HP_Viscount_Turbo_Heavy_20, HP_Viscount_Turbo_Heavy_21, HP_Viscount_Turbo_Heavy_22, HP_Viscount_Turbo_Heavy_23, HP_Viscount_Turbo_Heavy_24, HP_Viscount_Turbo_Heavy_25, HP_Viscount_Turbo_Heavy_26, HP_Viscount_Turbo_Heavy_27, HP_Viscount_Turbo_Heavy_28, HP_Viscount_Turbo_Heavy_29, HP_Viscount_Turbo_Heavy_30,
 			HP_Viscount_Turbo_Heavy_31, HP_Viscount_Turbo_Heavy_32, HP_Viscount_Turbo_Heavy_33, HP_Viscount_Turbo_Heavy_34, HP_Viscount_Turbo_Heavy_35, HP_Viscount_Turbo_Heavy_36, HP_Viscount_Turbo_Heavy_37, HP_Viscount_Turbo_Heavy_38, HP_Viscount_Turbo_Heavy_39, HP_Viscount_Turbo_Heavy_40, HP_Viscount_Turbo_Heavy_41, HP_Viscount_Turbo_Heavy_42, HP_Viscount_Turbo_Heavy_43, HP_Viscount_Turbo_Heavy_44,  HP_Viscount_Turbo_Heavy_45, HP_Viscount_Turbo_Heavy_46, HP_Viscount_Turbo_Heavy_47, HP_Viscount_Turbo_Heavy_48, HP_Viscount_Turbo_Heavy_49, HP_Viscount_Turbo_Heavy_50, HP_Viscount_Turbo_Heavy_51, HP_Viscount_Turbo_Heavy_52, HP_Viscount_Turbo_Heavy_53, HP_Viscount_Turbo_Heavy_54, HP_Viscount_Concussion_Missile_1, HP_Viscount_Concussion_Missile_2, HP_Viscount_Concussion_Missile_3, HP_Viscount_Concussion_Missile_4, HP_Viscount_Concussion_Missile_5, HP_Viscount_Concussion_Missile_6, HP_Viscount_Concussion_Missile_7, HP_Viscount_Concussion_Missile_8,
-			HP_Viscount_Ion_cannon_1, HP_Viscount_Ion_cannon_2, HP_SSD_Hangar, HP_Viscount_Ion_cannon_3, HP_Viscount_Ion_cannon_4, HP_Viscount_Ion_cannon_5, HP_Viscount_Ion_cannon_6, HP_Viscount_Ion_cannon_7, HP_Viscount_Ion_cannon_8, HP_Viscount_Ion_cannon_9, HP_Viscount_Ion_cannon_10, HP_Viscount_Ion_cannon_11, HP_Viscount_Ion_cannon_12, HP_Viscount_Ion_cannon_13, HP_Viscount_Ion_cannon_14, HP_Viscount_Ion_cannon_15, HP_Viscount_Ion_cannon_16, HP_Viscount_Ion_cannon_17, HP_Viscount_Ion_cannon_18, HP_Viscount_Ion_cannon_19, HP_Viscount_Ion_cannon_20, Generic_Untargetable_Tractor_Beam
+			HP_Viscount_Ion_cannon_1, HP_Viscount_Ion_cannon_2, HP_SSD_Hangar, HP_Viscount_Ion_cannon_3, HP_Viscount_Ion_cannon_4, HP_Viscount_Ion_cannon_5, HP_Viscount_Ion_cannon_6, HP_Viscount_Ion_cannon_7, HP_Viscount_Ion_cannon_8, HP_Viscount_Ion_cannon_9, HP_Viscount_Ion_cannon_10, HP_Viscount_Ion_cannon_11, HP_Viscount_Ion_cannon_12, HP_Viscount_Ion_cannon_13, HP_Viscount_Ion_cannon_14, HP_Viscount_Ion_cannon_15, HP_Viscount_Ion_cannon_16, HP_Viscount_Ion_cannon_17, HP_Viscount_Ion_cannon_18, HP_Viscount_Ion_cannon_19, HP_Viscount_Ion_cannon_20, Super_Awesome_Tractor_Beam
 		</HardPoints>
 		<Icon_Name>i_button_viscount.tga</Icon_Name>
 		<GUI_Model_Name>RV_VISCOUNT.ALO</GUI_Model_Name>
@@ -2039,7 +2039,7 @@
 				<Unit_Ability>
 	            <Type>TRACTOR_BEAM</Type>
 	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>Viscount_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <GUI_Activated_Ability_Name>ISD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
 	            <Recharge_Seconds>30</Recharge_Seconds>
 	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 				   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
@@ -2048,9 +2048,9 @@
 		
 		
 		  <Abilities SubObjectList="Yes">
-		<Tractor_Beam_Attack_Ability Name="Viscount_Tractor_Beam_Attack_Ability">
+		<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
 				<Activation_Min_Range>2</Activation_Min_Range>
@@ -2093,7 +2093,7 @@
 		<OverrideDeceleration> .02 </OverrideDeceleration>
 		<Lua_Script>GenericGameObject</Lua_Script>
 
-		<Armor_Type> Armor_Capital </Armor_Type>
+		<Armor_Type> Armor_Frigate </Armor_Type>
 		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>25</Bank_Turn_Angle>
@@ -2130,11 +2130,9 @@
 		<Size_Value>360</Size_Value>
         <Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, ION_STUN_EFFECT, NEBULA, DAMAGE_TRACKING</SpaceBehavior>
-		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
@@ -2162,7 +2160,7 @@
 			MC80B_Fighter_Bay,
 			MC80B_Engines,
 			MC80B_Shield,
-			Generic_Untargetable_Tractor_Beam
+			Super_Awesome_Tractor_Beam
 		</HardPoints>
 
 		<Icon_Name>i_button_monremonda.tga</Icon_Name>
@@ -2252,7 +2250,7 @@
 				<Unit_Ability>
 	            <Type>TRACTOR_BEAM</Type>
 	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>MC80B_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <GUI_Activated_Ability_Name>ISD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
 	            <Recharge_Seconds>30</Recharge_Seconds>
 	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 				   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
@@ -2273,9 +2271,9 @@
 			
 			
 			
-			  <Tractor_Beam_Attack_Ability Name="MC80B_Tractor_Beam_Attack_Ability">
+			  <Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
 				<Activation_Min_Range>2</Activation_Min_Range>
@@ -2524,7 +2522,7 @@
 		<OverrideAcceleration> .02 </OverrideAcceleration>
 		<OverrideDeceleration> .02 </OverrideDeceleration>
 		<Lua_Script>GenericGameObject</Lua_Script>
-		<Armor_Type> Armor_Capital </Armor_Type>
+		<Armor_Type> Armor_Frigate </Armor_Type>
 		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>25</Bank_Turn_Angle>
@@ -2561,13 +2559,10 @@
 		<Size_Value>360</Size_Value>
 		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
-		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>E-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
@@ -2594,7 +2589,7 @@
 			HP_MC90_TBL_07,
 			HP_MC90_TBL_08,
 			HP_MC90_Hangar,
-			Generic_Untargetable_Tractor_Beam
+			Super_Awesome_Tractor_Beam
 		</HardPoints>
 		<Surface_Bombardment_Capable>yes</Surface_Bombardment_Capable>
 		<!-- Set to spawn all units once and then not continue - no reserves -->
@@ -2681,7 +2676,7 @@
           <Unit_Ability>
 	            <Type>TRACTOR_BEAM</Type>
 	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>MC90_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <GUI_Activated_Ability_Name>ISD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
 	            <Recharge_Seconds>30</Recharge_Seconds>
 	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 				   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
@@ -2697,9 +2692,9 @@
 			</Planet_Income_Bonus_Ability>
 		
 			
-			  <Tractor_Beam_Attack_Ability Name="MC90_Tractor_Beam_Attack_Ability">
+			  <Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
 				<Activation_Min_Range>2</Activation_Min_Range>
@@ -2747,7 +2742,7 @@
 		<OverrideAcceleration> .02 </OverrideAcceleration>
 		<OverrideDeceleration> .02 </OverrideDeceleration>
 		<Lua_Script>GenericGameObject</Lua_Script>
-		<Armor_Type> Armor_Capital </Armor_Type>
+		<Armor_Type> Armor_SSD </Armor_Type>
 		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>25</Bank_Turn_Angle>
@@ -2786,14 +2781,10 @@
 		<Size_Value>360</Size_Value>
 		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
-		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 4</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 3</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
@@ -2805,7 +2796,7 @@
 		<CategoryMask> Capital | AntiCapital | Boardable </CategoryMask>
 
 		<HardPoints>
-				HP_HomeOne_TBL_S1, HP_HomeOne_TBL_S2, HP_HomeOne_TBL_S3, HP_HomeOne_TBL_S4, HP_HomeOne_Shield_Generator, Home_Fighter_Bay, HP_HomeOne_Engines, HP_HomeOne_TBL_BL, HP_HomeOne_TBL_BR, HP_HomeOne_TBL_FL, HP_HomeOne_TBL_FR, HP_HomeOne_IC_BL, HP_HomeOne_IC_BR, HP_HomeOne_IC_FL, HP_HomeOne_IC_FR, Generic_Untargetable_Tractor_Beam
+				HP_HomeOne_TBL_S1, HP_HomeOne_TBL_S2, HP_HomeOne_TBL_S3, HP_HomeOne_TBL_S4, HP_HomeOne_Shield_Generator, Home_Fighter_Bay, HP_HomeOne_Engines, HP_HomeOne_TBL_BL, HP_HomeOne_TBL_BR, HP_HomeOne_TBL_FL, HP_HomeOne_TBL_FR, HP_HomeOne_IC_BL, HP_HomeOne_IC_BR, HP_HomeOne_IC_FL, HP_HomeOne_IC_FR, Super_Awesome_Tractor_Beam
 		</HardPoints>
 
 		<Surface_Bombardment_Capable>yes</Surface_Bombardment_Capable>
@@ -2894,7 +2885,7 @@
             <Unit_Ability>
 	            <Type>TRACTOR_BEAM</Type>
 	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>MCHO_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <GUI_Activated_Ability_Name>ISD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
 	            <Recharge_Seconds>30</Recharge_Seconds>
 	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 				   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
@@ -2910,7 +2901,7 @@
 			</Planet_Income_Bonus_Ability>
 		
 			
-			  <Tractor_Beam_Attack_Ability Name="MCHO_Tractor_Beam_Attack_Ability">
+			  <Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
@@ -2997,7 +2988,7 @@
 		<OverrideAcceleration> .02 </OverrideAcceleration>
 		<OverrideDeceleration> .02 </OverrideDeceleration>
 
-		<Armor_Type> Armor_Capital </Armor_Type>
+		<Armor_Type> Armor_Frigate </Armor_Type>
 		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>25</Bank_Turn_Angle>
@@ -3048,7 +3039,7 @@
 		<CategoryMask> Capital | AntiFrigate | Boardable </CategoryMask>
 
 		<HardPoints>
-			MC80_Stock_Bay, HP_Calamari_Cruiser_Weapon_FL, HP_Calamari_Cruiser_Weapon_FR, HP_Calamari_Cruiser_Weapon_BL, HP_Calamari_Cruiser_Weapon_BR, HP_Calamari_Cruiser_Weapon_ML, HP_Calamari_Cruiser_Weapon_MR, HP_Calamari_Cruiser_Engines, Generic_Untargetable_Tractor_Beam
+			MC80_Stock_Bay, HP_Calamari_Cruiser_Weapon_FL, HP_Calamari_Cruiser_Weapon_FR, HP_Calamari_Cruiser_Weapon_BL, HP_Calamari_Cruiser_Weapon_BR, HP_Calamari_Cruiser_Weapon_ML, HP_Calamari_Cruiser_Weapon_MR, HP_Calamari_Cruiser_Engines, Super_Awesome_Tractor_Beam
 		</HardPoints>
 
 		<Icon_Name>i_button_mon_calimari_cruiser.tga</Icon_Name>
@@ -3132,7 +3123,7 @@
         <Unit_Ability>
 	            <Type>TRACTOR_BEAM</Type>
 	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>Liberty_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <GUI_Activated_Ability_Name>ISD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
 	            <Recharge_Seconds>30</Recharge_Seconds>
 	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 				   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
@@ -3155,9 +3146,9 @@
 
           <Abilities SubObjectList="Yes">
 			
-			  <Tractor_Beam_Attack_Ability Name="Liberty_Tractor_Beam_Attack_Ability">
+			  <Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
 				<Activation_Min_Range>2</Activation_Min_Range>
@@ -3235,7 +3226,7 @@
 		<Hyperspace>Yes</Hyperspace>
 		<Select_Box_Scale>450</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
-		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
+		<Ranged_Target_Z_Adjust>35.0</Ranged_Target_Z_Adjust>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Maintenance_Cost>0.1</Maintenance_Cost>
 		<Affiliation>Rebel, Yevetha</Affiliation>
@@ -3449,7 +3440,7 @@
 		<Hyperspace>Yes</Hyperspace>
 		<Select_Box_Scale>175</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
-		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
+		<Ranged_Target_Z_Adjust>35.0</Ranged_Target_Z_Adjust>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Maintenance_Cost>0.1</Maintenance_Cost>
 		<Affiliation>Rebel</Affiliation>
@@ -3612,6 +3603,7 @@
 		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 
+		<Build_Cost_Credits>2200</Build_Cost_Credits>
 		<Tech_Level>0</Tech_Level>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		
@@ -3677,7 +3669,7 @@
 		<Hyperspace>Yes</Hyperspace>
 		<Select_Box_Scale>200</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
-		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
+		<Ranged_Target_Z_Adjust>35.0</Ranged_Target_Z_Adjust>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Maintenance_Cost>0.1</Maintenance_Cost>
 		<Affiliation>Rebel</Affiliation>
@@ -3937,7 +3929,7 @@
 		<Hyperspace>Yes</Hyperspace>
 		<Select_Box_Scale>400</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
-		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
+		<Ranged_Target_Z_Adjust>35.0</Ranged_Target_Z_Adjust>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Maintenance_Cost>0.1</Maintenance_Cost>
 		<Affiliation>Rebel</Affiliation>
@@ -4409,7 +4401,7 @@
 			Dauntless_Hangar,
 			Dauntless_Shield,
 			Dauntless_Engines,
-			Generic_Untargetable_Tractor_Beam
+			Super_Awesome_Tractor_Beam
 		</HardPoints>
 
 		<CategoryMask> Frigate | AntiFrigate | Boardable </CategoryMask>
@@ -4477,7 +4469,7 @@
         <Unit_Ability>
 	            <Type>TRACTOR_BEAM</Type>
 	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>Dauntless_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <GUI_Activated_Ability_Name>ISD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
 	            <Recharge_Seconds>30</Recharge_Seconds>
 	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 				   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
@@ -4486,9 +4478,9 @@
 		
 		
 		  <Abilities SubObjectList="Yes">
-		<Tractor_Beam_Attack_Ability Name="Dauntless_Tractor_Beam_Attack_Ability">
+		<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
 				<Activation_Min_Range>2</Activation_Min_Range>
@@ -4825,7 +4817,7 @@
 			BAC_Shield,
 			BAC_Engines,
 			BAC_Hangar,
-			Generic_Untargetable_Tractor_Beam
+			Super_Awesome_Tractor_Beam
 		</HardPoints>
 
 		<CategoryMask> Frigate | AntiCapital | Boardable </CategoryMask>
@@ -4911,7 +4903,7 @@
 		  <Unit_Ability>
 	            <Type>TRACTOR_BEAM</Type>
 	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>BAC_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <GUI_Activated_Ability_Name>ISD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
 	            <Recharge_Seconds>30</Recharge_Seconds>
 	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 				   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
@@ -4920,9 +4912,9 @@
 		
 		
 		  <Abilities SubObjectList="Yes">
-		<Tractor_Beam_Attack_Ability Name="BAC_Tractor_Beam_Attack_Ability">
+		<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
 				<Activation_Min_Range>2</Activation_Min_Range>
@@ -5040,7 +5032,7 @@
 
 		<Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
 		<HardPoints>
-			HP_Bwing_01, HP_Bwing_00, HP_Bwing_02
+			HP_Bwing_01, HP_Bwing_00, HP_Bwing_02, HP_Bwing_03
 		</HardPoints>
 
 		<SFXEvent_Fire> Unit_Y_Wing_Fire </SFXEvent_Fire>
@@ -5084,7 +5076,7 @@
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>7.23</AI_Combat_Power>
+		<AI_Combat_Power>30</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -5234,7 +5226,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>25.0</Minimum_Follow_Distance> <!-- 50 -->
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>3.84</AI_Combat_Power>
+		<AI_Combat_Power>20</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 
@@ -5370,7 +5362,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>25.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>3.39</AI_Combat_Power>
+		<AI_Combat_Power>20</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -5509,7 +5501,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>25.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>5.19</AI_Combat_Power>
+		<AI_Combat_Power>20</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -5653,7 +5645,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>25.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>4.14</AI_Combat_Power>
+		<AI_Combat_Power>20</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -5691,7 +5683,7 @@
 		<!--<Encyclopedia_Good_Against> Generic_Star_Destroyer Victory_Destroyer Generic_Acclamator_Assault_Ship <Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> TIE_Fighter Tartan_Patrol_Cruiser Pirate Fighter </Encyclopedia_Vulnerable_To>-->
 		<Space_Model_Name>rv_ywing.alo</Space_Model_Name>
-		<Scale_Factor>0.5</Scale_Factor>
+		<Scale_Factor>0.29</Scale_Factor>
 		<Select_Box_Scale>70</Select_Box_Scale>
 		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
 
@@ -5793,7 +5785,7 @@
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>4.74</AI_Combat_Power>
+		<AI_Combat_Power>30</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -5949,7 +5941,7 @@
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>7.71</AI_Combat_Power>
+		<AI_Combat_Power>30</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>

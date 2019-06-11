@@ -58,7 +58,7 @@ function Definitions()
 	{
 		"GuardForce"
 		,"EscortForce"
-		,"Infantry = 0,2"
+		,"Squad_Rebel_Trooper | Squad_Stormtrooper = 0,2"
 	}
 	}
 	

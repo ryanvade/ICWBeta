@@ -73,29 +73,6 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 
-			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
-				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
-				<!-- 3% bonus to base planetary income -->
-				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
-				<!-- plus an absolute 0 credits to planetary income -->
-				<Absolute_Income_Modifier>-350</Absolute_Income_Modifier>
-				<!-- net effect of +( (base income * 0%) + 20) credits -->
-				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
-				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
-			</Planet_Income_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
-	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-				<Activation_Min_Range>2</Activation_Min_Range>
-	            <Activation_Max_Range>1500</Activation_Max_Range>
-
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 	
 	</SpaceUnit>
@@ -123,7 +100,6 @@
 		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
 		<Company_Units>Lanu</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<Is_Stealth_Company>Yes</Is_Stealth_Company>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
 		<Available_In_Skirmish>yes</Available_In_Skirmish>
 		<Can_Be_Only_One>true</Can_Be_Only_One>
@@ -388,11 +364,6 @@
 				<See_Minor_Stealth_Heroes>Yes</See_Minor_Stealth_Heroes>
 				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
 			</System_Spy_Ability>
-			
-			<Galactic_Stealth_Ability Name="Lanu_Galactic_Stealth">
-				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
-			</Galactic_Stealth_Ability>
-
 
 			<Earthquake_Attack_Ability Name="Lanu_Attack_Structures">
 				<Activation_Style>Special_Attack</Activation_Style>
@@ -412,7 +383,7 @@
 				<Target_Particle_Bone_Name />
 			</Earthquake_Attack_Ability>
 
-			<Berserker_Ability Name="Lanu_Force_Attack">
+			<Berserker_Ability Name="Horn_Force_Attack">
 				<Activation_Style> Special_Attack </Activation_Style>
                 <Activation_Min_Range>0.0</Activation_Min_Range>
                 <Activation_Max_Range>120.0</Activation_Max_Range>
@@ -553,7 +524,6 @@
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>2000</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Build_Time_Seconds>17</Tactical_Build_Time_Seconds>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
@@ -931,31 +901,69 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Reduce_Production_Price_Ability>
 
-			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
-				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
-				<!-- 3% bonus to base planetary income -->
-				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
-				<!-- plus an absolute 0 credits to planetary income -->
-				<Absolute_Income_Modifier>-350</Absolute_Income_Modifier>
-				<!-- net effect of +( (base income * 0%) + 20) credits -->
-				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
-				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
-			</Planet_Income_Bonus_Ability>
-			
-			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
-				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
-	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
-
-				<Activation_Min_Range>2</Activation_Min_Range>
-	            <Activation_Max_Range>1500</Activation_Max_Range>
-
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 	
+	</UniqueUnit>
+	
+	<UniqueUnit Name="Krin_Invincible">
+		<Variant_Of_Existing_Type>Invincible_Cruiser</Variant_Of_Existing_Type>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Icon_Name>i_button_krin.tga</Icon_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Affiliation>Corporate_Sector</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Text_ID>TEXT_HERO_KRIN</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_KRIN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_RESOLUTE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
+		<Required_Planets>Etti_IV</Required_Planets>
+		<Lua_Script></Lua_Script>
+		
+		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
+		
+						<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>8800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>60</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Krin_Self_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types> Krin_Invincible </Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Krin_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types> </Excluded_Unit_Types>
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+
+		</Abilities>
+		
 	</UniqueUnit>
 	
 	<HeroUnit Name="Teubbo">

@@ -2184,7 +2184,7 @@
 		<Variant_Of_Existing_Type>N_Small_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
 		<Behavior>TACTICAL_BUILD_OBJECTS,REVEAL, BASE_SHIELD, HIDE_WHEN_FOGGED</Behavior>
 		<LandBehavior>TERRAIN_TEXTURE_MODIFICATION, LAND_OBSTACLE, SPACE_OBSTACLE</LandBehavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha, Corporate_Sector</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Tactical_Buildable_Objects_Multiplayer> 
 			Pentastar, 
 				UC_P_Small_Ground_Base_Shield, 
@@ -3008,18 +3008,10 @@
 			Rebel,
 				UC_R_Ground_Turbolaser_Tower,
 			Underworld,
-				UC_U_Ground_Turbolaser_Tower,
-			Pirates, 
-				UC_P_Ground_Turbolaser_Tower,
-			Teradoc,
-				UC_P_Ground_Turbolaser_Tower,
-			Hutts, 
-				UC_P_Ground_Turbolaser_Tower,
-			Corporate_Sector, 
-				UC_P_Ground_Turbolaser_Tower,
+				UC_U_Ground_Turbolaser_Tower, 
 		</Tactical_Buildable_Objects_Multiplayer>
 		
-		<Affiliation>Neutral, Rebel, Empire, Underworld, Pentastar, Pirates, Teradoc, Hutts, Yevetha, Corporate_Sector</Affiliation>
+		<Affiliation>Neutral, Rebel, Empire, Underworld, Pentastar</Affiliation>
 		<Capture_Point_Radius>150</Capture_Point_Radius>
 		<Capture_Point_Transition_Time_Seconds>5.0</Capture_Point_Transition_Time_Seconds>
 		
@@ -3162,7 +3154,7 @@
 		<Hides_When_Built_On>True</Hides_When_Built_On>
 		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
 		<Text_ID>TEXT_GROUND_TURBOLASER_TOWER</Text_ID>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha, Corporate_Sector</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		<Land_Model_Name>EB_TLTower.ALO</Land_Model_Name>
 		<Is_Dummy>No</Is_Dummy>
 		<Is_Community_Property>Yes</Is_Community_Property>
@@ -3617,6 +3609,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_P_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_P_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_P_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate_Sector, UC_P_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 50 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS, REVEAL,HIDE_WHEN_FOGGED</Behavior>
@@ -3642,7 +3635,7 @@
 		
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha, Corporate_Sector</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_infantry_barracks.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -3691,7 +3684,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha, Corporate_Sector</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_infantry_barracks.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -3728,7 +3721,6 @@
 		<Land_Damage_Alternates>3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,null,null,null</Land_Damage_SFX>
 		<Tactical_Buildable_Objects_Multiplayer>Rebel, UC_R_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
-		<Tactical_Buildable_Objects_Multiplayer>Corporate_Sector, UC_R_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 50.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS, REVEAL, HIDE_WHEN_FOGGED</Behavior>
@@ -3755,7 +3747,7 @@
 		
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Affiliation>Rebel, Corporate_Sector</Affiliation>
+		<Affiliation>Rebel</Affiliation>
 		<Size_Value>50</Size_Value>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
@@ -3803,7 +3795,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Rebel, Corporate_Sector</Affiliation>
+		<Affiliation>Rebel</Affiliation>
 		<Size_Value>50</Size_Value>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
@@ -3955,6 +3947,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_P_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_P_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_P_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate_Sector, UC_P_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 50.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS, REVEAL, HIDE_WHEN_FOGGED</Behavior>
@@ -3981,7 +3974,7 @@
 		
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha, Corporate_Sector</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_vehicle_factory.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -4030,7 +4023,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha, Corporate_Sector</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_vehicle_factory.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -4067,7 +4060,6 @@
 		<Land_Damage_Alternates>3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,null,null,null</Land_Damage_SFX>
 		<Tactical_Buildable_Objects_Multiplayer>Rebel, UC_R_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
-		<Tactical_Buildable_Objects_Multiplayer>Corporate_Sector, UC_R_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 50.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS, REVEAL,HIDE_WHEN_FOGGED</Behavior>
@@ -4095,7 +4087,7 @@
 		
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Affiliation>Rebel, Corporate_Sector</Affiliation>
+		<Affiliation>Rebel</Affiliation>
 		<Size_Value>50</Size_Value>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
@@ -4144,7 +4136,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Rebel, Corporate_Sector</Affiliation>
+		<Affiliation>Rebel</Affiliation>
 		<Size_Value>50</Size_Value>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
@@ -4296,6 +4288,7 @@
 		<Tactical_Buildable_Objects_Multiplayer>Teradoc, UC_P_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Hutts, UC_P_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Tactical_Buildable_Objects_Multiplayer>Yevetha, UC_P_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate_Sector, UC_P_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 50.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS, REVEAL,HIDE_WHEN_FOGGED</Behavior>
@@ -4322,7 +4315,7 @@
 				
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha, Corporate_Sector</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_advanced_weapons.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -4371,7 +4364,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
+		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Yevetha, Corporate_Sector</Affiliation>
 		<Size_Value>50</Size_Value>
 		<Icon_Name>i_button_e_advanced_weapons.tga</Icon_Name>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
@@ -4408,7 +4401,6 @@
 		<Land_Damage_Alternates>3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,null,null,null</Land_Damage_SFX>
 		<Tactical_Buildable_Objects_Multiplayer>Rebel, UC_R_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
-		<Tactical_Buildable_Objects_Multiplayer>Corporate_Sector, UC_R_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
 		<Minimum_Time_Before_Pad_Can_Build_Again> 50.0 </Minimum_Time_Before_Pad_Can_Build_Again>
 		<Collidable_By_Projectile_Living>No</Collidable_By_Projectile_Living>
 		<Behavior>TACTICAL_BUILD_OBJECTS, REVEAL,HIDE_WHEN_FOGGED</Behavior>
@@ -4436,7 +4428,7 @@
 		
 		<Armor_Type> Armor_Structure </Armor_Type>
 		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Affiliation>Rebel, Corporate_Sector</Affiliation>
+		<Affiliation>Rebel</Affiliation>
 		<Size_Value>50</Size_Value>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
@@ -4485,7 +4477,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-		<Affiliation>Rebel, Corporate_Sector</Affiliation>
+		<Affiliation>Rebel</Affiliation>
 		<Size_Value>50</Size_Value>
 		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
@@ -6089,7 +6081,7 @@
 			Yevetha, 
 				UC_Pentastar_Mineral_Processor,
 			Corporate_Sector,
-			    UC_Pentastar_Mineral_Processor,
+			    UC_Underworld_Mineral_Processor,
 		</Tactical_Buildable_Objects_Multiplayer>
 		
 		<Minimum_Time_Before_Pad_Can_Build_Again> 30.0 </Minimum_Time_Before_Pad_Can_Build_Again>
@@ -6132,7 +6124,7 @@
 		<GUI_Bracket_Size> 1 </GUI_Bracket_Size> 
 		<Has_Land_Evaluator>True</Has_Land_Evaluator>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
-		<Affiliation>Neutral, Empire, Rebel, Underworld, Pentastar, Pirates, Teradoc, Hutts, Yevetha, Corporate_Sector</Affiliation>
+		<Affiliation>Neutral, Empire, Rebel, Underworld, Pentastar, Pirates, Teradoc, Hutts, Yevetha</Affiliation>
 		
 		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_RESOURCE_PAD_00 TEXT_TOOLTIP_UNIT_CAPTUREABLE_STRUCTURE </Encyclopedia_Text>
 		<MP_Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_RESOURCE_PAD_00 TEXT_TOOLTIP_UNIT_CAPTUREABLE_STRUCTURE </MP_Encyclopedia_Text>
