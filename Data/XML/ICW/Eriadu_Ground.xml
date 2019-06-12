@@ -11,7 +11,7 @@
 		<Damage>10</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>150</Build_Cost_Credits>
+		<Build_Cost_Credits>75</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>25</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -89,7 +89,7 @@
 		</Land_Terrain_Model_Mapping>
 		<Land_Model_Anim_Override_Name>EI_TROOPER.ALo</Land_Model_Anim_Override_Name>
 		<Behavior>SELECTABLE</Behavior>
-		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, IDLE, GARRISON_UNIT</LandBehavior>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,TARGETING,SHIELDED, WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, IDLE, GARRISON_UNIT</LandBehavior>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<CanCellStack>yes</CanCellStack>
@@ -124,26 +124,26 @@
 		<Size_Value>10</Size_Value>
 		<Damage>8</Damage>
 		<Sensor_Range>20</Sensor_Range>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>16</Tactical_Health>
-		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Shield_Points>15</Shield_Points>
+		<Tactical_Health>15</Tactical_Health>
+		<Shield_Refresh_Rate>3</Shield_Refresh_Rate>
 		<Energy_Capacity>0</Energy_Capacity>
 		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
 		<Victory_Relevant>yes</Victory_Relevant>
 		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
 		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
-		<Targeting_Max_Attack_Distance>325.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>250.0</Targeting_Max_Attack_Distance>
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
-		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
-		<Projectile_Types> Proj_Infiltrator_Blaster </Projectile_Types>
+		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
+		<!--<Projectile_Types> Proj_Infiltrator_Blaster </Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>2.5</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
 		<Targeting_Fire_Inaccuracy> Infantry, 0.1 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
-		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
+		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>-->
+		<CategoryMask> Infantry | AntiInfantry | AntiVehicle </CategoryMask>
 		<MovementClass> Infantry </MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
@@ -160,6 +160,8 @@
 		<SFXEvent_Attack>Unit_Attack_Rebel_Infiltrator</SFXEvent_Attack>
 		<SFXEvent_Guard>Unit_Guard_Rebel_Infiltrator</SFXEvent_Guard>
 		<Influences_Capture_Point>True</Influences_Capture_Point>
+		
+		<HardPoints>HP_E11_Rifle_Skilled</HardPoints>
 
 		<SFXEvent_Fire>Unit_Blarg_Fire</SFXEvent_Fire>
 
@@ -172,7 +174,7 @@
 		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
 		<Is_Squashable> Yes </Is_Squashable>
 		<Create_Team>No</Create_Team>
-		<AI_Combat_Power>100</AI_Combat_Power>
+		<AI_Combat_Power>5</AI_Combat_Power>
 		<Idle_Chase_Range>50.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
@@ -229,6 +231,12 @@
 		<Conversion_Ability_Changes_To_Enemy> Rebel_Infiltrator_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
 
 	</GroundInfantry>
+	
+		<GroundInfantry Name="Storm_Commando_Plex">
+		<Variant_Of_Existing_Type>Storm_Commando</Variant_Of_Existing_Type>
+		<HardPoints>HP_PLX</HardPoints>
+
+	</GroundInfantry>
 
 	<GroundCompany Name="Storm_Command_Team">
 		<Text_ID>TEXT_UNIT_STORM_COMMANDO</Text_ID>
@@ -253,9 +261,9 @@
 		<Required_Special_Structures>A_Ground_Barracks</Required_Special_Structures>
 		<Required_Planets/>
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Company_Units> Storm_Commando, Storm_Commando</Company_Units>
-		<Company_Units> Storm_Commando, Storm_Commando</Company_Units>
-		<Company_Units> Storm_Commando, Storm_Commando</Company_Units>
+		<Company_Units> Storm_Commando, Storm_Commando, Storm_Commando, Storm_Commando, Storm_Commando_Plex</Company_Units>
+		<Company_Units> Storm_Commando, Storm_Commando, Storm_Commando, Storm_Commando, Storm_Commando_Plex</Company_Units>
+		<Company_Units> Storm_Commando, Storm_Commando, Storm_Commando, Storm_Commando, Storm_Commando_Plex</Company_Units>
 		<Max_Squad_Size> 1 </Max_Squad_Size>
 		<Formation_Priority>1</Formation_Priority>
 		<Is_Escort>no</Is_Escort>
@@ -553,7 +561,7 @@
 		<Autoresolve_Health>100</Autoresolve_Health>
 
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<Build_Cost_Credits>1200</Build_Cost_Credits>
 		<Build_Time_Seconds>90</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -611,7 +619,7 @@
 		<Damage>24</Damage>
 		<Autoresolve_Health>200</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Build_Cost_Credits>400</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>35</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -664,7 +672,7 @@
 		<Damage>20</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>180</Build_Cost_Credits>
+		<Build_Cost_Credits>350</Build_Cost_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -777,7 +785,7 @@
 		<Damage>20</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>180</Build_Cost_Credits>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -841,7 +849,7 @@
 		<Autoresolve_Health>450</Autoresolve_Health>
 
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Cost_Credits>400</Build_Cost_Credits>
 		<Build_Time_Seconds>40</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -1021,7 +1029,7 @@
 		<Damage>24</Damage>
 		<Autoresolve_Health>200</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>150</Build_Cost_Credits>
+		<Build_Cost_Credits>700</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>40</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1085,7 +1093,7 @@
 		<Damage>30</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Cost_Credits>350</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>70</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1148,7 +1156,7 @@
 		<Damage>60</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>80</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1365,7 +1373,7 @@
 		<Damage>60</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>750</Build_Cost_Credits>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
 		<Build_Time_Seconds>40</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>

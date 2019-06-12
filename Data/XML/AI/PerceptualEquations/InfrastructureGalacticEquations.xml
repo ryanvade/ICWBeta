@@ -105,7 +105,7 @@
 	Boost if we need to upgrade the base
 	-->
 	<Need_Light_Vehicle_Factory>
-		20 * clamp(0.5 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
+		20 * clamp(0.4 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
 													Parameter_Type = "A_Ground_Light_Vehicle_Factory",
 													Parameter_Type = "T_Ground_Light_Vehicle_Factory",
 													Parameter_Type = "Z_Ground_Light_Vehicle_Factory",
@@ -113,7 +113,7 @@
 													Parameter_Type = "C_Ground_Light_Vehicle_Factory",
 													Parameter_Type = "P_Ground_Light_Vehicle_Factory",
 													Parameter_Only_Consider_Complete = 1.0} /
-													Variable_Self.PlanetsControlledUnnormalized), 0.1, 0.5)
+													Variable_Self.PlanetsControlledUnnormalized), 0.1, 0.4)
 		*
 		(
 			Function_Needs_Groundbase_Upgrade.Evaluate
@@ -144,14 +144,14 @@
 
 	<!-- Same kind of deal as vehicle factory -->
 	<Need_Barracks>
-		20 * clamp(0.5 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Barracks",
+		20 * clamp(0.25 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Barracks",
 														Parameter_Type = "A_Ground_Barracks",
 														Parameter_Type = "T_Ground_Barracks",
 														Parameter_Type = "Z_Ground_Barracks",
 														Parameter_Type = "R_Ground_Barracks",
 														Parameter_Type = "P_Ground_Barracks",
 														Parameter_Only_Consider_Complete = 1.0} /
-														Variable_Self.PlanetsControlledUnnormalized), 0.1, 0.5)
+														Variable_Self.PlanetsControlledUnnormalized), 0.1, 0.25)
 		*
 		(
 			Function_Needs_Groundbase_Upgrade.Evaluate
@@ -218,6 +218,15 @@
 													Parameter_Only_Consider_Complete = 1.0})
 		*
 		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
+		*
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "R_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "A_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "T_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "Z_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "C_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "P_Ground_Light_Vehicle_Factory",
+										Parameter_Only_Consider_Complete = 1.0}
 	</Need_Heavy_Vehicle_Factory>
 
 	<!-- Provided we're the Empire faction
@@ -261,6 +270,24 @@
 											Parameter_Only_Consider_Complete = 1.0})
 		*
 		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
+		*
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "R_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "A_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "T_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "Z_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "C_Ground_Light_Vehicle_Factory",
+										Parameter_Type = "P_Ground_Light_Vehicle_Factory",
+										Parameter_Only_Consider_Complete = 1.0}
+		*
+		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "A_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "T_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "Z_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "R_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "P_Ground_Heavy_Vehicle_Factory",
+													Parameter_Type = "U_Ground_Vehicle_Factory",
+													Parameter_Only_Consider_Complete = 1.0}
 	</Need_Advanced_Vehicle_Factory>
 
 	<!-- Does this planet have a starbase already? -->
@@ -468,6 +495,8 @@
 		(1 - Function_Has_Capital_Building.Evaluate)
 		*
 		Function_Needs_Groundbase_Upgrade.Evaluate
+		*
+		(1.1 - clamp(Function_Is_Connected_To_Enemy.Evaluate, 0.0, 1.0))
 	</Need_Capital_Building>
 	
 	<Has_Capital_Building>

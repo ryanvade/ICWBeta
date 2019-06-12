@@ -379,6 +379,8 @@
 			+
 			(10.0 * Variable_Self.WorstIslandFractionOfLargest)
 		)
+		*
+		(1.0 - Function_Should_Crush_Opponent_Planet.Evaluate)
 	</Need_To_Reconnect_Islands>
 
 	<Space_Contrast>
@@ -447,7 +449,39 @@
 		Function_First_Attack_Allowed.Evaluate
 		*
 		(1.0 - Function_Should_Perform_Unrestricted_Grab_Space.Evaluate)
+		*
+		(1.0 - Function_Should_Crush_Opponent_Planet.Evaluate)
 	</Should_Conquer_Opponent_Planet>
+	
+	<Should_Crush_Opponent_Planet>
+		(
+			1.5
+			*
+			Function_Is_Good_Invasion_Target.Evaluate 
+			*
+			Variable_Target.IsHumanControlled
+		)
+		*
+		Function_First_Attack_Allowed.Evaluate
+		*
+		(
+			Variable_Target.StructureCount {Parameter_Type = "Rebel_Golan_Two"
+											,Parameter_Type = "Rebel_Golan_Two_Strategic"
+											,Parameter_Type = "Rebel_Golan_Three"
+											,Parameter_Type = "Rebel_Golan_Three_Strategic"
+											,Parameter_Type = "Empire_Golan_One"
+											,Parameter_Type = "Empire_Golan_Two"
+											,Parameter_Type = "Empire_Golan_Two_Strategic"
+											,Parameter_Type = "Empire_Golan_Three"
+											,Parameter_Type = "Empire_Golan_Three_Strategic"
+											,Parameter_Type = "Oto"
+											,Parameter_Type = "Visvia"
+											,Parameter_Type = "Validusia"
+											,Parameter_Type = "Empress_Station"}
+			+ 
+			Variable_Target.StructureCount {Parameter_Type = "Ground_Ion_Cannon", Parameter_Type = "Ground_Empire_Hypervelocity_Gun", Parameter_Type = "Ground_Pentastar_Hypervelocity_Gun"}
+		)
+	</Should_Crush_Opponent_Planet>
 
 	<Warlord_Should_Conquer_Opponent_Planet>
 		Function_Should_Conquer_Opponent_Planet.Evaluate
@@ -490,6 +524,8 @@
 		Variable_Target.IsHumanControlled
 		*
 		(1 - Function_Should_Perform_Unrestricted_Grab_Land.Evaluate)
+		*
+		(1.0 - Function_Should_Crush_Opponent_Planet.Evaluate)
 	</Should_Perform_Unrestricted_Grab_Space>
 
 	<Should_Perform_Unrestricted_Grab_Land>

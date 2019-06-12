@@ -227,7 +227,7 @@
 				<Stacking_Category>1</Stacking_Category>
 			</Political_Transition_Bonus_Ability>
 							<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
-				<Specific_Mod_Source_Text>TEXT_ECONOMY_CAPITAL</Specific_Mod_Source_Text>
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_PALACE</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
 				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
 				<!-- plus an absolute 0 credits to planetary income -->
@@ -796,6 +796,127 @@
 		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
 	</SpecialStructure>
 	
+	<SpecialStructure Name="Ground_Ion_Cannon_CSA">
+		<GUI_Bounds_Scale>0.4</GUI_Bounds_Scale>
+		<Text_ID>TEXT_GROUND_ION_CANNON</Text_ID>
+		<Land_Model_Name>RB_IONCANNON.ALO</Land_Model_Name>
+		<GUI_Row> 0 </GUI_Row>
+		<Is_Dummy>No</Is_Dummy>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Icon_Name>i_button_ion_cannon.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_ION_CANNON_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<SpaceBehavior>SPECIAL_WEAPON</SpaceBehavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,SELECTABLE,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+
+		<Affiliation>Corporate_Sector</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>100</Size_Value>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>Yes</Build_Can_Be_Unlocked_By_Slicer>
+		<Slice_Cost_Credits>800</Slice_Cost_Credits>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures />
+		<Required_Planets />
+		<Base_Position>Out_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+		<Tactical_Additional_Structure_Type>Power_Generator_P</Tactical_Additional_Structure_Type>
+
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+
+		<Sabotage_Cost_Credits>4000</Sabotage_Cost_Credits>
+		<Tutorial_Sabotage_Cost_Credits>4000</Tutorial_Sabotage_Cost_Credits>
+
+		<Weapon_Type>Ion_Cannon_Planetary</Weapon_Type>
+		<Weapon_Quantity>1</Weapon_Quantity>
+		<SpaceAutoResolveStunRate>3</SpaceAutoResolveStunRate>
+		<Tactical_Health>1500</Tactical_Health>
+		<Projectile_Fire_Recharge_Seconds>90.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Types>Proj_Ion_Cannon_Planetary</Projectile_Types>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+
+		<!--<Destruction_Survivors>
+			Rebel_Survivors_Small, 1.0
+			Rebel_Survivors_Medium, 1.0
+			Rebel_Survivors_Large, 1.0
+		</Destruction_Survivors>-->
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Is_Special_Weapon_In_Space>Yes</Is_Special_Weapon_In_Space>
+		<Special_Weapon_Index>0</Special_Weapon_Index>
+		<Special_Weapon_Target_Action_Index> 1 </Special_Weapon_Target_Action_Index> <!-- HV Gun = 0, Ion Cannon = 1, Magnepulse Cannon = 2 -->
+		<Special_Weapon_Valid_Targets>Transport | Corvette | Frigate | Capital | SuperCapital</Special_Weapon_Valid_Targets>
+
+		<Space_Victory_Relevant>No</Space_Victory_Relevant>
+		<Land_Victory_Relevant>Yes</Land_Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Fire>Unit_Ion_Cannon_Fire</SFXEvent_Fire>
+		<SFXEvent_Special_Weapon_Ready>RHD_Ion_Cannon_Available</SFXEvent_Special_Weapon_Ready>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> RHD_Ion_Cannon_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> RHD_Ion_Cannon_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Ion_Select_SFX</SFXEvent_Select>
+
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+		<Prevents_Blockade_Run_Attrition>True</Prevents_Blockade_Run_Attrition>
+
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+		<Score_Cost_Credits> 20000 </Score_Cost_Credits>
+
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Abilities SubObjectList="Yes">
+			<Force_Healing_Ability Name="Ion_Cannon_Self_Repair">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.025</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types />
+				<SFXEvent_Target_Affected />
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
 	<UniqueUnit Name="Fasser_Strikebreaker">
 		<Variant_Of_Existing_Type>Strikebreaker</Variant_Of_Existing_Type>
 		<LOD_Bias>0.5</LOD_Bias>
@@ -882,7 +1003,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->  
 		<Tactical_Build_Cost_Multiplayer>10000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>60</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
@@ -939,7 +1060,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->  
 		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
@@ -1052,7 +1173,7 @@
 		<Select_Box_Scale>27</Select_Box_Scale>
 		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
 		<Selection_Blob_Material_Name>Selection_Rebel_Hero</Selection_Blob_Material_Name>
-        <Highlight_Blob_Material_Name>Highlight_Empire_Hero</Highlight_Blob_Material_Name>
+        <!-- <Highlight_Blob_Material_Name>Highlight_Empire_Hero</Highlight_Blob_Material_Name> -->
 
 		<Has_Land_Evaluator>True</Has_Land_Evaluator>
 		<AI_Combat_Power>250</AI_Combat_Power>
@@ -1081,7 +1202,7 @@
 		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
 
 		<Abilities SubObjectList="Yes">
-			<Combat_Bonus_Ability Name="Netbers_Ground_Bonus">
+			<Combat_Bonus_Ability Name="Nieler_Ground_Bonus">
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
 				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
@@ -1259,7 +1380,7 @@
 		<Damage>18</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health> <!-- changed to reflect the real health of the units-->
 		<Affiliation>Corporate_Sector</Affiliation>
-		<Build_Cost_Credits>60</Build_Cost_Credits>
+		<Build_Cost_Credits>140</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1275,7 +1396,7 @@
 		<Is_Escort>yes</Is_Escort>
 		<Ship_Class>infantry</Ship_Class>
 		<Company_Transport_Unit>Gallofree_Transport_Troops</Company_Transport_Unit>
-		<Create_Team_Type> Armytrooper_Team </Create_Team_Type>
+		<Create_Team_Type> Espo_Team </Create_Team_Type>
         <!-- AI  Changed to 18 troopers in squads of 9 -->
 		<Company_Units> Espo_Sgt, Espo, Espo, Espo, Espo, Espo, Espo, Espo, Espo</Company_Units>
 		<Company_Units> Espo_Sgt, Espo, Espo, Espo, Espo, Espo, Espo, Espo, Espo</Company_Units>
@@ -1321,72 +1442,7 @@
 		</Unit_Abilities_Data>
 	</GroundCompany>
 	
-	<GroundCompany Name="CSA_Plex_Squad">
-		<LOD_Bias>5</LOD_Bias>
-		<Text_ID>TEXT_REBEL_TANK_BUSTER_SQUAD</Text_ID>
-		<!--<Encyclopedia_Good_Against> M1_Repulsor_Tank TIE_Crawler AT_AT_Walker </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> TIE_Crawler Stormtrooper UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>-->
-		<Encyclopedia_Text>TEXT_TOOLTIP_PLEX TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
-		<GUI_Row> 0 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>6</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
-		<Affiliation>Corporate_Sector</Affiliation>
-		<Build_Cost_Credits>75</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>15</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Build_Initially_Locked>No</Build_Initially_Locked>
-		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Tech_Level>0</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>C_Ground_Barracks</Required_Special_Structures>
-		<Required_Planets/>
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>2</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>walker</Ship_Class>
-		<Company_Transport_Unit>Gallofree_Transport_Troops</Company_Transport_Unit>
-		<Create_Team_Type> Plex_Soldier_Team </Create_Team_Type>
-		<Company_Units>Squad_Plex_Soldier, Squad_Plex_Soldier, Squad_Plex_Soldier </Company_Units>
-		<Company_Units> Squad_Plex_Soldier, Squad_Plex_Soldier, Squad_Plex_Soldier </Company_Units>
-		<Company_Units>Squad_Plex_Soldier, Squad_Plex_Soldier, Squad_Plex_Soldier </Company_Units>
-		<Company_Units> Squad_Plex_Soldier, Squad_Plex_Soldier, Squad_Plex_Soldier </Company_Units>
-		<Max_Squad_Size> 4 </Max_Squad_Size>
-		<Icon_Name>i_button_plex_soldier.tga</Icon_Name>
-		<GUI_Model_Name>RI_PLEXSOLDIER.ALO</GUI_Model_Name>
-		<GUI_Offset>0 0 5</GUI_Offset>
-		<GUI_Velocity>90</GUI_Velocity>
-		<SFXEvent_Build_Started>RHD_Build_Troops</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>RHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Plex_Soldier</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Plex_Soldier</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>55</Score_Cost_Credits>
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>SPREAD_OUT</Type>
-				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
-				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>450</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>3</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites/>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-		<Population_Value>1</Population_Value>
-	</GroundCompany>
-	
+
 		<GroundVehicle Name="Destroyer_Droid">
 		<LOD_Bias>4</LOD_Bias>
 		<Text_ID>TEXT_UNIT_DESTROYER_DROIDMK1</Text_ID>
@@ -1756,7 +1812,7 @@
 		<Damage>24</Damage>
 		<Autoresolve_Health>200</Autoresolve_Health>
 		<Affiliation>Corporate_Sector</Affiliation>
-		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>35</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1824,7 +1880,7 @@
 		<Damage>60</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Corporate_Sector</Affiliation>
-		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -1858,6 +1914,7 @@
 		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
@@ -1926,13 +1983,13 @@
 		<Affiliation>Corporate_Sector</Affiliation>
 
 		<Armor_Type> Armor_ATAT </Armor_Type>
-		<Tactical_Health>800</Tactical_Health>
-		<Autoresolve_Health>800</Autoresolve_Health>
-		<Shield_Points>900</Shield_Points>
+		<Tactical_Health>350</Tactical_Health>
+		<Autoresolve_Health>350</Autoresolve_Health>
+		<Shield_Points>350</Shield_Points>
 		<Shield_Refresh_Rate>40</Shield_Refresh_Rate>	
 		<Energy_Capacity>9999</Energy_Capacity>
 		<Energy_Refresh_Rate>9999</Energy_Refresh_Rate>
-		<AI_Combat_Power>1000</AI_Combat_Power>
+		<AI_Combat_Power>224</AI_Combat_Power>
 		<Damage>70</Damage>
 
 		<Land_FOW_Reveal_Range>550.0</Land_FOW_Reveal_Range>
@@ -2019,19 +2076,6 @@
 		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
 		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
 
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-		
-			<Unit_Ability>
-				<Type>SHIELD_FLARE</Type>
-				<Recharge_Seconds>45</Recharge_Seconds>
-				<GUI_Activated_Ability_Name> Shield_Flare_Vehicle </GUI_Activated_Ability_Name> 
-				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Shield_Flare_Gargantuan</SFXEvent_GUI_Unit_Ability_Activated>  
-				<Supports_Autofire>True</Supports_Autofire>
-			</Unit_Ability>
-
-		</Unit_Abilities_Data>
-
 		<Abilities SubObjectList="Yes">
 		
 			<Shield_Flare_Ability Name="Shield_Flare_Vehicle">
@@ -2079,7 +2123,7 @@
 		<Damage>100</Damage>
 		<Autoresolve_Health>450</Autoresolve_Health>
 		<Affiliation>Corporate_Sector</Affiliation>
-		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>90</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -2113,7 +2157,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1600</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
@@ -2304,7 +2348,7 @@
 		<Damage>40</Damage>
 		<Autoresolve_Health>30</Autoresolve_Health>
 		<Affiliation>Corporate_Sector</Affiliation>
-		<Build_Cost_Credits>150</Build_Cost_Credits>
+		<Build_Cost_Credits>300</Build_Cost_Credits>
 		<Piracy_Value_Credits>40</Piracy_Value_Credits>
 		<Build_Time_Seconds>18</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -2509,7 +2553,7 @@
 		<Damage>40</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Corporate_Sector</Affiliation>
-		<Build_Cost_Credits>300</Build_Cost_Credits>
+		<Build_Cost_Credits>400</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>20</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -3240,7 +3284,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>16</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -3456,6 +3500,7 @@
 		<Tactical_Build_Time_Seconds>9</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
@@ -3659,7 +3704,7 @@
 		<Damage>20</Damage>
 		<Autoresolve_Health>75</Autoresolve_Health>
 		<Affiliation>Corporate_Sector</Affiliation>
-		<Build_Cost_Credits>600</Build_Cost_Credits>
+		<Build_Cost_Credits>700</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -3840,7 +3885,7 @@
 		<Damage>45</Damage>
 		<Autoresolve_Health>48</Autoresolve_Health>
 		<Affiliation>Corporate_Sector</Affiliation>
-		<Build_Cost_Credits>30</Build_Cost_Credits>
+		<Build_Cost_Credits>120</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>5</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>

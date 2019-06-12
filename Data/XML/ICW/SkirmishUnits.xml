@@ -1414,7 +1414,7 @@
 	</SpaceUnit>
 	
 	<SpaceUnit Name="Skirmish_Kariek_Shieldship">
-		<Variant_Of_Existing_Type>KAriek_Shieldship</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Kariek_Shieldship</Variant_Of_Existing_Type>
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED,  SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
@@ -2447,10 +2447,6 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Space_FOW_Reveal_Range>800.0</Space_FOW_Reveal_Range>
-		
-		<Starting_Spawned_Units_Tech_0>TIE_Hunter_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		
 				
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
@@ -2471,8 +2467,8 @@
 		</Unit_Abilities_Data>
 		
 					   		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>8</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>11</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
@@ -2679,19 +2675,141 @@
 	    <Variant_Of_Existing_Type>Citadel_Cruiser</Variant_Of_Existing_Type>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
-		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>
-		     
-			 
-                         <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>      
+	</SpaceUnit>
+	
+	<Squadron Name="Skirmish_Citadel_Cruiser_Squadron">
+		<Text_ID>TEXT_CITADEL_CRUISER_SQUADRON</Text_ID>
+		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>-->
+		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
+		<GUI_Row> 0 </GUI_Row>
+		<Hyperspace>Yes</Hyperspace>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Autoresolve_Health>30</Autoresolve_Health>
+		<Damage>25</Damage>
+		<Affiliation>Corporate_Sector</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Required_Timeline />
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<Squadron_Units>Skirmish_Citadel_Cruiser, Skirmish_Citadel_Cruiser, Skirmish_Citadel_Cruiser, Skirmish_Citadel_Cruiser</Squadron_Units>
+        <Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+ 		<Squadron_Offsets>20.0,40.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>20.0,-40.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>-20.0,0.0,0.0</Squadron_Offsets>
+		<Max_Squad_Size> 12 </Max_Squad_Size>
+		<Icon_Name>i_button_citadel_cruiser.tga</Icon_Name>
+		<GUI_Model_Name>TIE_Interceptor.ALO</GUI_Model_Name>
+		<GUI_Distance>120</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
+
+		<FormationOrder>1</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Property_Flags> SmallShip </Property_Flags>
+		<Score_Cost_Credits> 420</Score_Cost_Credits>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_CITADEL_CRUISER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+
+		<Population_Value>1</Population_Value>
+	</Squadron>	
+	
+	<SpaceUnit Name="Skirmish_Gozanti_Cruiser">
+	    <Variant_Of_Existing_Type>Gozanti_Cruiser</Variant_Of_Existing_Type>
+		<Lua_Script></Lua_Script>
+		<Tech_Level>99</Tech_Level>
+		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>      
 	</SpaceUnit>
 	
-	
+	<Squadron Name="Skirmish_Gozanti_Cruiser_Squadron">
+		<Text_ID>TEXT_GOZANTI_CRUISER_SQUADRON</Text_ID>
+		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>-->
+		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
+		<GUI_Row> 0 </GUI_Row>
+		<Hyperspace>Yes</Hyperspace>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Autoresolve_Health>30</Autoresolve_Health>
+		<Damage>25</Damage>
+		<Affiliation>Corporate_Sector</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>1100</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Required_Timeline />
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<Squadron_Units>Skirmish_Gozanti_Cruiser, Skirmish_Gozanti_Cruiser, Skirmish_Gozanti_Cruiser</Squadron_Units>
+        <Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+ 		<Squadron_Offsets>20.0,40.0,0.0</Squadron_Offsets>
+  		<Squadron_Offsets>20.0,-40.0,0.0</Squadron_Offsets>
+		<Max_Squad_Size> 12 </Max_Squad_Size>
+		<Icon_Name>i_button_gozanti.tga</Icon_Name>
+		<GUI_Model_Name>TIE_Interceptor.ALO</GUI_Model_Name>
+		<GUI_Distance>120</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
+
+		<FormationOrder>1</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Property_Flags> SmallShip </Property_Flags>
+		<Score_Cost_Credits> 420</Score_Cost_Credits>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_GOZANTI_CRUISER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
+
+		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>16</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+
+		<Population_Value>1</Population_Value>
+	</Squadron>
 	
 	<SpaceUnit Name="Skirmish_Crusader">
 		<Variant_Of_Existing_Type>Crusader_Gunship</Variant_Of_Existing_Type>
@@ -2733,7 +2851,38 @@
 		<Affiliation>Mandalorians</Affiliation>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
-		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
 	</SpaceUnit>
-	
+		
+	<SpaceUnit Name="Skirmish_Victory_II_Frigate">
+	    <Variant_Of_Existing_Type>Victory_II_Frigate</Variant_Of_Existing_Type>
+		<Lua_Script></Lua_Script>
+		<Tech_Level>99</Tech_Level>
+		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>
+		     
+			 
+                         <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+	</SpaceUnit>	
+		
+	<SpaceUnit Name="Skirmish_Imperial_II_Frigate">
+	    <Variant_Of_Existing_Type>Generic_Imperial_II_Frigate</Variant_Of_Existing_Type>
+		<Lua_Script></Lua_Script>
+		<Tech_Level>99</Tech_Level>
+		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>
+		     
+			 
+                         <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>2200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+	</SpaceUnit>	
 </Skirmish_Units>

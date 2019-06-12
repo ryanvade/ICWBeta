@@ -231,6 +231,7 @@ function Find_Ground_Unit_Target(object)
 	end
 	
 	if my_planet and EvaluatePerception("Low_Ground_Defense_Score", PlayerObject, my_planet) > 0.5 then
+		DebugMessage("%s -- Object: %s, current planet undefended.", tostring(Script), tostring(object))
 		return nil
 	end
 	
@@ -312,6 +313,7 @@ function Find_Space_Unit_Target(object)
 	end
 	
 	if my_planet and EvaluatePerception("Low_Space_Defense_Score", PlayerObject, my_planet) > 0.5 then
+		DebugMessage("%s -- Object: %s, current planet undefended.", tostring(Script), tostring(object))
 		return nil
 	end	
 	

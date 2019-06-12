@@ -282,6 +282,20 @@
 				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
+			
+			<Galactic_Stealth_Ability Name="Luke_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+			<System_Spy_Ability Name="Luke_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Minor_Stealth_Heroes>Yes</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
 
 		</Abilities>
 
@@ -537,6 +551,20 @@
 				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
+			
+			<Galactic_Stealth_Ability Name="Horn_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+			<System_Spy_Ability Name="Horn_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Minor_Stealth_Heroes>Yes</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
     
 		</Abilities>
 		
@@ -568,6 +596,7 @@
 		<Company_Transport_Unit>Luke_Jedi_XWing</Company_Transport_Unit>
 		<Company_Units>Luke_Skywalker_Jedi</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
 		<Available_In_Skirmish>yes</Available_In_Skirmish>
 		<Score_Cost_Credits> 10000 </Score_Cost_Credits>
@@ -646,6 +675,7 @@
 		<Company_Units>Corran_Horn</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
 		<Available_In_Skirmish>yes</Available_In_Skirmish>
 		<Score_Cost_Credits> 10000 </Score_Cost_Credits>
 		<Can_Be_Only_One>true</Can_Be_Only_One>

@@ -136,7 +136,7 @@
 		<Damage>20</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>180</Build_Cost_Credits>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -323,7 +323,7 @@
 		<Damage>10</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Build_Cost_Credits>100</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>25</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -462,7 +462,7 @@
 		<Damage>18</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health> 
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>90</Build_Cost_Credits>
+		<Build_Cost_Credits>150</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -479,10 +479,10 @@
 		<Ship_Class>infantry</Ship_Class>
 		<Company_Transport_Unit>Imperial_Landing_Craft_Troops</Company_Transport_Unit>
 		<Create_Team_Type> Raptor_Team </Create_Team_Type>
-		<Company_Units> Raptor_Captain, Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper  </Company_Units> 
-		<Company_Units> Raptor_Lt, Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper  </Company_Units> 
-		<Company_Units> Raptor_Lt, Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper  </Company_Units> 
-		<Company_Units> Raptor_Lt, Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper  </Company_Units> 
+		<Company_Units> Raptor_Captain, Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper_Plex  </Company_Units> 
+		<Company_Units> Raptor_Lt, Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper_Plex  </Company_Units> 
+		<Company_Units> Raptor_Lt, Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper_Plex  </Company_Units> 
+		<Company_Units> Raptor_Lt, Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper,Raptor_Trooper_Plex  </Company_Units> 
 		
 		<Max_Squad_Size> 9 </Max_Squad_Size>
 		<Icon_Name>i_button_raptor_trooper.tga</Icon_Name>
@@ -619,7 +619,7 @@
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
 		<Deploys>No</Deploys>
-
+		<HardPoints>HP_E11_Rifle</HardPoints>
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>18</Tactical_Health>
 
@@ -629,19 +629,15 @@
 		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
 		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
 		<Victory_Relevant>yes</Victory_Relevant>
-		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<!--<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>0.65</Projectile_Fire_Recharge_Seconds>
-		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>-->
 		
 		<Land_FOW_Reveal_Range>400</Land_FOW_Reveal_Range>
-		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
 		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
-		<Targeting_Fire_Inaccuracy> Infantry, 3.0 </Targeting_Fire_Inaccuracy>
-		<!-- from 1.0 to make them more innacurate -->
-		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+
 
 		
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
@@ -681,6 +677,13 @@
 	
 	</GroundInfantry>
 	
+		<GroundInfantry Name="Raptor_Trooper_Plex">
+		<Variant_Of_Existing_Type>Raptor_Trooper</Variant_Of_Existing_Type>
+		<HardPoints>HP_PLX</HardPoints>
+		
+		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
+	</GroundInfantry>
+	
 	<GroundCompany Name="Zsinj_Heavy_Scout_Squad">
 		<LOD_Bias>4</LOD_Bias>
 		<Text_ID>TEXT_IMPERIAL_HEAVY_SCOUT_SQUAD</Text_ID>
@@ -691,7 +694,7 @@
 		<Damage>24</Damage>
 		<Autoresolve_Health>200</Autoresolve_Health>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>150</Build_Cost_Credits>
+		<Build_Cost_Credits>700</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>40</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -762,7 +765,7 @@
 		<Damage>60</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -811,7 +814,7 @@
 		<Damage>40</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>50</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -872,7 +875,7 @@
 		<Damage>24</Damage>
 		<Autoresolve_Health>200</Autoresolve_Health>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Build_Cost_Credits>400</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>35</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -919,7 +922,7 @@
 		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
- 	<GroundCompany Name="Zsinj_A6_Juggernaut_Company">
+ 	<GroundCompany Name="Zsinj_A5_Juggernaut_Company">
 		<LOD_Bias>0.5</LOD_Bias>
 		<Text_ID>TEXT_UNIT_JUGGERNAUT_A5_TEAM</Text_ID>
   		<Encyclopedia_Text>TEXT_TOOLTIP_JUGGERNAUT_A5</Encyclopedia_Text>
@@ -932,7 +935,7 @@
 		<Autoresolve_Health>100</Autoresolve_Health>
 		
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>650</Build_Cost_Credits>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
 		<Build_Time_Seconds>50</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -985,7 +988,7 @@
 		<Damage>20</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>180</Build_Cost_Credits>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1037,7 +1040,7 @@
 		<Damage>30</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Cost_Credits>350</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>70</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1100,7 +1103,7 @@
 		<Damage>100</Damage>
 		<Autoresolve_Health>450</Autoresolve_Health>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Cost_Credits>750</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>90</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1157,7 +1160,7 @@
 		<Damage>60</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>80</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>

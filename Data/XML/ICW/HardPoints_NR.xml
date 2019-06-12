@@ -1701,6 +1701,35 @@
 		<Death_Explosion_Particles> Large_Explosion_Space_Empire </Death_Explosion_Particles>  <!-- STUBBED PLACEHOLDER -->
 		<Death_Explosion_SFXEvent>Unit_Hardpoint_Bay_Death</Death_Explosion_SFXEvent> <!-- STUBBED PLACEHOLDER -->
 	</HardPoint>
+	
+	<HardPoint Name="HP_Marauder_Turbo">
+			<Type> HARD_POINT_WEAPON_LASER </Type>
+            <Is_Targetable>No</Is_Targetable>
+            <Is_Destroyable>No</Is_Destroyable>
+            <Tooltip_Text>TEXT_WEAPON_TURBOLASER</Tooltip_Text>
+            <Health>365.0</Health>
+
+            <Fire_Bone_A>MuzzleA_00</Fire_Bone_A>
+            <Fire_Bone_B>MuzzleA_01</Fire_Bone_B>
+            <Fire_Cone_Width>160.0</Fire_Cone_Width>
+            <Fire_Cone_Height>130.0</Fire_Cone_Height>
+            <Fire_Projectile_Type>Proj_Ship_Turbolaser_Green</Fire_Projectile_Type>
+            <Fire_Min_Recharge_Seconds>4.0</Fire_Min_Recharge_Seconds>
+            <Fire_Max_Recharge_Seconds>4.0</Fire_Max_Recharge_Seconds>
+            <Fire_Pulse_Count>24</Fire_Pulse_Count>
+            <Fire_Pulse_Delay_Seconds>0.2</Fire_Pulse_Delay_Seconds>
+            <Fire_Range_Distance>2800.0</Fire_Range_Distance>
+			<Fire_SFXEvent>Unit_Turbo_Fire</Fire_SFXEvent>
+
+			<Fire_Inaccuracy_Distance> Fighter, 70.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Bomber, 70.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Transport, 70.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Corvette, 7 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Frigate, 1.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> Capital, 10.0 </Fire_Inaccuracy_Distance>
+			<Fire_Inaccuracy_Distance> SuperCapital, 1.0 </Fire_Inaccuracy_Distance>
+
+    </HardPoint>
 
 	<HardPoint Name="HP_Majestic_Hangar">
 		<Type> HARD_POINT_FIGHTER_BAY </Type>
@@ -8660,8 +8689,8 @@
             <Is_Destroyable>No</Is_Destroyable>
 
 
-            <Fire_Bone_A>MuzzleA_00</Fire_Bone_A>
-            <Fire_Bone_B>MuzzleA_01</Fire_Bone_B>
+            <Fire_Bone_A>MuzzleC_00</Fire_Bone_A>
+            <Fire_Bone_B>MuzzleC_01</Fire_Bone_B>
             <Fire_Cone_Width>30.0</Fire_Cone_Width>
             <Fire_Cone_Height>30.0</Fire_Cone_Height>
             <Fire_Projectile_Type>Proj_Ship_Proton_Torpedo</Fire_Projectile_Type>
@@ -8847,7 +8876,7 @@
             <Fire_Bone_B>MuzzleA_00</Fire_Bone_B>
             <Fire_Cone_Width>20.0</Fire_Cone_Width>
             <Fire_Cone_Height>20.0</Fire_Cone_Height>
-            <Fire_Projectile_Type>Proj_Ship_Ion_Cannon_Medium</Fire_Projectile_Type>
+            <Fire_Projectile_Type>Proj_Ship_Ion_Cannon_Fighter</Fire_Projectile_Type>
             <Fire_Min_Recharge_Seconds>4.0</Fire_Min_Recharge_Seconds>
             <Fire_Max_Recharge_Seconds>4.0</Fire_Max_Recharge_Seconds>
             <Fire_Pulse_Count>1</Fire_Pulse_Count>
@@ -8871,29 +8900,6 @@
 
 	</HardPoint>
 
-	<HardPoint Name="HP_Bwing_03">
-			<Type> HARD_POINT_WEAPON_TORPEDO </Type>
-            <Is_Targetable>No</Is_Targetable>
-            <Is_Destroyable>No</Is_Destroyable>
-
-
-            <Fire_Bone_A>MuzzleA_03</Fire_Bone_A>
-			<Fire_Bone_B>MuzzleA_03</Fire_Bone_B>
-            <Fire_Cone_Width>30.0</Fire_Cone_Width>
-            <Fire_Cone_Height>30.0</Fire_Cone_Height>
-            <Fire_Projectile_Type>Proj_Ship_Small_Laser_Cannon_Green_Heavy</Fire_Projectile_Type>
-            <Fire_Min_Recharge_Seconds>2.0</Fire_Min_Recharge_Seconds>
-            <Fire_Max_Recharge_Seconds>2.0</Fire_Max_Recharge_Seconds>
-            <Fire_Pulse_Count>1</Fire_Pulse_Count>
-            <Fire_Pulse_Delay_Seconds>0.2</Fire_Pulse_Delay_Seconds>
-            <Fire_Range_Distance>700.0</Fire_Range_Distance>
-			<Fire_SFXEvent>Unit_Empire_Ship_Laser_Fire</Fire_SFXEvent>
-
-			<Fire_Category_Restrictions> Corvette, Frigate, Capital, Structure </Fire_Category_Restrictions>
-			<Allow_Opportunity_Fire_When_Targeting>True</Allow_Opportunity_Fire_When_Targeting>
-			<Allow_Opportunity_Fire_When_Idle>True</Allow_Opportunity_Fire_When_Idle>
-
-    </HardPoint>
 
 	<!-- K-Wing -->
 
@@ -9450,7 +9456,7 @@
 			<Damage_Particles>HP01_CA_EMITDAMAGE</Damage_Particles>
      </HardPoint>
 	
-	<HardPoint Name="Super_Awesome_Tractor_Beam">
+	<HardPoint Name="Generic_Untargetable_Tractor_Beam">
 			<Type>HARD_POINT_TRACTOR_BEAM</Type>
 			<Is_Targetable>No</Is_Targetable>
 			<Is_Destroyable>No</Is_Destroyable>

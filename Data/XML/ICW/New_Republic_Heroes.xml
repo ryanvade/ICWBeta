@@ -7,13 +7,7 @@
         <Ranking_In_Category>3</Ranking_In_Category>
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
-		
-				<Starting_Spawned_Units_Tech_0>K-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-			<Reserve_Spawned_Units_Tech_0>K-Wing_Squadron, 3</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>E-Wing_Squadron, 4</Reserve_Spawned_Units_Tech_0>
-		
+				
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Affiliation>Rebel</Affiliation>
@@ -96,6 +90,18 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
 
+			<Tractor_Beam_Attack_Ability Name="Endurance_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 		<Is_Named_Hero>Yes</Is_Named_Hero>
@@ -130,7 +136,16 @@
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		
-		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 3</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_3>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_4>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_5>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 		<CategoryMask> Frigate | SpaceHero | AntiFighter | AntiBomber</CategoryMask>
@@ -578,7 +593,6 @@
 		
 	<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		
-		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		
 		<Lua_Script></Lua_Script>
@@ -653,7 +667,11 @@
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		
-		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_3>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_4>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_5>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 		<CategoryMask> Frigate | SpaceHero | AntiFrigate</CategoryMask>
@@ -715,6 +733,19 @@
 				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="VSD_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 
 		</Abilities>
 
@@ -732,15 +763,6 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Affiliation>Rebel</Affiliation>
-		
-		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>5400</Tactical_Build_Cost_Multiplayer>
@@ -847,6 +869,18 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Reduce_Production_Price_Ability>
 
+			<Tractor_Beam_Attack_Ability Name="MCHO_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 		<CategoryMask> Capital | SpaceHero | AntiCapital </CategoryMask>
@@ -869,14 +903,6 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 				<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
-
-		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>E-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		
 		<Tech_Level>99</Tech_Level>
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -932,6 +958,16 @@
 				<Supports_Autofire>True</Supports_Autofire>
 			</Unit_Ability>
 			
+			<Unit_Ability>
+	            <Type>TRACTOR_BEAM</Type>
+	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
+	            <GUI_Activated_Ability_Name>MC90_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <Recharge_Seconds>30</Recharge_Seconds>
+	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+	  
+			</Unit_Ability>
+			
 		</Unit_Abilities_Data>
 
 		<!-- Hero abilities moved to ship; Ackbar "movable" unit removed -->
@@ -982,6 +1018,18 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Reduce_Production_Price_Ability>
 			
+			<Tractor_Beam_Attack_Ability Name="MC90_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 		<CategoryMask> Capital | SpaceHero | AntiCapital </CategoryMask>
@@ -1010,13 +1058,13 @@
 		<Lua_Script></Lua_Script>
 		<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
 		
-		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 5</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 5</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 5</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_5>E-Wing_Squadron, 5</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>A-Wing_Squadron, 5</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>B-Wing_Squadron, 5</Starting_Spawned_Units_Tech_5>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>E-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>B-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_5>E-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>B-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_5>
 		
 		<Tech_Level>99</Tech_Level>
 		
@@ -1065,6 +1113,15 @@
 				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Ackbar</SFXEvent_GUI_Unit_Ability_Activated>
 				<SFXEvent_GUI_Unit_Ability_Deactivated />
 				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+	            <Type>TRACTOR_BEAM</Type>
+	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
+	            <GUI_Activated_Ability_Name>Executor_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <Recharge_Seconds>30</Recharge_Seconds>
+	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
 			</Unit_Ability>
 			
 		</Unit_Abilities_Data>
@@ -1117,6 +1174,29 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Reduce_Production_Price_Ability>
 			
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-350</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 	
 	</UniqueUnit>
@@ -1124,15 +1204,10 @@
 	<!-- Han Solo -->
 
 	<UniqueUnit Name="Solo_Remonda">
-		<Variant_Of_Existing_Type>MC80b</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>MC80B</Variant_Of_Existing_Type>
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		
-		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<CategoryMask> Capital |  AntiCapital | SpaceHero </CategoryMask>
@@ -1157,11 +1232,7 @@
 
 		<Death_SFXEvent_Start_Die>SFX_Death_Bombard</Death_SFXEvent_Start_Die>
 
-		<!--<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>-->
-		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Millennium_Falcon, 1</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 		<Neutralization_Cost>3000.0</Neutralization_Cost>
 		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
@@ -1207,6 +1278,18 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 			
+			<Tractor_Beam_Attack_Ability Name="MC80B_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>			
 		</Abilities>
 		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
@@ -1569,6 +1652,20 @@
 				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
+			
+			<Galactic_Stealth_Ability Name="Lando_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+			<System_Spy_Ability Name="Lando_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Minor_Stealth_Heroes>Yes</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
 		
 			<Planet_Income_Bonus_Ability Name="Lando_Income_Bonus">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_LANDO</Specific_Mod_Source_Text>
@@ -1932,6 +2029,7 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
 		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
 		<Available_In_Skirmish>yes</Available_In_Skirmish>
 		<!-- <Build_Cost_Credits>10000</Build_Cost_Credits> -->
 		<Can_Be_Only_One>true</Can_Be_Only_One>
@@ -2193,6 +2291,20 @@
 				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
+			
+			<Galactic_Stealth_Ability Name="Kyle_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+			<System_Spy_Ability Name="Kyle_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Minor_Stealth_Heroes>Yes</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
 
 	</Abilities>
 		
@@ -2532,6 +2644,7 @@
 		
 		<Available_In_Skirmish>yes</Available_In_Skirmish>
 		<Can_Be_Only_One>true</Can_Be_Only_One>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
 
@@ -3028,8 +3141,6 @@
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		
-		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_2>
@@ -3130,8 +3241,6 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 
 		
-		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_2>
@@ -3275,8 +3384,6 @@
 		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
 
 		
-		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_2>
@@ -3373,13 +3480,41 @@
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<CategoryMask> SuperCapital |  AntiCapital | SpaceHero </CategoryMask>
 
-			<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
-        <Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
-        <Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 5</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
+        <Starting_Spawned_Units_Tech_1>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
+        <Starting_Spawned_Units_Tech_1>A-Wing_Squadron, 5</Starting_Spawned_Units_Tech_1>
         <Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
-        <Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_0> 
-        <Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_0>
-        <Reserve_Spawned_Units_Tech_0>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+        <Reserve_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_1> 
+        <Reserve_Spawned_Units_Tech_1>Y-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_1>
+        <Reserve_Spawned_Units_Tech_1>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_1>
+		
+		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_2>
+        <Starting_Spawned_Units_Tech_2>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_2>
+        <Starting_Spawned_Units_Tech_2>A-Wing_Squadron, 5</Starting_Spawned_Units_Tech_2>
+        <Reserve_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_2> 
+        <Reserve_Spawned_Units_Tech_2>Y-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_2>
+        <Reserve_Spawned_Units_Tech_2>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_2>
+		
+		<Starting_Spawned_Units_Tech_3>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_3>
+        <Starting_Spawned_Units_Tech_3>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_3>
+        <Starting_Spawned_Units_Tech_3>A-Wing_Squadron, 5</Starting_Spawned_Units_Tech_3>
+        <Reserve_Spawned_Units_Tech_3>Rebel_X-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_3> 
+        <Reserve_Spawned_Units_Tech_3>Y-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_3>
+        <Reserve_Spawned_Units_Tech_3>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_3>
+		
+		<Starting_Spawned_Units_Tech_4>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_4>
+        <Starting_Spawned_Units_Tech_4>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_4>
+        <Starting_Spawned_Units_Tech_4>A-Wing_Squadron, 5</Starting_Spawned_Units_Tech_4>
+        <Reserve_Spawned_Units_Tech_4>Rebel_X-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_4> 
+        <Reserve_Spawned_Units_Tech_4>Y-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_4>
+        <Reserve_Spawned_Units_Tech_4>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_4>
+		
+		<Starting_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_5>
+        <Starting_Spawned_Units_Tech_5>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_5>
+        <Starting_Spawned_Units_Tech_5>A-Wing_Squadron, 5</Starting_Spawned_Units_Tech_5>
+        <Reserve_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_5> 
+        <Reserve_Spawned_Units_Tech_5>Y-Wing_Squadron, 8</Reserve_Spawned_Units_Tech_5>
+        <Reserve_Spawned_Units_Tech_5>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_5>
 		
 		<HardPoints>
      		HP_Lusankya_Turbo_1, HP_Lusankya_Turbo_2, HP_Lusankya_Turbo_3, HP_Lusankya_Turbo_4, HP_Lusankya_Turbo_5, HP_Lusankya_Turbo_6, HP_Lusankya_Turbo_7, HP_Lusankya_Turbo_8, HP_Lusankya_Turbo_9, HP_Lusankya_Turbo_10, HP_Lusankya_Turbo_11, HP_Lusankya_Turbo_12, HP_Lusankya_Turbo_13, HP_Lusankya_Turbo_14, HP_Lusankya_Turbo_15, HP_Lusankya_Turbo_16, HP_Lusankya_Turbo_17, HP_Lusankya_Turbo_18, HP_Lusankya_Turbo_19, HP_Lusankya_Turbo_20, HP_Lusankya_Turbo_21, HP_Lusankya_Turbo_22, HP_Lusankya_Turbo_23, HP_Lusankya_Turbo_24, HP_Lusankya_Turbo_25, HP_Lusankya_Turbo_26, HP_Lusankya_Turbo_27, HP_Lusankya_Turbo_28, HP_Lusankya_Turbo_29, HP_Lusankya_Turbo_30, HP_Lusankya_Turbo_31, HP_Lusankya_Turbo_32, HP_Lusankya_Turbo_33, HP_Lusankya_Turbo_34, HP_Lusankya_Turbo_35, HP_Lusankya_Turbo_36, HP_Lusankya_Turbo_37, HP_Lusankya_Turbo_38, HP_Lusankya_Turbo_39, HP_Lusankya_Turbo_40, HP_Lusankya_Turbo_41, HP_Lusankya_Turbo_42, HP_Lusankya_Turbo_43, HP_Lusankya_Turbo_44, HP_Lusankya_Turbo_45, HP_Lusankya_Turbo_46,
@@ -3453,6 +3588,29 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
 			
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-350</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 	
 	</UniqueUnit>
@@ -3726,6 +3884,10 @@
 				<See_Force_Sensitive_Heroes>Yes</See_Force_Sensitive_Heroes>
 				<See_Super_Weapons>Yes</See_Super_Weapons>
 			</System_Spy_Ability>
+			
+			<Galactic_Stealth_Ability Name="Cilghal_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
 
 			<Berserker_Ability Name="Cilghal_Force_Attack">
 				<Activation_Style> Special_Attack </Activation_Style>
@@ -3779,6 +3941,7 @@
 		<Company_Transport_Unit>Alliance_Shuttle</Company_Transport_Unit>
 		<Company_Units>Cilghal</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
 		<Available_In_Skirmish>yes</Available_In_Skirmish>
 		<Score_Cost_Credits> 10000 </Score_Cost_Credits>
@@ -3846,16 +4009,6 @@
 		<Affiliation>Rebel</Affiliation>
 		
 		<CategoryMask> Capital |  AntiCapital | SpaceHero </CategoryMask>
-
-		
-		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>A-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
 		
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Nantz_Self_Bonus">
@@ -3895,6 +4048,18 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
 
+			<Tractor_Beam_Attack_Ability Name="MCHO_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 		
 	</UniqueUnit>
@@ -3915,7 +4080,6 @@
 		<Lua_Script>GenericGameObject</Lua_Script>
 		<Affiliation>Rebel</Affiliation>
 		
-				<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 		
@@ -3951,6 +4115,18 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 
+			<Tractor_Beam_Attack_Ability Name="Dauntless_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 		
 	</UniqueUnit>
@@ -3968,10 +4144,6 @@
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED,  SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		
-		<Starting_Spawned_Units_Tech_0>E-Wing_Squadron, 8</Starting_Spawned_Units_Tech_0>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>E-Wing_Squadron, 4</Reserve_Spawned_Units_Tech_0>
-
 		<SFXEvent_Select>Unit_Select_Illor</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Illor</SFXEvent_Move>
 		<SFXEvent_Fleet_Move>Unit_Move_Illor</SFXEvent_Fleet_Move>
@@ -4027,6 +4199,18 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 			
+			<Tractor_Beam_Attack_Ability Name="Endurance_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
@@ -4085,7 +4269,12 @@
 				<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 
 		
-		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_3>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_4>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 2</Starting_Spawned_Units_Tech_5>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 
 	<!-- Non-Hero unit abilities description -->
 		<Abilities SubObjectList="Yes">
@@ -4119,6 +4308,19 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 			
+			<Tractor_Beam_Attack_Ability Name="VSD_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			
 		</Abilities>
 		
 		<Is_Named_Hero>Yes</Is_Named_Hero>
@@ -4146,13 +4348,41 @@
 		<Affiliation>Rebel</Affiliation>
 
 		
-		<Starting_Spawned_Units_Tech_0>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_1>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-			<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_0>
+			<Reserve_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		<Reserve_Spawned_Units_Tech_1>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		
+		<Starting_Spawned_Units_Tech_2>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_2>
+			<Reserve_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_2>
+		<Reserve_Spawned_Units_Tech_2>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_2>
+		
+		<Starting_Spawned_Units_Tech_3>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_3>
+			<Reserve_Spawned_Units_Tech_3>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_3>
+		
+		<Starting_Spawned_Units_Tech_4>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
+			<Reserve_Spawned_Units_Tech_4>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		
+		<Starting_Spawned_Units_Tech_5>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
+			<Reserve_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_5>
 		
 		<Tech_Level>99</Tech_Level>
 		<Lua_Script>GenericGameObject</Lua_Script>
@@ -4219,11 +4449,41 @@
 				<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, POWERED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
 
-		
-		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>B-Wing_Squadron, 3</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_1>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>B-Wing_Squadron, 2</Reserve_Spawned_Units_Tech_0>
+			<Reserve_Spawned_Units_Tech_1>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		<Reserve_Spawned_Units_Tech_1>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_1>
+		
+		<Starting_Spawned_Units_Tech_2>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_2>
+			<Reserve_Spawned_Units_Tech_2>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_2>
+		<Reserve_Spawned_Units_Tech_2>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_2>
+		
+		<Starting_Spawned_Units_Tech_3>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_3>
+			<Reserve_Spawned_Units_Tech_3>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_3>
+		
+		<Starting_Spawned_Units_Tech_4>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
+			<Reserve_Spawned_Units_Tech_4>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		
+		<Starting_Spawned_Units_Tech_5>A-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Shielded_TIE_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
+			<Reserve_Spawned_Units_Tech_5>Rebel_X-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>Y-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_5>
 		
 		<Abilities SubObjectList="Yes">
 
@@ -4258,7 +4518,7 @@
 		
 	</UniqueUnit>
 	
-		<HeroUnit Name="Mirax">
+	<HeroUnit Name="Mirax">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_MIRAX</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_MIRAX TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_PULSAR_SKATE </Encyclopedia_Text>

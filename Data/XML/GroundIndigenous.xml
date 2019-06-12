@@ -5523,5 +5523,119 @@
 		
 	</Indigenous_Unit>
 
+<Indigenous_Unit Name="Rodian_Civilian">
+		<LOD_Bias>5</LOD_Bias>
+		<Text_ID>TEXT_INDIG_RODIAN</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INDIGENOUS </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Land_Model_Name>PA_Reikas.ALO</Land_Model_Name>
+		
+		<Icon_Name>i_button_rodian.tga</Icon_Name>
+		<Behavior>SELECTABLE</Behavior>
+		<LandBehavior>SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE,REVEAL,HIDE_WHEN_FOGGED</LandBehavior>
+		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<CanCellStack>yes</CanCellStack>
+		<Select_Box_Scale>0</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Mass>1.0</Mass>
+		<GUI_Bracket_Width>5</GUI_Bracket_Width>
+		<GUI_Bracket_Height>0</GUI_Bracket_Height>
+		<GUI_Bracket_Size>0</GUI_Bracket_Size>
+		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
+		<Is_Combustible>yes</Is_Combustible>
+		<On_Fire_Speed_Modifier>1.2f</On_Fire_Speed_Modifier>
+		<Targeting_Allowed_When_Burning>no</Targeting_Allowed_When_Burning>
+		<Burning_Damage_Per_Second>0.1</Burning_Damage_Per_Second>
+
+		<Influences_Capture_Point>True</Influences_Capture_Point>
+
+		<Movement_Animation_Speed> 0.8 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+		<Max_Speed>1</Max_Speed>
+		<Max_Rate_Of_Turn>10.0</Max_Rate_Of_Turn>
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> .5 </FormationSpacing>
+		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
+		<Min_Speed> .1 </Min_Speed>
+		<OverrideAcceleration> .1 </OverrideAcceleration>
+		<OverrideDeceleration> .1 </OverrideDeceleration>
+		<FormationOrder> 2 </FormationOrder>
+		<FormationGrouping> Standard </FormationGrouping>
+
+		<Scale_Factor>1</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Affiliation>Rebel</Affiliation>
+		<Required_Timeline>0</Required_Timeline>
+		<IsBuildable>No</IsBuildable>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Size_Value>10</Size_Value>
+		<Armor_Type> Armor_Infantry </Armor_Type>
+		<Damage>3</Damage>
+		<Tactical_Health>3</Tactical_Health>
+		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+		
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 2.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 8.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 8.0 </Targeting_Fire_Inaccuracy>
+		
+		<Land_FOW_Reveal_Range>150.0</Land_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
+		<Targeting_Max_Attack_Distance>150.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		
+		<SFXEvent_Select>Unit_Select_Civilian</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Civilian</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Civilian</SFXEvent_Attack>
+		<SFXEvent_Assist_Move>Unit_Assist_Move_Civilian</SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack>Unit_Assist_Attack_Civilian</SFXEvent_Assist_Attack>
+		<SFXEvent_Guard>Unit_Guard_Civilian</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Rebel_Infantry_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_Death</Death_SFXEvent_Start_Die>
+
+		<Idle_Chase_Range>500.0</Idle_Chase_Range>
+		<Guard_Chase_Range>500.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
+		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
+
+		<MovementClass>Infantry</MovementClass>
+		<CategoryMask> Infantry </CategoryMask>
+		<Victory_Relevant>No</Victory_Relevant>
+		<Weather_Category>Infantry</Weather_Category>
+		
+		<Death_Clone>Damage_Force_Whirlwind, Urban_Civ_A_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, Urban_Civ_A_Force_Lightning_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+
+		<OccupationStyle>1x1</OccupationStyle>
+		<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
+		<Is_Squashable> Yes </Is_Squashable>
+		
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+		<Create_Team>True</Create_Team>
+		<AI_Combat_Power>5</AI_Combat_Power>
+		
+		<Movie_Object>false</Movie_Object>
+		
+	</Indigenous_Unit>
 
 </Indigenous_Units>

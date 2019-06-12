@@ -101,7 +101,7 @@ function Pestage_Isard_Rewards()
         local empire = Find_Player("Empire")
         local thyferra = FindPlanet("Thyferra")
         Spawn_Unit(Find_Object_Type("Pestage_Team"), FindPlanet("Coruscant"), empire)
-        Spawn_Unit(Find_Object_Type("Shockwave_Star_Destroyer"), thyferra, empire)
+        Spawn_Unit(Find_Object_Type("Whirlwind_Star_Destroyer"), thyferra, empire)
         Spawn_Unit(Find_Object_Type("Reckoning_Star_Destroyer"), thyferra, empire)
         Spawn_Unit(Find_Object_Type("Brashin_Team"), thyferra, empire)
         Spawn_Unit(Find_Object_Type("Loor_Team"), thyferra, empire)
@@ -119,11 +119,11 @@ function Pestage_Isard_Rewards()
         WithFallback():
         End():execute()
 
-        DespawnHero("Shockwave_Star_Destroyer"):execute()
+        DespawnHero("Whirlwind_Star_Destroyer"):execute()
         local kalist = FindPlanet("Kalist")
         local harrsk = Find_Player("Harrsk")
         ChangeOwnerAndRetreat(kalist, harrsk)
-        SpawnList({"Shockwave_Star_Destroyer", "Generic_Star_Destroyer"}, kalist, harrsk, true, false)
+        SpawnList({"Whirlwind_Star_Destroyer", "Generic_Star_Destroyer"}, kalist, harrsk, true, false)
     end)
 
     Event("Ambition_Researched"):

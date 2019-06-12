@@ -33,8 +33,8 @@ function MakeRaidFleet(chance)
     {"Skirmish_CR90", "Skirmish_Neutron_Star", "Skirmish_Star_Destroyer_Two", "Skirmish_Victory_Destroyer_Two", "Skirmish_Quasar_Zsinj"},
     {"Skirmish_Enforcer", "Skirmish_Raider_Pentastar", "Skirmish_Procursator", "Skirmish_Star_Destroyer_Two", "Skirmish_Munificent"},
     {"Armadia", "Skirmish_Dreadnaught_Empire", "Skirmish_Victory_Destroyer_Two", "Skirmish_Star_Destroyer_Two"},
-    {"Skirmish_IPV1_Teradoc", "Skirmish_Carrack_Cruiser", "Skirmish_Star_Destroyer_Two", "Skirmish_Crimson_Victory"},
-    {"Skirmish_Tartan_Patrol_Cruiser", "Skirmish_Carrack_Cruiser", "Skirmish_Tector", "Skirmish_Victory_Destroyer_Two", "Skirmish_Broadside_Cruiser"},
+    {"Skirmish_IPV1_Teradoc", "Skirmish_Arquitens", "Skirmish_Star_Destroyer_Two", "Skirmish_Crimson_Victory"},
+    {"Skirmish_Tartan_Patrol_Cruiser", "Skirmish_Victory_II_Frigate", "Skirmish_Tector", "Skirmish_Victory_Destroyer_Two", "Skirmish_Broadside_Cruiser", "Skirmish_Imperial_II_Frigate"},
     {"Nova_Cruiser", "BattleDragon"},
 	{"Skirmish_Invincible_Cruiser", "Skirmish_Recusant", "Skirmish_Bulwark_I", "Skirmish_Gladiator"},
     {"Skirmish_Crusader", "Skirmish_Dreadnaught_Mando", "Skirmish_Keldabe"}

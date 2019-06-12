@@ -25,7 +25,6 @@ require("ChangeOwnerUtilities")
 require("StoryEventManager")
 require("StoryEvents")
 require("Conquests/GlobalEvents")
-require("Conquests/FinalImperialPush/FinalImperialPushEvents")
 
 function Definitions()
     DebugMessage("%s -- In Definitions", tostring(Script))

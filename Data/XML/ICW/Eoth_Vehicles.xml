@@ -195,7 +195,7 @@
 		<Autoresolve_Health>100</Autoresolve_Health>
 		
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>900</Build_Cost_Credits>
+		<Build_Cost_Credits>450</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -324,8 +324,8 @@
 		<Turret_Targets_Anything_Else> 1 </Turret_Targets_Anything_Else>
 		
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>2200.0</Targeting_Max_Attack_Distance>
-		<Targeting_Min_Attack_Distance> 250 </Targeting_Min_Attack_Distance>
+		<Targeting_Max_Attack_Distance>1800.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 350 </Targeting_Min_Attack_Distance>
 		<Targeting_Fire_Inaccuracy_Fixed_Radius> 40 </Targeting_Fire_Inaccuracy_Fixed_Radius>
 
 		<Projectile_Types>Proj_Ground_Mortar</Projectile_Types>
@@ -447,7 +447,7 @@
 		<Autoresolve_Health>100</Autoresolve_Health>
 		
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
 		<Build_Time_Seconds>20</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -948,7 +948,7 @@
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 		<Remove_Upon_Death>true</Remove_Upon_Death>
-		<CategoryMask> Vehicle </CategoryMask>
+		<CategoryMask> Vehicle | AntiInfantry </CategoryMask>
 		<MovementClass>Tracked</MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -1008,7 +1008,7 @@
 		<Damage>30</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>550</Build_Cost_Credits>
+		<Build_Cost_Credits>700</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -1104,6 +1104,7 @@
 		<SurfaceFX_Name>Generic_Track</SurfaceFX_Name>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Movement_Directions_Count>2</Movement_Directions_Count>
 		
 		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
@@ -1160,7 +1161,7 @@
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 		<Remove_Upon_Death>true</Remove_Upon_Death>
-		<CategoryMask> Vehicle </CategoryMask>
+		<CategoryMask> Vehicle | AntiVehicle | AntiStructure </CategoryMask>
 		<MovementClass>Tracked</MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -1237,7 +1238,7 @@
 		<Damage>30</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>1100</Build_Cost_Credits>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
 		<Build_Time_Seconds>40</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -1427,7 +1428,7 @@
 		<Damage>30</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>300</Build_Cost_Credits>
+		<Build_Cost_Credits>75</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -1552,7 +1553,7 @@
 		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
 
 		
-		<CategoryMask> Vehicle | AntiInfantry</CategoryMask>
+		<CategoryMask> Vehicle | AntiAir</CategoryMask>
 		<Icon_Name />
 		<MovementClass>Hover</MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
@@ -1645,7 +1646,7 @@
 		<Damage>30</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Underworld</Affiliation>
-		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Cost_Credits>400</Build_Cost_Credits>
 		<Build_Time_Seconds>45</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -1802,7 +1803,7 @@
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 		<Remove_Upon_Death>true</Remove_Upon_Death>
-		<CategoryMask> Vehicle </CategoryMask>
+		<CategoryMask> Vehicle I AntiVehicle</CategoryMask>
 		<MovementClass>Tracked</MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Victory_Relevant>yes</Victory_Relevant>

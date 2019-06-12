@@ -63,7 +63,7 @@ function Definitions()
 	},
 	{
 		"GroundForce"
-		,"MinimumTotalSize = 5"
+		,"MinimumTotalForce = 2500"
 		,"LandHero | Vehicle | Infantry | Air = 100%"
 	}
 	}
@@ -120,7 +120,7 @@ function SpaceForce_Thread()
 			Sleep(5)
 		end
 		
-		SpaceForce.Release_Forces(1.0)
+		SpaceForce.Release_Forces(0.5)
 	end
 end
 

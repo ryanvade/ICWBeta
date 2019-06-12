@@ -2826,11 +2826,10 @@
 				<SFXEvent_GUI_Unit_Ability_Deactivated />
 			</Unit_Ability>
 
-
 	   </Unit_Abilities_Data>
 
 
-				<Abilities SubObjectList="Yes">
+		<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
@@ -2911,7 +2910,7 @@
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Maintenance_Cost>0.1</Maintenance_Cost>
 
-		<Armor_Type> Armor_Frigate </Armor_Type>
+		<Armor_Type> Armor_Capital </Armor_Type>
         		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 		<Damage>40</Damage>
 		<Autoresolve_Health>16000</Autoresolve_Health>
@@ -2979,7 +2978,8 @@
 			HP_Phalanx_Weapon_Dual4,
 			HP_Phalanx_Weapon_Dual5,
 			HP_Phalanx_Weapon_Dual6,
-			HP_Phalanx_Fighter_Bay_00
+			HP_Phalanx_Fighter_Bay_00,
+			Generic_Untargetable_Tractor_Beam
 		</HardPoints>
 
 		<CategoryMask> Capital | AntiCapital | Boardable </CategoryMask>
@@ -3065,6 +3065,14 @@
 				<SFXEvent_GUI_Unit_Ability_Deactivated />
 			</Unit_Ability>
 
+			<Unit_Ability>
+				<Type>TRACTOR_BEAM</Type>
+	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
+	            <GUI_Activated_Ability_Name>Phalanx_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <Recharge_Seconds>30</Recharge_Seconds>
+	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+			</Unit_Ability>
 
 	   </Unit_Abilities_Data>
 
@@ -3084,7 +3092,7 @@
 		<Population_Value>20</Population_Value>
 
 
-				<Abilities SubObjectList="Yes">
+		<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
@@ -3095,6 +3103,19 @@
 				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="Phalanx_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			  </Tractor_Beam_Attack_Ability>
 		</Abilities>
 	</SpaceUnit>
 
@@ -3151,7 +3172,7 @@
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Maintenance_Cost>0.1</Maintenance_Cost>
 
-		<Armor_Type> Armor_Frigate </Armor_Type>
+		<Armor_Type> Armor_Capital </Armor_Type>
         		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 		<Damage>40</Damage>
 		<Autoresolve_Health>16000</Autoresolve_Health>
@@ -3215,7 +3236,8 @@
 			HP_Intego_Quad05,
 			HP_Intego_Quad06,
 			HP_Intego_Shield_Generator,
-			HP_Intego_Shield_Generator01
+			HP_Intego_Shield_Generator01,
+			Generic_Untargetable_Tractor_Beam
 		</HardPoints>
 
 		<CategoryMask> Capital | AntiCapital | Boardable </CategoryMask>
@@ -3319,11 +3341,20 @@
 				<SFXEvent_GUI_Unit_Ability_Deactivated />
 			</Unit_Ability>
 
-
+			<Unit_Abilities_Data SubObjectList="Yes">
+				<Unit_Ability>
+					<Type>TRACTOR_BEAM</Type>
+					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
+					<GUI_Activated_Ability_Name>Intego_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+					<Recharge_Seconds>30</Recharge_Seconds>
+					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
+					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				</Unit_Ability>
+			</Unit_Abilities_Data>
 	   </Unit_Abilities_Data>
 
 
-				<Abilities SubObjectList="Yes">
+		<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
@@ -3335,6 +3366,19 @@
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
 		</Abilities>
+		
+		<Tractor_Beam_Attack_Ability Name="Intego_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+		</Tractor_Beam_Attack_Ability>
 	</SpaceUnit>
 
 	<SpaceUnit Name="Syndic_Destroyer">
@@ -3366,7 +3410,7 @@
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Maintenance_Cost>0.1</Maintenance_Cost>
 
-		<Armor_Type> Armor_Frigate </Armor_Type>
+		<Armor_Type> Armor_Capital </Armor_Type>
         		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 		<Damage>40</Damage>
 		<Autoresolve_Health>12420</Autoresolve_Health>
@@ -3427,7 +3471,8 @@
 			HP_Syndic_Quad_03,
 			HP_Syndic_Hangar,
 			HP_Syndic_Engines01,
-			HP_Syndic_Engines02
+			HP_Syndic_Engines02,
+			Generic_Untargetable_Tractor_Beam
 		</HardPoints>
 
 		<CategoryMask> Capital | AntiCapital | Boardable </CategoryMask>
@@ -3514,7 +3559,7 @@
 		<Population_Value>12</Population_Value>
 
 
-			<Unit_Abilities_Data SubObjectList="Yes">
+		<Unit_Abilities_Data SubObjectList="Yes">
 	     	<Unit_Ability>
 				<Type>TURBO</Type>
 
@@ -3533,10 +3578,17 @@
 				<SFXEvent_GUI_Unit_Ability_Deactivated />
 			</Unit_Ability>
 
+				<Unit_Ability>
+					<Type>TRACTOR_BEAM</Type>
+					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
+					<GUI_Activated_Ability_Name>Syndic_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+					<Recharge_Seconds>30</Recharge_Seconds>
+					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
+					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				</Unit_Ability>
+		</Unit_Abilities_Data>
 
-	   </Unit_Abilities_Data>
-
-				<Abilities SubObjectList="Yes">
+		<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
@@ -3547,6 +3599,19 @@
 				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="Syndic_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 	</SpaceUnit>
 
@@ -3590,7 +3655,7 @@
 		<OverrideAcceleration> .02 </OverrideAcceleration>
 		<OverrideDeceleration> .02 </OverrideDeceleration>
 		<Lua_Script>GenericGameObject</Lua_Script>
-		<Armor_Type> Armor_Frigate </Armor_Type>
+		<Armor_Type> Armor_Capital </Armor_Type>
 		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
 		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>25</Bank_Turn_Angle>
@@ -3658,6 +3723,7 @@
 			HP_Chiss_SD_Weapon_Quad4,
 			HP_Chiss_SD_Weapon_Ion1,
 			HP_Chiss_SD_Weapon_Ion2,
+			Generic_Untargetable_Tractor_Beam
 		</HardPoints>
 
 		<Icon_Name>I_BUTTON_ASCENDANCY_DESTROYER.TGA</Icon_Name>
@@ -3710,7 +3776,7 @@
 		<SFXEvent_Engine_Moving_Loop> Unit_Star_Destroyer_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
 		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Star_Destroyer_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
 
-			<Unit_Abilities_Data SubObjectList="Yes">
+		<Unit_Abilities_Data SubObjectList="Yes">
 	     	<Unit_Ability>
 				<Type>TURBO</Type>
 
@@ -3729,7 +3795,14 @@
 				<SFXEvent_GUI_Unit_Ability_Deactivated />
 			</Unit_Ability>
 
-
+				<Unit_Ability>
+					<Type>TRACTOR_BEAM</Type>
+					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
+					<GUI_Activated_Ability_Name>Ascendancy_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+					<Recharge_Seconds>30</Recharge_Seconds>
+					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
+					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				</Unit_Ability>
 	   </Unit_Abilities_Data>
 
 		<Space_Full_Stop_Command> Yes </Space_Full_Stop_Command>
@@ -3762,7 +3835,7 @@
 		<Population_Value>11</Population_Value>
 
 
-				<Abilities SubObjectList="Yes">
+		<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
@@ -3773,6 +3846,19 @@
 				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="Ascendancy_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 	</SpaceUnit>
@@ -3881,7 +3967,8 @@
 			HP_Peltast_Ion01,
 			HP_Peltast_Engines,
 			HP_Peltast_Shield_Generator,
-			HP_Peltast_Hangar
+			HP_Peltast_Hangar,
+			Generic_Untargetable_Tractor_Beam
 		</HardPoints>
 
 		<Icon_Name>I_BUTTON_PELTAST.TGA</Icon_Name>
@@ -3965,7 +4052,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		<Population_Value>12</Population_Value>
 
-			<Unit_Abilities_Data SubObjectList="Yes">
+		<Unit_Abilities_Data SubObjectList="Yes">
 	     	<Unit_Ability>
 				<Type>TURBO</Type>
 
@@ -3981,21 +4068,22 @@
 				<Alternate_Icon_Name>I_SA_FORCE_CONFUSE.TGA</Alternate_Icon_Name>
 				<SFXEvent_GUI_Unit_Ability_Activated></SFXEvent_GUI_Unit_Ability_Activated>
 				<SFXEvent_GUI_Unit_Ability_Activated>RHD_Retreat_Started_Space</SFXEvent_GUI_Unit_Ability_Activated>
-				<SFXEvent_GUI_Unit_Ability_Deactivated />
-
-			        <Unit_Ability>
-             <Type>BLAST</Type>
-             <Recharge_Seconds>90.0</Recharge_Seconds>
-             <GUI_Activated_Ability_Name> Peacebringer_Blast </GUI_Activated_Ability_Name>
-             <SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
-         </Unit_Ability>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />			        
 			</Unit_Ability>
 
+			<Unit_Ability>
+				<Type>TRACTOR_BEAM</Type>
+	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
+	            <GUI_Activated_Ability_Name>Peltast_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+	            <Recharge_Seconds>30</Recharge_Seconds>
+	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+			</Unit_Ability>
 
 	   </Unit_Abilities_Data>
 
 
-				<Abilities SubObjectList="Yes">
+		<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
@@ -4006,15 +4094,19 @@
 				<!-- <Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies> -->
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
+			
+			<Tractor_Beam_Attack_Ability Name="Peltast_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
-			<Blast_Ability Name="Peacebringer_Blast">
-                <Activation_Style> User_Input </Activation_Style>
-                <Charge_Up_Seconds>5</Charge_Up_Seconds>
-                <Damage_Multiplier>5</Damage_Multiplier>
-                <Charging_Effect />
-                <Charged_Effect />
-                <SFXEvent_Activate>Unit_Underworld_Plasma_Fire</SFXEvent_Activate>
-            </Blast_Ability>
+				<Activation_Min_Range>2</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
 		</Abilities>
 
 	</SpaceUnit>
@@ -4687,7 +4779,7 @@
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>16</AI_Combat_Power>
+		<AI_Combat_Power>3.96</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -4825,7 +4917,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>25.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>5</AI_Combat_Power>
+		<AI_Combat_Power>3.19</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -4959,7 +5051,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>25.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>6</AI_Combat_Power>
+		<AI_Combat_Power>3.05</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -5095,7 +5187,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>25.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>11</AI_Combat_Power>
+		<AI_Combat_Power>4.42</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -5233,7 +5325,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>25.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>12</AI_Combat_Power>
+		<AI_Combat_Power>5.56</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>

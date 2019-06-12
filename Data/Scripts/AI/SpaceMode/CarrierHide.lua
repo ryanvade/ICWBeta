@@ -9,7 +9,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"MainForce"						
-		,"Frigate = 1,3"
+		,"Auriette_Carrier | Combat_Escort_Carrier | Generic_Quaser | Escort_Carrier | Broadside_Cruiser = 1,3"
 	},
 	{
 		"EscortForce"		
@@ -40,10 +40,6 @@ function MainForce_Thread()
 
 	-- Set up proximities on each member of the main task force
 	for _, unit in (tf.Get_Unit_Table()) do
-	
-		if not unit.Has_Property("Carrier") then
-			tf.Release_Unit(unit)
-		end
 		
 		-- discover the range of the unit if we need to
 		if not carrier_attack_range then

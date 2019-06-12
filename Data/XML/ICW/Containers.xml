@@ -606,6 +606,115 @@
 		
 	</Container>
 
+	<Container Name="Espo_Team">
+		<Select_Box_Scale>65</Select_Box_Scale>
+		<Text_ID>TEXT_UNIT_ESPO_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ESPO_SQUAD TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Show_Name>No</Show_Name>
+		<Behavior>TEAM,SELECTABLE,UNIT_AI</Behavior>
+		<LandBehavior>REVEAL, LAND_TEAM_CONTAINER_LOCOMOTOR, TEAM_TARGETING, GARRISON_UNIT</LandBehavior>
+		<SpaceBehavior>REVEAL</SpaceBehavior>
+		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>800.0</Space_FOW_Reveal_Range>
+		<MovementClass>Infantry</MovementClass>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<CategoryMask>Infantry</CategoryMask>
+
+		<Max_Speed> 1.6 </Max_Speed>
+		<Max_Rate_Of_Turn>12.0</Max_Rate_Of_Turn>
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> 1 </FormationSpacing> 
+		<MovementClass> Infantry </MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Is_Squashable> true </Is_Squashable>
+		<MovementPredictionInterval> 4.0 </MovementPredictionInterval>	
+		<ContainerArrangement> Rows </ContainerArrangement>
+		<FormationOrder> 2 </FormationOrder>
+		<Override_Acceleration> .1 </Override_Acceleration>
+		<Override_Deceleration> .1 </Override_Deceleration>
+		
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Scale_Land>80</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>200</Radar_Icon_Scale_Space>
+
+		<Icon_Name>i_button_army_trooper.tga</Icon_Name>
+
+		<Targeting_Max_Attack_Distance>140.0</Targeting_Max_Attack_Distance>
+		<Idle_Chase_Range>50.0</Idle_Chase_Range>
+		<Guard_Chase_Range>200.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>130.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>200.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Tactical_Bribe_Cost>25</Tactical_Bribe_Cost>	
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		
+	</Container>
+
+	<Container Name="Enforcer_Team">
+		<Select_Box_Scale>65</Select_Box_Scale>
+		<Text_ID>TEXT_UNIT_ENFORCERTROOPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ENFORCERTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Show_Name>No</Show_Name>
+		<Behavior>TEAM,SELECTABLE,UNIT_AI</Behavior>
+		<LandBehavior>REVEAL, LAND_TEAM_CONTAINER_LOCOMOTOR, TEAM_TARGETING, GARRISON_UNIT</LandBehavior>
+		<SpaceBehavior>REVEAL</SpaceBehavior>
+		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>800.0</Space_FOW_Reveal_Range>
+		<MovementClass>Infantry</MovementClass>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<CategoryMask>Infantry</CategoryMask>
+
+		<Max_Speed> 1.6 </Max_Speed>
+		<Max_Rate_Of_Turn>12.0</Max_Rate_Of_Turn>
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> 1 </FormationSpacing> 
+		<MovementClass> Infantry </MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Is_Squashable> true </Is_Squashable>
+		<MovementPredictionInterval> 4.0 </MovementPredictionInterval>	
+		<ContainerArrangement> Rows </ContainerArrangement>
+		<FormationOrder> 2 </FormationOrder>
+		<Override_Acceleration> .1 </Override_Acceleration>
+		<Override_Deceleration> .1 </Override_Deceleration>
+		
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Scale_Land>80</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>200</Radar_Icon_Scale_Space>
+
+		<Icon_Name>i_button_army_trooper.tga</Icon_Name>
+
+		<Targeting_Max_Attack_Distance>140.0</Targeting_Max_Attack_Distance>
+		<Idle_Chase_Range>50.0</Idle_Chase_Range>
+		<Guard_Chase_Range>200.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>130.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>200.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Tactical_Bribe_Cost>25</Tactical_Bribe_Cost>	
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		
+	</Container>
 
 	<Container Name="Phalanx_Team">
 		<Select_Box_Scale>65</Select_Box_Scale>
