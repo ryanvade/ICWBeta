@@ -40,11 +40,33 @@ end
 function Find_Faction(message)
   if message == OnEnter then
 
-	local p_pentastar = Find_Player("Pentastar")
+	p_newrep = Find_Player("Rebel")
+	p_empire = Find_Player("Empire")
+	p_eoth = Find_Player("Underworld")
+	p_eriadu = Find_Player("Hutts")
+	p_pentastar = Find_Player("Pentastar")
+	p_zsinj = Find_Player("Pirates")
+	p_maldrood = Find_Player("Teradoc")
+	p_corporate = Find_Player("Corporate_Sector")
 
-    if p_pentastar.Is_Human() then
+	if p_newrep.Is_Human() then
+		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
+	elseif p_empire.Is_Human() then
+		Story_Event("ENABLE_BRANCH_EMPIRE_FLAG")
+	elseif p_eoth.Is_Human() then
+		Story_Event("ENABLE_BRANCH_EOTH_FLAG")
+	elseif p_eriadu.Is_Human() then
+		Story_Event("ENABLE_BRANCH_ERIADU_FLAG")
+	elseif p_pentastar.Is_Human() then
 		Story_Event("ENABLE_BRANCH_PENTASTAR_FLAG")
-    end
+	elseif p_zsinj.Is_Human() then
+		Story_Event("ENABLE_BRANCH_ZSINJ_FLAG")
+	elseif p_maldrood.Is_Human() then
+		Story_Event("ENABLE_BRANCH_TERADOC_FLAG")
+	elseif p_corporate.Is_Human() then
+		Story_Event("ENABLE_BRANCH_CORPORATE_SECTOR_FLAG")
+	end
+	
   end
 end
 

@@ -1434,7 +1434,6 @@ function Begin_GC(message)
 				"Crimson_Victory",
 				"Generic_Gladiator",
 				"Generic_Star_Destroyer_Two",
-				"13x_Teradoc",
 				"Maldrood_MoffPalace",
 			},
 		},
