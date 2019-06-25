@@ -70,7 +70,7 @@ function Palpatine_Joins(message)
     --ChangePlanetOwnerAndRetreat(start_planet, p_empire)
 
 	start_planet.Change_Owner(p_empire)
-    local spawn_list_emperor = { "Emperor_Palpatine_Team", "Empire_MoffPalace", "E_Ground_Barracks", "E_Ground_Light_Vehicle_Factory", "E_Ground_Heavy_Vehicle_Factory", "E_Ground_Advanced_Vehicle_Factory", "E_Ground_Advanced_Vehicle_Factory", "Eclipse_Super_Star_Destroyer" }
+    local spawn_list_emperor = { "Emperor_Palpatine_Team", "Empire_MoffPalace", "E_Ground_Barracks", "E_Ground_Light_Vehicle_Factory", "E_Ground_Heavy_Vehicle_Factory", "E_Ground_Advanced_Vehicle_Factory", "E_Ground_Advanced_Vehicle_Factory", "Eclipse_Star_Destroyer" }
     local EmperorSpawn = SpawnList(spawn_list_emperor, start_planet, p_empire,true,false)
 	
 	if p_newrep.Is_Human() then

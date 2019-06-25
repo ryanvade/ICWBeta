@@ -1070,6 +1070,7 @@ function Begin_GC(message)
 				"Nebulon_B_Frigate",
 				listOf(3,"Alliance_Assault_Frigate"),
 				"NewRep_SenatorsOffice",
+				"NewRep_Senate",
 			},
 		},
 		{
@@ -1904,6 +1905,7 @@ function Begin_GC(message)
 				"Nebulon_B_Frigate",
 				listOf(3,"Alliance_Assault_Frigate"),
 				"NewRep_SenatorsOffice",
+				"NewRep_Senate",
 			},
 		},
 		{
@@ -1919,6 +1921,7 @@ function Begin_GC(message)
 				"Nebulon_B_Frigate",
 				listOf(3,"Alliance_Assault_Frigate"),
 				"NewRep_SenatorsOffice",
+				"NewRep_Senate",
 			},
 		},
 		{
@@ -1935,6 +1938,7 @@ function Begin_GC(message)
 				"Corona",
 				listOf(3,"Sacheen"),
 				"NewRep_SenatorsOffice",
+				"NewRep_Senate",
 			},
 		},
 		{
@@ -1950,6 +1954,7 @@ function Begin_GC(message)
 				"Nebulon_B_Frigate",
 				listOf(3,"Alliance_Assault_Frigate"),
 				"NewRep_SenatorsOffice",
+				"NewRep_Senate",
 			},
 		},
 	},
@@ -2558,7 +2563,7 @@ function Begin_GC(message)
 		{
 			Owner="Rebel",
 			StartingForces={
-				"NR_Star_Base_2",
+				"NR_Star_Base_1",
 				"Rebel_Infantry_Squad",
 				"R_Ground_Light_Vehicle_Factory",
 				"R_Ground_Barracks",
@@ -2586,7 +2591,7 @@ function Begin_GC(message)
 		{
 			Owner="Rebel",
 			StartingForces={
-				"NR_Star_Base_2",
+				"NR_Star_Base_1",
 				"Rebel_Infantry_Squad",
 				"R_Ground_Light_Vehicle_Factory",
 				"R_Ground_Barracks",
@@ -2601,7 +2606,7 @@ function Begin_GC(message)
 		{
 			Owner="Rebel",
 			StartingForces={
-				"NR_Star_Base_2",
+				"NR_Star_Base_1",
 				"Rebel_Infantry_Squad",
 				"R_Ground_Light_Vehicle_Factory",
 				"R_Ground_Barracks",
@@ -2616,7 +2621,7 @@ function Begin_GC(message)
 		{
 			Owner="Rebel",
 			StartingForces={
-				"NR_Star_Base_2",
+				"NR_Star_Base_1",
 				"Rebel_Infantry_Squad",
 				"R_Ground_Light_Vehicle_Factory",
 				"R_Ground_Barracks",
@@ -4753,7 +4758,7 @@ function Begin_GC(message)
 			Owner="Warlords",
 			StartingForces={
 				"Remnant_Star_Base_2",
-				"U_Ground_Barracks",
+				"E_Ground_Barracks",
 				listOf(5,"Dreadnaught_Empire"),
 			},
 		},
@@ -4761,7 +4766,7 @@ function Begin_GC(message)
 			Owner="Warlords",
 			StartingForces={
 				"Remnant_Star_Base_2",
-				"U_Ground_Barracks",
+				"E_Ground_Barracks",
 				listOf(5,"Dreadnaught_Empire"),
 			},
 		},
@@ -4769,7 +4774,7 @@ function Begin_GC(message)
 			Owner="Warlords",
 			StartingForces={
 				"Remnant_Star_Base_2",
-				"U_Ground_Barracks",
+				"E_Ground_Barracks",
 				listOf(5,"Dreadnaught_Empire"),
 			},
 		},
@@ -4777,7 +4782,7 @@ function Begin_GC(message)
 			Owner="Warlords",
 			StartingForces={
 				"Remnant_Star_Base_2",
-				"U_Ground_Barracks",
+				"E_Ground_Barracks",
 				listOf(5,"Dreadnaught_Empire"),
 			},
 		},
@@ -4785,7 +4790,7 @@ function Begin_GC(message)
 			Owner="Warlords",
 			StartingForces={
 				"Remnant_Star_Base_2",
-				"U_Ground_Barracks",
+				"E_Ground_Barracks",
 				listOf(5,"Dreadnaught_Empire"),
 			},
 		},
@@ -6100,7 +6105,7 @@ function Begin_GC(message)
 				"E_Ground_Barracks",
 				"Srike_Cruiser",
 				"Escort_Carrier",
-				"Generic_Bellator",
+				"Megador",
 				"Empire_MoffPalace",
 			},
 		},
@@ -6851,7 +6856,6 @@ function Begin_GC(message)
 			StartingForces={
 				"NR_Star_Base_2",
 				"R_Ground_Barracks",
-				listOf(3,"Crimson_Victory"),
 				"NewRep_SenatorsOffice",
 			},
 		},

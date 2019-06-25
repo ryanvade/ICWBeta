@@ -1786,11 +1786,11 @@
 		<Tactical_Health>200</Tactical_Health>
 
 		<GalacticBehavior>SELECTABLE</GalacticBehavior>
-		<LandBehavior>SELECTABLE, ABILITY_COUNTDOWN, SURFACE_FX, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI</LandBehavior>
+		<LandBehavior>SELECTABLE, ABILITY_COUNTDOWN, SURFACE_FX, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
 		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
 		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
-		
+		<Garrison_Category> Infantry </Garrison_Category>
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>100.0</Targeting_Max_Attack_Distance>
 		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
@@ -2529,7 +2529,7 @@
 	<HeroUnit Name="Gavrisom">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_GAVRISOM</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GAVRISOM </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ADMIN1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GAVRISOM </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
 		
 		<Icon_Name>i_button_gavrisom.tga</Icon_Name>

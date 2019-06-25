@@ -543,241 +543,7 @@
 		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
-<GroundCompany Name="Shock_Soldier_Squad_Teradoc">
-		<LOD_Bias>5</LOD_Bias>
-		<Text_ID>TEXT_REBEL_TANK_BUSTER_SQUAD</Text_ID>
-		<!--<Encyclopedia_Good_Against> M1_Repulsor_Tank TIE_Crawler AT_AT_Walker </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> TIE_Crawler Stormtrooper UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>-->
-		<Encyclopedia_Text>TEXT_TOOLTIP_PLEX TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
-		<GUI_Row> 0 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>6</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
-		<Affiliation>Teradoc</Affiliation>
-		<Build_Cost_Credits>125</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>15</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Build_Initially_Locked>No</Build_Initially_Locked>
-		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>T_Ground_Barracks</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>2</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>walker</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Troops</Company_Transport_Unit>
-		<Create_Team_Type> Shock_Soldier_Team </Create_Team_Type>
-		<Company_Units> Squad_Shock_Soldier_Teradoc, Squad_Shock_Soldier_Teradoc, Squad_Shock_Soldier_Teradoc, Squad_Shock_Soldier_Teradoc, Squad_Shock_Soldier_Teradoc, Squad_Shock_Soldier_Pentastar </Company_Units>
-		<Max_Squad_Size> 3 </Max_Squad_Size>
-		<Icon_Name>i_button_shocker.tga</Icon_Name>
-		<GUI_Model_Name>RI_PLEXSOLDIER.ALO</GUI_Model_Name>
-		<GUI_Offset>0 0 5</GUI_Offset>
-		<GUI_Velocity>90</GUI_Velocity>
-		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Storm_Trooper</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
 
-		<Score_Cost_Credits>55</Score_Cost_Credits>
-
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>SPREAD_OUT</Type>
-				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
-				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>450</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>3</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites/>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-		<Population_Value>1</Population_Value>
-	</GroundCompany>
-
-	<GroundInfantry Name="Shock_Soldier_Teradoc">
-		<LOD_Bias>5</LOD_Bias>
-		<Text_ID>TEXT_UNIT__EMPIRE_PLEX_SOLDIER</Text_ID>
-		<!--<Encyclopedia_Good_Against> M1_Repulsor_Tank Canderous_Assault_Tank AT_AT_Walker </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To>- TIE_Crawler Stormtrooper Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>-->
-		<Stealth_Capable>No</Stealth_Capable>
-		<Land_Model_Name>EI_SHOCKTROOPER.ALO</Land_Model_Name>
-		<Land_Model_Anim_Override_Name>EI_SHOCKTROOPER.ALO</Land_Model_Anim_Override_Name>
-		<Icon_Name>i_button_shocker.tga</Icon_Name>
-		<Behavior>SELECTABLE</Behavior>
-		<LandBehavior>SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
-		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
-		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
-		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
-		<CanCellStack>yes</CanCellStack>
-		<Mass>1.0</Mass>
-		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
-
-		<Target_Bones> b_head, b_chest </Target_Bones>
-
-		<Movement_Animation_Speed> 0.688 </Movement_Animation_Speed>
-		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
-		<Walk_Animation_Speed> .269 </Walk_Animation_Speed>
-		<Crouch_Animation_Speed> .393 </Crouch_Animation_Speed>
-		<Max_Speed>1.6</Max_Speed>
-		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
-		<Formation_Formup_Wait_Style> WaitNone </Formation_Formup_Wait_Style>
-		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
-		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
-		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
-		<Space_Layer> Land </Space_Layer>
-		<UnitCollisionClass> Infantry </UnitCollisionClass>
-		<FormationSpacing> .5 </FormationSpacing>
-		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
-		<OverrideAcceleration> .05 </OverrideAcceleration>
-		<OverrideDeceleration> .05 </OverrideDeceleration>
-		<FormationOrder> 3 </FormationOrder>
-
-		<Scale_Factor>1.5</Scale_Factor>
-		<!--<Is_Sprite>No</Is_Sprite>-->
-		<Type>Walk</Type>
-		<Deploys>No</Deploys>
-		<Affiliation>Teradoc</Affiliation>
-		<Political_Control>0</Political_Control>
-		<Size_Value>10</Size_Value>
-		<Damage>1</Damage>
-		<Sensor_Range>20</Sensor_Range>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>10</Tactical_Health>
-		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
-		<Energy_Capacity>0</Energy_Capacity>
-		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
-		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
-		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
-		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
-		<Victory_Relevant>yes</Victory_Relevant>
-
-		<Armor_Type> Armor_Infantry </Armor_Type>
-
-		<Projectile_Types>Proj_Shock_Missile</Projectile_Types>
-
-		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
-		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
-		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
-
-		<Targeting_Fire_Inaccuracy> Infantry, 35.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Vehicle, 4.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Air, 4.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Structure, 2.0 </Targeting_Fire_Inaccuracy>
-
-		<SFXEvent_Select>Unit_Select_Storm_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Storm_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Storm_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Storm_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Shocker_Fire</SFXEvent_Fire>
-		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_2_Death</Death_SFXEvent_Start_Die>
-
-		<!-- Placeholder events for Frank -->
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Storm_Trooper </SFXEvent_Assist_Move>
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Storm_Trooper </SFXEvent_Assist_Attack>
-
-		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
-		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
-		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
-
-		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
-		<MovementClass> Infantry </MovementClass>
-
-		<OccupationStyle>1x1</OccupationStyle>
-		<FormationRaggedness> 0.0 </FormationRaggedness>
-		<WaitsForFormationFormup>false</WaitsForFormationFormup>
-		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
-		<Blob_Shadow_Scale>5.0, 5.0</Blob_Shadow_Scale>
-		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
-		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
-		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
-		<No_Reflection_Below_Detail_Level>99</No_Reflection_Below_Detail_Level>
-		<No_Refraction_Below_Detail_Level>99</No_Refraction_Below_Detail_Level>
-		<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
-		<Is_Squashable> Yes </Is_Squashable>
-		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>3</AI_Combat_Power>
-
-		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
-		<Targeting_Priority_Set>Rocket_Infantry_Attack_Priority</Targeting_Priority_Set>
-
-		<Idle_Chase_Range>50.0</Idle_Chase_Range>
-		<Guard_Chase_Range>200.0</Guard_Chase_Range>
-		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
-		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
-		<Targeting_Max_Attack_Distance>210.0</Targeting_Max_Attack_Distance>
-		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
-
-		<Surface_Type_Cover_Damage_Shield>.5</Surface_Type_Cover_Damage_Shield>
-		<Weather_Category>Infantry</Weather_Category>
-
-  		<Encyclopedia_Text>TEXT_TOOLTIP_PLEX TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
-
-		<Death_Fade_Time>0.25</Death_Fade_Time>
-		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
-
-		<Death_Clone>Damage_Force_Whirlwind, Shock_Soldier_Force_Whirlwind_Death_Clone</Death_Clone>
-		<Death_Clone>Damage_Force_Lightning, Infantry_Electric_Death_Clone_00</Death_Clone>
-		<Death_Clone>Damage_Force_Lightning, Infantry_Electric_Death_Clone_01</Death_Clone>
-		<Death_Clone>Damage_Crush, Shock_Soldier_Crush_Death_Clone</Death_Clone>
-		<Death_Clone>Damage_Fire, Infantry_Fire_Death_Clone_00</Death_Clone>
-		<Death_Clone>Damage_Fire, Infantry_Fire_Death_Clone_01</Death_Clone>
-		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
-		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
-		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
-		<Death_Clone>Damage_Remote_Bomb, Shock_Soldier_Remote_Bomb_Death_Clone</Death_Clone>
-
-
-		<Tactical_Bribe_Cost>25</Tactical_Bribe_Cost>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>SPREAD_OUT</Type>
-				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
-				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Plex_Soldier</SFXEvent_GUI_Unit_Ability_Activated>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-		<!-- When this unit is converted by the "convert to enemy" special ability (Force Corruption), this is what his type pointer changes to -->
-		<Conversion_Ability_Changes_To_Enemy> Shock_Soldier_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
-
-	</GroundInfantry>
-
-		<GroundInfantry Name="Squad_Shock_Soldier_Teradoc">
-		<Variant_Of_Existing_Type>Shock_Soldier_Pentastar</Variant_Of_Existing_Type>
-		<Text_ID>TEXT_UNIT_PLEX_SOLDIER</Text_ID>
-		<LandBehavior>SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
-		<Is_Squashable> Yes </Is_Squashable>
-		<Max_Speed> 1.6 </Max_Speed>
-		<Space_Layer> None </Space_Layer>
-		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
-		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
-		<FormationRaggedness> 1.4 </FormationRaggedness>
-		<MaxJiggleDistance> 3.5 </MaxJiggleDistance>
-
-		<!-- When this unit is converted by the "convert to enemy" special ability (Force Corruption), this is what his type pointer changes to -->
-		<Conversion_Ability_Changes_To_Enemy> Squad_Shock_Soldier_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
-	</GroundInfantry>
 
 
 	<GroundCompany Name="Teradoc_Walker_Group">
@@ -916,7 +682,7 @@
 		<Is_Escort>yes</Is_Escort>
 		<Ship_Class>tank</Ship_Class>
 		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
-		<Company_Units>Pentastar_Skiff, Pentastar_Skiff, Pentastar_Skiff, Pentastar_Skiff</Company_Units>
+		<Company_Units>Imperial_Skiff, Imperial_Skiff, Imperial_Skiff, Imperial_Skiff</Company_Units>
 		<Max_Squad_Size> 1 </Max_Squad_Size>
 		<Icon_Name>i_button_skiff.tga</Icon_Name>
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
@@ -1459,7 +1225,7 @@
 		<!--<Encyclopedia_Vulnerable_To> AT_AA_Walker Underworld_Mass_Driver_Turret </Encyclopedia_Vulnerable_To>-->
   		<Encyclopedia_Text>TEXT_TOOLTIP_PX4</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
-		<Icon_Name>i_button_px4.tga</Icon_Name>
+		<Icon_Name>i_button_ev_px4.tga</Icon_Name>
 
 		<GUI_Row> 1 </GUI_Row>
 		<Is_Dummy>Yes</Is_Dummy>
@@ -1534,7 +1300,6 @@
 		<Tactical_Buildable_Objects_Multiplayer>
 			Teradoc,
 				Teradoc_EWEB_Squad,
-				Shock_Soldier_Squad_Teradoc,
 				Teradoc_trooper_Squad,
 				Teradoc_Army_Trooper_Squad,
 				Teradoc_Jumptrooper_Squad,

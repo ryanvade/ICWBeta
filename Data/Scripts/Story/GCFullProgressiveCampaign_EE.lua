@@ -437,7 +437,7 @@ function ThrawnSpawns(message)
 		start_planet = TRUtil.FindFriendlyPlanet(p_maldrood)
 	end
 	if start_planet then
-		spawn_list_thrawn = { "Tavira_Invidious" }
+		spawn_list_thrawn = { "Tavira_Invidious", "Lancet_Kosh"}
 		SpawnList(spawn_list_thrawn, start_planet, p_maldrood, true, false)
 	end	
 	
@@ -550,78 +550,8 @@ function Empire_Fractures(message)
     RegicideObject = Find_First_Object("Dummy_Regicide_Jax")
     if RegicideObject then
         RegicideObject.Despawn()
-    else
-
-      --Federated Teradoc Union (Centares for Treutan, Hakassi for Kosh)
-
-      start_planet = FindPlanet("Centares")
-      if TestValid(start_planet) then
-        if start_planet.Get_Owner() == p_empire then
-          ChangePlanetOwnerAndRetreat(start_planet, p_maldrood)
-          spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","13X_Teradoc" , "Crimson_Victory" , "Crimson_Victory" , "Crimson_Victory", "Crimson_Victory", "Crimson_Victory", "Crimson_Victory"}
-          SpawnList(spawn_list, start_planet, p_maldrood, true, false)
-        end
-      end
-
-      start_planet = FindPlanet("Hakassi")
-      if TestValid(start_planet) then
-        if start_planet.Get_Owner() == p_empire then
-          ChangePlanetOwnerAndRetreat(start_planet, p_maldrood)
-         spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Lancet_Kosh" , "Strike_Cruiser" ,"Strike_Cruiser" ,"Strike_Cruiser" }
-          SpawnList(spawn_list, start_planet, p_maldrood, true, false)
-        end
-      end
-
-      --Zero Command
-
-     start_planet = FindPlanet("Kalist")
-      if TestValid(start_planet) then
-        if start_planet.Get_Owner() == p_empire then
-          ChangePlanetOwnerAndRetreat(start_planet, p_harrsk)
-          spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two" ,"Strike_Cruiser" ,"Strike_Cruiser" }
-          SpawnList(spawn_list, start_planet, p_harrsk, true, false)
-        end
-      end
-
-      --Pentastar
-      start_planet = FindPlanet("Entralla")
-      if TestValid(start_planet) then
-        if start_planet.Get_Owner() == p_empire then
-          ChangePlanetOwnerAndRetreat(start_planet, p_pentastar)
-          spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Generic_Bellator" ,"Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two" ,"Strike_Cruiser" ,"Strike_Cruiser"  }
-          SpawnList(spawn_list, start_planet, p_pentastar, true, false)
-        end
-      end
-
-      start_planet = FindPlanet("Bastion")
-      if TestValid(start_planet) then
-        if start_planet.Get_Owner() == p_empire then
-          ChangePlanetOwnerAndRetreat(start_planet, p_pentastar)
-          spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Generic_Bellator" ,"Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two" }
-          SpawnList(spawn_list, start_planet, p_pentastar, true, false)
-        end
-      end
-
-      -- Delvardus
-
-     start_planet = FindPlanet("Eriadu")
-      if TestValid(start_planet) then
-      if start_planet.Get_Owner() == p_empire then
-        ChangePlanetOwnerAndRetreat(start_planet, p_eriadu)
-        spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Torpedo_Sphere" ,"Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Escort_Carrier","Escort_Carrier", "Torpedo_Sphere" ,"Torpedo_Sphere" ,"P_Ground_Barracks" , "P_Ground_Light_Vehicle_Factory" }
-        SpawnList(spawn_list, start_planet, p_eriadu, true, false)
-      end
     end
 
-      start_planet = FindPlanet("Kampe")
-      if TestValid(start_planet) then
-      if start_planet.Get_Owner() == p_empire then
-        ChangePlanetOwnerAndRetreat(start_planet, p_eriadu)
-        spawn_list = { "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Assault_Company", "Imperial_Heavy_Scout_Squad", "Imperial_Heavy_Scout_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad", "Imperial_Stormtrooper_Squad","Torpedo_Sphere" , "Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two","Generic_Star_Destroyer_Two", "Escort_Carrier", "Escort_Carrier","Escort_Carrier","Thalassa", "Night_Hammer" }
-        SpawnList(spawn_list, start_planet, p_eriadu, true, false)
-      end
-    end
-  end
   end
 end
 

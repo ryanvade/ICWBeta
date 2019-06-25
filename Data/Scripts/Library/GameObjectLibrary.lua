@@ -26,7 +26,7 @@ require("PlanetModifiers")
 GameObjectLibrary = {
     Interdictors={
         "Massias_Interdictor",
-        "Eclipse_Super_Star_Destroyer",
+        "Eclipse_Star_Destroyer",
         "Sovereign",
         "Generic_Interdictor_Cruiser",
         "Generic_Dominator",
@@ -241,7 +241,7 @@ GameObjectLibrary = {
 			Fighters={
 			},
 		},
-		["Eclipse_Super_Star_Destroyer"]={
+		["Eclipse_Star_Destroyer"]={
 			Scripts={
 				"InterdictorAI"
 			},
@@ -2426,6 +2426,12 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=2
                     }
+                },
+			    ["T-WING_SQUADRON"]={
+                    ["CORPORATE_SECTOR"] = {
+                        Reserve=0,
+                        Initial=2
+                    }
                 }
             }
         },
@@ -2489,6 +2495,12 @@ GameObjectLibrary = {
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
                     ["DEFAULT"] = {
+                        Reserve=0,
+                        Initial=2
+                    }
+                },
+			    ["T-WING_SQUADRON"]={
+                    ["CORPORATE_SECTOR"] = {
                         Reserve=0,
                         Initial=2
                     }
@@ -4581,6 +4593,12 @@ GameObjectLibrary = {
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
                     ["DEFAULT"] = {
+                        Reserve=0,
+                        Initial=2
+                    }
+                },
+			    ["T-WING_SQUADRON"]={
+                    ["CORPORATE_SECTOR"] = {
                         Reserve=0,
                         Initial=2
                     }

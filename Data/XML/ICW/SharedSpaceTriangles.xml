@@ -111,7 +111,7 @@
 		<Affiliation>Neutral</Affiliation>
 		<GUI_Bounds_Scale>0.025</GUI_Bounds_Scale>
 		<Text_ID>TEXT_HEAVY_FRIGATE_SHIPYARDS</Text_ID>
-		<Encyclopedia_Text>TEXT_TOOLTIP_STATION2 TEXT_TOOLTIP_GARRISON_ES_02</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION2 </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
 		<Scale_Factor>2.5</Scale_Factor>
 		<GUI_Row> 0 </GUI_Row>
@@ -214,7 +214,7 @@
 		<Affiliation>Neutral</Affiliation>
 		<GUI_Bounds_Scale>0.025</GUI_Bounds_Scale>
 		<Text_ID>TEXT_CAPITAL_SHIPYARDS</Text_ID>
-		<Encyclopedia_Text>TEXT_TOOLTIP_STATION3 TEXT_TOOLTIP_GARRISON_ES_03</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION3 </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
 		<Scale_Factor>7.0</Scale_Factor>
 		<GUI_Row> 0 </GUI_Row>
@@ -320,8 +320,8 @@
 
 		<Affiliation>Neutral</Affiliation>
 		<GUI_Bounds_Scale>0.025</GUI_Bounds_Scale>
-		<Text_ID>TEXT_CAPITAL_SHIPYARDS</Text_ID>
-		<Encyclopedia_Text>TEXT_TOOLTIP_STATION3 TEXT_TOOLTIP_GARRISON_ES_03</Encyclopedia_Text>
+		<Text_ID>TEXT_SUPERCAPITAL_SHIPYARDS</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION4 </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
 		<Scale_Factor>9.0</Scale_Factor>
 		<GUI_Row> 0 </GUI_Row>
@@ -512,6 +512,11 @@
 		<CategoryMask>NonCombatHero</CategoryMask>
 		<Population_Value>1</Population_Value>
 		<Affiliation>Empire, Pentastar, Teradoc, Hutts, Pirates, Underworld, Yevetha</Affiliation>
+	</HeroCompany>
+	
+	<HeroCompany Name="Skirmish_Probe_Droid_Team">
+		<Variant_Of_Existing_Type>Probe_Droid_Team</Variant_Of_Existing_Type>
+		<Required_Special_Structures>PlaceHolder</Required_Special_Structures>
 	</HeroCompany>
 
 	<SpaceUnit Name="Arquitens">
@@ -1719,7 +1724,7 @@
 		<Variant_Of_Existing_Type>Generic_Bellator</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_MEGADOR</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_MEGADOR </Encyclopedia_Text>
-
+		<Affiliation>Empire</Affiliation>
 
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Tech_Level>4</Tech_Level>
@@ -1747,7 +1752,7 @@
 		<Variant_Of_Existing_Type>Generic_Bellator</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_DOMINION</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_DOMINION </Encyclopedia_Text>
-
+	<Affiliation>Empire</Affiliation>
 
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Tech_Level>99</Tech_Level>
@@ -2033,7 +2038,7 @@
 		<Tech_Level>1</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
 		<Required_Planets></Required_Planets>
 		<Autoresolve_Health>40310</Autoresolve_Health>
