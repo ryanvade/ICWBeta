@@ -797,30 +797,6 @@
 		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
 		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
 
-	<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			
-			<!-- Secondary ability -->
-			<Unit_Ability>
-				<Type>DEFEND</Type>
-				<Expiration_Seconds>20</Expiration_Seconds>
-				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
-				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
-				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier> <!-- make it faster to recharge -->
-				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier> <!-- make it faster to recharge -->
-				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	5.0f</Mod_Multiplier>
-				<Mod_Multiplier>SPEED_MULTIPLIER,			0.8f</Mod_Multiplier>
-				<Recharge_Seconds>20</Recharge_Seconds>
-				<Expiration_Seconds>15</Expiration_Seconds>
-		
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Ackbar</SFXEvent_GUI_Unit_Ability_Activated>
-				<SFXEvent_GUI_Unit_Ability_Deactivated />
-				<Supports_Autofire>True</Supports_Autofire>
-			</Unit_Ability>
-			
-		</Unit_Abilities_Data>
-
 		<Abilities SubObjectList="Yes">
 		
 		
@@ -4117,7 +4093,7 @@
 
 			<Tractor_Beam_Attack_Ability Name="Dauntless_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate </Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
 				<Activation_Min_Range>2</Activation_Min_Range>

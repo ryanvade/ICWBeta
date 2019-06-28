@@ -674,8 +674,8 @@
 		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
 		<SpaceBehavior> ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		
-		<Starting_Spawned_Units_Tech_0>Trifoil_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Trifoil_Squadron, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Trifoil_Squadron, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Trifoil_Squadron, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
@@ -783,24 +783,28 @@
 
 	<SpaceUnit Name="Armadia_E">
 		<Variant_of_Existing_Type>Armadia</Variant_of_Existing_Type>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Affiliation>Empire, Teradoc, Pirates, Hutts, Corporate_Sector</Affiliation>
 		<Tech_Level>99</Tech_Level>
 	</SpaceUnit>
 
 	<SpaceUnit Name="Armadia_R">
 		<Variant_of_Existing_Type>Armadia</Variant_of_Existing_Type>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Affiliation>Rebel</Affiliation>
 		<Tech_Level>99</Tech_Level>
 	</SpaceUnit>
 
 	<SpaceUnit Name="Armadia_U">
 		<Variant_of_Existing_Type>Armadia</Variant_of_Existing_Type>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Affiliation>Underworld</Affiliation>
 		<Tech_Level>99</Tech_Level>
 	</SpaceUnit>
 
 	<SpaceUnit Name="Armadia_P">
 		<Variant_of_Existing_Type>Armadia</Variant_of_Existing_Type>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Affiliation>Pentastar</Affiliation>
 		<Tech_Level>99</Tech_Level>
 	</SpaceUnit>

@@ -1,6 +1,98 @@
 <?xml version="1.0" ?>
 <Remnant_Space_Units>
 	
+	<GenericHeroUnit Name="Ryn_Spy">
+		<Text_ID>TEXT_HERO_RYN_SPY</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Icon_Name>i_button_ryn_spy.tga</Icon_Name>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Sprite>No</Is_Sprite>
+		<Type>Walk</Type>
+		<Political_Control>0</Political_Control>
+		<Size_Value>75</Size_Value>
+		<!--  <Damage>2</Damage> -->
+		<Autoresolve_Health>30</Autoresolve_Health>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+
+		<!--  <SFXEvent_Move>Unit_Galactic_Report_Probot</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Galactic_Report_Probot</SFXEvent_Fleet_Move> -->
+
+		<Neutralization_Cost>20.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>Yes</Can_Be_Neutralized_By_Minor_Heroes>
+
+		<!-- When a probe droid is moved by itself, it must activate its Spy ability at its destination. -->
+		<Can_Hyperspace_Without_Activating_Ability>No</Can_Hyperspace_Without_Activating_Ability>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_RYN_SPY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INTELLIGENCE</Encyclopedia_Unit_Class>
+
+		<CategoryMask> NonCombatHero </CategoryMask>
+		<Ranking_In_Category> 22 </Ranking_In_Category>
+
+		<Abilities SubObjectList="Yes">
+			<Galactic_Stealth_Ability Name="Bothan_Spy_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+			<System_Spy_Ability Name="Bothan_Spy_System_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>Yes</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>Yes</See_Base_Levels>
+				<See_Credit_Income>No</See_Credit_Income>
+				<See_Credit_Income_Breakdown>No</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>Yes</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>Yes</See_Ground_Company_Contents>
+				<See_Special_Structures>Yes</See_Special_Structures>
+				<See_Political_Control>Yes</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>No</See_Current_Production>
+				<See_Minor_Stealth_Heroes>Yes</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+
+	<HeroCompany Name="Ryn_Spy_Team">
+		<GUI_Row> 0 </GUI_Row>
+		<Text_ID>TEXT_HERO_RYN_SPY</Text_ID>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Build_Cost_Credits>30</Build_Cost_Credits>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Combat_Power_Value>0</Combat_Power_Value>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures></Required_Special_Structures>
+		<Required_Planets></Required_Planets>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Transport_Unit>Alliance_Shuttle</Company_Transport_Unit>
+		<Company_Units>Ryn_Spy</Company_Units>
+		<Icon_Name>i_button_ryn_spy.tga</Icon_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Affiliation>Corporate_Sector</Affiliation>
+		<!--  <SFXEvent_Build_Complete>Unit_Galactic_Announce_Probot</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Move>Unit_Galactic_Move_Probot</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Galactic_Move_Probot</SFXEvent_Fleet_Move> -->
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_RYN_SPY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INTELLIGENCE</Encyclopedia_Unit_Class>
+		<CategoryMask>NonCombatHero</CategoryMask>
+		<Population_Value>1</Population_Value>
+	</HeroCompany>
+
+	
 	<StarBase Name="CSA_Star_Base_1">
 
 		<Variant_Of_Existing_Type>Generic_Star_Base_1</Variant_Of_Existing_Type>
@@ -42,8 +134,8 @@
 		<Starting_Spawned_Units_Tech_0>2_Warpod_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>2_Warpod_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_0>Skirmish_CR90, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Skirmish_CR90, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Skirmish_Citadel_Cruiser_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Citadel_Cruiser_Squadron, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		<Starting_Spawned_Units_Tech_0>Marauder_Missile_Cruiser, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>Marauder_Missile_Cruiser, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
@@ -64,14 +156,14 @@
 		<Starting_Spawned_Units_Tech_0>2_Warpod_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>2_Warpod_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_0>Skirmish_CR90, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Skirmish_CR90, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Skirmish_Citadel_Cruiser_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Citadel_Cruiser_Squadron, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		<Starting_Spawned_Units_Tech_0>Marauder_Missile_Cruiser, 4</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>Marauder_Missile_Cruiser, 4</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 		
-		<Starting_Spawned_Units_Tech_0>Skirmish_Dreadnaught_Empire, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Skirmish_Dreadnaught_Empire, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Skirmish_Recusant, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Recusant, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 		
 
 
@@ -103,14 +195,14 @@
 		<Starting_Spawned_Units_Tech_0>2_Warpod_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>2_Warpod_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_0>Skirmish_CR90, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Skirmish_CR90, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Skirmish_Citadel_Cruiser_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Citadel_Cruiser_Squadron, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		<Starting_Spawned_Units_Tech_0>Marauder_Missile_Cruiser, 4</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>Marauder_Missile_Cruiser, 4</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 		
-		<Starting_Spawned_Units_Tech_0>Skirmish_Dreadnaught_Empire, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Skirmish_Dreadnaught_Empire, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Skirmish_Recusant, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Recusant, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 		
 				<Starting_Spawned_Units_Tech_0>Lucrehulk_CSA, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>Lucrehulk_CSA, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
@@ -155,6 +247,7 @@
 				2_Warpod_Squadron,
 				IRDA_Squadron,
 				T-Wing_Squadron_Buildable,
+				Skirmish_Marauder,
 				Skirmish_Gladiator,
 				Skirmish_Citadel_Cruiser_Squadron,
 				Skirmish_Gozanti_Cruiser_Squadron,
@@ -1069,13 +1162,13 @@
 		<Affiliation>Corporate_Sector</Affiliation>
 		<Tech_Level>1</Tech_Level>
 				<Lua_Script>GenericGameObject</Lua_Script>
-				<Starting_Spawned_Units_Tech_0>T-Wing_Squadron, 5</Starting_Spawned_Units_Tech_0>
-				<Starting_Spawned_Units_Tech_0>Mankvim_Squadron, 5</Starting_Spawned_Units_Tech_0>
-				<Starting_Spawned_Units_Tech_0>2_Warpod_Squadron, 5</Starting_Spawned_Units_Tech_0>
+				<Starting_Spawned_Units_Tech_0>T-Wing_Squadron, 3</Starting_Spawned_Units_Tech_0>
+				<Starting_Spawned_Units_Tech_0>Mankvim_Squadron, 3</Starting_Spawned_Units_Tech_0>
+				<Starting_Spawned_Units_Tech_0>2_Warpod_Squadron, 3</Starting_Spawned_Units_Tech_0>
 				
-				<Reserve_Spawned_Units_Tech_0>T-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
-				<Reserve_Spawned_Units_Tech_0>Mankvim_Squadron, 5</Reserve_Spawned_Units_Tech_0>
-				<Reserve_Spawned_Units_Tech_0>2_Warpod_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+				<Reserve_Spawned_Units_Tech_0>T-Wing_Squadron, 7</Reserve_Spawned_Units_Tech_0>
+				<Reserve_Spawned_Units_Tech_0>Mankvim_Squadron, 7</Reserve_Spawned_Units_Tech_0>
+				<Reserve_Spawned_Units_Tech_0>2_Warpod_Squadron, 7</Reserve_Spawned_Units_Tech_0>
 				<CategoryMask> Capital | AntiFrigate  </CategoryMask>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 	</SpaceUnit>

@@ -1728,8 +1728,8 @@ GameObjectLibrary = {
                         Initial=2
                     },
 					["HUTTS"] = {
-                        Reserve=10,
-                        Initial=3
+                        Reserve=11,
+                        Initial=2
                     },
                     ["HOSTILE"] = {
                         Reserve=11,
@@ -1764,7 +1764,7 @@ GameObjectLibrary = {
                 },
                 ["TRIFOIL_SQUADRON"]={
                     ["YEVETHA"] = {
-                        Reserve=20,
+                        Reserve=33,
                         Initial=6
                     }
                 }

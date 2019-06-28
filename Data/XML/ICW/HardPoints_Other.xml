@@ -8612,10 +8612,10 @@
 		<Death_Explosion_Particles> Large_Explosion_Space </Death_Explosion_Particles>
 		<Death_Explosion_SFXEvent>Unit_Hardpoint_Engines_Death</Death_Explosion_SFXEvent>
 
-        <Attachment_Bone>HP_E_00_BONE</Attachment_Bone>
+		<Attachment_Bone>HP_E_00_BONE</Attachment_Bone>
         <Collision_Mesh>HP_E_00_COLL</Collision_Mesh>
-        <Damage_Particles>HP_E_EMITDAMAGE</Damage_Particles>
-        <Engine_Particles>HP_E_MAINENGINES</Engine_Particles>
+        <Damage_Particles>HP_E_00_EMITDAMAGE</Damage_Particles>
+        <Engine_Particles>HP_E_00_MAINENGINES</Engine_Particles>
     </HardPoint>
 
     <HardPoint Name="HP_Keldabe_Engine1">
@@ -8628,10 +8628,10 @@
 		<Death_Explosion_Particles> Large_Explosion_Space </Death_Explosion_Particles>
 		<Death_Explosion_SFXEvent>Unit_Hardpoint_Engines_Death</Death_Explosion_SFXEvent>
 
-        <Attachment_Bone>HP_E_01_BONE</Attachment_Bone>
+		<Attachment_Bone>HP_E_01_BONE</Attachment_Bone>
         <Collision_Mesh>HP_E_01_COLL</Collision_Mesh>
-        <Damage_Particles>HP_E_EMITDAMAGE</Damage_Particles>
-        <Engine_Particles>HP_E_MAINENGINES</Engine_Particles>
+        <Damage_Particles>HP_E_01_EMITDAMAGE</Damage_Particles>
+        <Engine_Particles>HP_E_01_MAINENGINES</Engine_Particles>
     </HardPoint>
 
 	<HardPoint Name="HP_Keldabe_Fighter_Bay">
@@ -8645,6 +8645,10 @@
 		<Health>650.0</Health>
 		<Death_Explosion_Particles> Large_Explosion_Space </Death_Explosion_Particles>  <!-- STUBBED PLACEHOLDER -->
 		<Death_Explosion_SFXEvent>Unit_Hardpoint_Bay_Death</Death_Explosion_SFXEvent> <!-- STUBBED PLACEHOLDER -->
+		
+		<Death_Breakoff_Prop> Hardpoint_Breakoff_Kedalbe_Shield_Leech </Death_Breakoff_Prop>
+		<Damage_Decal>HP_SHL_00_BLAST</Damage_Decal>
+		<Damage_Particles>HP_SHL_00_EMITDAMAGE</Damage_Particles>
 	</HardPoint>
 	
 	<HardPoint Name="HP_Citadel_Cruiser_00">

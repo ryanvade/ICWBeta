@@ -36,7 +36,7 @@ function MakeRaidFleet(chance)
     {"Skirmish_IPV1_Teradoc", "Skirmish_Arquitens", "Skirmish_Star_Destroyer_Two", "Skirmish_Crimson_Victory"},
     {"Skirmish_Tartan_Patrol_Cruiser", "Skirmish_Victory_II_Frigate", "Skirmish_Tector", "Skirmish_Victory_Destroyer_Two", "Skirmish_Broadside_Cruiser", "Skirmish_Imperial_II_Frigate"},
     {"Nova_Cruiser", "BattleDragon"},
-	{"Skirmish_Invincible_Cruiser", "Skirmish_Recusant", "Skirmish_Bulwark_I", "Skirmish_Gladiator"},
+	{"Skirmish_Invincible_Cruiser", "Skirmish_Recusant", "Skirmish_Bulwark_I", "Skirmish_Gladiator", "Skirmish_Marauder"},
     {"Skirmish_Crusader", "Skirmish_Dreadnaught_Mando", "Skirmish_Keldabe"}
   }
   RaidFleet.starbases = {{"NR_Star_Base_1", "NR_Star_Base_2", "NR_Star_Base_3", "NR_Star_Base_4"},

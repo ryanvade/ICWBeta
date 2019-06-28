@@ -626,6 +626,9 @@
 
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
 		
+		<Starting_Spawned_Units_Tech_0>Miytil_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Miytil_Bomber_Squadron, 3</Starting_Spawned_Units_Tech_0>
+		
 		
 		<HardPoints>
 			HP_StarHome_Laser_01,
@@ -729,12 +732,14 @@
 	<SpaceUnit Name="Star_Home_E">
 		<Variant_of_Existing_Type>Star_Home</Variant_of_Existing_Type>
 		<Affiliation>Empire, Teradoc, Pirates, Hutts, Corporate_Sector</Affiliation>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 		<Tech_Level>99</Tech_Level>
 	</SpaceUnit>
 
 	<SpaceUnit Name="Star_Home_R">
 		<Variant_of_Existing_Type>Star_Home</Variant_of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 		<Affiliation>Rebel</Affiliation>
 		<Tech_Level>99</Tech_Level>
@@ -742,6 +747,7 @@
 
 	<SpaceUnit Name="Star_Home_U">
 		<Variant_of_Existing_Type>Star_Home</Variant_of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 		<Affiliation>Underworld</Affiliation>
 		<Tech_Level>99</Tech_Level>
@@ -749,6 +755,7 @@
 	
 	<SpaceUnit Name="Star_Home_P">
 		<Variant_of_Existing_Type>Star_Home</Variant_of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 		<Affiliation>Pentastar</Affiliation>
 		<Tech_Level>99</Tech_Level>
@@ -814,8 +821,13 @@
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
 		<Behavior> DUMMY_STARSHIP, SELECTABLE </Behavior>
-		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 
+		<Starting_Spawned_Units_Tech_0>Miytil_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Miytil_Squadron, 1</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>Miytil_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		
 		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2300.0</Targeting_Max_Attack_Distance>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
@@ -944,6 +956,7 @@
 
 	<SpaceUnit Name="BattleDragon_E">
 		<Variant_of_Existing_Type>BattleDragon</Variant_of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Affiliation>Empire, Teradoc, Pirates, Hutts, Corporate_Sector</Affiliation>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 		<Tech_Level>99</Tech_Level>
@@ -951,6 +964,7 @@
 
 	<SpaceUnit Name="BattleDragon_R">
 		<Variant_of_Existing_Type>BattleDragon</Variant_of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 
 		<Affiliation>Rebel</Affiliation>
@@ -959,6 +973,7 @@
 
 	<SpaceUnit Name="BattleDragon_U">
 		<Variant_of_Existing_Type>BattleDragon</Variant_of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 
 		<Affiliation>Underworld</Affiliation>
@@ -967,6 +982,7 @@
 	
 	<SpaceUnit Name="BattleDragon_P">
 		<Variant_of_Existing_Type>BattleDragon</Variant_of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 
 		<Affiliation>Pentastar</Affiliation>
@@ -1054,8 +1070,8 @@
 		<Behavior> DUMMY_STARSHIP, SELECTABLE </Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 
-		<Starting_Spawned_Units_Tech_0>Miytil_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Miytil_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Miytil_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Miytil_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		
 		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>2000.0</Targeting_Max_Attack_Distance>
@@ -1177,6 +1193,7 @@
 
 	<SpaceUnit Name="Nova_Cruiser_E">
 		<Variant_of_Existing_Type>Nova_Cruiser</Variant_of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Affiliation>Empire, Teradoc, Pirates, Hutts, Corporate_Sector</Affiliation>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 		<Tech_Level>99</Tech_Level>
@@ -1184,6 +1201,7 @@
 
 	<SpaceUnit Name="Nova_Cruiser_R">
 		<Variant_of_Existing_Type>Nova_Cruiser</Variant_of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 		<Affiliation>Rebel</Affiliation>
 		<Tech_Level>99</Tech_Level>
@@ -1191,6 +1209,7 @@
 
 	<SpaceUnit Name="Nova_Cruiser_U">
 		<Variant_of_Existing_Type>Nova_Cruiser</Variant_of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 
 		<Affiliation>Underworld</Affiliation>
@@ -1199,6 +1218,7 @@
 	
 	<SpaceUnit Name="Nova_Cruiser_P">
 		<Variant_of_Existing_Type>Nova_Cruiser</Variant_of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>	
 		<Affiliation>Pentastar</Affiliation>
 		<Tech_Level>99</Tech_Level>

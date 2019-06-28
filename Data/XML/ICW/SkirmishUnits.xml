@@ -442,7 +442,7 @@
 	</SpaceUnit>
 	
 	<SpaceUnit Name="Skirmish_Quasar">
-		<Variant_Of_Existing_Type>Generic_Quaser</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Quaser</Variant_Of_Existing_Type>
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED,  SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>0</Tech_Level>
@@ -1934,6 +1934,8 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Space_FOW_Reveal_Range>1500.0</Space_FOW_Reveal_Range>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, BARRAGE, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		     
 			 
                          <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -2053,7 +2055,7 @@
 	</SpaceUnit>
 	
 	<SpaceUnit Name="Skirmish_Quasar_Zsinj">
-		<Variant_Of_Existing_Type>Generic_Quaser</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Quasar_Zsinj</Variant_Of_Existing_Type>
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED,  SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
@@ -2202,6 +2204,8 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, BARRAGE, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		     
 			 
                          <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -2376,6 +2380,7 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Space_FOW_Reveal_Range>1500.0</Space_FOW_Reveal_Range>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		     
 			 
                          <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -2412,12 +2417,32 @@
 	<!-- CSA -->
 	<!-- CSA -->
 	<!-- CSA -->
+	
+	<SpaceUnit Name="Skirmish_Marauder">
+	    <Variant_Of_Existing_Type>Marauder_Missile_Cruiser</Variant_Of_Existing_Type>
+		<Lua_Script></Lua_Script>
+		<Tech_Level>99</Tech_Level>
+		<Space_FOW_Reveal_Range>2100.0</Space_FOW_Reveal_Range>
+		
+		<SpaceBehavior>SPAWN_SQUADRON, BARRAGE,ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, TARGETING, POWERED, SHIELDED, WEAPON, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		     
+			 
+        <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>12</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+	</SpaceUnit>
 		
 	<SpaceUnit Name="Skirmish_Invincible_Cruiser">
 	    <Variant_Of_Existing_Type>Invincible_Cruiser</Variant_Of_Existing_Type>
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		
+		<SpaceBehavior>SPAWN_SQUADRON, ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		     
 			 
                          <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -2450,6 +2475,8 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Space_FOW_Reveal_Range>2100.0</Space_FOW_Reveal_Range>
+		
+		<SpaceBehavior>SPAWN_SQUADRON, ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		     
 			 
                          <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -2466,6 +2493,8 @@
 		<Lua_Script></Lua_Script>
 		<Tech_Level>99</Tech_Level>
 		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>
+		
+		<SpaceBehavior>SPAWN_SQUADRON, ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		     
 			 
                          <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
