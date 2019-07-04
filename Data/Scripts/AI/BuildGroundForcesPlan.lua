@@ -49,7 +49,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"ReserveForce"
-		,"Infantry = 0,3"
+		,"Infantry = 0,2"
 		,"Vehicle = 0,3"
 		,"Air = 0,2"	
 		,"-Field_Com_Rebel_Team"

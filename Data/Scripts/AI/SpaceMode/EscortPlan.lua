@@ -55,10 +55,8 @@ function Definitions()
 	-- First Task Force
 	{
 		"MainForce"
-		,"Fighter | Corvette = 1,4"
-		,"Generic_Interdictor_Cruiser = 0,1"
-		,"Massias_Interdictor = 0,1"
-        ,"CC7700 = 0,1"
+		,"Fighter | Corvette = 1,6"
+		,"Interdictor | Frigate = 0,1"
 	}
 	}
 end
@@ -66,6 +64,14 @@ end
 function MainForce_Thread()
 	DebugMessage("%s -- In MainForce_Thread.", tostring(Script))
 	BlockOnCommand(MainForce.Produce_Force());
+	
+	unit_table = MainForce.Get_Unit_Table()
+	
+	for i,unit in pairs(unit_table) do
+		if unit.Is_Category("Frigate") and not unit.Has_Property("Carrier") then
+			MainForce.Release_Unit(unit)
+		end
+	end
 
 	QuickReinforce(PlayerObject, AITarget, MainForce)
 

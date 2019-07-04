@@ -50,7 +50,7 @@ function Definitions()
 	{
 		"MainForce"					
 		,"TaskForceRequired"
-		,"UC_Empire_Bunker | UC_Rebel_Bunker | UC_Underworld_Bunker = 1"
+		,"UC_Empire_Bunker | UC_Rebel_Bunker | UC_Underworld_Bunker | UC_Pentastar_Bunker = 1"
 	}
 	}
 

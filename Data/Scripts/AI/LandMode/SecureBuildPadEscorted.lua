@@ -49,16 +49,11 @@ function Definitions()
 	{
 		{
 			"MainForce"
-			,"Infantry | LandHero = 1"
-			,"-Veers_AT_AT_Walker"
-			,"-Gargantuan_Battle_Platform"
+			,"Infantry = 1, 4"
 		},
 		{
 			"EscortForce"		
-			,"Infantry | Vehicle | LandHero = 1,3"
-			,"-Gallofree_HTT_Company"
-			,"-HAV_Juggernaut_Company"
-			,"-AT_AA_Walker"
+			,"Infantry | Vehicle | LandHero = 1,4"
 		}
 	}
 
@@ -73,12 +68,22 @@ function MainForce_Thread()
 	QuickReinforce(PlayerObject, AITarget, MainForce, EscortForce)
 	
 	MainForce.Activate_Ability("SPREAD_OUT", false)
+	
+	unit_table = MainForce.Get_Unit_Table()
+	
+	for i, unit in pairs(unit_table) do
+		lib_nearest_garrison = Find_Nearest(unit, "CanContainGarrison", unit.Get_Owner(), true)
+		
+		if TestValid(lib_nearest_garrison) and unit.Can_Garrison(lib_nearest_garrison) then
+			unit.Garrison(lib_nearest_garrison)
+		end
+	end
 
 	Set_Land_AI_Targeting_Priorities(MainForce)
 	
 	-- move to contestables
 	faction_name = PlayerObject.Get_Faction_Name()
-	if PlayerObject.Get_Difficulty() == "Easy" or faction_name == "PIRATES" or faction_name == "HUTTS" then
+	if PlayerObject.Get_Difficulty() == "Easy" then
 		BlockOnCommand(MainForce.Attack_Move(AITarget))
 	else	
 		BlockOnCommand(MainForce.Move_To(AITarget, MainForce.Get_Self_Threat_Max()))
@@ -158,6 +163,14 @@ function EscortForce_Thread()
 	Try_Ability(EscortForce, "FORCE_CLOAK")
 	-- Give an initial order to put the escorts in a state that the Escort function expects
 	EscortForce.Guard_Target(MainForce)
+	
+	escort_unit_table = EscortForce.Get_Unit_Table()
+	
+	for i,escort in pairs(escort_unit_table) do
+		if escort.Has_Garrison() then
+			escort.Move_To(AITarget)
+		end
+	end
 
 	EscortAlive = true
 	while EscortAlive do

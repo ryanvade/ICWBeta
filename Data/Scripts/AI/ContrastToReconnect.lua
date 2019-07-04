@@ -54,7 +54,7 @@ function Definitions()
 	{
 		"SpaceForce"						
 		,"MinimumTotalSize = 4"				
-		,"Frigate | Capital | Corvette = 100%"
+		,"Frigate | Capital | Corvette | SuperCapital = 100%"
 	},
 	{
 		"GroundForce"
@@ -71,7 +71,11 @@ function Definitions()
 	InSpaceConflict = false
 	WasConflict = false
 
-	sleep_duration = 150
+	difficulty = "Easy"
+	if PlayerObject then
+		difficulty = PlayerObject.Get_Difficulty()
+	end
+	sleep_duration = DifficultyBasedMinPause(difficulty)
 	
 	DebugMessage("%s -- Done Definitions", tostring(Script))
 end
@@ -111,7 +115,7 @@ function SpaceForce_Thread()
 		Sleep(5)
 	end
 	
-	SpaceForce.Release_Forces(0.5)
+	SpaceForce.Release_Forces(1.0)
 	DebugMessage("%s -- SpaceForce Done!  Exiting Script!", tostring(Script))
 end
 

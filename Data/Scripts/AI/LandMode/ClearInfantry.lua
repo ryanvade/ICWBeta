@@ -47,7 +47,8 @@ ScriptPoolCount = 6
 function Definitions()
 	
 	Category = "Clear_Infantry"
-	MaxContrastScale = 2.0
+	MinContrastScale = 0.2
+	MaxContrastScale = 3.0
 	TaskForce = {
 	{
 		"MainForce"					

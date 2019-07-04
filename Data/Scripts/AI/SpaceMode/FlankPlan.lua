@@ -45,15 +45,17 @@ function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
 	AllowEngagedUnits = false
+	MinContrastScale = 0.75
+	MaxContrastScale = 3.0
 	Category = "Destroy_Unit"
 	TaskForce = {
 	{
 		"MainForce"
-		,"Corvette | Frigate | Capital | SuperCapital = 2,6"
+		,"Frigate | Capital | SuperCapital = 100%"
 	},
 	{
 		"FlankForce"
-		,"Fighter = 1,4"
+		,"Fighter | Bomber = 1,4"
 	}
 	}
 	
@@ -68,6 +70,14 @@ function MainForce_Thread()
 	ExecuteFlank = false
 
 	BlockOnCommand(MainForce.Produce_Force());
+	
+	unit_table = MainForce.Get_Unit_Table()
+	
+	for i,unit in pairs(unit_table) do
+		if unit.Has_Property("Carrier") then
+			MainForce.Release_Unit(unit)
+		end
+	end
 	
 	QuickReinforce(PlayerObject, AITarget, MainForce, FlankForce)
 	

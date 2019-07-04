@@ -46,14 +46,17 @@ function Base_Definitions()
 
     Common_Base_Definitions()
 
-    ServiceRate = 20
+    ServiceRate = 10
     UnitServiceRate = 2
 
     if Definitions then
         Definitions()
     end
 
-    FREE_STORE_ATTACK_RANGE = 2000.0
+    FREE_STORE_ATTACK_RANGE = 4000.0
+	
+	aggressive_mode = false
+	outnumbered = 0
 end
 
 function main()
@@ -75,18 +78,20 @@ end
 function FreeStoreService()
     enemy_location = FindTarget.Reachable_Target(PlayerObject, "Current_Enemy_Location", "Tactical_Location", "Any_Threat", 0.5)
     friendly_location = FindTarget.Reachable_Target(PlayerObject, "Current_Friendly_Location", "Tactical_Location", "Any_Threat", 0.5)
-    aggressive_mode = (EvaluatePerception("Allowed_As_Defender_Land", PlayerObject) > 0.0)
 
+	outnumbered = EvaluatePerception("Outnumbered", PlayerObject)
+
+	if (EvaluatePerception("Allowed_As_Defender_Space_Untargeted", PlayerObject) > 0.0) then
+		DebugMessage("%s -- Aggressive mode activated", tostring(Script))
+		aggressive_mode = true
+	else
+		aggressive_mode = false
+	end
+	
 	if TestValid(space_station) then
 		station_threat = FindDeadlyEnemy(space_station)
 		if station_threat then
 			space_station.Attack_Target(station_threat)
-		end
-
-		--Maybe this station has a special weapon?
-		special_target = FindTarget.Reachable_Target(PlayerObject, "Needs_Hypervelocity_Shot", "Enemy_Unit", "Any_Threat", 0.5, space_station, 1500.0)
-		if TestValid(special_target) then
-			space_station.Fire_Special_Weapon(special_target, PlayerObject)
 		end
 	else
 		space_station = PlayerObject.Get_Space_Station()
@@ -99,7 +104,7 @@ function On_Unit_Service(object)
         return
     end
 
-    if object.Is_Category("Structure") or object.Is_Category("Transport") then
+    if object.Is_Category("SpaceStructure") or object.Is_Category("Transport") then
         return
     end
 
@@ -110,23 +115,38 @@ function On_Unit_Service(object)
     current_target = object.Get_Attack_Target()
     if TestValid(current_target) then
 
-        if Service_Kite(object) then
-            return
-        end
+		if object.Is_Category("Fighter") or object.Is_Category("Bomber") or object.Is_Category("Transport") or object.Is_Category("Corvette") or object.Is_Category("Frigate") then
+			if Service_Kite(object) then
+				return
+			end
+		end
 
         object.Activate_Ability("SPOILER_LOCK", false)
-
-        Try_Weapon_Switch(object, current_target)
     end
+	
+	-- Are we completely outnumbered?
+	if (outnumbered > 0) and TestValid(space_station) then	
+		object.Move_To(space_station.Get_Position())
+		
+		Service_Attack(object)
+		return
+	end
 
     if not object.Has_Active_Orders() then
 
         --Keep bored objects mobile
         object.Activate_Ability("SPOILER_LOCK", true)
+		
+		--Small units kite, or guard
+		if object.Is_Category("Fighter") or object.Is_Category("Bomber") or object.Is_Category("Transport") or object.Is_Category("Corvette") then
+			
+			if Service_Kite(object) then
+				return
+			end
 
-        if Service_Kite(object) then
-            return
-        end
+			Service_Guard(object)
+				
+		end
 
         if Service_Attack(object) then
             return
@@ -139,13 +159,12 @@ end
 
 function Service_Attack(object)
 
-    closest_enemy = Find_Nearest(object, object.Get_Owner(), false)
-	--damaged_enemy = FindTarget.Reachable_Target(PlayerObject, "Low_Health_Unit", "Enemy_Unit", "Any_Threat", 0.9, object, 0.75 * object.Get_Type().Get_Max_Range())
-
-	--if TestValid(damaged_enemy) then
-		--object.Attack_Target(damaged_enemy)
-		--return true
-	--end
+	closest_enemy = Find_Nearest(object, "Corvette|Frigate|Capital|SuperCapital|SpaceStructure", object.Get_Owner(), false)
+	if TestValid(closest_enemy) then
+		DebugMessage("%s -- closest enemy is %s units away", tostring(Script), tostring(object.Get_Distance(closest_enemy)))
+	end
+	
+	deadly_enemy = FindDeadlyEnemy(object)
 	
 	if TestValid(closest_enemy) then
 		if object.Get_Distance(closest_enemy) < FREE_STORE_ATTACK_RANGE then
@@ -156,9 +175,21 @@ function Service_Attack(object)
 			end
 			return true		
 		elseif aggressive_mode then
-			object.Attack_Move(Project_By_Unit_Range(object, closest_enemy.Get_Position()))
+			if object.Get_Distance(closest_enemy) > object.Get_Type().Get_Max_Range() then
+				object.Attack_Target(closest_enemy)
+			else
+				object.Attack_Move(Project_By_Unit_Range(object, closest_enemy.Get_Position()))
+			end
 			return true
 		end
+	elseif TestValid(deadly_enemy) then
+		DebugMessage("%s -- attacking enemy attacker", tostring(Script))
+		if object.Get_Distance(deadly_enemy) > object.Get_Type().Get_Max_Range() then
+			object.Attack_Move(Project_By_Unit_Range(object, deadly_enemy.Get_Position()))
+		else
+			object.Attack_Target(deadly_enemy)
+		end
+		return true
 	elseif TestValid(enemy_location) then
 		if aggressive_mode or object.Is_Category("SuperCapital") then
 			object.Attack_Move(Project_By_Unit_Range(object, enemy_location))
@@ -175,35 +206,44 @@ function Service_Guard(object)
 		return false
 	end
 
-    closest_friendly_structure = Find_Nearest(object, "Structure", object.Get_Owner(), true)
-    if TestValid(closest_friendly_structure) then
-        object.Guard_Target(closest_friendly_structure)
-        return true
-    elseif TestValid(friendly_location) then
-        object.Attack_Move(friendly_location)
-        return true
-	end
+    friendly_structures = Find_All_Objects_Of_Type("SpaceStructure", object.Get_Owner())
 	
-    if Get_Game_Mode() == "Space" then
-		space_station = object.Get_Owner().Get_Space_Station()
-		if TestValid(space_station) then
-			object.Guard_Target(space_station)
+	if object.Has_Property("Carrier") then
+	
+		if TestValid(friendly_location) then
+			object.Attack_Move(friendly_location)
+			return true	
+		elseif friendly_structures then
+			for i,structure in pairs(friendly_structures) do
+				object.Attack_Move(structure.Get_Position())
+			end
+			return true
+		elseif aggressive_mode and TestValid(enemy_location) then
+			object.Move_To(Project_By_Unit_Range(object, enemy_location))
 			return true
 		end
-    end
+		
+	elseif object.Is_Category("Frigate") or object.Is_Category("Capital") or object.Is_Category("SuperCapital") then
+		return false
+	end
+	
+	if TestValid(friendly_location) then
+		object.Attack_Move(friendly_location)
+		return true	
+	elseif friendly_structures then
+		for i,structure in pairs(friendly_structures) do
+			object.Attack_Move(structure.Get_Position())
+		end
+		return true
+	elseif aggressive_mode and TestValid(enemy_location) then
+		object.Move_To(Project_By_Unit_Range(object, enemy_location))
+		return true
+	end
 
     return false
 end
 
 function Service_Kite(object)
-
-	if object.Is_Category("SuperCapital") then
-		return false
-	end
-
-    if object.Get_Hull() > 0.5 or not object.Are_Engines_Online() or object.Get_Hull() < 0.1 then
-        return false
-    end
 
     lib_fs_deadly_enemy = FindDeadlyEnemy(object)
 

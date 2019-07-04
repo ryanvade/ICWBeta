@@ -46,7 +46,7 @@ ScriptPoolCount = 4
 
 function Definitions()	
 	MinContrastScale = 0.5
-	MaxContrastScale = 1.1
+	MaxContrastScale = 0.9
 		
 	Category = "Warlord_Conquer_Pirate"
 	TaskForce = {
@@ -87,10 +87,10 @@ function MainForce_Thread()
 	end
 	
 	LandSecured = true
-	MainForce.Release_Forces(0.4)
-	FundBases(PlayerObject, Target)
 	
 	MainForce.Release_Forces(1.0)
+	FundBases(PlayerObject, Target)
+
 	ScriptExit()
 end
 

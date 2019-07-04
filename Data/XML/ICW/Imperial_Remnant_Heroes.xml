@@ -3888,20 +3888,7 @@
 
 			<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>MAXIMUM_FIREPOWER</Type>
-				<Expiration_Seconds>1</Expiration_Seconds>
-				<Recharge_Seconds>70</Recharge_Seconds>
-				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier> <!-- no delay, fire continuously -->
-				<GUI_Activated_Ability_Name>AT_AT_Maximum_Firepower_Attack</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-				<Projectile_Types_Override>Proj_Veers_AT_AT_Max_Power_Laser_Red</Projectile_Types_Override>
-				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Activate_Energy_Blast_Veers</SFXEvent_GUI_Unit_Ability_Activated>
-				<SFXEvent_Target_Ability> Unit_Target_Energy_Blast_Veers </SFXEvent_Target_Ability>
-				<Supports_Autofire>True</Supports_Autofire>
-			</Unit_Ability>
-
+			
 			<!-- Secondary ability -->
 			<Unit_Ability>
 				<Type>DEPLOY_TROOPERS</Type>
@@ -3914,19 +3901,6 @@
 
 		</Unit_Abilities_Data>
 
-
-		<Abilities SubObjectList="Yes">
-			<Maximum_Firepower_Attack_Ability Name="AT_AT_Maximum_Firepower_Attack">
-				<Activation_Style> User_Input </Activation_Style>
-				<!-- We only consider the following unit types "valid targets": -->
-				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
-				<Applicable_Unit_Types />
-				<Owner_Particle_Effect>Veers_Powerup_Particle_Effect</Owner_Particle_Effect>
-				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
-				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
-
-			</Maximum_Firepower_Attack_Ability>
-		</Abilities>
 
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 

@@ -50,7 +50,7 @@ function Definitions()
 	{
 		"MainForce"					
 		,"TaskForceRequired"
-		,"UC_Empire_Buildable_Bacta_Tank | UC_Rebel_Buildable_Bacta_Tank | UC_Pirate_Buildable_Bacta_Tank | UC_Underworld_Buildable_Bacta_Tank | UC_Hutt_Buildable_Bacta_Tank = 1"
+		,"UC_Empire_Buildable_Bacta_Tank | UC_Rebel_Buildable_Bacta_Tank | UC_Underworld_Buildable_Bacta_Tank | UC_Pirate_Buildable_Bacta_Tank | UC_Underworld_Buildable_Bacta_Tank | UC_Pentastar_Buildable_Anti_Infantry_Turret | UC_Hutt_Buildable_Bacta_Tank = 1"
 	}
 	}
 

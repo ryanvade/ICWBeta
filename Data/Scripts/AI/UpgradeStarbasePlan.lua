@@ -47,7 +47,7 @@ ScriptPoolCount = 16
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
-	Category = "Upgrade_Starbase | Build_Initial_Starbase_Only"
+	Category = "Upgrade_Starbase"
 	IgnoreTarget = true
 	TaskForce = {
 	{

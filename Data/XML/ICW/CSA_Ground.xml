@@ -199,7 +199,7 @@
 		<Reserve_Spawned_Units_Tech_0>GX12_Hovervan, 4</Reserve_Spawned_Units_Tech_0>
 		
 				<Spawned_Squadron_Delay_Seconds>25</Spawned_Squadron_Delay_Seconds>
-		<Spawned_Squadron_Location_Bones>Root</Spawned_Squadron_Location_Bones>
+		<Spawned_Squadron_Location_Bones>Spawn</Spawned_Squadron_Location_Bones>
 		<Spawned_Squadron_Location_Flyout_Distances>200.0</Spawned_Squadron_Location_Flyout_Distances>
 		<Spawn_Garrison_On_Load>True</Spawn_Garrison_On_Load>
 
@@ -1566,7 +1566,7 @@
 		<SFXEvent_Tactical_Build_Complete> UHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
 		<SFXEvent_Tactical_Build_Cancelled> UHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
 
-		<CategoryMask> Vehicle | AntiVehicle</CategoryMask>
+		<CategoryMask> Vehicle | AntiInfantry</CategoryMask>
 		<MovementClass>Infantry</MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -1581,7 +1581,7 @@
 		<Overall_Length>20.0</Overall_Length> <!-- Hand tweaked for vehicle pitching up and down on terrain -->
 		<Overall_Width>0.0</Overall_Width> <!-- 0.0 means don't roll left and right on terrain -->
 		<Has_Land_Evaluator>Yes</Has_Land_Evaluator>
-		<AI_Combat_Power>70</AI_Combat_Power>
+		<AI_Combat_Power>28</AI_Combat_Power>
 
 		<Idle_Chase_Range>0.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
@@ -1868,7 +1868,7 @@
 	</GroundCompany>
 
 	<GroundVehicle Name="Espo_Walker_Captured">
-		<Variant_Of_Existing_Type>Espo_Walkerr</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Espo_Walker</Variant_Of_Existing_Type>
 		<Icon_Name>i_button_chewbacca_atst.tga</Icon_Name>
 		<!-- gth this behavior list matches the AT_AT_WALKER except for the deploy troopers ability -->
 		<LandBehavior>
@@ -2179,20 +2179,6 @@
 				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
 			</Unit_Ability>
             -->
-			<Shield_Flare_Ability Name="Shield_Flare_Vehicle">
-				<Max_Damage_Per_Victim>275</Max_Damage_Per_Victim>
-				<Damage_Radius>400</Damage_Radius>
-				<Charge_Up_Seconds>1</Charge_Up_Seconds>
-				<Activation_Style> User_Input </Activation_Style>
-				<Owner_Particle_Effect>Shield_Flare_Effect</Owner_Particle_Effect>
-				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
-				<Owner_Light_Effect_Color>0.0, 0.2, 0.2</Owner_Light_Effect_Color>
-				<Owner_Light_Effect_Color2 />
-				<Owner_Light_Effect_Duration>1.5</Owner_Light_Effect_Duration>
-				<Owner_Light_Effect_Pulse_Count />
-                <SFXEvent_Activate>Shield_Flare_SFX_Event</SFXEvent_Activate>
-			</Shield_Flare_Ability>
-			
 			<Unit_Ability>
 				<Type>EJECT_VEHICLE_THIEF</Type>
 				<Recharge_Seconds>10</Recharge_Seconds>
@@ -2298,7 +2284,7 @@
 		<MaxFacingLookAheadFrames>5.0</MaxFacingLookAheadFrames>
 		<Should_Cause_Limited_Turrets_To_Turn> false </Should_Cause_Limited_Turrets_To_Turn>
 
-		<AI_Combat_Power>20</AI_Combat_Power>
+		<AI_Combat_Power>21</AI_Combat_Power>
 
 		<Behavior>SELECTABLE, POWERED</Behavior>
 		<LandBehavior>FLYING_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED, WEAPON, AMBIENT_SFX,UNIT_AI,TARGETING,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, SURFACE_FX, HUNT</LandBehavior>
@@ -2608,7 +2594,7 @@
 		<Overall_Length>20.0</Overall_Length> <!-- For vehicle pitching up and down on terrain, 20.0 = first-pass test value -->
 		<Overall_Width>10.0</Overall_Width> <!-- For vehicle rolling left and right on terrain, 20.0 = first-pass test value  -->
 		<Has_Land_Evaluator>Yes</Has_Land_Evaluator>
-		<AI_Combat_Power>100</AI_Combat_Power>
+		<AI_Combat_Power>49</AI_Combat_Power>
 
 		<Idle_Chase_Range>0.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
@@ -2751,7 +2737,7 @@
 		<Hover_Height>25.0</Hover_Height>
 		<Should_Cause_Limited_Turrets_To_Turn> false </Should_Cause_Limited_Turrets_To_Turn>
 
-		<AI_Combat_Power>200</AI_Combat_Power>
+		<AI_Combat_Power>139</AI_Combat_Power>
 
 		<Behavior>SELECTABLE, POWERED</Behavior>
 		<LandBehavior>IDLE, GARRISON_HOVER, ABILITY_COUNTDOWN, WALK_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED, WEAPON, AMBIENT_SFX,UNIT_AI,TARGETING,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, SURFACE_FX</LandBehavior>
@@ -2975,7 +2961,7 @@
 		<Hover_Height>20.0</Hover_Height>
 		<Should_Cause_Limited_Turrets_To_Turn> false </Should_Cause_Limited_Turrets_To_Turn>
 
-		<AI_Combat_Power>500</AI_Combat_Power>
+		<AI_Combat_Power>242</AI_Combat_Power>
 
 		<Behavior>SELECTABLE, POWERED</Behavior>
 		<LandBehavior>IDLE, GARRISON_VEHICLE, ABILITY_COUNTDOWN, WALK_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED, WEAPON, AMBIENT_SFX,UNIT_AI,TARGETING,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, SURFACE_FX</LandBehavior>
@@ -3234,7 +3220,7 @@
 		<MaxFacingLookAheadFrames>5.0</MaxFacingLookAheadFrames>
 		<Should_Cause_Limited_Turrets_To_Turn> false </Should_Cause_Limited_Turrets_To_Turn>
 
-		<AI_Combat_Power>250</AI_Combat_Power>
+		<AI_Combat_Power>87</AI_Combat_Power>
 
 		<Behavior>SELECTABLE, POWERED</Behavior>
 		<LandBehavior>FLYING_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED, HUNT,AMBIENT_SFX,UNIT_AI,TARGETING,WEAPON,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING</LandBehavior>
@@ -3556,7 +3542,7 @@
 		<No_Reflection_Below_Detail_Level>99</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>3</No_Refraction_Below_Detail_Level>
 		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
-		<AI_Combat_Power>110</AI_Combat_Power>
+		<AI_Combat_Power>192</AI_Combat_Power>
 		<Idle_Chase_Range>0.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
@@ -3803,7 +3789,7 @@
 		<Overall_Width>20.0</Overall_Width>
 		<!-- For vehicle rolling left and right on terrain (30 by geometry)-->
 		<Has_Land_Evaluator>Yes</Has_Land_Evaluator>
-		<AI_Combat_Power>50</AI_Combat_Power>
+		<AI_Combat_Power>105</AI_Combat_Power>
 		<Idle_Chase_Range>0.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
@@ -4016,7 +4002,7 @@
 		<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
 		<Is_Squashable> Yes </Is_Squashable>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>6</AI_Combat_Power>
+		<AI_Combat_Power>2</AI_Combat_Power>
 
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 		<Targeting_Priority_Set>AvoidAntiInfantryTurrets</Targeting_Priority_Set>

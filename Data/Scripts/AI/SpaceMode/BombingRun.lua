@@ -45,7 +45,7 @@ function Definitions()
 
 	AllowEngagedUnits = false
 	IgnoreTarget = true
-	Category = "AlwaysOff"
+	Category = "Bomb_Unit"
 	TaskForce = {
 	{
 		"BomberForce"						

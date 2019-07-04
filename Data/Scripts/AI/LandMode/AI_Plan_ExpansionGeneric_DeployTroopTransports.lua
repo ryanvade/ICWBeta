@@ -50,7 +50,7 @@ function Definitions()
 	{
 		{
 			"MainForce"
-			,"HAV_Juggernaut | Gallofree_HTT_Transport = 1,5"
+			,"HAV_Juggernaut | Gallofree_HTT_Transport | JX40 | Strikebreaker | PX4 | LAAT | IDT | Chariot_LAV_Combat | A5_Juggernaut | A6_Juggernaut = 1,5"
 		}
 	}
 

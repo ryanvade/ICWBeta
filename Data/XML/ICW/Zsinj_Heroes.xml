@@ -208,7 +208,7 @@
 		<MaxJiggleDistance> 2.0 </MaxJiggleDistance>
 		
 		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
-		<Scale_Factor>1.5</Scale_Factor>
+		<Scale_Factor>0.95</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
 		<Affiliation>Pirates</Affiliation>
@@ -466,6 +466,25 @@
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>TURBO</Type>
+
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		
+		
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Banjeer_Self_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
@@ -552,7 +571,7 @@
 		<Tactical_Health>1500</Tactical_Health>
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>2000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>1050</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Build_Time_Seconds>17</Tactical_Build_Time_Seconds>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
@@ -1200,7 +1219,7 @@
 		<Land_Model_Name> UI_SILRI.ALO </Land_Model_Name>
 		<Icon_Name>i_button_gethzerion.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<Scale_Factor>1.75</Scale_Factor>
+		<Scale_Factor>1.1</Scale_Factor>
 		<Select_Box_Scale>27</Select_Box_Scale>
 		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
 
@@ -1505,7 +1524,7 @@
 		<Icon_Name>i_button_grappler.tga</Icon_Name>
 		<Icon_Name />
 		<Mass>1.0</Mass>
-		<Scale_Factor>1.75</Scale_Factor> <!-- Temp scale change for scale test - change back once models resized -->
+		<Scale_Factor>1.1</Scale_Factor> <!-- Temp scale change for scale test - change back once models resized -->
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Respawn_Whole_Team_When_Killed>Yes</Respawn_Whole_Team_When_Killed>
 		<Type>Walk</Type>

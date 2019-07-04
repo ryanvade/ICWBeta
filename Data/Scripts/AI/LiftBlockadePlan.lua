@@ -55,7 +55,7 @@ function Definitions()
 		"MainForce"						-- Name of the MainForce, Variable and thread function.
 		,"MinimumTotalSize = 4"
 		,"MinimumTotalForce = 2500"					
-		,"Frigate | Capital | Corvette = 100%"
+		,"Frigate | Capital | Corvette | SuperCapital = 100%"
 	}
 	}
 	RequiredCategories = { "Corvette | Frigate | Capital" }	
@@ -69,8 +69,6 @@ function MainForce_Thread()
 		MainForce.Set_Plan_Result(true)
 		MainForce.Release_Forces(1.0)
 	end
-	
-	Sleep(120)
 	
 	ScriptExit()
 end

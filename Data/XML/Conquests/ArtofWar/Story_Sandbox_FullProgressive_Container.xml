@@ -11,12 +11,18 @@
 	<Event Name="Progressive_Story_Start">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>0</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>DEBUG_TEXT_PROGRESSIVE_INITIALIZED</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
 	</Event>
 	
 	<Event Name="GC_Starts_01">
 		<Event_Type>STORY_TECH_LEVEL</Event_Type>
 		<Event_Param1>1</Event_Param1>
 		<Branch>Era_Start_Checker</Branch>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>DEBUG_TEXT_PROGRESSIVE_START_ONE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
 	</Event>		
 
 	<Event Name="GC_Starts_02">
@@ -57,7 +63,7 @@
 	
    	<Event Name="Level_Check">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>3</Event_Param1>
+		<Event_Param1>5</Event_Param1>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
 		<Reward_Param1>Era_Start_Checker</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
@@ -66,6 +72,10 @@
 	<Event Name="GC_Progress_01">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>2</Event_Param1>
+		
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>DEBUG_TEXT_PROGRESSIVE_PROGRESS_ONE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
 
 		<Prereq>GC_Starts_01</Prereq>
 		
@@ -75,6 +85,10 @@
 	<Event Name="GC_Progress_02">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>2</Event_Param1>
+		
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>DEBUG_TEXT_PROGRESSIVE_PROGRESS_TWO</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
 
 		<Prereq>GC_Starts_02</Prereq>
 		
@@ -84,6 +98,10 @@
 	<Event Name="GC_Progress_03">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>2</Event_Param1>
+		
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>DEBUG_TEXT_PROGRESSIVE_PROGRESS_THREE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
 
 		<Prereq>GC_Starts_03</Prereq>
 		
@@ -93,6 +111,10 @@
 	<Event Name="GC_Progress_04">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>2</Event_Param1>
+		
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>DEBUG_TEXT_PROGRESSIVE_PROGRESS_FOUR</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
 
 		<Prereq>GC_Starts_04</Prereq>
 		
@@ -102,6 +124,10 @@
 	<Event Name="GC_Progress_05">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>2</Event_Param1>
+		
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>DEBUG_TEXT_PROGRESSIVE_PROGRESS_FIVE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
 
 		<Prereq>GC_Starts_05</Prereq>
 
@@ -421,7 +447,8 @@
 	<!--***********************************************************-->	
 	
 	<Event Name="Intro_Welcome_Empire">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>5</Event_Param1>
 		<Reward_Type>MULTIMEDIA</Reward_Type>
 		<Reward_Param1>TEXT_CONQUEST_WARLORDS_IR_INTRO_PESTAGE</Reward_Param1>
 		<Reward_Param2>15</Reward_Param2>
@@ -621,7 +648,7 @@
 		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Jax_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Set_Subera_Palpatine</Prereq>
+		<Prereq>GC_Progress_03</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -692,7 +719,7 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
 		<Reward_Param1>Daala_Tag</Reward_Param1>
-		<Prereq>Set_Subera_Daala</Prereq>
+		<Prereq>GC_Progress_04</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -967,7 +994,7 @@
 		<Story_Dialog>Dialog_NewRep_FullProgressive</Story_Dialog>
 		<Story_Chapter>6</Story_Chapter>
 		<Story_Tag>Main_Tag</Story_Tag>
-		<Prereq>Daala_Welcome_Leia</Prereq>
+		<Prereq>Pellaeon_Welcome_Leia</Prereq>
 		<Branch>Faction_Branch_NewRep</Branch>
 	</Event>
 	
@@ -1944,7 +1971,6 @@
   		<Event_Type>STORY_CONQUER</Event_Type>
   		<Event_Param1>Centares</Event_Param1>
 		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
-		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<Event Name="Selit_Joins">
@@ -1986,18 +2012,6 @@
 		<Prereq>Yevetha_Not_Played</Prereq>
 	</Event>
 	
-	<Event Name="Doornik_Bounces">
-		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
-		<Event_Param1>Doornik</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
-		<Reward_Param2>10</Reward_Param2>
-		<Reward_Param3></Reward_Param3>
-		<Reward_Param9></Reward_Param9>
-		<Prereq>Universal_Story_Start</Prereq>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
 	<Event Name="Doornik_Unlocked">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
@@ -2014,18 +2028,6 @@
 		<Reward_Param1>Zfell</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
 		<Prereq>Yevetha_Not_Played</Prereq>
-	</Event>
-	
-	<Event Name="ZFell_Bounces">
-		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
-		<Event_Param1>Zfell</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
-		<Reward_Param2>10</Reward_Param2>
-		<Reward_Param3></Reward_Param3>
-		<Reward_Param9></Reward_Param9>
-		<Prereq>Universal_Story_Start</Prereq>
-		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<Event Name="Zfell_Unlocked">
@@ -2046,18 +2048,7 @@
 		<Prereq>Yevetha_Not_Played</Prereq>
 	</Event>
 	
-	<Event Name="Nzoth_Bounces">
-		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
-		<Event_Param1>Nzoth</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
-		<Reward_Param2>10</Reward_Param2>
-		<Reward_Param3></Reward_Param3>
-		<Reward_Param9></Reward_Param9>
-		<Prereq>Universal_Story_Start</Prereq>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
+
 	<Event Name="Nzoth_Unlocked">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
@@ -2076,17 +2067,7 @@
 		<Prereq>Yevetha_Not_Played</Prereq>
 	</Event>
 	
-		<Event Name="Jtptan_Bounces">
-		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
-		<Event_Param1>Jtptan</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
-		<Reward_Param2>10</Reward_Param2>
-		<Reward_Param3></Reward_Param3>
-		<Reward_Param9></Reward_Param9>
-		<Prereq>Universal_Story_Start</Prereq>
-		<Perpetual>true</Perpetual>
-	</Event>
+
 	
 	<Event Name="Jtptan_Unlocked">
 		<Event_Type>STORY_TRIGGER</Event_Type>
@@ -2107,17 +2088,6 @@
 		<Prereq>Yevetha_Not_Played</Prereq>
 	</Event>
 	
-		<Event Name="Polneye_Bounces">
-		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
-		<Event_Param1>Polneye</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
-		<Reward_Param2>10</Reward_Param2>
-		<Reward_Param3></Reward_Param3>
-		<Reward_Param9></Reward_Param9>
-		<Prereq>Universal_Story_Start</Prereq>
-		<Perpetual>true</Perpetual>
-	</Event>
 	
 	<Event Name="Polneye_Unlocked">
 		<Event_Type>STORY_TRIGGER</Event_Type>
@@ -2136,18 +2106,6 @@
 		<Reward_Param1>ILC905</Reward_Param1>
 		<Reward_Param2>1</Reward_Param2>
 		<Prereq>Yevetha_Not_Played</Prereq>
-	</Event>
-	
-	<Event Name="ILC905_Bounces">
-		<Event_Type>STORY_FLEET_BOUNCED</Event_Type>
-		<Event_Param1>ILC905</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_STORY_UNIVERSAL_BOUNCE_GENERIC</Reward_Param1>
-		<Reward_Param2>10</Reward_Param2>
-		<Reward_Param3></Reward_Param3>
-		<Reward_Param9></Reward_Param9>
-		<Prereq>Universal_Story_Start</Prereq>
-		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<Event Name="ILC905_Unlocked">

@@ -50,7 +50,7 @@ function Definitions()
 	{
 		"MainForce"					
 		,"TaskForceRequired"
-		,"UC_Empire_Buildable_Repair_Facility | UC_Empire_Buildable_Repair_Facility | UC_Pirate_Buildable_Repair_Facility | UC_Underworld_Buildable_Repair_Facility | UC_Hutt_Buildable_Repair_Facility = 1"
+		,"UC_Empire_Buildable_Repair_Facility | UC_Empire_Buildable_Repair_Facility | UC_Pirate_Buildable_Repair_Facility | UC_Underworld_Buildable_Repair_Facility | UC_Pentastar_Buildable_Repair_Facility | UC_Hutt_Buildable_Repair_Facility = 1"
 	}
 	}
 

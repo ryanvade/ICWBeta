@@ -55,7 +55,7 @@ function Definitions()
 	{
 		"ReserveForce"
 		,"DenyHeroAttach"
-		,"Corvette = 0,4"
+		,"Corvette = 0,2"
 		,"Frigate = 0,4"
 		,"Capital = 0,4"
 	}

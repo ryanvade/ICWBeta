@@ -132,7 +132,7 @@ function FundBases(player, target)
 
 	--Prefer starbases since they block enemy movement
 	DebugMessage("%s -- giving desire bonus to build starbase", tostring(Script))
-	BlockOnCommand(GiveDesireBonus(player, "Build_Initial_Starbase_Only", target, 15, 5)) 
+	BlockOnCommand(GiveDesireBonus(player, "Upgrade_Starbase", target, 15, 5)) 
 	DebugMessage("%s -- waiting for starbase", tostring(Script))
 	BlockOnCommand(WaitForStarbase(Target, 1))
 	DebugMessage("%s -- giving desire bonus to build groundbase", tostring(Script))
@@ -159,7 +159,7 @@ function Escort(taskforce, target, conservative_style)
 				Try_Ability(taskforce,"LURE")
 				
 				-- Weave a bit.
-				Weave(taskforce, lib_enemy)
+				--Weave(taskforce, lib_enemy)
 	
 				-- engage the attackers for a duration
 				if not TestValid(lib_enemy) then return end

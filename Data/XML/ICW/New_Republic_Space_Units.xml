@@ -2275,7 +2275,7 @@
 			
 			  <Tractor_Beam_Attack_Ability Name="MC80B_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
-				<Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate </Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
 				<Activation_Min_Range>2</Activation_Min_Range>
@@ -6245,8 +6245,6 @@
 		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
 		<Property_Flags> SmallShip </Property_Flags>
 
-		<!-- if we have a targeted ability, we'll need a team object to attach this ability to -->
-		<Create_Team_Type>Y_Wing_Squadron_Container </Create_Team_Type>
      	<Max_Squad_Size> 12 </Max_Squad_Size>
 
 		<Unit_Abilities_Data SubObjectList="Yes">

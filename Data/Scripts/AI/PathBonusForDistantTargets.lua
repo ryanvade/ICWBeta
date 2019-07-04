@@ -80,13 +80,14 @@ function EmptyForce_Thread()
 				if path_start then
 					path = Find_Path(PlayerObject, path_start, planet)
 					value = (EvaluatePerception("GenericPlanetValue", PlayerObject, planet)
-						+ EvaluatePerception("Is_Neglected_By_My_Opponent_Space", PlayerObject, planet)) / 2
+						+ EvaluatePerception("Is_Neglected_By_My_Opponent_Space", PlayerObject, planet)
+						+ EvaluatePerception("Priority_Target", PlayerObject, planet)) / 3.0
 					markup_table[planet] = Apply_Markup(PlayerObject, path, value, markup_table[planet])
 				end
 			else
 				planet_list[i] = nil
 			end
-			Sleep(1)
+			Sleep(10.0)
 		end
 	end
 end

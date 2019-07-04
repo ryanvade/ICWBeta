@@ -275,6 +275,10 @@ end
 -- Try an ability if the AI difficulty will allow a chance
 function Try_Ability(thing, ability_name, target)
 
+	if not thing then
+		return false
+	end
+
 	owner = PlayerObject
 	if not Is_A_Taskforce(thing) then
 		owner = thing.Get_Owner()

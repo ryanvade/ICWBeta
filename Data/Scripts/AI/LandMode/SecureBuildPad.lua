@@ -43,29 +43,19 @@ require("pgevents")
 
 function Definitions()
 
-	Category = "Secure_Contestable"
+	Category = "Secure_Build_Pad"
 	IgnoreTarget = true
 	TaskForce = 
 	{
 		{
 			"MainForce"
-			--,"Infantry | AT_AT_Walker = 1" -- AT-ATs can secure a point by dropping infantry
-			,"Infantry | LandHero = 1"
-			,"-Veers_AT_AT_Walker"
-			,"-Gargantuan_Battle_Platform"
-		},
-		{
-			"EscortForce"		
-			,"Infantry | Vehicle | LandHero = 0,1"
-			,"-Gallofree_HTT_Company"
-			,"-HAV_Juggernaut_Company"
-			,"-AT_AA_Walker"
+			,"Infantry = 1, 2"
 		}
 	}
 
 	AllowEngagedUnits = false
 	
-	wait_for_build_time = 30
+	wait_for_build_time = 10
 end
 
 function MainForce_Thread()
@@ -79,10 +69,10 @@ function MainForce_Thread()
 	
 	-- move to contestables
 	faction_name = PlayerObject.Get_Faction_Name()
-	if PlayerObject.Get_Difficulty() == "Easy" or faction_name == "PIRATES" or faction_name == "HUTTS" then
+	if PlayerObject.Get_Difficulty() == "Easy" then
 		BlockOnCommand(MainForce.Attack_Move(AITarget))
 	else	
-		BlockOnCommand(MainForce.Move_To(AITarget, MainForce.Get_Self_Threat_Max()))
+		BlockOnCommand(MainForce.Attack_Move(AITarget, MainForce.Get_Self_Threat_Max()))
 	end
 		
 	MainForce.Set_As_Goal_System_Removable(false)
@@ -147,28 +137,4 @@ end
 
 -- Override default handling, which will kill the plan
 function MainForce_Original_Target_Owner_Changed(tf, old_player, new_player)
-end
-
-
-function EscortForce_Thread()
-	BlockOnCommand(EscortForce.Produce_Force())
-	
-	QuickReinforce(PlayerObject, AITarget, EscortForce, MainForce)
-
-	-- Give an initial order to put the escorts in a state that the Escort function expects
-	Try_Ability(EscortForce, "FORCE_CLOAK")
-	EscortForce.Guard_Target(MainForce)
-
-	EscortAlive = true
-	while EscortAlive do
-		Escort(EscortForce, MainForce)
-	end
-end
-
-function EscortForce_No_Units_Remaining()
-	EscortAlive = false
-end
-
--- Override default handling, which will kill the plan
-function EscortForce_Original_Target_Owner_Changed(tf, old_player, new_player)
 end

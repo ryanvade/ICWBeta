@@ -45,8 +45,10 @@ require("pgtaskforce")
 ScriptPoolCount = 4
 
 function Definitions()	
-	MinContrastScale = 1.15
-	MaxContrastScale = 1.2
+	MinContrastScale = 1.05
+	MaxContrastScale = 1.15
+	
+	PerFailureContrastAdjust = 0.05
 		
 	Category = "Conquer_Pirate | Warlord_Conquer_Pirate | EotH_Retake_Planet"
 	TaskForce = {
@@ -87,10 +89,8 @@ function MainForce_Thread()
 	end
 	
 	LandSecured = true
-	MainForce.Release_Forces(0.4)
-	FundBases(PlayerObject, Target)
-	
 	MainForce.Release_Forces(1.0)
+	FundBases(PlayerObject, Target)
 	ScriptExit()
 end
 

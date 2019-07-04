@@ -99,7 +99,7 @@ function Definitions()
 		,JUDICATOR_STAR_DESTROYER = {nil, true}
 		,KERMEN_BELLIGERENT = {nil, true}
 		,KLEV_SILENCER7 = {nil, true}
-		,KNIGHT_HAMMER = {"Is_Home_Planet", true}
+		,KNIGHT_HAMMER = {nil, true}
 		,KOOLOOTA_TEAM = {"Is_Production_Planet", false}
 		,LUKE_SKYWALKER_DARKSIDE_TEAM = {"Is_Home_Planet", false}
 		,LUSANKYA = {"Is_Home_Planet", true}
@@ -107,7 +107,7 @@ function Definitions()
 		,MANOS_TEAM = {"Is_Production_Planet", false}
 		,MELVAR_TEAM = {nil, false}
 		,NAVETT_TEAM = {nil, false}
-		,PELLAEON_REAPER = {"Is_Home_Planet", true}
+		,PELLAEON_REAPER = {nil, true}
 		,PESTAGE_TEAM = {"Is_Home_Planet", false}
 		,PHULIK_BINDER = {nil, true}
 		,PITTA_TORPEDO_SPHERE = {nil, true}
@@ -191,7 +191,7 @@ function Definitions()
 		,DEMOLISHER = {nil, true}
 		,GETHZERION_TEAM = {nil, false}
 		,IMPLACABLE_STAR_DESTROYER = {nil, true}
-		,IRON_FIST = {"Is_Home_Planet", true}
+		,IRON_FIST = {nil, true}
 		,KRIN_INVINCIBLE = {nil, true}
 		,LANU_TEAM = {nil, false}
 		,NETBERS_TEAM = {nil, false}

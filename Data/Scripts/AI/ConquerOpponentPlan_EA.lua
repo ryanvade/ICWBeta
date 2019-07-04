@@ -120,7 +120,7 @@ function SpaceForce_Thread()
 			Sleep(5)
 		end
 		
-		SpaceForce.Release_Forces(0.5)
+		SpaceForce.Release_Forces(1.0)
 	end
 end
 

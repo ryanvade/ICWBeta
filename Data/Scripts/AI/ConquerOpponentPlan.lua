@@ -42,7 +42,7 @@
 require("pgevents")
 
 -- Tell the script pooling system to pre-cache this number of scripts.
-ScriptPoolCount = 2
+ScriptPoolCount = 4
 
 --
 -- Galactic Mode Contrast Script
@@ -58,12 +58,13 @@ function Definitions()
 	-- First Task Force
 	{
 		"SpaceForce"	
-		,"MinimumTotalSize = 5"				
-		,"SpaceHero | Frigate | Capital | Corvette | SuperCapital = 100%"
+		,"MinimumTotalSize = 5"		
+		,"Corvette = 20%"
+		,"SpaceHero | Frigate | Capital | SuperCapital = 80%"
 	},
 	{
 		"GroundForce"
-		,"MinimumTotalForce = 2500"
+		,"MinimumTotalForce = 2000"
 		,"LandHero | Vehicle | Infantry | Air = 100%"
 	}
 	}
@@ -120,7 +121,7 @@ function SpaceForce_Thread()
 			Sleep(5)
 		end
 		
-		SpaceForce.Release_Forces(0.5)
+		SpaceForce.Release_Forces(1.0)
 	end
 end
 

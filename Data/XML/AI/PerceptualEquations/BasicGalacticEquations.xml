@@ -7,8 +7,8 @@
 		( 15.0 * Variable_Target.BaseIncome +
 		  1.0 * Variable_Target.MaxStructureSlots + 
 		  2.0 * Variable_Target.MaxGroundbaseLevel + 
-		  2.0 * Variable_Target.MaxStarbaseLevel +
-		  10.0 * Variable_Target.TradeRoutes) / 30.0 
+		  5.0 * Variable_Target.MaxStarbaseLevel +
+		  7.0 * Variable_Target.TradeRoutes) / 30.0 
 	</GenericPlanetValue>
 
 	<Is_Home_Planet>
@@ -16,7 +16,7 @@
 	</Is_Home_Planet>
 	
 	<Is_Production_Planet>
-		5 * (Variable_Target.StarbaseLevel == 3)
+		10 * (Variable_Target.StarbaseLevel > 1)
 		+
 		Variable_Target.StructureCount {Parameter_Type = "E_Ground_Barracks",
 													Parameter_Type = "R_Ground_Barracks",
@@ -34,6 +34,10 @@
 		+
 		clamp(Function_Defense_Level.Evaluate, 0.0, 2.0)
 	</Is_Production_Planet>
+	
+	<Priority_Target>
+		Variable_Target.Hints.PriorityTarget > 0
+	</Priority_Target>
 	
 	<One>
 		1.0
@@ -88,30 +92,39 @@
 	<Is_Company_Planet>
 		Variable_Target.Type.IsType {Parameter_Type = "Antem"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Balmorra"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Brentaal"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Bastion"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Belsavis"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Bespin"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Brentaal"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "CalSeti"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Carida"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Chardaan"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Charubah"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Corellia"} * 3
+		+ Variable_Target.Type.IsType {Parameter_Type = "Corellia"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Corulag"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Coruscant"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Dathomir"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Denon"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Denon"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Druckenwell"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Eriadu"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Ession"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Etti_IV"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Fresia"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Gyndine"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "Jaemus"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Jaemus"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Kalarba"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Kuat"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Lianna"}
-		+ Variable_Target.Type.IsType {Parameter_Type = "MonCalimari"} * 2
+		+ Variable_Target.Type.IsType {Parameter_Type = "Mintooine"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "MonCalimari"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "NewCov"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Nzoth"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Roche"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Saijo"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Sluis_Van"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Sullust"}
 		+ Variable_Target.Type.IsType {Parameter_Type = "Syca"}
+		+ Variable_Target.Type.IsType {Parameter_Type = "Trasi"}
 	</Is_Company_Planet>
 	
 	<Has_Company>
@@ -134,8 +147,46 @@
 									,Parameter_Type = "Olanji_Charubah_HQ"
 									,Parameter_Type = "TaggeCo_HQ"
 									,Parameter_Type = "Bothawui_HQ"
-									,Parameter_Type = "Aratech_HQ"}
+									,Parameter_Type = "Aratech_HQ"
+									,Parameter_Type = "TransGalMeg_HQ"
+									,Parameter_Type = "Hoersch_Kessel_HQ"
+									,Parameter_Type = "Galentro_HQ"
+									,Parameter_Type = "Mekuun_HQ"
+									,Parameter_Type = "NenCarvon_HQ"
+									,Parameter_Type = "Uulshos_HQ"
+									}
 	</Has_Company>
+	
+	<Planet_Has_Company>
+		Variable_Target.StructureCount {Parameter_Type = "Damorian_HQ"
+									,Parameter_Type = "Sienar_HQ"
+									,Parameter_Type = "KDY_HQ"
+									,Parameter_Type = "KDY_Branch"
+									,Parameter_Type = "MCS_HQ"
+									,Parameter_Type = "SFS_HQ"
+									,Parameter_Type = "Tarkin_Estates"
+									,Parameter_Type = "Loronar_HQ"
+									,Parameter_Type = "Arakyd_HQ"
+									,Parameter_Type = "Rendili_HQ"
+									,Parameter_Type = "Incom_HQ"
+									,Parameter_Type = "Sorosuub_HQ"
+									,Parameter_Type = "REC_HQ"
+									,Parameter_Type = "CEC_HQ"
+									,Parameter_Type = "Koensayr_HQ"
+									,Parameter_Type = "Yutrane_Trackata_HQ"
+									,Parameter_Type = "Olanji_Charubah_HQ"
+									,Parameter_Type = "TaggeCo_HQ"
+									,Parameter_Type = "Bothawui_HQ"
+									,Parameter_Type = "Aratech_HQ"
+									,Parameter_Type = "TransGalMeg_HQ"
+									,Parameter_Type = "Hoersch_Kessel_HQ"
+									,Parameter_Type = "Galentro_HQ"
+									,Parameter_Type = "Mekuun_HQ"
+									,Parameter_Type = "NenCarvon_HQ"
+									,Parameter_Type = "Uulshos_HQ"
+									,Parameter_Only_Consider_Complete = 1.0
+									}
+	</Planet_Has_Company>
 	
 	<Planet_Ownership>
 		Variable_Self.PlanetsControlledUnnormalized
@@ -163,4 +214,49 @@
 		Variable_Target.MaxStructureSlotsUnnormalized
 	</MaxGroundbaseLevel>
 	
+	<Open_Ground_Structure_Slots>
+		Variable_Target.OpenStructureSlotsUnnormalized
+	</Open_Ground_Structure_Slots>
+	
+	<Self_Present>
+		Variable_Target.IsFaction {Parameter_Faction = "Empire"} *
+		Variable_Self.IsFaction {Parameter_Faction = "Empire"}
+		+
+		Variable_Target.IsFaction {Parameter_Faction = "Rebel"} *
+		Variable_Self.IsFaction {Parameter_Faction = "Rebel"}
+		+
+		Variable_Target.IsFaction {Parameter_Faction = "Underworld"} *
+		Variable_Self.IsFaction {Parameter_Faction = "Underworld"}
+		+
+		Variable_Target.IsFaction {Parameter_Faction = "Pirates"} *
+		Variable_Self.IsFaction {Parameter_Faction = "Pirates"}	
+		+
+		Variable_Target.IsFaction {Parameter_Faction = "Hutts"} *
+		Variable_Self.IsFaction {Parameter_Faction = "Hutts"}
+		+
+		Variable_Target.IsFaction {Parameter_Faction = "Pentastar"} *
+		Variable_Self.IsFaction {Parameter_Faction = "Pentastar"}	
+		+
+		Variable_Target.IsFaction {Parameter_Faction = "Teradoc"} *
+		Variable_Self.IsFaction {Parameter_Faction = "Teradoc"}	
+		+
+		Variable_Target.IsFaction {Parameter_Faction = "Hutt_Cartels"} *
+		Variable_Self.IsFaction {Parameter_Faction = "Hutt_Cartels"}	
+		+
+		Variable_Target.IsFaction {Parameter_Faction = "SsiRuuvi_Imperium"} *
+		Variable_Self.IsFaction {Parameter_Faction = "SsiRuuvi_Imperium"}			
+		+
+		Variable_Target.IsFaction {Parameter_Faction = "Corporate_Sector"} *
+		Variable_Self.IsFaction {Parameter_Faction = "Corporate_Sector"}
+	</Self_Present>
+	
+	
+	<Recent_Conflict_Space>
+		(1.0 - (Variable_Target.TimeSinceSpaceConflict > 120.0)) * (120.0 - Variable_Target.TimeSinceSpaceConflict) / 120.0
+	</Recent_Conflict_Space>
+	
+	
+	<Recent_Conflict_Ground>
+		(1.0 - (Variable_Target.TimeSinceGroundConflict > 120.0)) * (120.0 - Variable_Target.TimeSinceGroundConflict) / 120.0
+	</Recent_Conflict_Ground>
 </Equations>

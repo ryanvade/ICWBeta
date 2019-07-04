@@ -39,7 +39,7 @@
 --
 --/////////////////////////////////////////////////////////////////////////////////////////////////
 
-require("pgcommands")
+require("pgevents")
 require("TRTacticalFreeStore")
 
 function Base_Definitions()
@@ -53,7 +53,9 @@ function Base_Definitions()
         Definitions()
     end
 
-    FREE_STORE_ATTACK_RANGE = 300.0
+    FREE_STORE_ATTACK_RANGE = 600.0
+	
+	aggressive_mode = false
 end
 
 function main()
@@ -82,7 +84,13 @@ end
 function FreeStoreService()
     enemy_location = FindTarget.Reachable_Target(PlayerObject, "Current_Enemy_Location", "Tactical_Location", "Any_Threat", 0.5)
     friendly_location = FindTarget.Reachable_Target(PlayerObject, "Current_Friendly_Location", "Tactical_Location", "Any_Threat", 0.5)
-    aggressive_mode = (EvaluatePerception("Allowed_As_Defender_Land", PlayerObject) > 0.0)
+   
+	aggressive_mode = false
+	
+	if (EvaluatePerception("Allowed_As_Defender_Land", PlayerObject) > 0.0) then
+		DebugMessage("%s -- Aggressive mode activated", tostring(Script))
+		aggressive_mode = true
+	end
 
 end
 
@@ -106,14 +114,15 @@ function On_Unit_Service(object)
         if Service_Kite(object) then
             return
         end
+		
+		if Should_Crush(object, current_target) then
+			return
+		end
 
         Try_Weapon_Switch(object, current_target)
     end
 
     if not object.Has_Active_Orders() then
-
-        --Keep bored objects mobile
-        object.Activate_Ability("SPOILER_LOCK", true)
 
         if Service_Kite(object) then
             return
@@ -188,24 +197,37 @@ function Service_Garrison(object)
             lib_garrison_needs_heals = true
             lib_garrison_healer = Find_Nearest(object, "HealsInfantry", object.Get_Owner(), true)
             lib_garrison_enemy = Find_Nearest(object, object.Get_Owner(), false)
+			lib_eject_before_destroyed = (object.Get_Hull() < 0.2)
             lib_eject_for_heal = TestValid(lib_garrison_healer) and (object.Get_Distance(lib_garrison_healer) < 150)
             lib_eject_for_attack = (not object.Has_Property("GarrisonCanFire")) and TestValid(lib_garrison_enemy) and (object.Get_Distance(lib_garrison_enemy) < FREE_STORE_ATTACK_RANGE)
+			lib_eject_for_capture = (not object.Has_Property("GarrisonCanFire")) and TestValid(lib_garrison_capture) and (object.Get_Distance(lib_garrison_capture) < 150)
 
             for i,garrison in pairs(lib_garrison_table) do
-                if garrison.Get_Hull() > 0.4 then
-                    lib_garrison_needs_heals = false
-                    if lib_eject_for_attack and garrison.Is_Good_Against(lib_garrison_enemy) then
-                        garrison.Leave_Garrison()
-                    end
-                elseif lib_eject_for_heal then
-                    garrison.Leave_Garrison()
-                end
-            end
-
-            if lib_garrison_needs_heals and TestValid(lib_garrison_healer) then
-                object.Move_To(lib_garrison_healer)
-                return true
-            end
+				if lib_eject_before_destroyed then
+					garrison.Leave_Garrison()
+				end
+			
+				if garrison.Get_Hull() > 0.4 then
+					lib_garrison_needs_heals = false
+					if lib_eject_for_attack then
+						garrison.Leave_Garrison()
+					elseif lib_eject_for_capture then
+						garrison.Leave_Garrison()
+					end
+				elseif lib_eject_for_heal then
+					garrison.Leave_Garrison()
+				end
+			end
+			
+			if TestValid(lib_garrison_capture) then
+				object.Move_To(lib_garrison_capture)
+				return true
+			end
+			
+			if lib_garrison_needs_heals and TestValid(lib_garrison_healer) then
+				object.Move_To(lib_garrison_healer)
+				return true
+			end
 
         end
     end
@@ -246,24 +268,26 @@ function Service_Guard(object)
         return true
     end
 
-    closest_friendly_structure = Find_Nearest(object, "Structure", object.Get_Owner(), true)
-    if TestValid(closest_friendly_structure) then
-        object.Guard_Target(closest_friendly_structure)
-        return true
-    elseif TestValid(friendly_location) then
-        object.Attack_Move(friendly_location)
-        return true
+    friendly_structures = Find_All_Objects_Of_Type("Structure", object.Get_Owner())
+	
+	if aggressive_mode and TestValid(enemy_location) then
+		object.Attack_Move(enemy_location)
+		return true
 	end
 	
-    if Get_Game_Mode() == "Space" then
-		space_station = object.Get_Owner().Get_Space_Station()
-		if TestValid(space_station) then
-			object.Guard_Target(space_station)
-			return true
-		end
-    end
+	if TestValid(friendly_location) then
+		object.Attack_Move(friendly_location)
+		return true	
+	elseif friendly_structures then
+		for i,structure in pairs(friendly_structures) do
+			object.Attack_Move(structure.Get_Position())
+		end	
+	elseif TestValid(enemy_location) then
+		object.Attack_Move(enemy_location)
+		return true
+	end
 
-    return false
+	return false
 end
 
 function Service_Kite(object)

@@ -45,20 +45,22 @@ function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
 	AllowEngagedUnits = false
-	MaxContrastScale = 2.0
+	MinContrastScale = 0.1
+	MaxContrastScale = 3.0
 	Category = "Destroy_Unit"
 	TaskForce = {
 	{
-		"MainForce"						
-		,"Fighter = 0, 2" -- don't take too many fighters because we allow engaged units
-		,"Fighter | Frigate | Capital | SuperCapital | SpaceHero = 1, 20"
+		"MainForce"
+		,"MinimumTotalSize = 1"
+		,"Corvette|Frigate|Capital|SuperCapital|SpaceHero = 100%"
+	},
+	{
+		"EscortForce"
+		,"Fighter|Bomber| = 0, 10" -- don't take too many fighters because we allow engaged units"}}
+		,"Corvette|Frigate = 0, 10"
 	}
 	}
 	
-	ChangedTarget = false
-	AttackingShields = false
-	DropCurrentTarget = false
-
 	kill_target = nil
 
 	DebugMessage("%s -- Done Definitions", tostring(Script))
@@ -69,24 +71,22 @@ function MainForce_Thread()
 
 	BlockOnCommand(MainForce.Produce_Force())
 	
+	unit_table = MainForce.Get_Unit_Table()
+	
+	for i,unit in pairs(unit_table) do
+		if unit.Has_Property("Carrier") then
+			MainForce.Release_Unit(unit)
+		end
+	end
+	
 	QuickReinforce(PlayerObject, AITarget, MainForce)
+	
+	TaskForce_Attack_Move(MainForce, PlayerObject, AITarget)
 	
 	MainForce.Enable_Attack_Positioning(true)
 	DebugMessage("MainForce constructed at stage area!")
 	
 	SetClassPriorities(MainForce, "Attack_Move")
-	
-	closest_enemy = Find_Nearest(MainForce, "Corvette | Frigate | Capital | SuperCapital | SpaceHero | Structure", PlayerObject, false)
-	
-	while TestValid(closest_enemy) do
-		if MainForce.Get_Distance(closest_enemy) < MainForce.Get_Distance(AITarget) then
-			BlockOnCommand(MainForce.Attack_Target(closest_enemy, MainForce.Get_Self_Threat_Max()))
-		else
-			break
-		end
-		Sleep(5)
-		closest_enemy = Find_Nearest(MainForce, "Corvette | Frigate | Capital | SuperCapital | SpaceHero | Structure", PlayerObject, false)
-	end
 
 	DebugMessage("%s -- Attack-moving to %s", tostring(Script), tostring (AITarget))
 	BlockOnCommand(MainForce.Attack_Move(AITarget, MainForce.Get_Self_Threat_Max()))
@@ -109,4 +109,16 @@ function MainForce_Unit_Move_Finished(tf, unit)
 	else
 		unit.Attack_Move(tf)
 	end
+end
+
+function EscortForce_Thread()
+   BlockOnCommand(EscortForce.Produce_Force())
+   
+   QuickReinforce(PlayerObject, AITarget, EscortForce, MainForce)
+   
+   EscortForce.Guard_Target(MainForce)
+   EscortAlive = true
+   while EscortAlive do
+      Escort(EscortForce, MainForce)
+   end
 end

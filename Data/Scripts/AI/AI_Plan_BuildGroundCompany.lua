@@ -8,7 +8,7 @@ function Definitions()
 	TaskForce = {
 	{
 		"StructureForce",
-		"Damorian_HQ | Sienar_HQ | KDY_HQ | KDY_Branch | MCS_HQ | SFS_HQ | Tarkin_Estates | Loronar_HQ | Arakyd_HQ | Rendili_HQ | Incom_HQ | Sorosuub_HQ | REC_HQ | CEC_HQ | Koensayr_HQ | Yutrane_Trackata_HQ | Olanji_Charubah_HQ | TaggeCo_HQ | Aratech_HQ = 1"
+		"Damorian_HQ | Sienar_HQ | KDY_HQ | KDY_Branch | MCS_HQ | SFS_HQ | Tarkin_Estates | Loronar_HQ | Arakyd_HQ | Rendili_HQ | Incom_HQ | Sorosuub_HQ | REC_HQ | CEC_HQ | Koensayr_HQ | Yutrane_Trackata_HQ | Olanji_Charubah_HQ | TaggeCo_HQ | Aratech_HQ | TransGalMeg_HQ | Hoersch_Kessel_HQ | Galentro_HQ | Mekuun_HQ | NenCarvon_HQ | Uulshos_HQ = 1"
 	}
 	}
 

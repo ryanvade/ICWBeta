@@ -45,6 +45,23 @@
 
 require("PGTaskForce")
 
+function TaskForce_Attack_Move(tf, player, target)
+	DebugMessage("%s -- Attack-moving to %s", tostring(Script), tostring (target))
+
+	closest_enemy = Find_Nearest(tf, "Corvette|Frigate|Capital|SuperCapital|SpaceStructure", player, false)
+	
+	while TestValid(closest_enemy) do
+		if tf.Get_Distance(closest_enemy) < tf.Get_Distance(target) then
+			BlockOnCommand(tf.Attack_Target(closest_enemy, tf.Get_Self_Threat_Max()))
+		else
+			break
+		end
+		
+		Sleep(5)
+		closest_enemy = Find_Nearest(tf, "Corvette|Frigate|Capital|SuperCapital|SpaceStructure", player, false)
+	end
+end
+
 function GoHeal(tf, unit, healer, release)
 	
 	--If we can lay proximity mines, do so and then rely on a further call to kite the enemy over them
@@ -76,6 +93,15 @@ function GoHeal(tf, unit, healer, release)
 end
 
 function GoKite(tf, unit, kite_pos, release)
+
+	deadly_enemy = FindDeadlyEnemy(unit)
+	if TestValid(deadly_enemy) then
+		if not deadly_enemy.Is_Category("SpaceStructure") or not deadly_enemy.Is_Category("Structure") then
+			if unit.Is_Category("Capital") or unit.Is_Category("SuperCapital") then
+				return
+			end
+		end
+	end
 	
 	--If we can lay proximity mines, do so and then rely on a further call to kite the enemy over them
 	--Add a random factor here since proximity mines currently have no cooldown and so we'll never run
@@ -239,14 +265,17 @@ function Default_Unit_Damaged(tf, unit, attacker, deliberate)
 	if not TestValid(unit) or not TestValid(attacker) or attacker.Is_Category("Structure") then
 		return
 	end
+	
+	if unit.Is_Under_Effects_Of_Ability("TRACTOR_BEAM") then
+		--turning away won't help
+		unit.Attack_Target(attacker)
+		tf.Release_Unit(unit)
+		return
+	end
 
 	lib_issued_movement_response = false
 	
-	-- all units but Interdictors try to maneuver against artillery and turbolasers
-	-- Interdictors should use missile shield instead
-    if unit.Get_Type() ~= Find_Object_Type("Generic_Interdictor_Cruiser") then
-		lib_issued_movement_response = Respond_To_MinRange_Attacks(tf, unit)
-	end
+	lib_issued_movement_response = Respond_To_MinRange_Attacks(tf, unit)
 		
 	if Should_Crush(unit, attacker) then
 		unit.Divert(Project_By_Unit_Range(unit, attacker))
@@ -390,6 +419,11 @@ function Default_Current_Target_Destroyed(tf)
 	-- Turn off some unending abilities that might no longer be appropriate
 	tf.Activate_Ability("SPREAD_OUT", false)
 
+	kill_target = FindDeadlyEnemy(tf)
+	if TestValid(kill_target) then
+		tf.Attack_Target(kill_target)
+	end
+	
 	--ScriptExit() Some plans now have behaviors to occur after this event.
 end
 
@@ -423,7 +457,7 @@ function Should_Crush(unit, target)
 	if	unit.Has_Property("GoodInfantryCrusher") and target.Is_Category("Infantry") then
 		if target.Is_Ability_Active("SPREAD_OUT") then
 			return true
-		elseif GameRandom.Get_Float() > 0.8 then
+		elseif 0.8 > GameRandom.Get_Float() then
 			return true
 		end
 	end

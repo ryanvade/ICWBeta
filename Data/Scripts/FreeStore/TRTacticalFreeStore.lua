@@ -87,7 +87,7 @@ function AttackNearestWhenInRange(object, category, range)
     end
 
     if object.Get_Distance(target) <= range then
-        object.Attack_Move(target)
+        object.Attack_Target(target)
         return true
     end
 

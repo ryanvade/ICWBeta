@@ -37,7 +37,6 @@ function Definitions()
     Eriadu_Elrood = Elrood_Eriadu,
 	Zsinj_Centares = Centares_Zsinj,
     Set_Subera_Isard = SubEra_Change,
-	Zero_Command_Split = Spawn_Harrsk,
 	E_Level_Two = ThrawnSpawns,
     E_Level_Three = DarkEmpireSpawns,
     E_Level_Four = DaalaSpawns,

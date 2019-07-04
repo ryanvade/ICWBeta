@@ -2,27 +2,15 @@
 
 <Equations>
 
-	<!--
-	Do we have some structure here already
-	AND
-	Are we not maxed out
-	SCALE UP BY
-		Chokepoint status
-		Income
-		Distance from max potential base level
-		Need to reduce maintaince tax
-	-->
-	
-	<!-- Added extra test to prevent overbuilding on planets with potential for a company -->
 	<Needs_Groundbase_Upgrade>
 		(Variable_Target.GroundbaseLevel > 0.0)
 		*
-		(Variable_Target.MaxGroundbaseLevel != Variable_Target.GroundbaseLevel)
+		(Function_Open_Ground_Structure_Slots.Evaluate > 0)
 		*
 		(
 			4.0 * (Variable_Target.Hints.Chokepoint)
 			+
-			2.0 * Variable_Target.BaseIncomeNBTP
+			2.0 * Function_GenericPlanetValue.Evaluate
 			+
 			1.0 * (Variable_Target.MaxGroundbaseLevel - Variable_Target.GroundbaseLevel)
 			+
@@ -35,63 +23,39 @@
 	
 	<!-- Returns 0 to turn off production if slots need to be saved for a company. Returns 1 otherwise -->
 	<Needs_Build_Slots_Saved_For_Company>
-		(Variable_Target.MaxGroundbaseLevelUnnormalized - Variable_Target.GroundbaseLevelUnnormalized - Function_Is_Company_Planet.Evaluate) > 0.0
+		((Function_Open_Ground_Structure_Slots.Evaluate - Function_Is_Company_Planet.Evaluate) > 0)
+		*
+		(1 - Function_Planet_Has_Company.Evaluate)
+		+
+		Function_Planet_Has_Company.Evaluate
 	</Needs_Build_Slots_Saved_For_Company>
 
-	<!--
-	Bring this into line with ground base component building (since they share the infrastructure category)
-	AND
-	Do we already have an initial base (handled by another goal)
-	AND
-	Zero out desire when defending the home planet (template change isn't enough)
-	AND
-	Are we not already maxed out
-	AND
-	Scale by relative economic worth
-	AND EITHER
-		lift a tech upgrade purchase dependency OR offensive space production dependency
-		if this is a location with a ground research facility
-		OR
-		If we're badly blocked on space production
-		OR
-		If we don't need a tech upgrade dependency lifted, scale desire by:
-			if this is a chokepoint planet
-			by likely purchase needs (high tech can only be bought at high level bases)
-			by how far we are from maxing out base upgrades
 
-
-	UNUSED:
-         Require the starbase upgrade boost for unblocking tech to be on the highest level system.
-			*
-			(Variable_Target.StarbaseLevelUnnormalized == Variable_Self.MaxStarbaseLevelUnnormalized)
-
-      -->
 	<Needs_Starbase_Upgrade>
-		(Variable_Target.StarbaseLevel > 0.0)
+		(Variable_Target.MaxStarbaseLevel > Variable_Target.StarbaseLevel)
 		*
-		(Variable_Target.MaxStarbaseLevel != Variable_Target.StarbaseLevel)
-		*
-		(1 + (Variable_Target.MaxGroundbaseLevel > Variable_Target.StarbaseLevel) + (Variable_Target.MaxStarbaseLevel >= Variable_Target.MaxGroundbaseLevel))
+		(Variable_Target.EnemyForce.HasSpaceForce == 0)
 		*
 		(
-			(
-				4.0 * (Variable_Target.Hints.Chokepoint + Function_Is_Connected_To_Enemy.Evaluate + Function_Has_Capital_Building.Evaluate + Function_Is_Company_Planet.Evaluate)
-				+
-				Function_Needs_Better_Buying_Capability_Space.Evaluate
-				+
-				0.5
-			)
+			1.25 * (Variable_Target.MaxStarbaseLevelUnnormalized - Variable_Target.StarbaseLevelUnnormalized) / clamp(Variable_Target.MaxStarbaseLevelUnnormalized, 1, 5)
+			+
+			0.25 * (Variable_Target.MaxStarbaseLevelUnnormalized - Variable_Target.StarbaseLevelUnnormalized)
+			+
+			2.0 * Function_Is_Connected_to_Enemy.Evaluate
+			+
+			Function_GenericPlanetValue.Evaluate
+			+
+			Variable_Target.Hints.Chokepoint 
+			+ 
+			2.0 * Function_Has_Capital_Building.Evaluate 
+			+ 
+			Function_Is_Company_Planet.Evaluate
+			+
+			Function_Needs_Better_Buying_Capability_Space.Evaluate
 		)
 	</Needs_Starbase_Upgrade>
 
-	<!-- Determine if this target planet needs to better assist production.
-
-	If we prefer having a higher ratio of level X starbases to this many planets controlled,
-	AND
-	This planet is level X-1
-	OR
-	...
-	-->
+	
 	<Needs_Better_Buying_Capability_Space>
 		6 * ((0.5 - (Variable_Self.NumStarbaseOfLevel {Parameter_Level = 2} / Variable_Self.PlanetsControlledUnnormalized)) > 0) *
 		(Variable_Target.StarbaseLevelUnnormalized == 1.0)
@@ -100,10 +64,7 @@
 		(Variable_Target.StarbaseLevelUnnormalized == 2.0)
 	</Needs_Better_Buying_Capability_Space>
 
-	<!-- SCALE DOWN as we improve to the desired ratio of structures per planet
-	PLUS
-	Boost if we need to upgrade the base
-	-->
+
 	<Need_Light_Vehicle_Factory>
 		20 * clamp(0.4 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
 													Parameter_Type = "A_Ground_Light_Vehicle_Factory",
@@ -115,20 +76,9 @@
 													Parameter_Only_Consider_Complete = 1.0} /
 													Variable_Self.PlanetsControlledUnnormalized), 0.1, 0.4)
 		*
-		(
-			Function_Needs_Groundbase_Upgrade.Evaluate
-			+
-			(3.0 * Variable_Target.StructureCount {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
-													Parameter_Type = "A_Ground_Light_Vehicle_Factory",
-													Parameter_Type = "T_Ground_Light_Vehicle_Factory",
-													Parameter_Type = "Z_Ground_Light_Vehicle_Factory",
-													Parameter_Type = "R_Ground_Light_Vehicle_Factory",
-													Parameter_Type = "C_Ground_Light_Vehicle_Factory",
-													Parameter_Type = "P_Ground_Light_Vehicle_Factory",
-													Parameter_Only_Consider_Complete = 1.0})
-		)
+		Function_Needs_Groundbase_Upgrade.Evaluate
 		*
-		(3 > Variable_Target.StructureCount {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
+		(1 > Variable_Target.StructureCount {Parameter_Type = "E_Ground_Light_Vehicle_Factory",
 													Parameter_Type = "R_Ground_Light_Vehicle_Factory",
 													Parameter_Type = "A_Ground_Light_Vehicle_Factory",
 													Parameter_Type = "T_Ground_Light_Vehicle_Factory",
@@ -142,7 +92,7 @@
 		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Need_Light_Vehicle_Factory>
 
-	<!-- Same kind of deal as vehicle factory -->
+	
 	<Need_Barracks>
 		20 * clamp(0.25 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Barracks",
 														Parameter_Type = "A_Ground_Barracks",
@@ -151,21 +101,11 @@
 														Parameter_Type = "R_Ground_Barracks",
 														Parameter_Type = "P_Ground_Barracks",
 														Parameter_Only_Consider_Complete = 1.0} /
-														Variable_Self.PlanetsControlledUnnormalized), 0.1, 0.25)
+														Variable_Self.PlanetsControlledUnnormalized), 0.01, 0.25)
 		*
-		(
-			Function_Needs_Groundbase_Upgrade.Evaluate
-			+
-			(3.0 * Variable_Target.StructureCount {Parameter_Type = "E_Ground_Barracks",
-													Parameter_Type = "A_Ground_Barracks",
-													Parameter_Type = "T_Ground_Barracks",
-													Parameter_Type = "Z_Ground_Barracks",
-													Parameter_Type = "R_Ground_Barracks",
-													Parameter_Type = "P_Ground_Barracks",
-													Parameter_Only_Consider_Complete = 1.0})
-		)
+		Function_Needs_Groundbase_Upgrade.Evaluate
 		*
-		(2 > Variable_Target.StructureCount {Parameter_Type = "E_Ground_Barracks",
+		(1 > Variable_Target.StructureCount {Parameter_Type = "E_Ground_Barracks",
 													Parameter_Type = "A_Ground_Barracks",
 													Parameter_Type = "T_Ground_Barracks",
 													Parameter_Type = "Z_Ground_Barracks",
@@ -178,12 +118,7 @@
 		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Need_Barracks>
 
-	<!-- SCALE DOWN as we improve to the desired ratio of structures per planet
-	PLUS
-	Boost if we need to upgrade the base
-	PLUS
-	Bonus for stacking
-	-->
+
 	<Need_Heavy_Vehicle_Factory>
 		(
 			20 * clamp(0.4 - (Variable_Self.StructureCount {Parameter_Type = "E_Ground_Heavy_Vehicle_Factory",
@@ -229,13 +164,7 @@
 										Parameter_Only_Consider_Complete = 1.0}
 	</Need_Heavy_Vehicle_Factory>
 
-	<!-- Provided we're the Empire faction
-	SCALE DOWN as we improve to the desired ratio of structures per planet
-	PLUS
-	Boost if we need to upgrade the base
-	PLUS
-	Bonus for stacking
-	-->
+	
 	<Need_Advanced_Vehicle_Factory>
 		Variable_Self.IsFaction {Parameter_Faction = "Empire", 
 								Parameter_Faction = "Hutts", 
@@ -290,28 +219,9 @@
 													Parameter_Only_Consider_Complete = 1.0}
 	</Need_Advanced_Vehicle_Factory>
 
-	<!-- Does this planet have a starbase already? -->
-	<Needs_Initial_Starbase>
-		50.0 *
-		(1.0 - clamp(Variable_Self.PlanetsControlled - 0.33, 0.0, 1.0)) *
-		(Variable_Target.StarbaseLevel == 0.0) *
-		(Variable_Target.MaxStarbaseLevel > 0.0) *
-        (Variable_Target.EnemyForce.HasSpaceForce == 0)
-	</Needs_Initial_Starbase>
 
-	<!-- Does this planet have a groundbase already?  This now builds a barracks.
-	High base desire
-	AND
-	Only needed if we don't yet have a groundbase
-	AND
-	Only needed if we can build a groundbase
-	AND
-	Wait until the starbase has been built, if one can be
-	-->
 	<Needs_Initial_Groundbase>
 		50.0
-		*
-		(1.0 - clamp(Variable_Self.PlanetsControlled - 0.33, 0.0, 1.0))
 		*
 		((Variable_Target.MaxGroundbaseLevelUnnormalized - Variable_Target.GroundBaseLevelUnnormalized) > 1)
 		*
@@ -331,15 +241,7 @@
 		((Variable_Target.StarbaseLevel > 0) + (Variable_Target.MaxStarbaseLevel == 0.0) + Variable_Self.IsFaction{ Parameter_Faction = "Hostile"})
 	</Needs_Initial_Groundbase>
 
-	<!-- Desire to build a mine.
-		desirability is like arenas
-		PLUS
-		bonus for stacking mining facilities (effects are cumulative)
-		AND
-		Maximum four per planet
-		AND
-		Must have basic build facilities first
-		-->
+
 	<Needs_Mining_Facility>
 		(
 			10.0 * Variable_Target.BaseIncome
@@ -377,6 +279,7 @@
 		*
 		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Needs_Mining_Facility>
+
 	
 	<Needs_Tradestation>
 		(
@@ -398,21 +301,7 @@
 		(15 > Variable_Self.StructureCount {Parameter_Type = "Generic_Tradestation", Parameter_Only_Consider_Complete = 1.0})
 	</Needs_Tradestation>
 
-	<!--
-		are we Rebels?
-		AND
-		Is the system reasonably defended
-		AND
-		make sure it's not a chokepoint system (would waste a slot there)
-		AND
-		scale by how many open slots we have
-		AND
-		We can't really use more than 2 total of this structure
-		AND
-		Have we already addressed production bottleneck issues
-		AND
-		Big Bonus if we have no structure of this type yet
-		-->
+
 	<Needs_Ground_Infiltrator_Facility>
 		(
 			5.0
@@ -420,11 +309,9 @@
 			(Variable_Self.IsFaction {Parameter_Faction = "Rebel"})
 			*
 			Function_Defense_Level.Evaluate
-			+
-			5.0 * Variable_Target.HasStructure {Parameter_Type = "Ground_Infiltrator_Facility"}
 		)
 		*
-		(2.0 > Variable_Target.StructureCount {Parameter_Type = "Ground_Infiltrator_Facility", Parameter_Only_Consider_Complete = 1.0})
+		(1 > Variable_Target.StructureCount {Parameter_Type = "Ground_Infiltrator_Facility", Parameter_Only_Consider_Complete = 1.0})
 		*
 		(0.1 > (Variable_Self.StructureCount {Parameter_Type = "Ground_Infiltrator_Facility", Parameter_Only_Consider_Complete = 1.0} / Variable_Self.PlanetsControlledUnnormalized))
 		*
@@ -435,6 +322,7 @@
 		Function_Needs_Build_Slots_Saved_For_Company.Evaluate
 	</Needs_Ground_Infiltrator_Facility>
 
+	
 	<Should_Save_For_Desirable_Structures>
 		(Variable_Target.GroundBaseLevelUnnormalized > 1.0)
 		*
@@ -451,6 +339,7 @@
 		)
 	</Should_Save_For_Desirable_Structures>
 
+	
 	<Num_Planets_Controlled>
 		Variable_Self.PlanetsControlledUnnormalized
 	</Num_Planets_Controlled>
@@ -471,19 +360,32 @@
 		Variable_Target.StarbaseLevel > 0
 	</Has_Starbase>
 
+	
 	<Need_Ground_Company>
-		(Variable_Target.StarbaseLevelUnnormalized > 1)
+		(Variable_Target.StarbaseLevelUnnormalized > 0)
 		*
 		clamp(Function_Defense_Level.Evaluate, 1.0, 2.0)
 		*
 		Function_Is_Company_Planet.Evaluate
+		*
+		(1 - Function_Planet_Has_Company.Evaluate)
 	</Need_Ground_Company>
+	
 	
 	<Need_Space_Company>
 		(Variable_Target.StarbaseLevelUnnormalized > 1)
 		*
 		Function_Is_Company_Planet.Evaluate
+		*
+		(
+		1 - (
+			Function_Planet_Has_Slayn_Korpil.Evaluate
+			+
+			Function_Planet_Has_Rancor_Base.Evaluate
+			)
+		)
 	</Need_Space_Company>
+	
 	
 	<Need_Capital_Building>
 		10
@@ -498,6 +400,7 @@
 		*
 		(1.1 - clamp(Function_Is_Connected_To_Enemy.Evaluate, 0.0, 1.0))
 	</Need_Capital_Building>
+	
 	
 	<Has_Capital_Building>
 				(Variable_Self.HasStructure{Parameter_Type = "Remnant_Capital"} * Variable_Self.IsFaction{Parameter_Faction = "Empire"})
@@ -516,6 +419,7 @@
 				+
 				(Variable_Self.HasStructure{Parameter_Type = "U_Ground_Palace"} * Variable_Self.IsFaction{Parameter_Faction = "Underworld"})
 	</Has_Capital_Building>
+	
 	
 	<Planet_Has_Capital_Building>
 				Variable_Target.HasStructure{Parameter_Type = "Remnant_Capital"}
