@@ -72,7 +72,7 @@ function MainForce_Thread()
 	MainForce.Set_Plan_Result(true)	
 	
 	if MainForce.Are_All_Units_On_Free_Store() == true then
-		AssembleForce(MainForce, true)
+		AssembleForce(MainForce)
 	else
 		BlockOnCommand(MainForce.Produce_Force());
 		return

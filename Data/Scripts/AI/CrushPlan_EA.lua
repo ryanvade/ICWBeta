@@ -130,7 +130,7 @@ function GroundForce_Thread()
 	GroundForce.Set_Plan_Result(true)	
 	
 	if GroundForce.Are_All_Units_On_Free_Store() == true then
-		AssembleForce(GroundForce, true)
+		AssembleForce(GroundForce)
 	else
 		BlockOnCommand(GroundForce.Produce_Force());
 		return

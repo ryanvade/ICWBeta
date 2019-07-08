@@ -37,6 +37,7 @@ function Definitions()
     Eriadu_Elrood = Elrood_Eriadu,
 	Zsinj_Centares = Centares_Zsinj,
     Set_Subera_Isard = SubEra_Change,
+	Zero_Command_Split = Spawn_Harrsk,
 	E_Level_Two = ThrawnSpawns,
     E_Level_Three = DarkEmpireSpawns,
     E_Level_Four = DaalaSpawns,
@@ -197,8 +198,8 @@ function Determine_Start_Era(message)
 			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
 		end
 		if start_planet then
-			spawn_list_Palpatine = { "Cilghal_Team" }
-			SpawnList(spawn_list_Palpatine, start_planet, p_newrep, true, false)
+			spawn_list_Daala = { "Cilghal_Team" }
+			SpawnList(spawn_list_Daala, start_planet, p_newrep, true, false)
 		end
 		
 		start_planet = FindPlanet("Coruscant")
@@ -206,8 +207,8 @@ function Determine_Start_Era(message)
 			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
 		end
 		if start_planet then
-			spawn_list_Thrawn = { "Bell_Endurance" }
-			SpawnList(spawn_list_Palpatine, start_planet, p_newrep, true, false)
+			spawn_list_Daala = { "Bell_Endurance" }
+			SpawnList(spawn_list_Daala, start_planet, p_newrep, true, false)
 		end
 		
 		checkAckbar = Find_First_Object("Home_One")
@@ -234,7 +235,7 @@ function Determine_Start_Era(message)
 			RegicideObject.Despawn()
 		end
 		
-		start_planet = FindPlanet("Coruscant")
+		start_planet = FindPlanet("Bastion")
 		if start_planet.Get_Owner() ~= Find_Player("Empire") then
 			start_planet = TRUtil.FindFriendlyPlanet(p_empire)
 		end

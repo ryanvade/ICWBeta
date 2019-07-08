@@ -385,10 +385,9 @@
 					((3.0 * Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Transport]}) >= Variable_Self.FriendlyForceUnnormalized)
 					+
 					(Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Transport]} >= 50) *
-					(1000 >= Variable_Self.FriendlyForceUnnormalized) *
 					(Variable_Enemy.FriendlyForceUnnormalized > Variable_Self.FriendlyForceUnnormalized)
 					+
-					(Variable_Self.IsDefender) *
+					2.0 * (Variable_Self.IsDefender) *
 					(Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Transport]} >= 150)
 					-
 					(Variable_Self.IsDefender) *

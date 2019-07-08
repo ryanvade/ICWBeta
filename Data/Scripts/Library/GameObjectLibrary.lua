@@ -2422,7 +2422,31 @@ GameObjectLibrary = {
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
-                    ["DEFAULT"] = {
+                    ["EMPIRE"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["TERADOC"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["HUTTS"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["PIRATES"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["HOSTILE"] = {
                         Reserve=0,
                         Initial=2
                     }
@@ -2480,7 +2504,37 @@ GameObjectLibrary = {
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
-                    ["DEFAULT"] = {
+                    ["EMPIRE"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["TERADOC"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["HUTTS"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["PIRATES"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=2
+                    }
+                },
+			    ["T-WING_SQUADRON"]={
+                    ["CORPORATE_SECTOR"] = {
                         Reserve=0,
                         Initial=2
                     }
@@ -2494,7 +2548,31 @@ GameObjectLibrary = {
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
-                    ["DEFAULT"] = {
+                    ["EMPIRE"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["TERADOC"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["HUTTS"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["PIRATES"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["HOSTILE"] = {
                         Reserve=0,
                         Initial=2
                     }
@@ -3196,7 +3274,37 @@ GameObjectLibrary = {
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
-                    ["DEFAULT"] = {
+                    ["EMPIRE"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["TERADOC"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["HUTTS"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["PIRATES"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["HOSTILE"] = {
+                        Reserve=0,
+                        Initial=2
+                    }
+                },
+			    ["T-WING_SQUADRON"]={
+                    ["CORPORATE_SECTOR"] = {
                         Reserve=0,
                         Initial=2
                     }
@@ -4592,7 +4700,31 @@ GameObjectLibrary = {
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
-                    ["DEFAULT"] = {
+                    ["EMPIRE"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["TERADOC"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["HUTTS"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["PIRATES"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["WARLORDS"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
+					["HOSTILE"] = {
                         Reserve=0,
                         Initial=2
                     }

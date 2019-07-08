@@ -52,8 +52,8 @@ function Base_Definitions()
 	Common_Base_Definitions()
 	
 	-- Percentage of units to move on each service.
-	SpaceMovePercent = 0.5
-	GroundMovePercent = 0.25
+	SpaceMovePercent = 0.1
+	GroundMovePercent = 0.1
 
 	if Definitions then
 		Definitions()
@@ -104,6 +104,7 @@ function On_Unit_Service(object)
 	-- If this unit isn't in a safe spot move him regardless of the MovedUnitsThisService
 	-- Also, Heroes need to be where they most want to be asap
 	if (FreeStore.Is_Unit_Safe(object) == false) or (object.Get_Type().Is_Hero()) then
+		DebugMessage("%s -- Object: %s emergency move order issued", tostring(Script), tostring(object))
 		MoveUnit(object)
 		return
 	end
@@ -193,10 +194,11 @@ function Find_Ground_Unit_Target(object)
 	end
 
 	if FreeStore.Is_Unit_Safe(object) == false then
+		DebugMessage("%s -- Object: %s Planet: %s is not safe", tostring(Script), tostring(object), tostring(my_planet))
 		my_planet = nil
 	end	
 	
-	max_force_target = 4000
+	max_force_target = 2500
 	force_target = EvaluatePerception("Friendly_Global_Land_Unit_Raw_Total", PlayerObject)
 	if not force_target then
 		return nil
@@ -213,16 +215,18 @@ function Find_Ground_Unit_Target(object)
 		
 	if priority_planet then
 		if priority_planet == my_planet then
+			DebugMessage("%s -- Object: %s, current planet %s is already priority.", tostring(Script), tostring(object), tostring(my_planet))
 			return nil
 		elseif priority_planet.Get_Is_Planet_AI_Usable() and object.Can_Land_On_Planet(priority_planet)	then
 			if EvaluatePerception("Friendly_Land_Unit_Raw_Total", PlayerObject, priority_planet) < force_target then
+				DebugMessage("%s -- Object: %s, moving to priority planet %s.", tostring(Script), tostring(object), tostring(priority_planet))
 				return priority_planet
 			end
 		end
 	end
 	
 	if my_planet and EvaluatePerception("Low_Ground_Defense_Score", PlayerObject, my_planet) > 0.5 then
-		DebugMessage("%s -- Object: %s, current planet undefended.", tostring(Script), tostring(object))
+		DebugMessage("%s -- Object: %s, current planet %s undefended with score %s.", tostring(Script), tostring(object), tostring(my_planet), tostring(EvaluatePerception("Low_Ground_Defense_Score", PlayerObject, my_planet)))
 		return nil
 	end
 	
@@ -232,6 +236,7 @@ function Find_Ground_Unit_Target(object)
 	end
 	
 	if poorly_defended_planet and poorly_defended_planet.Get_Is_Planet_AI_Usable() and object.Can_Land_On_Planet(poorly_defended_planet) then
+		DebugMessage("%s -- Object: %s, moving to undefended planet %s.", tostring(Script), tostring(object), tostring(poorly_defended_planet))
 		return poorly_defended_planet
 	end	
 	
@@ -241,10 +246,12 @@ function Find_Ground_Unit_Target(object)
 	end
 	
 	if fallback_planet and fallback_planet.Get_Is_Planet_AI_Usable() and object.Can_Land_On_Planet(fallback_planet) then
+		DebugMessage("%s -- Object: %s, moving to fallback planet %s.", tostring(Script), tostring(object), tostring(fallback_planet))
 		return fallback_planet
 	else
 		fallback_planet = FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, object)
 		if fallback_planet then
+			DebugMessage("%s -- Object: %s, moving to final friendly fallback planet %s.", tostring(Script), tostring(object), tostring(fallback_planet.Get_Game_Object()))
 			return fallback_planet.Get_Game_Object()
 		end
 	end

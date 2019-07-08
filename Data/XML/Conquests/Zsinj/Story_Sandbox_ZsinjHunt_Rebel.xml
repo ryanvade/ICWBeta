@@ -137,25 +137,31 @@
 		<Perpetual>true</Perpetual>
 	</Event>
 	
-	<!-- These can only be built on Hapan planets, so there's no need to wait until the Leia missions are complete-->
+	<Event Name="Hapan_Delay">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>5</Event_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+  </Event>
+	
+	<!-- These can only be built on Hapan planets, so there's no need to wait until the Leia missions are complete. Do wait until after the universal lock, however -->
 	<Event Name="Unlock_AMM_BattleDragon">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>AMM_BattleDragon</Reward_Param1>
-		<Prereq>Universal_Story_Start</Prereq>
+		<Prereq>Hapan_Delay</Prereq>
 	</Event>
 	
 	<Event Name="Unlock_AMM_Large_BattleDragon">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>AMM_Large_BattleDragon</Reward_Param1>
-		<Prereq>Universal_Story_Start</Prereq>
+		<Prereq>Hapan_Delay</Prereq>
 	</Event>
 
 	<Event Name="Unlock_AMM_Nova_Cruiser">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>AMM_Nova_Cruiser</Reward_Param1>
-		<Prereq>Universal_Story_Start</Prereq>
+		<Prereq>Hapan_Delay</Prereq>
 	</Event>
 </Story>

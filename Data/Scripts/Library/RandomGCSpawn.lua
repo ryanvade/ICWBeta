@@ -102,7 +102,7 @@ function Spawn_At_All_Planets()
 					,{Find_Object_Type("Shock_Soldier_Squad_Pentastar"), 4, "Land"}
 					,{Find_Object_Type("Pentastar_Army_Trooper_Squad"), 5, "Land"}
 					,{Find_Object_Type("Pentastar_Walker_Group"), 2, "Land"}
-					,{Find_Object_Type("Pentastar_Skiff_Group"), 4, "Land"}
+					,{Find_Object_Type("Pentastar_Repulsor_Scout_Group"), 4, "Land"}
 					,{Find_Object_Type("Pentastar_Speeder_Group"), 1, "Land"}
 					}
 				,{
