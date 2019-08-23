@@ -48,6 +48,8 @@ GameObjectLibrary = {
     },
     CommonFactionStructures = {
         ["EMPIRE"] = {
+			CapitalBuilding = "Remnant_Capital",
+			LocalCapital = "Empire_MoffPalace",
             MiningStation = "Empire_Ground_Mining_Facility",
             TradePort = "Generic_Tradestation",
             Barracks = "E_Ground_Barracks",
@@ -58,7 +60,9 @@ GameObjectLibrary = {
             Starbase_3 = ""
         },
         ["REBEL"] = {
-            MiningStation = "Rebel_Ground_Mining_Facility",
+			CapitalBuilding = "NewRep_Senate",		
+			LocalCapital = "NewRep_SenatorsOffice", 
+			MiningStation = "Rebel_Ground_Mining_Facility",
             TradePort = "Generic_Tradestation",
             Barracks = "R_Ground_Barracks",
             LightFactory = "",
@@ -68,6 +72,8 @@ GameObjectLibrary = {
             Starbase_3 = ""
         },
         ["UNDERWORLD"] = {
+            CapitalBuilding = "U_Ground_Palace",
+			LocalCapital = "Hand_GovernorOffice", 
             MiningStation = "U_Ground_Mining_Facility",
             TradePort = "Generic_Tradestation",
             Barracks = "U_Ground_Barracks",
@@ -78,6 +84,8 @@ GameObjectLibrary = {
             Starbase_3 = ""
         },
         ["PENTASTAR"] = {
+			CapitalBuilding = "PA_Capital",
+			LocalCapital = "Pentastar_MoffPalace",
             MiningStation = "",
             TradePort = "Generic_Tradestation",
             Barracks = "",
@@ -88,6 +96,8 @@ GameObjectLibrary = {
             Starbase_3 = ""
         },
         ["TERADOC"] = {
+			CapitalBuilding = "Maldrood_Capital",
+			LocalCapital = "Maldrood_MoffPalace",
             MiningStation = "",
             TradePort = "Generic_Tradestation",
             Barracks = "",
@@ -98,6 +108,8 @@ GameObjectLibrary = {
             Starbase_3 = ""
         },
         ["PIRATES"] = {
+			CapitalBuilding = "Rancor_Base",
+			LocalCapital = "Zsinj_MoffPalace",
             MiningStation = "",
             TradePort = "Generic_Tradestation",
             Barracks = "",
@@ -108,6 +120,8 @@ GameObjectLibrary = {
             Starbase_3 = ""
         },
         ["HUTTS"] = {
+			CapitalBuilding = "Eriadu_Capital",
+			LocalCapital = "Eriadu_MoffPalace",
             MiningStation = "",
             TradePort = "Generic_Tradestation",
             Barracks = "",
@@ -118,6 +132,8 @@ GameObjectLibrary = {
             Starbase_3 = ""
         },
         ["CORPORATE_SECTOR"] = {
+			CapitalBuilding = "CSA_Capital",
+			LocalCapital = "CSA_LocalOffice",
             MiningStation = "",
             TradePort = "Generic_Tradestation",
             Barracks = "",
@@ -224,7 +240,66 @@ GameObjectLibrary = {
     -- }
 
     },
-    GroundStructures = {
+    InfluenceLevels = { 
+		["INFLUENCE_ONE"]={
+            --Equation = "Planet_Has_Influence_One"
+        },
+		["INFLUENCE_TWO"]={
+            --Equation = "Planet_Has_Influence_Two"
+        },
+		["INFLUENCE_THREE"]={
+            --Equation = "Planet_Has_Influence_Three"
+        },
+		["INFLUENCE_FOUR"]={
+            --Equation = "Planet_Has_Influence_Four"
+        },
+		["INFLUENCE_FIVE"]={
+            --Equation = "Planet_Has_Influence_Five"
+        },
+		["INFLUENCE_SIX"]={
+            --Equation = "Planet_Has_Influence_Six"
+        },
+		["INFLUENCE_SEVEN"]={
+           --Equation = "Planet_Has_Influence_Seven"
+        },
+		["INFLUENCE_EIGHT"]={
+            --Equation = "Planet_Has_Influence_Eight"
+        },
+        ["INFLUENCE_NINE"]={
+            --Equation = "Planet_Has_Influence_Nine"
+        },
+		["INFLUENCE_TEN"]={
+            --Equation = "Planet_Has_Influence_Ten"
+        },
+        ["BONUS_PLACEHOLDER"]={
+            --Equation = "Planet_Has_Influence_Bonus"
+        },
+    },
+    GroundStructures = { 
+		["REMNANT_CAPITAL"]={
+            Equation = "Planet_Has_Capital"
+        },
+		["PA_CAPITAL"]={
+            Equation = "Planet_Has_Capital"
+        },
+		["MALDROOD_CAPITAL"]={
+            Equation = "Planet_Has_Capital"
+        },
+		["ERIADU_CAPITAL"]={
+            Equation = "Planet_Has_Capital"
+        },
+		["NEWREP_SENATE"]={
+            Equation = "Planet_Has_Capital"
+        },
+		["RANCOR_BASE"]={
+            Equation = "Planet_Has_Capital"
+        },
+		["CSA_CAPITAL"]={
+            Equation = "Planet_Has_Capital"
+        },
+		["U_GROUND_PALACE"]={
+            Equation = "Planet_Has_Capital"
+        },
     },
     Units={
 		["Iillor_Corusca"]={
@@ -250,6 +325,7 @@ GameObjectLibrary = {
 		},
 		["CC7700"]={
 			Scripts={
+				"MultiLayer",
 				"InterdictorAI"
 			},
 			Fighters={
@@ -790,6 +866,7 @@ GameObjectLibrary = {
         },
         ["REPUBLIC_BOARDING_SHUTTLE"]={
             Scripts={
+				"MultiLayer",
                 "Boarding"
             },
             Fighters={
@@ -935,10 +1012,6 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=2
                     },
-                    ["TERADOC"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
                     ["HOSTILE"] = {
                         Reserve=0,
                         Initial=2
@@ -958,6 +1031,12 @@ GameObjectLibrary = {
                 ["TIE_PUNISHER_SQUADRON"]={
                     ["HUTTS"] = {
                         Reserve=0,
+                        Initial=1
+                    }
+                },
+				["TIE_HEAVY_BOMBER_SQUADRON"]={
+                    ["TERADOC"] = {
+                        Reserve=1,
                         Initial=1
                     }
                 },
@@ -1072,7 +1151,7 @@ GameObjectLibrary = {
                 HANGAR = true
             },
             Fighters={
-                ["Defender_Starfighter_Squadron"]={
+                ["DEFENDER_STARFIGHTER_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=1,
                         Initial=2
@@ -1269,10 +1348,6 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=2
                     },
-					["TERADOC"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
                     ["HUTTS"] = {
                         Reserve=0,
                         Initial=2
@@ -1296,6 +1371,12 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=2,
                         TechLevel=EqualTo(2)
+                    }
+                },
+				["TIE_HEAVY_BOMBER_SQUADRON"]={
+                    ["TERADOC"] = {
+                        Reserve=1,
+                        Initial=1
                     }
                 },
                 ["TIE_INTERCEPTOR_SQUADRON"]={
@@ -1416,6 +1497,7 @@ GameObjectLibrary = {
         },
         ["WORLD_DEVASTATOR"]={
             Scripts={
+				"MultiLayer",
                 "FighterSpawn"
             },
             Fighters={
@@ -1429,6 +1511,7 @@ GameObjectLibrary = {
         },
         ["TORPEDO_SPHERE"]={
             Scripts={
+				"MultiLayer"
             },
             Fighters={
             }
@@ -1556,6 +1639,7 @@ GameObjectLibrary = {
         },
         ["YEVETHA_ALLEGIANCE"]={
             Scripts={
+				"MultiLayer"
             },
             Fighters={
             }
@@ -1594,6 +1678,7 @@ GameObjectLibrary = {
         },
         ["IMPERIAL_BOARDING_SHUTTLE"]={
             Scripts={
+				"MultiLayer",
                 "Boarding"
             },
             Fighters={
@@ -1643,6 +1728,7 @@ GameObjectLibrary = {
         },
         ["GENERIC_SECUTOR"]={
             Scripts={
+				"MultiLayer",
                 "FighterSpawn"
             },
             Fighters={
@@ -1780,6 +1866,7 @@ GameObjectLibrary = {
         },
         ["LUCREHULK_CSA"]={
             Scripts={
+				"MultiLayer",
                 "FighterSpawn"
             },
             Fighters={
@@ -1805,27 +1892,96 @@ GameObjectLibrary = {
         },
 		["INVINCIBLE_CRUISER"]={
             Scripts={
+				"MultiLayer",
                 "FighterSpawn"
             },
             Fighters={
                 ["2_WARPOD_SQUADRON"]={
-                    ["DEFAULT"] = {
+                    ["CORPORATE_SECTOR"] = {
+                        Reserve=3,
+                        Initial=2
+                    },
+					["HOSTILE"] = {
+                        Reserve=3,
+                        Initial=2
+                    },
+					["WARLORDS"] = {
                         Reserve=3,
                         Initial=2
                     }
                 },
                 ["Z95_HEADHUNTER_SQUADRON"]={
-                    ["DEFAULT"] = {
+                    ["CORPORATE_SECTOR"] = {
+                        Reserve=5,
+                        Initial=2
+                    },
+					["REBEL"] = {
+                        Reserve=5,
+                        Initial=2
+                    },
+					["HOSTILE"] = {
+                        Reserve=5,
+                        Initial=2
+                    },
+					["WARLORDS"] = {
                         Reserve=5,
                         Initial=2
                     }
                 },
 				["IRDA_SQUADRON"]={
-                    ["DEFAULT"] = {
+                    ["CORPORATE_SECTOR"] = {
+                        Reserve=2,
+                        Initial=1
+                    },
+					["HOSTILE"] = {
+                        Reserve=2,
+                        Initial=1
+                    },
+					["WARLORDS"] = {
                         Reserve=2,
                         Initial=1
                     }
-                }
+                },
+				["Y-WING_SQUADRON"]={
+                    ["REBEL"] = {
+                        Reserve=3,
+                        Initial=2
+                    }
+                },
+				["REBEL_X-WING_SQUADRON"]={
+                    ["REBEL"] = {
+                        Reserve=2,
+                        Initial=1
+                    }
+                },
+				["TIE_BOMBER_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=3,
+                        Initial=2
+                    },
+					["YEVETHA"] = {
+                        Reserve=3,
+                        Initial=2
+                    }
+                },
+				["TIE_FIGHTER_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=5,
+                        Initial=2
+                    }
+                },
+				["TIE_INTERCEPTOR_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=2,
+                        Initial=1
+                    }
+                },
+				["TRIFOIL_SQUADRON"]={
+                    ["YEVETHA"] = {
+                        Reserve=7,
+                        Initial=3
+                    }
+                },
             }
         },
         ["GENERIC_PROCURSATOR"]={
@@ -3034,6 +3190,7 @@ GameObjectLibrary = {
         },
         ["CRIMSON_VICTORY"]={
             Scripts={
+				"MultiLayer",
                 "FighterSpawn"
             },
             Fighters={
@@ -3467,10 +3624,6 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1
                     },
-                    ["TERADOC"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
@@ -3490,6 +3643,12 @@ GameObjectLibrary = {
 				["TIE_PUNISHER_SQUADRON"]={
                     ["HUTTS"] = {
                         Reserve=0,
+                        Initial=1
+                    }
+                },
+				["TIE_HEAVY_BOMBER_SQUADRON"]={
+                    ["TERADOC"] = {
+                        Reserve=1,
                         Initial=1
                     }
                 },
@@ -4861,15 +5020,9 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
-				["REBEL_X-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
 				["SHIELDED_TIE_SQUADRON"]={
                     ["REBEL"] = {
-                        Reserve=2,
+                        Reserve=4,
                         Initial=1
                     }
                 },
@@ -4901,7 +5054,7 @@ GameObjectLibrary = {
                 },
                 ["TIE_BOMBER_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=4,
+                        Reserve=3,
                         Initial=1
                     }
                 },
@@ -4933,15 +5086,9 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
-				["REBEL_X-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
 				["SHIELDED_TIE_SQUADRON"]={
                     ["REBEL"] = {
-                        Reserve=2,
+                        Reserve=4,
                         Initial=1
                     }
                 },
@@ -5287,6 +5434,7 @@ GameObjectLibrary = {
         },
         ["GENERIC_PRAETOR"]={
             Scripts={
+				"MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat"
             },
@@ -5319,7 +5467,7 @@ GameObjectLibrary = {
             Fighters={
                 ["E-WING_SQUADRON"]={
                     ["DEFAULT"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=2,
                         TechLevel = GreaterThan(2)
                     }
@@ -5375,6 +5523,7 @@ GameObjectLibrary = {
         },
         ["YEVETHA_BOARDING_SHUTTLE"]={
             Scripts={
+				"MultiLayer",
                 "Boarding"
             },
             Fighters={

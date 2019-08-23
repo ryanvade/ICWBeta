@@ -77,19 +77,21 @@ function Begin_GC(message)
     p_rebel = Find_Player("Rebel")
     p_pentastar = Find_Player("Pentastar")
 
-    start_planet = FindPlanet("Bastion")
-	if start_planet.Get_Owner() ~= Find_Player("Pentastar") then
-		start_planet = TRUtil.FindFriendlyPlanet(p_pentastar)
+	techLevel = p_empire.Get_Tech_Level()
+	if techLevel == 1 then
+		start_planet = FindPlanet("Bastion")
+		if start_planet.Get_Owner() ~= Find_Player("Pentastar") then
+			start_planet = TRUtil.FindFriendlyPlanet(p_pentastar)
+		end
+		if start_planet then
+			spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
+			ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true,false)
+		end
+		
+		if p_pentastar.Is_Human() then
+			Story_Event("KAINE_JOINS_SPEECH")
+		end
 	end
-	if start_planet then
-	    spawn_list_Reaper = { "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
-		ReaperSpawn = SpawnList(spawn_list_Reaper, start_planet, p_pentastar,true,false)
-	end
-	
-	if p_pentastar.Is_Human() then
-  		Story_Event("KAINE_JOINS_SPEECH")
-  	end
-	
 
 
 	ScriptExit()

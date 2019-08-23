@@ -352,12 +352,12 @@
 		<Reward_Param8>Palpatine_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Emperor_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Faction_Branch_Remnant</Prereq>
+		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
  
     <Event Name="Luke_Capture_Dialog">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>100</Event_Param1>
+		<Event_Param1>25</Event_Param1>
 		<Story_Dialog>Dialog_Shadow_Sandbox_Remnant</Story_Dialog>
 		<Story_Chapter>2</Story_Chapter>
 		<Story_Tag>Luke_Tag</Story_Tag>
@@ -366,11 +366,10 @@
 	
 	<Event Name="Kill_Luke">
   		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Luke_Skywalker_Jedi_Team</Event_Param1>
+  		<Event_Param1>Luke_Skywalker_Jedi</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
-		<Event_Param4>Empire</Event_Param4>
-		<Prereq>Capture_Luke_Speech</Prereq>
+		<Branch>Capture_Luke_Speech</Branch>
 	</Event>
 	
 	<Event Name="Luke_Completed">
@@ -399,10 +398,10 @@
 
 	<Event Name="Lose_Luke">
   		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Luke_Skywalker_Darkside_Team</Event_Param1>
+  		<Event_Param1>Luke_Skywalker_Darkside</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
-		<Event_Param4>Pentastar, Yevetha, Rebel, Pirates, Underworld, Sarlacc, Hutts</Event_Param4>
+		<Event_Param4>Pentastar, Rebel, Pirates, Underworld, Sarlacc, Hutts</Event_Param4>
 		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
 		<Reward_Param1>Luke_Lost_Tag</Reward_Param1>
 		<Prereq>Kill_Luke</Prereq>
@@ -512,15 +511,6 @@
 		<Branch>Faction_Branch_Newrep</Branch>
 	</Event>
 	
-	<Event Name="Trigger_Construct_Lusankya">
-		<Event_Type>STORY_CONSTRUCT</Event_Type>
-		<Event_Param1>Wedge_Lusankya</Event_Param1>
-		<Event_Param2>1</Event_Param2>
-		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Wedge_Rogue_Squadron_Space</Reward_Param1>
-	</Event>
-		
 	<Event Name="Battle_of_Coruscant">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>16</Event_Param1>
@@ -579,7 +569,7 @@
 	
 	<Event Name="Luke_Dies">
 		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
--  		<Event_Param1>Luke_Skywalker_Jedi_Team</Event_Param1>
+-  		<Event_Param1>Luke_Skywalker_Jedi</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
 		<Reward_Type>MULTIMEDIA</Reward_Type>
@@ -667,7 +657,7 @@
 
 	<Event Name="Leia_Dies">
 		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-		<Event_Param1>Princess_Leia_Team</Event_Param1>
+		<Event_Param1>Princess_Leia</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
@@ -684,9 +674,10 @@
 
 	<Event Name="Save_Luke">
   		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Luke_Skywalker_Darkside_Team</Event_Param1>
+  		<Event_Param1>Luke_Skywalker_Darkside</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
+		<Event_Param4>Pentastar, Rebel, Pirates, Underworld, Sarlacc, Hutts</Event_Param4>
 		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
 		<Branch>Save_Luke_Branch</Branch>
 	 </Event>
@@ -716,6 +707,22 @@
 		<Prereq>Save_Luke</Prereq>
 	</Event>
 	
+	<Event Name="Byss_Raid_Spacer"> <!-- Ensure that the Empire has finished conquering neutral before making conquering Byss disable the raid -->
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+		<Prereq>Palpatine_Unlock_Narrative</Prereq>
+	</Event>
+	
+	<Event Name="Early_Byss_Takeover">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>Byss</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Branch_Byss_Raid</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Byss_Raid_Spacer</Prereq>
+	</Event>
+	
 	<Event Name="Balmorra_Mission_Narrative">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>1200</Event_Param1>
@@ -731,6 +738,7 @@
 		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Faction_Branch_Enabler_NewRep</Prereq>
+		<Branch>Branch_Byss_Raid</Branch>
 	</Event>
 
 	<Event Name="Balmorra_Mission_Dialog">
@@ -740,6 +748,7 @@
 		<Story_Tag>Main_Tag</Story_Tag>
 		<Story_Chapter>0</Story_Chapter>
 		<Prereq>Balmorra_Mission_Narrative</Prereq>
+		<Branch>Branch_Byss_Raid</Branch>
 	</Event>
 	
 	<Event Name="Wedge_Mission_Travel_Trigger">
@@ -776,6 +785,7 @@
 		<Reward_Param8 />
 		<Reward_Param9>Rebel_Trooper_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
+		<Branch>Branch_Byss_Raid</Branch>
 		<Prereq>Wedge_Mission_Travel_Trigger</Prereq>
 		<Prereq>Lando_Mission_Travel_Trigger</Prereq>
 		<Prereq>Lusankya_Mission_Travel_Trigger</Prereq>
@@ -796,6 +806,7 @@
 		<Reward_Param8 />
 		<Reward_Param9>Rebel_Trooper_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
+		<Branch>Branch_Byss_Raid</Branch>
 	</Event>
 	
 	<Event Name="Byss_Raid">
@@ -811,6 +822,7 @@
 		<Reward_Param8>1</Reward_Param8> <!-- explained below -->
 		<Reward_Param13>1</Reward_Param13> <!-- 1: displays the "Launch Battle" dialog before battle; 0: skips the dialog and launches battle without asking the player -->
 		<Prereq>Balmorra_Mission_Arrives</Prereq>
+		<Branch>Branch_Byss_Raid</Branch>
 	</Event>
 	
 	<Event Name="Balmorra_Mission_Won">
@@ -877,9 +889,11 @@
 		<Reward_Param2>0</Reward_Param2>
 	</Event>
 
-	<Event Name="Kaine_Death">
+	<Event Name="Kaine_Death"> <!-- Note that this is an Empire only event (since Intro_Welcome is) -->
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>700</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Reaper_Kaine</Reward_Param1>
 		<Prereq>Intro_Welcome</Prereq>
 	</Event>
 
@@ -896,12 +910,13 @@
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>1060</Event_Param1>
 	</Event>
-
+	
 	<Event Name="Warlords_Breakoff">
 		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Emperor_Palpatine_Team</Event_Param1>
+  		<Event_Param1>Emperor_Palpatine</Event_Param1>
 		<Event_Param2></Event_Param2>
 		<Event_Param3>1</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 
 	<Event Name="Syn_Joins">

@@ -18,3 +18,6 @@ rename DisplayManagerICW.lua DisplayManager.lua
 cd ..\..\Art\Textures
 rename SPLASH.DDS SPLASHFOTR.DDS
 rename SPLASHICW.DDS SPLASH.DDS
+cd ..\Maps
+rename Front_End_Demo_Attract.ted Front_End_Demo_Attract_FotR.ted
+rename Front_End_Demo_Attract_ICW.ted Front_End_Demo_Attract.ted

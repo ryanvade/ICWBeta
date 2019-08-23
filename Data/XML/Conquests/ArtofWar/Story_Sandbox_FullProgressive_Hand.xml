@@ -41,15 +41,6 @@
 		<Branch>EotH_Alive</Branch>
 	</Event>
 
-	<Event Name="Spawn_Soontir">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Soontir_Fel_Squadron</Reward_Param1>
-		<Reward_Param2>Nirauan</Reward_Param2>
-		<Prereq>Underworld_Enters_Tech_01</Prereq>
-		<Branch>EotH_Alive</Branch>
-	</Event>
-
 	<Event Name="Spawn_Aralani">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>UNIQUE_UNIT</Reward_Type>
@@ -91,7 +82,15 @@
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Hand_of_Judgement_Team</Reward_Param1>
 		<Reward_Param2>Nirauan</Reward_Param2>
-		<Branch>Spawn_Crash_Prevention_Hand</Branch>
+		<Prereq>Underworld_Enters_Tech_01</Prereq>
+		<Branch>EotH_Alive</Branch>
+	</Event>
+	
+	<Event Name="Spawn_Tasse">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Tasse_Team</Reward_Param1>
+		<Reward_Param2>Quethold</Reward_Param2>
 		<Prereq>Underworld_Enters_Tech_01</Prereq>
 		<Branch>EotH_Alive</Branch>
 	</Event>

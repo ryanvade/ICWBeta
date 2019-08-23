@@ -48,7 +48,7 @@ require("pgevents")
 function Definitions()
 	DebugMessage("%s -- In Definitions", tostring(Script))
 	
-	Category = "Conquer_To_Reconnect"
+	Category = "Conquer_To_Reconnect | NR_Vassal_Conquer_to_Reconnect"
 	TaskForce = {
 	-- First Task Force
 	{

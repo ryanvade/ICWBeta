@@ -450,7 +450,7 @@ Orocco_Yinchorr,
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
+		<AI_Player_Control> Sarlacc, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
 		<AI_Player_Control> Hutts, EriaduAI </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, GenericAILowOffense </AI_Player_Control>		
@@ -487,7 +487,7 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
 		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
 		
-		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Placement_Dummy </Starting_Forces>
 			
 		<!-- ******************** FACTION: Empire ************** -->
 		
@@ -496,7 +496,7 @@ Orocco_Yinchorr,
 		<Max_Tech_Level> Empire, 5 </Max_Tech_Level>
 		
 		
-		<Starting_Forces> Empire, Vros, E_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Empire, Vros, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Hand ************** -->
 		
@@ -510,7 +510,7 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pirates, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Placement_Dummy </Starting_Forces>
 
 		<!-- ******************** FACTION: Maldrood ************** -->
 								
@@ -518,7 +518,7 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Teradoc, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Teradoc, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Teradoc, Centares, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Hakassi, Placement_Dummy </Starting_Forces>
 
 			<!-- ******************** FACTION: Pentastar ************** -->
 				
@@ -526,7 +526,7 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Pentastar, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pentastar, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Pentastar, AnxMinor, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pentastar, Entralla, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Eriadu ************** -->
 						
@@ -534,14 +534,14 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Hutts, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Hutts, 5 </Max_Tech_Level>
 	
-	<Starting_Forces> Hutts, Kampe, A_Ground_Barracks </Starting_Forces>
+	<Starting_Forces> Hutts, Kampe, Placement_Dummy </Starting_Forces>
 
 		<!-- ******************** FACTION: Corporate Sector ************** -->
 												
 		<Starting_Credits> Corporate_Sector,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Corporate_Sector, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Corporate_Sector, 5 </Max_Tech_Level>
-		
+		<Starting_Forces> Corporate_Sector, Ession, Placement_Dummy </Starting_Forces>		
 		<!-- ******************** FACTION: Moorja ************** DONE -->
 														
 		<Starting_Credits> Warlords,  45000 </Starting_Credits>
@@ -1024,7 +1024,7 @@ Orocco_Yinchorr,
 		<AI_Player_Control> Rebel, SandboxHuman </AI_Player_Control>
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
+		<AI_Player_Control> Sarlacc, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
 		<AI_Player_Control> Hutts, EriaduAI </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, GenericAILowOffense </AI_Player_Control>		
@@ -1061,19 +1061,16 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
 		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
 		
-		<Starting_Forces> Rebel, Endor, R_Ground_Barracks </Starting_Forces>
-
-
-
-		
+		<Starting_Forces> Rebel, Bespin, Placement_Dummy </Starting_Forces>
+			
 		<!-- ******************** FACTION: Empire ************** -->
 		
 		<Starting_Credits> Empire,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Empire, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Empire, 5 </Max_Tech_Level>
 		
-	
-		<Starting_Forces> Empire, Vros, E_Ground_Barracks </Starting_Forces>
+		
+		<Starting_Forces> Empire, Vros, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Hand ************** -->
 		
@@ -1081,58 +1078,52 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Underworld, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Underworld, 5 </Max_Tech_Level>
 		
-	
 		<!-- ******************** FACTION: Zsinj ************** -->
 						
 		<Starting_Credits> Pirates,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pirates, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Placement_Dummy </Starting_Forces>
 
-		
 		<!-- ******************** FACTION: Maldrood ************** -->
 								
 		<Starting_Credits> Teradoc,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Teradoc, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Teradoc, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Teradoc, Centares, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Hakassi, Placement_Dummy </Starting_Forces>
 
-		
 			<!-- ******************** FACTION: Pentastar ************** -->
 				
 		<Starting_Credits> Pentastar,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Pentastar, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pentastar, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Pentastar, AnxMinor, P_Ground_Barracks </Starting_Forces>
-
+		<Starting_Forces> Pentastar, Entralla, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Eriadu ************** -->
 						
 		<Starting_Credits> Hutts,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Hutts, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Hutts, 5 </Max_Tech_Level>
-		
 	
-		<Starting_Forces> Hutts, Kampe, A_Ground_Barracks </Starting_Forces>
+	<Starting_Forces> Hutts, Kampe, Placement_Dummy </Starting_Forces>
 
 		<!-- ******************** FACTION: Corporate Sector ************** -->
 												
 		<Starting_Credits> Corporate_Sector,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Corporate_Sector, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Corporate_Sector, 5 </Max_Tech_Level>
-		
+		<Starting_Forces> Corporate_Sector, Ession, Placement_Dummy </Starting_Forces>		
 		<!-- ******************** FACTION: Moorja ************** DONE -->
 														
 		<Starting_Credits> Warlords,  45000 </Starting_Credits>
 		<Starting_Tech_Level> Warlords, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Warlords, 5 </Max_Tech_Level>
 		
+	
 
-		
-															
 		<!-- ******************** FACTION: Hapes ************** -->
 																		
 		<Starting_Credits> Sarlacc,  15000 </Starting_Credits>
@@ -1607,7 +1598,7 @@ Orocco_Yinchorr,
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
+		<AI_Player_Control> Sarlacc, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
 		<AI_Player_Control> Hutts, EriaduAI </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, GenericAILowOffense </AI_Player_Control>		
@@ -1644,16 +1635,16 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
 		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
 		
-		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
-		
-		
+		<Starting_Forces> Rebel, Bespin, Placement_Dummy </Starting_Forces>
+			
 		<!-- ******************** FACTION: Empire ************** -->
 		
 		<Starting_Credits> Empire,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Empire, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Empire, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Empire, Vros, E_Ground_Barracks </Starting_Forces>
+		
+		<Starting_Forces> Empire, Vros, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Hand ************** -->
 		
@@ -1661,56 +1652,52 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Underworld, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Underworld, 5 </Max_Tech_Level>
 		
-			
 		<!-- ******************** FACTION: Zsinj ************** -->
 						
 		<Starting_Credits> Pirates,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pirates, 5 </Max_Tech_Level>
 		
-			
-		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
-	
+		<Starting_Forces> Pirates, Serenno, Placement_Dummy </Starting_Forces>
+
+		<!-- ******************** FACTION: Maldrood ************** -->
 								
 		<Starting_Credits> Teradoc,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Teradoc, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Teradoc, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Teradoc, Centares, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Hakassi, Placement_Dummy </Starting_Forces>
 
 			<!-- ******************** FACTION: Pentastar ************** -->
 				
 		<Starting_Credits> Pentastar,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Pentastar, 1 </Starting_Tech_Level>
-		<Max_Tech_Level> Pentastar, 4 </Max_Tech_Level>
+		<Max_Tech_Level> Pentastar, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Pentastar, Entralla, P_Ground_Barracks </Starting_Forces>
-		
+		<Starting_Forces> Pentastar, Entralla, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Eriadu ************** -->
 						
 		<Starting_Credits> Hutts,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Hutts, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Hutts, 5 </Max_Tech_Level>
-		
-		<Starting_Forces> Hutts, Kampe, A_Ground_Barracks </Starting_Forces>
 	
+	<Starting_Forces> Hutts, Kampe, Placement_Dummy </Starting_Forces>
+
 		<!-- ******************** FACTION: Corporate Sector ************** -->
 												
 		<Starting_Credits> Corporate_Sector,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Corporate_Sector, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Corporate_Sector, 5 </Max_Tech_Level>
-		
-		<Starting_Forces> Corporate_Sector, Ession, C_Ground_Barracks </Starting_Forces>
-		
+		<Starting_Forces> Corporate_Sector, Ession, Placement_Dummy </Starting_Forces>		
 		<!-- ******************** FACTION: Moorja ************** DONE -->
 														
 		<Starting_Credits> Warlords,  45000 </Starting_Credits>
 		<Starting_Tech_Level> Warlords, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Warlords, 5 </Max_Tech_Level>
 		
-		
-															
+	
+
 		<!-- ******************** FACTION: Hapes ************** -->
 																		
 		<Starting_Credits> Sarlacc,  15000 </Starting_Credits>
@@ -1729,7 +1716,6 @@ Orocco_Yinchorr,
 		<Starting_Credits> Mandalorians,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Mandalorians, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Mandalorians, 5 </Max_Tech_Level>
-		
 
 		</Campaign>
 		
@@ -2184,7 +2170,7 @@ Orocco_Yinchorr,
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
+		<AI_Player_Control> Sarlacc, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Teradoc, SandboxHuman </AI_Player_Control>      
 		<AI_Player_Control> Hutts, EriaduAI </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, GenericAILowOffense </AI_Player_Control>		
@@ -2221,17 +2207,16 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
 		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
 		
-	
-		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
-
-	
+		<Starting_Forces> Rebel, Bespin, Placement_Dummy </Starting_Forces>
+			
 		<!-- ******************** FACTION: Empire ************** -->
 		
 		<Starting_Credits> Empire,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Empire, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Empire, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Empire, Orinda, E_Ground_Barracks </Starting_Forces>
+		
+		<Starting_Forces> Empire, Vros, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Hand ************** -->
 		
@@ -2239,36 +2224,29 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Underworld, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Underworld, 5 </Max_Tech_Level>
 		
-	
-		
 		<!-- ******************** FACTION: Zsinj ************** -->
 						
 		<Starting_Credits> Pirates,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pirates, 5 </Max_Tech_Level>
 		
-			
-		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Placement_Dummy </Starting_Forces>
 
-		
 		<!-- ******************** FACTION: Maldrood ************** -->
 								
 		<Starting_Credits> Teradoc,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Teradoc, 1 </Starting_Tech_Level>
-		<Max_Tech_Level> Teradoc, 4 </Max_Tech_Level>
+		<Max_Tech_Level> Teradoc, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Teradoc, Centares, Teradoc_IFTX_Group </Starting_Forces>
+		<Starting_Forces> Teradoc, Hakassi, Placement_Dummy </Starting_Forces>
 
-		
 			<!-- ******************** FACTION: Pentastar ************** -->
 				
 		<Starting_Credits> Pentastar,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Pentastar, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pentastar, 5 </Max_Tech_Level>
 		
-
-		<Starting_Forces> Pentastar, AnxMinor, P_Ground_Barracks </Starting_Forces>
-	
+		<Starting_Forces> Pentastar, Entralla, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Eriadu ************** -->
 						
@@ -2276,24 +2254,22 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Hutts, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Hutts, 5 </Max_Tech_Level>
 	
-		<Starting_Forces> Hutts, Kampe, A_Ground_Barracks </Starting_Forces>
-	
-		
+	<Starting_Forces> Hutts, Kampe, Placement_Dummy </Starting_Forces>
+
 		<!-- ******************** FACTION: Corporate Sector ************** -->
 												
 		<Starting_Credits> Corporate_Sector,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Corporate_Sector, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Corporate_Sector, 5 </Max_Tech_Level>
-		
+		<Starting_Forces> Corporate_Sector, Ession, Placement_Dummy </Starting_Forces>		
 		<!-- ******************** FACTION: Moorja ************** DONE -->
 														
 		<Starting_Credits> Warlords,  45000 </Starting_Credits>
 		<Starting_Tech_Level> Warlords, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Warlords, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Corporate_Sector, Bonadan, R_Ground_Barracks </Starting_Forces>
 	
-																	
+
 		<!-- ******************** FACTION: Hapes ************** -->
 																		
 		<Starting_Credits> Sarlacc,  15000 </Starting_Credits>
@@ -2312,7 +2288,6 @@ Orocco_Yinchorr,
 		<Starting_Credits> Mandalorians,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Mandalorians, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Mandalorians, 5 </Max_Tech_Level>
-		
 
 
 		</Campaign>
@@ -2768,7 +2743,7 @@ Orocco_Yinchorr,
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Pirates, SandboxHuman </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
+		<AI_Player_Control> Sarlacc, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
 		<AI_Player_Control> Hutts, EriaduAI </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, GenericAILowOffense </AI_Player_Control>		
@@ -2805,17 +2780,22 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
 		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
 		
-		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
-		
+		<Starting_Forces> Rebel, Bespin, Placement_Dummy </Starting_Forces>
+			
 		<!-- ******************** FACTION: Empire ************** -->
 		
 		<Starting_Credits> Empire,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Empire, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Empire, 5 </Max_Tech_Level>
 		
-	
-		<Starting_Forces> Empire, Vros, E_Ground_Barracks </Starting_Forces>
-
+		
+		<Starting_Forces> Empire, Vros, Placement_Dummy </Starting_Forces>
+		
+		<!-- ******************** FACTION: Hand ************** -->
+		
+		<Starting_Credits> Underworld,  15000 </Starting_Credits>
+		<Starting_Tech_Level> Underworld, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Underworld, 5 </Max_Tech_Level>
 		
 		<!-- ******************** FACTION: Zsinj ************** -->
 						
@@ -2823,17 +2803,15 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pirates, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Pirates, Yavin, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Pirates, Serenno, Placement_Dummy </Starting_Forces>
 
-	
-	
 		<!-- ******************** FACTION: Maldrood ************** -->
 								
 		<Starting_Credits> Teradoc,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Teradoc, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Teradoc, 5 </Max_Tech_Level>
 		
-		<Starting_Forces> Teradoc, Centares, P_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Teradoc, Hakassi, Placement_Dummy </Starting_Forces>
 
 			<!-- ******************** FACTION: Pentastar ************** -->
 				
@@ -2841,24 +2819,23 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Pentastar, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pentastar, 5 </Max_Tech_Level>
 		
-	
-		<Starting_Forces> Pentastar, AnxMinor, P_Ground_Barracks </Starting_Forces>
-
+		<Starting_Forces> Pentastar, Entralla, Placement_Dummy </Starting_Forces>
+		
 		<!-- ******************** FACTION: Eriadu ************** -->
 						
 		<Starting_Credits> Hutts,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Hutts, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Hutts, 5 </Max_Tech_Level>
-		
 	
-		<Starting_Forces> Hutts, Kampe, A_Ground_Barracks </Starting_Forces>
-
+	<Starting_Forces> Hutts, Kampe, Placement_Dummy </Starting_Forces>
 
 		<!-- ******************** FACTION: Corporate Sector ************** -->
 												
 		<Starting_Credits> Corporate_Sector,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Corporate_Sector, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Corporate_Sector, 5 </Max_Tech_Level>
+
+		<Starting_Forces> Corporate_Sector, Ession, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Moorja ************** DONE -->
 														
@@ -2867,7 +2844,7 @@ Orocco_Yinchorr,
 		<Max_Tech_Level> Warlords, 5 </Max_Tech_Level>
 		
 	
-															
+
 		<!-- ******************** FACTION: Hapes ************** -->
 																		
 		<Starting_Credits> Sarlacc,  15000 </Starting_Credits>
@@ -2886,7 +2863,6 @@ Orocco_Yinchorr,
 		<Starting_Credits> Mandalorians,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Mandalorians, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Mandalorians, 5 </Max_Tech_Level>
-
 		
 		</Campaign>
 		
@@ -3340,7 +3316,7 @@ Orocco_Yinchorr,
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
+		<AI_Player_Control> Sarlacc, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
 		<AI_Player_Control> Hutts, SandboxHuman </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, GenericAILowOffense </AI_Player_Control>		
@@ -3377,63 +3353,62 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
 		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
 		
-		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Placement_Dummy </Starting_Forces>
+			
 		<!-- ******************** FACTION: Empire ************** -->
 		
 		<Starting_Credits> Empire,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Empire, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Empire, 5 </Max_Tech_Level>
 		
-	
-		<Starting_Forces> Empire, Vros, E_Ground_Barracks </Starting_Forces>
 		
-				<!-- ******************** FACTION: Hand ************** -->
+		<Starting_Forces> Empire, Vros, Placement_Dummy </Starting_Forces>
+		
+		<!-- ******************** FACTION: Hand ************** -->
 		
 		<Starting_Credits> Underworld,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Underworld, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Underworld, 5 </Max_Tech_Level>
 		
-	
+		<!-- ******************** FACTION: Zsinj ************** -->
 						
 		<Starting_Credits> Pirates,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
-		<Max_Tech_Level> Pirates, 4 </Max_Tech_Level>
+		<Max_Tech_Level> Pirates, 5 </Max_Tech_Level>
 		
-			
+		<Starting_Forces> Pirates, Serenno, Placement_Dummy </Starting_Forces>
 
-		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
-	
+		<!-- ******************** FACTION: Maldrood ************** -->
 								
 		<Starting_Credits> Teradoc,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Teradoc, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Teradoc, 5 </Max_Tech_Level>
 		
-	
-		<Starting_Forces> Teradoc, Centares, P_Ground_Barracks </Starting_Forces>
-	
+		<Starting_Forces> Teradoc, Hakassi, Placement_Dummy </Starting_Forces>
+
+			<!-- ******************** FACTION: Pentastar ************** -->
 				
 		<Starting_Credits> Pentastar,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Pentastar, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pentastar, 5 </Max_Tech_Level>
 		
-	
-		<Starting_Forces> Pentastar, AnxMinor, P_Ground_Barracks </Starting_Forces>
-
+		<Starting_Forces> Pentastar, Entralla, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Eriadu ************** -->
 						
 		<Starting_Credits> Hutts,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Hutts, 1 </Starting_Tech_Level>
-		<Max_Tech_Level> Hutts, 4 </Max_Tech_Level>
-		
-				<Starting_Forces> <Starting_Forces> Hutts, Kampe, Fortress_Company_Delvardus </Starting_Forces> </Starting_Forces>
+		<Max_Tech_Level> Hutts, 5 </Max_Tech_Level>
+	
+	<Starting_Forces> Hutts, Kampe, Placement_Dummy </Starting_Forces>
 
-		
 		<!-- ******************** FACTION: Corporate Sector ************** -->
 												
 		<Starting_Credits> Corporate_Sector,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Corporate_Sector, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Corporate_Sector, 5 </Max_Tech_Level>
+		
+		<Starting_Forces> Corporate_Sector, Ession, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Moorja ************** DONE -->
 														
@@ -3441,8 +3416,8 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Warlords, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Warlords, 5 </Max_Tech_Level>
 		
-		
-															
+	
+
 		<!-- ******************** FACTION: Hapes ************** -->
 																		
 		<Starting_Credits> Sarlacc,  15000 </Starting_Credits>
@@ -3917,7 +3892,7 @@ Orocco_Yinchorr,
 		<AI_Player_Control> Rebel, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Pirates, WarlordAI </AI_Player_Control>
 		<AI_Player_Control> Underworld, None </AI_Player_Control>
-		<AI_Player_Control> Sarlacc, None </AI_Player_Control>
+		<AI_Player_Control> Sarlacc, GenericAI </AI_Player_Control>
 		<AI_Player_Control> Teradoc, WarlordAI </AI_Player_Control>      
 		<AI_Player_Control> Hutts, EriaduAI </AI_Player_Control>				
 		<AI_Player_Control> Corporate_Sector, SandboxHuman </AI_Player_Control>		
@@ -3947,73 +3922,68 @@ Orocco_Yinchorr,
 				Galactic_All_Planets_Controlled
 		</AI_Victory_Conditions>
 		
-			
 		<!-- ******************** FACTION: New Republic ************** -->
 		
 		<Starting_Credits> Rebel,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
 		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
 		
-		<Starting_Forces> Rebel, Bespin, R_Ground_Barracks </Starting_Forces>
+		<Starting_Forces> Rebel, Bespin, Placement_Dummy </Starting_Forces>
+			
 		<!-- ******************** FACTION: Empire ************** -->
 		
 		<Starting_Credits> Empire,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Empire, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Empire, 5 </Max_Tech_Level>
 		
-	
-		<Starting_Forces> Empire, Vros, E_Ground_Barracks </Starting_Forces>
 		
-				<!-- ******************** FACTION: Hand ************** -->
+		<Starting_Forces> Empire, Vros, Placement_Dummy </Starting_Forces>
+		
+		<!-- ******************** FACTION: Hand ************** -->
 		
 		<Starting_Credits> Underworld,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Underworld, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Underworld, 5 </Max_Tech_Level>
 		
-	
+		<!-- ******************** FACTION: Zsinj ************** -->
 						
 		<Starting_Credits> Pirates,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pirates, 5 </Max_Tech_Level>
 		
-			
+		<Starting_Forces> Pirates, Serenno, Placement_Dummy </Starting_Forces>
 
-		<Starting_Forces> Pirates, Serenno, P_Ground_Barracks </Starting_Forces>
-	
+		<!-- ******************** FACTION: Maldrood ************** -->
 								
 		<Starting_Credits> Teradoc,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Teradoc, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Teradoc, 5 </Max_Tech_Level>
 		
-	
-		<Starting_Forces> Teradoc, Centares, P_Ground_Barracks </Starting_Forces>
-	
+		<Starting_Forces> Teradoc, Hakassi, Placement_Dummy </Starting_Forces>
+
+			<!-- ******************** FACTION: Pentastar ************** -->
 				
 		<Starting_Credits> Pentastar,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Pentastar, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Pentastar, 5 </Max_Tech_Level>
 		
-	
-		<Starting_Forces> Pentastar, AnxMinor, P_Ground_Barracks </Starting_Forces>
-
+		<Starting_Forces> Pentastar, Entralla, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Eriadu ************** -->
 						
 		<Starting_Credits> Hutts,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Hutts, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Hutts, 5 </Max_Tech_Level>
-		
-				<Starting_Forces> Hutts, Eriadu, P_Ground_Barracks </Starting_Forces>
+	
+	<Starting_Forces> Hutts, Kampe, Placement_Dummy </Starting_Forces>
 
-		
 		<!-- ******************** FACTION: Corporate Sector ************** -->
 												
 		<Starting_Credits> Corporate_Sector,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Corporate_Sector, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Corporate_Sector, 5 </Max_Tech_Level>
 		
-				<Starting_Forces> Corporate_Sector, Ession, C_Ground_Barracks </Starting_Forces>
-
+		<Starting_Forces> Corporate_Sector, Ession, Placement_Dummy </Starting_Forces>
 		
 		<!-- ******************** FACTION: Moorja ************** DONE -->
 														
@@ -4021,8 +3991,8 @@ Orocco_Yinchorr,
 		<Starting_Tech_Level> Warlords, 1 </Starting_Tech_Level>
 		<Max_Tech_Level> Warlords, 5 </Max_Tech_Level>
 		
-		
-															
+	
+
 		<!-- ******************** FACTION: Hapes ************** -->
 																		
 		<Starting_Credits> Sarlacc,  15000 </Starting_Credits>
@@ -4040,9 +4010,7 @@ Orocco_Yinchorr,
 																						
 		<Starting_Credits> Mandalorians,  15000 </Starting_Credits>
 		<Starting_Tech_Level> Mandalorians, 1 </Starting_Tech_Level>
-		<Max_Tech_Level> Mandalorians, 5 </Max_Tech_Level>
-	
-																								
+		<Max_Tech_Level> Mandalorians, 5 </Max_Tech_Level>					
 		
 	</Campaign>
 		

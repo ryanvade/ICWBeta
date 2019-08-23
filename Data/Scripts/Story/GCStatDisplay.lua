@@ -17,6 +17,7 @@ function Definitions()
 					}
 					
 	setup_complete = false
+	human_faction = nil
 end
 
 function Stat_Display_Setup(message)
@@ -31,6 +32,13 @@ function Stat_Display_Setup(message)
 		
 		liveFactionTable = CreateFactionTable(CONSTANTS.ALL_FACTIONS_NOT_NEUTRAL)
 		
+		for _, faction in pairs(liveFactionTable) do
+			if faction.Is_Human() then
+				human_faction = faction
+				break
+			end
+		end
+		
 		setup_complete = true
 	end
 end
@@ -43,6 +51,12 @@ function Story_Mode_Service()
 		stat_display_event.Clear_Dialog_Text()
 		liveFactionTable = CreateFactionTable(CONSTANTS.ALL_FACTIONS_NOT_NEUTRAL)
 
+		stat_display_event.Add_Dialog_Text("STAT_SEPARATOR")
+		stat_display_event.Add_Dialog_Text("STAT_ECONOMIC_STRUCTURE_COUNT")
+		stat_display_event.Add_Dialog_Text("STAT_SEPARATOR")
+		stat_display_event.Add_Dialog_Text("STAT_MINES_COUNT", EvaluatePerception("Mines_Count", human_faction))
+		stat_display_event.Add_Dialog_Text("STAT_TRADESTATION_COUNT", EvaluatePerception("Tradestation_Count", human_faction))
+		
 		for _, faction in pairs(liveFactionTable) do
 			stat_display_event.Add_Dialog_Text("STAT_SEPARATOR")
 			stat_display_event.Add_Dialog_Text(CONSTANTS.ALL_FACTION_TEXTS[faction.Get_Faction_Name()])

@@ -36,8 +36,6 @@ function Definitions()
       Eclipse_Completed_Generic = Palpatine_Joins,
 	  Warlords_Breakoff = Empire_Fractures,
 	  Luke_Completed = Luke_Joins,
-	  Lose_Luke = Luke_Betrays_Empire,
-	  Save_Luke = Luke_Rejoins,
       Empire_wins_Coruscant = Spawn_Empire_Reward,
 	  Balmorran_Revolt_Narrative = Spawn_Balmorrans,
 	  Conquer_Balmorra = Balmorran_Reward,
@@ -94,7 +92,7 @@ function Empire_Fractures(message)
 
     --Carnor takes control of the Empire
 
-     start_planet = FindPlanet("Byss")
+     local start_planet = FindPlanet("Byss")
     if start_planet.Get_Owner() == p_empire then
        local spawn_list = { "Carnor_Jax_Team" }
        local ImperialForces = SpawnList(spawn_list, start_planet, p_empire, true, false)
@@ -213,50 +211,6 @@ function Luke_Joins(message)
 
   end
 end
-
-function Luke_Betrays_Empire(message)
-  if message == OnEnter then
-
-    local p_rebel = Find_Player("Rebel")
-    local start_planet = FindPlanet("Yavin")
-
-    if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-      allPlanets = FindPlanet.Get_All_Planets()
-      random = GameRandom(1, table.getn(allPlanets))
-      start_planet = allPlanets[random]
-      while start_planet.Get_Owner() ~= Find_Player("Rebel") do
-        random = GameRandom(1, table.getn(allPlanets))
-        start_planet = allPlanets[random]
-      end
-    end
-
-    local spawn_list_luke = { "Luke_Skywalker_Jedi_Team" }
-    local LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_rebel,true,false)
-
-  end
-end
-
-function Luke_Rejoins(message)
-  if message == OnEnter then
-
-    local p_rebel = Find_Player("Rebel")
-    local start_planet = FindPlanet("Yavin")
-
-    if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-      local allPlanets = FindPlanet.Get_All_Planets()
-      random = GameRandom(1, table.getn(allPlanets))
-      start_planet = allPlanets[random]
-      while start_planet.Get_Owner() ~= Find_Player("Rebel") do
-        random = GameRandom(1, table.getn(allPlanets))
-        start_planet = allPlanets[random]
-      end
-    end
-
-    local spawn_list_luke = { "Luke_Skywalker_Jedi_Team" }
-    local LukeSpawn = SpawnList(spawn_list_luke, start_planet, p_rebel,true,false)
- 
-   end
- end
  
  function Spawn_Balmorrans(message)
   if message == OnEnter then

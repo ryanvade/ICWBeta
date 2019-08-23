@@ -204,6 +204,16 @@
 		Variable_Self.NetIncomeUnnormalized
 	</Current_Income>
 	
+	<Mines_Count>
+		Variable_Self.StructureCount {Parameter_Type = "Rebel_Ground_Mining_Facility", 
+									Parameter_Type = "Empire_Ground_Mining_Facility", 
+									Parameter_Type = "U_Ground_Mining_Facility"}
+	</Mines_Count>
+	
+	<Tradestation_Count>
+		Variable_Self.StructureCount {Parameter_Type = "Generic_Tradestation"}
+	</Tradestation_Count>
+	
 	<Has_Planetary_Weapon>
 		Variable_Target.HasStructure {Parameter_Type = "Ground_Ion_Cannon"}
 		+ Variable_Target.HasStructure {Parameter_Type = "Ground_Empire_Hypervelocity_Gun"}
@@ -259,4 +269,31 @@
 	<Recent_Conflict_Ground>
 		(1.0 - (Variable_Target.TimeSinceGroundConflict > 120.0)) * (120.0 - Variable_Target.TimeSinceGroundConflict) / 120.0
 	</Recent_Conflict_Ground>
+	
+	<Weeks_Since_Control_Gained>
+		((Variable_Target.TimeSinceConversion / 40.0) * Variable_Target.IsFaction{Parameter_Faction = "Empire"} * Variable_Self.IsFaction {Parameter_Faction = "Empire"})
+		+
+		((Variable_Target.TimeSinceConversion / 40.0) * Variable_Target.IsFaction{Parameter_Faction = "Rebel"} * Variable_Self.IsFaction {Parameter_Faction = "Rebel"})
+		+
+		((Variable_Target.TimeSinceConversion / 40.0) * Variable_Target.IsFaction{Parameter_Faction = "Underworld"} * Variable_Self.IsFaction {Parameter_Faction = "Underworld"})
+		+
+		((Variable_Target.TimeSinceConversion / 40.0) * Variable_Target.IsFaction{Parameter_Faction = "Pirates"} * Variable_Self.IsFaction {Parameter_Faction = "Pirates"})
+		+
+		((Variable_Target.TimeSinceConversion / 40.0) * Variable_Target.IsFaction{Parameter_Faction = "Hutts"} * Variable_Self.IsFaction {Parameter_Faction = "Hutts"})
+		+
+		((Variable_Target.TimeSinceConversion / 40.0) * Variable_Target.IsFaction{Parameter_Faction = "Pentastar"} * Variable_Self.IsFaction {Parameter_Faction = "Pentastar"})
+		+
+		((Variable_Target.TimeSinceConversion / 40.0) * Variable_Target.IsFaction{Parameter_Faction = "Teradoc"} * Variable_Self.IsFaction {Parameter_Faction = "Teradoc"})
+		+
+		((Variable_Target.TimeSinceConversion / 40.0) * Variable_Target.IsFaction{Parameter_Faction = "Hutt_Cartels"} * Variable_Self.IsFaction {Parameter_Faction = "Hutt_Cartels"})
+		+
+		((Variable_Target.TimeSinceConversion / 40.0) * Variable_Target.IsFaction{Parameter_Faction = "SsiRuuvi_Imperium"} * Variable_Self.IsFaction {Parameter_Faction = "SsiRuuvi_Imperium"})
+		+
+		((Variable_Target.TimeSinceConversion / 40.0) * Variable_Target.IsFaction{Parameter_Faction = "Corporate_Sector"} * Variable_Self.IsFaction {Parameter_Faction = "Corporate_Sector"})
+	</Weeks_Since_Control_Gained>
+	
+	<NR_Vassal_Trigger>
+		0.0
+	</NR_Vassal_Trigger>
+	
 </Equations>

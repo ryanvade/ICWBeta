@@ -41,7 +41,8 @@
 
 require("PGBaseDefinitions")
 
-
+---@private
+---@return void
 function Process_Reinforcements()
 	for index, btable in ipairs(block_table) do
 		for k, block in pairs(btable) do
@@ -83,6 +84,9 @@ function Process_Reinforcements()
 	new_units = nil
 end
 
+---Adds a unit to the reinforcement pool of a player
+---@param object_type GameObjectType The GameObjectType of the unit to add
+---@param player FactionObject The player receiving the unit
 function Add_Reinforcement(object_type, player)
 
 	if type(object_type) == "string" then
@@ -93,7 +97,17 @@ function Add_Reinforcement(object_type, player)
 end
 
 
+---@alias ReinforceListCallback fun(units: GameObject[]):void A function that gets called with a table containing the spawned units after ReinforceList is finished
+
 -- Reinforce units via transport, simultaneously.
+---Spawns multiple units with Hyperspace/landing Transport animation and calls a callback function when done
+---@param type_list string[] The type names of the units to be spawned
+---@param entry_marker PlanetObject|GameObject|Position The location the units are supposed to spawn at
+---@param player FactionObject The owner of the units
+---@param allow_ai_usage boolean Determines whether the AI is allowed to control the units
+---@param delete_after_scenario boolean If set to true the units will be removed after a tactical battle
+---@param ignore_reinforcement_rules boolean Ignores reinforcement rules when set to true
+---@param callback ReinforceListCallback
 function ReinforceList(type_list, entry_marker, player, allow_ai_usage, delete_after_scenario, ignore_reinforcement_rules, callback)
 
 	if type(ignore_reinforcement_rules) == "function" then
@@ -134,6 +148,13 @@ function ReinforceList(type_list, entry_marker, player, allow_ai_usage, delete_a
 end
 
 -- Spawn units simultaneously.
+---Spawns a multiple units and returns them as a table
+---@param type_list string[] The type names of the units to be spawned
+---@param entry_marker PlanetObject|GameObject|Position The location the units are supposed to spawn at
+---@param player FactionObject The owner of the units
+---@param allow_ai_usage boolean Determines whether the AI is allowed to control the units
+---@param delete_after_scenario boolean If set to true the units will be removed after a tactical battle
+---@return GameObject[]
 function SpawnList(type_list, entry_marker, player, allow_ai_usage, delete_after_scenario)
 
 		unit_list = {}

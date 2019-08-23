@@ -29,7 +29,8 @@ GameConstants = {
             "TERADOC",
             "PIRATES",
             "HUTTS",
-			"CORPORATE_SECTOR"
+			"CORPORATE_SECTOR",
+			"SARLACC"
         },
         ALL_FACTIONS = {
             "EMPIRE",

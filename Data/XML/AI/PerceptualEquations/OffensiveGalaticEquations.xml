@@ -323,8 +323,22 @@
 		)
 		*
 		(1.0 - Function_Should_Crush_Opponent_Planet.Evaluate)
+		*
+		(
+			(1.0 - Variable_Target.IsHumanControlled)
+			*
+			Game.Age > 2
+			+
+			(Function_First_Attack_Allowed.Evaluate * Variable_Target.IsHumanControlled)
+		)
 	</Need_To_Reconnect_Islands>
 
+	<NR_Vassal_Should_Reconnect_Islands>
+		Function_Need_To_Reconnect_Islands.Evaluate
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Rebel"})
+	</NR_Vassal_Should_Reconnect_Islands>
+	
 	
 	<Space_Contrast>
 		Variable_Target.EnemyForce.SpaceTotalUnnormalized + Variable_Target.EnemyForce.StarbaseTotalUnnormalized
@@ -348,6 +362,8 @@
 		(Variable_Target.IsHumanControlled == 0.0)
 		*
 		Function_Is_Connected_To_Me.Evaluate
+		*
+		Game.Age > 5
 	</Should_Conquer_Pirate_Planet>
 	
 	
@@ -361,6 +377,12 @@
 			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Teradoc"}
 			+ 0.5 * Variable_Target.IsFaction{Parameter_Faction = "Warlords"})
 	</Warlord_Should_Conquer_Pirate_Planet>
+	
+	<NR_Vassal_Should_Conquer_Pirate_Planet>
+		Function_Should_Conquer_Pirate_Planet.Evaluate
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Rebel"})
+	</NR_Vassal_Should_Conquer_Pirate_Planet>
 	
 	<EotH_Should_Conquer_Pirate_Planet>
 		Function_Should_Conquer_Pirate_Planet.Evaluate
@@ -380,9 +402,6 @@
 		+ Variable_Target.Type.IsType {Parameter_Type = "Nirauan"})
 	</EotH_Should_Conquer_Pirate_Planet>
 
-	<EotH_Should_Construct_Thrawn_Clone>
-		Variable_Self.TechLevel == 5
-	</EotH_Should_Construct_Thrawn_Clone>
 	
 	<Should_Conquer_Opponent_Planet>
 		(
@@ -441,6 +460,12 @@
 			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Pentastar"}
 			+ 0.3 * Variable_Target.IsFaction{Parameter_Faction = "Teradoc"})
 	</Warlord_Should_Conquer_Opponent_Planet>
+	
+	<NR_Vassal_Should_Conquer_Opponent_Planet>
+		Function_Should_Conquer_Opponent_Planet.Evaluate
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Rebel"})
+	</NR_Vassal_Should_Conquer_Opponent_Planet>
 	
 	
 	<First_Attack_Allowed>

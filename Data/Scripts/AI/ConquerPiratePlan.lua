@@ -50,7 +50,7 @@ function Definitions()
 	
 	PerFailureContrastAdjust = 0.05
 		
-	Category = "Conquer_Pirate | Warlord_Conquer_Pirate | EotH_Retake_Planet"
+	Category = "Conquer_Pirate | Warlord_Conquer_Pirate | EotH_Retake_Planet | NR_Vassal_Conquer_Pirate"
 	TaskForce = {
 	{
 		"MainForce"						

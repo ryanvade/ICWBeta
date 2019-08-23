@@ -43,6 +43,7 @@ require("PGDebug")
 
 YieldCount = 0;
 
+---Exits the script
 function ScriptExit()
 	_ScriptExit() -- set a flag in 'C' to terminate the whole script on next yield
 	
@@ -51,6 +52,8 @@ function ScriptExit()
 	end
 end
 
+---Pauses the current thread for the given amount of time
+---@param time int The sleep time
 function Sleep(time)
 
 	--DebugMessage("Sleeping...  SleepTime: %.3f, CurTime: %.3f\n", time, GetCurrentTime())
@@ -61,8 +64,11 @@ function Sleep(time)
 	--DebugMessage("Done with Sleep.  Continuing, CurTime: %.3f\n", GetCurrentTime())
 end
 
--- Service the block until optional max duration has expired or alternate break function returns true
--- Pass -1 max_duration to use optional alternate break function with no time limit
+---Service the block until optional max duration has expired or alternate break function returns true. Pass -1 max_duration to use optional alternate break function with no time limit
+---@param block any The block to execute
+---@param max_duration int Maximum duration the block gets executed in seconds
+---@param alternate_break_func function An alternative break function that gets called if the max_duration is -1. Must return true when BlockOnCommand is supposed to stop
+---@return any
 function BlockOnCommand(block, max_duration, alternate_break_func)
 
 	PumpEvents()
@@ -155,6 +161,9 @@ function PumpEvents()
 	ThreadValue.Set("InPumpEvents", false)
 end
 
+---Returns true if the argument is a valid GameObject. Can be used to check if an object is alive
+---@param wrapper any
+---@return boolean
 function TestValid(wrapper)
 	if wrapper == nil then
 		return false

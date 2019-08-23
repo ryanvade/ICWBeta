@@ -99,6 +99,10 @@ end
 --	end
 --end
 
+---Registers a callback function that gets called after a set amount of time
+---@param func function The callback function
+---@param timeout int The amount of time in seconds that has to pass before the callback gets called
+---@param param any An optional parameter that gets passed to the callback function
 function Register_Timer(func, timeout, param)
 	if TimerTable[func] == nil then
 		TimerTable[func] = {}
@@ -127,7 +131,8 @@ function Process_Timers()
 	end
 end
 
--- Cancels all occurences of this timer function
+---Cancels all occurences of this timer function
+---@param func function The callback function
 function Cancel_Timer(func)
 	if func ~= nil then
 		TimerTable[func] = nil
@@ -137,7 +142,9 @@ function Cancel_Timer(func)
 end
 
 
--- Setup a callback for the death or deletion of a given object.
+---Setup a callback for the death or deletion of a given object
+---@param obj GameObject The GameObject that has to die
+---@param func function The callback function that gets called after the object has died
 function Register_Death_Event(obj, func)
 	if not TestValid(obj) then
 		MessageBox("%s -- Error, object doesn't exist or has already died.", tostring(Script))
@@ -163,7 +170,9 @@ function Process_Death_Events()
 	end
 end
 
--- Setup a callback for a given object falling under attack.
+---Setup a callback for a given object falling under attack
+---@param obj GameObject The GameObject that has to be attacked
+---@param func function The callback function that is called when the object gets attacked
 function Register_Attacked_Event(obj, func)
 	if not TestValid(obj) then
 		MessageBox("%s -- Error, object doesn't exist or has died.", tostring(Script))
@@ -209,6 +218,8 @@ function Process_Attacked_Events()
 	end
 end
 
+---Cancels the attacked callback for the given object
+---@param obj GameObject The GameObject
 function Cancel_Attacked_Event(obj)
 	if obj ~= nil then
 		AttackedTable[obj] = nil
@@ -217,9 +228,14 @@ function Cancel_Attacked_Event(obj)
 	end
 end
 
+---@alias RegisterProxCallback fun(source_object: GameObject, target_object: GameObject): void
+---A callback handler that gets called when the target_object is in the specified range of the source_object
 
-
--- Set up proximity triggers on arbitrary objects and have them serviced.
+---Set up proximity triggers on arbitrary objects and have them serviced
+---@param obj GameObject The GameObject that is the center of the proximity calculation
+---@param func RegisterProxCallback The callback function
+---@param range int The range at which the callback function gets called
+---@param player_filter FactionObject Limits the proximity callback to objects of the specified faction
 function Register_Prox(obj, func, range, player_filter)
 
 	-- prevent this from doing anything in galactic mode

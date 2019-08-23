@@ -335,11 +335,11 @@
 		+
 		2 * (6000 > Function_Distance_To_Nearest_Friendly_Starbase.Evaluate)
 		+
-		20 * (Variable_Target.EnemyForce == 0.0) * (1.0 - Variable_Target.FriendlyForce)
+		2 * (Variable_Target.EnemyForce == 0.0) * (1.0 - Variable_Target.FriendlyForce)
 		+
-		10 * (1500 > Script_GetDistanceToNearestSpaceField.Evaluate{Parameter_Script_String = "ASTEROID"})
+		1 * (1500 > Script_GetDistanceToNearestSpaceField.Evaluate{Parameter_Script_String = "ASTEROID"})
 		+
-		10 * (1500 > Script_GetDistanceToNearestSpaceField.Evaluate{Parameter_Script_String = "NEBULA"})
+		1 * (1500 > Script_GetDistanceToNearestSpaceField.Evaluate{Parameter_Script_String = "NEBULA"})
 	</Space_Area_Is_Hidden>
 
 
@@ -372,15 +372,15 @@
 				*
 				(
 					(1.0 - Variable_Self.IsDefender) *
-					(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (4.0 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0}))
+					(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (2.0 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0}))
 					+
 					(Variable_Self.IsDefender *
 					(1 >= Variable_Self.BaseLevel) *
-					(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (4.0 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0})))
+					(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (2.0 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0})))
 					+
 					(Variable_Self.IsDefender *
 					(3 >= Variable_Self.BaseLevel) *
-					(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (8.0 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0})))
+					(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (3.0 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0})))
 					+
 					((3.0 * Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Transport]}) >= Variable_Self.FriendlyForceUnnormalized)
 					+

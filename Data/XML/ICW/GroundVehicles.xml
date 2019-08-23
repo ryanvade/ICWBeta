@@ -344,7 +344,6 @@
 		<Icon_Name>i_button_aa5_truck.tga</Icon_Name>
 		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
-		<Vehicle_Thief_Inside_Clone>T2B_Tank_Captured</Vehicle_Thief_Inside_Clone>
 		<Tactical_Bribe_Cost>100</Tactical_Bribe_Cost>
 
 		<Base_Shield_Penetration_Particle>Shield_Penetration_Effect_Particle</Base_Shield_Penetration_Particle>
@@ -743,7 +742,7 @@
 		<Energy_Capacity>1000</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
 
-		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
+		<Ranged_Target_Z_Adjust>8.0</Ranged_Target_Z_Adjust>
 		<Land_FOW_Reveal_Range>600.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
 
@@ -1656,6 +1655,7 @@
 		<Max_Speed>2.0</Max_Speed>
 		<Max_Rate_Of_Turn>3</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>
+		<Is_Squashable_By_Supercrusher>Yes</Is_Squashable_By_Supercrusher>
 		
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
 		<OverrideAcceleration>0.02</OverrideAcceleration>
@@ -1976,6 +1976,7 @@
 		<LandBehavior>AFFECTED_BY_SHIELD, HUNT,WALK_LOCOMOTOR, IDLE,TARGETING, WEAPON, TURRET, SHIELDED, POWERED, REVEAL,HIDE_WHEN_FOGGED, UNIT_AI, SURFACE_FX, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING</LandBehavior>
 		<Garrison_Category>Vehicle</Garrison_Category>
 		<SurfaceFX_Name>Hover</SurfaceFX_Name>
+		<Is_Squashable_By_Supercrusher>Yes</Is_Squashable_By_Supercrusher>
 
 		<Turret_Rotate_Extent_Degrees>45</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>300</Turret_Elevate_Extent_Degrees>

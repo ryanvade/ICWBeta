@@ -2,71 +2,9 @@
 <Remnant_Space_Units>
 
 	<GroundCompany Name="Delvardus_Light_Scout_Squad">
-		<LOD_Bias>5</LOD_Bias>
-		<Text_ID>TEXT_IMPERIAL_LIGHT_SCOUT_SQUAD</Text_ID>
-		<!--<Encyclopedia_Good_Against> Rebel_Trooper MPTL </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 0 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>10</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_Light_Scout_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>75</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>25</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>A_Ground_Barracks</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>ABILITY_COUNTDOWN, DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>1</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
-		<Company_Units>Scout_Trooper, Scout_Trooper</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_scout_trooper.tga</Icon_Name>
-		<GUI_Model_Name>EV_Bike.ALO</GUI_Model_Name>
-		<GUI_Distance>65</GUI_Distance>
-		<GUI_Offset>0 0 5</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Scout_Trooper</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Scout_Trooper</SFXEvent_Fleet_Move>
-
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>650</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>6.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_SCOUTTROOPER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>UNTARGETED_STICKY_BOMB</Type>
-				<Recharge_Seconds>60</Recharge_Seconds>
-				<Spawned_Object_Type>Proj_Speeder_Bomb</Spawned_Object_Type>
-				<Bomb_Countdown_Seconds>3</Bomb_Countdown_Seconds>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-		<Population_Value>1</Population_Value>
-		<Score_Cost_Credits>150</Score_Cost_Credits>
 	</GroundCompany>
 
 	<GroundInfantry Name="Storm_Commando">
@@ -76,18 +14,18 @@
 		<Encyclopedia_Text>TEXT_TOOLTIP_STORM_COMMANDO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_COMMANDO</Encyclopedia_Unit_Class>
 		<Stealth_Capable>Yes</Stealth_Capable>
-		<Land_Model_Name>PA_StormCommando.alo</Land_Model_Name>
+		<Land_Model_Name>Storm_Commando.alo</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>STORMTROOPER.ALO</Land_Model_Anim_Override_Name>
 		
 		<Land_Terrain_Model_Mapping>
-			Temperate, 			PA_StormCommando.ALO,
-			Urban, 				PA_StormCommando.ALO,
-			Arctic, 			EI_BIKER.ALO,
-			Volcanic, 			PA_StormCommando.ALO,
-			Desert, 			PA_StormCommando.ALO,
-			Forest, 			PA_StormCommando.ALO,
-			Swamp, 				PA_StormCommando.ALO
+			Temperate, 			Storm_Commando.ALO,
+			Urban, 				Storm_Commando.ALO,
+			Arctic, 			scout_trooper.ALO,
+			Volcanic, 			Storm_Commando_backpack.ALO,
+			Desert, 			Storm_Commando_backpack.ALO,
+			Forest, 			Storm_Commando.ALO,
+			Swamp, 				Storm_Commando_backpack.ALO
 		</Land_Terrain_Model_Mapping>
-		<Land_Model_Anim_Override_Name>EI_TROOPER.ALo</Land_Model_Anim_Override_Name>
 		<Behavior>SELECTABLE</Behavior>
 		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,TARGETING,SHIELDED, WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, IDLE, GARRISON_UNIT</LandBehavior>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
@@ -234,7 +172,18 @@
 	
 	<GroundInfantry Name="Storm_Commando_Plex">
 		<Variant_Of_Existing_Type>Storm_Commando</Variant_Of_Existing_Type>
-		<HardPoints>HP_PLX</HardPoints>
+		<Land_Model_Name>storm_commando_launcher.alo</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			storm_commando_launcher.ALO,
+			Urban, 				storm_commando_launcher.ALO,
+			Arctic, 			storm_commando_launcher.ALO,
+			Volcanic, 			storm_commando_launcher.ALO,
+			Desert, 			storm_commando_launcher.ALO,
+			Forest, 			storm_commando_launcher.ALO,
+			Swamp, 				storm_commando_launcher.ALO
+		</Land_Terrain_Model_Mapping>
+		<Land_Model_Anim_Override_Name>shock_trooper.ALO</Land_Model_Anim_Override_Name>
+		<HardPoints>HP_PLX_hand</HardPoints>
 
 	</GroundInfantry>
 
@@ -281,7 +230,7 @@
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<Encyclopedia_Text>TEXT_TOOLTIP_STORM_COMMANDO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_COMMANDO</Encyclopedia_Unit_Class>
 		<Maintenance_Cost>0.05</Maintenance_Cost>
 		<Score_Cost_Credits>120</Score_Cost_Credits>
 
@@ -330,7 +279,7 @@
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Tech_Level>1</Tech_Level>
+		<Tech_Level>99</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
@@ -561,7 +510,7 @@
 		<Autoresolve_Health>100</Autoresolve_Health>
 
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Build_Cost_Credits>1700</Build_Cost_Credits>
 		<Build_Time_Seconds>90</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -608,116 +557,15 @@
 	</GroundCompany>
 
 	<GroundCompany Name="Delvardus_IDT_Squad">
-		<LOD_Bias>4</LOD_Bias>
-		<Text_ID>TEXT_UNIT_IDT</Text_ID>
-		<!--<Encyclopedia_Good_Against> U_Ground_Vehicle_Factory T4B_Tank </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> Rebel_Anti_Aircraft_Turret Underworld_Mass_Driver_Turret Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>-->
-		<Encyclopedia_Text>TEXT_TOOLTIP_IDT</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_GUNSHIP</Encyclopedia_Unit_Class>
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>24</Damage>
-		<Autoresolve_Health>200</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_IDT_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>400</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>35</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>A_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>1</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Air</Company_Transport_Unit>
-		<Company_Units>IDT</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_idt.tga</Icon_Name>
-		<GUI_Model_Name>EV_IDT.ALO</GUI_Model_Name>
-		<GUI_Distance>115</GUI_Distance>
-		<GUI_Offset>0 0 15</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete></SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move></SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>150</Score_Cost_Credits>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>2000</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-		<Population_Value>1</Population_Value>
-
 	</GroundCompany>
 
 	<GroundCompany Name="Delvardus_Chariot_LAV_Company">
-		<Text_ID>TEXT_CHARIOT_LAV_COMPANY</Text_ID>
-		<!--<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T2B_Tank Plex_Soldier UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>20</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Chariot_LAV_Company</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>350</Build_Cost_Credits>
-		<Build_Time_Seconds>30</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>A_Ground_Light_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>2</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>tank</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
-		<Company_Units>Chariot_LAV_Combat, Chariot_LAV_Combat, Chariot_LAV_Combat</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_clav.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Tie_Mauler</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tie_Mauler</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>180</Score_Cost_Credits>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>800</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_CHARIOT_LAV</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
- 			<Unit_Ability>
-  				<Type>HUNT</Type>
-  			</Unit_Ability>
-  		</Unit_Abilities_Data>
-		<Population_Value>1</Population_Value>
-
 	</GroundCompany>
 
 	<GroundCompany Name="Delvardus_trooper_Squad">
@@ -737,160 +585,23 @@
 
 	</GroundCompany>
 
-	<GroundInfantry Name="Delvardus_Armytrooper">
-		<Variant_Of_Existing_Type>Armytrooper</Variant_Of_Existing_Type>
-		<Text_ID>TEXT_UNIT_ARMYTROOPER</Text_ID>
-		<Affiliation>Hutts</Affiliation>
-		<Is_Squashable> Yes </Is_Squashable>
-		<Space_Layer> None </Space_Layer>
-		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
-		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
-		<FormationRaggedness> .2 </FormationRaggedness>
-		<MaxJiggleDistance> 2 </MaxJiggleDistance>
-		<Icon_Name>i_button_army_trooper.tga</Icon_Name>
-
-	</GroundInfantry>
-
-	<GroundInfantry Name="Delvardus_Armytrooper_Lieutenant">
-
-		<Variant_Of_Existing_Type>Armytrooper_Lieutenant</Variant_Of_Existing_Type>
-		<Affiliation>Hutts</Affiliation>
-
-	</GroundInfantry>
-
 	<GroundCompany Name="Delvardus_Army_Trooper_Squad">
 
 		<Variant_Of_Existing_Type>Army_Trooper_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
 		<Required_Special_Structures>A_Ground_Barracks</Required_Special_Structures>
-
-		<Create_Team_Type> Armytrooper_Team </Create_Team_Type>
-        <!-- AI  Changed to 18 troopers in squads of 9 -->
-		<Company_Units> Delvardus_Armytrooper_Lieutenant, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper</Company_Units>
-		<Company_Units> Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper</Company_Units>
-		<Company_Units> Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper</Company_Units>
-		<Company_Units> Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper</Company_Units>
-		<Company_Units> Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper, Delvardus_Armytrooper</Company_Units>
-		<Max_Squad_Size> 9 </Max_Squad_Size>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Troops</Company_Transport_Unit>
-
 	</GroundCompany>
 
 	<GroundCompany Name="TIE_Crawler_Company_Delvardus">
-		<Text_ID>TEXT_UNIT_CRAWLER</Text_ID>
-		<!--<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T2B_Tank Plex_Soldier UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>20</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Century_Brigade</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>600</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>30</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>A_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>2</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>tank</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Tanks</Company_Transport_Unit>
-		<Company_Units>Century_Tank, Century_Tank</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_tiecrawl.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Tie_Mauler</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tie_Mauler</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>180</Score_Cost_Credits>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CRAWLER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_TANK</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-	<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
- 			<Unit_Ability>
-  				<Type>HUNT</Type>
-  			</Unit_Ability>
-  		</Unit_Abilities_Data>
-
-		<Population_Value>1</Population_Value>
-
 	</GroundCompany>
 
 	<GroundCompany Name="Fortress_Company_Delvardus">
-		<Text_ID>TEXT_UNIT_PX4</Text_ID>
-		<!--<Encyclopedia_Good_Against> Stormtrooper Underworld_Merc </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> AT_AA_Walker Underworld_Mass_Driver_Turret </Encyclopedia_Vulnerable_To>-->
-  		<Encyclopedia_Text>TEXT_TOOLTIP_PX4</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
-		<Icon_Name>i_button_ev_px4.tga</Icon_Name>
-
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>100</Damage>
-		<Autoresolve_Health>450</Autoresolve_Health>
-
+		<Variant_Of_Existing_Type>PX4_Company_Teradoc</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>400</Build_Cost_Credits>
-		<Build_Time_Seconds>40</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>0</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>A_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Build_Initially_Locked>No</Build_Initially_Locked>
-		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-        <Slice_Cost_Credits>1800</Slice_Cost_Credits>
-
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>4</Formation_Priority>
-		<Is_Escort>no</Is_Escort>
-		<Ship_Class>walker</Ship_Class>
-
-		<Company_Transport_Unit>Imperial_Landing_Craft_Heavy</Company_Transport_Unit>
-		<Company_Units>PX4</Company_Units>
-
-		<Score_Cost_Credits>1000</Score_Cost_Credits>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-		<Population_Value>1</Population_Value>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>12.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<SFXEvent_Build_Started>RHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>RHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Gallofree_HTT</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Gallofree_HTT</SFXEvent_Fleet_Move>
-
-		<Unit_Abilities_Data SubObjectList="Yes"> </Unit_Abilities_Data>
-
 	</GroundCompany>
 
 
@@ -899,312 +610,34 @@
 	<!-- ******************************************************************** -->
 
 	<GroundCompany Name="Delvardus_Saber_Group">
-		<Text_ID>TEXT_IMPERIAL_ARMOR_GROUP</Text_ID>
-		<!--<Encyclopedia_Good_Against> T2B_Tank MPTL Pod_Walker </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T4B_Tank Plex_Soldier UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>40</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_Armor_Group</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>500</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>50</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>A_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>3</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>tank</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Tanks</Company_Transport_Unit>
-		<Company_Units>M1_Repulsor_Tank, M1_Repulsor_Tank, M1_Repulsor_Tank</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_1-m_med_repulsor_tank.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_2M_Tank</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_2M_Tank</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>500</Score_Cost_Credits>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>POWER_TO_WEAPONS</Type>
-				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
-				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0f</Mod_Multiplier>
-				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1f</Mod_Multiplier>
-				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
-				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	3.0f</Mod_Multiplier>
-				<Recharge_Seconds>60</Recharge_Seconds>
-				<Expiration_Seconds>10</Expiration_Seconds>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>9</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_M1_REPULSOR</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TANK</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<Population_Value>1</Population_Value>
-
 	</GroundCompany>
 
 	<GroundCompany Name="Delvardus_Heavy_Assault_Company">
-		<LOD_Bias>0.5</LOD_Bias>
-		<Text_ID>TEXT_IMPERIAL_HEAVY_ASSAULT_COMPANY</Text_ID>
-		<!--<Encyclopedia_Good_Against> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> Snowspeeder Plex_Soldier </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>100</Damage>
-		<Autoresolve_Health>450</Autoresolve_Health>
-		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>1000</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>90</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>A_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>4</Formation_Priority>
-		<Is_Escort>no</Is_Escort>
-		<Ship_Class>walker</Ship_Class>
-		<Company_Transport_Unit>Imperial_ATAT_Barge_ATAT</Company_Transport_Unit>
 		<Company_Units>AT_AT_Walker_Armytrooper</Company_Units>
-		<Icon_Name>i_button_atat.tga</Icon_Name>
-		<GUI_Model_Name>EV_AT-AT.ALO</GUI_Model_Name>
-		<GUI_Distance>300</GUI_Distance>
-		<GUI_Offset>0 0 30</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_AT</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_AT</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>1000</Score_Cost_Credits>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1600</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_ATAT</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<Population_Value>1</Population_Value>
-
+		<Variant_Of_Existing_Type>Imperial_Heavy_Assault_Company</Variant_Of_Existing_Type>
+		<Affiliation>Hutts</Affiliation>
+		<Required_Special_Structures>A_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
 	</GroundCompany>
 
 	<GroundCompany Name="Delvardus_Heavy_Scout_Squad">
-		<LOD_Bias>4</LOD_Bias>
-		<Text_ID>TEXT_IMPERIAL_HEAVY_SCOUT_SQUAD</Text_ID>
-		<!--<Encyclopedia_Good_Against> UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank Plex_Soldier </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>24</Damage>
-		<Autoresolve_Health>200</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>700</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>40</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>A_Ground_Light_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>1</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
-		<Company_Units>AT_ST_Walker, AT_ST_Walker, AT_ST_Walker</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_atst.tga</Icon_Name>
-		<GUI_Model_Name>EV_AT-ST.ALO</GUI_Model_Name>
-		<GUI_Distance>115</GUI_Distance>
-		<GUI_Offset>0 0 15</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_ST</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_ST</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>150</Score_Cost_Credits>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>HUNT</Type>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>17.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_ATST</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<Population_Value>1</Population_Value>
-
 	</GroundCompany>
 
 	<GroundCompany Name="Delvardus_Anti_Aircraft_Company">
-		<Text_ID>TEXT_IMPERIAL_ANTI_AIRCRAFT</Text_ID>
-		<!--<Encyclopedia_Good_Against> Snowspeeder Y-wing </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T4B_Tank MPTL </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>30</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_Anti_Aircraft_Company</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>350</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>70</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>A_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>5</Formation_Priority>
-		<Is_Escort>no</Is_Escort>
-		<Ship_Class>tank</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Tanks</Company_Transport_Unit>
-		<Company_Units>AT_AA_Walker, AT_AA_Walker</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_ataa.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_AA</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_AA</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>500</Score_Cost_Credits>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>MISSILE_SHIELD</Type>
-
-				<Effective_Radius>100</Effective_Radius>
-				<Recharge_Seconds>20</Recharge_Seconds>
-				<Expiration_Seconds>10</Expiration_Seconds>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>6.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_ATAA</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<Population_Value>1</Population_Value>
-
 	</GroundCompany>
 
 	<GroundCompany Name="Delvardus_Artillery_Corp">
-		<Text_ID>TEXT_IMPERIAL_ARTILLERY_CORPS</Text_ID>
-		<!--<Encyclopedia_Good_Against> UC_Rebel_Buildable_Anti_Vehicle_Turret UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank Plex_Soldier </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>60</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_Artillery_Corp</Variant_Of_Existing_Type>
 		<Affiliation>Hutts</Affiliation>
-		<Build_Cost_Credits>800</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>80</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>A_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>6</Formation_Priority>
-		<Is_Escort>no</Is_Escort>
-		<Ship_Class>artillery</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Artillery</Company_Transport_Unit>
-		<Company_Units>SPMAT_Walker</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_spha_t.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_SPMAT</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_SPMAT</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>650</Score_Cost_Credits>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>DEPLOY</Type>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_SPMA</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
 	<GroundVehicle Name="Lancet_Air_Artillery">

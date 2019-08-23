@@ -18,6 +18,11 @@
 		<Event_Param1>2</Event_Param1>
 	</Event>
 	
+	<Event Name="Rebels_Enter_Tech_05">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+	</Event>
+	
 	<Event Name="Unlock_Wedge">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
@@ -25,19 +30,32 @@
 		<Prereq>Lock_Enter_Tech_03</Prereq>
 	</Event>
 	
-		<Event Name="Build_Wedge">
+	<Event Name="Build_Wedge">
 		<Event_Type>STORY_CONSTRUCT</Event_Type>
 		<Event_Param1>Wedge_Lusankya</Event_Param1>
 		<Event_Param2>1</Event_Param2>
 		<Event_Param3>Rebel</Event_Param3>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Wedge_Rogue_Squadron_Space</Reward_Param1>
 	</Event>
 	
+	<Event Name="Wedge_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Wedge_Rogue_Squadron_Space</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Tycho_Passive</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+		
 	<Event Name="R_Destroy_Wedge">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>3</Event_Param1>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Wedge_Rogue_Squadron_Space</Reward_Param1>
 		<Prereq>Rebels_Enter_Tech_05</Prereq>
+		<Branch>Tycho_Passive</Branch>
 	</Event>
 	
 	<Event Name="Spawn_Rogue_Squadron">
@@ -47,7 +65,7 @@
 		<Reward_Param1>Rogue_Squadron_Space</Reward_Param1>
 		<Reward_Param2>Coruscant</Reward_Param2>
 		<Prereq>R_Destroy_Wedge</Prereq>
-	</Event>
-	
+		<Prereq>Build_Wedge</Prereq>
+	</Event>	
 	
 </Story>

@@ -71,3 +71,16 @@ SelectedPlanetChangedEvent = Class {
         end
     end
 }
+
+GalacticWeekChangedEvent = Class {
+    Extends = Observable,
+    Constructor = function(self, player)
+        self.Player = player
+    end,
+
+    Check = function(self)
+        if Check_Story_Flag(self.Player, "GALACTIC_CYCLE_ELAPSED", nil, true) then
+            self:Notify()
+        end
+    end
+}

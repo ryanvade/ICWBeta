@@ -41,15 +41,9 @@
 
 require("pgcommands")
 
---
--- Define_State -- Define a new state in the state machine table.
---
--- @param state This is the tag used to identify the state.  Usually 
---			a text value or a number
--- @param function_value This is the function value that will process
---			all the messages associated with the given state.
--- @since 4/22/2005 7:26:01 PM -- BMH
--- 
+---Define a new state in the state machine table.
+---@param state string This is the tag used to identify the state. Usually a text value or a number
+---@param function_value function This is the function value that will process all the messages associated with the given state.
 function Define_State(state, function_value)
 	local curproc = StateMachine[state]
 	if curproc == nil then
@@ -66,23 +60,14 @@ function Define_State(state, function_value)
 end
 
 
---
--- Advance_State -- Advance to the next state based on the 
--- 	order of state definition
---
--- @since 4/22/2005 7:26:01 PM -- BMH
--- 
+---Advance to the next state based on the order of state definition
 function Advance_State()
 	NextState = StateMachineIndexes[CurrentStateIndex + 1]
 end
 
 
---
--- Set_Next_State -- Set the next state to transition to.
---
--- @param state tag specifying the state to transition to.
--- @since 4/22/2005 7:26:01 PM -- BMH
--- 
+---Set the next state to transition to.
+---@param state string Tag specifying the state to transition to.
 function Set_Next_State(state)
 	if state == nil or StateMachine[state] ~= nil then
 		NextState = state
@@ -90,33 +75,21 @@ function Set_Next_State(state)
 end
 
 
---
--- Get_Current_State -- Returns what the current state is.
---
--- @return object detailing what the current state is.
--- @since 4/22/2005 7:12:14 PM -- BMH
--- 
+---Returns what the current state is.
 function Get_Current_State()
 	return CurrentState
 end
 
 
---
--- Get_Next_State -- Returns what the next state will be.
---
--- @return object detailing what the next state will be.
--- @since 4/22/2005 7:12:14 PM -- BMH
--- 
+---Returns what the next state will be.
+---@return function Object detailing what the next state will be.
 function Get_Next_State()
 	return NextState
 end
 
 
---
--- Process_States -- This function is called to advance the State Machine through it's states
---
--- @since 4/22/2005 7:12:14 PM -- BMH
--- 
+
+---This function is called to advance the State Machine through it's states
 function Process_States()
 
 	while NextState ~= nil do
@@ -140,12 +113,7 @@ function Process_States()
 	end
 end
 
-
---
--- Base_Definitions -- This function is called once when the script is first created.
---
--- @since 4/22/2005 6:04:55 PM -- BMH
--- 
+---This function is called once when the script is first created.
 function Base_Definitions()
 	DebugMessage("%s -- In Base_Definitions", tostring(Script))
 

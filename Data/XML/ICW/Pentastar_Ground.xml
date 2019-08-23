@@ -27,7 +27,7 @@
 
 	</GroundInfantry>
 
-		<GroundCompany Name="Pentastar_Army_Trooper_Squad">
+	<GroundCompany Name="Pentastar_Army_Trooper_Squad">
 
 		<Variant_Of_Existing_Type>Army_Trooper_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Pentastar</Affiliation>
@@ -48,7 +48,7 @@
 	</GroundCompany>
 
 
-<GroundCompany Name="Shock_Soldier_Squad_Pentastar">
+	<GroundCompany Name="Shock_Soldier_Squad_Pentastar">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_REBEL_TANK_BUSTER_SQUAD</Text_ID>
 		<!--<Encyclopedia_Good_Against> M1_Repulsor_Tank TIE_Crawler AT_AT_Walker </Encyclopedia_Good_Against>-->
@@ -115,7 +115,7 @@
 		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
-		<GroundInfantry Name="Shock_Soldier_Pentastar">
+	<GroundInfantry Name="Shock_Soldier_Pentastar">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_UNIT__EMPIRE_PLEX_SOLDIER</Text_ID>
 		<!--<Encyclopedia_Good_Against> M1_Repulsor_Tank Canderous_Assault_Tank AT_AT_Walker </Encyclopedia_Good_Against>-->
@@ -268,7 +268,7 @@
 
 	</GroundInfantry>
 
-		<GroundInfantry Name="Squad_Shock_Soldier_Pentastar">
+	<GroundInfantry Name="Squad_Shock_Soldier_Pentastar">
 		<Variant_Of_Existing_Type>Shock_Soldier_Pentastar</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_PLEX_SOLDIER</Text_ID>
 		<LandBehavior>SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
@@ -284,8 +284,14 @@
 		<Conversion_Ability_Changes_To_Enemy> Squad_Shock_Soldier_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
 	</GroundInfantry>
 
+	
+	<GroundCompany Name="Pentastar_Light_Scout_Squad">
+		<Variant_Of_Existing_Type>Imperial_Light_Scout_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Pentastar</Affiliation>
+		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
+	</GroundCompany>
 
-<GroundCompany Name="Pentastar_Walker_Group">
+	<GroundCompany Name="Pentastar_Walker_Group">
 		<Text_ID>TEXT_UNIT_POD_WALKER</Text_ID>
 		<!--<Encyclopedia_Good_Against> T2B_Tank MPTL Pod_Walker </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> T4B_Tank Plex_Soldier UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>-->
@@ -519,7 +525,7 @@
 
 
 
-<GroundInfantry Name="Navytrooper">
+	<GroundInfantry Name="Navytrooper">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_UNIT_NAVYTROOPER</Text_ID>
 		<!--<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Underworld_Merc</Encyclopedia_Good_Against>-->
@@ -567,7 +573,7 @@
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
 		<Deploys>No</Deploys>
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Pentastar</Affiliation>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Political_Control>0</Political_Control>
 		<Size_Value>10</Size_Value>
@@ -696,62 +702,10 @@
 
 	</GroundCompany>
 
-		<GroundCompany Name="TIE_Crawler_Company_Pentastar">
-		<Text_ID>TEXT_UNIT_CRAWLER</Text_ID>
-		<!--<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T2B_Tank Plex_Soldier UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>20</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+	<GroundCompany Name="TIE_Crawler_Company_Pentastar">
+		<Variant_Of_Existing_Type>Century_Brigade</Variant_Of_Existing_Type>
 		<Affiliation>Pentastar</Affiliation>
-		<Build_Cost_Credits>600</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>30</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>P_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>2</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>tank</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Tanks</Company_Transport_Unit>
-		<Company_Units>Century_Tank, Century_Tank</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_tiecrawl.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Tie_Mauler</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tie_Mauler</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>180</Score_Cost_Credits>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CRAWLER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_TANK</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-	<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
- 			<Unit_Ability>
-  				<Type>HUNT</Type>
-  			</Unit_Ability>
-  		</Unit_Abilities_Data>
-
-		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
 	<GroundCompany Name="Fortress_Company">
@@ -1253,67 +1207,9 @@
 
 
 	<GroundCompany Name="Penta_ATPT_Squad">
-		<LOD_Bias>4</LOD_Bias>
-		<Text_ID>TEXT_IMPERIAL_AT_PT_WALKER</Text_ID>
-		<!--<Encyclopedia_Good_Against> UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank Plex_Soldier </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>24</Damage>
-		<Autoresolve_Health>200</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_ATPT_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Pentastar</Affiliation>
-		<Build_Cost_Credits>900</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>35</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>0</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>P_Ground_Light_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>1</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
-		<Company_Units>AT_PT_Walker, AT_PT_Walker, AT_PT_Walker</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_atpt.tga</Icon_Name>
-		<GUI_Model_Name>ATPT.ALO</GUI_Model_Name>
-		<GUI_Distance>115</GUI_Distance>
-		<GUI_Offset>0 0 15</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_ST</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_ST</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>150</Score_Cost_Credits>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>HUNT</Type>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-	<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_ATPT</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
 	<GroundCompany Name="Penta_Heavy_Assault_Company">
@@ -1373,65 +1269,9 @@
 		<Population_Value>1</Population_Value>
 	</GroundCompany>
 	<GroundCompany Name="Pentastar_Anti_Aircraft_Company">
-		<Text_ID>TEXT_IMPERIAL_ANTI_AIRCRAFT</Text_ID>
-		<!--<Encyclopedia_Good_Against> Snowspeeder Y-wing </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T4B_Tank MPTL </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>30</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_Anti_Aircraft_Company</Variant_Of_Existing_Type>
 		<Affiliation>Pentastar</Affiliation>
-		<Build_Cost_Credits>350</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>70</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>P_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>5</Formation_Priority>
-		<Is_Escort>no</Is_Escort>
-		<Ship_Class>tank</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Tanks</Company_Transport_Unit>
-		<Company_Units>AT_AA_Walker, AT_AA_Walker</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_ataa.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_AA</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_AA</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>500</Score_Cost_Credits>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>MISSILE_SHIELD</Type>
-
-				<Effective_Radius>100</Effective_Radius>
-				<Recharge_Seconds>20</Recharge_Seconds>
-				<Expiration_Seconds>10</Expiration_Seconds>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>6.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_ATAA</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
 	<SpecialStructure Name="P_Ground_Barracks">
@@ -1742,7 +1582,7 @@
 				Teradoc_Walker_Group,
 				Teradoc_Speeder_Group,
 				Teradoc_Skiff_Group,
-				Teradoc_IFTX_Group,
+				Teradoc_SA5_Group,
 				Teradoc_ATPT_Squad,
 				PL_Light_Reflective_Armor_L1_Upgrade,
 				PL_Light_Reflective_Armor_L2_Upgrade,
@@ -1952,7 +1792,7 @@
 				LAAT_Group_Teradoc,
 				Teradoc_Artillery_Corp,
 				TIE_Crawler_Company_Teradoc,
-				Fortress_Company_Delvardus,
+				PX4_Company_Teradoc,
 				Teradoc_Heavy_Assault_Company,
 				Teradoc_Anti_Aircraft_Company,
 				PL_Heavy_Reflective_Armor_L1_Upgrade,
@@ -3447,73 +3287,5 @@
 
 		</Abilities>
     </SpecialStructure>
-
-	<GroundCompany Name="Pentastar_Light_Scout_Squad">
-		<LOD_Bias>5</LOD_Bias>
-		<Text_ID>TEXT_IMPERIAL_LIGHT_SCOUT_SQUAD</Text_ID>
-		<!--<Encyclopedia_Good_Against> Rebel_Trooper MPTL </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 0 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>10</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
-		<Affiliation>Pentastar</Affiliation>
-		<Build_Cost_Credits>75</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>25</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>P_Ground_Barracks</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>ABILITY_COUNTDOWN, DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>1</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
-		<Company_Units>Scout_Trooper, Scout_Trooper</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_scout_trooper.tga</Icon_Name>
-		<GUI_Model_Name>EV_Bike.ALO</GUI_Model_Name>
-		<GUI_Distance>65</GUI_Distance>
-		<GUI_Offset>0 0 5</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Scout_Trooper</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Scout_Trooper</SFXEvent_Fleet_Move>
-
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>650</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>6.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_SCOUTTROOPER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>UNTARGETED_STICKY_BOMB</Type>
-				<Recharge_Seconds>60</Recharge_Seconds>
-				<Spawned_Object_Type>Proj_Speeder_Bomb</Spawned_Object_Type>
-				<Bomb_Countdown_Seconds>3</Bomb_Countdown_Seconds>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-		<Population_Value>1</Population_Value>
-		<Score_Cost_Credits>150</Score_Cost_Credits>
-	</GroundCompany>
 
 </Remnant_Space_Units>

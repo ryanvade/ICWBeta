@@ -532,8 +532,8 @@ function GalacticAttackAllowed(difficulty, ai_territories_just_gained)
 		-- AI has to wait for player wins		
 
 		-- Difficulty will dictate aggressiveness and amount of contrived breathing room the AI gives for free
-		min_player_wins_unresponded = 4
-		max_player_wins_unresponded = 8
+		min_player_wins_unresponded = 8
+		max_player_wins_unresponded = 10
 		max_ai_attacks_allowed = 2
 		if difficulty == "Normal" then
 			min_player_wins_unresponded = 2
@@ -601,7 +601,7 @@ end
 
 function DifficultyBasedMinPause(difficulty)
 
-	sleep_duration = 300
+	sleep_duration = 700
 	if difficulty == "Normal" then
 		sleep_duration = 200
 	elseif difficulty == "Hard" then

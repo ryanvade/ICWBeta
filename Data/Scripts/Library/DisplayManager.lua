@@ -36,6 +36,7 @@ OrbitalStructureDisplay = Class {
         ["HUTTS"] = {r = 255, g = 255, b = 255},
         ["WARLORDS"] = {r = 142, g = 195, b = 0},
         ["CORPORATE_SECTOR"] = {r = 176, g = 124, b = 172},
+        ["SARLACC"] = {r = 212, g = 81, b = 255},
         ["NEUTRAL"] = {r = 100, g = 100, b = 100},
         ["HOSTILE"] = {r = 153, g = 21, b = 223}
     },
@@ -80,6 +81,15 @@ OrbitalStructureDisplay = Class {
                 TRUtil.ShowScreenText(structureText, -1, number, color)
             end
         end
+		
+		local influenceOnPlanet = planet:get_influence_information()
+		
+        local influenceLevel = GameObjectNumber(influenceOnPlanet)
+		if influenceLevel then
+			TRUtil.ShowScreenText("TEXT_INFLUENCE_AMOUNT", -1, influenceLevel, color)
+		end
+		table.insert(self.CurrentText, "TEXT_INFLUENCE_AMOUNT")
+
     end,
 
     Clear = function(self)

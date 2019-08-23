@@ -73,19 +73,48 @@ function PlanetModifiers.trade_port_credit_boost(source_planet)
         source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_3", false)
         source_planet:set_bonus_text("Trade_Port_Credit_Boost", nil)
     elseif num_trade_ports >= 9 then
-        source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_1", false)
+        source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_1", true)
         source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_2", false)
-        source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_3", true)
-        source_planet:set_bonus_text("Trade_Port_Credit_Boost", "TRADE_PORT_CREDIT_BOOST_TIER_3")
+        source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_3", false)
+        source_planet:set_bonus_text("Trade_Port_Credit_Boost", "TRADE_PORT_CREDIT_BOOST_TIER_1")
     elseif num_trade_ports >= 6 then
         source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_1", false)
         source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_2", true)
         source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_3", false)
         source_planet:set_bonus_text("Trade_Port_Credit_Boost", "TRADE_PORT_CREDIT_BOOST_TIER_2")
     elseif num_trade_ports >= 3 then
-        source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_1", true)
+        source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_1", false)
         source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_2", false)
-        source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_3", false)
-        source_planet:set_bonus_text("Trade_Port_Credit_Boost", "TRADE_PORT_CREDIT_BOOST_TIER_1")
+        source_planet:enable_ability("Trade_Port_Credit_Boost_Tier_3", true)
+        source_planet:set_bonus_text("Trade_Port_Credit_Boost", "TRADE_PORT_CREDIT_BOOST_TIER_3")
+    end
+end
+
+function PlanetModifiers.influence_credit_boost(source_planet)
+
+    local owner_name = source_planet:get_owner().Get_Faction_Name()
+
+    local influence_level = source_planet:get_influence_information()
+
+    if influence_level < 3 then
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_1", false)
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_2", false)
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_3", false)
+        source_planet:set_bonus_text("Influence_Credit_Boost", nil)
+    elseif influence_level >= 8 then
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_1", true)
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_2", false)
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_3", false)
+        source_planet:set_bonus_text("Influence_Credit_Boost", "INFLUENCE_CREDIT_BOOST_TIER_1")
+    elseif influence_level >= 6 then
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_1", false)
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_2", true)
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_3", false)
+        source_planet:set_bonus_text("Trade_Port_Credit_Boost", "INFLUENCE_CREDIT_BOOST_TIER_1")
+    elseif influence_level >= 3 then
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_1", false)
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_2", false)
+        source_planet:enable_ability("Influence_Credit_Boost_Tier_3", true)
+        source_planet:set_bonus_text("Influence_Credit_Boost", "INFLUENCE_CREDIT_BOOST_TIER_3")
     end
 end

@@ -86,7 +86,8 @@
 	</Event>
 	
 	<Event Name="Devastator_Lock">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>40</Event_Param1> <!-- GI don't know why this needs to wait so long -->
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>World_Devastator</Reward_Param1>
 		<Prereq>Universal_Story_Start</Prereq>

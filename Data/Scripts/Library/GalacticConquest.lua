@@ -19,22 +19,28 @@
 --******************************************************************************
 
 
-
+require("PGSpawnUnits")
 require("TRUtil")
 require("Class")
 require("GalacticEvents")
 require("Planet")
+require("GovernmentNewRepublic")
 
 GalacticConquest = Class {
   Constructor = function(self, player_agnostic_plot, playableFactions)
     self.HumanPlayer = self:FindHumanPlayerInTable(playableFactions)
 
+    self.NRGOV = GovernmentNewRepublic:New()
+
     self.Planets = self:GetPlanets()
     self:InitializeEvents(player_agnostic_plot)
+    self.LastCycleTime = 0
+
     self.Events = {
         SelectedPlanetChanged = SelectedPlanetChangedEvent:New(self.HumanPlayer, self.Planets),
         PlanetOwnerChanged = PlanetOwnerChangedEvent:New(self.Planets),
-        GalacticProductionFinished = ProductionFinishedEvent:New(self.Planets)
+        GalacticProductionFinished = ProductionFinishedEvent:New(self.Planets),
+        GalacticWeekChanged = GalacticWeekChangedEvent:New(self.Player)
     }
   end,
 
@@ -42,6 +48,15 @@ GalacticConquest = Class {
     self.Events.SelectedPlanetChanged:Check()
     self.Events.PlanetOwnerChanged:Check()
     self.Events.GalacticProductionFinished:Check()
+    local current = GetCurrentTime()
+    if current - self.LastCycleTime >= 40 then
+      for _, planet in pairs(self.Planets) do
+        planet:update_influence_information()
+      end
+      self.LastCycleTime = current
+
+    end
+    self.NRGOV:Update()  
   end,
 
   GetSelectedPlanet = function(self)

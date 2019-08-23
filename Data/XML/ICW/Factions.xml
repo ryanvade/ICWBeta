@@ -120,8 +120,8 @@
 		Generic_Procursator, Generic_Providence, Generic_Venator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, MTC_Sensor,
 		Alliance_Assault_Frigate, BAC, Dreadnaught, Katana_Dreadnaught, MC40a,
 		<!--Capitals-->
-		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Torpedo_Sphere,
-		Endurance, Majestic, Home_One_Type, Calamari_Cruiser, MC80B, MC90, Nebula, Dauntless
+		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Generic_Tector, Torpedo_Sphere,
+		Endurance, Majestic, Home_One_Type, Calamari_Cruiser, MC80B, MC90, Nebula, Dauntless, Invincible_Cruiser,
 		<!--Supers-->
 		Viscount,
 		<!--Heroes-->
@@ -338,7 +338,7 @@
 		<SFXEvent_Unit_Type_Spotted>Kyle_Katarn,							Unit_Announce_Katarn_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Generic_Field_Commander_Rebel,	Unit_Announce_R_Field_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Han_Solo,								Unit_Announce_Solo_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
-		<SFXEvent_Unit_Type_Spotted>General_Veers,						Unit_Announce_Veers_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
+		<SFXEvent_Unit_Type_Spotted>Veers_AT_AT_Walker,						Unit_Announce_Veers_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Grand_Admiral_Thrawn,		        Unit_Announce_Thrawn_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Generic_Executor,		Unit_Announce_Executor_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Luke_Skywalker_Jedi,		        Unit_Announce_Luke_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
@@ -846,9 +846,9 @@
 		<!--Light Frigates-->
 		Carrack_Cruiser, Generic_Acclamator_Assault_Ship, Dreadnaught, Katana_Dreadnaught, Enforcer, Generic_Gladiator, Munificent, Neutron_Star, Strike_Cruiser, Vindicator_Cruiser,
 		<!--Heavy Frigates-->
-		Generic_Procursator, Generic_Providence, Generic_Venator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, MTC_Sensor,
+		Generic_Procursator, Generic_Providence, Generic_Venator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, MTC_Sensor, Dauntless
 		<!--Capitals-->
-		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Torpedo_Sphere,
+		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Generic_Tector, Torpedo_Sphere,
 		<!--Supers-->
 		Generic_Bellator, Generic_Executor, Sovereign, Dominion, Megador,
 		<!--Heroes-->
@@ -1068,7 +1068,7 @@
 		<SFXEvent_Unit_Type_Spotted>Kyle_Katarn,							Unit_Announce_Katarn_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Generic_Field_Commander_Rebel,	Unit_Announce_R_Field_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Han_Solo,								Unit_Announce_Solo_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
-		<SFXEvent_Unit_Type_Spotted>General_Veers,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
+		<SFXEvent_Unit_Type_Spotted>Veers_AT_AT_Walker,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Grand_Admiral_Thrawn,		        Unit_Announce_Thrawn_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Generic_Executor,		Unit_Announce_Executor_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Luke_Skywalker_Jedi,		        Unit_Announce_Luke_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
@@ -1623,12 +1623,12 @@
 
 	<Faction Name="Sarlacc">
 
-		<Is_Debug_Switchable_To> No </Is_Debug_Switchable_To>
-		<Create_Player_In_Multiplayer_Games> Yes </Create_Player_In_Multiplayer_Games>
+		<Is_Debug_Switchable_To> Yes </Is_Debug_Switchable_To>
+		<Create_Player_In_Multiplayer_Games> No </Create_Player_In_Multiplayer_Games>
 		<Basic_AI> GenericAI </Basic_AI>
 		<Text_ID> TEXT_FACTION_HAPES </Text_ID>
-		<Icon_Name> i_button_command_bar_jabba_symbol.tga </Icon_Name>
-		<Alternate_Icon_Name> i_button_command_bar_jabba_symbol.tga </Alternate_Icon_Name>
+		<Icon_Name> i_multiplay_hapans.tga </Icon_Name>
+		<Alternate_Icon_Name> i_multiplay_hapans.tga </Alternate_Icon_Name>
 		<Ground_Base_Icon_Name> groundbase_icon.tga </Ground_Base_Icon_Name>
 		<Star_Base_Icon_Name> spacestation_icon.tga </Star_Base_Icon_Name>
 		<Ground_Transport_Icon_Name> trooper_icon.tga </Ground_Transport_Icon_Name>
@@ -1644,7 +1644,7 @@
 		<Credits_Accumulation_Factor> 1.0 </Credits_Accumulation_Factor>
 		<Planet_Icon_Scale> 10.0 </Planet_Icon_Scale>
 		<Planet_Icon_Offset> 10.0, 10.0, -1.1 </Planet_Icon_Offset>
-		<Is_Playable>False</Is_Playable>
+		<Is_Playable>True</Is_Playable>
 		<Primary_Enemy> Pirates </Primary_Enemy>
 		<Hyperspace_Speed_Factor>0.07</Hyperspace_Speed_Factor>
 		<Is_Neutral> No </Is_Neutral>
@@ -1665,6 +1665,8 @@
 		<Easily_Bribed> Yes </Easily_Bribed>
 
 		<Can_Control_Planets>true</Can_Control_Planets>
+		
+		<Multiplayer_Map_Preview_Icon>i_multiplay_hapans.TGA</Multiplayer_Map_Preview_Icon>
 
 	</Faction>
 
@@ -1954,7 +1956,7 @@
 		<SFXEvent_Unit_Type_Spotted>Kyle_Katarn,							Unit_Announce_Katarn_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Generic_Field_Commander_Rebel,	Unit_Announce_R_Field_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Han_Solo,								Unit_Announce_Solo_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
-		<SFXEvent_Unit_Type_Spotted>General_Veers,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
+		<SFXEvent_Unit_Type_Spotted>Veers_AT_AT_Walker,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Grand_Admiral_Thrawn,		        Unit_Announce_Thrawn_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Generic_Executor,		Unit_Announce_Executor_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Luke_Skywalker_Jedi,		        Unit_Announce_Luke_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
@@ -2455,7 +2457,7 @@
 		<!--Heavy Frigates-->
 		Generic_Procursator, Generic_Providence, Generic_Venator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, MTC_Sensor, 
 		<!--Capitals-->
-		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Torpedo_Sphere, Krin_Invincible, Implacable_Star_Destroyer,
+		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Generic_Tector, Torpedo_Sphere, Krin_Invincible, Implacable_Star_Destroyer,
 		<!--Supers-->
 		Generic_Bellator, Generic_Executor, Sovereign, Razors_Kiss, Iron_Fist
 		<!--Heroes-->
@@ -2672,7 +2674,7 @@
 		<SFXEvent_Unit_Type_Spotted>Kyle_Katarn,							Unit_Announce_Katarn_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Generic_Field_Commander_Rebel,	Unit_Announce_R_Field_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Han_Solo,								Unit_Announce_Solo_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
-		<SFXEvent_Unit_Type_Spotted>General_Veers,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
+		<SFXEvent_Unit_Type_Spotted>Veers_AT_AT_Walker,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Grand_Admiral_Thrawn,		        Unit_Announce_Thrawn_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Generic_Executor,		Unit_Announce_Executor_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Luke_Skywalker_Jedi,		        Unit_Announce_Luke_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
@@ -3172,7 +3174,7 @@
 		<!--Heavy Frigates-->
 		Generic_Procursator, Generic_Providence, Generic_Venator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, MTC_Sensor, 
 		<!--Capitals-->
-		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Torpedo_Sphere, 
+		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Generic_Tector, Torpedo_Sphere, 
 		<!--Supers-->
 		Generic_Bellator, Generic_Executor, Sovereign, 
 		<!--Heroes-->
@@ -3390,7 +3392,7 @@
 		<SFXEvent_Unit_Type_Spotted>Kyle_Katarn,							Unit_Announce_Katarn_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Generic_Field_Commander_Rebel,	Unit_Announce_R_Field_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Han_Solo,								Unit_Announce_Solo_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
-		<SFXEvent_Unit_Type_Spotted>General_Veers,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
+		<SFXEvent_Unit_Type_Spotted>Veers_AT_AT_Walker,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Grand_Admiral_Thrawn,		        Unit_Announce_Thrawn_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Generic_Executor,		Unit_Announce_Executor_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Luke_Skywalker_Jedi,		        Unit_Announce_Luke_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
@@ -3888,7 +3890,7 @@
 		<!--Heavy Frigates-->
 		Generic_Procursator, Generic_Providence, Generic_Venator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, MTC_Sensor, 
 		<!--Capitals-->
-		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Torpedo_Sphere, 
+		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Generic_Tector, Torpedo_Sphere, 
 		<!--Supers-->
 		Generic_Bellator, Generic_Executor, Sovereign, 
 		<!--Heroes-->
@@ -4106,7 +4108,7 @@
 		<SFXEvent_Unit_Type_Spotted>Kyle_Katarn,							Unit_Announce_Katarn_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Generic_Field_Commander_Rebel,	Unit_Announce_R_Field_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Han_Solo,								Unit_Announce_Solo_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
-		<SFXEvent_Unit_Type_Spotted>General_Veers,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
+		<SFXEvent_Unit_Type_Spotted>Veers_AT_AT_Walker,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Grand_Admiral_Thrawn,		        Unit_Announce_Thrawn_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Generic_Executor,		Unit_Announce_Executor_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Luke_Skywalker_Jedi,		        Unit_Announce_Luke_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
@@ -4585,7 +4587,7 @@
 		<!--Heavy Frigates-->
 		Generic_Procursator, Generic_Providence, Generic_Venator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, MTC_Sensor, 
 		<!--Capitals-->
-		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Torpedo_Sphere, 
+		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Generic_Tector, Torpedo_Sphere, 
 		<!--Supers-->
 		Generic_Bellator, Generic_Executor, Sovereign, 
 		<!--Heroes-->
@@ -4804,7 +4806,7 @@
 		<SFXEvent_Unit_Type_Spotted>Kyle_Katarn,							Unit_Announce_Katarn_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Generic_Field_Commander_Rebel,	Unit_Announce_R_Field_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Han_Solo,								Unit_Announce_Solo_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
-		<SFXEvent_Unit_Type_Spotted>General_Veers,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
+		<SFXEvent_Unit_Type_Spotted>Veers_AT_AT_Walker,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Grand_Admiral_Thrawn,		        Unit_Announce_Thrawn_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Generic_Executor,		Unit_Announce_Executor_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Luke_Skywalker_Jedi,		        Unit_Announce_Luke_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
@@ -5384,9 +5386,9 @@
 		<!--Light Frigates-->
 		Carrack_Cruiser, Generic_Acclamator_Assault_Ship, Dreadnaught, Katana_Dreadnaught, Enforcer, Generic_Gladiator, Munificent, Neutron_Star, Strike_Cruiser, Vindicator_Cruiser,
 		<!--Heavy Frigates-->
-		Generic_Procursator, Generic_Providence, Generic_Venator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, MTC_Sensor, Bulwark_I,
+		Generic_Procursator, Generic_Providence, Generic_Venator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, MTC_Sensor, Bulwark_I, Dauntless
 		<!--Capitals-->
-		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Lucrehulk_CSA, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Torpedo_Sphere, Invincible_Cruiser, Bulwark_III,
+		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Lucrehulk_CSA, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Generic_Tector, Torpedo_Sphere, Invincible_Cruiser, Bulwark_III,
 		<!--Supers-->
 		Generic_Bellator, Generic_Executor, Sovereign, Dominion, Megador,
 		<!--Heroes-->
@@ -5595,7 +5597,7 @@
 		<SFXEvent_Unit_Type_Spotted>Kyle_Katarn,							Unit_Announce_Katarn_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Generic_Field_Commander_Rebel,	Unit_Announce_R_Field_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Han_Solo,								Unit_Announce_Solo_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
-		<SFXEvent_Unit_Type_Spotted>General_Veers,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
+		<SFXEvent_Unit_Type_Spotted>Veers_AT_AT_Walker,						Unit_Announce_Veers_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 
         <SFXEvent_Unit_Type_Spotted>Grand_Admiral_Thrawn,		        Unit_Announce_Thrawn_Empire_Soldier</SFXEvent_Unit_Type_Spotted>
         <SFXEvent_Unit_Type_Spotted>Executor_Super_Star_Destroyer,		Unit_Announce_Executor_Empire_Soldier</SFXEvent_Unit_Type_Spotted>

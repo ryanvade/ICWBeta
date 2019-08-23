@@ -39,6 +39,32 @@
 </Event>
 
   <!-- ================================================================= -->
+  <!-- ==============       Influence Mechanics          =============== -->
+  <!-- ================================================================= -->
+  
+ 
+  
+  <!-- ================================================================= -->
+  <!-- ===================== GALACTIC CYCLE PERIOD ===================== -->
+  <!-- ================================================================= -->
+  
+  	<Event Name="Galactic_Cycle_Finished">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>40</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>GALACTIC_CYCLE_ELAPSED</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+	</Event> 
+  
+    <Event Name="Galactic_Cycle_Increment">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>40</Event_Param1>
+		<Reward_Type>INCREMENT_FLAG</Reward_Type>
+		<Reward_Param1>WEEKS</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event> 
+
+  <!-- ================================================================= -->
   <!-- ====================== BEGIN FILTER EVENTS ====================== -->
   <!-- ================================================================= -->
 

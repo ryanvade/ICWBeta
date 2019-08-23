@@ -89,7 +89,7 @@
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Tech_Level>0</Tech_Level>
+		<Tech_Level>99</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
@@ -130,52 +130,9 @@
 	</GroundCompany>
 
 	<GroundCompany Name="Zsinj_Anti_Infantry_Brigade">
-		<Text_ID>TEXT_IMPERIAL_ANTI_INFANTRY</Text_ID>
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>20</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_Anti_Infantry_Brigade</Variant_Of_Existing_Type>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>600</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>30</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>0</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>Z_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>2</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>tank</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
-		<Company_Units>TIE_Crawler, TIE_Crawler, TIE_Crawler, TIE_Crawler</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_tie_crawler.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Tie_Mauler</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tie_Mauler</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>180</Score_Cost_Credits>
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_MAULER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>SELF_DESTRUCT</Type>
-				<Expiration_Seconds>3</Expiration_Seconds>
-			</Unit_Ability>
-			
-		</Unit_Abilities_Data>
-		
-		<Population_Value>1</Population_Value>
 	</GroundCompany>
 	
 	<GroundInfantry Name="Raptor_Scout_Trooper">
@@ -606,6 +563,7 @@
 			Forest, 			ZJ_Raptor.ALO,
 			Swamp, 				ZJ_Raptor.ALO
 		</Land_Terrain_Model_Mapping>
+		<Land_Model_Anim_Override_Name>ZJ_Raptor.ALO</Land_Model_Anim_Override_Name>
 		<Affiliation>Pirates</Affiliation>
 		<Encyclopedia_Text>TEXT_TOOLTIP_RAPTORTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<No_Colorization_Color> 251, 174, 1, 255 </No_Colorization_Color>
@@ -685,241 +643,30 @@
 	</GroundInfantry>
 	
 	<GroundCompany Name="Zsinj_Heavy_Scout_Squad">
-		<LOD_Bias>4</LOD_Bias>
-		<Text_ID>TEXT_IMPERIAL_HEAVY_SCOUT_SQUAD</Text_ID>
-		<!--<Encyclopedia_Good_Against> UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank Plex_Soldier </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>24</Damage>
-		<Autoresolve_Health>200</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>700</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>40</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>Z_Ground_Light_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>1</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
-		<Company_Units>AT_ST_Walker, AT_ST_Walker, AT_ST_Walker</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_atst.tga</Icon_Name>
-		<GUI_Model_Name>EV_AT-ST.ALO</GUI_Model_Name>
-		<GUI_Distance>115</GUI_Distance>
-		<GUI_Offset>0 0 15</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_ST</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_ST</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>150</Score_Cost_Credits>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>HUNT</Type>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>17.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_ATST</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<Population_Value>1</Population_Value>
 	</GroundCompany>
 	
 	
 
 
 	<GroundCompany Name="Hailfire_Zsinj">
-		<LOD_Bias>4</LOD_Bias>
-		<Text_ID>TEXT_UNIT_HAILFIRE</Text_ID>
-		<!--<Encyclopedia_Good_Against> M1_Repulsor_Tank IFX_Fighter_tank_Empire_Armor AT_AT_Walker </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> Plex-Soldier Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>-->
-		<Encyclopedia_Text>TEXT_TOOLTIP_HAILFIRE</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
-		<Icon_Name>i_button_hailfire.tga</Icon_Name>
-		
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>60</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Hailfire_Company</Variant_Of_Existing_Type>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>600</Build_Cost_Credits>
-		<Build_Time_Seconds>15</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>0</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>Z_Ground_Light_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>6</Formation_Priority>
-		<Is_Escort>no</Is_Escort>
-		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Artillery</Company_Transport_Unit>
-		<Company_Units>Hailfire, Hailfire</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-
-		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>UHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Select_Destroyer_Droid</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Destroyer_Droid</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>650</Score_Cost_Credits>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-		<Population_Value>1</Population_Value>
-
-		<Cheap_Bribe_Cost>50</Cheap_Bribe_Cost>
-		<Expensive_Bribe_Cost>100</Expensive_Bribe_Cost>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		
-		<!-- Non-Hero unit abilities description -->
-		
 	</GroundCompany>
 
 	<GroundCompany Name="Zsinj_Armor_Group">
-		<Text_ID>TEXT_IMPERIAL_ARMOR_GROUP</Text_ID>
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>40</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_Armor_Group</Variant_Of_Existing_Type>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>1000</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>50</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>Z_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>3</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>tank</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Tanks</Company_Transport_Unit>
-		<Company_Units>M1_Repulsor_Tank, M1_Repulsor_Tank, M1_Repulsor_Tank</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_1-m_med_repulsor_tank.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_2M_Tank</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_2M_Tank</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>500</Score_Cost_Credits>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>POWER_TO_WEAPONS</Type>
-				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
-				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0f</Mod_Multiplier>
-				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1f</Mod_Multiplier>
-				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
-				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	3.0f</Mod_Multiplier>
-				<Recharge_Seconds>60</Recharge_Seconds>
-				<Expiration_Seconds>10</Expiration_Seconds>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
-	
-		
-		<Encyclopedia_Text>TEXT_TOOLTIP_M1_REPULSOR</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TANK</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-		        
-		<Population_Value>1</Population_Value>
 	</GroundCompany>
 	
 	<GroundCompany Name="Zsinj_IDT_Squad">
-		<LOD_Bias>4</LOD_Bias>
-		<Text_ID>TEXT_UNIT_IDT</Text_ID>
-		<!--<Encyclopedia_Good_Against> U_Ground_Vehicle_Factory T4B_Tank </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> Rebel_Anti_Aircraft_Turret Underworld_Mass_Driver_Turret Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>-->
-		<Encyclopedia_Text>TEXT_TOOLTIP_IDT</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_GUNSHIP</Encyclopedia_Unit_Class>
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>24</Damage>
-		<Autoresolve_Health>200</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_IDT_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>400</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>35</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>2</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>Z_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>1</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Air</Company_Transport_Unit>
-		<Company_Units>IDT</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_idt.tga</Icon_Name>
-		<GUI_Model_Name>EV_IDT.ALO</GUI_Model_Name>
-		<GUI_Distance>115</GUI_Distance>
-		<GUI_Offset>0 0 15</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete></SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move></SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>150</Score_Cost_Credits>
-
-		
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>2000</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<Population_Value>1</Population_Value>
 	</GroundCompany>
 
  	<GroundCompany Name="Zsinj_A5_Juggernaut_Company">
@@ -982,233 +729,27 @@
 	</GroundCompany>
 
 	<GroundCompany Name="Zsinj_Century_Brigade">
-		<Text_ID>TEXT_UNIT_CRAWLER</Text_ID>
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>20</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Century_Brigade</Variant_Of_Existing_Type>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>600</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>30</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>0</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>Z_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>2</Formation_Priority>
-		<Is_Escort>yes</Is_Escort>
-		<Ship_Class>tank</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Tanks</Company_Transport_Unit>
-		<Company_Units>Century_Tank, Century_Tank</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_tiecrawl.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Tie_Mauler</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tie_Mauler</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>180</Score_Cost_Credits>
-
-	
-		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CRAWLER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>SELF_DESTRUCT</Type>
-				<Expiration_Seconds>3</Expiration_Seconds>
-			</Unit_Ability>
-			
-		</Unit_Abilities_Data>
-
-		<Population_Value>1</Population_Value>
 	</GroundCompany>
 	
 	<GroundCompany Name="Zsinj_Anti_Aircraft_Company">
-		<Text_ID>TEXT_IMPERIAL_ANTI_AIRCRAFT</Text_ID>
-		<!--<Encyclopedia_Good_Against> Snowspeeder Y-wing </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T4B_Tank MPTL </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>30</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_Anti_Aircraft_Company</Variant_Of_Existing_Type>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>350</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>70</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Special_Structures>Z_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>5</Formation_Priority>
-		<Is_Escort>no</Is_Escort>
-		<Ship_Class>tank</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Tanks</Company_Transport_Unit>
-		<Company_Units>AT_AA_Walker, AT_AA_Walker</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_ataa.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_AA</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_AA</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>500</Score_Cost_Credits>
-
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>MISSILE_SHIELD</Type>
-
-				<Effective_Radius>100</Effective_Radius>
-				<Recharge_Seconds>20</Recharge_Seconds>
-				<Expiration_Seconds>10</Expiration_Seconds>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-		
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>6.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_ATAA</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
- 
-		<Population_Value>1</Population_Value>
+		<Required_Special_Structures>Z_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
 	</GroundCompany>
 
 	<GroundCompany Name="Zsinj_Heavy_Assault_Company">
-		<LOD_Bias>0.5</LOD_Bias>
-		<Text_ID>TEXT_UNIT_AT_TE_WALKER</Text_ID>
-		<!--<Encyclopedia_Good_Against> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> Snowspeeder Plex_Soldier </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>100</Damage>
-		<Autoresolve_Health>450</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Penta_Heavy_Assault_Company</Variant_Of_Existing_Type>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>750</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>90</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<!--<Required_Ground_Base_Level>5</Required_Ground_Base_Level>-->
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>Z_Ground_Advanced_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>4</Formation_Priority>
-		<Is_Escort>no</Is_Escort>
-		<Ship_Class>walker</Ship_Class>
-		<Company_Transport_Unit>Imperial_ATAT_Barge_Heavy</Company_Transport_Unit>
-		<Company_Units>AT_TE_Walker</Company_Units>
-		<Icon_Name>i_button_atte.tga</Icon_Name>
-		<GUI_Model_Name>EV_AT-AT.ALO</GUI_Model_Name>
-		<GUI_Distance>300</GUI_Distance>
-		<GUI_Offset>0 0 30</GUI_Offset>
-		<GUI_Velocity>45</GUI_Velocity>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_AT</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_AT</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>1000</Score_Cost_Credits>
-
-	
-
-		
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1600</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Encyclopedia_Text>TEXT_TOOLTIP_ATTE</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<Population_Value>1</Population_Value>
 	</GroundCompany>
 	
 	<GroundCompany Name="Zsinj_Artillery_Corp">
-		<Text_ID>TEXT_IMPERIAL_ARTILLERY_CORPS</Text_ID>
-		<!--<Encyclopedia_Good_Against> UC_Rebel_Buildable_Anti_Vehicle_Turret UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>-->
-		<!--<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank Plex_Soldier </Encyclopedia_Vulnerable_To>-->
-		<GUI_Row> 1 </GUI_Row>
-		<Is_Dummy>Yes</Is_Dummy>
-		<Damage>60</Damage>
-		<Autoresolve_Health>100</Autoresolve_Health>
+		<Variant_Of_Existing_Type>Imperial_Artillery_Corp</Variant_Of_Existing_Type>
 		<Affiliation>Pirates</Affiliation>
-		<Build_Cost_Credits>800</Build_Cost_Credits>
-		<Piracy_Value_Credits>50</Piracy_Value_Credits>
-		<Build_Time_Seconds>80</Build_Time_Seconds>
-		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
-		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
-		<Tech_Level>1</Tech_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>Z_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
-		<Required_Planets />
-		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Formation_Priority>6</Formation_Priority>
-		<Is_Escort>no</Is_Escort>
-		<Ship_Class>artillery</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Artillery</Company_Transport_Unit>
-		<Company_Units>SPMAT_Walker</Company_Units>
-		<Max_Squad_Size> 1 </Max_Squad_Size>
-		<Icon_Name>i_button_spha_t.tga</Icon_Name>
-		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_SPMAT</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_SPMAT</SFXEvent_Fleet_Move>
-		<Score_Cost_Credits>650</Score_Cost_Credits>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
-		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		
-		<!-- Non-Hero unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>DEPLOY</Type>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-		
-		
-		<Encyclopedia_Text>TEXT_TOOLTIP_SPMA</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
-		<Maintenance_Cost>0.05</Maintenance_Cost>
-
-		<Population_Value>1</Population_Value>
 	</GroundCompany>
 	
 	<SpecialStructure Name="Z_Ground_Barracks">

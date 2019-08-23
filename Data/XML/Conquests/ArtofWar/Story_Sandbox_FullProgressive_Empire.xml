@@ -719,6 +719,22 @@
 		<Reward_Param2>1</Reward_Param2>
 	</Event>
 	
+	<Event Name="E_Destroy_Odosk">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Odosk_Team</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_05</Prereq>
+	</Event>
+	
+	<Event Name="E_Destroy_Sivron">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Sivron_Team</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_05</Prereq>
+	</Event>
+	
 	<!--<Event Name="Branch_Enabler_Reaper">
   		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
   		<Event_Param1>Reaper_Kaine</Event_Param1>

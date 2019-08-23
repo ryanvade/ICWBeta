@@ -53,7 +53,7 @@ function Definitions()
 	MaxContrastScale = 2.0
 	
 
-	Category = "Conquer_Opponent | Warlord_Conquer_Opponent"
+	Category = "Conquer_Opponent | Warlord_Conquer_Opponent | NR_Vassal_Conquer_Opponent"
 	TaskForce = {
 	-- First Task Force
 	{

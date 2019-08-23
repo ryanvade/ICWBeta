@@ -57,6 +57,7 @@ FotRObjectLibrary = {
     Units={
 		["CC7700"]={
 			Scripts={
+				"MultiLayer",
 				"InterdictorAI"
 			},
 			Fighters={
@@ -73,6 +74,30 @@ FotRObjectLibrary = {
             },
             Fighters={
                 ["NANTEX_SQUADRON"]={
+                    ["DEFAULT"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                }
+            }
+        },
+		["C9979_CARRIER"]={
+            Scripts={
+                "MultiLayer",
+                "FighterSpawn",
+                "SingleUnitRetreat"
+            },
+			Flags = {
+                HANGAR = true
+            },
+            Fighters={
+                ["VULTURE_SQUADRON"]={
+                    ["DEFAULT"] = {
+                        Reserve=1,
+                        Initial=3
+                    }
+                },
+				["HYENA_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=1,
                         Initial=1
@@ -169,6 +194,7 @@ FotRObjectLibrary = {
         },
         ["REPUBLIC_BOARDING_SHUTTLE"]={
             Scripts={
+				"MultiLayer",
                 "Boarding"
             },
             Fighters={
@@ -248,6 +274,7 @@ FotRObjectLibrary = {
         },
         ["GENERIC_SECUTOR"]={
             Scripts={
+				"MultiLayer",
                 "FighterSpawn"
             },
             Fighters={
@@ -377,6 +404,7 @@ FotRObjectLibrary = {
         },
  		["INVINCIBLE_CRUISER"]={
             Scripts={
+				"MultiLayer",
                 "FighterSpawn"
             },
             Fighters={
@@ -742,6 +770,7 @@ FotRObjectLibrary = {
         },
 		["BULWARK_I"]={
             Scripts={
+				"MultiLayer",
                 "FighterSpawn",
             },
             Fighters={
@@ -807,6 +836,7 @@ FotRObjectLibrary = {
         },
         ["GENERIC_PRAETOR"]={
             Scripts={
+				"MultiLayer",
                 "FighterSpawn",
                 "SingleUnitRetreat"
             },
@@ -820,13 +850,13 @@ FotRObjectLibrary = {
                 ["ARC_170_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=2,
-                        Initial=1
+                        Initial=2
                     }
                 },
                 ["Z95_HEADHUNTER_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=2,
-                        Initial=1
+                        Initial=2
                     }
                 }
             }
