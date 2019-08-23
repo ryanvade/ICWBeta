@@ -53,7 +53,7 @@ function Find_Faction(message)
   if message == OnEnter then
   
 			spawn_location_table = {
-                        ,["ANTEM"] = false
+                        ["ANTEM"] = false
                         ,["BASTION"] = false
                         ,["BYSS"] = false
                         ,["CARIDA"] = false
@@ -81,7 +81,7 @@ function Find_Faction(message)
                         ,["THE_MAW"] = false
                         ,["VROS"] = false
                         ,["YAVIN"] = false
-                        ["ABREGADO_RAE"] = false
+                        ,["ABREGADO_RAE"] = false
                         }
 
 
