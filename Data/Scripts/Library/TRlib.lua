@@ -1,5 +1,4 @@
 TRlib = {}
-TRlib.galactic = {}
 TRlib.internal = {}
 
 TRlib.modules = {

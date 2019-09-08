@@ -29,6 +29,7 @@ function EqualTo (num)
   }
 end
 
+---@param num number
 function GreaterThan (num)
   return {
     number = num,
@@ -38,6 +39,7 @@ function GreaterThan (num)
   }
 end
 
+---@param num number
 function GreaterOrEqualTo (num)
   return {
     number = num,
@@ -47,6 +49,7 @@ function GreaterOrEqualTo (num)
   }
 end
 
+---@param num number
 function LessThan (num)
   return {
     number = num,
@@ -56,6 +59,7 @@ function LessThan (num)
   }
 end
 
+---@param num number
 function LessOrEqualTo (num)
   return {
     number = num,
@@ -65,6 +69,8 @@ function LessOrEqualTo (num)
   }
 end
 
+---@param lower number
+---@param upper number
 function InInterval(lower, upper)
   return {
     lower = lower,
@@ -75,6 +81,7 @@ function InInterval(lower, upper)
   }
 end
 
+---@param tab number[]
 function IsOneOf(tab)
   return {
     tab = tab,

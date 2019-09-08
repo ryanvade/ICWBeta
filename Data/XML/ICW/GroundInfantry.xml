@@ -625,7 +625,7 @@
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Hover</Type>
 		<Deploys>No</Deploys>
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Pentastar, Teradoc, Hutts</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Size_Value>25</Size_Value>
 		<Damage>5</Damage>
@@ -659,6 +659,7 @@
 		<Wind_Disturbance_Strength>10</Wind_Disturbance_Strength>
 		<Wind_Disturbance_Sphere_Alpha>0.4</Wind_Disturbance_Sphere_Alpha>
 		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
+		<Destruction_Survivors> Scout_Trooper_No_Bike, 1.0 </Destruction_Survivors>
 		<SFXEvent_Select>Unit_Select_Scout_Trooper</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Scout_Trooper</SFXEvent_Move>
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Scout_Trooper</SFXEvent_Fleet_Move>
@@ -773,14 +774,14 @@
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
 		<Deploys>No</Deploys>
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Hutts, Pentastar, Teradoc, Pirates, Warlords, Underworld</Affiliation> <!-- Everyone who might possess a scout bike needs this or the scout will spawn as Empire after being killed -->
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Political_Control>0</Political_Control>
 		<Size_Value>10</Size_Value>
 		<Damage>0.6</Damage>
 		<Sensor_Range>20</Sensor_Range>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>4</Tactical_Health>
+		<Tactical_Health>8</Tactical_Health>
 		<!-- reduced from 30 -->
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>0</Energy_Capacity>
@@ -792,7 +793,7 @@
 		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
 		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
 		<Victory_Relevant>yes</Victory_Relevant>
-		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<HardPoints>HP_E11_Rifle</HardPoints>
 		<Land_FOW_Reveal_Range>350.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>150.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
@@ -1302,7 +1303,7 @@
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
 		<Deploys>No</Deploys>
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Teradoc</Affiliation>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Political_Control>0</Political_Control>
 		<Size_Value>10</Size_Value>
@@ -1579,9 +1580,9 @@
 		<Death_Clone>Damage_Self_Destruct, Stormtrooper_Splode_Clone</Death_Clone>
 		<Death_Clone>Damage_Exploding_Barrel, Stormtrooper_Splode_Clone</Death_Clone>
 		<Death_Clone>Damage_Krayt_Damage_Blast, Stormtrooper_Splode_Clone</Death_Clone>
-		<Death_Clone>Damage_Turbo_GRND, Stormtrooper_Sploded_Clone</Death_Clone>
-		<Death_Clone>Damage_SPMAT_Grenade, Stormtrooper_Sploded_Clone</Death_Clone>
-		<Death_Clone>Damage_Con_Grenade, Stormtrooper_Sploded_Clone</Death_Clone>
+		<Death_Clone>Damage_Turbo_GRND, Stormtrooper_Splode_Clone</Death_Clone>
+		<Death_Clone>Damage_SPMAT_Grenade, Stormtrooper_Splode_Clone</Death_Clone>
+		<Death_Clone>Damage_Con_Grenade, Stormtrooper_Splode_Clone</Death_Clone>
 
 		<Death_Fade_Time>0.25</Death_Fade_Time>
 		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
@@ -1789,7 +1790,7 @@
 		<Victory_Relevant>yes</Victory_Relevant>
 
 		
-				<HardPoints>HP_E11_Rifle</HardPoints>
+				<HardPoints>HP_E11_Rifle_Unskilled</HardPoints>
 
 		<!--<Projectile_Types>Proj_Hand_Blaster_Redx2</Projectile_Types>-->
 
@@ -2123,31 +2124,16 @@
 	<GroundInfantry Name="Stormtrooper_Splode_Clone">
 		<Variant_Of_Existing_Type>Stormtrooper</Variant_Of_Existing_Type>
 		<Blob_Shadow_Below_Detail_Level>9</Blob_Shadow_Below_Detail_Level>
-		<Scale_Factor>0.15</Scale_Factor>
-		<Land_Model_Name>EI_STORMIE_SPLODE.ALO</Land_Model_Name>
+		<Land_Model_Name>stormtrooper_explode.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>stormtrooper_explode.ALO</Land_Model_Anim_Override_Name>
 		<Land_Terrain_Model_Mapping>
-			Temperate, 			EI_STORMIE_SPLODE.ALO,
-			Urban, 				EI_STORMIE_SPLODE.ALO,
-			Arctic, 			EI_SNOWIE_SPLODE.ALO,
-			Volcanic, 			EI_STORMIE_SPLODE.ALO,
-			Desert, 			EI_SAND_SPLODE.ALO,
-			Forest, 			EI_STORMIE_SPLODE.ALO,
-			Swamp, 				EI_STORMIE_SPLODE.ALO
-		</Land_Terrain_Model_Mapping>
-	</GroundInfantry>
-	<GroundInfantry Name="Stormtrooper_Sploded_Clone">
-		<Variant_Of_Existing_Type>Stormtrooper</Variant_Of_Existing_Type>
-		<Blob_Shadow_Below_Detail_Level>9</Blob_Shadow_Below_Detail_Level>
-		<Scale_Factor>0.15</Scale_Factor>
-		<Land_Model_Name>EI_STORMIE_SPLODE.ALO</Land_Model_Name>
-		<Land_Terrain_Model_Mapping>
-			Temperate, 			EI_STORMIE_SPLODE.ALO,
-			Urban, 				EI_STORMIE_SPLODE.ALO,
-			Arctic, 			EI_SNOWIE_SPLODE.ALO,
-			Volcanic, 			EI_STORMIE_SPLODE.ALO,
-			Desert, 			EI_SAND_SPLODE.ALO,
-			Forest, 			EI_STORMIE_SPLODE.ALO,
-			Swamp, 				EI_STORMIE_SPLODE.ALO
+			Temperate, 			stormtrooper_explode.ALO,
+			Urban, 				stormtrooper_explode.ALO,
+			Arctic, 			snowtrooper_explode.ALO,
+			Volcanic, 			sandtrooper_explode.ALO,
+			Desert, 			sandtrooper_explode.ALO,
+			Forest, 			stormtrooper_explode.ALO,
+			Swamp, 				sandtrooper_explode.ALO
 		</Land_Terrain_Model_Mapping>
 	</GroundInfantry>
 	<GroundInfantry Name="Stormtrooper_Remote_Bomb_Death_Clone">

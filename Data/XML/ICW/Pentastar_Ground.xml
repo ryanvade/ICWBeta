@@ -26,6 +26,28 @@
 		</Land_Terrain_Model_Mapping>
 
 	</GroundInfantry>
+	
+	<GroundInfantry Name="Enforcer_Lieutenant">
+		<Variant_Of_Existing_Type>Armytrooper_Lieutenant</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_UNIT_ARMYTROOPER_LIEUTENANT</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ARMYTROOPER_LIEUTENANT TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		
+		<Icon_Name>i_button_army_trooper.tga</Icon_Name>
+		
+		<Land_Model_Anim_Override_Name>EI_ARMYTROOPERARMORED.ALO</Land_Model_Anim_Override_Name>
+		<Land_Model_Name>EI_PENTTROOPERARMORED.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EI_PENTTROOPERARMORED.ALO,
+			Urban, 				EI_PENTTROOPERARMORED.ALO,
+			Arctic, 			EI_PENTTROOPERARMORED.ALO,
+			Volcanic, 			EI_PENTTROOPERARMORED.ALO,
+			Desert, 			EI_PENTTROOPERARMORED.ALO,
+			Forest, 			EI_PENTTROOPERARMORED.ALO,
+			Swamp, 				EI_PENTTROOPERARMORED.ALO
+		</Land_Terrain_Model_Mapping>
+	</GroundInfantry>
+		
 
 	<GroundCompany Name="Pentastar_Army_Trooper_Squad">
 
@@ -37,7 +59,7 @@
 		<Text_ID>TEXT_UNIT_ENFORCERTROOPER</Text_ID>
 		<Create_Team_Type> Enforcer_Team </Create_Team_Type>
         <!-- AI  Changed to 18 troopers in squads of 9 -->
-		<Company_Units> Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper</Company_Units>
+		<Company_Units> Enforcer_Lieutenant, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper</Company_Units>
 		<Company_Units> Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper</Company_Units>
 		<Company_Units> Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper</Company_Units>
 		<Company_Units> Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper, Pentastar_Armytrooper</Company_Units>
@@ -751,7 +773,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>12.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -1080,7 +1102,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>9</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -1134,7 +1156,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>9</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -1285,8 +1307,8 @@
 		<Starting_Spawned_Units_Tech_0>Pentastar_Army_Trooper_Squad, 2</Starting_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Pentastar_Army_Trooper_Squad, -1</Reserve_Spawned_Units_Tech_0>
 		
-		<Starting_Spawned_Units_Tech_0>Shock_Soldier_Squad_Pentastar, 2</Starting_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Shock_Soldier_Squad_Pentastar, -1</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Pentastar_trooper_Squad, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Pentastar_trooper_Squad, -1</Reserve_Spawned_Units_Tech_0>
 
 		<Tactical_Buildable_Objects_Campaign>
 			Pentastar,
@@ -1300,15 +1322,12 @@
 				Pentastar_Army_Trooper_Squad,
 				Pentastar_trooper_Squad,
 				Dark_Jedi_Squad,
-				Shock_Soldier_Squad_Pentastar,
 				PL_Increased_Mobility_Upgrade,
 				PL_Stamina_Boost_Upgrade,
 				PL_Weatherproof_Upgrade,
 			Pirates,
 				Night_Sister_Company,
-				Zsinj_Shock_Soldier_Squad,
 				Zsinj_Raptor_Squad,
-				Zsinj_Shock_Soldier_Squad,
 				PL_Increased_Mobility_Upgrade,
 				PL_Stamina_Boost_Upgrade,
 				PL_Weatherproof_Upgrade,
@@ -1324,13 +1343,11 @@
 				Delvardus_trooper_Squad,
 				Delvardus_Army_Trooper_Squad,
 				Storm_Command_Team,
-				Shock_Soldier_Squad_Delvardus,
 				PL_Increased_Mobility_Upgrade,
 				PL_Stamina_Boost_Upgrade,
 				PL_Weatherproof_Upgrade,
 			Yevetha,
 				Yevetha_Infantry_Squad,
-				Yevethan_Plex_Squad,
 				PL_Increased_Mobility_Upgrade,
 				PL_Stamina_Boost_Upgrade,
 				PL_Weatherproof_Upgrade,
@@ -3170,33 +3187,33 @@
 				Jerec_Team,
 				Sariss_Team,
 				Reikas_Team,
-				PC_Level_Two_Tech_Upgrade,
-				PC_Level_Three_Tech_Upgrade,
+				EC_Level_Two_Tech_Upgrade,
+				EC_Level_Three_Tech_Upgrade,
 			Pirates,
 				Gethzerion_Team,
 				Netbers_Team,
 				Melvar_Team,
 				Lanu_Team,
-				PC_Level_Two_Tech_Upgrade,
-				PC_Level_Three_Tech_Upgrade,
+				EC_Level_Two_Tech_Upgrade,
+				EC_Level_Three_Tech_Upgrade,
 			Teradoc,
 				Boba_Fett_Team_Land_MP,
 				Dengar_Team,
 				Lott_Team,
-				PC_Level_Two_Tech_Upgrade,
-				PC_Level_Three_Tech_Upgrade,
+				EC_Level_Two_Tech_Upgrade,
+				EC_Level_Three_Tech_Upgrade,
 			Hutts,
 				Weir_Team,
 				Strang_Team,
 				General_Veers_Team,
 				Bossk_Team_Land_MP,
-				PC_Level_Two_Tech_Upgrade,
-				PC_Level_Three_Tech_Upgrade,
+				EC_Level_Two_Tech_Upgrade,
+				EC_Level_Three_Tech_Upgrade,
 			Corporate_Sector,
 				Nieler_Team,
 				Fasser_Team,
-			    PC_Level_Two_Tech_Upgrade,
-				PC_Level_Three_Tech_Upgrade,
+			    EC_Level_Two_Tech_Upgrade,
+				EC_Level_Three_Tech_Upgrade,
 		</Tactical_Buildable_Objects_Multiplayer>
 
 		<Select_Box_Scale>300</Select_Box_Scale>

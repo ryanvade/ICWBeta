@@ -356,6 +356,24 @@ GameObjectLibrary = {
             Fighters={
             }
         },
+        ["INSTANTACTION_MARKER_EMPIRE"]={
+            Scripts={
+                "MultiLayer",
+                "SingleUnitRetreat",
+                "Microjump"
+            },
+            Fighters={
+            }
+        }, 
+		["INSTANTACTION_MARKER_NEWREP"]={
+            Scripts={
+                "MultiLayer",
+                "SingleUnitRetreat",
+                "Microjump"
+            },
+            Fighters={
+            }
+        },
         ["GENERIC_INTERDICTOR_CRUISER"]={
             Scripts={
                 "MultiLayer",
@@ -1053,7 +1071,7 @@ GameObjectLibrary = {
                 },
                 ["A9_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=1,
                         TechLevel=EqualTo(4)
                     }
@@ -2149,7 +2167,7 @@ GameObjectLibrary = {
                 },
                 ["PREYBIRD_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=1,
                         TechLevel=EqualTo(5)
                     }
@@ -2255,7 +2273,7 @@ GameObjectLibrary = {
                         Initial=2
                     }
                 },
-				["2_WARPOD_SQUADRON"]={
+				["BTLB_Y-WING_SQUADRON"]={
                     ["CORPORATE_SECTOR"] = {
                         Reserve=10,
                         Initial=2
@@ -2829,7 +2847,7 @@ GameObjectLibrary = {
                 },
                 ["PREYBIRD_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=1,
                         TechLevel=EqualTo(5)
                     }
@@ -3031,7 +3049,8 @@ GameObjectLibrary = {
                 ["A9_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=2,
-                        Initial=1
+                        Initial=1,
+						TechLevel = GreaterThan(3)
                     }
                 },
                 ["TIE_INTERCEPTOR_SQUADRON"]={
@@ -3074,6 +3093,11 @@ GameObjectLibrary = {
                     ["WARLORDS"] = {
                         Reserve=4,
                         Initial=2
+                    },
+					["EMPIRE"] = {
+                        Reserve=2,
+                        Initial=1,
+						TechLevel = LessOrEqualTo(3)
                     }
                 },
 				["SHIELDED_TIE_SQUADRON"]={
@@ -3243,7 +3267,7 @@ GameObjectLibrary = {
                 },
                 ["PREYBIRD_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=1,
                         TechLevel=EqualTo(5)
                     }
@@ -3665,7 +3689,7 @@ GameObjectLibrary = {
                 },
                 ["A9_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=1,
                         TechLevel=EqualTo(4)
                     }
@@ -4522,7 +4546,7 @@ GameObjectLibrary = {
                         Initial=2
                     }
                 },
-				["CSA_Y-WING_SQUADRON"]={
+				["BTLB_Y-WING_SQUADRON"]={
                     ["CORPORATE_SECTOR"] = {
                         Reserve=0,
                         Initial=1
@@ -5212,7 +5236,7 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
-				["CSA_Y-WING_SQUADRON"]={
+				["BTLB_Y-WING_SQUADRON"]={
                     ["CORPORATE_SECTOR"] = {
                         Reserve=1,
                         Initial=1

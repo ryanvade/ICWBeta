@@ -18,39 +18,33 @@
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
 
+---@alias Class table<string, any>
 
+---Creates a new class
+---@param extends string @The name of the parent class
+---@return Class
+function class(extends)
+    local mt = {
+        __call = function(class, ...)
+            local obj = setmetatable({}, {__index = class})
 
-function CloneTable(tab)
-    local clone = {}
-    for k, v in pairs(tab) do
-        if type(v) == "table" and not v.IsClassInstance then
-            clone[k] = CloneTable(v)
-        else
-            clone[k] = v
-        end
+            if class.__extends and class.__extends.new then
+                class.__extends.new(obj, unpack(arg))
+            end
+
+            if class.new then
+                obj:new(unpack(arg))
+            end
+
+            return obj
+        end;
+    }
+
+    if extends then
+        mt.__index = extends
     end
 
-    return clone
-end
-
-function Class(tab)
-    function tab:New(...)
-        local obj = CloneTable(self)
-        obj.IsClassInstance = true
-        obj.New = nil
-
-        if obj.Extends then
-            setmetatable(obj, {__index = obj.Extends})
-        end
-
-        obj.Extends = nil
-
-        if obj.Constructor then
-            obj:Constructor(unpack(arg))
-        end
-
-        return obj
-    end
-
-    return tab
+    return setmetatable({
+        __extends = extends
+    }, mt)
 end

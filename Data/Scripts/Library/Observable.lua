@@ -22,29 +22,33 @@
 
 require("Class")
 
-Observable = Class {
-    Listeners = {},
+---@class Observable
+Observable = class()
 
-    AttachListener = function(self, listenerFunction, optionalArg)
-        if not listenerFunction then
-            return
-        end
-        self.Listeners[listenerFunction] = {Arg = optionalArg}
-    end,
+function Observable:new()
+    self.Listeners = {}
+end
 
-    DetachListener = function(self, listener)
-        self.Listeners[listener] = nil
-    end,
+function Observable:AttachListener(listenerFunction, optionalArg)
+    if not listenerFunction then
+        return
+    end
+    self.Listeners[listenerFunction] = {Arg = optionalArg}
+end
 
-    Notify = function(self, arg)
-        for listener, tab in pairs(self.Listeners) do
-            if type(listener) == "function" then
-                if tab.Arg then
-                    listener(tab.Arg, arg)
-                else
-                    listener(arg)
-                end
+function Observable:DetachListener(listener)
+    self.Listeners[listener] = nil
+end
+
+function Observable:Notify(arg)
+    for listener, tab in pairs(self.Listeners) do
+        if type(listener) == "function" then
+            if tab.Arg then
+                listener(tab.Arg, arg)
+            else
+                listener(arg)
             end
         end
     end
-}
+end
+

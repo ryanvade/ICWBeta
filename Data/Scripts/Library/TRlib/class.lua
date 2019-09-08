@@ -23,4 +23,3 @@ function TRlib.class(extends)
         __extends = extends
     }, mt)
 end
-

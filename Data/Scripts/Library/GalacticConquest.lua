@@ -18,7 +18,6 @@
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
 
-
 require("PGSpawnUnits")
 require("TRUtil")
 require("Class")
@@ -26,79 +25,78 @@ require("GalacticEvents")
 require("Planet")
 require("GovernmentNewRepublic")
 
-GalacticConquest = Class {
-  Constructor = function(self, player_agnostic_plot, playableFactions)
+GalacticConquest = class()
+function GalacticConquest:new(player_agnostic_plot, playableFactions)
     self.HumanPlayer = self:FindHumanPlayerInTable(playableFactions)
 
-    self.NRGOV = GovernmentNewRepublic:New()
+    self.NRGOV = GovernmentNewRepublic()
 
     self.Planets = self:GetPlanets()
     self:InitializeEvents(player_agnostic_plot)
     self.LastCycleTime = 0
 
     self.Events = {
-        SelectedPlanetChanged = SelectedPlanetChangedEvent:New(self.HumanPlayer, self.Planets),
-        PlanetOwnerChanged = PlanetOwnerChangedEvent:New(self.Planets),
-        GalacticProductionFinished = ProductionFinishedEvent:New(self.Planets),
-        GalacticWeekChanged = GalacticWeekChangedEvent:New(self.Player)
+        SelectedPlanetChanged = SelectedPlanetChangedEvent(self.HumanPlayer, self.Planets),
+        PlanetOwnerChanged = PlanetOwnerChangedEvent(self.Planets),
+        GalacticProductionFinished = ProductionFinishedEvent(self.Planets),
+        GalacticWeekChanged = GalacticWeekChangedEvent(self.Player),
+        GalacticHeroKilled = GalacticHeroKilledEvent()
     }
-  end,
+end
 
-  Update = function(self)
+function GalacticConquest:Update()
     self.Events.SelectedPlanetChanged:Check()
     self.Events.PlanetOwnerChanged:Check()
     self.Events.GalacticProductionFinished:Check()
+    self.Events.GalacticHeroKilled:Check()
     local current = GetCurrentTime()
     if current - self.LastCycleTime >= 40 then
-      for _, planet in pairs(self.Planets) do
-        planet:update_influence_information()
-      end
-      self.LastCycleTime = current
-
+        for _, planet in pairs(self.Planets) do
+            planet:update_influence_information()
+        end
+        self.LastCycleTime = current
     end
-    self.NRGOV:Update()  
-  end,
+    self.NRGOV:Update()
+end
 
-  GetSelectedPlanet = function(self)
+function GalacticConquest:GetSelectedPlanet()
     local selectedPlanetName = GlobalValue.Get("SELECTED_PLANET")
     if not TRUtil.ValidGlobalValue(selectedPlanetName) then
         return nil
     end
 
     return self.Planets[selectedPlanetName]
-  end,
+end
 
-  FindHumanPlayerInTable = function(self, factions)
+function GalacticConquest:FindHumanPlayerInTable(factions)
     for _, faction in pairs(factions) do
-      local player = Find_Player(faction)
-      if player.Is_Human() then
-        return player
-      end
+        local player = Find_Player(faction)
+        if player.Is_Human() then
+            return player
+        end
     end
-  end,
+end
 
-  InitializeEvents = function(self, plot)
+function GalacticConquest:InitializeEvents(plot)
     for _, planet in pairs(self.Planets) do
         local planetName = planet:get_name()
-        local event = plot.Get_Event("Zoom_Into_"..planetName)
+        local event = plot.Get_Event("Zoom_Into_" .. planetName)
         if event then
             event.Set_Reward_Parameter(1, self.HumanPlayer.Get_Faction_Name())
         end
     end
-  end;
+end
 
-  GetPlanets = function(self)
+function GalacticConquest:GetPlanets()
     local all_planets = FindPlanet.Get_All_Planets()
 
     local planets = {}
     for _, planet in pairs(all_planets) do
-      local planet_name = planet.Get_Type().Get_Name()
-      planets[planet_name] = Planet(planet_name)
+        local planet_name = planet.Get_Type().Get_Name()
+        planets[planet_name] = Planet(planet_name)
     end
 
     return planets
-  end;
-
-}
+end
 
 return GalacticConquest

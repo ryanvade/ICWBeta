@@ -42,7 +42,7 @@ function State_Init(message)
         end
 
         TransactionManager = require("TRGameModeTransactions")
-        TM = TransactionManager:New()
+        TM = TransactionManager()
         TypeLibrary = require("GameObjectLibrary")
 
         local typeEntry = TypeLibrary.Units[Object.Get_Type().Get_Name()]

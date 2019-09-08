@@ -1,3 +1,5 @@
+require("Class")
+
 ---@class Planet
 ---@field private gameObject GameObject
 ---@field private activeBonusTexts table<string, string>
@@ -5,19 +7,10 @@
 ---@field private __current_influence_dummies GameObject[]
 ---@field private __step_calculated boolean
 ---@field private __orbital_structures_in_current_step table<string, number>
-Planet = {}
+Planet = class()
 
-setmetatable(
-    Planet,
-    {
-        __call = function(_, ...)
-            return Planet.new(unpack(arg))
-        end
-    }
-)
 
-function Planet.new(name)
-    local self = setmetatable({}, {__index = Planet})
+function Planet:new(name)
     self.gameObject = FindPlanet(name)
     self.activeBonusTexts = {}
 
@@ -28,8 +21,6 @@ function Planet.new(name)
 
     self.__step_calculated = false
     self.__orbital_structures_in_current_step = {}
-
-    return self
 end
 
 function Planet:enable_ability(ability_name, bool)

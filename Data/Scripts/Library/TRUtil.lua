@@ -37,7 +37,7 @@ function TRUtil.GetPlayerAgnosticPlot()
     return Get_Story_Plot(plotName)
 end
 
-function TRUtil.ShowScreenText(textId, time, var, color)
+function TRUtil.ShowScreenText(textId, time, var, color, teletype)
     local plot = TRUtil.GetPlayerAgnosticPlot()
     local screenTextEvent = plot.Get_Event(TRUtil.ShowTextEventName)
     
@@ -51,10 +51,17 @@ function TRUtil.ShowScreenText(textId, time, var, color)
     if not var then
         var = ""
     end
+
+    local use_teletype = 0
+    if teletype then
+        use_teletype = 1
+    end
+
     screenTextEvent.Set_Reward_Parameter(0, textId)
     screenTextEvent.Set_Reward_Parameter(1, tostring(time))
     screenTextEvent.Set_Reward_Parameter(2, var)
     screenTextEvent.Set_Reward_Parameter(3, "")
+    screenTextEvent.Set_Reward_Parameter(4, use_teletype)
     screenTextEvent.Set_Reward_Parameter(5, colorString)
     Story_Event(TRUtil.ShowTextNotificationName)
 end

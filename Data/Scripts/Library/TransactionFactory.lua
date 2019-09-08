@@ -66,7 +66,7 @@ function CreateBoardingTransaction(object_string, owner_string)
             
             if not TM then
                 TransactionManager = require("TransactionManager")
-                TM = TransactionManager:New()
+                TM = TransactionManager()
             end
             
             TM:RegisterGameModeTransaction(transaction)

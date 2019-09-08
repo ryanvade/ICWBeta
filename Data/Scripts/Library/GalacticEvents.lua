@@ -18,69 +18,80 @@
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
 
-
-
 require("Class")
 require("TRUtil")
 require("Observable")
 
-PlanetOwnerChangedEvent = Class {
-    Extends = Observable;
-    Constructor = function(self, planets)
-        self.Planets = planets
-    end;
-    Check = function(self)
-        local planetOwnerChangedData = GlobalValue.Get("PLANET_OWNER_CHANGED")
-        if TRUtil.ValidGlobalValue(planetOwnerChangedData) then
-            local planet = self.Planets[planetOwnerChangedData]
+---@class PlanetOwnerChangedEvent : Observable
+PlanetOwnerChangedEvent = class(Observable)
+
+function PlanetOwnerChangedEvent:new(planets)
+    self.Planets = planets
+end
+
+function PlanetOwnerChangedEvent:Check()
+    local planetOwnerChangedData = GlobalValue.Get("PLANET_OWNER_CHANGED")
+    if TRUtil.ValidGlobalValue(planetOwnerChangedData) then
+        local planet = self.Planets[planetOwnerChangedData]
+        self:Notify(planet)
+        GlobalValue.Set("PLANET_OWNER_CHANGED", "")
+    end
+end
+
+---@class ProductionFinishedEvent : Observable
+ProductionFinishedEvent = class(Observable)
+
+function ProductionFinishedEvent:new(planets)
+    self.Planets = planets
+end
+
+function ProductionFinishedEvent:Check()
+    local productionPlanet = GlobalValue.Get("PRODUCTION_FINISHED")
+    if TRUtil.ValidGlobalValue(productionPlanet) then
+        local planet = self.Planets[productionPlanet]
+        self:Notify(planet)
+        GlobalValue.Set("PRODUCTION_FINISHED", "")
+    end
+end
+
+---@class SelectedPlanetChangedEvent : Observable
+SelectedPlanetChangedEvent = class(Observable)
+
+function SelectedPlanetChangedEvent:new(player, planets)
+    self.Player = player
+    self.Planets = planets
+end
+
+function SelectedPlanetChangedEvent:Check()
+    for _, planet in pairs(self.Planets) do
+        if Check_Story_Flag(self.Player, "ZOOMED_INTO_" .. planet:get_name(), nil, true) then
+            GlobalValue.Set("SELECTED_PLANET", planet:get_name())
             self:Notify(planet)
-            GlobalValue.Set("PLANET_OWNER_CHANGED", "")
+            break
         end
     end
-}
+end
 
-ProductionFinishedEvent = Class {
-    Extends = Observable;
-    Constructor = function(self, planets)
-        self.Planets = planets
-    end;
-    Check = function(self)
-        local productionPlanet = GlobalValue.Get("PRODUCTION_FINISHED")
-        if TRUtil.ValidGlobalValue(productionPlanet) then
-            local planet = self.Planets[productionPlanet]
-            self:Notify(planet)
-            GlobalValue.Set("PRODUCTION_FINISHED", "")
-        end
+---@class GalacticWeekChangedEvent : Observable
+GalacticWeekChangedEvent = class(Observable)
+
+function GalacticWeekChangedEvent:new(player)
+    self.Player = player
+end
+
+function GalacticWeekChangedEvent:Check()
+    if Check_Story_Flag(self.Player, "GALACTIC_CYCLE_ELAPSED", nil, true) then
+        self:Notify()
     end
-}
+end
 
-SelectedPlanetChangedEvent = Class {
-    Extends = Observable,
-    Constructor = function(self, player, planets)
-        self.Player = player
-        self.Planets = planets
-    end,
+---@class GalacticHeroKilledEvent : Observable
+GalacticHeroKilledEvent = class(Observable)
 
-    Check = function(self)
-        for _, planet in pairs(self.Planets) do
-            if Check_Story_Flag(self.Player, "ZOOMED_INTO_"..planet:get_name(), nil, true) then
-                GlobalValue.Set("SELECTED_PLANET", planet:get_name())
-                self:Notify(planet)
-                break
-            end
-        end
+function GalacticHeroKilledEvent:Check()
+    local hero_name = GlobalValue.Get("GALACTIC_HERO_KILLED")
+    if TRUtil.ValidGlobalValue(hero_name) then
+        self:Notify(hero_name)
+        GlobalValue.Set("GALACTIC_HERO_KILLED", "")
     end
-}
-
-GalacticWeekChangedEvent = Class {
-    Extends = Observable,
-    Constructor = function(self, player)
-        self.Player = player
-    end,
-
-    Check = function(self)
-        if Check_Story_Flag(self.Player, "GALACTIC_CYCLE_ELAPSED", nil, true) then
-            self:Notify()
-        end
-    end
-}
+end

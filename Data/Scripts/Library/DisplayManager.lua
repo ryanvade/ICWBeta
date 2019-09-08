@@ -24,8 +24,10 @@ require("Class")
 require("TRUtil")
 require("DisplayStructuresUtilities")
 
-OrbitalStructureDisplay = Class {
-    FACTION_COLORS = {
+OrbitalStructureDisplay = class()
+
+function OrbitalStructureDisplay:new(selectedPlanetChangedEvent, productionFinishedEvent, newsFeed)
+    self.FACTION_COLORS = {
         ["EMPIRE"] = {r = 8, g = 122, b = 16},
         ["REBEL"] = {r = 239, g = 139, b = 9},
         ["UNDERWORLD"] = {r = 102, g = 188, b = 217},
@@ -39,64 +41,74 @@ OrbitalStructureDisplay = Class {
         ["SARLACC"] = {r = 212, g = 81, b = 255},
         ["NEUTRAL"] = {r = 100, g = 100, b = 100},
         ["HOSTILE"] = {r = 153, g = 21, b = 223}
-    },
+    }
 
-    CurrentText = {},
+    self.CurrentText = {}
 
-    SelectedPlanet = nil,
+    self.SelectedPlanet = nil
 
-    Constructor = function(self, selectedPlanetChangedEvent, productionFinishedEvent)
-        selectedPlanetChangedEvent:AttachListener(self.Update, self)
-        productionFinishedEvent:AttachListener(self.ProductionUpdate, self)
-    end,
+    ---@type NewsFeed
+    self.newsFeed = newsFeed
 
-    ProductionUpdate = function(self, planet)
-        if planet ~= self.SelectedPlanet then
-          return
-        end
-        self:Update(planet)
-    end,
+    selectedPlanetChangedEvent:AttachListener(self.Update, self)
+    productionFinishedEvent:AttachListener(self.ProductionUpdate, self)
+end
 
-    Update = function(self, planet)
-        self.SelectedPlanet = planet
-        local owner = planet:get_owner()
-        local ownerName = owner.Get_Faction_Name()
-        local color = self.FACTION_COLORS[ownerName]
+function OrbitalStructureDisplay:ProductionUpdate(planet)
+    if planet ~= self.SelectedPlanet then
+        return
+    end
+    self:Update(planet)
+end
 
-        self:Clear()
+function OrbitalStructureDisplay:Update(planet)
 
-        TRUtil.ShowScreenText("TEXT_SELECTED_PLANET", -1, planet:get_game_object(), color)
-        self.CurrentText = {"TEXT_SELECTED_PLANET"}
+    self.newsFeed:hide()
 
-        if not planet:get_owner().Is_Human() then
-          return
-        end
+    self.SelectedPlanet = planet
+    local owner = planet:get_owner()
+    local ownerName = owner.Get_Faction_Name()
+    local ownerText = CONSTANTS.ALL_FACTION_TEXTS[ownerName]
+    local color = self.FACTION_COLORS[ownerName]
 
-        local structuresOnPlanet = planet:get_orbital_structure_information()
+    self:Clear()
 
-        for structureText, amount in pairs(structuresOnPlanet) do
-            table.insert(self.CurrentText, structureText)
-            local number = GameObjectNumber(amount)
-            if number then
-                TRUtil.ShowScreenText(structureText, -1, number, color)
-            end
-        end
-		
-		local influenceOnPlanet = planet:get_influence_information()
-		
-        local influenceLevel = GameObjectNumber(influenceOnPlanet)
-		if influenceLevel then
-			TRUtil.ShowScreenText("TEXT_INFLUENCE_AMOUNT", -1, influenceLevel, color)
-		end
-		table.insert(self.CurrentText, "TEXT_INFLUENCE_AMOUNT")
+    TRUtil.ShowScreenText("TEXT_SELECTED_PLANET", -1, planet:get_game_object(), color)
+    TRUtil.ShowScreenText(ownerText, -1, nil, color)
+    self.CurrentText = {"TEXT_SELECTED_PLANET", ownerText}
 
-    end,
+    if not planet:get_owner().Is_Human() then
+        self.newsFeed:show()
+        return
+    end
 
-    Clear = function(self)
-        for _, text in pairs(self.CurrentText) do
-            TRUtil.RemoveScreenText(text)
+    local structuresOnPlanet = planet:get_orbital_structure_information()
+
+    for structureText, amount in pairs(structuresOnPlanet) do
+        table.insert(self.CurrentText, structureText)
+        local number = GameObjectNumber(amount)
+        if number then
+            TRUtil.ShowScreenText(structureText, -1, number, color)
         end
     end
-}
+
+    local influenceOnPlanet = planet:get_influence_information()
+
+    local influenceLevel = GameObjectNumber(influenceOnPlanet)
+    if influenceLevel then
+        TRUtil.ShowScreenText("TEXT_INFLUENCE_AMOUNT", -1, influenceLevel, color)
+    end
+
+    table.insert(self.CurrentText, "TEXT_INFLUENCE_AMOUNT")
+
+    self.newsFeed:show()
+end
+
+function OrbitalStructureDisplay:Clear()
+    for _, text in pairs(self.CurrentText) do
+        TRUtil.RemoveScreenText(text)
+    end
+end
+
 
 return OrbitalStructureDisplay

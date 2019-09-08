@@ -17,7 +17,7 @@ function Spawn_At_All_Planets()
 					,{Find_Object_Type("Vindicator_Cruiser"), 4, "Space"}
 					,{Find_Object_Type("Katana_Dreadnaught_Empire"), 4, "Space"}
 					,{Find_Object_Type("Generic_Victory_Destroyer"), 3, "Space"}
-					,{Find_Object_Type("Generic_Victory_Destroyer_TWO"), 3, "Space"}
+					,{Find_Object_Type("Generic_Victory_Destroyer_Two"), 3, "Space"}
 					,{Find_Object_Type("Generic_Star_Destroyer_Two"), 1, "Space"}
 					,{Find_Object_Type("Generic_Star_Destroyer"), 1, "Space"}
 					,{Find_Object_Type("Generic_Dominator"), 1, "Space"}
@@ -139,9 +139,9 @@ function Spawn_At_All_Planets()
 					}
 					
 				,{
-					Find_Object_Type("P_Ground_Barracks"),
-					Find_Object_Type("P_Ground_Light_Vehicle_Factory"),
-					Find_Object_Type("P_Ground_Heavy_Vehicle_Factory"),
+					Find_Object_Type("A_Ground_Barracks"),
+					Find_Object_Type("A_Ground_Light_Vehicle_Factory"),
+					Find_Object_Type("A_Ground_Heavy_Vehicle_Factory"),
 					}
 				
 				,{

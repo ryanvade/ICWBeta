@@ -421,7 +421,7 @@
 		<Tactical_Build_Cost_Multiplayer> 7500 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 123 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Previous_Upgrade_Level_Type />
@@ -1500,67 +1500,6 @@
 	
 	<!-- PENTASTAR UPGRADES -->
 	
-	<UpgradeObject Name="PC_Level_Two_Tech_Upgrade">
-		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
-		<Tactical_Build_Cost_Multiplayer> 2500 </Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
-		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites> </Tactical_Build_Prerequisites>
-		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
-		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
-		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
-		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
-		<Previous_Upgrade_Level_Type />
-		<Next_Upgrade_Level_Type>PC_Level_Three_Tech_Upgrade</Next_Upgrade_Level_Type>
-		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
-		<Show_In_Sidebar_While_Building> Yes </Show_In_Sidebar_While_Building>
-		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_e_tech_upgrade_2.tga</Icon_Name>
-		
-		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_TWO </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
-		<Text_ID>TEXT_UPGRADE_LEVEL_TWO_COMMAND_CENTER</Text_ID>
-		
-		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
-		<CategoryMask>Upgrade</CategoryMask>
-		<Is_Community_Property>Yes</Is_Community_Property>
-	</UpgradeObject>
-
-	<UpgradeObject Name="PC_Level_Three_Tech_Upgrade">
-		<Behavior>DUMMY_UPGRADE</Behavior>
-		<Affiliation>Pentastar, Pirates, Teradoc, Hutts, Corporate_Sector </Affiliation>
-		<Tactical_Build_Cost_Multiplayer> 4000 </Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
-		<Tactical_Build_Time_Seconds> 85 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites> PC_Level_Two_Tech_Upgrade </Tactical_Build_Prerequisites>
-		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
-		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
-		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
-		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
-		<Previous_Upgrade_Level_Type>PC_Level_Two_Tech_Upgrade</Previous_Upgrade_Level_Type>
-		<Next_Upgrade_Level_Type></Next_Upgrade_Level_Type>
-		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
-		<Show_In_Sidebar_While_Building> Yes </Show_In_Sidebar_While_Building>
-		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_e_tech_upgrade_3.tga</Icon_Name>
-		
-		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_THREE  </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
-		<Text_ID>TEXT_UPGRADE_LEVEL_THREE_COMMAND_CENTER</Text_ID>
-		
-		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
-		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
-		<CategoryMask>Upgrade</CategoryMask>
-		<Is_Community_Property>Yes</Is_Community_Property>
-	</UpgradeObject>
-	
-	
-	
-	
 	<!-- Increased Mobility: Stormtroopers move 30% faster. -->
 	<UpgradeObject Name="PL_Increased_Mobility_Upgrade">
 		<Behavior>DUMMY_UPGRADE</Behavior>
@@ -1608,7 +1547,7 @@
 		<Tactical_Build_Cost_Multiplayer> 550 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>170</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 18 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
 		<Previous_Upgrade_Level_Type />
@@ -1682,7 +1621,7 @@
 		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>380</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 22 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites> PL_Light_Reflective_Armor_L1_Upgrade, PC_Level_Two_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites> PL_Light_Reflective_Armor_L1_Upgrade, EC_Level_Two_Tech_Upgrade </Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
 		<Previous_Upgrade_Level_Type> PL_Light_Reflective_Armor_L1_Upgrade </Previous_Upgrade_Level_Type>
@@ -1755,7 +1694,7 @@
 		<Tactical_Build_Cost_Multiplayer> 825 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>180</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 20 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites> PL_Enhanced_Reactors_L1_Upgrade, PC_Level_Two_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites> PL_Enhanced_Reactors_L1_Upgrade, EC_Level_Two_Tech_Upgrade </Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
 		<Previous_Upgrade_Level_Type> PL_Enhanced_Reactors_L1_Upgrade </Previous_Upgrade_Level_Type>
@@ -1795,7 +1734,7 @@
 		<Tactical_Build_Cost_Multiplayer> 550 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 20 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
 		<Previous_Upgrade_Level_Type />
@@ -1829,7 +1768,7 @@
 		<Tactical_Build_Cost_Multiplayer> 825 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>400</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites> PC_Level_Three_Tech_Upgrade, PL_Heavy_Reflective_Armor_L1_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites> EC_Level_Three_Tech_Upgrade, PL_Heavy_Reflective_Armor_L1_Upgrade </Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
 		<Previous_Upgrade_Level_Type> PL_Heavy_Reflective_Armor_L1_Upgrade </Previous_Upgrade_Level_Type>
@@ -1863,7 +1802,7 @@
 		<Tactical_Build_Cost_Multiplayer> 675 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>220</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 20 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites> PC_Level_Three_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites> EC_Level_Three_Tech_Upgrade </Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
 		<Previous_Upgrade_Level_Type />
@@ -2017,7 +1956,7 @@
 		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 45 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Previous_Upgrade_Level_Type />
@@ -2091,7 +2030,7 @@
 		<Tactical_Build_Cost_Multiplayer> 675 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>200</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 18 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
 		<Previous_Upgrade_Level_Type />
@@ -2131,7 +2070,7 @@
 		<Tactical_Build_Cost_Multiplayer> 900 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>380</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites> PL_Enhanced_Turret_Firepower_L1_Upgrade, PC_Level_Three_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites> PL_Enhanced_Turret_Firepower_L1_Upgrade, EC_Level_Three_Tech_Upgrade </Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
 		<Previous_Upgrade_Level_Type> PL_Enhanced_Turret_Firepower_L1_Upgrade </Previous_Upgrade_Level_Type>
@@ -2200,7 +2139,7 @@
 	
 	<UpgradeObject Name="PL_Enhanced_Base_Shield_Upgrade">
 		<Variant_Of_Existing_Type>EL_Enhanced_Base_Shield_Upgrade_NoPre</Variant_Of_Existing_Type>
-		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<CategoryMask>Upgrade</CategoryMask>
 	</UpgradeObject>
 
@@ -2211,7 +2150,7 @@
 		<Tactical_Build_Cost_Multiplayer> 500 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>170</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 15 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites> PC_Level_Two_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites> EC_Level_Two_Tech_Upgrade </Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
 		<Previous_Upgrade_Level_Type />
@@ -2809,7 +2748,7 @@
 		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>80</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 30 </Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
 		<Previous_Upgrade_Level_Type />

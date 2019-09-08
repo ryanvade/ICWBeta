@@ -58,7 +58,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>16</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -206,6 +206,7 @@
 		<Wind_Disturbance_Strength>10</Wind_Disturbance_Strength>
 		<Wind_Disturbance_Sphere_Alpha>0.4</Wind_Disturbance_Sphere_Alpha>
 		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
+		<Destruction_Survivors> Raptor_Scout_No_Bike, 1.0 </Destruction_Survivors>
 		
 		<SFXEvent_Select>Unit_Select_Scout_Trooper</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Scout_Trooper</SFXEvent_Move>
@@ -297,8 +298,6 @@
 		<Is_Escort>yes</Is_Escort>
 		<Ship_Class>infantry</Ship_Class>
 		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
-		<Company_Units>Raptor_Scout_Trooper, Raptor_Scout_Trooper</Company_Units>
-		<Company_Units>Raptor_Scout_Trooper, Raptor_Scout_Trooper</Company_Units>
 		<Company_Units>Raptor_Scout_Trooper, Raptor_Scout_Trooper</Company_Units>
 		<Company_Units>Raptor_Scout_Trooper, Raptor_Scout_Trooper</Company_Units>
 		<Max_Squad_Size> 1 </Max_Squad_Size>
@@ -642,6 +641,11 @@
 		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
 	</GroundInfantry>
 	
+	<GroundInfantry Name="Raptor_Scout_No_Bike">
+		<Variant_Of_Existing_Type>Raptor_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT</LandBehavior>
+	</GroundInfantry>
+	
 	<GroundCompany Name="Zsinj_Heavy_Scout_Squad">
 		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
 		<Affiliation>Pirates</Affiliation>
@@ -717,7 +721,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1350</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>12.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>--> 

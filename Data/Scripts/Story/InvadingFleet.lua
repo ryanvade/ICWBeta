@@ -53,7 +53,7 @@ end
 
 function State_Init(message)
   if message == OnEnter then
-    TM = TransactionManager:New()
+    TM = TransactionManager()
     TM:ResetBoardingTransactions()
     local fleet = MakeRaidFleet(15)
     --fleet:initialize()

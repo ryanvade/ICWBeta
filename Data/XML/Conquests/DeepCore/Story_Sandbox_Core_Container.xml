@@ -302,9 +302,88 @@
 	<!--***********************************************************-->
 	<!--***********************************************************-->
 	
+	<Event Name="Era_Selection">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Era_2_Start">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_ERA_2</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Hero_Death_Events</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="Era_4_Start">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_ERA_4</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Hero_Death_Events</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<!-- Force era 1 to 2 and 3 to 4 to keep things more canonical  -->
+	<Event Name="Maldrood_Tech_2">
+  		<Event_Type>STORY_TRIGGER</Event_Type>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Teradoc</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>	
+		<Prereq>Era_2_Start</Prereq>
+	</Event>
+	
+	<Event Name="Eriadu_Tech_2">
+  		<Event_Type>STORY_TRIGGER</Event_Type>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Hutts</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>	
+		<Prereq>Era_2_Start</Prereq>
+	</Event>
+	
+	<Event Name="Maldrood_Tech_4">
+  		<Event_Type>STORY_TRIGGER</Event_Type>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Teradoc</Reward_Param1>
+		<Reward_Param2>4</Reward_Param2>	
+		<Prereq>Era_4_Start</Prereq>
+	</Event>
+	
+	<Event Name="Eriadu_Tech_4">
+  		<Event_Type>STORY_TRIGGER</Event_Type>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Hutts</Reward_Param1>
+		<Reward_Param2>4</Reward_Param2>	
+		<Prereq>Era_4_Start</Prereq>
+	</Event> 
+	
+	<Event Name="Zero_Command_Tech"> <!-- Whatever nominal tech level selected, Zero Command should use era 1 fighter loadouts -->
+  		<Event_Type>STORY_TRIGGER</Event_Type>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>	
+		<Prereq>Era_Selection</Prereq>
+	</Event> 
+	
 	<Event Name="Night_Hammer_Complete">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>440</Event_Param1>
+		<Prereq>Era_4_Start</Prereq>
+	</Event>
+	
+	<Event Name="The_game_cannot_go_too_long">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
+		<Branch>Faction_Branch_Remnant</Branch>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>dwa</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
+	<Event Name="The_game_has_gone_too_long">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1280</Event_Param1>
+		<Branch>dwa</Branch>
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 
@@ -312,12 +391,12 @@
 	<!--***********************************************************-->
 	<!--******************* IMPERIAL STORYLINE ********************-->
 	<!--***********************************************************-->
-	<!--***********************************************************
+	<!--***********************************************************-->
 
-	<Event Name="Intro_Welcome">
+	<Event Name="Intro_Welcome_Harrsk">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_ISARDSREVENGE_IR_INTRO_ONE</Reward_Param1>
+		<Reward_Param1>TEXT_CONQUEST_HARRSK_DEEPCORE_INTRO</Reward_Param1>
 		<Reward_Param2>15</Reward_Param2>
 		<Reward_Param3 />
 		<Reward_Param4 />
@@ -325,16 +404,26 @@
 		<Reward_Param6 />
 		<Reward_Param7 />
 		<Reward_Param8 />
-		<Reward_Param9>Isard_Loop</Reward_Param9>
+		<Reward_Param9>Harrsk_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Faction_Branch_Enabler_Remnant</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
-	<Event Name="Night Hammer_Dialog_ZC">
+	<Event Name="Intro_Welcome_Harrsk_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Harrsk_Deepcore</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_Harrsk</Prereq>
+		<Branch>Faction_Branch_Remnant</Branch>
+	</Event>
+	
+	<Event Name="Night Hammer_Dialog_Harrsk">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_CONQUEST_ISARDSREVENGE_IR_ROGUES</Reward_Param1>
+		<Reward_Param1>TEXT_CONQUEST_HARRSK_DEEPCORE_NH</Reward_Param1>
 		<Reward_Param2>15</Reward_Param2>
 		<Reward_Param3 />
 		<Reward_Param4 />
@@ -342,17 +431,164 @@
 		<Reward_Param6 />
 		<Reward_Param7 />
 		<Reward_Param8 />
-		<Reward_Param9>Isard_Loop</Reward_Param9>
+		<Reward_Param9>Harrsk_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Night_Hammer_Complete</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
-	</Event> -->
+	</Event>
 
 	<!--***********************************************************-->
 	<!--***********************************************************-->
-	<!--***************** New Republic Storyline ******************-->
+	<!--***************** Greater Maldrood Story ******************-->
+	<!--***********************************************************-->	
+	<!--***********************************************************-->	
+	
+	<Event Name="Intro_Welcome_Teradoc_E2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_TERADOC_DEEPCORE_INTRO</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Teradoc_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Kosh_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Era_2_Start, Faction_Branch_Enabler_Teradoc</Prereq>
+		<Branch>Faction_Branch_Teradoc</Branch>
+	</Event>
+	
+	<Event Name="Intro_Welcome_Teradoc_Dialog_E2">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Maldrood_DeepCore</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_Teradoc_E2</Prereq>
+		<Branch>Faction_Branch_Teradoc</Branch>
+	</Event>
+	
+	<Event Name="Intro_Welcome_Teradoc_E4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_TERADOC_CARNOR_INTRO</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Teradoc_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Teradoc_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Era_4_Start, Faction_Branch_Enabler_Teradoc</Prereq>
+		<Branch>Faction_Branch_Teradoc</Branch>
+	</Event>
+	
+	<Event Name="Intro_Welcome_Teradoc_Dialog_E4">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Maldrood_Carnor</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_Teradoc_E4</Prereq>
+		<Branch>Faction_Branch_Teradoc</Branch>
+	</Event>
+	
+	<Event Name="Night Hammer_Dialog_Teradoc">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_TERADOC_DEEPCORE_NH</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8 />
+		<Reward_Param9>Teradoc_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Night_Hammer_Complete</Prereq>
+		<Branch>Faction_Branch_Teradoc</Branch>
+	</Event>
+	
 	<!--***********************************************************-->
 	<!--***********************************************************-->
-
+	<!--***************** Eriadu Authority Story ******************-->
+	<!--***********************************************************-->	
+	<!--***********************************************************-->	
+	
+	<Event Name="Intro_Welcome_Eriadu_E2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_ERIADU_DEEPCORE_INTRO_E2</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Delvardus_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Delvardus_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Era_2_Start, Faction_Branch_Enabler_Eriadu</Prereq>
+		<Branch>Faction_Branch_Eriadu</Branch>
+	</Event>
+	
+	<Event Name="Intro_Welcome_Eriadu_Dialog_E2">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Eriadu_DeepCore</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_Eriadu_E2</Prereq>
+		<Branch>Faction_Branch_Eriadu</Branch>
+	</Event>
+	
+	<Event Name="Intro_Welcome_Eriadu_E4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_ERIADU_DEEPCORE_INTRO</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Delvardus_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Delvardus_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Era_4_Start, Faction_Branch_Enabler_Eriadu</Prereq>
+		<Branch>Faction_Branch_Eriadu</Branch>
+	</Event>
+	
+	<Event Name="Intro_Welcome_Eriadu_Dialog_E4">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Eriadu_DeepCore</Story_Dialog>
+		<Story_Chapter>1</Story_Chapter>
+		<Story_Tag>Main_Tag</Story_Tag>
+		<Prereq>Intro_Welcome_Eriadu_E4</Prereq>
+		<Branch>Faction_Branch_Eriadu</Branch>
+	</Event>
+	
+	<Event Name="Night Hammer_Dialog_Eriadu">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_ERIADU_DEEPCORE_NH</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8 />
+		<Reward_Param9>Delvardus_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Night_Hammer_Complete</Prereq>
+		<Branch>Faction_Branch_Eriadu</Branch>
+	</Event>
 
 </Story>

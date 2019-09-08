@@ -99,7 +99,7 @@
 			 HP_Lancer_03, HP_Lancer_02, HP_Lancer_01, HP_Lancer_00
 		</HardPoints>
 
-		<CategoryMask> Frigate | AntiFighter | AntiBomber</CategoryMask>
+		<CategoryMask> Corvette | AntiFighter | AntiBomber</CategoryMask>
 		<Icon_Name>i_button_lancer.tga</Icon_Name>
 		<GUI_Model_Name>lancer.ALO</GUI_Model_Name>
 		<GUI_Distance>1200</GUI_Distance>
@@ -650,7 +650,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>16000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>100</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>PC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -920,7 +920,7 @@
 		<Lua_Script>GenericGameObject</Lua_Script>
 
 
-        <Space_Model_Name>EV_13x.alo</Space_Model_Name>
+        <Space_Model_Name>crimson_victory_star_destroyer.alo</Space_Model_Name>
 				<Death_Clone>Damage_Normal, Crimson_Victory_Death_Clone</Death_Clone>
 
         <Max_Speed>2.6</Max_Speed>
@@ -1152,13 +1152,12 @@
 
 
 	<SpaceUnit Name="Dreadnaught_Empire">
-		<Variant_Of_Existing_Type>Dreadnaught</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Template_Dreadnaught</Variant_Of_Existing_Type>
 		<Affiliation>Empire, Pirates, Corporate_Sector </Affiliation>
 		
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<!--<Encyclopedia_Good_Against> MC40a Carrack_Cruiser Vigilance_Gunship </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Generic_Star_Destroyer TIE_Bomber K-Wing </Encyclopedia_Vulnerable_To>-->
-		<Variant_Of_Existing_Type>Dreadnaught</Variant_Of_Existing_Type>
 		<Tech_Level>0</Tech_Level>
 		<Lua_Script>GenericGameObject</Lua_Script>
 		<!--<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>-->
@@ -1183,7 +1182,7 @@
 	</SpaceUnit>
 
 	<SpaceUnit Name="Katana_Dreadnaught_Empire">
-		<Variant_Of_Existing_Type>Katana_Dreadnaught</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Template_Katana_Dreadnaught</Variant_Of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
 
 		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>

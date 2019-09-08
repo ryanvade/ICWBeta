@@ -81,7 +81,7 @@
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>-->
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>320.0</Targeting_Max_Attack_Distance>
-		<Ranged_Target_Z_Adjust>39.0</Ranged_Target_Z_Adjust>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
 		<!-- 18 -->
 
 		<!--<Targeting_Fire_Inaccuracy> Infantry, 10.0 </Targeting_Fire_Inaccuracy>
@@ -371,7 +371,7 @@
 		<Text_ID>TEXT_UNIT_POD_WALKER</Text_ID>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
 		<Encyclopedia_Text>TEXT_TOOLTIP_PODWALKER</Encyclopedia_Text>
-		<Land_Model_Name>EV_PODWALKER.ALO</Land_Model_Name>
+		<Land_Model_Name>all_terrain_attack_pod.ALO</Land_Model_Name>
 
 		<Behavior>SELECTABLE</Behavior>
 		<LandBehavior>WALK_LOCOMOTOR,TARGETING,IDLE,WEAPON,POWERED,TURRET,REVEAL,HIDE_WHEN_FOGGED,UNIT_AI,TELEKINESIS_TARGET,STUNNABLE, SQUASH, HUNT, AFFECTED_BY_SHIELD, DAMAGE_TRACKING</LandBehavior>
@@ -379,7 +379,7 @@
 		<Property_Flags>GoodInfantryCrusher</Property_Flags>
 		<Autoresolve_Health>300</Autoresolve_Health>
 		<Mass>1.0</Mass>
-		<Scale_Factor>1.75</Scale_Factor>
+		<Scale_Factor>2.5</Scale_Factor>
 				<Affiliation>Pentastar, Teradoc</Affiliation>
 
 		<Walk_Transition>Yes</Walk_Transition>
@@ -441,23 +441,11 @@
 		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>-->
 		
-		<Turret_Rotate_Extent_Degrees>5</Turret_Rotate_Extent_Degrees>
-		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
-		<Turret_Bone_Name>B_GUN03</Turret_Bone_Name>
-		<Barrel_Bone_Name>MUZZLEA_02</Barrel_Bone_Name>
-		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
-		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
-		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
-		<Turret_Targets_Ground_Vehicles> 2 </Turret_Targets_Ground_Vehicles>
-		<Turret_Targets_Ground_Infantry> 1 </Turret_Targets_Ground_Infantry>
-		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
-		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
-		<Targeting_Max_Attack_Distance>575.0</Targeting_Max_Attack_Distance>
-		
 		<Target_Bones> B_HEAD, P_ELECTRICALSTATIC3_ALT2, B_LEFT_ANKLE, B_RIGHT_ANKLE </Target_Bones>
 		
 		<HardPoints>
 			HP_ATAP_Main,
+			HP_ATAP_Top,
 			HP_ATAP_Underslung,
 		</HardPoints>
 
@@ -1470,7 +1458,7 @@
 		<Scale_Factor>1.2</Scale_Factor>
 
 		<Behavior>SELECTABLE</Behavior>
-		<LandBehavior>SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<LandBehavior>LANDING, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>

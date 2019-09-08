@@ -1,3 +1,5 @@
+TRlib.galactic = {}
+
 function TRlib.galactic.find_friendly_planet(player)
     if type(player) == "string" then
         player = Find_Player(player)

@@ -91,10 +91,10 @@ FotRObjectLibrary = {
                 HANGAR = true
             },
             Fighters={
-                ["VULTURE_SQUADRON"]={
+                ["VULTURE_SQUADRON_DOUBLE"]={
                     ["DEFAULT"] = {
                         Reserve=1,
-                        Initial=3
+                        Initial=1
                     }
                 },
 				["HYENA_SQUADRON"]={
@@ -131,6 +131,12 @@ FotRObjectLibrary = {
                         Reserve=2,
                         Initial=1
                     }
+                },
+				["BTLB_Y-WING_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
                 }
             }
         },
@@ -160,6 +166,12 @@ FotRObjectLibrary = {
                         Reserve=2,
                         Initial=1
                     }
+                },
+				["BTLB_Y-WING_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=2,
+                        Initial=1
+                    }
                 }
             }
         },
@@ -185,6 +197,12 @@ FotRObjectLibrary = {
                     }
                 },
                 ["ARC_170_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
+				["BTLB_Y-WING_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=1,
                         Initial=1
@@ -312,6 +330,12 @@ FotRObjectLibrary = {
                         Initial=3
                     }
                 },
+				["BTLB_Y-WING_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=2,
+                        Initial=1
+                    }
+                },
                 ["TIE_FIGHTER_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=10,
@@ -422,10 +446,16 @@ FotRObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters={
-                ["ARC_170_Squadron"]={
+                ["TORRENT_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
+				["BTLB_Y-WING_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=0,
-                        Initial=2
+                        Initial=1
                     }
                 }
             }
@@ -477,8 +507,20 @@ FotRObjectLibrary = {
             Fighters={
                 ["ARC_170_Squadron"]={
                     ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
+				["Z95_HEADHUNTER_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
+				["BTLB_Y-WING_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=1,
+                        Initial=1
                     }
                 }
             }
@@ -489,10 +531,10 @@ FotRObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters={
-                ["VULTURE_SQUADRON"]={
+                ["VULTURE_SQUADRON_DOUBLE"]={
                     ["REBEL"] = {
-                        Reserve=13,
-                        Initial=3
+                        Reserve=6,
+                        Initial=2
                     }
                 },
                 ["TRIFIGHTER_SQUADRON"]={
@@ -515,10 +557,10 @@ FotRObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters={
-                ["VULTURE_SQUADRON"]={
+                ["VULTURE_SQUADRON_DOUBLE"]={
                     ["REBEL"] = {
-                        Reserve=83,
-                        Initial=7
+                        Reserve=40,
+                        Initial=4
                     }
                 },
                 ["TRIFIGHTER_SQUADRON"]={
@@ -531,6 +573,26 @@ FotRObjectLibrary = {
                     ["REBEL"] = {
                         Reserve=12,
                         Initial=3
+                    }
+                }
+            }
+        },
+		["SUBJUGATOR"]={
+            Scripts={
+                "MultiLayer",
+                "FighterSpawn"
+            },
+            Fighters={
+                ["VULTURE_SQUADRON_DOUBLE"]={
+                    ["REBEL"] = {
+                        Reserve=2,
+                        Initial=6
+                    }
+                },
+                ["HYENA_SQUADRON"]={
+                    ["REBEL"] = {
+                        Reserve=2,
+                        Initial=2
                     }
                 }
             }
@@ -560,6 +622,12 @@ FotRObjectLibrary = {
                         Reserve=2,
                         Initial=1
                     }
+                },
+				["BTLB_Y-WING_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=2,
+                        Initial=1
+                    }
                 }
             }
         },
@@ -569,172 +637,32 @@ FotRObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters={
-                ["TIE_FIGHTER_SQUADRON"]={
-                    ["HUTTS"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
+				["BTLB_Y-WING_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["PENTASTAR"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["PIRATES"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["TERADOC"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["HOSTILE"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["WARLORDS"] = {
-                        Reserve=0,
-                        Initial=2
-                    }
-                },
-                ["TIE_BOMBER_SQUADRON"]={
-                    ["HUTTS"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["PENTASTAR"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["PIRATES"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["TERADOC"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["HOSTILE"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["WARLORDS"] = {
-                        Reserve=0,
-                        Initial=2
-                    }
-                },
-                ["SCIMMY_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(2)
-                    }
-                },
-                ["SHIELDED_INTERCEPTOR_SQUADRON"]={
-                    ["HUTTS"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(2)
-                    }
-                },
-                ["A9_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2,
-                        TechLevel=EqualTo(4)
-                    }
-                },
-                ["PREYBIRD_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2,
-                        TechLevel=EqualTo(5)
-                    }
-                },
-                ["HOWLRUNNER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(4)
-                    }
-                },
-                ["TIE_INTERCEPTOR_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2,
-                        TechLevel=IsOneOf({1,3})
-                    },
-                    ["PENTASTAR"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["HOSTILE"] = {
-                        Reserve=0,
-                        Initial=2
-                    },
-                    ["WARLORDS"] = {
-                        Reserve=0,
-                        Initial=2
-                    }
-                },
-                ["TIE_RAPTOR_SQUADRON"]={
-                    ["PIRATES"] = {
-                        Reserve=0,
-                        Initial=2
-                    }
-                },
-                ["TIE_AVENGER_SQUADRON"]={
-                    ["TERADOC"] = {
-                        Reserve=0,
+                        Reserve=2,
                         Initial=1
                     }
                 },
-                ["ARC_170_SQUADRON"]={
-                    ["TERADOC"] = {
-                        Reserve=0,
+				["Z95_HEADHUNTER_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=2,
+                        Initial=1,
+						TechLevel = GreaterThan(3)
+                    }
+                },
+				["ARC_170_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=2,
                         Initial=1
                     }
                 },
-                ["TRIFOIL_SQUADRON"]={
-                    ["YEVETHA"] = {
+				["TORRENT_SQUADRON"]={
+                    ["EMPIRE"] = {
                         Reserve=3,
-                        Initial=3
+                        Initial=2,
+						TechLevel = LessOrEqualTo(3)
                     }
-                },
-                ["Y-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
-                ["A-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=0,
-                        Initial=1
-                    }
-                },
-                ["REBEL_X-WING_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
-                ["SHIELDED_TIE_SQUADRON"]={
-                    ["REBEL"] = {
-                        Reserve=0,
-                        Initial=1
-                    }
-                }
+				}
             }
         },
         ["ARQUITENS"]={
@@ -774,64 +702,38 @@ FotRObjectLibrary = {
                 "FighterSpawn",
             },
             Fighters={
-				["MANKVIM_SQUADRON"]={
-                    ["CORPORATE_SECTOR"] = {
-                        Reserve=1,
-                        Initial=2
-                    },
-                    ["HOSTILE"] = {
-                        Reserve=1,
-                        Initial=2
-                    },
-                    ["WARLORDS"] = {
-                        Reserve=1,
-                        Initial=2
-                    }
-                },
-                ["TRIFOIL_SQUADRON"]={
-                    ["YEVETHA"] = {
-                        Reserve=2,
-                        Initial=3
-                    }
-                },
-                ["TIE_FIGHTER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=1,
-                        Initial=2
-                    }
-                },
-                ["REBEL_X-WING_SQUADRON"]={
+				["VULTURE_SQUADRON"]={
                     ["REBEL"] = {
                         Reserve=1,
                         Initial=2
                     }
-                },
-				["CSA_Y-WING_SQUADRON"]={
-                    ["CORPORATE_SECTOR"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
-                    ["HOSTILE"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
-                    ["WARLORDS"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
-				["TIE_BOMBER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=1,
-                        Initial=1
-                    }
-                },
-				["Y-WING_SQUADRON"]={
+				},
+				["HYENA_SQUADRON"]={
+					["REBEL"] = {
+						Reserve=1,
+						Initial=1
+					}
+				}
+            }
+        },
+				["BULWARK_II"]={
+            Scripts={
+				"MultiLayer",
+                "FighterSpawn",
+            },
+            Fighters={
+				["VULTURE_SQUADRON"]={
                     ["REBEL"] = {
-                        Reserve=1,
-                        Initial=1
+                        Reserve=3,
+                        Initial=2
                     }
-                }
+				},
+				["HYENA_SQUADRON"]={
+					["REBEL"] = {
+						Reserve=2,
+						Initial=1
+					}
+				}
             }
         },
         ["GENERIC_PRAETOR"]={
@@ -857,6 +759,12 @@ FotRObjectLibrary = {
                     ["DEFAULT"] = {
                         Reserve=2,
                         Initial=2
+                    }
+                },
+				["BTLB_Y-WING_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=2,
+                        Initial=1
                     }
                 }
             }
