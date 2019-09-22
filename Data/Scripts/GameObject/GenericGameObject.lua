@@ -18,11 +18,8 @@
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
 
-
-
 require("PGCommands")
 require("PGStateMachine")
-
 
 function Definitions()
     DebugMessage("%s -- In Definitions", tostring(Script))
@@ -32,7 +29,7 @@ function Definitions()
         Fighters = {}
     }
 
-    Define_State("State_Init", State_Init);
+    Define_State("State_Init", State_Init)
 end
 
 function State_Init(message)
@@ -41,9 +38,14 @@ function State_Init(message)
             ScriptExit()
         end
 
-        TransactionManager = require("TRGameModeTransactions")
+        TransactionManager = require("trlib-transactions/TransactionManager")
         TM = TransactionManager()
-        TypeLibrary = require("GameObjectLibrary")
+
+        if not ModContentLoader then
+            ModContentLoader = require("trlib-std/ModContentLoader")
+        end
+
+        TypeLibrary = ModContentLoader.get("GameObjectLibrary")
 
         local typeEntry = TypeLibrary.Units[Object.Get_Type().Get_Name()]
         if not typeEntry then

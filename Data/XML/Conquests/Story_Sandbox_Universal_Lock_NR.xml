@@ -137,6 +137,25 @@
 		<Reward_Param1>PlaceHolder</Reward_Param1>
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
+	
+	<Event Name="Research_BAC">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Research_BAC</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>Rebel</Event_Param3>
+		<Reward_Type>DESTROY_OBJECT</Reward_Type>
+		<Reward_Param1>Research_BAC</Reward_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Unlock_BAC">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>BAC</Reward_Param1>
+		<Prereq>Research_BAC</Prereq>
+	</Event>
+
 
 
 

@@ -18,9 +18,7 @@
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
 
-
-
-require("TransactionFactory")
+require("trlib-transactions/TransactionFactory")
 
 SingleUnitRetreat = {}
 

@@ -21,6 +21,13 @@
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 	
+	<Event Name="E_Lock_Howlrunner_Open">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Howlrunner_Squadron_Buildable</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
 	<Event Name="E_Lock_Crimson_Victory_Open">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
@@ -49,6 +56,13 @@
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 	
+	<Event Name="E_Lock_Nebulon_Open">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Nebulon_B_Zsinj</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
 	<Event Name="E_Lock_TaggeCo_Open">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
@@ -67,6 +81,13 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>SoroSuub_HQ</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="E_Lock_Mekuun_Open">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Mekuun_HQ</Reward_Param1>
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 	
@@ -173,6 +194,14 @@
 		<Event_Param1>1</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Imperial_Armor_Group</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_02</Prereq>
+	</Event>
+	
+	<Event Name="Unlock_Mekuun_Thrawn"> <!-- @-M become Swift Assault this era -->
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Mekuun_HQ</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_02</Prereq>
 	</Event>
 
@@ -323,7 +352,14 @@
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 	
-	<Event Name="Unlock_2M">
+	<Event Name="E_Lock_Mekuun_Palpatine">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Mekuun_HQ</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_03</Prereq>
+	</Event>
+	
+	<Event Name="E_Unlock_2M_Palpatine">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>2</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
@@ -440,6 +476,22 @@
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 	</Event>
 	
+	<Event Name="Unlock_Howlrunner_Daala">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Howlrunner_Squadron_Buildable</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_04</Prereq>
+	</Event>
+	
+	<Event Name="Unlock_Incom_Daala"> <!-- Incom is only relevant in Era 4 for the Empire, but all eras for the New Republic, Greater Maldrood, and Zsinj -->
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Incom_HQ</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_04</Prereq>
+	</Event>
+	
 	
 <!--******************************************************-->
 <!--******	Era 5                                    *****-->
@@ -481,14 +533,6 @@
 		<Reward_Param1>Preybird_Squadron_Buildable</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_05</Prereq>
 	</Event>	
-	
-	<Event Name="Unlock_Incom_Pellaeon"> <!-- Incom is only relevant in Era 5 for the Empire, but all eras for the New Republic and Greater Maldrood -->
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>4</Event_Param1>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Incom_HQ</Reward_Param1>
-		<Prereq>Empire_Enters_Tech_05</Prereq>
-	</Event>
 	
 	<Event Name="Unlock_SoroSuub_Pellaeon"> <!-- SoroSuub is only relevant in Era 5 for the Empire, but all eras for the New Republic, CSA, and Zsinj -->
 		<Event_Type>STORY_ELAPSED</Event_Type>

@@ -20,7 +20,7 @@
 
 require("PGStoryMode")
 require("PGSpawnUnits")
-require("ChangeOwnerUtilities")
+require("trlib-util/ChangeOwnerUtilities")
 
 function Definitions()
 

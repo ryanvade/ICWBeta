@@ -167,7 +167,7 @@
 
 
 			<Planet_Income_Bonus_Ability Name="Underworld_Palace_Income_Bonus">
-				<Specific_Mod_Source_Text>TEXT_ECONOMY_MINING_FACILITIES</Specific_Mod_Source_Text>
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_PALACE</Specific_Mod_Source_Text>
 				<!-- 7% bonus to base planetary income -->
 				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
 				<!-- plus an absolute 0 credits to planetary income -->
@@ -1187,8 +1187,8 @@
 		<GUI_Bracket_Size>2</GUI_Bracket_Size>
 		<Affiliation>Underworld</Affiliation>
 		<Political_Control>0</Political_Control>
-		<Build_Cost_Credits>950</Build_Cost_Credits>
-		<Build_Time_Seconds>27</Build_Time_Seconds>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
 		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
 		<Build_Max_Instances_Per_Planet> 2 </Build_Max_Instances_Per_Planet>
 		<Build_Limit_Current_Per_Player>20</Build_Limit_Current_Per_Player>
@@ -1256,7 +1256,7 @@
 			<Planet_Income_Bonus_Ability Name="Underworld_Mining_Income_Bonus">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_MINING_FACILITIES</Specific_Mod_Source_Text>
 				<!-- 8% bonus to base planetary income -->
-				<Percentage_Income_Modifier>4</Percentage_Income_Modifier>
+				<Percentage_Income_Modifier>2</Percentage_Income_Modifier>
 				<!-- plus an absolute 0 credits to planetary income -->
 				<Absolute_Income_Modifier>0</Absolute_Income_Modifier>
 				<!-- net effect of +( (base income * 0%) + 20) credits -->
@@ -1657,7 +1657,7 @@
 	</SpecialStructure>
 
 
-	<SpecialStructure Name="Teradoc_Pirate_Base">
+	<SpecialStructure Name="Pirate_Base">
 		<Text_ID>TEXT_PIRATE_BASE</Text_ID>
  		<Space_Model_Name>NB_APBase.ALO</Space_Model_Name>
  		<GUI_Row> 1 </GUI_Row>
@@ -1665,7 +1665,7 @@
  		<Select_Box_Scale>330</Select_Box_Scale>
  		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
  		<Is_Dummy>Yes</Is_Dummy>
- 		<Affiliation>Teradoc</Affiliation>
+ 		<Affiliation>Pirates</Affiliation>
  		<Political_Control>0</Political_Control>
  		<Build_Cost_Credits>900</Build_Cost_Credits>
  		<Build_Time_Seconds>40</Build_Time_Seconds>
@@ -1679,7 +1679,7 @@
  		<Required_Star_Base_Level>1</Required_Star_Base_Level>
  		<Required_Special_Structures>Structure_Category_Dummy</Required_Special_Structures>
  		<Required_Planets />
-		<Required_Orbiting_Units>Tavira_Invidious</Required_Orbiting_Units>
+		<Required_Orbiting_Units></Required_Orbiting_Units>
  		<Tactical_Health>3600</Tactical_Health>
 		<Autoresolve_Health>3600</Autoresolve_Health>
  		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>

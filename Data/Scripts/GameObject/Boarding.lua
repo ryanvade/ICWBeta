@@ -18,12 +18,10 @@
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
 
-
-
 require("PGCommands")
 require("TRCommands")
-TRUtil = require("TRUtil")
-require("TransactionFactory")
+StoryUtil = require("trlib-util/StoryUtil")
+require("trlib-transactions/TransactionFactory")
 
 Boarding = {}
 
@@ -43,7 +41,7 @@ function Boarding:Update(globals)
     if Object.Is_Ability_Active("SPOILER_LOCK") then
         if self.attemptsLeft <= 0 then
             Object.Activate_Ability("SPOILER_LOCK", false)
-            TRUtil.ShowScreenText("BOARDING_UNAVAILABLE", 5)
+            StoryUtil.ShowScreenText("BOARDING_UNAVAILABLE", 5)
             return
         end
 
@@ -127,7 +125,7 @@ function BoardingTimer(self)
         return
     end
 
-    local success = (GameRandom(1,100) - target.Get_Hull() * 40) > 50
+    local success = (GameRandom(1, 100) - target.Get_Hull() * 40) > 50
     if success then
         target.Change_Owner(Object.Get_Owner())
         target.Stop()
@@ -135,9 +133,8 @@ function BoardingTimer(self)
         local newOwnerName = Object.Get_Owner().Get_Faction_Name()
         local transaction = CreateBoardingTransaction(boardedTypeName, newOwnerName)
         TM:RegisterBoardingTransaction(transaction)
-        TRUtil.ShowScreenText("BOARDING_SUCCESSFUL_REGULAR", 10)
+        StoryUtil.ShowScreenText("BOARDING_SUCCESSFUL_REGULAR", 10)
     end
 end
-
 
 return Boarding

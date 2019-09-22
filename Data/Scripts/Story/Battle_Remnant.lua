@@ -65,10 +65,8 @@ end
 function Begin_Battle(message)
 	if message == OnEnter then
 
-	    empireBase = Find_First_Object("Empire_InstantAction")
-	    rebelBase = Find_First_Object("Rebel_InstantAction")
-		empireBase.Take_Damage(100000)
-		rebelBase.Take_Damage(100000)
+		empire_spawn_marker.Make_Invulnerable(true)
+		rebel_spawn_marker.Make_Invulnerable(true)
 		
 		empire.Make_Enemy(rebel)
 		rebel.Make_Enemy(empire)

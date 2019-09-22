@@ -28,7 +28,7 @@
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 		<Space_Model_Name>PROJ_TURBO_BLUE.ALO</Space_Model_Name>
 	</Projectile>
-	
+
 	<Projectile Name="Proj_Ship_Ion_Cannon_Fighter">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Scale_Factor>0.03</Scale_Factor>
@@ -52,7 +52,7 @@
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 		<Space_Model_Name>PROJ_TURBO_BLUE.ALO</Space_Model_Name>
 	</Projectile>
-	
+
 		<Projectile Name="Proj_Ship_Ion_Cannon_Small">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Scale_Factor>0.07</Scale_Factor>
@@ -221,29 +221,82 @@
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 		<Space_Model_Name>PROJ_TURBO_BLUE_QUAD.ALO</Space_Model_Name>
 	</Projectile>
-	
-	<Projectile Name="Proj_Ship_Ion_Pulse">
+
+	<Projectile Name="Proj_Ship_Ion_Pulse_ORIG">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Scale_Factor>0.175</Scale_Factor>
 		<Damage_Type> Damage_IonCannon </Damage_Type>
 		<Max_Speed>80</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
-		<Projectile_Category>Laser</Projectile_Category>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<LandBehavior>IDLE</LandBehavior>
+		<Projectile_Category>DEFAULT</Projectile_Category>
 		<Projectile_Max_Flight_Distance>5000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
 		<Projectile_Damage>2000.0</Projectile_Damage>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
 		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
 		<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
 		<Projectile_Energy_Per_Shot>1000</Projectile_Energy_Per_Shot>
-		<Projectile_Object_Detonation_Particle>Turbohit_Blue</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Detonation_Particle>Ion_Pulse_Impact</Projectile_Object_Detonation_Particle>
 		<Projectile_Ground_Detonation_Particle/>
-		<Projectile_Lifetime_Detonation_Particle>Turbohit_Blue</Projectile_Lifetime_Detonation_Particle>
-		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Large</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Ion_Pulse_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Ion_Pulse_Impact</Projectile_Absorbed_By_Shields_Particle>
 		<AI_Combat_Power>20000</AI_Combat_Power>
 		<Projectile_SFXEvent_Detonate>SFX_Ion_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
-		<Space_Model_Name>mega_ion_cannon.ALO</Space_Model_Name>
+		<Space_Model_Name>Proj_Mega_Ion_Subjugator.ALO </Space_Model_Name>
+		<Land_Model_Name>Proj_Mega_Ion_Subjugator.ALO </Land_Model_Name>
+	</Projectile>
+
+	<Projectile Name="Proj_Ship_Ion_Pulse">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>Proj_Mega_Ion_Subjugator.ALO</Space_Model_Name>
+		<Land_Model_Name>Proj_Mega_Ion_Subjugator.ALO</Land_Model_Name>
+		<Projectile_Width>100</Projectile_Width>
+		<Projectile_Length>100.0</Projectile_Length>
+		<Scale_Factor>1.28</Scale_Factor>
+		<Damage_Type> Damage_Ion_Planet </Damage_Type>
+		<Max_Speed>10.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<LandBehavior>IDLE</LandBehavior>
+		<Projectile_Category>DEFAULT</Projectile_Category>
+		<Projectile_Max_Flight_Distance>5000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Projectile_Damage>2000.0</Projectile_Damage>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+		<Projectile_Blast_Area_Damage> 100000 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 250 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		<Projectile_SFXEvent_Detonate> SFX_Ion_Detonation </Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>1000</Projectile_Energy_Per_Shot>
+
+		<Projectile_Object_Detonation_Particle> Ion_Pulse_Impact </Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle />
+		<Projectile_Lifetime_Detonation_Particle> Ion_Pulse_Impact </Projectile_Lifetime_Detonation_Particle>
+
+		<Projectile_Absorbed_By_Shields_Particle> Ion_Pulse_Impact </Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Disables_Engines_When_Power_Drained>Yes</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Disable_Engines_Duration>1000.0</Projectile_Disable_Engines_Duration>
+		<Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+
+		<!-- Stun specifics - this is more for visual effect than stun ability -->
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Duration>1000.0</Projectile_Ion_Stun_Duration> <!-- must be same as Projectile_Disable_Engines_Duration in this case -->
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.999f</Projectile_Ion_Stun_Speed_Reduction_Percent> <!-- almost total speed reduction -->
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>100000</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent><!-- fire rate reduced to 20% -->
+		<Projectile_Ion_Stun_Stack_Duration>Yes</Projectile_Ion_Stun_Stack_Duration>
+
+		<AI_Combat_Power>20000</AI_Combat_Power>
+
 	</Projectile>
 
 </Projectiles>

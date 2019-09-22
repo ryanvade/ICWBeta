@@ -20,7 +20,8 @@
 
 
 require("PGStoryMode")
-Constants = require("GameConstants")
+
+Constants = ModContentLoader.get("GameConstants")
 
 function Definitions()
 
@@ -2894,7 +2895,6 @@ function Begin_GC(message)
 				"Lucrehulk_CSA",
 				"Grumby_Notropis",
 				"Sloane_Enforce",
-				"Sparhawk_Squadron",
 				"Fiolla_Team",
 				"Odumin_Team",
 				"Karrek_Flim_Team",
@@ -2918,7 +2918,6 @@ function Begin_GC(message)
 				"Lucrehulk_CSA",
 				"Grumby_Notropis",
 				"Sloane_Enforce",
-				"Sparhawk_Squadron",
 				"Fiolla_Team",
 				"Odumin_Team",
 				"Karrek_Flim_Team",
@@ -2942,7 +2941,6 @@ function Begin_GC(message)
 				"Lucrehulk_CSA",
 				"Grumby_Notropis",
 				"Sloane_Enforce",
-				"Sparhawk_Squadron",
 				"Fiolla_Team",
 				"Odumin_Team",
 				"Karrek_Flim_Team",
@@ -2966,7 +2964,6 @@ function Begin_GC(message)
 				"Lucrehulk_CSA",
 				"Grumby_Notropis",
 				"Sloane_Enforce",
-				"Sparhawk_Squadron",
 				"Fiolla_Team",
 				"Odumin_Team",
 				"Karrek_Flim_Team",
@@ -2990,7 +2987,6 @@ function Begin_GC(message)
 				"Lucrehulk_CSA",
 				"Grumby_Notropis",
 				"Sloane_Enforce",
-				"Sparhawk_Squadron",
 				"Fiolla_Team",
 				"Odumin_Team",
 				"Karrek_Flim_Team",

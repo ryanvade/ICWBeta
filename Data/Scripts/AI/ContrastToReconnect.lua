@@ -70,12 +70,6 @@ function Definitions()
 	LandSecured = false
 	InSpaceConflict = false
 	WasConflict = false
-
-	difficulty = "Easy"
-	if PlayerObject then
-		difficulty = PlayerObject.Get_Difficulty()
-	end
-	sleep_duration = DifficultyBasedMinPause(difficulty)
 	
 	DebugMessage("%s -- Done Definitions", tostring(Script))
 end
@@ -156,6 +150,12 @@ function GroundForce_Thread()
 end
 
 function Exit_Plan_With_Possible_Sleep()
+	difficulty = "Easy"
+	if PlayerObject then
+        difficulty = PlayerObject.Get_Difficulty()
+    end
+    sleep_duration = DifficultyBasedMinPause(difficulty)
+
 	if SpaceForce then
 		SpaceForce.Release_Forces(1.0)
 	end

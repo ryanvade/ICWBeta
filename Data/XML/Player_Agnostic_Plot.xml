@@ -20,7 +20,7 @@
 		<Reward_Param13></Reward_Param13>
 		<Perpetual>true</Perpetual>
 	</Event>
-
+	
 <Event Name="Buildable_Unit_Template">
 	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 	<Event_Param2>BUILDABLE_UNIT</Event_Param2>
@@ -94,6 +94,15 @@
     <Reward_Param2></Reward_Param2>
     <Perpetual>true</Perpetual>
   </Event>
+  
+  <Event Name="Filter_Story">
+    <Event_Type>STORY_CLICK_GUI</Event_Type>
+    <Event_Param1>b_space_filter04</Event_Param1>
+    <Reward_Type>TRIGGER_AI</Reward_Type>
+    <Reward_Param1>SELECT_STORY</Reward_Param1>
+    <Reward_Param2></Reward_Param2>
+    <Perpetual>true</Perpetual>
+  </Event>
 
   <Event Name="Enable_Click_Pause">
     <Event_Type>STORY_CLICK_GUI</Event_Type>
@@ -121,6 +130,7 @@
     <Prereq>Filter_Non_Capital</Prereq>
     <Prereq>Filter_Capitals</Prereq>
     <Prereq>Filter_Structures</Prereq>
+    <Prereq>Filter_Story</Prereq>
     <Perpetual>true</Perpetual>
     <Branch>Click_Pause_Branch</Branch>
   </Event>

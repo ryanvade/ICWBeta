@@ -40,6 +40,7 @@
 --/////////////////////////////////////////////////////////////////////////////////////////////////
 
 require("PGBase")
+ModContentLoader = require("trlib-std/ModContentLoader")
 
 BAD_WEIGHT = -1000000000000000000.0
 BIG_FLOAT = 1000000000000000000.0
@@ -48,87 +49,83 @@ BIG_FLOAT = 1000000000000000000.0
 collectgarbage(256)
 
 function Common_Base_Definitions()
-	-- Clear out the thread specific values.
-	ThreadValue.Reset()
-	
-	-- Clear out any thread events.
-	GetEvent.Reset()
+    -- Clear out the thread specific values.
+    ThreadValue.Reset()
 
-	TimerTable = {}
-	DeathTable = {}
-	ProxTable = {}
-	AttackedTable = {}
-	CurrentEvent = nil
-	EventParams = nil
-	block = nil
-	break_block = false
-	YieldCount = 0
-	AITarget = nil
-	Object = nil
-	Target = nil
-	FreeStore = nil
-	PlayerObject = nil
-	LastService = nil
-	Budget = nil
-	enemy = nil
-	taskforce = nil
-	tfObj = nil
-	stage = nil
-	UnitType = nil
-	invade_status = nil
-	path = nil
-	InvasionActive = false
-	unit = nil
+    -- Clear out any thread events.
+    GetEvent.Reset()
 
-	hide_target = nil
-	healer = nil
-	xfire_pos = nil
-	kite_pos = nil
-	friendly = nil
-	
-	block_table = {}
-	
-	lib_anti_idle_block = nil
+    TimerTable = {}
+    DeathTable = {}
+    ProxTable = {}
+    AttackedTable = {}
+    CurrentEvent = nil
+    EventParams = nil
+    block = nil
+    break_block = false
+    YieldCount = 0
+    AITarget = nil
+    Object = nil
+    Target = nil
+    FreeStore = nil
+    PlayerObject = nil
+    LastService = nil
+    Budget = nil
+    enemy = nil
+    taskforce = nil
+    tfObj = nil
+    stage = nil
+    UnitType = nil
+    invade_status = nil
+    path = nil
+    InvasionActive = false
+    unit = nil
 
+    hide_target = nil
+    healer = nil
+    xfire_pos = nil
+    kite_pos = nil
+    friendly = nil
+
+    block_table = {}
+
+    lib_anti_idle_block = nil
 end
-
 
 -- base constructor
 function Base_Definitions()
+    Common_Base_Definitions()
 
-	Common_Base_Definitions()
-	
-	if Definitions then
-		Definitions()
-	end
+    if Definitions then
+        Definitions()
+    end
 end
 
 function Evaluator_Clean_Up()
-	Target = nil
-	PlayerObject = nil
+    Target = nil
+    PlayerObject = nil
 
-	if Clean_Up then
-		Clean_Up()
-	end
+    if Clean_Up then
+        Clean_Up()
+    end
 end
 
 -- Returns true if the entire list is not in some kind of obscuring field
 function UnitListIsObscured(unit_list)
-	for i, unit in pairs(unit_list) do
-		if not (unit.Is_In_Nebula() or unit.Is_In_Asteroid_Field() or unit.Is_In_Ion_Storm()) then
-			return false
-		end
-	end
-	return true
+    for i, unit in pairs(unit_list) do
+        if not (unit.Is_In_Nebula() or unit.Is_In_Asteroid_Field() or unit.Is_In_Ion_Storm()) then
+            return false
+        end
+    end
+    return true
 end
-
 
 -- Remove all invalid or dead units from a list and return it.
 function Cull_Unit_List(unit_list)
-	for k, unit in pairs(unit_list) do
-		if not TestValid(unit) then
-			unit_list[k] = nil
-		end
-	end
-	return unit_list
+    for k, unit in pairs(unit_list) do
+        if not TestValid(unit) then
+            unit_list[k] = nil
+        end
+    end
+    return unit_list
 end

@@ -2,7 +2,6 @@
 <Imperial_Remnant_Space_Units>
 
 
-
 	<StarBase Name="Generic_Star_Base_1">
 		<GUI_Bounds_Scale>0.5</GUI_Bounds_Scale>
 
@@ -94,7 +93,7 @@
 		<Space_Layer> StaticObject </Space_Layer>
 		<Layer_Z_Adjust> -150 </Layer_Z_Adjust>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
-        <Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
 		<Radar_Icon_Scale_Land>0.08</Radar_Icon_Scale_Land>
 		<Radar_Icon_Scale_Space>0.08</Radar_Icon_Scale_Space>
 		<Radar_Icon_Name>i_radar_lightshipyard.tga</Radar_Icon_Name>
@@ -102,7 +101,7 @@
 		<Icon_Name>i_button_lshipyard.tga</Icon_Name>
 		<Score_Cost_Credits> 1500</Score_Cost_Credits>
 		<Retreat_Self_Destruct_Explosion>Self_Destruct_Star_Base_Level_1_Empire</Retreat_Self_Destruct_Explosion>
-		 <Ranking_In_Category>1</Ranking_In_Category>
+		<Ranking_In_Category>1</Ranking_In_Category>
 		<Death_Clone>Damage_Normal, Huge_Explosion_Space</Death_Clone>
 
 	</StarBase>
@@ -196,7 +195,7 @@
 		<Space_Layer> StaticObject </Space_Layer>
 		<Layer_Z_Adjust> -200.0 </Layer_Z_Adjust>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
-        <Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
 		<!--<Radar_Icon_Name>i_radar_station2_e.tga</Radar_Icon_Name>-->
 		<Radar_Icon_Scale_Land>0.08</Radar_Icon_Scale_Land>
 		<Radar_Icon_Scale_Space>0.08</Radar_Icon_Scale_Space>
@@ -304,7 +303,7 @@
 		<Layer_Z_Adjust> -200 </Layer_Z_Adjust>
 
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
-        <Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
 		<Radar_Icon_Scale_Land>0.4</Radar_Icon_Scale_Land>
 		<Radar_Icon_Scale_Space>0.4</Radar_Icon_Scale_Space>
 		<Radar_Icon_Name>i_radar_capitalshipyard.tga</Radar_Icon_Name>
@@ -318,10 +317,10 @@
 	</StarBase>
 
 
-	<GenericHeroUnit Name="Generic_Probe_Droid">
+	<GenericHeroUnit Name="Prowler_Probe_Droid">
 		<Text_ID>TEXT_HERO_UNIT_PROBE_DROID</Text_ID>
 		<GUI_Row> 0 </GUI_Row>
-		<Icon_Name>i_button_scout_droid.tga</Icon_Name>
+		<Icon_Name>i_button_prowler1000.tga</Icon_Name>
 		<Mass>1.0</Mass>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Is_Sprite>No</Is_Sprite>
@@ -376,7 +375,7 @@
 		</Abilities>
 	</GenericHeroUnit>
 
-	<HeroCompany Name="Probe_Droid_Team">
+	<HeroCompany Name="Prowler_Probe_Droid_Team">
 		<GUI_Row>0</GUI_Row>
 		<Text_ID>TEXT_HERO_UNIT_PROBE_DROID</Text_ID>
 		<Is_Dummy>Yes</Is_Dummy>
@@ -391,9 +390,9 @@
 		<Required_Special_Structures>Structure_Category_Dummy</Required_Special_Structures>
 		<Required_Planets></Required_Planets>
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Company_Transport_Unit>Imperial_Landing_Craft</Company_Transport_Unit>
-		<Company_Units>Generic_Probe_Droid</Company_Units>
-		<Icon_Name>i_button_scout_droid.tga</Icon_Name>
+		<Company_Transport_Unit>CR20_Landing_Craft</Company_Transport_Unit>
+		<Company_Units>Prowler_Probe_Droid</Company_Units>
+		<Icon_Name>i_button_prowler1000.tga</Icon_Name>
 		<Is_Generic_Hero>Yes</Is_Generic_Hero>
 		<Is_Stealth_Company>Yes</Is_Stealth_Company>
 		<SFXEvent_Build_Complete>Unit_Galactic_Announce_Probot</SFXEvent_Build_Complete>
@@ -406,12 +405,12 @@
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
 		<CategoryMask>NonCombatHero</CategoryMask>
 		<Population_Value>1</Population_Value>
-		<Affiliation>Empire, Pentastar, Teradoc, Hutts, Pirates, Underworld</Affiliation>
+		<Affiliation>Empire</Affiliation>
 	</HeroCompany>
 
 	<SpaceUnit Name="Arquitens">
 		<Variant_Of_Existing_Type>Template_Arquitens</Variant_Of_Existing_Type>
-		
+
 		<Affiliation>Empire</Affiliation>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
@@ -422,11 +421,10 @@
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
 		<Required_Planets />
-		
-		<Lua_Script>GenericFotRObject</Lua_Script>
-		
-	</SpaceUnit>
 
+		<Lua_Script>GenericGameObject</Lua_Script>
+
+	</SpaceUnit>
 
 
 	<!-- ******************************************************************** -->
@@ -435,7 +433,7 @@
 
 	<SpaceUnit Name="LAC">
 		<Text_ID>TEXT_UNIT_LAC</Text_ID>
-				<Lua_Script>GenericFotRObject</Lua_Script>
+		<Lua_Script>GenericGameObject</Lua_Script>
 		<GUI_Row> 1 </GUI_Row>
 		<Space_Model_Name>REP_LAC.ALO</Space_Model_Name>
 		<GUI_Model_Name>RV_CORVETTE.ALO</GUI_Model_Name>
@@ -446,7 +444,7 @@
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<No_Colorization_Color> 200, 2, 2, 255 </No_Colorization_Color>
 
-        <Ranking_In_Category>7</Ranking_In_Category>
+		<Ranking_In_Category>7</Ranking_In_Category>
 		<Max_Speed>2.5</Max_Speed> <!-- Was 3.25 -->
 		<Max_Rate_Of_Turn>1.00</Max_Rate_Of_Turn> <!-- was 1.50 -->
 		<MovementClass> Space </MovementClass>
@@ -459,7 +457,7 @@
 
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Armor_Type> Armor_Frigate </Armor_Type>
-        <Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
 		<Max_Thrust>0.5</Max_Thrust>
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
@@ -497,7 +495,7 @@
 		<Transport_Capacity>4</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>800</Build_Cost_Credits>
-        <Slice_Cost_Credits>675</Slice_Cost_Credits>
+		<Slice_Cost_Credits>675</Slice_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>120</Size_Value>
@@ -580,7 +578,6 @@
 		</Unit_Abilities_Data>
 
 
-
 		<Encyclopedia_Text>TEXT_TOOLTIP_LAC</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 1250</Score_Cost_Credits>
@@ -596,8 +593,8 @@
 		<Population_Value>1</Population_Value>
 
 
-			<Abilities SubObjectList="Yes">
-				<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
 				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
 				<Absolute_Income_Modifier>-10</Absolute_Income_Modifier>
@@ -606,10 +603,10 @@
 
 
 	</SpaceUnit>
-	
+
 	<SpaceUnit Name="Corellian_Corvette">
-				<Variant_Of_Existing_Type>Template_Corellian_Corvette</Variant_Of_Existing_Type>
-	
+		<Variant_Of_Existing_Type>Template_Corellian_Corvette</Variant_Of_Existing_Type>
+
 		<Affiliation>Empire</Affiliation>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
@@ -619,16 +616,15 @@
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
 		<Required_Planets />
-		
-		<Lua_Script>GenericFotRObject</Lua_Script>
+
+		<Lua_Script>GenericGameObject</Lua_Script>
 
 	</SpaceUnit>
-
 
 
 	<SpaceUnit Name="Corellian_Gunboat">
 		<Variant_Of_Existing_Type>Template_Corellian_Gunboat</Variant_Of_Existing_Type>
-	
+
 		<Affiliation>Empire</Affiliation>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
@@ -638,12 +634,10 @@
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
 		<Required_Planets />
-		
-		<Lua_Script>GenericFotRObject</Lua_Script>
+
+		<Lua_Script>GenericGameObject</Lua_Script>
 
 	</SpaceUnit>
-
-
 
 
 	<!-- ******************************************************************** -->
@@ -651,8 +645,6 @@
 	<!-- ******************************************************************** -->
 
 
-	
-	
 	<SpaceUnit Name="Generic_Praetor">
 		<Galactic_Fleet_Override_Model_Name>Fleet_Praetor.ALO</Galactic_Fleet_Override_Model_Name>
 		<Text_ID>TEXT_UNIT_PRAETOR</Text_ID>
@@ -683,7 +675,7 @@
 		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> SuperCapital </Space_Layer>
-		<Layer_Z_Adjust>-400.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-600.0</Layer_Z_Adjust>
 		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>5</Bank_Turn_Angle>
 		<OverrideAcceleration> .02 </OverrideAcceleration>
@@ -719,7 +711,7 @@
 
 		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
-		
+
 		<Starting_Spawned_Units_Tech_0>Z95_HEADHUNTER_SQUADRON, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 2</Starting_Spawned_Units_Tech_0>
@@ -727,7 +719,7 @@
 		<Reserve_Spawned_Units_Tech_0>Z95_HEADHUNTER_SQUADRON, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 2</Reserve_Spawned_Units_Tech_0>
-		
+
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
 		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
@@ -827,29 +819,29 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<Unit_Ability>
-					<Type>TRACTOR_BEAM</Type>
-					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-					<GUI_Activated_Ability_Name>Praetor_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-					<Recharge_Seconds>30</Recharge_Seconds>
-					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Type>TRACTOR_BEAM</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>Praetor_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
 			</Unit_Ability>
-       </Unit_Abilities_Data>
+		</Unit_Abilities_Data>
 
 		<Abilities SubObjectList="Yes">
 			<Tractor_Beam_Attack_Ability Name="Praetor_Tractor_Beam_Attack_Ability">
-					<Activation_Style> User_Input </Activation_Style>
-					<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
-					<Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+				<Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
 
-					<Activation_Min_Range>2</Activation_Min_Range>
-					<Activation_Max_Range>1500</Activation_Max_Range>
+				<Activation_Min_Range>2</Activation_Min_Range>
+				<Activation_Max_Range>1500</Activation_Max_Range>
 
-					<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
-					<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
-					<Stacking_Category>0</Stacking_Category>
-				</Tractor_Beam_Attack_Ability>
-				
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
@@ -861,24 +853,23 @@
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
 		</Abilities>
-		 <Lua_Script>GenericFotRObject</Lua_Script>
+		<Lua_Script>GenericGameObject</Lua_Script>
 	</SpaceUnit>
 
 	<SpaceUnit Name="Generic_Tector">
-		
+
 		<Variant_Of_Existing_Type>Template_Tector</Variant_Of_Existing_Type>
-		
+
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
 		<Tech_Level>5</Tech_Level>
 		<Affiliation>Empire</Affiliation>
-		
-		<Lua_Script>GenericFotRObject</Lua_Script>
+
+		<Lua_Script>GenericGameObject</Lua_Script>
 
 	</SpaceUnit>
-
 
 
 	<!-- ******************************************************************** -->
@@ -888,7 +879,7 @@
 
 	<SpaceUnit Name="Carrack_Cruiser">
 		<Variant_Of_Existing_Type>Template_Carrack_Cruiser</Variant_Of_Existing_Type>
-	
+
 		<Affiliation>Empire</Affiliation>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
@@ -899,13 +890,13 @@
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
 		<Required_Planets />
-		
-		<Lua_Script>GenericFotRObject</Lua_Script>
+
+		<Lua_Script>GenericGameObject</Lua_Script>
 	</SpaceUnit>
-	
+
 	<SpaceUnit Name="Carrack_Cruiser_Lasers">
 		<Variant_Of_Existing_Type>Template_Carrack_Cruiser</Variant_Of_Existing_Type>
-	
+
 		<Affiliation>Empire</Affiliation>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
@@ -921,23 +912,23 @@
 			HP_Carrack_Engines, HP_Carrack_Weapon_FL_Laser, HP_Carrack_MR, HP_Carrack_Weapon_BR_Laser, HP_Carrack_Weapon_FR_Laser, HP_Carrack_Weapon_ML, HP_Carrack_Weapon_BL_Laser, HP_Carrack_Shield_Generator
 		</HardPoints>
 
-		<Lua_Script>GenericFotRObject</Lua_Script>
+		<Lua_Script>GenericGameObject</Lua_Script>
 	</SpaceUnit>
 
 	<SpaceUnit Name="Dreadnaught">
 		<Variant_Of_Existing_Type>Template_Dreadnaught</Variant_Of_Existing_Type>
 		<Affiliation>Empire, Corporate_Sector </Affiliation>
-		
+
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<!--<Encyclopedia_Good_Against> MC40a Carrack_Cruiser Vigilance_Gunship </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Generic_Star_Destroyer TIE_Bomber K-Wing </Encyclopedia_Vulnerable_To>-->
 		<Tech_Level>99</Tech_Level>
-		<Lua_Script>GenericFotRObject</Lua_Script>
+		<Lua_Script>GenericGameObject</Lua_Script>
 		<!--<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>-->
 		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 
 
-			<Unit_Abilities_Data SubObjectList="Yes">
+		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
 			<Unit_Ability>
 				<Type>POWER_TO_WEAPONS</Type>
@@ -953,24 +944,24 @@
 
 		</Unit_Abilities_Data>
 	</SpaceUnit>
-	
+
 	<SpaceUnit Name="Dreadnaught_Lasers">
 		<Variant_Of_Existing_Type>Template_Dreadnaught</Variant_Of_Existing_Type>
 		<Affiliation>Empire, Corporate_Sector </Affiliation>
-		
+
 		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<!--<Encyclopedia_Good_Against> MC40a Carrack_Cruiser Vigilance_Gunship </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Generic_Star_Destroyer TIE_Bomber K-Wing </Encyclopedia_Vulnerable_To>-->
 		<Tech_Level>1</Tech_Level>
-		<Lua_Script>GenericFotRObject</Lua_Script>
+		<Lua_Script>GenericGameObject</Lua_Script>
 		<!--<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>-->
 		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 
 		<HardPoints>
 			HP_Dreadnaught_Weapon_TFL,
-			HP_Dreadnaught_Weapon_FR,
+			HP_Dreadnaught_Weapon_FR_Laser,
 			HP_Dreadnaught_Weapon_R5,
-			HP_Dreadnaught_Weapon_L5,
+			HP_Dreadnaught_Weapon_L5_Laser,
 			HP_Dreadnaught_Weapon_TFR,
 			HP_Dreadnaught_Weapon_TMR,
 			HP_Dreadnaught_Weapon_BMR,
@@ -980,7 +971,7 @@
 			HP_Dreadnaught_Fighter_Bay
 		</HardPoints>
 
-			<Unit_Abilities_Data SubObjectList="Yes">
+		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
 			<Unit_Ability>
 				<Type>POWER_TO_WEAPONS</Type>
@@ -996,7 +987,7 @@
 
 		</Unit_Abilities_Data>
 	</SpaceUnit>
-	
+
 	<SpaceUnit Name="Katana_Dreadnaught">
 		<Variant_Of_Existing_Type>Template_Katana_Dreadnaught</Variant_Of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
@@ -1004,14 +995,14 @@
 
 		<Tech_Level>99</Tech_Level>
 		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
-		<Lua_Script>GenericFotRObject</Lua_Script>
+		<Lua_Script>GenericGameObject</Lua_Script>
 		<Population_Value>6</Population_Value>
-		
+
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 1</Starting_Spawned_Units_Tech_0>
 
 		<Tactical_Build_Prerequisites />
 	</SpaceUnit>
-	
+
 	<SpaceUnit Name="Generic_Acclamator_Assault_Ship_I">
 		<Text_ID>TEXT_UNIT_ACCLAMATOR_I</Text_ID>
 		<GUI_Row> 1 </GUI_Row>
@@ -1021,7 +1012,7 @@
 		<Mass>0.9995</Mass>
 		<Scale_Factor>1.03</Scale_Factor>
 
-        <Ranking_In_Category>6</Ranking_In_Category>
+		<Ranking_In_Category>6</Ranking_In_Category>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Max_Speed>2.2</Max_Speed>
 		<Max_Rate_Of_Turn>0.5</Max_Rate_Of_Turn>
@@ -1039,7 +1030,7 @@
 		<Maintenance_Cost>0.1</Maintenance_Cost>
 
 		<Armor_Type> Armor_Star_Destroyer </Armor_Type>
-        <Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
 		<Damage>30</Damage>
 		<Autoresolve_Health>2800</Autoresolve_Health>
 		<Shield_Points>1400</Shield_Points>
@@ -1047,7 +1038,7 @@
 		<Shield_Refresh_Rate>42</Shield_Refresh_Rate> <!-- was 50 -->
 		<Energy_Capacity>3000</Energy_Capacity>
 		<Energy_Refresh_Rate>400</Energy_Refresh_Rate>
-		<Lua_Script>GenericFotRObject</Lua_Script>
+		<Lua_Script>GenericGameObject</Lua_Script>
 		<Affiliation>Empire</Affiliation>
 		<Tech_Level>1</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
@@ -1075,9 +1066,9 @@
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 6</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0> 
-		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 3</Reserve_Spawned_Units_Tech_0> 
-		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Reserve_Spawned_Units_Tech_0> 
+		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Reserve_Spawned_Units_Tech_0>
 
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
@@ -1171,7 +1162,7 @@
 				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Acclamator</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
 
-				<Unit_Ability>
+			<Unit_Ability>
 				<Type>TURBO</Type>
 
 				<Expiration_Seconds>0</Expiration_Seconds>
@@ -1192,8 +1183,7 @@
 		</Unit_Abilities_Data>
 
 
-
-			<Abilities SubObjectList="Yes">
+		<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
@@ -1231,7 +1221,7 @@
 		<Mass>0.9995</Mass>
 		<Scale_Factor>1.03</Scale_Factor>
 
-        <Ranking_In_Category>6</Ranking_In_Category>
+		<Ranking_In_Category>6</Ranking_In_Category>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Max_Speed>2.2</Max_Speed>
 		<Max_Rate_Of_Turn>0.5</Max_Rate_Of_Turn>
@@ -1249,7 +1239,7 @@
 		<Maintenance_Cost>0.1</Maintenance_Cost>
 
 		<Armor_Type> Armor_Star_Destroyer </Armor_Type>
-        <Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
 		<Damage>30</Damage>
 		<Autoresolve_Health>2800</Autoresolve_Health>
 		<Shield_Points>1400</Shield_Points>
@@ -1257,7 +1247,7 @@
 		<Shield_Refresh_Rate>42</Shield_Refresh_Rate> <!-- was 50 -->
 		<Energy_Capacity>3000</Energy_Capacity>
 		<Energy_Refresh_Rate>400</Energy_Refresh_Rate>
-		<Lua_Script>GenericFotRObject</Lua_Script>
+		<Lua_Script>GenericGameObject</Lua_Script>
 		<Affiliation>Empire</Affiliation>
 		<Tech_Level>1</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
@@ -1285,9 +1275,9 @@
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Reserve_Spawned_Units_Tech_0> 
+		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 2</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Reserve_Spawned_Units_Tech_0> 		
+		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Reserve_Spawned_Units_Tech_0>
 
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
@@ -1381,7 +1371,7 @@
 				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Acclamator</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
 
-				<Unit_Ability>
+			<Unit_Ability>
 				<Type>TURBO</Type>
 
 				<Expiration_Seconds>0</Expiration_Seconds>
@@ -1402,8 +1392,7 @@
 		</Unit_Abilities_Data>
 
 
-
-			<Abilities SubObjectList="Yes">
+		<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
 				<!-- 3% bonus to base planetary income -->
@@ -1434,7 +1423,7 @@
 
 	<SpaceUnit Name="Generic_Acclamator_Assault_Ship">
 		<Variant_Of_Existing_Type>Template_Acclamator_Assault_Ship</Variant_Of_Existing_Type>
-		
+
 		<Affiliation>Empire</Affiliation>
 		<Tech_Level>4</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
@@ -1442,61 +1431,62 @@
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
 		<Required_Planets />
-		
+
 		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0> 
+		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 6</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Reserve_Spawned_Units_Tech_0>		
-		
-		<Lua_Script>GenericFotRObject</Lua_Script>
+		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Reserve_Spawned_Units_Tech_0>
+
+		<Lua_Script>GenericGameObject</Lua_Script>
 
 	</SpaceUnit>
-	
+
 	<SpaceUnit Name="Generic_Venator">
-        <Variant_Of_Existing_Type>Template_Venator</Variant_Of_Existing_Type>
-		
-      	<Affiliation>Empire</Affiliation>
-        <Tech_Level>1</Tech_Level>
-        <Required_Timeline>0</Required_Timeline>
-        <Required_Ground_Base_Level>0</Required_Ground_Base_Level>
-        <Required_Star_Base_Level>3</Required_Star_Base_Level>
-        <Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
-        <Required_Planets />
-        
+		<Variant_Of_Existing_Type>Template_Venator</Variant_Of_Existing_Type>
+
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>1</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
+		<Required_Planets />
+
 		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0> 
-		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 3</Reserve_Spawned_Units_Tech_0> 
-		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_0> 
+		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_0>
 
-		<Lua_Script>GenericFotRObject</Lua_Script>
-      
-    </SpaceUnit>
+		<Lua_Script>GenericGameObject</Lua_Script>
+
+	</SpaceUnit>
 
 	<SpaceUnit Name="Generic_Victory_Destroyer">
 		<Variant_Of_Existing_Type>Template_Victory_Destroyer</Variant_Of_Existing_Type>
-		
+
 		<Affiliation>Empire</Affiliation>
 		<Tech_Level>1</Tech_Level>
-        <Required_Timeline>0</Required_Timeline>
-        <Required_Ground_Base_Level>0</Required_Ground_Base_Level>
-        <Required_Star_Base_Level>2</Required_Star_Base_Level>
-        <Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
-        <Required_Planets />
-		
-		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>2</Required_Star_Base_Level>
+		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
+		<Required_Planets />
+
+		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_0>
-		
-		<Lua_Script>GenericFotRObject</Lua_Script>
-    </SpaceUnit>
-	
+
+		<Lua_Script>GenericGameObject</Lua_Script>
+	</SpaceUnit>
+
 	<SpaceUnit Name="Generic_Star_Destroyer">
 		<Variant_Of_Existing_Type>Template_Star_Destroyer</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_IMPERATOR</Text_ID>
 		
 		<Tech_Level>5</Tech_Level>
 		<Affiliation>Empire</Affiliation>
@@ -1504,30 +1494,30 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
-		
+
 		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0> 
-		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 3</Reserve_Spawned_Units_Tech_0> 
+		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 3</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_0>
 
-		<Lua_Script>GenericFotRObject</Lua_Script>
+		<Lua_Script>GenericGameObject</Lua_Script>
 
 	</SpaceUnit>
-			
+
 	<SpaceUnit Name="Invincible_Cruiser">
 		<Variant_Of_Existing_Type>Template_Invincible_Cruiser</Variant_Of_Existing_Type>
-		
+
 		<Affiliation>Empire</Affiliation>
 		<Tech_Level>1</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
-		
-		<Lua_Script>GenericFotRObject</Lua_Script>
+
+		<Lua_Script>GenericGameObject</Lua_Script>
 
 		<Starting_Spawned_Units_Tech_0>Z95_Headhunter_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Cloakshape_Squadron, 3</Starting_Spawned_Units_Tech_0>
@@ -1540,7 +1530,7 @@
 	<!-- ******************************* Fighters *************************** -->
 	<!-- ******************************************************************** -->
 
-	
+
 	<!-- ******************************************************************** -->
 	<!-- ******************************* Squadrons *************************** -->
 	<!-- ******************************************************************** -->

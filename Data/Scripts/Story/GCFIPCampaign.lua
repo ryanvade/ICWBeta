@@ -21,14 +21,14 @@ require("PGBase")
 require("PGStateMachine")
 require("PGStoryMode")
 require("PGSpawnUnits")
-require("ChangeOwnerUtilities")
-require("StoryEventManager")
-require("StoryEvents")
+require("trlib-util/ChangeOwnerUtilities")
+require("trlib-lua-events/StoryEventManager")
+require("trlib-lua-events/StoryEvents")
 require("Conquests/GlobalEvents")
 
 function Definitions()
     DebugMessage("%s -- In Definitions", tostring(Script))
-    
+
     StoryModeEvents = {
         Universal_Story_Start = Begin_GC
     }

@@ -1,5 +1,6 @@
 require("pgcommands")
-TransactionManager = require("TRGameModeTransactions")
+TransactionManager = require("trlib-transactions/TransactionManager")
+
 
 -- Don't pool...
 ScriptPoolCount = 0
@@ -29,6 +30,7 @@ function Base_Definitions()
     end
 
     TM = TransactionManager()
+    GlobalValue.Set("MOD_ID", ModContentLoader.get_mod_id())
 
     Define_Title_Faction_Table()
 end

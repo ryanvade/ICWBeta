@@ -22,16 +22,10 @@ require("PGDebug")
 require("PGStateMachine")
 require("PGStoryMode")
 
-CONSTANTS = require("GameConstants")
-require("GameObjectLibrary")
-require("TRGameModeTransactions")
+GameObjectLibrary = ModContentLoader.get("GameObjectLibrary")
 
-require("TRUtil")
-require("GalacticConquest")
-require("DisplayManager")
-require("CategoryFilter")
-require("NewsFeed")
-require("GalacticEventsNewsSource")
+require("trlib-transactions/init")
+require("trlib-galaxy/init")
 
 function Definitions()
     DebugMessage("%s -- In Definitions", tostring(Script))
@@ -45,27 +39,38 @@ function Begin_GC(message)
     if message == OnEnter then
         TM = TransactionManager()
 
-        local plot = TRUtil.GetPlayerAgnosticPlot()
+        local plot = StoryUtil.GetPlayerAgnosticPlot()
         GC = GalacticConquest(plot, CONSTANTS.PLAYABLE_FACTIONS)
 
         GC.HumanPlayer.Enable_Advisor_Hints("Galactic", false)
         GC.HumanPlayer.Enable_Advisor_Hints("Space", false)
         GC.HumanPlayer.Enable_Advisor_Hints("Land", false)
 
-        GCEventNewsSource = GalacticEventsNewsSource(GC.Events.PlanetOwnerChanged, GC.Events.GalacticHeroKilled)
+        GCEventNewsSource =
+            GalacticEventsNewsSource(
+            GC.Events.PlanetOwnerChanged,
+            GC.Events.GalacticHeroKilled,
+            GC.NRGOV.Events.ElectionHeld,
+            GC.Events.IncomingFleet
+        )
 
-        Feed = NewsFeed()
-        Feed:add_news_source(GCEventNewsSource)
+        GalacticNewsFeed = NewsFeedDisplayComponent()
+        GalacticNewsFeed:add_news_source(GCEventNewsSource)
 
         StructureDisplay =
-            OrbitalStructureDisplay(GC.Events.SelectedPlanetChanged, GC.Events.GalacticProductionFinished, Feed)
+            PlanetInformationDisplayComponent(GC.Events.SelectedPlanetChanged, GC.Events.GalacticProductionFinished)
+
+        GalacticDisplay = DisplayComponentContainer()
+        GalacticDisplay:add_display_component(StructureDisplay)
+        GalacticDisplay:add_display_component(GalacticNewsFeed)
+
         Filter = CategoryFilter(plot, GC)
 
         Create_Thread("TransactionManagerThread")
     elseif message == OnUpdate then
         GC:Update()
         Filter:Update()
-        Feed:update()
+        GalacticDisplay:update_components()
     end
 end
 

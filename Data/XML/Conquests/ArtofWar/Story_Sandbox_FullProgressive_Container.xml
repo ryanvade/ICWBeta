@@ -105,6 +105,34 @@
 		<Reward_Param2>1</Reward_Param2>
 	</Event>
 	
+	<!-- **************************************************** -->
+	<!-- ******* LUA Tells the script which era started *****-->
+	<!-- **************************************************** -->
+	
+	<Event Name="GC_Start_Force_Level_Two">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_02</Event_Param2>
+	</Event>
+	
+	<Event Name="GC_Start_Force_Level_Three">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_03</Event_Param2>
+	</Event>	
+	
+	<Event Name="GC_Start_Force_Level_Four">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_04</Event_Param2>
+	</Event>
+	
+	<Event Name="GC_Start_Force_Level_Five">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_05</Event_Param2>
+	</Event>
+	
+	<!-- ************************************************** -->
+	<!-- ************************************************** -->
+	<!-- ************************************************** -->
+	
 	<Event Name="GC_Progress_01">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>2</Event_Param1>
@@ -253,9 +281,6 @@
 		<Reward_Param2>1</Reward_Param2>
 	</Event>
 
-	
-
-	
 	<Event Name="Determine_Faction_LUA">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>0</Event_Param1>
@@ -676,7 +701,8 @@
 		<Reward_Param8>Isard_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Thrawn_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>GC_Progress_02</Prereq>
+		<Prereq>E_Level_Two</Prereq>
+		<Prereq>GC_Start_Force_Level_Two</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -692,7 +718,7 @@
 		<Reward_Param6 />
 		<Reward_Param7 />
 		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
-		<Reward_Param9>Palpatine_Loop</Reward_Param9>
+		<Reward_Param9>Emperor_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Thrawn_Recruit_Finished</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
@@ -727,9 +753,10 @@
 		<Reward_Param6 />
 		<Reward_Param7 />
 		<Reward_Param8>Isard_Intro_Speech</Reward_Param8>
-		<Reward_Param9>Palpatine_Loop</Reward_Param9>
+		<Reward_Param9>Emperor_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>GC_Progress_03</Prereq>
+		<Prereq>E_Level_Three</Prereq>
+		<Prereq>GC_Start_Force_Level_Three</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -747,7 +774,8 @@
 		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Jax_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>GC_Progress_03</Prereq>
+		<Prereq>E_Level_Three</Prereq>
+		<Prereq>GC_Start_Force_Level_Three</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -818,7 +846,7 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
 		<Reward_Param1>Daala_Tag</Reward_Param1>
-		<Prereq>GC_Progress_04</Prereq>
+		<Prereq>E_Level_Four</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -835,13 +863,14 @@
 		<Reward_Param8>Isard_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Daala_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>GC_Progress_04</Prereq>
+		<Prereq>E_Level_Four</Prereq>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
 	<Event Name="Pellaeon_Requests">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>240</Event_Param1>
+		<Event_Param1>80</Event_Param1>
 		<Reward_Type>MULTIMEDIA</Reward_Type>
 		<Reward_Param1>TEXT_CONQUEST_EVENT_IR_PELLAEON_CONTACT</Reward_Param1>
 		<Reward_Param2>15</Reward_Param2>
@@ -853,7 +882,8 @@
 		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Daala_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>GC_Progress_04</Prereq>
+		<Prereq>E_Level_Four</Prereq>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	
@@ -888,7 +918,8 @@
 		<Reward_Param8>Isard_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Pellaeon_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>GC_Progress_05</Prereq>
+		<Prereq>E_Level_Five</Prereq>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
 		<Branch>Faction_Branch_Remnant</Branch>
 	</Event>
 	

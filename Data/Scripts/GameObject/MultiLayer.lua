@@ -34,9 +34,15 @@ function MultiLayer:Init(globals)
   local heights = {"ZLayer_Medium"}
 
   if Object.Is_Category("Capital") then
-    table.insert(heights, "ZLayer_Low")
+    table.insert(heights, "ZLayer_Low1")
+    table.insert(heights, "ZLayer_Low2")
+    table.insert(heights, "ZLayer_Low3")
+    table.insert(heights, "ZLayer_Low4")
   else
-    table.insert(heights, "ZLayer_High")
+    table.insert(heights, "ZLayer_High1")
+    table.insert(heights, "ZLayer_High2")
+    table.insert(heights, "ZLayer_High3")
+    table.insert(heights, "ZLayer_High4")
   end
 
   Object.Prevent_All_Fire(true)

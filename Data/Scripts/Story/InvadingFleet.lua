@@ -18,59 +18,54 @@
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
 
-
-
 require("PGStateMachine")
 require("PGStoryMode")
 require("PGSpawnUnits")
 require("PGMoveUnits")
-require("RaidFleet")
-require("RandomEventQueue")
-require("TRGameModeTransactions")
+require("trlib-tactical/RaidFleet")
+require("trlib-tactical/RandomEventQueue")
+require("trlib-transactions/TransactionManager")
 
 function Definitions()
-
-  DebugMessage("%s -- In Definitions", tostring(Script))
-  --Define_State("State_Init", State_Init);
-  --invaders = Find_Player("Hostile")
-  --attack_chance = 0
-  StoryModeEvents = {Battle_Start = State_Init,
-    SWITCH_CONTROL_None1 = Remove_Huttlist,
-    SWITCH_CONTROL_None2 = Remove_Huttlist,
-    SWITCH_CONTROL_None3 = Remove_Huttlist,
-    SWITCH_CONTROL_None4 = Remove_Huttlist,
-    SWITCH_CONTROL_None5 = Remove_Huttlist,
-    SWITCH_CONTROL_None6 = Remove_Huttlist,
-    SWITCH_CONTROL_None7 = Remove_Huttlist,
-    SWITCH_CONTROL_None8 = Remove_Huttlist,
-    SWITCH_CONTROL_None9 = Remove_Huttlist,
-    SWITCH_CONTROL_None10 = Remove_Huttlist,
-    Retreat_Complete = Remove_Huttlist
-  }
-
+    DebugMessage("%s -- In Definitions", tostring(Script))
+    --Define_State("State_Init", State_Init);
+    --invaders = Find_Player("Hostile")
+    --attack_chance = 0
+    StoryModeEvents = {
+        Battle_Start = State_Init,
+        SWITCH_CONTROL_None1 = Remove_Huttlist,
+        SWITCH_CONTROL_None2 = Remove_Huttlist,
+        SWITCH_CONTROL_None3 = Remove_Huttlist,
+        SWITCH_CONTROL_None4 = Remove_Huttlist,
+        SWITCH_CONTROL_None5 = Remove_Huttlist,
+        SWITCH_CONTROL_None6 = Remove_Huttlist,
+        SWITCH_CONTROL_None7 = Remove_Huttlist,
+        SWITCH_CONTROL_None8 = Remove_Huttlist,
+        SWITCH_CONTROL_None9 = Remove_Huttlist,
+        SWITCH_CONTROL_None10 = Remove_Huttlist,
+        Retreat_Complete = Remove_Huttlist
+    }
 end
 
-
 function State_Init(message)
-  if message == OnEnter then
-    TM = TransactionManager()
-    TM:ResetBoardingTransactions()
-    local fleet = MakeRaidFleet(15)
-    --fleet:initialize()
-    queue = MakeRandomEventQueue()
-    queue:addEvent(fleet)
-    queue:beginEvents()
-    Game_Message("TEXT_STRANGE_SIGNAL")
-  end
+    if message == OnEnter then
+        TM = TransactionManager()
+        TM:ResetBoardingTransactions()
+        local fleet = MakeRaidFleet(15)
+        --fleet:initialize()
+        queue = MakeRandomEventQueue()
+        queue:addEvent(fleet)
+        queue:beginEvents()
+    end
 end
 
 function Remove_Huttlist(message)
-  if message == OnEnter then
-    queue:postBattleCleanUp()
+    if message == OnEnter then
+        queue:postBattleCleanUp()
     --RegisterBoardingTransactions()
-  end
+    end
 end
 
 function RegisterBoardingTransactions()
-  TM:ExecuteBoardingTransactions()
+    TM:ExecuteBoardingTransactions()
 end

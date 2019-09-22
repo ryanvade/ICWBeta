@@ -963,7 +963,7 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures> </Required_Special_Structures>
-		<Required_Planets>Sluis_Van, MonCalimari</Required_Planets>
+		<Required_Planets>Rendili, Sluis_Van, MonCalimari</Required_Planets>
 		<Tactical_Health>1500</Tactical_Health>
 		<Icon_Name>I_BUTTON_RENDILI.TGA</Icon_Name>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -991,7 +991,7 @@
 		<Space_Layer> Corvette </Space_Layer>
 		<Has_Land_Evaluator>True</Has_Land_Evaluator>
 
-		<Encyclopedia_Text> TEXT_COMPANY_RENDILI_DESCRIPTION TEXT_TOOLTIP_COMPANY_LOCATION TEXT_OBJECT_STAR_SYSTEM_MONCALAMARI TEXT_OBJECT_STAR_SYSTEM_SLUIS_VAN </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_COMPANY_RENDILI_DESCRIPTION TEXT_TOOLTIP_COMPANY_LOCATION TEXT_OBJECT_STAR_SYSTEM_RENDILI TEXT_OBJECT_STAR_SYSTEM_MONCALAMARI TEXT_OBJECT_STAR_SYSTEM_SLUIS_VAN </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 8000 </Score_Cost_Credits>
 		<Property_Flags>InBase</Property_Flags>
@@ -1058,7 +1058,7 @@
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
 
-		<Affiliation>Rebel, Empire, Teradoc, Corporate_Sector</Affiliation>
+		<Affiliation>Rebel, Empire, Teradoc, Corporate_Sector, Pirates</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Build_Cost_Credits>1000</Build_Cost_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
@@ -2888,7 +2888,7 @@
 		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
 
-		<Affiliation>Rebel, Pentastar, Teradoc </Affiliation>
+		<Affiliation>Rebel, Pentastar, Teradoc, Empire </Affiliation>
 		<Political_Control>0</Political_Control>
 		<Build_Cost_Credits>400</Build_Cost_Credits>
 		<Build_Time_Seconds>30</Build_Time_Seconds>
@@ -2937,7 +2937,7 @@
 			<Reduce_Production_Price_Ability Name="Mekuun_Reduce_Production_Price">
 				<Unit_Strength_Category />
 				<Applicable_Unit_Categories></Applicable_Unit_Categories>
-				<Applicable_Unit_Types> Tracker_Company, Pentastar_Repulsor_Scout_Group, Teradoc_SA5_Group </Applicable_Unit_Types>
+				<Applicable_Unit_Types> Tracker_Company, Pentastar_Repulsor_Scout_Group, Teradoc_SA5_Group, Imperial_SA5_Group </Applicable_Unit_Types>
 				<Price_Reduction_Percentage>0.30</Price_Reduction_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Reduce_Production_Price_Ability>
@@ -2945,7 +2945,7 @@
 			<Reduce_Production_Time_Ability Name="Mekuun_Production_Time_Bonus">
 				<Unit_Strength_Category />
 				<Applicable_Unit_Categories></Applicable_Unit_Categories>
-				<Applicable_Unit_Types> Tracker_Company, Pentastar_Repulsor_Scout_Group, Teradoc_SA5_Group </Applicable_Unit_Types>
+				<Applicable_Unit_Types> Tracker_Company, Pentastar_Repulsor_Scout_Group, Teradoc_SA5_Group, Imperial_SA5_Group </Applicable_Unit_Types>
 
 				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
 				<Stacking_Category>9</Stacking_Category>
@@ -4326,7 +4326,7 @@
 		<Size_Value>50</Size_Value>
 		
 			<Abilities SubObjectList="Yes">
-			<Reduce_Production_Price_Ability Name="Sienar_Reduce_Production_Price">
+			<Reduce_Production_Price_Ability Name="RancorReduce_Production_Price">
 				<Unit_Strength_Category />
 				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
 				<Applicable_Unit_Types> </Applicable_Unit_Types>
@@ -4334,7 +4334,7 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Reduce_Production_Price_Ability>
 
-			<Reduce_Production_Time_Ability Name="Sienar_Production_Time_Bonus">
+			<Reduce_Production_Time_Ability Name="Rancor_Production_Time_Bonus">
 				<Unit_Strength_Category />
 				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
 				<Applicable_Unit_Types> </Applicable_Unit_Types>
@@ -4491,6 +4491,14 @@
 				<Applicable_Unit_Categories></Applicable_Unit_Categories>
 				<Applicable_Unit_Types> SoroSuub_HQ </Applicable_Unit_Types>
 				<Price_Reduction_Percentage>0.60</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			
+			<Reduce_Production_Price_Ability Name="Incom_Corp_Discount">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories></Applicable_Unit_Categories>
+				<Applicable_Unit_Types> Incom_HQ </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.75</Price_Reduction_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Reduce_Production_Price_Ability>
 		

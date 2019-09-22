@@ -1,0 +1,15 @@
+require("trlib-util/StoryUtil")
+
+CONSTANTS = ModContentLoader.get("GameConstants")
+
+require("trlib-galaxy/CategoryFilter")
+require("trlib-galaxy/DisplayComponentContainer")
+require("trlib-galaxy/DisplayStructuresUtilities")
+require("trlib-galaxy/GalacticConquest")
+require("trlib-galaxy/GalacticEvents")
+require("trlib-galaxy/GalacticEventsNewsSource")
+require("trlib-galaxy/GovernmentNewRepublic")
+require("trlib-galaxy/NewsFeedDisplayComponent")
+require("trlib-galaxy/Planet")
+require("trlib-galaxy/PlanetInformationDisplayComponent")
+--require("trlib-galaxy/PlanetModifiers")

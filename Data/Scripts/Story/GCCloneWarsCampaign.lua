@@ -20,32 +20,26 @@
 
 require("PGStoryMode")
 require("PGSpawnUnits")
-require("ChangeOwnerUtilities")
-TRUtil = require("TRUtil")
+require("trlib-util/ChangeOwnerUtilities")
+StoryUtil = require("trlib-util/StoryUtil")
 
 function Definitions()
+    DebugMessage("%s -- In Definitions", tostring(Script))
 
-  DebugMessage("%s -- In Definitions", tostring(Script))
-
-  StoryModeEvents =
-  {
-    Determine_Faction_LUA = Find_Faction
-  }
-
+    StoryModeEvents = {
+        Determine_Faction_LUA = Find_Faction
+    }
 end
 
 function Find_Faction(message)
-  if message == OnEnter then
+    if message == OnEnter then
+        local p_cis = Find_Player("Rebel")
+        local p_republic = Find_Player("Empire")
 
-	local p_cis = Find_Player("Rebel")
-	local p_republic = Find_Player("Empire")
-
-	 if p_republic.Is_Human() then
-		Story_Event("ENABLE_BRANCH_GAR_FLAG")
-	elseif p_cis.Is_Human() then
-		Story_Event("ENABLE_BRANCH_CIS_FLAG")
-	end
-	
-	end
+        if p_republic.Is_Human() then
+            Story_Event("ENABLE_BRANCH_GAR_FLAG")
+        elseif p_cis.Is_Human() then
+            Story_Event("ENABLE_BRANCH_CIS_FLAG")
+        end
+    end
 end
-

@@ -78,7 +78,7 @@
 		<Transport_Capacity>12</Transport_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Build_Cost_Credits>890</Build_Cost_Credits>
-		<AI_Combat_Power>200</AI_Combat_Power>
+		<AI_Combat_Power>250</AI_Combat_Power>
 		<Build_Time_Seconds>25</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
 		<Size_Value>8</Size_Value>
@@ -251,7 +251,7 @@
 		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
 		<MovementClass> Space </MovementClass>
 		<Space_Layer> SuperCapital </Space_Layer>
-		<Layer_Z_Adjust>-490.0</Layer_Z_Adjust>
+		<Layer_Z_Adjust>-1000.0</Layer_Z_Adjust>
 		<OverrideAcceleration> .02 </OverrideAcceleration>
 		<OverrideDeceleration> .02 </OverrideDeceleration>
 
@@ -1266,7 +1266,7 @@
 		<Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
 
 		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
-		<SFXEvent_Select> </SFXEvent_Select>
+		<SFXEvent_Select> Unit_Select_TIE_Fighter </SFXEvent_Select>
 		<SFXEvent_Move> Unit_Move_TIE_Fighter </SFXEvent_Move>
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_TIE_Fighter</SFXEvent_Fleet_Move>
 		<SFXEvent_Attack> Unit_Attack_TIE_Fighter </SFXEvent_Attack>
@@ -1400,7 +1400,7 @@
 		</HardPoints>
 
 		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
-		<SFXEvent_Select> </SFXEvent_Select>
+		<SFXEvent_Select> Unit_Select_TIE_Fighter </SFXEvent_Select>
 		<SFXEvent_Move> Unit_Move_TIE_Fighter </SFXEvent_Move>
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_TIE_Fighter</SFXEvent_Fleet_Move>
 		<SFXEvent_Attack> Unit_Attack_TIE_Fighter </SFXEvent_Attack>
@@ -1607,6 +1607,7 @@
 		<Max_Thrust>4</Max_Thrust>
 		<Shield_Points>10</Shield_Points>
 		<Shield_Refresh_Rate>1</Shield_Refresh_Rate>
+		<AI_Combat_Power>4.77</AI_Combat_Power>
 		<SpaceBehavior>HUNT, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
 	</SpaceUnit>
 
@@ -1640,7 +1641,7 @@
 		<Fires_Forward>no</Fires_Forward>
 		<Turret_Rotate_Extent_Degrees>20</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Pirates</Affiliation>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Shield_Points>10</Shield_Points>
@@ -1673,7 +1674,7 @@
 		<Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
 
 		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
-		<SFXEvent_Select> </SFXEvent_Select>
+		<SFXEvent_Select> Unit_Select_TIE_Fighter </SFXEvent_Select>
 		<SFXEvent_Move> Unit_Move_TIE_Fighter </SFXEvent_Move>
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_TIE_Fighter</SFXEvent_Fleet_Move>
 		<SFXEvent_Attack> Unit_Attack_TIE_Fighter </SFXEvent_Attack>
@@ -1777,7 +1778,7 @@
 		<Affiliation>Empire</Affiliation>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
-		<Shield_Points>10</Shield_Points>
+		<Shield_Points>15</Shield_Points>
 		<Tactical_Health>20</Tactical_Health>
 		<Shield_Refresh_Rate>1.5</Shield_Refresh_Rate>
 		<Energy_Capacity>500</Energy_Capacity>
@@ -1804,8 +1805,8 @@
 		<Death_SFXEvent_Start_Die>Unit_TIE_Fighter_Death_SFX</Death_SFXEvent_Start_Die>
 		<Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
 
-<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
-		<SFXEvent_Select> </SFXEvent_Select>
+		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
+		<SFXEvent_Select> Unit_Select_TIE_Fighter </SFXEvent_Select>
 		<SFXEvent_Move> Unit_Move_TIE_Fighter </SFXEvent_Move>
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_TIE_Fighter</SFXEvent_Fleet_Move>
 		<SFXEvent_Attack> Unit_Attack_TIE_Fighter </SFXEvent_Attack>
@@ -1846,7 +1847,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>3.13</AI_Combat_Power>
+		<AI_Combat_Power>4.27</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -2324,7 +2325,7 @@
 		<Is_Bomber>No</Is_Bomber>
 		<Autoresolve_Health>50</Autoresolve_Health>
 		<Damage>25</Damage>
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Pirates</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Build_Cost_Credits>300</Build_Cost_Credits>
 		<Build_Time_Seconds>10</Build_Time_Seconds>
@@ -2401,7 +2402,7 @@
 	<Squadron Name="Howlrunner_Squadron_Buildable">
 		<Variant_Of_Existing_Type>Howlrunner_Squadron</Variant_Of_Existing_Type>
 		<Victory_Relevant>yes</Victory_Relevant>
-		<Tech_Level>5</Tech_Level>
+		<Tech_Level>0</Tech_Level>
 		<Population_Value>1</Population_Value>
 
 	</Squadron>

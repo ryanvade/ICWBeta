@@ -20,8 +20,8 @@
 
 require("PGStoryMode")
 require("PGSpawnUnits")
-require("ChangeOwnerUtilities")
-TRUtil = require("TRUtil")
+require("trlib-util/ChangeOwnerUtilities")
+StoryUtil = require("trlib-util/StoryUtil")
 
 function Definitions()
 
@@ -120,6 +120,18 @@ function Find_Faction(message)
 		Story_Event("ENABLE_BRANCH_HAPES_FLAG")
 	end
 
+	techLevel = p_empire.Get_Tech_Level()
+
+	if techLevel == 2 then
+		Story_Event("START_LEVEL_02")
+	elseif techLevel == 3 then
+		Story_Event("START_LEVEL_03")
+	elseif techLevel == 4 then
+		Story_Event("START_LEVEL_04")
+	elseif techLevel == 5 then
+		Story_Event("START_LEVEL_05")
+	end
+
   end
 end
 
@@ -155,7 +167,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["CENTARES"] then
 			start_planet = FindPlanet("Centares")
 			if start_planet.Get_Owner() ~= Find_Player("Teradoc") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_maldrood)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_maldrood)
 			end
 			if start_planet then
 				spawn_list_teradoc = { "Neomen_Ion_Storm" , "13x_Teradoc", "Therbon_Allegiance" }
@@ -166,7 +178,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["HAKASSI"] then
 			start_planet = FindPlanet("Hakassi")
 			if start_planet.Get_Owner() ~= Find_Player("Teradoc") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_maldrood)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_maldrood)
 			end
 			if start_planet then
 				spawn_list_teradoc = { "Lancet_Kosh" }
@@ -178,7 +190,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["DATHOMIR"] then
 			start_planet = FindPlanet("Dathomir")
 			if start_planet.Get_Owner() ~= Find_Player("Pirates") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_zsinj)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_zsinj)
 			end
 			if start_planet then
 				spawn_list_zsinj = { "Night_Caller", "Iron_Fist" , "Banjeer", "Netbers_Team", "Lanu_Team", "Gethzerion_Team", "Implacable_Star_Destroyer" }
@@ -189,7 +201,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["GAROS_IV"] then
 			start_planet = FindPlanet("Garos_IV")
 			if start_planet.Get_Owner() ~= Find_Player("Pirates") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_zsinj)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_zsinj)
 			end
 			if start_planet then
 				spawn_list_zsinj = { "Demolisher" }
@@ -201,7 +213,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["ENTRALLA"] then
 			start_planet = FindPlanet("Entralla")
 			if start_planet.Get_Owner() ~= Find_Player("Pentastar") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_pentastar)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_pentastar)
 			end
 			if start_planet then
 				spawn_list_zsinj = { "Grant_Oriflamme", "Sariss_Team" , "Jerec_Team" }
@@ -213,7 +225,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["ERIADU"] then
 			start_planet = FindPlanet("Eriadu")
 			if start_planet.Get_Owner() ~= Find_Player("Hutts") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_eriadu)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_eriadu)
 			end
 			if start_planet then
 				spawn_list_delvardus = { "General_Veers_Team", "Thalassa" , "Kabalian_Star_Destroyer" }
@@ -236,7 +248,7 @@ function Determine_Start_Era(message)
 			-- start_planet = TRUtil.FindFriendlyPlanet(p_corporate)
 		-- end
 		-- if start_planet then
-			-- spawn_list_csa = { "Grumby_Notropis", "Sloane_Enforce", "Sparhawk_Squadron", "Fiolla_Team", "Odumin_Team", "Karrek_Flim_Team", "Fasser_Team", "Nieler_Team" }
+			-- spawn_list_csa = { "Grumby_Notropis", "Sloane_Enforce", "Fiolla_Team", "Odumin_Team", "Karrek_Flim_Team", "Fasser_Team", "Nieler_Team" }
 			-- SpawnList(spawn_list_csa, start_planet, p_corporate, true, false)
 		-- end
 
@@ -245,7 +257,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["CORUSCANT"] then
 			start_planet = FindPlanet("Coruscant")
 			if start_planet.Get_Owner() ~= Find_Player("Empire") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_empire)
 			end
 			if start_planet then
 				spawn_list_thrawn = { "Chimera" , "Corellian_Gunboat_Ferrier" }
@@ -256,7 +268,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["CORUSCANT"] then		
 			start_planet = FindPlanet("Coruscant")
 			if start_planet.Get_Owner() ~= Find_Player("Empire") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_empire)
 			end
 			if start_planet then
 				spawn_list_Thrawn = { "181st_TIE_Interceptor_Squadron", "General_Covell_Team", "Judicator_Star_Destroyer", "Relentless_Star_Destroyer", "Joruus_Cboath_Team" }
@@ -268,7 +280,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["CORUSCANT"] then
 			start_planet = FindPlanet("Coruscant")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Thrawn = { "Iblis_Peregrine" }
@@ -279,7 +291,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["MYRKR"] then		
 			start_planet = FindPlanet("Myrkr")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Thrawn = { "Errant_Venture", "Mara_Saber_Team", "Wild_karrde" }
@@ -291,7 +303,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["NIRAUAN"] then		
 			start_planet = FindPlanet("Nirauan")
 			if start_planet.Get_Owner() ~= Find_Player("Underworld") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_eoth)
 			end
 			if start_planet then
 				spawn_list_Hand = { "Soontir_Fel_Squadron" }
@@ -303,7 +315,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["HAKASSI"] then		
 			start_planet = FindPlanet("Hakassi")
 			if start_planet.Get_Owner() ~= Find_Player("Teradoc") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_maldrood)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_maldrood)
 			end
 			if start_planet then
 				spawn_list_teradoc = { "Lancet_Kosh", "13x_Teradoc" }
@@ -315,7 +327,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["ENTRALLA"] then		
 			start_planet = FindPlanet("Entralla")
 			if start_planet.Get_Owner() ~= Find_Player("Pentastar") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_pentastar)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_pentastar)
 			end
 			if start_planet then
 				spawn_list_zsinj = { "Grant_Oriflamme", "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
@@ -327,7 +339,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["KAMPE"] then		
 			start_planet = FindPlanet("Kampe")
 			if start_planet.Get_Owner() ~= Find_Player("Hutts") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_eriadu)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_eriadu)
 			end
 			if start_planet then
 				spawn_list_delvardus = { "Night_Hammer_Delvardus" }
@@ -350,7 +362,7 @@ function Determine_Start_Era(message)
 			-- start_planet = TRUtil.FindFriendlyPlanet(p_corporate)
 		-- end
 		-- if start_planet then
-			-- spawn_list_csa = { "Grumby_Notropis", "Sloane_Enforce", "Sparhawk_Squadron", "Fiolla_Team", "Odumin_Team", "Karrek_Flim_Team", "Fasser_Team", "Nieler_Team" }
+			-- spawn_list_csa = { "Grumby_Notropis", "Sloane_Enforce", "Fiolla_Team", "Odumin_Team", "Karrek_Flim_Team", "Fasser_Team", "Nieler_Team" }
 			-- SpawnList(spawn_list_csa, start_planet, p_corporate, true, false)
 		-- end
 	elseif techLevel == 3 then
@@ -364,7 +376,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["MONCALIMARI"] then		
 			start_planet = FindPlanet("MonCalimari")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 		end	
 
@@ -385,7 +397,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["CORUSCANT"] then		
 			start_planet = FindPlanet("Coruscant")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Thrawn = { "Iblis_Peregrine" }
@@ -396,7 +408,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["MYRKR"] then		
 			start_planet = FindPlanet("Myrkr")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Thrawn = { "Errant_Venture", "Mara_Saber_Team", "Wild_karrde" }
@@ -408,7 +420,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["NIRAUAN"] then
 			start_planet = FindPlanet("Nirauan")
 			if start_planet.Get_Owner() ~= Find_Player("Underworld") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_eoth)
 			end
 			if start_planet then
 				spawn_list_Hand = { "Soontir_Fel_Squadron", "Siath_Battlehammer" }
@@ -420,7 +432,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["HAKASSI"] then
 			start_planet = FindPlanet("Hakassi")
 			if start_planet.Get_Owner() ~= Find_Player("Teradoc") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_maldrood)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_maldrood)
 			end
 			if start_planet then
 				spawn_list_teradoc = { "Lancet_Kosh", "13x_Teradoc" }
@@ -432,7 +444,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["ENTRALLA"] then
 			start_planet = FindPlanet("Entralla")
 			if start_planet.Get_Owner() ~= Find_Player("Pentastar") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_pentastar)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_pentastar)
 			end
 			if start_planet then
 				spawn_list_zsinj = { "Grant_Oriflamme", "Reaper_Kaine", "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
@@ -444,7 +456,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["KAMPE"] then		
 			start_planet = FindPlanet("Kampe")
 			if start_planet.Get_Owner() ~= Find_Player("Hutts") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_eriadu)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_eriadu)
 			end
 			if start_planet then
 				spawn_list_delvardus = { "Night_Hammer_Delvardus" }
@@ -467,7 +479,7 @@ function Determine_Start_Era(message)
 			-- start_planet = TRUtil.FindFriendlyPlanet(p_corporate)
 		-- end
 		-- if start_planet then
-			-- spawn_list_csa = { "Grumby_Notropis", "Sloane_Enforce", "Sparhawk_Squadron", "Fiolla_Team", "Odumin_Team", "Karrek_Flim_Team", "Fasser_Team", "Nieler_Team" }
+			-- spawn_list_csa = { "Grumby_Notropis", "Sloane_Enforce", "Fiolla_Team", "Odumin_Team", "Karrek_Flim_Team", "Fasser_Team", "Nieler_Team" }
 			-- SpawnList(spawn_list_csa, start_planet, p_corporate, true, false)
 		-- end
 	elseif techLevel == 4 then
@@ -488,7 +500,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["BYSS"] then		
 			start_planet = FindPlanet("Byss")
 			if start_planet.Get_Owner() ~= Find_Player("Empire") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_empire)
 			end
 			if start_planet then
 				spawn_list_Brakiss = { "Brakiss_Team", "Ardax_Vendetta" }
@@ -500,7 +512,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["YAVIN"] then		
 			start_planet = FindPlanet("Yavin")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Daala = { "Cilghal_Team" }
@@ -511,7 +523,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["CORUSCANT"] then
 			start_planet = FindPlanet("Coruscant")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Daala = { "Bell_Endurance" }
@@ -529,7 +541,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["CORUSCANT"] then
 			start_planet = FindPlanet("Coruscant")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Thrawn = { "Iblis_Peregrine" }
@@ -540,7 +552,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["MYRKR"] then		
 			start_planet = FindPlanet("Myrkr")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Thrawn = { "Errant_Venture", "Mara_Saber_Team", "Wild_karrde" }
@@ -560,7 +572,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["NIRAUAN"] then
 			start_planet = FindPlanet("Nirauan")
 			if start_planet.Get_Owner() ~= Find_Player("Underworld") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_eoth)
 			end
 			if start_planet then
 				spawn_list_Hand = { "Soontir_Fel_Squadron", "Siath_Battlehammer", "Chak_Fel_Krsiss_Squadron_Association" , "Ashik_Team" }
@@ -572,7 +584,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["HAKASSI"] then
 			start_planet = FindPlanet("Hakassi")
 			if start_planet.Get_Owner() ~= Find_Player("Teradoc") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_maldrood)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_maldrood)
 			end
 			if start_planet then
 				spawn_list_teradoc = { "Lancet_Kosh", "13x_Teradoc" }
@@ -584,7 +596,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["KAMPE"] then
 			start_planet = FindPlanet("Kampe")
 			if start_planet.Get_Owner() ~= Find_Player("Hutts") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_eriadu)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_eriadu)
 			end
 			if start_planet then
 				spawn_list_delvardus = { "Night_Hammer_Delvardus" }
@@ -596,7 +608,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["ENTRALLA"] then
 			start_planet = FindPlanet("Entralla")
 			if start_planet.Get_Owner() ~= Find_Player("Pentastar") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_pentastar)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_pentastar)
 			end
 			if start_planet then
 				spawn_list_zsinj = { "Gregor_Team", "Dekeet_Praetor", "Dynamic_Besk", "Otro_Enforcer"  }
@@ -619,7 +631,7 @@ function Determine_Start_Era(message)
 			-- start_planet = TRUtil.FindFriendlyPlanet(p_corporate)
 		-- end
 		-- if start_planet then
-			-- spawn_list_csa = { "Grumby_Notropis", "Sloane_Enforce", "Sparhawk_Squadron", "Fiolla_Team", "Odumin_Team", "Karrek_Flim_Team", "Fasser_Team", "Nieler_Team" }
+			-- spawn_list_csa = { "Grumby_Notropis", "Sloane_Enforce", "Fiolla_Team", "Odumin_Team", "Karrek_Flim_Team", "Fasser_Team", "Nieler_Team" }
 			-- SpawnList(spawn_list_csa, start_planet, p_corporate, true, false)
 		-- end
 	elseif techLevel == 5 then
@@ -642,7 +654,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["BASTION"] then
 			start_planet = FindPlanet("Bastion")
 			if start_planet.Get_Owner() ~= Find_Player("Empire") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_empire)
 			end
 			if start_planet then
 				spawn_list_Pellaeon = { "Chimera_Pellaeon_Grand", "Disra_Team", "Tierce_Team", "Ascian", "Rogriss_Dominion", "Navett_Team", "181st_Stele", "Hestiv_Team" }
@@ -654,7 +666,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["CORUSCANT"] then
 			start_planet = FindPlanet("Coruscant")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Palpatine = { "Gavrisom_Team" }
@@ -665,7 +677,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["YAVIN"] then
 			start_planet = FindPlanet("Yavin")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Daala = { "Cilghal_Team" }
@@ -676,7 +688,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["CORUSCANT"] then			
 			start_planet = FindPlanet("Coruscant")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Daala = { "Bell_Endurance" }
@@ -694,7 +706,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["CORUSCANT"] then
 			start_planet = FindPlanet("Coruscant")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Thrawn = { "Iblis_Peregrine" }
@@ -705,7 +717,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["MYRKR"] then		
 			start_planet = FindPlanet("Myrkr")
 			if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 			end
 			if start_planet then
 				spawn_list_Thrawn = { "Errant_Venture", "Mara_Saber_Team", "Wild_karrde" }
@@ -725,7 +737,7 @@ function Determine_Start_Era(message)
 		if spawn_location_table["NIRAUAN"] then		
 			start_planet = FindPlanet("Nirauan")
 			if start_planet.Get_Owner() ~= Find_Player("Underworld") then
-				start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+				start_planet = StoryUtil.FindFriendlyPlanet(p_eoth)
 			end
 			if start_planet then
 				spawn_list_Hand = { "Soontir_Fel_Squadron", "Aurek_Seven_Team", "Siath_Battlehammer", "Chak_Fel_Krsiss_Squadron_Association", "Ashik_Team" }
@@ -748,7 +760,7 @@ function Determine_Start_Era(message)
 			-- start_planet = TRUtil.FindFriendlyPlanet(p_corporate)
 		-- end
 		-- if start_planet then
-			-- spawn_list_csa = { "Grumby_Notropis", "Sloane_Enforce", "Sparhawk_Squadron", "Fiolla_Team", "Odumin_Team", "Karrek_Flim_Team", "Fasser_Team", "Nieler_Team" }
+			-- spawn_list_csa = { "Grumby_Notropis", "Sloane_Enforce", "Fiolla_Team", "Odumin_Team", "Karrek_Flim_Team", "Fasser_Team", "Nieler_Team" }
 			-- SpawnList(spawn_list_csa, start_planet, p_corporate, true, false)
 		-- end
 	end
@@ -881,7 +893,7 @@ function SubEra_Change(message)
 	if spawn_location_table["CORUSCANT"] then
 		start_planet = FindPlanet("Coruscant")
 		if start_planet.Get_Owner() ~= Find_Player("Empire") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_empire)
 		end
 	end
 	
@@ -972,10 +984,10 @@ function ThrawnSpawns(message)
 	if spawn_location_table["CENTARES"] then
 		start_planet = FindPlanet("Centares")
 		if start_planet.Get_Owner() ~= Find_Player("Teradoc") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_maldrood)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_maldrood)
 		end
 		if start_planet then
-			spawn_list_thrawn = { "Tavira_Invidious", "Lancet_Kosh" }
+			spawn_list_thrawn = { "Tavira_Invidious" }
 			SpawnList(spawn_list_thrawn, start_planet, p_maldrood, true, false)
 		end	
 	end
@@ -984,7 +996,7 @@ function ThrawnSpawns(message)
 	if spawn_location_table["NIRAUAN"] then
 		start_planet = FindPlanet("Nirauan")
 		if start_planet.Get_Owner() ~= Find_Player("Underworld") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_eoth)
 		end
 		if start_planet then
 			spawn_list_Hand = { "Soontir_Fel_Squadron" }
@@ -996,7 +1008,7 @@ function ThrawnSpawns(message)
 	if spawn_location_table["CORUSCANT"] then
 		start_planet = FindPlanet("Coruscant")
 		if start_planet.Get_Owner() ~= Find_Player("Empire") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_empire)
 		end
 		if start_planet then
 			spawn_list_thrawn = { "Chimera" , "Corellian_Gunboat_Ferrier" }
@@ -1007,7 +1019,7 @@ function ThrawnSpawns(message)
 	if spawn_location_table["CORUSCANT"] then	
 		start_planet = FindPlanet("Coruscant")
 		if start_planet.Get_Owner() ~= Find_Player("Empire") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_empire)
 		end
 		if start_planet then
 			spawn_list_Thrawn = { "181st_TIE_Interceptor_Squadron", "General_Covell_Team", "Judicator_Star_Destroyer", "Relentless_Star_Destroyer", "Joruus_Cboath_Team" }
@@ -1019,7 +1031,7 @@ function ThrawnSpawns(message)
 	if spawn_location_table["CORUSCANT"] then	
 		start_planet = FindPlanet("Coruscant")
 		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 		end
 		if start_planet then
 			spawn_list_Thrawn = { "Iblis_Peregrine" }
@@ -1030,7 +1042,7 @@ function ThrawnSpawns(message)
 	if spawn_location_table["MYRKR"] then	
 		start_planet = FindPlanet("Myrkr")
 		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 		end
 		if start_planet then
 			spawn_list_Thrawn = { "Errant_Venture", "Mara_Saber_Team", "Wild_karrde" }
@@ -1063,7 +1075,7 @@ function DarkEmpireSpawns(message)
 	if spawn_location_table["MONCALIMARI"] then		
 		start_planet = FindPlanet("MonCalimari")
 		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 		end
 	end	
 
@@ -1091,7 +1103,7 @@ function DarkEmpireSpawns(message)
 	if spawn_location_table["NIRAUAN"] then	
 		start_planet = FindPlanet("Nirauan")
 		if start_planet.Get_Owner() ~= Find_Player("Underworld") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_eoth)
 		end
 		if start_planet then
 			spawn_list_Hand = { "Siath_Battlehammer" }
@@ -1119,7 +1131,7 @@ function Empire_Fractures(message)
 	if spawn_location_table["BYSS"] then	
 		start_planet = FindPlanet("Byss")
 		if start_planet.Get_Owner() ~= Find_Player("Empire") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_empire)
 		end
 		if start_planet then
 			spawn_list_Jax = { "Emperors_Revenge_Star_Destroyer", "Jeratai_Allegiance", "Xexus_Shev_Team", "Kooloota_Team", "Carnor_Jax_Team", "Windcaller_Team", "Manos_Team", "Za_Team", "Immodet_Fortress_Company"  }
@@ -1152,7 +1164,7 @@ function DaalaSpawns(message)
 	if spawn_location_table["BYSS"] then		
 		start_planet = FindPlanet("Byss")
 		if start_planet.Get_Owner() ~= Find_Player("Empire") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_empire)
 		end
 		if start_planet then
 			spawn_list_Brakiss = { "Brakiss_Team", "Ardax_Vendetta" }
@@ -1164,7 +1176,7 @@ function DaalaSpawns(message)
 	if spawn_location_table["YAVIN"] then	
 		start_planet = FindPlanet("Yavin")
 		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 		end
 		if start_planet then
 			spawn_list_Palpatine = { "Cilghal_Team" }
@@ -1175,7 +1187,7 @@ function DaalaSpawns(message)
 	if spawn_location_table["CORUSCANT"] then	
 		start_planet = FindPlanet("Coruscant")
 		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 		end
 		if start_planet then
 			spawn_list_Thrawn = { "Bell_Endurance" }
@@ -1187,7 +1199,7 @@ function DaalaSpawns(message)
 	if spawn_location_table["NIRAUAN"] then		
 		start_planet = FindPlanet("Nirauan")
 		if start_planet.Get_Owner() ~= Find_Player("Underworld") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_eoth)
 		end
 		if start_planet then
 			spawn_list_Hand = { "Chak_Fel_Krsiss_Squadron_Association" , "Ashik_Team" }
@@ -1222,7 +1234,7 @@ function PellaeonSpawns(message)
 	if spawn_location_table["BASTION"] then		
 		start_planet = FindPlanet("BASTION")
 		if start_planet.Get_Owner() ~= Find_Player("Empire") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_empire)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_empire)
 		end
 		if start_planet then
 			spawn_list_Pellaeon = { "Chimera_Pellaeon_Grand", "Disra_Team", "Tierce_Team", "Ascian", "Rogriss_Dominion", "Navett_Team", "181st_Stele", "Hestiv_Team" }
@@ -1234,7 +1246,7 @@ function PellaeonSpawns(message)
 	if spawn_location_table["CORUSCANT"] then		
 		start_planet = FindPlanet("Coruscant")
 		if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_newrep)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_newrep)
 		end
 		if start_planet then
 			spawn_list_Palpatine = { "Gavrisom_Team" }
@@ -1246,7 +1258,7 @@ function PellaeonSpawns(message)
 	if spawn_location_table["NIRAUAN"] then		
 		start_planet = FindPlanet("Nirauan")
 		if start_planet.Get_Owner() ~= Find_Player("Underworld") then
-			start_planet = TRUtil.FindFriendlyPlanet(p_eoth)
+			start_planet = StoryUtil.FindFriendlyPlanet(p_eoth)
 		end
 		if start_planet then
 			spawn_list_Hand = { "Aurek_Seven_Team" }

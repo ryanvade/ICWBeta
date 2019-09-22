@@ -10,14 +10,18 @@ rename HardPointDataFilesFotR.xml HardPointDataFiles.xml
 rename FactionFilesFotR.xml FactionFiles.xml
 rename TradeRouteLines.xml TradeRouteLinesICW.xml
 rename TradeRouteLinesFotR.xml TradeRouteLines.xml
-cd ..\Scripts\Library
-rename GameConstants.lua GameConstantsICW.lua
-rename GameConstantsFotR.lua GameConstants.lua
-rename DisplayManager.lua DisplayManagerICW.lua
-rename DisplayManagerFotR.lua DisplayManager.lua
-cd ..\..\Art\Textures
+REM cd ..\Scripts\Library
+REM rename GameConstants.lua GameConstantsICW.lua
+REM rename GameConstantsFotR.lua GameConstants.lua
+REM rename DisplayManager.lua DisplayManagerICW.lua
+REM rename DisplayManagerFotR.lua DisplayManager.lua
+cd ..\Art\Textures
 rename SPLASH.DDS SPLASHICW.DDS
 rename SPLASHFOTR.DDS SPLASH.DDS
+rename imperial_star_destroyer_cm.DDS imperial_star_destroyer_cm_icw.DDS
+rename imperial_star_destroyer_cm_fotr.DDS imperial_star_destroyer_cm.DDS
+rename tector_star_destroyer_cm.DDS tector_star_destroyer_cm_icw.DDS
+rename tector_star_destroyer_cm_fotr.DDS tector_star_destroyer_cm.DDS
 cd ..\Maps
 rename Front_End_Demo_Attract.ted Front_End_Demo_Attract_ICW.ted
 rename Front_End_Demo_Attract_FotR.ted Front_End_Demo_Attract.ted

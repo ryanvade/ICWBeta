@@ -44,5 +44,6 @@ function Find_Faction(message)
     if p_eoth.Is_Human() then
 		Story_Event("ENABLE_BRANCH_EOTH_FLAG")
     end
+	ScriptExit()
   end
 end

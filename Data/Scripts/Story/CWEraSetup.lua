@@ -20,7 +20,8 @@
 
 
 require("PGStoryMode")
-Constants = require("GameConstants")
+
+Constants = ModContentLoader.get("GameConstants")
 
 function Definitions()
 

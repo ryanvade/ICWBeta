@@ -21,23 +21,22 @@ require("PGBase")
 require("PGStateMachine")
 require("PGStoryMode")
 require("PGSpawnUnits")
-require("ChangeOwnerUtilities")
-require("StoryEventManager")
-require("StoryEvents")
-require("Prerequisite")
-require("TRUtil")
+require("trlib-util/ChangeOwnerUtilities")
+require("trlib-lua-events/StoryEventManager")
+require("trlib-lua-events/StoryEvents")
+require("trlib-lua-events/Prerequisite")
+require("trlib-util/StoryUtil")
 
 function Definitions()
     DebugMessage("%s -- In Definitions", tostring(Script))
-    
+
     StoryModeEvents = {
-		Progressive_Story_Start = Begin_Progressive,
+        Progressive_Story_Start = Begin_Progressive,
         Align_Start = Begin_Align,
         Orinda_Story_Start = Begin_Orinda,
         FIP_Story_Start = Begin_FIP
     }
 end
-
 
 function Begin_Progressive(message)
     if message == OnEnter then
