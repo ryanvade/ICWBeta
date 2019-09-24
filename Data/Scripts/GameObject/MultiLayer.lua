@@ -37,12 +37,10 @@ function MultiLayer:Init(globals)
     table.insert(heights, "ZLayer_Low1")
     table.insert(heights, "ZLayer_Low2")
     table.insert(heights, "ZLayer_Low3")
-    table.insert(heights, "ZLayer_Low4")
   else
     table.insert(heights, "ZLayer_High1")
     table.insert(heights, "ZLayer_High2")
     table.insert(heights, "ZLayer_High3")
-    table.insert(heights, "ZLayer_High4")
   end
 
   Object.Prevent_All_Fire(true)

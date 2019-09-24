@@ -212,6 +212,14 @@
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 		<Prereq>Empire_Enters_Tech_05</Prereq>
+	</Event>		
+	
+	<Event Name="Lock_Thrawn_Regicide_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>80</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Dummy_Regicide_Thrawn</Reward_Param1>
+		<Prereq>Lock_Thrawn_Regicide</Prereq>
 	</Event>	
 
 	<!--****************************************************-->
@@ -379,6 +387,14 @@
 		<Prereq>Empire_Enters_Tech_05</Prereq>
 	</Event>	
 				
+	<Event Name="Lock_Palpatine_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>79</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Dummy_Regicide_Palpatine</Reward_Param1>
+		<Prereq>Lock_Palpatine_Regicide</Prereq>
+	</Event>	
+				
 	<Event Name="Trigger_Palpatine_Jax_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>3200</Event_Param1>	
@@ -402,7 +418,15 @@
 		<Prereq>Trigger_Jax_Palpatine_Death</Prereq>
 		<Prereq>Empire_Enters_Tech_04</Prereq>
 		<Prereq>Empire_Enters_Tech_05</Prereq>
-	</Event>		
+	</Event>	
+
+	<Event Name="Lock_Jax_Regicide_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>78</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Dummy_Regicide_Jax</Reward_Param1>
+		<Prereq>Lock_Jax_Regicide</Prereq>
+	</Event>	
 
 	<Event Name="E_Destroy_Thrawn">
 				<Event_Type>STORY_ELAPSED</Event_Type>
@@ -665,8 +689,16 @@
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>3</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
-		<Reward_Param1>Dummy_Regicide_Pellaeon</Reward_Param1>
+		<Reward_Param1>Dummy_Regicide_Daala</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_05</Prereq>
+	</Event>
+	
+	<Event Name="Lock_Daala_Regicide_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>78</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Dummy_Regicide_Daala</Reward_Param1>
+		<Prereq>Lock_Daala_Regicide</Prereq>
 	</Event>	
 	
 	
@@ -690,6 +722,14 @@
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Dummy_Regicide_Pellaeon</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_05</Prereq>
+	</Event>	
+	
+	<Event Name="Lock_Pellaeon_Regicide_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Dummy_Regicide_Pellaeon</Reward_Param1>
+		<Prereq>Lock_Pellaeon_Regicide</Prereq>
 	</Event>	
 
 	<Event Name="E_Destroy_Daala_Two">
