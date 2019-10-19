@@ -9,6 +9,11 @@
 
 
 <Story>
+
+	<Event Name="Launch_Controller">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>	
 	
 	<Event Name="Filter_Frigate_Enable">
 		<Event_Type>STORY_CLICK_GUI</Event_Type>
@@ -39,6 +44,44 @@
 		<Prereq>Filter_Capital_Enable</Prereq>
 		<Prereq>Filter_Frigate_Enable</Prereq>
 		<Prereq>Filter_Story_Enable</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Click_Create_12">
+		<Event_Type>STORY_CLICK_GUI</Event_Type>
+		<Event_Param1>b_Create_12</Event_Param1>
+		<Reward_Type>DISABLE_EVENT</Reward_Type>
+		<Reward_Param1>TUTORIAL_CLICK_GUI</Reward_Param1>
+		<Reward_Param2>b_Create_12</Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Click_Create_12_Delay">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0.15</Event_Param1>
+		<Reward_Type>ENABLE_EVENT</Reward_Type>
+		<Reward_Param1>TUTORIAL_CLICK_GUI</Reward_Param1>
+		<Reward_Param2>b_Create_12</Reward_Param2>
+		<Prereq>Click_Create_12</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+	<Event Name="Click_Queue00">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>CANCELED_OBJECT</Event_Param2>
+		<Reward_Type>DISABLE_EVENT</Reward_Type>
+		<Reward_Param1>TUTORIAL_CLICK_GUI</Reward_Param1>
+		<Reward_Param2>queue00</Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Click_Queue00_Delay">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0.15</Event_Param1>
+		<Reward_Type>ENABLE_EVENT</Reward_Type>
+		<Reward_Param1>TUTORIAL_CLICK_GUI</Reward_Param1>
+		<Reward_Param2>queue00</Reward_Param2>
+		<Prereq>Click_Queue00</Prereq>
 		<Perpetual>true</Perpetual>
 	</Event>
 

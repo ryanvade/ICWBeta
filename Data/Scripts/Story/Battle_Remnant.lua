@@ -51,14 +51,40 @@ function Begin_GC(message)
 
 		empire_spawn_marker = Find_First_Object("INSTANTACTION_MARKER_EMPIRE")
 		rebel_spawn_marker = Find_First_Object("INSTANTACTION_MARKER_NEWREP")
-		
-
+		hapan_spawn_marker = Find_First_Object("INSTANTACTION_MARKER_HAPANS")
+		eoth_spawn_marker = Find_First_Object("INSTANTACTION_MARKER_EOTH")
+		csa_spawn_marker = Find_First_Object("INSTANTACTION_MARKER_CSA")
+		pentastar_spawn_marker = Find_First_Object("INSTANTACTION_MARKER_PENTASTAR")
+	
 		rebel = Find_Player("Rebel")
 		empire = Find_Player("Empire")
+		hapans = Find_Player("Hapes_Consortium")
 		
+		 empire.Make_Ally(hapans)
 		 empire.Make_Ally(rebel)
+		 
 		 rebel.Make_Ally(empire)
-
+		 rebel.Make_Ally(hapans)
+		 
+		 hapans.Make_Ally(rebel)
+		 hapans.Make_Ally(empire)
+		 
+		 	
+		empire_spawn_marker.Change_Owner(empire)
+		rebel_spawn_marker.Change_Owner(empire)
+		
+		if TestValid(hapan_spawn_marker) then
+			hapan_spawn_marker.Change_Owner(empire)
+		end 
+		if TestValid(eoth_spawn_marker) then
+			eoth_spawn_marker.Change_Owner(empire)
+		end
+		if TestValid(csa_spawn_marker) then	
+			csa_spawn_marker.Change_Owner(empire)
+		end
+		if TestValid(pentastar_spawn_marker) then		
+			pentastar_spawn_marker.Change_Owner(empire)
+		end
 	end
 end
 
@@ -68,8 +94,18 @@ function Begin_Battle(message)
 		empire_spawn_marker.Make_Invulnerable(true)
 		rebel_spawn_marker.Make_Invulnerable(true)
 		
-		empire.Make_Enemy(rebel)
-		rebel.Make_Enemy(empire)
+		if TestValid(hapan_spawn_marker) then
+			hapan_spawn_marker.Make_Invulnerable(true)
+		end
+		
+		 empire.Make_Enemy(hapans)
+		 empire.Make_Enemy(rebel)
+		 
+		 rebel.Make_Enemy(empire)
+		 rebel.Make_Enemy(hapans)
+		 
+		 hapans.Make_Enemy(rebel)
+		 hapans.Make_Enemy(empire)
 	end
 end
 

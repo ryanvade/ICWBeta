@@ -1585,42 +1585,42 @@ function Begin_GC(message)
 	},
 	CHARUBAH={
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"R_Ground_Barracks",
-				listOf(8,"Nova_Cruiser"),
+				listOf(8,"Beta_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"R_Ground_Barracks",
-				listOf(8,"Nova_Cruiser"),
+				listOf(8,"Beta_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"R_Ground_Barracks",
-				listOf(8,"Nova_Cruiser"),
+				listOf(8,"Beta_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"R_Ground_Barracks",
-				listOf(8,"Nova_Cruiser"),
+				listOf(8,"Beta_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"R_Ground_Barracks",
-				listOf(8,"Nova_Cruiser"),
+				listOf(8,"Beta_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
@@ -3601,7 +3601,7 @@ function Begin_GC(message)
 	},
 	HAPES={
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"R_Ground_Barracks",
 				listOf(12,"Nova_Cruiser"),
@@ -3611,7 +3611,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"R_Ground_Barracks",
 				listOf(12,"Nova_Cruiser"),
@@ -3621,7 +3621,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"R_Ground_Barracks",
 				listOf(12,"Nova_Cruiser"),
@@ -3631,7 +3631,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"R_Ground_Barracks",
 				listOf(12,"Nova_Cruiser"),
@@ -3641,7 +3641,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"R_Ground_Barracks",
 				listOf(12,"Nova_Cruiser"),
@@ -5104,35 +5104,35 @@ function Begin_GC(message)
 	},
 	MISTONE={
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
@@ -5141,35 +5141,35 @@ function Begin_GC(message)
 	},
 	MISTTHREE={
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
@@ -5178,35 +5178,35 @@ function Begin_GC(message)
 	},
 	MISTTWO={
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				listOf(8,"Nova_Cruiser"),
 				listOf(8,"BattleDragon"),
@@ -7824,7 +7824,7 @@ function Begin_GC(message)
 	},
 	TEREPHON={
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"NewRep_SenatorsOffice",
 				listOf(8,"Nova_Cruiser"),
@@ -7832,7 +7832,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"NewRep_SenatorsOffice",
 				listOf(8,"Nova_Cruiser"),
@@ -7840,7 +7840,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"NewRep_SenatorsOffice",
 				listOf(8,"Nova_Cruiser"),
@@ -7848,7 +7848,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"NewRep_SenatorsOffice",
 				listOf(8,"Nova_Cruiser"),
@@ -7856,7 +7856,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Sarlacc",
+			Owner="Hapes_Consortium",
 			StartingForces={
 				"NewRep_SenatorsOffice",
 				listOf(8,"Nova_Cruiser"),

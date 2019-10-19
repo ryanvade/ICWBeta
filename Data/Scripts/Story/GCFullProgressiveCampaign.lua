@@ -98,7 +98,7 @@ function Find_Faction(message)
 	p_zsinj = Find_Player("Pirates")
 	p_maldrood = Find_Player("Teradoc")
 	p_corporate = Find_Player("Corporate_Sector")
-	p_hapes = Find_Player("Sarlacc")
+	p_hapes = Find_Player("Hapes_Consortium")
 
 	if p_newrep.Is_Human() then
 		Story_Event("ENABLE_BRANCH_NEWREP_FLAG")
@@ -1317,7 +1317,7 @@ end
 function HapesVassalEmerge(message)
 	if message == OnEnter then
   
-		p_hapes = Find_Player("Sarlacc")
+		p_hapes = Find_Player("Hapes_Consortium")
 	
 		--Returning occupied Hapan planets
 	
@@ -1331,7 +1331,7 @@ function HapesVassalEmerge(message)
 			end
 		end	
 
-		ChangePlanetOwnerAndRetreat(hapanOwnedPlanets, Find_Player("Sarlacc"))
+		ChangePlanetOwnerAndRetreat(hapanOwnedPlanets, Find_Player("Hapes_Consortium"))
 
 		for _, planet in pairs(hapanOwnedPlanets) do 
 			spawn_list_Hapans = { "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "BattleDragon", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser", "Nova_Cruiser"}

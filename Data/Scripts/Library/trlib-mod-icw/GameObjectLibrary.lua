@@ -226,6 +226,9 @@ GameObjectLibrary = {
             Text="TEXT_DISPLAY_SLAYN_KORPIL",
             Equation = "Planet_Has_Slayn_Korpil"
         },
+    --  ["CREW_RESOURCE_DUMMY"]={
+    --      Text="TEXT_DISPLAY_SLAYN_KORPIL"
+    --  },
     -- ["PLACEHOLDER_CATEGORY_DUMMY"]={
     --     Text="TEXT_DISPLAY_PLACEHOLDER_CATEGORY_DUMMY"
     -- },
@@ -752,27 +755,27 @@ GameObjectLibrary = {
                 },
                 ["TIE_BOMBER_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=1
                     },
 					["PENTASTAR"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=1
                     },
 					["PIRATES"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=1
                     },
 					["TERADOC"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=1
                     },
 					["HOSTILE"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=1
                     },
 					["WARLORDS"] = {
-                        Reserve=1,
+                        Reserve=0,
                         Initial=1
                     }
                 },
@@ -784,33 +787,33 @@ GameObjectLibrary = {
                 },
                 ["TIE_INTERCEPTOR_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=3,
+                        Reserve=1,
                         Initial=1
                     },
 					["PIRATES"] = {
-                        Reserve=3,
+                        Reserve=1,
                         Initial=1
                     },
 					["TERADOC"] = {
-                        Reserve=3,
+                        Reserve=1,
                         Initial=1
                     },
 					["HUTTS"] = {
-                        Reserve=3,
+                        Reserve=1,
                         Initial=1
                     },
 					["HOSTILE"] = {
-                        Reserve=3,
+                        Reserve=1,
                         Initial=1
                     },
 					["WARLORDS"] = {
-                        Reserve=3,
+                        Reserve=1,
                         Initial=1
                     }
                 },
 				["TORRENT_SQUADRON"]={
                     ["PENTASTAR"] = {
-                        Reserve=3,
+                        Reserve=1,
                         Initial=1
                     }
                 },
@@ -828,14 +831,14 @@ GameObjectLibrary = {
                 },
                 ["SHIELDED_TIE_SQUADRON"]={
                     ["REBEL"] = {
-                        Reserve=3,
+                        Reserve=1,
                         Initial=1
                     }
                 },
 				["TRIFOIL_SQUADRON"]={
                     ["YEVETHA"] = {
-                        Reserve=5,
-                        Initial=3
+                        Reserve=3,
+                        Initial=2
                     }
                 }
             }
@@ -1221,6 +1224,10 @@ GameObjectLibrary = {
                 },
 				["SKIPRAY_SQUADRON"]={
                     ["CORPORATE_SECTOR"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["PENTASTAR"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -2067,7 +2074,7 @@ GameObjectLibrary = {
                     }
                 },
                 ["MIYTIL_SQUADRON"]={
-                    ["SARLACC"] = {
+                    ["HAPES_CONSORTIUM"] = {
                         Reserve=2,
                         Initial=1
                     },
@@ -2094,7 +2101,15 @@ GameObjectLibrary = {
                 }
             }
         },
-        ["GENERIC_ALLEGIANCE"]={
+		["BETA_CRUISER"]={
+            Scripts={
+                "MultiLayer",
+                "SingleUnitRetreat"
+            },
+            Fighters={
+            }
+        },
+		["GENERIC_ALLEGIANCE"]={
             Scripts={ "MultiLayer"
             },
             Fighters={
@@ -3229,43 +3244,29 @@ GameObjectLibrary = {
                 },
                 ["SCIMMY_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=1,
-                        Initial=1,
+                        Reserve=0,
+                        Initial=2,
                         TechLevel=EqualTo(2)
                     }
                 },
                 ["TIE_DROID_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=1,
-                        Initial=1,
+                        Reserve=0,
+                        Initial=2,
                         TechLevel=EqualTo(3)
                     }
                 },
                 ["A9_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(4)
-                    }
-                },
-                ["TIE_BOMBER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
+                        Initial=2,
                         TechLevel=EqualTo(4)
                     }
                 },
                 ["PREYBIRD_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(5)
-                    }
-                },
-                ["SHIELDED_INTERCEPTOR_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
+                        Initial=2,
                         TechLevel=EqualTo(5)
                     }
                 },
@@ -3283,8 +3284,8 @@ GameObjectLibrary = {
                 },
                 ["TRIFOIL_SQUADRON"]={
                     ["YEVETHA"] = {
-                        Reserve=1,
-                        Initial=1
+                        Reserve=0,
+                        Initial=2
                     }
                 }
             }
@@ -3892,7 +3893,7 @@ GameObjectLibrary = {
                     }
                 },
                 ["MIYTIL_BOMBER_SQUADRON"]={
-                    ["SARLACC"] = {
+                    ["HAPES_CONSORTIUM"] = {
                         Reserve=0,
                         Initial=1
                     },
@@ -3912,7 +3913,7 @@ GameObjectLibrary = {
                     }
                 },
                 ["MIYTIL_SQUADRON"]={
-                    ["SARLACC"] = {
+                    ["HAPES_CONSORTIUM"] = {
                         Reserve=1,
                         Initial=1
                     },
@@ -4704,6 +4705,14 @@ GameObjectLibrary = {
                         Initial=1
                     },
 					["TERADOC"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["HUTTS"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["UNDERWORLD"] = {
                         Reserve=0,
                         Initial=1
                     },

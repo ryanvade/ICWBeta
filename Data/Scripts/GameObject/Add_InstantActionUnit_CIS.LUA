@@ -15,6 +15,7 @@ function Definitions()
 	-- possible units to spawn
 	unit_table = {"GOZANTI_CRUISER_SQUADRON",
 "DIAMOND_FRIGATE",
+"HARDCELL",
 "GEONOSIAN_CRUISER",
 "C9979_CARRIER",
 "MUNIFICENT",
@@ -23,7 +24,9 @@ function Definitions()
 "BULWARK_I",
 "GENERIC_PROVIDENCE",
 "GENERIC_LUCREHULK",
-"SUBJUGATOR"}
+"SUBJUGATOR",
+"CAPTOR",
+"AUXILIA"}
 
 	Define_State("State_Init", State_Init);
 

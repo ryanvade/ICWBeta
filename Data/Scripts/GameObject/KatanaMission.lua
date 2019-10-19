@@ -121,7 +121,7 @@ Game_Message("TEXT_DETECTED_FLEET")
 elseif factions[raider] == "Pirates" then
 Sleep(90)
 Game_Message("TEXT_DETECTED_FLEET")
-elseif factions[raider] == "Sarlacc" then
+elseif factions[raider] == "Hapes_Consortium" then
 Sleep(90)
 Game_Message("TEXT_DETECTED_FLEET")
 

@@ -28,7 +28,7 @@ GameConstants = {
         "PIRATES",
         "HUTTS",
         "CORPORATE_SECTOR",
-        "SARLACC"
+        "HAPES_CONSORTIUM"
     },
     ALL_FACTIONS = {
         "EMPIRE",
@@ -43,7 +43,7 @@ GameConstants = {
         "NEUTRAL",
         "HOSTILE",
         "HUTT_CARTELS",
-        "SARLACC",
+        "HAPES_CONSORTIUM",
 		"MANDALORIANS"
     },
     ALL_FACTIONS_NOT_NEUTRAL = {
@@ -56,9 +56,9 @@ GameConstants = {
         "HUTTS",
         "WARLORDS",
         "CORPORATE_SECTOR",
-        --"HUTT_CARTELS",
-        "SARLACC",
-		--"MANDALORIANS"
+        "HUTT_CARTELS",
+        "HAPES_CONSORTIUM",
+		"MANDALORIANS"
     },
     ALL_FACTION_TEXTS = {
         EMPIRE = "TEXT_FACTION_EMPIRE",
@@ -73,7 +73,7 @@ GameConstants = {
         NEUTRAL = "TEXT_FACTION_NEUTRAL",
         HOSTILE = "TEXT_FACTION_HOSTILE",
         HUTT_CARTELS = "TEXT_FACTION_HUTTS",
-        SARLACC = "TEXT_FACTION_HAPES",
+        HAPES_CONSORTIUM = "TEXT_FACTION_HAPES",
 		MANDALORIANS = "TEXT_FACTION_MANDALORIANS"
     },
     ALL_FACTION_PLANET_CONQUEST_TEXTS = {
@@ -89,7 +89,7 @@ GameConstants = {
         NEUTRAL = "TEXT_FACTION_NEUTRAL_CONQUEST",
         HOSTILE = "TEXT_FACTION_HOSTILE_CONQUEST",
         HUTT_CARTELS = "TEXT_FACTION_HUTTS_CONQUEST",
-        SARLACC = "TEXT_FACTION_HAPES_CONQUEST",
+        HAPES_CONSORTIUM = "TEXT_FACTION_HAPES_CONQUEST",
 		MANDALORIANS = "TEXT_FACTION_MANDALORIANS_CONQUEST"
     },
     FACTION_COLORS = {
@@ -103,7 +103,7 @@ GameConstants = {
         ["HUTTS"] = {r = 255, g = 255, b = 255},
         ["WARLORDS"] = {r = 142, g = 195, b = 0},
         ["CORPORATE_SECTOR"] = {r = 176, g = 124, b = 172},
-        ["SARLACC"] = {r = 212, g = 81, b = 255},
+        ["HAPES_CONSORTIUM"] = {r = 212, g = 81, b = 255},
         ["NEUTRAL"] = {r = 100, g = 100, b = 100},
         ["HOSTILE"] = {r = 153, g = 21, b = 223},
 		["MANDALORIANS"] = {r = 100, g = 75, b = 75}

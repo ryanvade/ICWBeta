@@ -1,6 +1,6 @@
 require("trlib-std/class")
 
----@class GalacticDisplayContainer
+---@class DisplayComponentContainer
 DisplayComponentContainer = class()
 
 function DisplayComponentContainer:new()
@@ -8,7 +8,6 @@ function DisplayComponentContainer:new()
     self.__display_components = {}
 end
 
----@param component Observable
 function DisplayComponentContainer:add_display_component(component)
     table.insert(self.__display_components, component)
 end

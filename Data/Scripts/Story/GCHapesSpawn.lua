@@ -36,7 +36,7 @@ end
 function HapesSpawns(message)
   if message == OnEnter then
 
-   p_hapes = Find_Player("Sarlacc")
+   p_hapes = Find_Player("Hapes_Consortium")
    start_planet = FindPlanet("Terephon")
   if TestValid(start_planet) then
     ChangePlanetOwnerAndRetreat(start_planet, p_hapes)

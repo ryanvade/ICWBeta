@@ -22,9 +22,7 @@ require("trlib-util/Comparators")
 require("trlib-galaxy/PlanetModifiers")
 
 GameObjectLibrary = {
-    Interdictors = {
-        "CC7700"
-    },
+    Interdictors = {},
     Numbers = {
         "Display_One",
         "Display_Two",
@@ -209,52 +207,7 @@ GameObjectLibrary = {
             Flags = {
                 HANGAR = true
             },
-            Fighters = {
-                ["TIE_BOMBER_SQUADRON"] = {
-                    ["EMPIRE"] = {
-                        Reserve = 0,
-                        Initial = 2
-                    },
-                    ["PIRATES"] = {
-                        Reserve = 0,
-                        Initial = 2
-                    },
-                    ["TERADOC"] = {
-                        Reserve = 0,
-                        Initial = 2
-                    },
-                    ["HUTTS"] = {
-                        Reserve = 0,
-                        Initial = 2
-                    },
-                    ["HOSTILE"] = {
-                        Reserve = 0,
-                        Initial = 2
-                    },
-                    ["WARLORDS"] = {
-                        Reserve = 0,
-                        Initial = 2
-                    }
-                },
-                ["Y-WING_SQUADRON"] = {
-                    ["REBEL"] = {
-                        Reserve = 0,
-                        Initial = 2
-                    }
-                },
-                ["SKIPRAY_SQUADRON"] = {
-                    ["CORPORATE_SECTOR"] = {
-                        Reserve = 0,
-                        Initial = 2
-                    }
-                },
-                ["TRIFOIL_SQUADRON"] = {
-                    ["YEVETHA"] = {
-                        Reserve = 0,
-                        Initial = 2
-                    }
-                }
-            }
+            Fighters = {}
         },
         ["RECUSANT"] = {
             Scripts = {
@@ -264,6 +217,13 @@ GameObjectLibrary = {
             Fighters = {}
         },
         ["DIAMOND_FRIGATE"] = {
+            Scripts = {
+                "MultiLayer",
+                "SingleUnitRetreat"
+            },
+            Fighters = {}
+        },
+        ["HARDCELL"] = {
             Scripts = {
                 "MultiLayer",
                 "SingleUnitRetreat"
@@ -314,94 +274,6 @@ GameObjectLibrary = {
                     ["EMPIRE"] = {
                         Reserve = 2,
                         Initial = 1
-                    }
-                },
-                ["TIE_FIGHTER_SQUADRON"] = {
-                    ["EMPIRE"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["PENTASTAR"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["PIRATES"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["TERADOC"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["HUTTS"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["HOSTILE"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["WARLORDS"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    }
-                },
-                ["TIE_BOMBER_SQUADRON"] = {
-                    ["EMPIRE"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["PENTASTAR"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["PIRATES"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["TERADOC"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["HUTTS"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["HOSTILE"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["YEVETHA"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["WARLORDS"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    }
-                },
-                ["Y-WING_SQUADRON"] = {
-                    ["REBEL"] = {
-                        Reserve = 11,
-                        Initial = 2
-                    }
-                },
-                ["REBEL_X-WING_SQUADRON"] = {
-                    ["REBEL"] = {
-                        Reserve = 11,
-                        Initial = 2
-                    }
-                },
-                ["A-WING_SQUADRON"] = {
-                    ["REBEL"] = {
-                        Reserve = 11,
-                        Initial = 2
-                    }
-                },
-                ["TRIFOIL_SQUADRON"] = {
-                    ["YEVETHA"] = {
-                        Reserve = 20,
-                        Initial = 6
                     }
                 }
             }
@@ -524,6 +396,39 @@ GameObjectLibrary = {
                     }
                 }
             }
+        },
+        ["CAPTOR"] = {
+            Scripts = {
+                "MultiLayer",
+                "FighterSpawn"
+            },
+            Fighters = {
+                ["VULTURE_SQUADRON_DOUBLE"] = {
+                    ["REBEL"] = {
+                        Reserve = 9,
+                        Initial = 3
+                    }
+                },
+                ["TRIFIGHTER_SQUADRON"] = {
+                    ["REBEL"] = {
+                        Reserve = 4,
+                        Initial = 1
+                    }
+                },
+                ["HYENA_SQUADRON"] = {
+                    ["REBEL"] = {
+                        Reserve = 5,
+                        Initial = 2
+                    }
+                }
+            }
+        },
+        ["AUXILIA"] = {
+            Scripts = {
+                "MultiLayer",
+                "SingleUnitRetreat"
+            },
+            Fighters = {}
         },
         ["GENERIC_LUCREHULK"] = {
             Scripts = {
@@ -675,7 +580,15 @@ GameObjectLibrary = {
                 ["VULTURE_SQUADRON"] = {
                     ["REBEL"] = {
                         Reserve = 1,
-                        Initial = 2
+                        Initial = 2,
+                        TechLevel = LessOrEqualTo(2)
+                    }
+                },
+                ["MANKVIM"] = {
+                    ["REBEL"] = {
+                        Reserve = 1,
+                        Initial = 2,
+                        TechLevel = GreaterThan(2)
                     }
                 },
                 ["HYENA_SQUADRON"] = {
@@ -695,7 +608,15 @@ GameObjectLibrary = {
                 ["VULTURE_SQUADRON"] = {
                     ["REBEL"] = {
                         Reserve = 3,
-                        Initial = 2
+                        Initial = 2,
+                        TechLevel = LessOrEqualTo(2)
+                    }
+                },
+                ["MANKVIM"] = {
+                    ["REBEL"] = {
+                        Reserve = 3,
+                        Initial = 2,
+                        TechLevel = GreaterThan(2)
                     }
                 },
                 ["HYENA_SQUADRON"] = {

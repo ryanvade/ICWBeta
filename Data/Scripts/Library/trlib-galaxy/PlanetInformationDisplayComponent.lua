@@ -64,6 +64,11 @@ end
 
 function PlanetInformationDisplayComponent:render()
     self.__needs_update = false
+
+    if not self.selected_planet then
+        return
+    end
+
     local owner = self.selected_planet:get_owner()
     local owner_name = owner.Get_Faction_Name()
     local color = CONSTANTS.FACTION_COLORS[owner_name]

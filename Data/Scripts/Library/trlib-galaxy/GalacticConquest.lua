@@ -21,15 +21,15 @@
 require("PGSpawnUnits")
 require("trlib-util/StoryUtil")
 require("trlib-std/class")
+require("trlib-std/ModContentLoader").get("GovernmentManager")
 require("trlib-galaxy/GalacticEvents")
-require("trlib-galaxy/GovernmentNewRepublic")
 require("trlib-galaxy/Planet")
 
 GalacticConquest = class()
 function GalacticConquest:new(player_agnostic_plot, playableFactions)
     self.HumanPlayer = self:FindHumanPlayerInTable(playableFactions)
 
-    self.NRGOV = GovernmentNewRepublic()
+    self.Governments = GovernmentManager()
 
     self.Planets = self:GetPlanets()
     self:InitializeEvents(player_agnostic_plot)
@@ -38,9 +38,13 @@ function GalacticConquest:new(player_agnostic_plot, playableFactions)
     self.Events = {
         SelectedPlanetChanged = SelectedPlanetChangedEvent(self.HumanPlayer, self.Planets),
         PlanetOwnerChanged = PlanetOwnerChangedEvent(self.Planets),
+        GalacticProductionStarted = ProductionStartedEvent(self.Planets),
         GalacticProductionFinished = ProductionFinishedEvent(self.Planets),
+        GalacticProductionCanceled = ProductionCanceledEvent(self.Planets),
         GalacticWeekChanged = GalacticWeekChangedEvent(self.Player),
         GalacticHeroKilled = GalacticHeroKilledEvent(),
+        TacticalBattleStarting = TacticalBattleStartingEvent(),
+        TacticalBattleEnding = TacticalBattleEndingEvent(),
         IncomingFleet = IncomingFleetEvent(self.Planets)
     }
 end
@@ -48,10 +52,14 @@ end
 function GalacticConquest:Update()
     self.Events.SelectedPlanetChanged:Check()
     self.Events.PlanetOwnerChanged:Check()
+    self.Events.GalacticProductionStarted:Check()
     self.Events.GalacticProductionFinished:Check()
+    self.Events.GalacticProductionCanceled:Check()
     self.Events.GalacticHeroKilled:Check()
+    self.Events.TacticalBattleStarting:Check()
+    self.Events.TacticalBattleEnding:Check()
     self.Events.IncomingFleet:Check()
-    self.NRGOV:Update()
+    self.Governments:Update()
     local current = GetCurrentTime()
     if current - self.LastCycleTime >= 40 then
         for _, planet in pairs(self.Planets) do

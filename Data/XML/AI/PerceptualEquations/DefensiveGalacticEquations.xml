@@ -36,6 +36,8 @@
 		(Variable_Target.StarbaseLevel == Variable_Target.MaxStarbaseLevel) *
 		Variable_Target.FriendlyForce.SpaceTotalNBTD *
 		(1.0 + Function_DefensiveValue.Evaluate)
+		*
+		Function_Is_Connected_To_Enemy_Human.Evaluate
 		+
 		8.0 * Function_Planet_Has_Capital_Building.Evaluate
 	</Needs_Space_Defensive_Structure>
@@ -53,6 +55,8 @@
 		(5 > Variable_Self.StructureCount {Parameter_Type = "Oto", Parameter_Type = "Validusia", Parameter_Type = "Empress_Station", Parameter_Only_Consider_Complete = 1.0})
 		*
 		Variable_Self.IsFaction {Parameter_Faction = "Rebel", Parameter_Faction = "Underworld", Parameter_Faction = "Pentastar", Parameter_Faction = "Hutts", Parameter_Faction = "Pirates", Parameter_Faction = "Empire"}
+		*
+		Function_Is_Connected_To_Enemy_Human.Evaluate
 	</Needs_Space_Super_Station>
 	
 

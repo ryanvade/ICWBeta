@@ -30,6 +30,21 @@ function Queue:remove(index)
     return element
 end
 
+
+---Returns the element at the given index in the Queue. If no index is given returns the first element in the Queue
+---@return any
+---@overload fun()
+function Queue:peek(index)
+    if self.size == 0 then
+        return nil
+    end
+
+    local element = self.__elements[index or 1]
+
+    return element
+end
+
+
 ---Clears all elements from the Queue
 function Queue:clear()
     self.__elements = {}

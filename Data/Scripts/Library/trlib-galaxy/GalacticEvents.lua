@@ -19,22 +19,43 @@
 --******************************************************************************
 
 require("trlib-std/class")
-require("trlib-util/StoryUtil")
 require("trlib-std/Observable")
+require("trlib-transactions/TableSerializer")
+require("trlib-util/StoryUtil")
 
 ---@class PlanetOwnerChangedEvent : Observable
 PlanetOwnerChangedEvent = class(Observable)
 
 function PlanetOwnerChangedEvent:new(planets)
-    self.Planets = planets
+    self.planets = planets
 end
 
 function PlanetOwnerChangedEvent:Check()
     local planetOwnerChangedData = GlobalValue.Get("PLANET_OWNER_CHANGED")
     if StoryUtil.ValidGlobalValue(planetOwnerChangedData) then
-        local planet = self.Planets[planetOwnerChangedData]
+        local planet = self.planets[planetOwnerChangedData]
         self:Notify(planet)
         GlobalValue.Set("PLANET_OWNER_CHANGED", "")
+    end
+end
+
+---@class ProductionStartedEvent : Observable
+ProductionStartedEvent = class(Observable)
+
+function ProductionStartedEvent:new(planets)
+    ---@private
+    ---@type Planet[]
+    self.planets = planets
+end
+
+function ProductionStartedEvent:Check()
+    if StoryUtil.ValidGlobalValue(GlobalValue.Get("PRODUCTION_STARTED")) then
+        local event_info = Deserialize(GlobalValue.Get("PRODUCTION_STARTED"))
+        local productionPlanet = event_info.planet_name
+        local object_type_name = event_info.object_type_name
+        local planet = self.planets[productionPlanet]
+        self:Notify(planet, object_type_name)
+        GlobalValue.Set("PRODUCTION_STARTED", "")
     end
 end
 
@@ -42,15 +63,57 @@ end
 ProductionFinishedEvent = class(Observable)
 
 function ProductionFinishedEvent:new(planets)
-    self.Planets = planets
+    self.planets = planets
 end
 
 function ProductionFinishedEvent:Check()
-    local productionPlanet = GlobalValue.Get("PRODUCTION_FINISHED")
-    if StoryUtil.ValidGlobalValue(productionPlanet) then
-        local planet = self.Planets[productionPlanet]
-        self:Notify(planet)
+    if StoryUtil.ValidGlobalValue(GlobalValue.Get("PRODUCTION_FINISHED")) then
+        local event_info = Deserialize(GlobalValue.Get("PRODUCTION_FINISHED"))
+        local productionPlanet = event_info.planet_name
+        local object_type_name = event_info.object_type_name
+        local planet = self.planets[productionPlanet]
+        self:Notify(planet, object_type_name)
         GlobalValue.Set("PRODUCTION_FINISHED", "")
+    end
+end
+
+---@class ProductionCanceledEvent : Observable
+ProductionCanceledEvent = class(Observable)
+
+function ProductionCanceledEvent:new(planets)
+    ---@private
+    ---@type Planet[]
+    self.planets = planets
+end
+
+function ProductionCanceledEvent:Check()
+    if StoryUtil.ValidGlobalValue(GlobalValue.Get("PRODUCTION_CANCELED")) then
+        local event_info = Deserialize(GlobalValue.Get("PRODUCTION_CANCELED"))
+        local productionPlanet = event_info.planet_name
+        local object_type_name = event_info.object_type_name
+        local planet = self.planets[productionPlanet]
+        self:Notify(planet, object_type_name)
+        GlobalValue.Set("PRODUCTION_CANCELED", "")
+    end
+end
+
+---@class TacticalBattleStartingEvent : Observable
+TacticalBattleStartingEvent = class(Observable)
+
+function TacticalBattleStartingEvent:Check()
+    if StoryUtil.ValidGlobalValue(GlobalValue.Get("TACTICAL_BATTLE_BEGINNING")) then
+        self:Notify()
+        GlobalValue.Set("TACTICAL_BATTLE_BEGINNING", "")
+    end
+end
+
+---@class TacticalBattleEndingEvent : Observable
+TacticalBattleEndingEvent = class(Observable)
+
+function TacticalBattleEndingEvent:Check()
+    if StoryUtil.ValidGlobalValue(GlobalValue.Get("TACTICAL_BATTLE_ENDING")) then
+        self:Notify()
+        GlobalValue.Set("TACTICAL_BATTLE_ENDING", "")
     end
 end
 
@@ -58,13 +121,13 @@ end
 SelectedPlanetChangedEvent = class(Observable)
 
 function SelectedPlanetChangedEvent:new(player, planets)
-    self.Player = player
-    self.Planets = planets
+    self.player = player
+    self.planets = planets
 end
 
 function SelectedPlanetChangedEvent:Check()
-    for _, planet in pairs(self.Planets) do
-        if Check_Story_Flag(self.Player, "ZOOMED_INTO_" .. planet:get_name(), nil, true) then
+    for _, planet in pairs(self.planets) do
+        if Check_Story_Flag(self.player, "ZOOMED_INTO_" .. planet:get_name(), nil, true) then
             GlobalValue.Set("SELECTED_PLANET", planet:get_name())
             self:Notify(planet)
             break
@@ -76,11 +139,11 @@ end
 GalacticWeekChangedEvent = class(Observable)
 
 function GalacticWeekChangedEvent:new(player)
-    self.Player = player
+    self.player = player
 end
 
 function GalacticWeekChangedEvent:Check()
-    if Check_Story_Flag(self.Player, "GALACTIC_CYCLE_ELAPSED", nil, true) then
+    if Check_Story_Flag(self.player, "GALACTIC_CYCLE_ELAPSED", nil, true) then
         self:Notify()
     end
 end

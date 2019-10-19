@@ -27,6 +27,8 @@ function Observable:new()
     self.Listeners = {}
 end
 
+---@param listenerFunction function
+---@param optionalArg any
 function Observable:AttachListener(listenerFunction, optionalArg)
     if not listenerFunction then
         return
@@ -34,17 +36,18 @@ function Observable:AttachListener(listenerFunction, optionalArg)
     self.Listeners[listenerFunction] = {Arg = optionalArg}
 end
 
+---@param listener function
 function Observable:DetachListener(listener)
     self.Listeners[listener] = nil
 end
 
-function Observable:Notify(arg)
+function Observable:Notify(...)
     for listener, tab in pairs(self.Listeners) do
         if type(listener) == "function" then
             if tab.Arg then
-                listener(tab.Arg, arg)
+                listener(tab.Arg, unpack(arg))
             else
-                listener(arg)
+                listener(unpack(arg))
             end
         end
     end

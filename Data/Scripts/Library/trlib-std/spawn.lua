@@ -1,4 +1,4 @@
-function TRlib.spawn(data)
+function GalacticUtil.spawn(data)
     if not data.location or not data.objects or not data.owner then
         error("Incomplete data for spawn function", 2)
     end
@@ -29,10 +29,13 @@ function TRlib.spawn(data)
         error("Location "..tostring(data.location).." is not valid", 2)
     end
 
+    local units = {}
     for object_type_name, amount in pairs(data.objects) do 
         local object_type = Find_Object_Type(object_type_name)
         for _=1, amount do
-            Spawn_Unit(object_type, location, faction)
+            table.insert(units, Spawn_Unit(object_type, location, faction)[1])
         end
     end
+
+    return units
 end

@@ -584,15 +584,30 @@
 	</GroundInfantry>
 
 
-
-
-	<GroundInfantry Name="Scout_Trooper">
+	<GroundVehicle Name="BARC_Speeder">
+		<Variant_Of_Existing_Type>Republic_BARC_Speeder</Variant_Of_Existing_Type>
+		<Affiliation>Teradoc</Affiliation>
+		<Land_Model_Name>ev_barc_speeder.ALO</Land_Model_Name>
+		
+		<SFXEvent_Select>Unit_Select_Scout_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Scout_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Scout_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Scout_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Scout_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Scout_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Scout_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Scout_Trooper </SFXEvent_Assist_Attack>
+		
+		<Destruction_Survivors> Scout_Trooper_No_Bike, 1.0 </Destruction_Survivors>
+	</GroundVehicle>
+	
+	<GroundInfantry Name="64Y_Sled">
 		<LOD_Bias>5</LOD_Bias>
-		<Text_ID>TEXT_UNIT_SCOUT_TROOPER</Text_ID>
+		<Text_ID>TEXT_UNIT_65Y_SLED</Text_ID>
 		<!--<Encyclopedia_Good_Against> Rebel_Trooper MPTL MZ8_Pulse_Cannon_Tank </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To>- T4B_Tank T2B_Tank Destroyer_Droid </Encyclopedia_Vulnerable_To>-->
-		<Land_Model_Name>74-z_speeder_bike.ALO</Land_Model_Name>
-		<Icon_Name>i_button_scout_trooper.tga</Icon_Name>
+		<Land_Model_Name>ev_64-y_swift_3_repulsorsled.ALO</Land_Model_Name>
+		<Icon_Name>i_button_64y_sled.tga</Icon_Name>
 		<Lua_Script>SpeederBike</Lua_Script>
 		<Behavior> SELECTABLE </Behavior>
 		<LandBehavior>ABILITY_COUNTDOWN, BIKE_LOCOMOTOR, IDLE, TARGETING, WEAPON, STUNNABLE, POWERED, REVEAL, HIDE_WHEN_FOGGED, WIND_DISTURBANCE,DAMAGE_TRACKING, AMBIENT_SFX, SURFACE_FX, AFFECTED_BY_SHIELD </LandBehavior>
@@ -605,8 +620,8 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
-		<Max_Speed>5.0</Max_Speed>
-		<Max_Rate_Of_Turn>7.5</Max_Rate_Of_Turn>
+		<Max_Speed>8.0</Max_Speed>
+		<Max_Rate_Of_Turn>8</Max_Rate_Of_Turn>
 		<Max_Rate_Of_Roll>2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>35</Bank_Turn_Angle>
 		<LateralAcceleration> .15 </LateralAcceleration>
@@ -625,13 +640,13 @@
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Hover</Type>
 		<Deploys>No</Deploys>
-		<Affiliation>Empire, Pentastar, Teradoc, Hutts</Affiliation>
+		<Affiliation>Hutts</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Size_Value>25</Size_Value>
 		<Damage>5</Damage>
 		<Sensor_Range>40</Sensor_Range>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>20</Tactical_Health>
+		<Tactical_Health>50</Tactical_Health>
 
 		<!-- hitpoints halved to make the unit more paper-like -->
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
@@ -644,9 +659,9 @@
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
 		<Targeting_Max_Attack_Distance>150.0</Targeting_Max_Attack_Distance>
-		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
 		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
-		<Projectile_Types>Proj_Blaster_Cannon_Green</Projectile_Types>
+		<!--<Projectile_Types>Proj_Blaster_Cannon_Green</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
@@ -654,7 +669,8 @@
 		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 15.0 </Targeting_Fire_Inaccuracy>
-		<Fire_Category_Restrictions> Air </Fire_Category_Restrictions>
+		<Fire_Category_Restrictions> Air </Fire_Category_Restrictions>-->
+		<HardPoints>HP_64Y_Sled</HardPoints>
 		<Wind_Disturbance_Radius>50</Wind_Disturbance_Radius>
 		<Wind_Disturbance_Strength>10</Wind_Disturbance_Strength>
 		<Wind_Disturbance_Sphere_Alpha>0.4</Wind_Disturbance_Sphere_Alpha>
@@ -692,7 +708,7 @@
 		<Is_Squashable> Yes </Is_Squashable>
 		<No_Reflection_Below_Detail_Level>99</No_Reflection_Below_Detail_Level>
 		<No_Refraction_Below_Detail_Level>99</No_Refraction_Below_Detail_Level>
-		<AI_Combat_Power>10</AI_Combat_Power>
+		<AI_Combat_Power>22.4</AI_Combat_Power>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 		<Targeting_Priority_Set>AvoidAntiInfantryTurrets</Targeting_Priority_Set>
 		<Idle_Chase_Range>50.0</Idle_Chase_Range>
@@ -703,14 +719,12 @@
 		<Surface_Type_Cover_Damage_Shield>.5</Surface_Type_Cover_Damage_Shield>
 		<Weather_Category>Infantry</Weather_Category>
 		<Is_Squashable_By_Supercrusher>Yes</Is_Squashable_By_Supercrusher>
-		<Encyclopedia_Text>TEXT_TOOLTIP_SCOUTTROOPER</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_TOOLTIP_64Y_SLED</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
 		<Death_Fade_Time>0.25</Death_Fade_Time>
 		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 		<Tactical_Bribe_Cost>50</Tactical_Bribe_Cost>
-		<!-- When this unit is converted by the "convert to enemy" special ability (Force Corruption), this is what his type pointer changes to -->
-		<Conversion_Ability_Changes_To_Enemy> Scout_Trooper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
@@ -724,6 +738,31 @@
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 	</GroundInfantry>
+	
+	<GroundVehicle Name="Scout_Trooper">
+		<Variant_Of_Existing_Type>Republic_Speeder_Bike</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SCOUT_TROOPER</Text_ID>
+		<Affiliation>Empire, Pentastar, Teradoc, Hutts</Affiliation>
+		<Land_Model_Name>74-z_speeder_bike.ALO</Land_Model_Name>
+		<Icon_Name>i_button_scout_trooper.tga</Icon_Name>
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_SCOUTTROOPER</Encyclopedia_Text>
+		
+		<SFXEvent_Select>Unit_Select_Scout_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Scout_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Scout_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Scout_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Scout_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Scout_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Scout_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Scout_Trooper </SFXEvent_Assist_Attack>
+		
+		<Destruction_Survivors> Scout_Trooper_No_Bike, 1.0 </Destruction_Survivors>
+		
+		<!-- When this unit is converted by the "convert to enemy" special ability (Force Corruption), this is what his type pointer changes to -->
+		<Conversion_Ability_Changes_To_Enemy> Scout_Trooper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	</GroundVehicle>
+
 	<!-- Version of above Infantry who has been converted to enemy by Force Corruption ability.                                            -->
 	<!-- This object type can be commented out or deleted if the base type is never effected by Force Corruption enemy conversion ability. -->
 	<!-- IMPORTANT: For now, only SFXEvent should be changed due to the on-the-fly type pointer change. If more is desired to be changed   -->

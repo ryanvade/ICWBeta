@@ -1,6 +1,7 @@
 require("pgcommands")
+require("trlib-galaxy/GlobalValueQueue")
 TransactionManager = require("trlib-transactions/TransactionManager")
-
+require("trlib-transactions/TableSerializer")
 
 -- Don't pool...
 ScriptPoolCount = 0
@@ -15,7 +16,7 @@ function Base_Definitions()
 
     Common_Base_Definitions()
 
-    ServiceRate = 30
+    ServiceRate = 0.1
 
     frag_index = 1
     death_index = 2
@@ -31,6 +32,8 @@ function Base_Definitions()
 
     TM = TransactionManager()
     GlobalValue.Set("MOD_ID", ModContentLoader.get_mod_id())
+
+    __GlobalValueQueue = GlobalValueQueue()
 
     Define_Title_Faction_Table()
 end
@@ -57,6 +60,7 @@ function main()
         while true do
             GameService()
             PumpEvents()
+            __GlobalValueQueue:process_global_values()
         end
     end
 
@@ -286,15 +290,13 @@ end
 -- @since 3/15/2005 3:56:43 PM -- BMH
 --
 function GameService()
-    GameScoringMessage("GameScoring -- Tactical Stats dump.")
-    Print_Stat_Table(TacticalKillStatsTable)
-    GameScoringMessage("GameScoring -- Galactic Stats dump.")
-    Print_Stat_Table(GalacticKillStatsTable)
-
-    Print_Build_Stats_Table(GalacticBuildStatsTable)
-    Print_Build_Stats_Table(TacticalBuildStatsTable)
-
-    Debug_Print_Score_Vals()
+    -- GameScoringMessage("GameScoring -- Tactical Stats dump.")
+    -- Print_Stat_Table(TacticalKillStatsTable)
+    -- GameScoringMessage("GameScoring -- Galactic Stats dump.")
+    -- Print_Stat_Table(GalacticKillStatsTable)
+    -- Print_Build_Stats_Table(GalacticBuildStatsTable)
+    -- Print_Build_Stats_Table(TacticalBuildStatsTable)
+    -- Debug_Print_Score_Vals()
 end
 
 --
@@ -413,6 +415,7 @@ function Game_Mode_Starting_Event(mode_name, map_name)
         CampaignGame = true
         Reset_Stats()
         GameStartTime = GetCurrentTime.Frame()
+        __GlobalValueQueue:queue_value("TACTICAL_BATTLE_ENDING", "empty")
     elseif CampaignGame == false then
         -- Skirmish tactical
         Reset_Stats()
@@ -437,6 +440,7 @@ function Game_Mode_Ending_Event(mode_name)
     LastWasCampaignGame = CampaignGame
     if StringCompare(mode_name, "Galactic") then
         CampaignGame = false
+        __GlobalValueQueue:queue_value("TACTICAL_BATTLE_BEGINNING", "empty")
     elseif StringCompare(mode_name, "Space") then
         if not TM then
             return
@@ -482,8 +486,8 @@ end
 function Galactic_Unit_Destroyed_Event(object, killer)
     local object_type = object.Get_Type()
 
-    if object_type.Is_Hero() then
-        GlobalValue.Set("GALACTIC_HERO_KILLED", object_type.Get_Name())
+    if object_type.Is_Hero() and not object.Is_Category("Structure") then
+        __GlobalValueQueue:queue_value("GALACTIC_HERO_KILLED", object_type.Get_Name())
     end
 
     Update_Kill_Stats_Table(GalacticKillStatsTable, object, killer)
@@ -499,6 +503,13 @@ end
 --
 function Galactic_Production_Begin_Event(planet, object_type)
     --Track credits spent
+    __GlobalValueQueue:queue_value(
+        "PRODUCTION_STARTED",
+        Serialize {
+            planet_name = planet.Get_Type().Get_Name(),
+            object_type_name = object_type.Get_Name()
+        }
+    )
 end
 
 --
@@ -511,6 +522,13 @@ end
 --
 function Galactic_Production_Canceled_Event(planet, object_type)
     --Track credits spent
+    __GlobalValueQueue:queue_value(
+        "PRODUCTION_CANCELED",
+        Serialize {
+            planet_name = planet.Get_Type().Get_Name(),
+            object_type_name = object_type.Get_Name()
+        }
+    )
 end
 
 --
@@ -539,7 +557,13 @@ end
 -- @since 3/15/2005 4:10:19 PM -- BMH
 --
 function Galactic_Production_End_Event(planet, object)
-    GlobalValue.Set("PRODUCTION_FINISHED", planet.Get_Type().Get_Name())
+    __GlobalValueQueue:queue_value(
+        "PRODUCTION_FINISHED",
+        Serialize {
+            planet_name = planet.Get_Type().Get_Name(),
+            object_type_name = object.Get_Type().Get_Name()
+        }
+    )
     if object.Get_Type == nil then
         -- object must be a GameObjectTypeWrapper not a GameObjectWrapper if it doesn't
         -- have a Get_Type function.
@@ -610,7 +634,7 @@ end
 -- @since 6/20/2005 8:37:53 PM -- BMH
 --
 function Galactic_Planet_Faction_Change(planet, newplayer, oldplayer)
-    GlobalValue.Set("PLANET_OWNER_CHANGED", planet.Get_Type().Get_Name())
+    __GlobalValueQueue:queue_value("PLANET_OWNER_CHANGED", planet.Get_Type().Get_Name())
     -- Update the player table.
     Update_Player_Table(newplayer)
     Update_Player_Table(oldplayer)

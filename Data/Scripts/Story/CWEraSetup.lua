@@ -6640,7 +6640,6 @@ function GCSetup(gcConfig)
             SetUpPlanet(planetObj, eraEntry)
         end
     end
-
 end
 
 function GetEraEntry(eraConfig)
@@ -6659,19 +6658,28 @@ function SetUpPlanet(planet, eraEntry)
         return
 	end
 	-- local spawnList = flatten(eraEntry.StartingForces)
-	-- printTable(spawnList)
+	printTable(flatten(eraEntry.StartingForces))
     -- SpawnList(flatten(eraEntry.StartingForces), planet, owner, not owner.Is_Human(), false)
-    for _, unit in pairs(eraEntry.StartingForces) do
-		Spawn_Unit(Find_Object_Type(unit), planet, owner)
+    for _, unit in pairs(flatten(eraEntry.StartingForces)) do
+		if not Find_Object_Type(unit) then
+			DebugMessage("%s -- unit named %s not found!", tostring(Script), tostring(unit))
+		end
+		units = Spawn_Unit(Find_Object_Type(unit), planet, owner)
+		if units ~= nil then
+			for _, u in pairs(units) do
+				u.Prevent_AI_Usage(false)
+			end
+		end
     end
 end
+
 
 function listOf(num, object)
     local tab = {}
     for _=1, num do
         table.insert(tab, object)
     end
-    return unpack(tab)
+    return tab
 end
 
 function flatten(tab, res)

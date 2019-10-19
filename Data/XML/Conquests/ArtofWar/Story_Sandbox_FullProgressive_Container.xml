@@ -552,7 +552,7 @@
 	<Event Name="Change_AI_Hapes_Vassal">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Sarlacc</Reward_Param1>
+		<Reward_Param1>Hapes_Consortium</Reward_Param1>
 		<Reward_Param2>NRVassalAI</Reward_Param2>
 		<Prereq>Vassal_Release_Hapes</Prereq>
 	</Event>
@@ -560,7 +560,7 @@
 <!--<Event Name="Change_AI_Hapes_EndVassal">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SWITCH_CONTROL</Reward_Type>
-		<Reward_Param1>Sarlacc</Reward_Param1>
+		<Reward_Param1>Hapes_Consortium</Reward_Param1>
 		<Reward_Param2>GenericAI</Reward_Param2>
 	</Event> -->
 
@@ -1525,6 +1525,7 @@
 		<Branch>Hero_Death_Events</Branch>
 	</Event>
 	
+	
 	<Event Name="Trigger_Thrawn_Regicide_Construct">
 		<Event_Type>STORY_CONSTRUCT</Event_Type>
 		<Event_Param1>Dummy_Regicide_Thrawn</Event_Param1>
@@ -1537,7 +1538,7 @@
 		<Event_Param1>2400</Event_Param1>
 		<Prereq>Set_Subera_Isard</Prereq>
 	</Event>
-		
+	
 	<Event Name="Set_Subera_Thrawn">
   		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Prereq>Trigger_Thrawn_Regicide_Construct</Prereq>
@@ -1595,7 +1596,7 @@
 	<Event Name="H_Level_Two">
   		 <Event_Type>STORY_TRIGGER</Event_Type>
  		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
-  		<Reward_Param1>Sarlacc</Reward_Param1>
+  		<Reward_Param1>Hapes_Consortium</Reward_Param1>
 		<Reward_Param2>2</Reward_Param2>	
 		<Prereq>Set_Subera_Thrawn</Prereq>
 	</Event>
@@ -1733,7 +1734,7 @@
 	<Event Name="H_Level_Three">
   		 <Event_Type>STORY_TRIGGER</Event_Type>
  		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
-  		<Reward_Param1>Sarlacc</Reward_Param1>
+  		<Reward_Param1>Hapes_Consortium</Reward_Param1>
 		<Reward_Param2>3</Reward_Param2>	
 		<Prereq>Set_Subera_Palpatine</Prereq>
 	</Event>
@@ -1903,7 +1904,7 @@
 	<Event Name="H_Level_Four">
   		 <Event_Type>STORY_TRIGGER</Event_Type>
  		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
-  		<Reward_Param1>Sarlacc</Reward_Param1>
+  		<Reward_Param1>Hapes_Consortium</Reward_Param1>
 		<Reward_Param2>4</Reward_Param2>	
 		<Prereq>Set_Subera_Daala</Prereq>
 	</Event>

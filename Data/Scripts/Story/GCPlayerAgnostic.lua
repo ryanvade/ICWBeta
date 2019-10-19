@@ -26,6 +26,7 @@ GameObjectLibrary = ModContentLoader.get("GameObjectLibrary")
 
 require("trlib-transactions/init")
 require("trlib-galaxy/init")
+require("trlib-galaxy/ObjectivesDisplayComponentContainer")
 
 function Definitions()
     DebugMessage("%s -- In Definitions", tostring(Script))
@@ -50,7 +51,6 @@ function Begin_GC(message)
             GalacticEventsNewsSource(
             GC.Events.PlanetOwnerChanged,
             GC.Events.GalacticHeroKilled,
-            GC.NRGOV.Events.ElectionHeld,
             GC.Events.IncomingFleet
         )
 
@@ -60,9 +60,17 @@ function Begin_GC(message)
         StructureDisplay =
             PlanetInformationDisplayComponent(GC.Events.SelectedPlanetChanged, GC.Events.GalacticProductionFinished)
 
+        ResourceManagerInstance = DummyBasedResourceManager(GC.Planets, GC)
+
         GalacticDisplay = DisplayComponentContainer()
+        -- GalacticDisplay:add_display_component(ShipCrewDisplayComponent(ResourceManagerInstance))
         GalacticDisplay:add_display_component(StructureDisplay)
         GalacticDisplay:add_display_component(GalacticNewsFeed)
+
+        ObjectivesDisplay =
+            ObjectivesDisplayComponentContainer(GC.Events.TacticalBattleStarting, GC.Events.TacticalBattleEnding)
+        
+        ObjectivesDisplay:add_display_component(ShipCrewDisplayComponent(ResourceManagerInstance))
 
         Filter = CategoryFilter(plot, GC)
 
@@ -71,6 +79,7 @@ function Begin_GC(message)
         GC:Update()
         Filter:Update()
         GalacticDisplay:update_components()
+        ObjectivesDisplay:update_components()
     end
 end
 

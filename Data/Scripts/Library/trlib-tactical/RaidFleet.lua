@@ -33,7 +33,7 @@ function MakeRaidFleet(chance)
         "Warlords",
         "Teradoc",
         "Hutts",
-        "Sarlacc",
+        "Hapes_Consortium",
         "Corporate_Sector",
         "Mandalorians"
     }

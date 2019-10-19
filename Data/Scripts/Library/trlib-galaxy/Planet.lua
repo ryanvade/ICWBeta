@@ -137,8 +137,61 @@ end
 function Planet:update_influence_information()
     -- Right now influence is all determined again from scratch each time the function is called. Not ideal.
 
-    self.ownerInfluence = 0
+    local oldInfluence = self.ownerInfluence
 
+    if self:get_owner() ~= Find_Player("Neutral") then
+        self.ownerInfluence = 2
+
+        if EvaluatePerception("Planet_Has_Capital_Building", self:get_owner(), self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence + 2
+        end
+
+        if EvaluatePerception("Planet_Has_Company", self:get_owner(), self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence + 1
+        end
+
+        if EvaluatePerception("Recent_Conflict_Space", self:get_owner(), self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence - 1
+        end
+
+        if EvaluatePerception("Recent_Conflict_Ground", self:get_owner(), self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence - 2
+        end
+
+        if EvaluatePerception("Needs_Initial_Groundbase", self:get_owner(), self.gameObject) == 0 then
+            self.ownerInfluence = self.ownerInfluence + 1
+        end
+
+        self.weeksControlled = EvaluatePerception("Weeks_Since_Control_Gained", self:get_owner(), self.gameObject)
+
+        if self.weeksControlled >= 15 and self.weeksControlled < 40 then
+            self.ownerInfluence = self.ownerInfluence + 1
+        elseif self.weeksControlled >= 40 and self.weeksControlled < 60 then
+            self.ownerInfluence = self.ownerInfluence + 2
+        elseif self.weeksControlled >= 60 and self.weeksControlled < 80 then
+            self.ownerInfluence = self.ownerInfluence + 3
+        elseif self.weeksControlled >= 80 and self.weeksControlled < 100 then
+            self.ownerInfluence = self.ownerInfluence + 4
+        elseif self.weeksControlled >= 100 then
+            self.ownerInfluence = self.ownerInfluence + 5
+        end
+
+        if self:get_owner() == Find_Player("Rebel") then
+            if GlobalValue.Get("ChiefOfState") == "DUMMY_CHIEFOFSTATE_LEIA" then
+                self.ownerInfluence = self.ownerInfluence + 1
+            end
+        end
+
+        if self.ownerInfluence > 10 then
+            self.ownerInfluence = 10
+        end
+
+        if self.ownerInfluence <= 0 then
+            self.ownerInfluence = 1
+        end
+
+        self:apply_loyalty_modifiers()
+    end
 end
 
 function Planet:apply_loyalty_modifiers()
@@ -164,7 +217,7 @@ function Planet:apply_loyalty_modifiers()
         table.insert(dummylist, GlobalValue.Get("ChiefOfState"))
     end
 
-    --self.__current_influence_dummies = SpawnList(dummylist, self.gameObject, self:get_owner(), false, false)
+    self.__current_influence_dummies = SpawnList(dummylist, self.gameObject, self:get_owner(), false, false)
 end
 
 ---Despawns all influence dummies currently applied to the planet
