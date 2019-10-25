@@ -204,7 +204,7 @@
 		
 		<Abilities SubObjectList="Yes">
 
-			<!-- He may not have teh force, but he was pretty damn fast. Higher than regular jedi, lower than major -->
+			<!-- He may not have the force, but he was pretty damn fast. Higher than regular jedi, lower than major -->
 			<Redirect_Blaster_Ability Name="Grievous_Redirect_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
 				<!-- Redirection chance is rolled first. If failed, we roll block chance. If failed, we take the damage. -->
@@ -218,8 +218,7 @@
 				<Applicable_Unit_Types>Silri, Luke_Skywalker_Jedi, Urai_Fen, Obi_Wan_Kenobi, Mandalorian_Indigenous, Mustafarian_Indigenous, Noghri_Indigenous, Sullustan_Civilian, Hutt_Civilian, Twilek_Female, Sand_Person_Sniper_A, Bothan_Civilian, Wookie_Warrior, Mon_Calamari_Civilian, Desert_Civilian_A, Swamp_Civilian_A, Urban_Civilian_A, Snow_Civilian_A, Pirate_Soldier, Rebel_Trooper, Rebel_Pilot, Rebel_Infiltrator, Scout_Trooper_No_Bike, Stormtrooper, Underworld_Disruptor_Merc, Boba_Fett, Mara_Jade, Kyle_Katarn, Han_Solo, Chewbacca, Underworld_Saboteur, IG-88, Dark_Trooper_PhaseII, Dark_Trooper_PhaseIII</Applicable_Unit_Types>
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
-
-			
+						
 			<Combat_Bonus_Ability Name="Grievous_Space_Combat_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
@@ -1298,6 +1297,34 @@
 				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
 				<Owner_Light_Effect_Pulse_Count />
 			</Absorb_Blaster_Ability>
+			
+			<Force_Healing_Ability Name="SevRance_Self_Heal">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>5.0</Heal_Range>
+				<Heal_Amount> 0.0 </Heal_Amount>
+				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types>SevRance</Applicable_Unit_Types>
+				<Excluded_Unit_Types />
+				
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
 
 			<Force_Whirlwind_Ability Name="SevRance_Force_Whirlwind">
 				<!-- <Activation_Style>Special_Attack</Activation_Style> -->
@@ -2289,6 +2316,34 @@
 				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
 				<Owner_Light_Effect_Pulse_Count />
 			</Absorb_Blaster_Ability>
+			
+			<Force_Healing_Ability Name="Ventress_Self_Heal">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>5.0</Heal_Range>
+				<Heal_Amount> 0.0 </Heal_Amount>
+				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types>Ventress</Applicable_Unit_Types>
+				<Excluded_Unit_Types />
+				
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
 
 			<Force_Whirlwind_Ability Name="Ventress_Force_Whirlwind">
 				<!-- <Activation_Style>Special_Attack</Activation_Style> -->
@@ -2785,7 +2840,7 @@
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
 			
-			<Force_Healing_Ability Name="Dooku_Bulq_Self_Heal">
+			<Force_Healing_Ability Name="Dooku_Self_Heal">
 			
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Heal_Range>5.0</Heal_Range>

@@ -392,7 +392,8 @@ GameObjectLibrary = {
                 ["TIE_FIGHTER_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=0,
-                        Initial=2
+                        Initial=2,
+						TechLevel=LessOrEqualTo(3)
                     },
                     ["PENTASTAR"] = {
                         Reserve=0,
@@ -417,6 +418,13 @@ GameObjectLibrary = {
                     ["WARLORDS"] = {
                         Reserve=0,
                         Initial=2
+                    }
+                },
+				["TIE_INTERCEPTOR_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=1,
+                        Initial=1,
+						TechLevel=GreaterThan(3)
                     }
                 },
                 ["SHIELDED_TIE_SQUADRON"]={
@@ -789,7 +797,8 @@ GameObjectLibrary = {
                 ["TIE_INTERCEPTOR_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=1,
-                        Initial=1
+                        Initial=1,
+						TechLevel=LessOrEqualTo(3)
                     },
 					["PIRATES"] = {
                         Reserve=1,
@@ -810,6 +819,13 @@ GameObjectLibrary = {
 					["WARLORDS"] = {
                         Reserve=1,
                         Initial=1
+                    }
+                },
+				["SHIELDED_INTERCEPTOR_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=1,
+                        Initial=1,
+						TechLevel=GreaterThan(3)
                     }
                 },
 				["TIE_GT_SQUADRON"]={
@@ -1077,7 +1093,7 @@ GameObjectLibrary = {
                 },
                 ["A9_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=0,
+                        Reserve=1,
                         Initial=1,
                         TechLevel=EqualTo(4)
                     }
@@ -1087,13 +1103,6 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1,
                         TechLevel=EqualTo(5)
-                    }
-                },
-                ["HOWLRUNNER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(4)
                     }
                 },
                 ["TIE_INTERCEPTOR_SQUADRON"]={
@@ -1366,9 +1375,41 @@ GameObjectLibrary = {
             },
             Fighters={
                 ["TIE_FIGHTER_SQUADRON"]={
-                    ["DEFAULT"] = {
+					["EMPIRE"] = {
+                        Reserve=1,
+                        Initial=1,
+						TechLevel=LessOrEqualTo(3)
+                    },
+                    ["PENTASTAR"] = {
                         Reserve=1,
                         Initial=1
+                    },
+					["PIRATES"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["TERADOC"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+                    ["HUTTS"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+                    ["HOSTILE"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
+				["A9_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=1,
+                        Initial=1,
+                        TechLevel=GreaterThan(3)
                     }
                 },
                 ["TIE_BOMBER_SQUADRON"]={
@@ -2169,27 +2210,6 @@ GameObjectLibrary = {
                         TechLevel=EqualTo(3)
                     }
                 },
-                ["A9_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2,
-                        TechLevel=EqualTo(4)
-                    }
-                },
-                ["PREYBIRD_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(5)
-                    }
-                },
-                ["SHIELDED_INTERCEPTOR_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(5)
-                    }
-                },
                 ["REBEL_X-WING_SQUADRON"]={
                     ["REBEL"] = {
                         Reserve=0,
@@ -2218,6 +2238,11 @@ GameObjectLibrary = {
                     ["PIRATES"] = {
                         Reserve=1,
                         Initial=1
+                    },
+					["EMPIRE"] = {
+                        Reserve=0,
+                        Initial=2,
+                        TechLevel=GreaterThan(3)
                     }
                 }
             }
@@ -2321,7 +2346,8 @@ GameObjectLibrary = {
                 ["TIE_FIGHTER_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=2,
-                        Initial=2
+                        Initial=2,
+						TechLevel=LessOrEqualTo(3)
                     },
 					["PENTASTAR"] = {
                         Reserve=2,
@@ -2346,6 +2372,13 @@ GameObjectLibrary = {
 					["WARLORDS"] = {
                         Reserve=2,
                         Initial=2
+                    }
+                },
+				["TIE_INTERCEPTOR_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=2,
+                        Initial=2,
+						TechLevel=GreaterThan(3)
                     }
                 },
 				["REBEL_X-WING_SQUADRON"]={
@@ -2844,27 +2877,6 @@ GameObjectLibrary = {
                         TechLevel=EqualTo(3)
                     }
                 },
-                ["A9_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2,
-                        TechLevel=EqualTo(4)
-                    }
-                },
-                ["PREYBIRD_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(5)
-                    }
-                },
-                ["SHIELDED_INTERCEPTOR_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(5)
-                    }
-                },
                 ["REBEL_X-WING_SQUADRON"]={
                     ["REBEL"] = {
                         Reserve=0,
@@ -2893,6 +2905,11 @@ GameObjectLibrary = {
                     ["PIRATES"] = {
                         Reserve=1,
                         Initial=1
+                    },
+					["EMPIRE"] = {
+                        Reserve=0,
+                        Initial=2,
+                        TechLevel=GreaterThan(3)
                     }
                 }
             }
@@ -3231,21 +3248,29 @@ GameObjectLibrary = {
             },
             Fighters={
                 ["TIE_INTERCEPTOR_SQUADRON"]={
+                    ["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=2
+                    },
                     ["TERADOC"] = {
-                        Reserve=1,
-                        Initial=1
+                        Reserve=0,
+                        Initial=2
+                    },
+                    ["HUTTS"] = {
+                        Reserve=0,
+                        Initial=2
                     },
                     ["HOSTILE"] = {
-                        Reserve=1,
-                        Initial=1
+                        Reserve=0,
+                        Initial=2
                     },
                     ["WARLORDS"] = {
-                        Reserve=1,
-                        Initial=1
+                        Reserve=0,
+                        Initial=2
                     },
                     ["EMPIRE"] = {
-                        Reserve=1,
-                        Initial=1,
+                        Reserve=0,
+                        Initial=2,
                         TechLevel=EqualTo(1)
                     }
                 },
@@ -3263,20 +3288,6 @@ GameObjectLibrary = {
                         TechLevel=EqualTo(3)
                     }
                 },
-                ["A9_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2,
-                        TechLevel=EqualTo(4)
-                    }
-                },
-                ["PREYBIRD_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=2,
-                        TechLevel=EqualTo(5)
-                    }
-                },
                 ["REBEL_X-WING_SQUADRON"]={
                     ["REBEL"] = {
                         Reserve=0,
@@ -3289,10 +3300,27 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
+                ["IRD_SQUADRON"]={
+                    ["CORPORATE_SECTOR"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
                 ["TRIFOIL_SQUADRON"]={
                     ["YEVETHA"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
+				["HOWLRUNNER_SQUADRON"]={
+                    ["PIRATES"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["EMPIRE"] = {
                         Reserve=0,
-                        Initial=2
+                        Initial=2,
+                        TechLevel=GreaterThan(3)
                     }
                 }
             }
@@ -3690,7 +3718,7 @@ GameObjectLibrary = {
                 },
                 ["A9_SQUADRON"]={
                     ["EMPIRE"] = {
-                        Reserve=0,
+                        Reserve=1,
                         Initial=1,
                         TechLevel=EqualTo(4)
                     }
@@ -3700,13 +3728,6 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1,
                         TechLevel=EqualTo(5)
-                    }
-                },
-                ["HOWLRUNNER_SQUADRON"]={
-                    ["EMPIRE"] = {
-                        Reserve=0,
-                        Initial=1,
-                        TechLevel=EqualTo(4)
                     }
                 },
                 ["TIE_INTERCEPTOR_SQUADRON"]={
@@ -4182,14 +4203,14 @@ GameObjectLibrary = {
                 HANGAR = true
             },
             Fighters={
-                ["SCARSISS_SQUADRON"]={
+                ["CLAWCRAFT_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=0,
                         Initial=1,
                         TechLevel=LessOrEqualTo(3)
                     }
                 },
-                ["CLAWCRAFT_SQUADRON"]={
+                ["SCARSISS_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=0,
                         Initial=1,
@@ -5394,7 +5415,8 @@ GameObjectLibrary = {
                 ["TIE_INTERCEPTOR_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=0,
-                        Initial=1
+                        Initial=1,
+						TechLevel=LessOrEqualTo(3)
                     },
 					["PENTASTAR"] = {
                         Reserve=0,
@@ -5449,6 +5471,13 @@ GameObjectLibrary = {
 					["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
+                    }
+                },
+				 ["SHIELDED_INTERCEPTOR_SQUADRON"]={
+                    ["EMPIRE"] = {
+                        Reserve=0,
+                        Initial=1,
+						TechLevel=GreaterThan(3)
                     }
                 },
 				["REBEL_X-WING_SQUADRON"]={

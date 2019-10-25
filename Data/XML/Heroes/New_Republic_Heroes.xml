@@ -2223,6 +2223,34 @@
 				<Owner_Light_Effect_Pulse_Count></Owner_Light_Effect_Pulse_Count>
 			</Absorb_Blaster_Ability>
 			
+			<Force_Healing_Ability Name="Kyle_Self_Heal">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>5.0</Heal_Range>
+				<Heal_Amount> 0.0 </Heal_Amount>
+				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types>Kyle_Katarn</Applicable_Unit_Types>
+				<Excluded_Unit_Types />
+				
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
 			<Earthquake_Attack_Ability Name="Kyle_Attack_Structures">
 				<Activation_Style>Special_Attack</Activation_Style>
 				<Terminate_Effect_On_Move_Command>Yes</Terminate_Effect_On_Move_Command>
@@ -2281,6 +2309,20 @@
 				<See_Minor_Stealth_Heroes>Yes</See_Minor_Stealth_Heroes>
 				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
 			</System_Spy_Ability>
+			
+			<Combat_Bonus_Ability Name="Kyle_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
 
 	</Abilities>
 		
@@ -2838,6 +2880,34 @@
 				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
 				<Owner_Light_Effect_Pulse_Count></Owner_Light_Effect_Pulse_Count>
 			</Absorb_Blaster_Ability>
+			
+			<Force_Healing_Ability Name="Mara_Self_Heal">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>5.0</Heal_Range>
+				<Heal_Amount> 0.0 </Heal_Amount>
+				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types>Mara_Jade_Lightsaber</Applicable_Unit_Types>
+				<Excluded_Unit_Types />
+				
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
 
 			<Force_Whirlwind_Ability Name="Mara_Force_Whirlwind">
 				<!-- <Activation_Style>Special_Attack</Activation_Style> -->
@@ -2932,6 +3002,20 @@
 				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
+			
+			<Combat_Bonus_Ability Name="Mara_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
 			
 		</Abilities>
 	</HeroUnit>
@@ -3805,6 +3889,34 @@
 				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
 				<Owner_Light_Effect_Pulse_Count></Owner_Light_Effect_Pulse_Count>
 			</Absorb_Blaster_Ability>
+			
+			<Force_Healing_Ability Name="Cilghal_Self_Heal">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>5.0</Heal_Range>
+				<Heal_Amount> 0.0 </Heal_Amount>
+				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types>Cilghal</Applicable_Unit_Types>
+				<Excluded_Unit_Types />
+				
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
 
 			<Force_Healing_Ability Name="Cilghal_Self_Heal">
 			
@@ -3891,6 +4003,20 @@
 				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
 				<Stacking_Category>0</Stacking_Category>
 			</Battlefield_Modifier_Ability>
+			
+			<Combat_Bonus_Ability Name="Cilghal_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
 			
 		</Abilities>
 
@@ -4497,7 +4623,7 @@
 	<HeroUnit Name="Mirax">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_MIRAX</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_MIRAX TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_PULSAR_SKATE </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMERCIAL TEXT_TOOLTIP_BIO TEXT_TOOLTIP_MIRAX TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_PULSAR_SKATE </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
 		
 		<Icon_Name>i_button_mirax.tga</Icon_Name>
@@ -4562,7 +4688,7 @@
 		<Company_Transport_Unit>Pulsar_Skate</Company_Transport_Unit>
 		<Company_Units>Mirax</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<Encyclopedia_Text>TEXT_TOOLTIP_BIO TEXT_TOOLTIP_MIRAX TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_PULSAR_SKATE</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMERCIAL TEXT_TOOLTIP_BIO TEXT_TOOLTIP_MIRAX TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_PULSAR_SKATE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
@@ -4580,7 +4706,7 @@
 		<Text_ID>TEXT_HERO_MIRAX</Text_ID>
 		<!--<Encyclopedia_Good_Against> TIE_Fighter TIE_Scout Skipray_Blastboat</Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Lancer_Frigate Carrack_Cruiser</Encyclopedia_Vulnerable_To>-->
-		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_MIRAX TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_PULSAR_SKATE </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMERCIAL TEXT_TOOLTIP_BIO TEXT_TOOLTIP_MIRAX TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_PULSAR_SKATE </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
 		<Icon_Name>i_button_mirax.tga</Icon_Name>
 		<Is_Named_Hero>No</Is_Named_Hero>

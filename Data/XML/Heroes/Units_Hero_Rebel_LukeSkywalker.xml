@@ -197,7 +197,21 @@
 				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
 				<Stacking_Category>0</Stacking_Category>
 			</Combat_Bonus_Ability>
-
+			
+			<Combat_Bonus_Ability Name="Luke_Ground_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types> </Excluded_Unit_Types>
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.05</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.05</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.05</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.1</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
 
 			<Earthquake_Attack_Ability Name="Luke_Attack_Structures">
 				<Activation_Style>Special_Attack</Activation_Style>
@@ -455,7 +469,7 @@
 
 		<Abilities SubObjectList="Yes">
 		
-			<Combat_Bonus_Ability Name="Luke_Self_Bonus">
+			<Combat_Bonus_Ability Name="Corran_Self_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category />
 				<Applicable_Unit_Categories />
@@ -565,6 +579,20 @@
 				<See_Minor_Stealth_Heroes>Yes</See_Minor_Stealth_Heroes>
 				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
 			</System_Spy_Ability>
+			
+			<Combat_Bonus_Ability Name="Corran_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
     
 		</Abilities>
 		

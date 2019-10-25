@@ -340,6 +340,34 @@
 				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
 				<Owner_Light_Effect_Pulse_Count />
 			</Absorb_Blaster_Ability>
+			
+			<Force_Healing_Ability Name="Lanu_Self_Heal">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>5.0</Heal_Range>
+				<Heal_Amount> 0.0 </Heal_Amount>
+				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types>Lanu</Applicable_Unit_Types>
+				<Excluded_Unit_Types />
+				
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
 
 			<Force_Whirlwind_Ability Name="Lanu_Force_Whirlwind">
 				<!-- <Activation_Style>Special_Attack</Activation_Style> -->
@@ -412,6 +440,20 @@
                 <Berserker_Duration_In_Secs>3.0</Berserker_Duration_In_Secs>
 				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
             </Berserker_Ability>
+			
+			<Combat_Bonus_Ability Name="Lanu_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
 		</Abilities>
 	</HeroUnit>
 
@@ -1351,6 +1393,34 @@
    				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
    				<Owner_Light_Effect_Pulse_Count />
    			</Force_Confuse_Ability>
+			
+			<Force_Healing_Ability Name="Gethzerion_Self_Heal">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>5.0</Heal_Range>
+				<Heal_Amount> 0.0 </Heal_Amount>
+				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types>Gethzerion</Applicable_Unit_Types>
+				<Excluded_Unit_Types />
+				
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
 
             <Galactic_Stealth_Ability Name="Gethzerion_Galactic_Stealth">
 				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
@@ -1390,6 +1460,20 @@
                 <Berserker_Duration_In_Secs>3.0</Berserker_Duration_In_Secs>
 				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
             </Berserker_Ability>
+			
+			<Combat_Bonus_Ability Name="Gethzerion_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.10</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
         </Abilities>
 
 	</HeroUnit>
@@ -2512,7 +2596,7 @@
 		<Text_ID>TEXT_HERO_SCARLET</Text_ID>
 		<Icon_Name>i_button_kath_scarlet.tga</Icon_Name>
 		
-		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_SCARLET TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_FIRESPRAY</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_UNINTERESTING TEXT_TOOLTIP_BIO TEXT_TOOLTIP_SCARLET TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_FIRESPRAY</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PIRATE </Encyclopedia_Unit_Class>
 		<Tech_Level>99</Tech_Level>
 		<Affiliation>Pirates</Affiliation>
@@ -2524,7 +2608,7 @@
 	
 	<UniqueUnit Name="Entel_Night_Wind">
 		<Text_ID>TEXT_HERO_ENTEL</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ENTEL TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_NIGHT_WIND </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BIO TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ENTEL TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_NIGHT_WIND </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PIRATE </Encyclopedia_Unit_Class>
 		<Icon_Name>i_button_entel.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>

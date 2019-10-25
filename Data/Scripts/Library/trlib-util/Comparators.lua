@@ -24,7 +24,7 @@ function EqualTo (num)
   return {
     number = num,
     evaluate = function(self, number)
-      return self.number == number
+      return number == self.number
     end
   }
 end
@@ -34,7 +34,7 @@ function GreaterThan (num)
   return {
     number = num,
     evaluate = function(self, number)
-      return self.number > number
+      return number > self.number
     end
   }
 end
@@ -44,7 +44,7 @@ function GreaterOrEqualTo (num)
   return {
     number = num,
     evaluate = function(self, number)
-      return self.number >= number
+      return number >= self.number
     end
   }
 end
@@ -54,7 +54,7 @@ function LessThan (num)
   return {
     number = num,
     evaluate = function(self, number)
-      return self.number < number
+      return number < self.number
     end
   }
 end
@@ -64,7 +64,7 @@ function LessOrEqualTo (num)
   return {
     number = num,
     evaluate = function(self, number)
-      return self.number <= number
+      return number <= self.number
     end
   }
 end
