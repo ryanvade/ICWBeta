@@ -335,6 +335,7 @@ GameObjectLibrary = {
 			}
 		},
         ["LANCER_FRIGATE"]={
+            Ship_Crew_Requirement = 1,
             Scripts={
                 "MultiLayer",
                 "SingleUnitRetreat"
@@ -811,7 +812,7 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
-				["TORRENT_SQUADRON"]={
+				["TIE_GT_SQUADRON"]={
                     ["PENTASTAR"] = {
                         Reserve=1,
                         Initial=1
@@ -853,7 +854,7 @@ GameObjectLibrary = {
                 HANGAR = true
             },
 			Fighters={
-                ["TIE_FIGHTER_SQUADRON"]={
+                ["TIE_AGGRESSOR_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=1,
                         Initial=1
@@ -1029,15 +1030,17 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1
                     },
-                    ["PIRATES"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
                     },
                     ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
+				["TIE_OPPRESSOR_SQUADRON"]={
+                    ["PIRATES"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -1099,10 +1102,6 @@ GameObjectLibrary = {
                         Initial=1,
                         TechLevel=IsOneOf({1,3})
                     },
-                    ["PENTASTAR"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
@@ -1112,7 +1111,13 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
-                ["TIE_RAPTOR_SQUADRON"]={
+                ["TIE_AGGRESSOR_SQUADRON"]={
+                    ["PENTASTAR"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
+				["TIE_RAPTOR_SQUADRON"]={
                     ["PIRATES"] = {
                         Reserve=1,
                         Initial=1
@@ -1195,10 +1200,6 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1
                     },
-					["PIRATES"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
 					["TERADOC"] = {
                         Reserve=1,
                         Initial=1
@@ -1212,6 +1213,12 @@ GameObjectLibrary = {
                         Initial=1
                     },
 					["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
+				["TIE_OPPRESSOR_SQUADRON"]={
+                    ["PIRATES"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -1769,7 +1776,7 @@ GameObjectLibrary = {
                         Initial=2
                     }
                 },
-                ["TORRENT_SQUADRON"]={
+                ["TIE_GT_SQUADRON"]={
                     ["PENTASTAR"] = {
                         Reserve=8,
                         Initial=2
@@ -3037,7 +3044,7 @@ GameObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters={
-                ["TORRENT_SQUADRON"]={
+                ["TIE_GT_SQUADRON"]={
                     ["PENTASTAR"] = {
                         Reserve=2,
                         Initial=1
@@ -3591,6 +3598,7 @@ GameObjectLibrary = {
             }
         },
         ["GENERIC_STAR_DESTROYER"]={
+            Ship_Crew_Requirement = 30,
             Scripts={
                 "MultiLayer",
                 "FighterSpawn"
@@ -3635,15 +3643,17 @@ GameObjectLibrary = {
                         Reserve=1,
                         Initial=1
                     },
-                    ["PIRATES"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
                     },
                     ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
+				["TIE_OPPRESSOR_SQUADRON"]={
+                    ["PIRATES"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -3705,15 +3715,17 @@ GameObjectLibrary = {
                         Initial=1,
                         TechLevel=IsOneOf({1,3})
                     },
-                    ["PENTASTAR"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
                     ["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
                     },
                     ["WARLORDS"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                },
+				["TIE_AGGRESSOR_SQUADRON"]={
+                    ["PENTASTAR"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -4447,7 +4459,7 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
-				["TORRENT_SQUADRON"]={
+				["TIE_GT_SQUADRON"]={
                     ["PENTASTAR"] = {
                         Reserve=0,
                         Initial=1
@@ -4539,12 +4551,6 @@ GameObjectLibrary = {
                 },
 				["BTLB_Y-WING_SQUADRON"]={
                     ["CORPORATE_SECTOR"] = {
-                        Reserve=0,
-                        Initial=1
-                    }
-                },
-				["TORRENT_SQUADRON"]={
-                    ["PENTASTAR"] = {
                         Reserve=0,
                         Initial=1
                     }

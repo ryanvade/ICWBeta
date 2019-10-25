@@ -59,7 +59,6 @@ function GalacticConquest:Update()
     self.Events.TacticalBattleStarting:Check()
     self.Events.TacticalBattleEnding:Check()
     self.Events.IncomingFleet:Check()
-    self.Governments:Update()
     local current = GetCurrentTime()
     if current - self.LastCycleTime >= 40 then
         for _, planet in pairs(self.Planets) do
@@ -67,6 +66,7 @@ function GalacticConquest:Update()
         end
         self.LastCycleTime = current
     end
+    self.Governments:Update()
 end
 
 function GalacticConquest:GetSelectedPlanet()

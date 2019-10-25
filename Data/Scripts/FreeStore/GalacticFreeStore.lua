@@ -41,14 +41,13 @@
 
 require("pgcommands")
 require("GalacticHeroFreeStore")
-require("TRCommands")
 
 function Base_Definitions()
     DebugMessage("%s -- In Base_Definitions", tostring(Script))
 
     -- how often does this script get serviced?
-    ServiceRate = 4
-    UnitServiceRate = 4
+    ServiceRate = 20
+    UnitServiceRate = 20
 
     Common_Base_Definitions()
 
@@ -106,11 +105,6 @@ function MoveUnit(object)
 end
 
 function On_Unit_Service(object)
-	
-	if not CanRunFreeStore then
-        return
-    end
-
     -- If this unit isn't in a safe spot move him regardless of the MovedUnitsThisService
     -- Also, Heroes need to be where they most want to be asap
     if (FreeStore.Is_Unit_Safe(object) == false) or (object.Get_Type().Is_Hero()) then
@@ -157,10 +151,6 @@ function On_Unit_Added(object)
         DebugMessage("%s -- Hero Object: %s added to freestore", tostring(Script), obj_type.Get_Name())
     end
 
-	if not CanRunFreeStore then
-        return
-    end
-
     MoveUnit(object)
 end
 
@@ -177,29 +167,6 @@ function FreeStoreService()
 
     if Evaluator then
         Evaluator:reset()
-    end
-
-    if not FactionTable then
-        ModContentLoader = require("trlib-std/ModContentLoader")
-        local constants = ModContentLoader.get("GameConstants")
-		if EvaluatePerception("Planet_Ownership", PlayerObject) ~= nil then
-			FactionTable = CreateFactionTable(constants.ALL_FACTIONS_NOT_NEUTRAL)
-		else
-			FactionTable = nil
-			return
-		end
-        FactionIndex = 0
-    end
-
-    FactionIndex = FactionIndex + 1
-    if FactionIndex > table.getn(FactionTable) then
-        FactionIndex = 1
-    end
-
-    CanRunFreeStore = false
-    if PlayerObject == FactionTable[FactionIndex] then
-        DebugMessage("%s's turn to run GalacticFreeStore", PlayerObject.Get_Faction_Name())
-        CanRunFreeStore = true
     end
 
     ---@type table<Planet, Planet>
@@ -249,12 +216,10 @@ function Find_Ground_Unit_Target(object)
         )
         return nil
     end
-	
-	if OriginTargetLocationCacheGround then
-		if OriginTargetLocationCacheGround[my_planet] then
-			return OriginTargetLocationCacheGround[my_planet]
-		end
-	end
+
+    if OriginTargetLocationCacheGround[my_planet] then
+        return OriginTargetLocationCacheGround[my_planet]
+    end
 
     if FreeStore.Is_Unit_Safe(object) == false then
         DebugMessage("%s -- Object: %s Planet: %s is not safe", tostring(Script), tostring(object), tostring(my_planet))
@@ -385,12 +350,10 @@ function Find_Space_Unit_Target(object)
         )
         return nil
     end
-	
-	if OriginTargetLocationCacheSpace then
-		if OriginTargetLocationCacheSpace[my_planet] then
-			return OriginTargetLocationCacheSpace[my_planet]
-		end
-	end
+
+    if OriginTargetLocationCacheSpace[my_planet] then
+        return OriginTargetLocationCacheSpace[my_planet]
+    end
 
     max_force_target = 8000
     force_target = Evaluator:evaluate("Friendly_Global_Space_Unit_Raw_Total", PlayerObject)

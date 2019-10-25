@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Rim World Conflict (Rebel)	******-->
+<!--******************************************************-->
+
+
+
+<Story>
+
+	<!-- **************************************************** -->
+	<!-- ******* LUA Tells the script which era started *****-->
+	<!-- **************************************************** -->
+	
+	<Event Name="GC_Start_Force_Level_Two">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_02</Event_Param2>
+	</Event>
+	
+	<Event Name="GC_Start_Force_Level_Three">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_03</Event_Param2>
+	</Event>	
+	
+	<Event Name="GC_Start_Force_Level_Four">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_04</Event_Param2>
+	</Event>
+	
+	<Event Name="GC_Start_Force_Level_Five">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_05</Event_Param2>
+	</Event>
+	
+		
+	<Event Name="Era_Three_Disable">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Era_Three</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+	</Event>
+		
+	<Event Name="Era_Four_Disable">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Era_Four</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+	</Event>
+	
+	
+	<!-- **************************************************** -->
+	<!-- ******* LUA Tells the script which era started *****-->
+	<!-- **************************************************** -->
+
+ <Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+ </Event>
+
+		
+	<Event Name="CIS_Enters_Tech_02">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>2</Event_Param1>
+	</Event>
+	
+	<Event Name="CIS_Enters_Tech_03">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+	</Event>
+	
+	<Event Name="CIS_Enters_Tech_04">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+	</Event>
+	
+	<Event Name="CIS_Enters_Tech_05">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>5</Event_Param1>
+	</Event>
+	
+	
+	<!-- Bulwark Research -->
+	<!-- Bulwark Research -->
+	<!-- Bulwark Research -->
+	
+	<Event Name="Bulwark_Research_Begin">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>800</Event_Param1>
+		<Prereq>CIS_Enters_Tech_04</Prereq>
+		<Branch>Era_Four</Branch>
+	</Event>
+
+	<Event Name="Unlock_Bulwark_Speech">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_RESEARCH_BULWARK</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9></Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Bulwark_Research_Begin</Prereq>
+		<Branch>Era_Four</Branch>
+	</Event>
+	
+	<Event Name="Bulwark_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Bulwark_Research</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Tag>Bulwark_Tag</Story_Tag>
+		<Prereq>Unlock_Victory_Speech</Prereq>
+		<Branch>Era_Four</Branch>
+	</Event>
+	
+	<Event Name="Bulwark_Dialog_Completed">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Bulwark_Tag</Reward_Param1>
+		<Prereq>Unlock_Bulwark</Prereq>
+		<Prereq>Unlock_Bulwark_Forced</Prereq>
+		<Branch>Era_Four</Branch>
+	</Event>
+	
+	<Event Name="Lock_Bulwark">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Bulwark_I</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Branch>Era_Four</Branch>
+	</Event>	
+	<Event Name="Lock_Bulwark_II">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Bulwark_II</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Branch>Era_Four</Branch>
+	</Event>
+
+ 	<Event Name="Unlock_Bulwark_Research">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Dummy_Research_Bulwark</Reward_Param1>
+		<Prereq>Unlock_Bulwark_Speech</Prereq>
+		<Branch>Era_Four</Branch>
+	</Event>
+	
+
+	<Event Name="Unlock_Bulwark">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Dummy_Research_Bulwark</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>Rebel</Event_Param3>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Bulwark_I</Reward_Param1>
+	</Event>	
+
+	<Event Name="Unlock_Bulwark_II">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Dummy_Research_Bulwark</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>Rebel</Event_Param3>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Bulwark_II</Reward_Param1>
+	</Event>
+			
+	<Event Name="Research_Bulwark_Remove">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DESTROY_OBJECT</Reward_Type>
+		<Reward_Param1>Dummy_Research_Bulwark</Reward_Param1>
+		<Prereq>Unlock_Bulwark</Prereq>
+	</Event>
+	
+	<Event Name="Unlock_Bulwark_Forced">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Bulwark_I</Reward_Param1>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+	</Event>
+
+	<Event Name="Unlock_Bulwark_Forced">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Bulwark_II</Reward_Param1>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+	</Event>
+
+
+	
+</Story>

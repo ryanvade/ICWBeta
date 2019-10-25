@@ -62,7 +62,6 @@ function GovernmentRepublic:ApprovalRating()
     local planetCount = table.getn(influenceOneList) + table.getn(influenceTwoList) + table.getn(influenceThreeList) + table.getn(influenceFourList) + table.getn(influenceFiveList) + table.getn(influenceSixList) + table.getn(influenceSevenList) + table.getn(influenceEightList) + table.getn(influenceNineList) + table.getn(influenceTenList)
     local approvalNumberCount = (10 * table.getn(influenceOneList)) + (20 * table.getn(influenceTwoList)) + (30 * table.getn(influenceThreeList)) + (40 * table.getn(influenceFourList)) + (50 * table.getn(influenceFiveList)) + (60 * table.getn(influenceSixList)) + (70 * table.getn(influenceSevenList)) + (80 * table.getn(influenceEightList)) + (90 * table.getn(influenceNineList)) + (100 * table.getn(influenceTenList))
 
-
     local approvalRating = (approvalNumberCount / planetCount)
     GlobalValue.Set("RepublicApprovalRating", approvalRating)
 

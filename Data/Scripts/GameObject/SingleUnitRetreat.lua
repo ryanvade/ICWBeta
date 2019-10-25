@@ -159,9 +159,9 @@ end
 
 function SingleUnitRetreat:JumpToHyperSpace(globals)
     self:MakeFightersSelectable(globals)
-    local transaction = CreateSpawnTransaction(Object.Get_Type().Get_Name(), Object.Get_Owner().Get_Faction_Name())
-    TM:RegisterGameModeTransaction(transaction)
-    Object.Hyperspace_Away()
+    -- local transaction = CreateSpawnTransaction(Object.Get_Type().Get_Name(), Object.Get_Owner().Get_Faction_Name())
+    -- TM:RegisterGameModeTransaction(transaction)
+    Object.Hyperspace_Away(false)
     self.isActive = false
     jumpInProgress = false
     retreatTimerDone = false

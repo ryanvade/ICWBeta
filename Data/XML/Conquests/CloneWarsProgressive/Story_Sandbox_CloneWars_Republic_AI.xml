@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+
+
+
+<!--****************************************************-->
+<!--***** CAMPAIGN: Fractured Empire (Empire Version) *****-->
+<!--****************************************************-->
+
+
+
+<Story>
+
+	<!-- **************************************************** -->
+	<!-- ******* LUA Tells the script which era started *****-->
+	<!-- **************************************************** -->
+	
+	<Event Name="GC_Start_Force_Level_Two">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_02</Event_Param2>
+	</Event>
+	
+	<Event Name="GC_Start_Force_Level_Three">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_03</Event_Param2>
+	</Event>	
+	
+	<Event Name="GC_Start_Force_Level_Four">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_04</Event_Param2>
+	</Event>
+	
+	<Event Name="GC_Start_Force_Level_Five">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_05</Event_Param2>
+	</Event>
+	
+	<Event Name="Era_Three_Disable">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Era_Three</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+	</Event>
+		
+	<Event Name="Era_Four_Disable">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Era_Four</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+	</Event>
+	
+	<!-- **************************************************** -->
+	<!-- ******* LUA Tells the script which era started *****-->
+	<!-- **************************************************** -->
+
+ <Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+
+ </Event>
+ 	
+	<!-- Venator Research -->
+	<!-- Venator Research -->
+	<!-- Venator Research -->
+	
+	<Event Name="Republic_Enters_Tech_02">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>2</Event_Param1>
+	</Event>
+	
+	<Event Name="Republic_Enters_Tech_03">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+	</Event>
+	
+
+	
+	<Event Name="Lock_Venator">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Generic_Venator</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Branch>Era_Three</Branch>
+	</Event>
+
+
+	<Event Name="Unlock_Venator">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>400</Event_Param1>
+		<Prereq>Republic_Enters_Tech_03</Prereq>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Generic_Venator</Reward_Param1>
+		<Branch>Era_Three</Branch>
+	</Event>
+			
+		
+	
+	<Event Name="Republic_Enters_Tech_04">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+	</Event>
+
+		
+	<!-- Clone Trooper Research -->
+	<!-- Clone Trooper Research -->
+	<!-- Clone Trooper Research -->
+	
+	
+	<Event Name="Clone_Trooper_II_Research_Begin">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>40</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Clonetrooper_Phase_Two_Team</Reward_Param1>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+		<Prereq>Republic_Enters_Tech_04</Prereq>
+	</Event>
+
+	<Event Name="Lock_Phase_One">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Clonetrooper_Phase_One_Team</Reward_Param1>
+		<Prereq>Clone_Trooper_II_Research_Begin</Prereq>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+	</Event>
+
+	
+	<!-- Victory Research -->
+	<!-- Victory Research -->
+	<!-- Victory Research -->
+	
+	<Event Name="Lock_Victory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Generic_Victory_Destroyer</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+		<Branch>Era_Three</Branch>
+		<Branch>Era_Four</Branch>
+	</Event>
+
+	
+	<Event Name="Victory_Research_Begin">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>800</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Generic_Victory_Destroyer</Reward_Param1>
+		<Prereq>Republic_Enters_Tech_04</Prereq>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
+	</Event>
+
+
+	<Event Name="Lock_Invincible">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Invincible_Cruiser</Reward_Param1>
+		<Prereq>Republic_Enters_Tech_04</Prereq>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+	</Event>
+	
+	<Event Name="Republic_Enters_Tech_05">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>5</Event_Param1>
+	</Event>
+	
+	<Event Name="Unlock_Victory_Forced">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Generic_Victory_Destroyer</Reward_Param1>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+	</Event>
+
+
+
+</Story>
