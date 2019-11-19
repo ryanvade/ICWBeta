@@ -69,6 +69,7 @@ function Era_Setup(message)
         p_maldrood = Find_Player("Teradoc")
         p_harrsk = Find_Player("Empire")
         p_eriadu = Find_Player("Hutts")
+		p_yzu = Find_Player("Warlords")
         techLevel = p_maldrood.Get_Tech_Level()
         if techLevel < 3 then
             Story_Event("START_ERA_2")
@@ -114,6 +115,10 @@ function Era_Setup(message)
             start_planet = FindPlanet("Tsoss")
             spawn_list_tsoss = {"Generic_Victory_Destroyer_Two", "Vigil", "Vindicator_Cruiser"}
             SpawnList(spawn_list_tsoss, start_planet, p_eriadu, true, false)
+			
+			start_planet = FindPlanet("Prakith")
+            spawn_list_prakith = {"Raider_Pentastar", "Raider_Pentastar"}
+            SpawnList(spawn_list_prakith, start_planet, p_yzu, true, false)
         else
             Story_Event("START_ERA_4")
 
@@ -147,6 +152,10 @@ function Era_Setup(message)
                 "Desanne_Redemption"
             } --The battlecruiser is probably gone by Darksaber
             SpawnList(spawn_list_kalist, start_planet, p_harrsk, true, false)
+			
+			start_planet = FindPlanet("Prakith")
+            spawn_list_prakith = {"Adz", "Adz"}
+            SpawnList(spawn_list_prakith, start_planet, p_yzu, true, false)
         end
     end
 end

@@ -50,7 +50,7 @@ function Definitions()
 	
 	PerFailureContrastAdjust = 0.05
 		
-	Category = "Conquer_Pirate | Warlord_Conquer_Pirate | EotH_Retake_Planet | NR_Vassal_Conquer_Pirate"
+	Category = "Conquer_Pirate | Warlord_Conquer_Pirate | EotH_Retake_Planet | NR_Vassal_Conquer_Pirate | CIS_Federation_Conquer_Pirate"
 	TaskForce = {
 	{
 		"MainForce"						
@@ -85,6 +85,7 @@ function MainForce_Thread()
 	end
 	if Invade(MainForce) == false then
 		MainForce.Set_Plan_Result(false)			
+		MainForce.Move_To(FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, object))
 		ScriptExit()
 	end
 	

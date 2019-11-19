@@ -1001,6 +1001,14 @@ GameObjectLibrary = {
             Fighters={
             }
         },
+		["ADZ"]={
+            Scripts={
+                "MultiLayer",
+                "SingleUnitRetreat"
+            },
+            Fighters={
+            }
+        },
         ["GENERIC_STAR_DESTROYER_TWO"]={
             Scripts={
                 "MultiLayer",
@@ -1138,7 +1146,7 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
-                ["ARC_170_SQUADRON"]={
+                ["STARWING_SQUADRON"]={
                     ["TERADOC"] = {
                         Reserve=0,
                         Initial=1
@@ -1805,7 +1813,7 @@ GameObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters={
-                ["TIE_AVENGER_SQUADRON"]={
+                ["TIE_SENTINEL_SQUADRON"]={
                     ["TERADOC"] = {
                         Reserve=8,
                         Initial=2
@@ -2942,7 +2950,7 @@ GameObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters={
-                ["ARC_170_SQUADRON"]={
+                ["TIE_SENTINEL_SQUADRON"]={
                     ["EMPIRE"] = {
                         Reserve=3,
                         Initial=2
@@ -3763,7 +3771,7 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
-                ["ARC_170_SQUADRON"]={
+                ["STARWING_SQUADRON"]={
                     ["TERADOC"] = {
                         Reserve=0,
                         Initial=1

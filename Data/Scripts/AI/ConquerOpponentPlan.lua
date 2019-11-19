@@ -52,7 +52,7 @@ function Definitions()
     MinContrastScale = 1.2
     MaxContrastScale = 2.0
 
-    Category = "Conquer_Opponent | Warlord_Conquer_Opponent | NR_Vassal_Conquer_Opponent"
+    Category = "Conquer_Opponent | Warlord_Conquer_Opponent | NR_Vassal_Conquer_Opponent | CIS_Federation_Conquer_Opponent"
     TaskForce = {
         -- First Task Force
         {
@@ -126,7 +126,7 @@ function GroundForce_Thread()
     GroundForce.Set_Plan_Result(true)
 
     if GroundForce.Are_All_Units_On_Free_Store() == true then
-        AssembleForce(GroundForce)
+		AssembleForce(GroundForce)
     else
         BlockOnCommand(GroundForce.Produce_Force())
         return
@@ -155,6 +155,7 @@ function GroundForce_Thread()
     WasConflict = true
     if Invade(GroundForce) == false then
         GroundForce.Set_Plan_Result(false)
+		GroundForce.Move_To(FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, object))
         Exit_Plan_With_Possible_Sleep()
     end
 
@@ -176,7 +177,11 @@ function Exit_Plan_With_Possible_Sleep()
         difficulty = PlayerObject.Get_Difficulty()
     end
     sleep_duration = DifficultyBasedMinPause(difficulty)
-
+	
+	if SpaceForce and not LandSecured then
+		SpaceForce.Move_To(FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, object))
+	end
+	
     if SpaceForce then
         SpaceForce.Release_Forces(1.0)
     end

@@ -40,7 +40,6 @@
 --/////////////////////////////////////////////////////////////////////////////////////////////////
 
 require("pgevents")
-require("TRCommands")
 
 --
 -- Space Mode Test Script
@@ -75,7 +74,7 @@ function MainForce_Thread()
 	MainForce.Collect_All_Free_Units("Fighter | Corvette | Frigate")
 	SetClassPriorities(MainForce, "Attack_Move")
 
-	UseTurboIfAllowed(MainForce)
+	--UseTurboIfAllowed(MainForce)
 	MainForce.Activate_Ability("SPOILER_LOCK", true)
 	Try_Ability(MainForce, "STEALTH")
 	BlockOnCommand(MainForce.Attack_Move(AITarget))

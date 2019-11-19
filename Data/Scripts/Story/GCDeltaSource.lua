@@ -39,18 +39,30 @@ end
 
 function Place_Informant(message)
   if message == OnEnter then
-
-    p_empire = Find_Player("Empire")
-
-    start_planet = FindPlanet("Coruscant")
-	
-    spawn_list_Delta_Source = { "Delta_Source"  }
-    DeltaSourceSpawn = SpawnList(spawn_list_Delta_Source, start_planet, p_empire,true,false)
-
-	ScriptExit()
+	DeltaLoop()
   elseif message == OnUpdate then
 
   end
+end
+
+function DeltaLoop()
+	checkObject = Find_First_Object("Chimera")
+		
+		p_empire = Find_Player("Empire")
+
+		start_planet = FindPlanet("Coruscant")
+		
+		if TestValid(checkObject) then	--Require Thrawn to be alive since he's the only one who had the codes. Plus this will exit the loop after era 2
+			if start_planet.Get_Owner() ~= p_empire then --This abilitiy can't fire on your own planets, instead giving free probe droid spawns
+				local probe_type = Find_Object_Type("Probe_Droid_Team")
+				local probe_list = Spawn_Unit(probe_type, start_planet, p_empire)
+				local probe_fleet = Assemble_Fleet(probe_list)
+				probe_fleet.Activate_Ability("Probe_Droid_Team")
+			end
+		else
+			ScriptExit()
+		end
+	Register_Timer(DeltaLoop, 30)
 end
 
 function Find_Faction(message)

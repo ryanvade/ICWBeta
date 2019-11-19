@@ -52,7 +52,43 @@ function ChangePlanetOwnerAndRetreat(planets, newOwner)
         planet.Change_Owner(newOwner)
     end
 
-    spawn_units_on_target_location(unitTypes, unitOwners)
+    spawn_units_on_friendly_location(unitTypes, unitOwners)
+    set_hero_death_enabled(true)
+end
+
+---Changes the owner of a given list of planets or a single planet. All units from these planets are replaced with the same units set to the new owner
+---@param planets PlanetObject|PlanetObject[]
+---@param newOwner FactionObject
+function ChangePlanetOwnerAndReplace(planets, newOwner)
+    DebugMessage("ChangePlanetOwnerAndReplace STARTED")
+    if type(planets) ~= "table" then
+        planets = {planets}
+    end
+
+    ---@type GameObject[]
+    local unitTypes = {}
+
+    ---@type FactionObject[]
+    local unitOwners = {}
+    set_hero_death_enabled(false)
+
+    ---@type table<FactionObject, GameObject[]>
+    local allUnitsPerOwner = {}
+
+    for i, planet in pairs(planets) do
+        local owner = planet.Get_Owner()
+        if not allUnitsPerOwner[owner] then
+            allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
+        end
+
+        local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
+        insert_into_spawn_tables(unitTypes, unitOwners, allUnitsOfCurrentOwner, planet)
+
+        planet.Change_Owner(newOwner)
+		
+		spawn_units_on_target_location(unitTypes, planet, newOwner)
+    end
+
     set_hero_death_enabled(true)
 end
 
@@ -122,7 +158,7 @@ end
 ---Spawns units on a friendly planet if possible
 ---@param unitTypes GameObjectType[]
 ---@param unitOwners FactionObject[]
-function spawn_units_on_target_location(unitTypes, unitOwners)
+function spawn_units_on_friendly_location(unitTypes, unitOwners)
     local owner_spawn_target = {}
     local human_location
     for unit_index, unit_type in ipairs(unitTypes) do
@@ -143,6 +179,20 @@ function spawn_units_on_target_location(unitTypes, unitOwners)
 
     if human_location then
         StoryUtil.ShowScreenText("TEXT_SINGLE_UNIT_RETREAT_PLANET", 5, human_location, {r = 255, g = 255, b = 255})
+    end
+end
+
+---Spawns units on a target planet
+---@param unitTypes GameObjectType[]
+---@param planet PlanetObject
+---@param owner FactionObject[]
+function spawn_units_on_target_location(unitTypes, planet, owner)
+    for _, unit_type in ipairs(unitTypes) do
+
+        if TestValid(planet) then
+            DebugMessage("Spawning unit type %s on %s", unit_type.Get_Name(), planet.Get_Type().Get_Name())
+            Spawn_Unit(unit_type, planet, owner)
+        end
     end
 end
 

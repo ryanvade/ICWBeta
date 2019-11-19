@@ -69,6 +69,15 @@ function Story_Mode_Service()
                 if numPlanets > 0 then
                     government_display_event.Add_Dialog_Text(CONSTANTS.ALL_FACTION_TEXTS[faction.Get_Faction_Name()])
                     government_display_event.Add_Dialog_Text("STAT_PLANET_COUNT", numPlanets)
+                    if faction == Find_Player("Teradoc") then
+                        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_CIS_APPROVAL", GlobalValue.Get("CommerceApprovalRating"))
+                    elseif faction == Find_Player("Pirates") then
+                        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_CIS_APPROVAL", GlobalValue.Get("TradeFedApprovalRating"))
+                    elseif faction == Find_Player("Hutts") then
+                        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_CIS_APPROVAL", GlobalValue.Get("TechnoApprovalRating"))
+                    elseif faction == Find_Player("Pentastar") then
+                        government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_CIS_APPROVAL", GlobalValue.Get("IGBCApprovalRating"))
+                    end
                 end
             end
           

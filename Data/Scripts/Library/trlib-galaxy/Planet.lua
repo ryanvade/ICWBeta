@@ -140,7 +140,7 @@ function Planet:update_influence_information()
     local oldInfluence = self.ownerInfluence
 
     if self:get_owner() ~= Find_Player("Neutral") then
-        self.ownerInfluence = 2
+        self.ownerInfluence = 3
 
         if EvaluatePerception("Planet_Has_Capital_Building", self:get_owner(), self.gameObject) == 1 then
             self.ownerInfluence = self.ownerInfluence + 2
@@ -158,28 +158,48 @@ function Planet:update_influence_information()
             self.ownerInfluence = self.ownerInfluence - 2
         end
 
-        if EvaluatePerception("Needs_Initial_Groundbase", self:get_owner(), self.gameObject) == 0 then
+        if EvaluatePerception("Planet_Has_Local_Government_Building", self:get_owner(), self.gameObject) == 1 then
             self.ownerInfluence = self.ownerInfluence + 1
         end
 
-        self.weeksControlled = EvaluatePerception("Weeks_Since_Control_Gained", self:get_owner(), self.gameObject)
-
-        if self.weeksControlled >= 15 and self.weeksControlled < 40 then
+        if EvaluatePerception("Planet_Has_Trade_Station", self:get_owner(), self.gameObject) == 1 then
             self.ownerInfluence = self.ownerInfluence + 1
-        elseif self.weeksControlled >= 40 and self.weeksControlled < 60 then
-            self.ownerInfluence = self.ownerInfluence + 2
-        elseif self.weeksControlled >= 60 and self.weeksControlled < 80 then
-            self.ownerInfluence = self.ownerInfluence + 3
-        elseif self.weeksControlled >= 80 and self.weeksControlled < 100 then
-            self.ownerInfluence = self.ownerInfluence + 4
-        elseif self.weeksControlled >= 100 then
-            self.ownerInfluence = self.ownerInfluence + 5
+        end
+
+        if EvaluatePerception("Planet_Has_Oto", self:get_owner(), self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence + 1
+        end
+
+        if EvaluatePerception("Planet_Has_Empress", self:get_owner(), self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence + 1
+        end
+
+        if EvaluatePerception("Planet_Has_Validusia", self:get_owner(), self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence + 1
         end
 
         if self:get_owner() == Find_Player("Rebel") then
             if GlobalValue.Get("ChiefOfState") == "DUMMY_CHIEFOFSTATE_LEIA" then
                 self.ownerInfluence = self.ownerInfluence + 1
+            elseif GlobalValue.Get("ChiefOfState") == "DUMMY_CHIEFOFSTATE_MOTHMA" then
+                if self:get_name() == "CHANDRILA" then
+                    self.ownerInfluence = self.ownerInfluence + 10
+                end
+            elseif GlobalValue.Get("ChiefOfState") == "DUMMY_CHIEFOFSTATE_FEYLYA" then
+                if self:get_name() == "BOTHAWUI" then
+                    self.ownerInfluence = self.ownerInfluence + 10
+                end
+            elseif GlobalValue.Get("ChiefOfState") == "DUMMY_CHIEFOFSTATE_GAVRISOM" then
+                if self:get_name() == "HAPES" then
+                    self.ownerInfluence = self.ownerInfluence + 5
+                end
             end
+        end
+
+        if self:get_owner() ~= Find_Player("Rebel") then
+             if self:get_name() == "KASHYYYK" then
+                self.ownerInfluence = self.ownerInfluence -2
+             end
         end
 
         if self.ownerInfluence > 10 then

@@ -216,10 +216,12 @@ function Find_Ground_Unit_Target(object)
         )
         return nil
     end
-
-    if OriginTargetLocationCacheGround[my_planet] then
-        return OriginTargetLocationCacheGround[my_planet]
-    end
+	
+	if OriginTargetLocationCacheGround then
+		if OriginTargetLocationCacheGround[my_planet] then
+			return OriginTargetLocationCacheGround[my_planet]
+		end
+	end
 
     if FreeStore.Is_Unit_Safe(object) == false then
         DebugMessage("%s -- Object: %s Planet: %s is not safe", tostring(Script), tostring(object), tostring(my_planet))
@@ -350,10 +352,12 @@ function Find_Space_Unit_Target(object)
         )
         return nil
     end
-
-    if OriginTargetLocationCacheSpace[my_planet] then
-        return OriginTargetLocationCacheSpace[my_planet]
-    end
+	
+	if OriginTargetLocationCacheSpace then
+		if OriginTargetLocationCacheSpace[my_planet] then
+			return OriginTargetLocationCacheSpace[my_planet]
+		end
+	end
 
     max_force_target = 8000
     force_target = Evaluator:evaluate("Friendly_Global_Space_Unit_Raw_Total", PlayerObject)

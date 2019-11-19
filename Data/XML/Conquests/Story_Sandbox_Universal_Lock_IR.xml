@@ -28,6 +28,13 @@
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 	
+	<Event Name="E_Lock_Missile_Boat_Open">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Missile_Boat_Squadron_Buildable</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
 	<Event Name="E_Lock_Crimson_Victory_Open">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
@@ -88,6 +95,13 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Mekuun_HQ</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="E_Lock_Cygnus_Open">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Cygnus_HQ</Reward_Param1>
 		<Prereq>Universal_Story_Start</Prereq>
 	</Event>
 	
@@ -197,11 +211,27 @@
 		<Prereq>Empire_Enters_Tech_02</Prereq>
 	</Event>
 	
-	<Event Name="Unlock_Mekuun_Thrawn"> <!-- @-M become Swift Assault this era -->
+	<Event Name="Unlock_Mekuun_Thrawn"> <!-- 2-M becomes Swift Assault this era -->
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>4</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Mekuun_HQ</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_02</Prereq>
+	</Event>
+	
+	<Event Name="Unlock_Missile_Boat_Thrawn">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Missile_Boat_Squadron_Buildable</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_02</Prereq>
+	</Event>
+	
+	<Event Name="Unlock_Cygnus_Thrawn">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Cygnus_HQ</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_02</Prereq>
 	</Event>
 
@@ -228,6 +258,14 @@
 		<Event_Param1>2</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Scimmy_Squadron_Buildable</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_03</Prereq>
+	</Event>
+	
+	<Event Name="E_Lock_Missile_Boat_Palpatine">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Missile_Boat_Squadron_Buildable</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 	
@@ -353,9 +391,18 @@
 	</Event>
 	
 	<Event Name="E_Lock_Mekuun_Palpatine">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Mekuun_HQ</Reward_Param1>
+		<Prereq>Empire_Enters_Tech_03</Prereq>
+	</Event>
+	
+	<Event Name="E_Lock_Cygnus_Palpatine">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Cygnus_HQ</Reward_Param1>
 		<Prereq>Empire_Enters_Tech_03</Prereq>
 	</Event>
 	

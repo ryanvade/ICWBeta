@@ -56,7 +56,7 @@ GameConstants = {
         "HUTTS",
         "WARLORDS",
         "CORPORATE_SECTOR",
-        "HUTT_CARTELS",
+        --"HUTT_CARTELS",
         "HAPES_CONSORTIUM",
 		"MANDALORIANS"
     },

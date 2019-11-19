@@ -50,7 +50,7 @@ function Definitions()
 	
 	PerFailureContrastAdjust = 0.0
 		
-	Category = "Defend_Planet"
+	Category = "Defend_Planet | CIS_Federation_Defend_Planet"
 	TaskForce = {
 	{
 		"MainForce"

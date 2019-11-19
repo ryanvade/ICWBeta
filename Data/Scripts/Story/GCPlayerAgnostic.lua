@@ -63,14 +63,14 @@ function Begin_GC(message)
         ResourceManagerInstance = DummyBasedResourceManager(GC.Planets, GC)
 
         GalacticDisplay = DisplayComponentContainer()
-        -- GalacticDisplay:add_display_component(ShipCrewDisplayComponent(ResourceManagerInstance))
+        GalacticDisplay:add_display_component(ShipCrewDisplayComponent(ResourceManagerInstance))
         GalacticDisplay:add_display_component(StructureDisplay)
         GalacticDisplay:add_display_component(GalacticNewsFeed)
 
-        ObjectivesDisplay =
-            ObjectivesDisplayComponentContainer(GC.Events.TacticalBattleStarting, GC.Events.TacticalBattleEnding)
+        -- ObjectivesDisplay =
+            -- ObjectivesDisplayComponentContainer(GC.Events.TacticalBattleStarting, GC.Events.TacticalBattleEnding)
         
-        ObjectivesDisplay:add_display_component(ShipCrewDisplayComponent(ResourceManagerInstance))
+        -- ObjectivesDisplay:add_display_component(ShipCrewDisplayComponent(ResourceManagerInstance))
 
         Filter = CategoryFilter(plot, GC)
 
@@ -79,7 +79,7 @@ function Begin_GC(message)
         GC:Update()
         Filter:Update()
         GalacticDisplay:update_components()
-        ObjectivesDisplay:update_components()
+        -- ObjectivesDisplay:update_components()
     end
 end
 

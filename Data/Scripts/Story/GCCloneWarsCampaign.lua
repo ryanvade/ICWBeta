@@ -186,24 +186,13 @@ function Determine_Start_Era(message)
                 end
             end
     
-            if spawn_location_table["Muunilinst"] then
-                start_planet = FindPlanet("Muunilinst")
-                if start_planet.Get_Owner() ~= Find_Player("Rebel") then
-                    start_planet = StoryUtil.FindFriendlyPlanet(p_cis)
-                end
-                if start_planet then
-                    spawn_list = { "Tonith_Corpulentus", "Canteval_Munificent" }
-                    SpawnList(spawn_list, start_planet, p_cis, true, false)
-                end
-            end  
-
             if spawn_location_table["CATO_NEIMOIDIA"] then
                 start_planet = FindPlanet("Cato_Neimoidia")
                 if start_planet.Get_Owner() ~= Find_Player("Rebel") then
                     start_planet = StoryUtil.FindFriendlyPlanet(p_cis)
                 end
                 if start_planet then
-                    spawn_list = { "Gunray_Team", "Durd_Team", "Tuuk_Procurer" }
+                    spawn_list = { "Gunray_Team" }
                     SpawnList(spawn_list, start_planet, p_cis, true, false)
                 end
             end  

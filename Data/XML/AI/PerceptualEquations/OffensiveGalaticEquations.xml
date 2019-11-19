@@ -339,6 +339,19 @@
 		(1 - Variable_Target.IsFaction{Parameter_Faction = "Rebel"})
 	</NR_Vassal_Should_Reconnect_Islands>
 	
+	<CIS_Federation_Should_Reconnect_Islands>
+		Function_Need_To_Reconnect_Islands.Evaluate
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Rebel"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Pirates"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Pentastar"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Hutts"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Teradoc"})
+	</CIS_Federation_Should_Reconnect_Islands>
 	
 	<Space_Contrast>
 		Variable_Target.EnemyForce.SpaceTotalUnnormalized + Variable_Target.EnemyForce.StarbaseTotalUnnormalized
@@ -383,6 +396,20 @@
 		*
 		(1 - Variable_Target.IsFaction{Parameter_Faction = "Rebel"})
 	</NR_Vassal_Should_Conquer_Pirate_Planet>
+	
+	<CIS_Federation_Should_Conquer_Pirate_Planet>
+		Function_Should_Conquer_Pirate_Planet.Evaluate
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Rebel"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Pirates"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Pentastar"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Hutts"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Teradoc"})
+	</CIS_Federation_Should_Conquer_Pirate_Planet>
 	
 	<EotH_Should_Conquer_Pirate_Planet>
 		Function_Should_Conquer_Pirate_Planet.Evaluate
@@ -466,6 +493,20 @@
 		*
 		(1 - Variable_Target.IsFaction{Parameter_Faction = "Rebel"})
 	</NR_Vassal_Should_Conquer_Opponent_Planet>
+		
+	<CIS_Federation_Should_Conquer_Opponent_Planet>
+		Function_Should_Conquer_Opponent_Planet.Evaluate
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Rebel"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Pirates"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Pentastar"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Hutts"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Teradoc"})
+	</CIS_Federation_Should_Conquer_Opponent_Planet>
 	
 	
 	<First_Attack_Allowed>

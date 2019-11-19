@@ -303,5 +303,25 @@
 		Variable_Self.AnyCurrentThreats
 	</Needs_Defensive_Fleet>
 	
+	<CIS_Federation_Needs_Defensive_Fleet>
+		20.0
+		*
+		Function_Is_Connected_To_Me.Evaluate
+		*
+		Variable_Target.EnemyForce.SpaceTotalNBPTM
+		*
+		Variable_Self.AnyCurrentThreats
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Rebel"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Pirates"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Pentastar"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Hutts"})
+		*
+		(1 - Variable_Target.IsFaction{Parameter_Faction = "Teradoc"})
+	</CIS_Federation_Needs_Defensive_Fleet>
+	
 	
 </Equations>

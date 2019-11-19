@@ -667,7 +667,7 @@
 		<Base_Shield_Penetration_Particle>Shield_Penetration_Effect_Particle</Base_Shield_Penetration_Particle>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 
-		<Cheap_Bribe_Cost>120</Cheap_Bribe_Cost>
+		<Cheap_Bribe_Cost>0</Cheap_Bribe_Cost>
 		<Tactical_Bribe_Cost>300</Tactical_Bribe_Cost>
 
         <Unit_Abilities_Data SubObjectList="Yes">
@@ -847,7 +847,7 @@
 
 		<Vehicle_Thief_Inside_Clone>Swamp_Speeder_Captured</Vehicle_Thief_Inside_Clone>
 
-		<Cheap_Bribe_Cost>80</Cheap_Bribe_Cost>
+		<Cheap_Bribe_Cost>0</Cheap_Bribe_Cost>
 		<Tactical_Bribe_Cost>300</Tactical_Bribe_Cost>
 
         <Unit_Abilities_Data SubObjectList="Yes">
@@ -1151,7 +1151,7 @@
 		<LandBehavior>IDLE, GARRISON_HOVER, WALK_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED, WEAPON, AMBIENT_SFX,UNIT_AI,TARGETING,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, SURFACE_FX</LandBehavior>
 
 
-		<Garrison_Category> Infantry </Garrison_Category>
+		<Garrison_Category> Infantry, LandHero </Garrison_Category>
         <Num_Garrison_Slots>2</Num_Garrison_Slots>
         <Garrison_Bone_Names>garrison_00, garrison_01</Garrison_Bone_Names>
 		<Garrison_Exit_Dist>50</Garrison_Exit_Dist>
@@ -1329,7 +1329,7 @@
 		<Behavior> SELECTABLE </Behavior>
 		<LandBehavior>AFFECTED_BY_SHIELD, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, TURRET, POWERED, REVEAL, HIDE_WHEN_FOGGED, SQUASH, SURFACE_FX, UNIT_AI, TELEKINESIS_TARGET,STUNNABLE,DAMAGE_TRACKING, GARRISON_VEHICLE, ABILITY_COUNTDOWN</LandBehavior>
 
-		<Garrison_Category> Infantry, Vehicle </Garrison_Category>
+		<Garrison_Category> Infantry, Vehicle, LandHero </Garrison_Category>
 		<Num_Garrison_Slots>5</Num_Garrison_Slots>
 		<Garrison_Exit_Dist>0</Garrison_Exit_Dist>
 		<Garrison_Enter_Dist>0</Garrison_Enter_Dist>
@@ -1502,7 +1502,7 @@
 		<Behavior> SELECTABLE </Behavior>
 		<LandBehavior>AFFECTED_BY_SHIELD, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, TURRET, POWERED, REVEAL, HIDE_WHEN_FOGGED, SQUASH, SURFACE_FX, UNIT_AI, TELEKINESIS_TARGET,STUNNABLE,DAMAGE_TRACKING, GARRISON_VEHICLE, ABILITY_COUNTDOWN</LandBehavior>
 
-		<Garrison_Category> Infantry, Vehicle </Garrison_Category>
+		<Garrison_Category> Infantry, Vehicle, LandHero </Garrison_Category>
 		<Num_Garrison_Slots>12</Num_Garrison_Slots>
 		<Garrison_Exit_Dist>0</Garrison_Exit_Dist>
 		<Garrison_Enter_Dist>0</Garrison_Enter_Dist>

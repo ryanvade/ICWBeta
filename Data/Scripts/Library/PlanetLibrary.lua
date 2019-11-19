@@ -321,6 +321,7 @@ PlanetLibrary = {
   ["VERGESSO"] = {Structures = {}},
   ["VONDARC"] = {Structures = {}},
   ["VORPAYA"] = {Structures = {}},
+  ["VULPTER"] = {Structures = {}},
   ["VROS"] = {Structures = {}},
   ["WAYLAND"] = {Structures = {}},
   ["WISTRIL"] = {Structures = {}},

@@ -40,7 +40,6 @@
 --/////////////////////////////////////////////////////////////////////////////////////////////////
 
 require("pgevents")
-require("TRCommands")
 
 function Definitions()
 
@@ -69,7 +68,7 @@ function MainForce_Thread()
 
    	QuickReinforce(PlayerObject, AITarget, MainForce, EscortForce)
 
-	UseTurboIfAllowed(MainForce)
+	--UseTurboIfAllowed(MainForce)
 	Try_Ability(MainForce, "SPOILER_LOCK")
 	Try_Ability(MainForce, "STEALTH")
 

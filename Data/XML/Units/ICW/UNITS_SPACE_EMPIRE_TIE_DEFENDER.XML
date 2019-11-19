@@ -10,7 +10,7 @@
 
 		<Text_ID>TEXT_UNIT_TIE_DEFENDER</Text_ID>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
-		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_DEFENDER</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_STATBLOCK_TIE_DEFENDER_BASE TEXT_STATBLOCK_TIE_DEFENDER_MOVE TEXT_STATBLOCK_TIE_DEFENDER_WEAP1 TEXT_STATBLOCK_TIE_DEFENDER_WEAP2 TEXT_STATBLOCK_TIE_DEFENDER_WEAP3 TEXT_TOOLTIP_TIE_DEFENDER</Encyclopedia_Text>
 		<Space_Model_Name>EV_TIE_DEFENDER.ALO</Space_Model_Name>
 		<Icon_Name>i_button_EV_TIE_Defender.tga</Icon_Name>
 
@@ -21,25 +21,24 @@
 
 		<Dense_FOW_Reveal_Range_Multiplier>0.5</Dense_FOW_Reveal_Range_Multiplier>
 		<Mass>0.98</Mass>
-		<Max_Speed>8.0</Max_Speed>
-		<Min_Speed>2.5</Min_Speed>
-		<Max_Rate_Of_Turn>4.5</Max_Rate_Of_Turn>
-		<Max_Thrust>2.11</Max_Thrust>
+		<Max_Speed>6.33</Max_Speed>
+		<Min_Speed>1.15</Min_Speed>
+		<Max_Rate_Of_Turn>5.5</Max_Rate_Of_Turn>
+		<Max_Thrust>4.01</Max_Thrust>
 		<Max_Rate_Of_Roll>5.5</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
-		<Begin_Turn_Towards_Distance>300.0</Begin_Turn_Towards_Distance>
-		<Fires_Forward>no</Fires_Forward>
+		<Begin_Turn_Towards_Distance>500.0</Begin_Turn_Towards_Distance>
 
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Maintenance_Cost>0.1</Maintenance_Cost>
-		<Max_Lift>4</Max_Lift>
+		<Max_Lift>4.01</Max_Lift>
 		<Affiliation>Empire</Affiliation>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
-		<Shield_Points>25</Shield_Points>
-		<Tactical_Health>25</Tactical_Health>
-		<Shield_Refresh_Rate>3</Shield_Refresh_Rate>
+		<Shield_Points>18</Shield_Points>
+		<Tactical_Health>15</Tactical_Health>
+		<Shield_Refresh_Rate>0.9</Shield_Refresh_Rate>
 		<Energy_Capacity>999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
 		<Armor_Type> Armor_Fighter </Armor_Type>
@@ -59,10 +58,10 @@
 		<SpaceBehavior>FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA, ABILITY_COUNTDOWN </SpaceBehavior>
 			
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
-		<Damage>16</Damage>
 
 		<HardPoints>
 			HP_TIE_DEFENDER_LASER_00,
+			HP_TIE_DEFENDER_LASER_01,
 			HP_TIE_DEFENDER_TORP_00,
 			HP_TIE_DEFENDER_ION_00,
 		</HardPoints>
@@ -72,23 +71,6 @@
 		<Targeting_Max_Attack_Distance>600.0</Targeting_Max_Attack_Distance>
 		<Death_Explosions>Small_Explosion_Space</Death_Explosions>
 		<Death_SFXEvent_Start_Die>Unit_Tie_Fighter_Death_SFX</Death_SFXEvent_Start_Die>
-
-        <Damage_Type>Damage_Fighter</Damage_Type>
-		<!--<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Green</Projectile_Types>
-		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
-		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
-		<Projectile_Fire_Recharge_Seconds>2</Projectile_Fire_Recharge_Seconds>
-		
-		<Fire_Inaccuracy_Distance> Fighter, 25.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Bomber, 20.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Transport, 20.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Corvette, 15.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Frigate, 20.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Capital, 25.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> SuperCapital, 30.0 </Fire_Inaccuracy_Distance>-->
-
-		<Turret_Rotate_Extent_Degrees>45</Turret_Rotate_Extent_Degrees>
-		<Turret_Elevate_Extent_Degrees>45</Turret_Elevate_Extent_Degrees>
 
 		<Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
 
@@ -120,7 +102,7 @@
 		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
 		<Minimum_Follow_Distance>25.0</Minimum_Follow_Distance>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>9.28</AI_Combat_Power>
+		<AI_Combat_Power>6.99</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 
@@ -155,7 +137,7 @@
 	<Squadron Name="TIE_Defender_Squadron">
 		<Text_ID>TEXT_TIE_DEFENDER_SQUADRON</Text_ID>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
-		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_DEFENDER</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_STATBLOCK_TIE_DEFENDER_BASE TEXT_STATBLOCK_TIE_DEFENDER_MOVE TEXT_STATBLOCK_TIE_DEFENDER_WEAP1 TEXT_STATBLOCK_TIE_DEFENDER_WEAP2 TEXT_STATBLOCK_TIE_DEFENDER_WEAP3 TEXT_TOOLTIP_TIE_DEFENDER</Encyclopedia_Text>
 		<Icon_Name>i_button_EV_TIE_Defender.tga</Icon_Name>
 
 		<GUI_Row> 0 </GUI_Row>
@@ -164,7 +146,6 @@
 		<Is_Escort>Yes</Is_Escort>
 		<Is_Bomber>no</Is_Bomber>
 		<Autoresolve_Health>400</Autoresolve_Health>
-		<Damage>50</Damage>
 		<Affiliation>Empire</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Build_Cost_Credits>650</Build_Cost_Credits>
@@ -238,7 +219,7 @@
 		<Variant_Of_Existing_Type>Darth_Vader_TIE_Fighter_Container</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_TIE_DEFENDER_SQUADRON</Text_ID>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
-		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_DEFENDER</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_STATBLOCK_TIE_DEFENDER_BASE TEXT_STATBLOCK_TIE_DEFENDER_MOVE TEXT_STATBLOCK_TIE_DEFENDER_WEAP1 TEXT_STATBLOCK_TIE_DEFENDER_WEAP2 TEXT_STATBLOCK_TIE_DEFENDER_WEAP3 TEXT_TOOLTIP_TIE_DEFENDER</Encyclopedia_Text>
 		<Icon_Name>i_button_EV_TIE_Defender.tga</Icon_Name>
 		
 		<Behavior>TEAM, TEAM_LOCOMOTOR, SELECTABLE, TARGETING, UNIT_AI</Behavior>

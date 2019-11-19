@@ -471,7 +471,7 @@
 
 		<Text_ID>TEXT_UNIT_TIE_HUNTER</Text_ID>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
-		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_HUNTER</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_STATBLOCK_TIE_HUNTER_BASE TEXT_STATBLOCK_TIE_HUNTER_MOVE TEXT_STATBLOCK_TIE_HUNTER_WEAP1 TEXT_STATBLOCK_TIE_HUNTER_WEAP2 TEXT_STATBLOCK_TIE_HUNTER_WEAP3 TEXT_TOOLTIP_TIE_HUNTER</Encyclopedia_Text>
 
 		<Space_Model_Name>PV_TIEHUNTER.ALO</Space_Model_Name>
 		<Icon_Name>i_button_tie_hunter.tga</Icon_Name>
@@ -483,25 +483,25 @@
 
 		<Dense_FOW_Reveal_Range_Multiplier>0.5</Dense_FOW_Reveal_Range_Multiplier>
 		<Mass>0.98</Mass>
-		<Max_Speed>6.5</Max_Speed>
-		<Min_Speed>3.5</Min_Speed>
-		<Max_Rate_Of_Turn>5.0</Max_Rate_Of_Turn>
-		<Max_Thrust>1.0</Max_Thrust>
-		<Max_Rate_Of_Roll>5.5</Max_Rate_Of_Roll>
+		<Max_Speed>6.45</Max_Speed>
+		<Min_Speed>1.72</Min_Speed>
+		<Max_Rate_Of_Turn>3.75</Max_Rate_Of_Turn>
+		<Max_Thrust>4.16</Max_Thrust>
+		<Max_Rate_Of_Roll>3.75</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
-		<Begin_Turn_Towards_Distance>300.0</Begin_Turn_Towards_Distance>
+		<Begin_Turn_Towards_Distance>600.0</Begin_Turn_Towards_Distance>
 		<Fires_Forward>no</Fires_Forward>
 
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Maintenance_Cost>0.1</Maintenance_Cost>
-		<Max_Lift>4</Max_Lift>
+		<Max_Lift>4.16</Max_Lift>
 		<Affiliation>Hutts</Affiliation>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
 		<Shield_Points>5</Shield_Points>
-		<Tactical_Health>10</Tactical_Health>
-		<Shield_Refresh_Rate>2</Shield_Refresh_Rate>
+		<Tactical_Health>12</Tactical_Health>
+		<Shield_Refresh_Rate>0.25</Shield_Refresh_Rate>
 		<Energy_Capacity>999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
 		<Armor_Type> Armor_Fighter </Armor_Type>
@@ -615,17 +615,6 @@
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
-			<Unit_Ability>
-			<Type>SPOILER_LOCK</Type>
-
-			<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
-			<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
-			<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
-			<Mod_Multiplier>SPEED_MULTIPLIER,		            1.5</Mod_Multiplier>
-			<SFXEvent_GUI_Unit_Ability_Activated>Unit_Ability_On_X_Wing</SFXEvent_GUI_Unit_Ability_Activated>
-			<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Ability_Off_X_Wing</SFXEvent_GUI_Unit_Ability_Deactivated>
-			</Unit_Ability>
-
 
 			<Unit_Ability>
 				<Type>HUNT</Type>
@@ -637,7 +626,7 @@
 	<Squadron Name="TIE_Hunter_Squadron">
 		<Text_ID>TEXT_UNIT_TIE_HUNTER</Text_ID>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
-		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_HUNTER</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_STATBLOCK_TIE_HUNTER_BASE TEXT_STATBLOCK_TIE_HUNTER_MOVE TEXT_STATBLOCK_TIE_HUNTER_WEAP1 TEXT_STATBLOCK_TIE_HUNTER_WEAP2 TEXT_STATBLOCK_TIE_HUNTER_WEAP3 TEXT_TOOLTIP_TIE_HUNTER</Encyclopedia_Text>
 
 		<Icon_Name>i_button_tie_hunter.tga</Icon_Name>
 
@@ -706,18 +695,6 @@
 
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
-			<Unit_Ability>
-			<Type>SPOILER_LOCK</Type>
-
-			<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
-			<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
-			<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
-			<Mod_Multiplier>SPEED_MULTIPLIER,		2</Mod_Multiplier>
-			</Unit_Ability>
-
-
-
-
 			<Unit_Ability>
 				<Type>HUNT</Type>
 			</Unit_Ability>
@@ -793,7 +770,8 @@
 		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 
-		<Starting_Spawned_Units_Tech_0>TIE_Hunter_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Hunter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Hunter_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
@@ -942,7 +920,7 @@
 	<SpaceUnit Name="TIE_Punisher">
 
 		<Text_ID>TEXT_UNIT_TIE_PUNISHER</Text_ID>
-		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_PUNISHER</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_STATBLOCK_TIE_PUNISHER_BASE TEXT_STATBLOCK_TIE_PUNISHER_MOVE TEXT_STATBLOCK_TIE_PUNISHER_WEAP1 TEXT_STATBLOCK_TIE_PUNISHER_WEAP2 TEXT_STATBLOCK_TIE_PUNISHER_WEAP3 TEXT_STATBLOCK_TIE_PUNISHER_WEAP4 TEXT_TOOLTIP_TIE_PUNISHER</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOMBER </Encyclopedia_Unit_Class>
 		<!--<Encyclopedia_Good_Against> Calamari_Cruiser Alliance_Assault_Frigate Nebulon_B_Frigate </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
@@ -956,25 +934,25 @@
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Mass>0.985</Mass>
-		<Max_Speed>3.0</Max_Speed>
-		<Min_Speed>1.5</Min_Speed>
-		<Max_Rate_Of_Turn>1.5</Max_Rate_Of_Turn>
-		<Max_Lift>3</Max_Lift>
-		<Max_Thrust>1.15</Max_Thrust>
-		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
-		<Bank_Turn_Angle>30</Bank_Turn_Angle>
+		<Max_Speed>3.57</Max_Speed>
+		<Min_Speed>1.38</Min_Speed>
+		<Max_Rate_Of_Turn>2.58</Max_Rate_Of_Turn>
+		<Max_Lift>1.27</Max_Lift>
+		<Max_Thrust>1.27</Max_Thrust>
+		<Max_Rate_Of_Roll>2.58</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>40</Bank_Turn_Angle>
 		<Hyperspace>no</Hyperspace>
 		<Hyperspace_Speed>0</Hyperspace_Speed>
-		<Begin_Turn_Towards_Distance>200.0</Begin_Turn_Towards_Distance>
+		<Begin_Turn_Towards_Distance>500.0</Begin_Turn_Towards_Distance>
 		<Fires_Forward>no</Fires_Forward>
 		<Turret_Rotate_Extent_Degrees>20</Turret_Rotate_Extent_Degrees>
 		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
 		<Affiliation>Empire</Affiliation>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
-		<Shield_Points>15</Shield_Points>
-		<Tactical_Health>30</Tactical_Health>
-		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Shield_Points>12</Shield_Points>
+		<Tactical_Health>26</Tactical_Health>
+		<Shield_Refresh_Rate>0.6</Shield_Refresh_Rate>
 		<Energy_Capacity>500</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
 		<Ship_Class>bomber</Ship_Class>
@@ -992,7 +970,7 @@
 		<SpaceBehavior>HUNT, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<HardPoints>
-			HP_BOMBER_00, HP_Punisher_01, HP_Punisher_02
+			HP_TIE_00, HP_Punisher_01, HP_Punisher_02, HP_Punisher_03
 		</HardPoints>
 		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
 		<Space_FOW_Reveal_Range>6000.0</Space_FOW_Reveal_Range>
@@ -1040,7 +1018,7 @@
 		<Minimum_Follow_Distance>50.0</Minimum_Follow_Distance>
 
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>6.51</AI_Combat_Power>
+		<AI_Combat_Power>6.72</AI_Combat_Power>
 		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
 		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
@@ -1055,7 +1033,6 @@
 		<Remove_Upon_Death>true</Remove_Upon_Death>
 
 		<Strafe_Distance>500.0</Strafe_Distance>
-		<Damage>6</Damage>
 		<Population_Value>0</Population_Value>
 
 		<!-- Non-Hero unit abilities description -->
@@ -1077,7 +1054,6 @@
 		<Is_Escort>No</Is_Escort>
 		<Is_Bomber>yes</Is_Bomber>
 		<Autoresolve_Health>540</Autoresolve_Health>
-		<Damage>20</Damage>
 		<Affiliation>Empire, Pentastar, Hutts, Pirates, Teradoc</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Build_Cost_Credits>150</Build_Cost_Credits>
@@ -1127,7 +1103,7 @@
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
 		<Property_Flags> SmallShip </Property_Flags>
 
-		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_PUNISHER</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_STATBLOCK_TIE_PUNISHER_BASE TEXT_STATBLOCK_TIE_PUNISHER_MOVE TEXT_STATBLOCK_TIE_PUNISHER_WEAP1 TEXT_STATBLOCK_TIE_PUNISHER_WEAP2 TEXT_STATBLOCK_TIE_PUNISHER_WEAP3 TEXT_STATBLOCK_TIE_PUNISHER_WEAP4 TEXT_TOOLTIP_TIE_PUNISHER</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_BOMBER</Encyclopedia_Unit_Class>
 
 		<!-- Non-Hero unit abilities description -->
