@@ -93,7 +93,7 @@ GameObjectLibrary = {
                 "SingleUnitRetreat"
             },
             Fighters = {
-                ["V-WING_SQUADRON"] = {
+                ["Z95_HEADHUNTER_SQUADRON"] = {
                     ["EMPIRE"] = {
                         Reserve = 2,
                         Initial = 1
@@ -138,6 +138,29 @@ GameObjectLibrary = {
                 }
             }
         },
+        ["GENERIC_ACCLAMATOR_ASSAULT_SHIP_II"] = {
+            Scripts = {
+                "MultiLayer",
+                "FighterSpawn",
+                "SingleUnitRetreat"
+            },
+            Fighters = {
+                ["V-WING_SQUADRON"] = {
+                    ["EMPIRE"] = {
+                        Reserve = 2,
+                        Initial = 1
+                    },
+                    ["HOSTILE"] = {
+                        Reserve = 2,
+                        Initial = 1
+                    },
+                    ["WARLORDS"] = {
+                        Reserve = 2,
+                        Initial = 1
+                    }
+                },
+            }
+        },		
         ["GENERIC_ACCLAMATOR_ASSAULT_SHIP_LEVELER"] = {
             Scripts = {
                 "MultiLayer",

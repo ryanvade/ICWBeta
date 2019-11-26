@@ -511,7 +511,7 @@
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
 		<CategoryMask>NonCombatHero</CategoryMask>
 		<Population_Value>1</Population_Value>
-		<Affiliation>Empire, Pentastar, Teradoc, Hutts, Pirates, Underworld, Yevetha</Affiliation>
+		<Affiliation>Empire, Pentastar, Teradoc, Hutts, Pirates, Underworld</Affiliation>
 	</HeroCompany>
 	
 	<HeroCompany Name="Skirmish_Probe_Droid_Team">
@@ -1187,7 +1187,7 @@
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Maintenance_Cost>0.2</Maintenance_Cost>
 		<Lua_Script>GenericGameObject</Lua_Script>
-		<Affiliation>Empire, Pentastar, Hutts, Yevetha</Affiliation>
+		<Affiliation>Empire, Pentastar, Hutts</Affiliation>
 		<Tech_Level>1</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
@@ -2095,7 +2095,7 @@
 		<Variant_Of_Existing_Type>Template_Star_Destroyer</Variant_Of_Existing_Type>
 		
 		<Tech_Level>1</Tech_Level>
-		<Affiliation>Empire, Pentastar, Teradoc, Pirates, Hutts, Yevetha</Affiliation>
+		<Affiliation>Empire, Pentastar, Teradoc, Pirates, Hutts</Affiliation>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
@@ -2125,7 +2125,7 @@
 		<GUI_Bracket_Height>500</GUI_Bracket_Height>
 		<GUI_Bracket_Size>2</GUI_Bracket_Size>
 				<Tech_Level>1</Tech_Level>
-		<Affiliation>Empire, Pentastar, Teradoc, Pirates, Hutts, Yevetha</Affiliation>
+		<Affiliation>Empire, Pentastar, Teradoc, Pirates, Hutts</Affiliation>
 
 
 		<Lua_Script>GenericGameObject</Lua_Script>
@@ -2522,7 +2522,7 @@
 	<SpaceUnit Name="Generic_Victory_Destroyer">
 		<Variant_Of_Existing_Type>Template_Victory_Destroyer</Variant_Of_Existing_Type>
 		
-		<Affiliation>Empire, Pentastar, Pirates, Hutts, Teradoc, Corporate_Sector, Yevetha</Affiliation>
+		<Affiliation>Empire, Pentastar, Pirates, Hutts, Teradoc, Corporate_Sector</Affiliation>
 		<Tech_Level>1</Tech_Level>
         <Required_Timeline>0</Required_Timeline>
         <Required_Ground_Base_Level>0</Required_Ground_Base_Level>
@@ -2560,7 +2560,7 @@
         <OverrideAcceleration> .03 </OverrideAcceleration>
         <OverrideDeceleration> .03 </OverrideDeceleration>
 
-				<Affiliation>Empire, Pirates, Hutts, Corporate_Sector, Yevetha</Affiliation>
+				<Affiliation>Empire, Pirates, Hutts, Corporate_Sector</Affiliation>
 
         <Max_Thrust>1.8</Max_Thrust>
         <Hyperspace>Yes</Hyperspace>
@@ -3189,7 +3189,7 @@
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Maintenance_Cost>0.2</Maintenance_Cost>
-		<Affiliation>Empire, Pentastar, Teradoc, Hutts, Yevetha</Affiliation>
+		<Affiliation>Empire, Pentastar, Teradoc, Hutts</Affiliation>
 
 		<CategoryMask> Frigate | AntiBomber | Interdictor | Boardable </CategoryMask>
 
@@ -4203,7 +4203,7 @@
 		<Maintenance_Cost>0.3</Maintenance_Cost>
 
 		<Tech_Level>1</Tech_Level>
-		<Affiliation>Empire, Pirates, Teradoc, Yevetha</Affiliation>
+		<Affiliation>Empire, Pirates, Teradoc</Affiliation>
 		<Lua_Script>GenericGameObject</Lua_Script>
 
 		<Required_Timeline>0</Required_Timeline>
@@ -5122,7 +5122,7 @@
 	
 	<SpaceUnit Name="Adz">
 		<Text_ID>TEXT_UNIT_ADZ</Text_ID>
-		<Affiliation>Teradoc</Affiliation>
+		<Affiliation>Teradoc, Hutts, Pentastar</Affiliation>
 		<GUI_Row> 1 </GUI_Row>
 		<Space_Model_Name>adz_patrol_destroyer.ALO</Space_Model_Name>
 		<Mass>0.9995</Mass>
@@ -5493,7 +5493,7 @@
 
 		<Text_ID>TEXT_UNIT_MISSILE_BOAT</Text_ID>
 		<Encyclopedia_Text>TEXT_STATBLOCK_MISSILEBOAT_BASE TEXT_STATBLOCK_MISSILEBOAT_MOVE TEXT_STATBLOCK_MISSILEBOAT_WEAP1 TEXT_STATBLOCK_MISSILEBOAT_WEAP2 TEXT_STATBLOCK_MISSILEBOAT_WEAP3 TEXT_TOOLTIP_MISSILE_BOAT</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_FBHEAVY </Encyclopedia_Unit_Class>
 		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel X-wing </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
 		<Space_Model_Name>EV_missile_boat.ALO</Space_Model_Name>
@@ -5725,9 +5725,9 @@
 		</Unit_Abilities_Data>
 
 		<Encyclopedia_Text>TEXT_STATBLOCK_MISSILEBOAT_BASE TEXT_STATBLOCK_MISSILEBOAT_MOVE TEXT_STATBLOCK_MISSILEBOAT_WEAP1 TEXT_STATBLOCK_MISSILEBOAT_WEAP2 TEXT_STATBLOCK_MISSILEBOAT_WEAP3 TEXT_TOOLTIP_MISSILE_BOAT</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_FBHEAVY </Encyclopedia_Unit_Class>
 
-		<Tactical_Build_Cost_Multiplayer>800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>600</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>

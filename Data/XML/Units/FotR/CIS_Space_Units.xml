@@ -990,6 +990,12 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
+		
+		<HardPoints>
+		HP_Lucrehulk_Laser01, HP_Lucrehulk_Laser02, HP_Lucrehulk_Laser03, HP_Lucrehulk_Laser04, HP_Lucrehulk_Laser05, HP_Lucrehulk_Laser06,
+		HP_Lucrehulk_Laser07, HP_Lucrehulk_Laser08, HP_Lucrehulk_Laser09, HP_Lucrehulk_Laser10, HP_Lucrehulk_Turbo01_CIS, HP_Lucrehulk_Turbo02,
+		HP_Lucrehulk_Turbo03, HP_Lucrehulk_Turbo04, HP_Lucrehulk_Shields, HP_Lucrehulk_Hangar01, HP_Lucrehulk_Hangar02, HP_Lucrehulk_Engines
+		</HardPoints>
 
 		<Lua_Script>GenericGameObject</Lua_Script>
 
@@ -2218,7 +2224,7 @@
 	<SpaceUnit Name="Trifighter">
 		<Text_ID>TEXT_UNIT_TRIFIGHTER</Text_ID>
 		<Encyclopedia_Text>TEXT_STATBLOCK_TRIFIGHTER_BASE TEXT_STATBLOCK_TRIFIGHTER_MOVE TEXT_STATBLOCK_TRIFIGHTER_WEAP1 TEXT_STATBLOCK_TRIFIGHTER_WEAP2 TEXT_TOOLTIP_TRIFIGHTER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_INTERCEPTOR </Encyclopedia_Unit_Class>
 		<!--<Encyclopedia_Good_Against> TIE_Fighter X-wing </Encyclopedia_Good_Against>
 		<Encyclopedia_Vulnerable_To> Corellian_Corvette Tartan_Patrol_Cruiser </Encyclopedia_Vulnerable_To>-->
 		<Icon_Name>i_button_trifighter.tga</Icon_Name>
@@ -2368,7 +2374,7 @@
 
 		<Text_ID>TEXT_UNIT_VULTURE_DROID</Text_ID>
 		<Encyclopedia_Text>TEXT_STATBLOCK_VULTURE_BASE TEXT_STATBLOCK_VULTURE_MOVE TEXT_STATBLOCK_VULTURE_WEAP1 TEXT_TOOLTIP_VULTURE_DROID</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_INTERCEPTORLIGHT </Encyclopedia_Unit_Class>
 		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
 		<Space_Model_Name>CIS_VultureCIS.ALO</Space_Model_Name>
@@ -2495,7 +2501,7 @@
 
 		<Text_ID>TEXT_UNIT_HYENA_DROID</Text_ID>
 		<Encyclopedia_Text>TEXT_STATBLOCK_HYENA_BASE TEXT_STATBLOCK_HYENA_MOVE TEXT_STATBLOCK_HYENA_WEAP1 TEXT_STATBLOCK_HYENA_WEAP2 TEXT_STATBLOCK_HYENA_WEAP3 TEXT_TOOLTIP_HYENA_DROID</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOMBER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_FB </Encyclopedia_Unit_Class>
 		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
 		<Space_Model_Name>CIS_Hyena.ALO</Space_Model_Name>
@@ -2625,7 +2631,7 @@
 
 		<Text_ID>TEXT_UNIT_NANTEX</Text_ID>
 		<Encyclopedia_Text>TEXT_STATBLOCK_NANTEX_BASE TEXT_STATBLOCK_NANTEX_MOVE TEXT_STATBLOCK_NANTEX_WEAP1 TEXT_TOOLTIP_NANTEX</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_TURRET </Encyclopedia_Unit_Class>
 		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
 		<Space_Model_Name>cis_nantex.ALO</Space_Model_Name>
@@ -2776,7 +2782,7 @@
 
 		<Text_ID>TEXT_UNIT_GINIVEX</Text_ID>
 		<Encyclopedia_Text>TEXT_STATBLOCK_GINIVEX_BASE TEXT_STATBLOCK_GINIVEX_MOVE TEXT_STATBLOCK_GINIVEX_WEAP1 TEXT_TOOLTIP_GINIVEX</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_ELITE </Encyclopedia_Unit_Class>
 		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
 		<Space_Model_Name>cis_ginivex.ALO</Space_Model_Name>
@@ -2796,8 +2802,8 @@
 		<Max_Thrust>3.78</Max_Thrust>
 		<Max_Rate_Of_Roll>6.0</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
-		<Hyperspace>no</Hyperspace>
-		<Hyperspace_Speed>0</Hyperspace_Speed>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Begin_Turn_Towards_Distance>800.0</Begin_Turn_Towards_Distance>
 		<Fires_Forward>no</Fires_Forward>
 		<Turret_Rotate_Extent_Degrees>20</Turret_Rotate_Extent_Degrees>
@@ -2973,11 +2979,11 @@
 
 
 		<Encyclopedia_Text>TEXT_STATBLOCK_VULTURE_BASE TEXT_STATBLOCK_VULTURE_MOVE TEXT_STATBLOCK_VULTURE_WEAP1 TEXT_TOOLTIP_VULTURE_DROID</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_INTERCEPTORLIGHT</Encyclopedia_Unit_Class>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Cost_Multiplayer>135</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>8</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
@@ -3070,10 +3076,10 @@
 
 
 		<Encyclopedia_Text>TEXT_STATBLOCK_VULTURE_BASE TEXT_STATBLOCK_VULTURE_MOVE TEXT_STATBLOCK_VULTURE_WEAP1 TEXT_TOOLTIP_VULTURE_DROID</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_INTERCEPTORLIGHT</Encyclopedia_Unit_Class>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>270</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
@@ -3150,11 +3156,11 @@
 		</Unit_Abilities_Data>
 
 		<Encyclopedia_Text>TEXT_STATBLOCK_HYENA_BASE TEXT_STATBLOCK_HYENA_MOVE TEXT_STATBLOCK_HYENA_WEAP1 TEXT_STATBLOCK_HYENA_WEAP2 TEXT_STATBLOCK_HYENA_WEAP3 TEXT_TOOLTIP_HYENA_DROID</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_FB</Encyclopedia_Unit_Class>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
@@ -3166,7 +3172,7 @@
 	<Squadron Name="TriFighter_Squadron">
 		<Text_ID>TEXT_UNIT_TRIFIGHTER</Text_ID>
 		<Encyclopedia_Text>TEXT_STATBLOCK_TRIFIGHTER_BASE TEXT_STATBLOCK_TRIFIGHTER_MOVE TEXT_STATBLOCK_TRIFIGHTER_WEAP1 TEXT_STATBLOCK_TRIFIGHTER_WEAP2 TEXT_TOOLTIP_TRIFIGHTER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOMBER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_INTERCEPTOR </Encyclopedia_Unit_Class>
 		<!-- <Encyclopedia_Good_Against> TIE_Fighter X-wing </Encyclopedia_Good_Against>
 		<Encyclopedia_Vulnerable_To> Corellian_Corvette Tartan_Patrol_Cruiser </Encyclopedia_Vulnerable_To> -->
 		<Icon_Name>i_button_trifighter.tga</Icon_Name>
@@ -3225,7 +3231,7 @@
 
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>325</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>13</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
@@ -3342,7 +3348,7 @@
 
 
 		<Encyclopedia_Text>TEXT_STATBLOCK_NANTEX_BASE TEXT_STATBLOCK_NANTEX_MOVE TEXT_STATBLOCK_NANTEX_WEAP1 TEXT_TOOLTIP_NANTEX</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_TURRET</Encyclopedia_Unit_Class>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>

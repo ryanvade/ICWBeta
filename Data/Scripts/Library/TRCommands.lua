@@ -130,9 +130,11 @@ function CreateFactionEntry(factionString)
     end
 
     local factionObject = Find_Player(factionString)
-    if FactionOwnsPlanets(factionObject) then
-        table.insert(FactionTable, factionObject)
-    end
+	if factionObject then
+		if FactionOwnsPlanets(factionObject) then
+			table.insert(FactionTable, factionObject)
+		end
+	end
 end
 
 -- Returns true if a faction has some kind of AI control and
@@ -140,13 +142,15 @@ end
 -- In: faction playerObject
 -- Out: boolean
 function FactionOwnsPlanets(faction)
-    local planetsOwned = EvaluatePerception("Planet_Ownership", faction)
-
-    if planetsOwned ~= nil then
-        if planetsOwned > 0 then
-            return true
-        end
-    end
+	local result, planetsOwned = pcall(EvaluatePerception, "Planet_Ownership", faction)
+	DebugMessage("%s -- result of perception pcall is %s, %s for %s", tostring(Script), tostring(result), tostring(planetsOwned), tostring(faction.Get_Faction_Name()))
+	if result then
+		if planetsOwned ~= nil then
+			if planetsOwned > 0 then
+				return true
+			end
+		end
+	end
 
     return false
 end

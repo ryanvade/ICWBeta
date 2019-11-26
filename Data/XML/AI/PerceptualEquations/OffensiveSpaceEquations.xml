@@ -361,6 +361,8 @@
 	<Want_To_Retreat_From_Space>
 		50.0
 		*
+		(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Category = GameObjectCategoryType[Interdictor]} > 0.0)
+		*
 		(Variable_Self.IsDefender * (Game.Age > 20) +
 		(1 - Variable_Self.IsDefender) * (Game.Age > 120))
 		*
@@ -376,7 +378,7 @@
 					+
 					(Variable_Self.IsDefender *
 					(1 >= Variable_Self.BaseLevel) *
-					(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (2.0 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0})))
+					(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0} >= (2.5 * Variable_Self.FriendlyForceUnnormalized{Parameter_Attenuator = 1.0})))
 					+
 					(Variable_Self.IsDefender *
 					(3 >= Variable_Self.BaseLevel) *
@@ -384,11 +386,11 @@
 					+
 					((3.0 * Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Transport]}) >= Variable_Self.FriendlyForceUnnormalized)
 					+
-					(Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Transport]} >= 50) *
+					(Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Transport]} >= 200) *
 					(Variable_Enemy.FriendlyForceUnnormalized > Variable_Self.FriendlyForceUnnormalized)
 					+
 					2.0 * (Variable_Self.IsDefender) *
-					(Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Transport]} >= 150)
+					(Variable_Self.FriendlyForceUnnormalized {Parameter_Category = GameObjectCategoryType[Transport]} >= 500)
 					-
 					(Variable_Self.IsDefender) *
 					Script_EvaluateInGalacticContext.Evaluate {Parameter_Script_String = "Has_Planetary_Weapon"}

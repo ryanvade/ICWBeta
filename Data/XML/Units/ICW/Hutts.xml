@@ -936,7 +936,7 @@
 			HP_Keldabe_Fighter_Bay <!-- HP_Keldabe_Conc1 -->
 		</HardPoints>
 		
-		<Starting_Spawned_Units_Tech_0>Rihkxyrk_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Aggressor_Assault_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>StarViper_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		
 		<Reserve_Spawned_Units_Tech_0>StarViper_Squadron, 1</Reserve_Spawned_Units_Tech_0>
@@ -1055,7 +1055,7 @@
 
 		<Text_ID>TEXT_UNIT_STARVIPER</Text_ID>
 		<Encyclopedia_Text>TEXT_STATBLOCK_STARVIPER_BASE TEXT_STATBLOCK_STARVIPER_MOVE TEXT_STATBLOCK_STARVIPER_WEAP1 TEXT_STATBLOCK_STARVIPER_WEAP2 TEXT_TOOLTIP_STARVIPER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_FIGHTERHEAVY </Encyclopedia_Unit_Class>
 		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
 		<Space_Model_Name>nv_Virago.ALO</Space_Model_Name>
@@ -1246,7 +1246,7 @@
 		</Unit_Abilities_Data>
 
 		<Encyclopedia_Text>TEXT_STATBLOCK_STARVIPER_BASE TEXT_STATBLOCK_STARVIPER_MOVE TEXT_STATBLOCK_STARVIPER_WEAP1 TEXT_STATBLOCK_STARVIPER_WEAP2 TEXT_TOOLTIP_STARVIPER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_FIGHTERHEAVY</Encyclopedia_Unit_Class>
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
@@ -1266,12 +1266,217 @@
 		<Population_Value>1</Population_Value>
 		
 	</Squadron>
+
+	<SpaceUnit Name="Aggressor_Assault_Fighter">
+
+		<Text_ID>TEXT_UNIT_AGGRESSOR_ASSAULT_FIGHTER</Text_ID>
+		<Encyclopedia_Text>TEXT_STATBLOCK_AGGRESSORFIGHTER_BASE TEXT_STATBLOCK_AGGRESSORFIGHTER_MOVE TEXT_STATBLOCK_AGGRESSORFIGHTER_WEAP1 TEXT_STATBLOCK_AGGRESSORFIGHTER_WEAP2 TEXT_TOOLTIP_AGGRESSOR_ASSAULT_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_INTERCEPTORHEAVY </Encyclopedia_Unit_Class>
+		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>-->
+		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
+		<Space_Model_Name>Uv_ig2000.ALO</Space_Model_Name>
+		<Scale_Factor>0.3</Scale_Factor>
+		<Select_Box_Scale>40</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-1</Select_Box_Z_Adjust>
+
+		<Icon_Name>i_button_uv_ig2000.tga</Icon_Name>
+		<Mouse_Collide_Override_Sphere_Radius> 50.0 </Mouse_Collide_Override_Sphere_Radius>
+
+        
+		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Mass>0.98</Mass>
+		<Max_Speed>5.6</Max_Speed>
+		<Min_Speed>1.06</Min_Speed>
+		<Max_Rate_Of_Turn>5.28</Max_Rate_Of_Turn>
+		<Max_Thrust>3.14</Max_Thrust>
+		<Max_Rate_Of_Roll>5.28</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>40</Bank_Turn_Angle>
+		<Begin_Turn_Towards_Distance>800.0</Begin_Turn_Towards_Distance>
+		<Fires_Forward>no</Fires_Forward>
+		<Max_Lift>3.14</Max_Lift>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>
+		<Maintenance_Cost>0.1</Maintenance_Cost>
+		<Affiliation>Hutt_Cartels</Affiliation>
+		<Shield_Points>10</Shield_Points>
+		<Tactical_Health>22</Tactical_Health>
+		<Shield_Refresh_Rate>0.5</Shield_Refresh_Rate>
+		<Energy_Capacity>500</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+		<Ship_Class>fighter</Ship_Class>
+		<Armor_Type> Armor_Fighter </Armor_Type>
+        <Shield_Armor_Type>Shield_Fighter</Shield_Armor_Type>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Political_Control>0</Political_Control>
+		<Squadron_Capacity>12</Squadron_Capacity>
+		<Number_per_Squadron>12</Number_per_Squadron>
+		<Size_Value>8</Size_Value>
+		<SpaceBehavior>HUNT, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+
+		<HardPoints> HP_Aggressor_Assault_Fighter_00, HP_Aggressor_Assault_Fighter_01 </HardPoints> 
+
+		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>5000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
+		<Death_Explosions>Tiny_Explosion_Space</Death_Explosions>
+		<Death_SFXEvent_Start_Die>Unit_X_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
+	
+		
+		<SFXEvent_Fire>Unit_Star_Viper_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Star_Viper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Star_Viper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Star_Viper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Star_Viper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Star_Viper</SFXEvent_Guard>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Star_Viper </SFXEvent_Move_Into_Nebula>
+		<Death_SFXEvent_Start_Die>Unit_A_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Star_Viper </SFXEvent_Attack_Hardpoint>
+
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Star_Viper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Star_Viper </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Low_Warning> Unit_Enemy_Health_Low_Star_Viper </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Critical_Warning> Unit_Enemy_Health_Critical_Star_Viper </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+		<SFXEvent_Ambient_Moving> Unit_Star_Viper_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Star_Viper_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<CategoryMask> Fighter | AntiBomber</CategoryMask>
+		<Property_Flags> SmallShip </Property_Flags>
+		<Victory_Relevant>no</Victory_Relevant>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+
+		<Custom_Footprint_Radius> 7.0 </Custom_Footprint_Radius>
+		<MovementClass> Space </MovementClass>
+		<FormationOrder>2</FormationOrder>
+		<Out_Of_Combat_Defense_Adjustment>-1.0</Out_Of_Combat_Defense_Adjustment>
+		<Minimum_Follow_Distance>25.0</Minimum_Follow_Distance>
+		<Create_Team>Yes</Create_Team>
+		<AI_Combat_Power>5.68</AI_Combat_Power>
+		<Collision_Box_Modifier>2.0</Collision_Box_Modifier>
+		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
+		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+		
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+	
+
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Spin_Away_On_Death>Yes</Spin_Away_On_Death>
+		<Spin_Away_On_Death_Chance>0.2</Spin_Away_On_Death_Chance>
+		<Spin_Away_On_Death_Time>2.0f</Spin_Away_On_Death_Time>
+		<Spin_Away_On_Death_Explosion>Small_Explosion_Space</Spin_Away_On_Death_Explosion>
+		<Spin_Away_On_Death_SFXEvent_Start_Die>Unit_A_Wing_Spinning_By</Spin_Away_On_Death_SFXEvent_Start_Die>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+
+		<Strafe_Distance>500.0</Strafe_Distance>
+		<Population_Value>0</Population_Value>
+	</SpaceUnit>
+	
+	<Squadron Name="Aggressor_Assault_Fighter_Squadron">
+		<Text_ID>TEXT_AGGRESSOR_ASSAULT_FIGHTER_SQUADRON</Text_ID>
+		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>-->
+		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
+		<GUI_Row> 1 </GUI_Row>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Autoresolve_Health>50</Autoresolve_Health>
+		<Affiliation>Hutt_Cartels</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>300</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline />
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures />
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<Squadron_Units>Aggressor_Assault_Fighter, Aggressor_Assault_Fighter, Aggressor_Assault_Fighter</Squadron_Units>
+		<Squadron_Units>Aggressor_Assault_Fighter, Aggressor_Assault_Fighter, Aggressor_Assault_Fighter</Squadron_Units>
+		<Squadron_Units>Aggressor_Assault_Fighter, Aggressor_Assault_Fighter, Aggressor_Assault_Fighter</Squadron_Units>
+		<Squadron_Units>Aggressor_Assault_Fighter, Aggressor_Assault_Fighter, Aggressor_Assault_Fighter</Squadron_Units>
+		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-120.0,-90.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,-120.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-240.0,-150.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-180.0,0.0,0.0</Squadron_Offsets>
+		<Icon_Name>i_button_uv_ig2000.tga</Icon_Name>
+		<GUI_Model_Name>clawcraft.ALO</GUI_Model_Name>
+		<GUI_Distance>120</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+		<Max_Squad_Size> 12 </Max_Squad_Size>
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
+
+		<FormationOrder>1</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>500.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Property_Flags> SmallShip </Property_Flags>
+		<Score_Cost_Credits> 420</Score_Cost_Credits>
+		
+			<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+	
+
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Encyclopedia_Text>TEXT_STATBLOCK_AGGRESSORFIGHTER_BASE TEXT_STATBLOCK_AGGRESSORFIGHTER_MOVE TEXT_STATBLOCK_AGGRESSORFIGHTER_WEAP1 TEXT_STATBLOCK_AGGRESSORFIGHTER_WEAP2 TEXT_TOOLTIP_AGGRESSOR_ASSAULT_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_INTERCEPTORHEAVY</Encyclopedia_Unit_Class>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		<Population_Value>0</Population_Value>
+	</Squadron>
 	
 	<SpaceUnit Name="Rihkxyrk">
 
 		<Text_ID>TEXT_UNIT_PIRATE_FIGHTER</Text_ID>
 		<Encyclopedia_Text>TEXT_STATBLOCK_RIHKXYRK_BASE TEXT_STATBLOCK_RIHKXYRK_MOVE TEXT_STATBLOCK_RIHKXYRK_WEAP1 TEXT_STATBLOCK_RIHKXYRK_WEAP2 TEXT_TOOLTIP_PIRATE_FIGHTER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_FBHEAVY </Encyclopedia_Unit_Class>
 		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>-->
 		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
 		<Space_Model_Name>NV_black_sun_fighter.ALO</Space_Model_Name>
@@ -1467,7 +1672,7 @@
 		</Unit_Abilities_Data>
 
 		<Encyclopedia_Text>TEXT_STATBLOCK_RIHKXYRK_BASE TEXT_STATBLOCK_RIHKXYRK_MOVE TEXT_STATBLOCK_RIHKXYRK_WEAP1 TEXT_STATBLOCK_RIHKXYRK_WEAP2 TEXT_TOOLTIP_PIRATE_FIGHTER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_FBHEAVY</Encyclopedia_Unit_Class>
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>

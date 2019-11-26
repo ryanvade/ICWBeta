@@ -376,6 +376,7 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
 		<Reward_Param1>Luke_Tag</Reward_Param1>
+		<Branch>Faction_Branch_Remnant</Branch>
 		<Prereq>Kill_Luke</Prereq>
 	</Event>
 
@@ -393,8 +394,7 @@
 		<Reward_Param8>Palpatine_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Emperor_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Kill_Luke</Prereq>
-		<Prereq>Capture_Luke_Speech</Prereq>
+		<Prereq>Kill_Luke, Capture_Luke_Speech</Prereq>
 	</Event>
 
 	<Event Name="Lose_Luke">
@@ -422,6 +422,7 @@
 		<Reward_Param8>Palpatine_Intro_Speech</Reward_Param8>
 		<Reward_Param9>Emperor_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
+		<Branch>Faction_Branch_Remnant</Branch>
 		<Prereq>Capture_Luke_Speech</Prereq>
 		<Prereq>Lose_Luke </Prereq>
 	</Event>
@@ -700,6 +701,7 @@
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Save_Luke</Prereq>
 		<Branch>Save_Luke_Branch</Branch>
+		<Branch>Faction_Branch_Newrep</Branch>
 	</Event>
 	
 	<Event Name="Luke_Complete_Success">

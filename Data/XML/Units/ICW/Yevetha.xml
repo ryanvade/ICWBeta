@@ -273,7 +273,7 @@
 	<SpaceUnit Name="Trifoil">
 
 		<Text_ID>TEXT_UNIT_TRIFOIL</Text_ID>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_FIGHTER </Encyclopedia_Unit_Class>
 		<Space_Model_Name>trifoil.ALO</Space_Model_Name>
 		<Scale_Factor>0.055</Scale_Factor>
 		<Select_Box_Scale>70</Select_Box_Scale>
@@ -372,7 +372,7 @@
 		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 
-		<Encyclopedia_Text>TEXT_TOOLTIP_TRIFOIL</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_STATBLOCK_TRIFOIL_BASE TEXT_STATBLOCK_TRIFOIL_MOVE TEXT_STATBLOCK_TRIFOIL_WEAP1 TEXT_TOOLTIP_TRIFOIL</Encyclopedia_Text>
 
 
 		<Spin_Away_On_Death>Yes</Spin_Away_On_Death>
@@ -454,8 +454,8 @@
 
 
 
-		<Encyclopedia_Text>TEXT_TOOLTIP_TRIFOIL</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_STATBLOCK_TRIFOIL_BASE TEXT_STATBLOCK_TRIFOIL_MOVE TEXT_STATBLOCK_TRIFOIL_WEAP1 TEXT_TOOLTIP_TRIFOIL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SMALLCRAFT_FIGHTER </Encyclopedia_Unit_Class>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>500</Tactical_Build_Cost_Multiplayer>
@@ -1673,7 +1673,7 @@
 	<HeroUnit Name="Vor_Duull">
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Text_ID>TEXT_HERO_VOR_DUULL</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_VOR_DUULL </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ADMIN2 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_VOR_DUULL </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PROCTOR </Encyclopedia_Unit_Class>
 
 		<Icon_Name>i_button_yev3.tga</Icon_Name>
@@ -1707,7 +1707,7 @@
 
 		<Abilities SubObjectList="Yes">
 
-			<Reduce_Production_Price_Ability Name="Gregor_Reduce_Production_Price">
+			<Reduce_Production_Price_Ability Name="Duull_Reduce_Production_Price">
 				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
 				<Applicable_Unit_Types />
 				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
@@ -1735,7 +1735,7 @@
 		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
 		<Company_Units>Vor_Duull</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
-		<Encyclopedia_Text>TEXT_TOOLTIP_VOR_DUULL</Encyclopedia_Text>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ADMIN2 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_VOR_DUULL</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PROCTOR </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>

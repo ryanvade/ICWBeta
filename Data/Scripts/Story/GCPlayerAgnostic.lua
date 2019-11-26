@@ -60,7 +60,8 @@ function Begin_GC(message)
         StructureDisplay =
             PlanetInformationDisplayComponent(GC.Events.SelectedPlanetChanged, GC.Events.GalacticProductionFinished)
 
-        ResourceManagerInstance = DummyBasedResourceManager(GC.Planets, GC)
+        AiDummyHandler = AiDummyLifeCycleHandler(GC.Planets, GC.Events.PlanetOwnerChanged)
+        ResourceManagerInstance = DummyBasedResourceManager(GC, AiDummyHandler)
 
         GalacticDisplay = DisplayComponentContainer()
         GalacticDisplay:add_display_component(ShipCrewDisplayComponent(ResourceManagerInstance))
@@ -68,18 +69,19 @@ function Begin_GC(message)
         GalacticDisplay:add_display_component(GalacticNewsFeed)
 
         -- ObjectivesDisplay =
-            -- ObjectivesDisplayComponentContainer(GC.Events.TacticalBattleStarting, GC.Events.TacticalBattleEnding)
-        
+        -- ObjectivesDisplayComponentContainer(GC.Events.TacticalBattleStarting, GC.Events.TacticalBattleEnding)
+
         -- ObjectivesDisplay:add_display_component(ShipCrewDisplayComponent(ResourceManagerInstance))
 
-        Filter = CategoryFilter(plot, GC)
+        Filter = CategoryFilter(plot, GC, AiDummyHandler)
 
         Create_Thread("TransactionManagerThread")
     elseif message == OnUpdate then
         GC:Update()
         Filter:Update()
+        AiDummyHandler:update()
         GalacticDisplay:update_components()
-        -- ObjectivesDisplay:update_components()
+    -- ObjectivesDisplay:update_components()
     end
 end
 

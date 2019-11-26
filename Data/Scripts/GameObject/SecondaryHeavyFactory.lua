@@ -54,7 +54,7 @@ function State_Waiting_For_Control(message)
 		Object.Set_Garrison_Spawn(false)
 	elseif message == OnUpdate then
 		faction = Object.Get_Owner().Get_Faction_Name()
-		if faction == "REBEL" or faction == "EMPIRE" or faction == "UNDERWORLD" or faction == "PENTASTAR" or faction == "YEVETHA" 
+		if faction == "REBEL" or faction == "EMPIRE" or faction == "UNDERWORLD" or faction == "PENTASTAR" 
 		or faction == "HAPES_CONSORTIUM" or faction == "TERADOC" or faction == "HUTTS" or faction == "PIRATES" or faction == "WARLORDS" 
 		or faction == "HUTT_CARTELS" or faction == "CORPORATE_SECTOR" then
 			Set_Next_State("State_Controlled")

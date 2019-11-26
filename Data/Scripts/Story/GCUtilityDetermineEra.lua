@@ -34,8 +34,14 @@ end
 function Find_Faction(message)
     if message == OnEnter then
 
+        local p_cis = Find_Player("Rebel")
         local p_republic = Find_Player("Empire")
 
+        if p_republic.Is_Human() then
+            Story_Event("ENABLE_BRANCH_GAR_FLAG")
+        elseif p_cis.Is_Human() then
+            Story_Event("ENABLE_BRANCH_CIS_FLAG")
+        end
 
         techLevel = p_republic.Get_Tech_Level()
 

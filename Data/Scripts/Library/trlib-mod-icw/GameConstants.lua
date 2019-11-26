@@ -57,8 +57,8 @@ GameConstants = {
         "WARLORDS",
         "CORPORATE_SECTOR",
         --"HUTT_CARTELS",
-        "HAPES_CONSORTIUM",
-		"MANDALORIANS"
+        "HAPES_CONSORTIUM"
+		--"MANDALORIANS"
     },
     ALL_FACTION_TEXTS = {
         EMPIRE = "TEXT_FACTION_EMPIRE",
@@ -97,7 +97,6 @@ GameConstants = {
         ["REBEL"] = {r = 239, g = 139, b = 9},
         ["UNDERWORLD"] = {r = 102, g = 188, b = 217},
         ["PENTASTAR"] = {r = 55, g = 64, b = 184},
-        ["YEVETHA"] = {r = 248, g = 237, b = 60},
         ["TERADOC"] = {r = 255, g = 20, b = 50},
         ["PIRATES"] = {r = 179, g = 148, b = 105},
         ["HUTTS"] = {r = 255, g = 255, b = 255},

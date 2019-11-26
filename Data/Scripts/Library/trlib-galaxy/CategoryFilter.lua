@@ -23,7 +23,9 @@ require("trlib-std/class")
 
 CategoryFilter = class()
 
-function CategoryFilter:new(plot, galacticConquest)
+---@param galacticConquest GalacticConquest
+---@param ai_dummy_handler AiDummyLifeCycleHandler
+function CategoryFilter:new(plot, galacticConquest, ai_dummy_handler)
     self.EventNames = {
         "Filter_Non_Capital",
         "Filter_Capitals",
@@ -44,10 +46,6 @@ function CategoryFilter:new(plot, galacticConquest)
 
     self.SpawnedHumanDummies = {}
 
-    self.SpawnedAiDummies = {}
-
-    self.LastAiDummyCheck = nil
-
     self.GalacticConquest = galacticConquest
     self.GalacticConquest.Events.SelectedPlanetChanged:AttachListener(self.SpawnCategoryDummy, self)
     self.GalacticConquest.Events.PlanetOwnerChanged:AttachListener(self.OnPlanetOwnerChanged, self)
@@ -59,17 +57,17 @@ function CategoryFilter:new(plot, galacticConquest)
         end
     end
 
-    local allPlanets = self.GalacticConquest.Planets
-    for _, planet in pairs(allPlanets) do
-        self:SpawnAiDummies(planet)
-    end
+    ai_dummy_handler:add_to_ai_dummy_set {
+        Non_Capital_Category_Dummy = 1,
+        Capital_Category_Dummy = 1,
+        Structure_Category_Dummy = 1,
+        Story_Category_Dummy = 1
+    }
 
-    self.LastAiDummyCheck = GetCurrentTime()
 end
 
 function CategoryFilter:Update()
     self:HandleFilterChange()
-    self:RespawnMissingDummies()
 end
 
 function CategoryFilter:HandleFilterChange()
@@ -90,45 +88,10 @@ function CategoryFilter:OnPlanetOwnerChanged(planet)
         return
     end
 
-    self:ClearAiDummies(planet)
     if planet:get_owner().Is_Human() then
         if planet == self.GalacticConquest:GetSelectedPlanet() then
             self:SpawnCategoryDummy(self.GalacticConquest:GetSelectedPlanet())
         end
-    else
-        self:SpawnAiDummies(planet)
-    end
-end
-
-function CategoryFilter:RespawnMissingDummies()
-    if (GetCurrentTime() - self.LastAiDummyCheck) < 10 then
-        return
-    end
-
-    for _, planet in pairs(self.GalacticConquest.Planets) do
-        if not planet:get_owner().Is_Human() then
-            self:CreateAiEntry(planet)
-            self:RemoveInvalidEntries(self.SpawnedAiDummies[planet])
-            if table.getn(self.SpawnedAiDummies[planet]) == 0 then
-                self:SpawnAiDummies(planet)
-            end
-        end
-    end
-
-    self.LastAiDummyCheck = GetCurrentTime()
-end
-
-function CategoryFilter:RemoveInvalidEntries(tab)
-    for i, object in pairs(tab) do
-        if not TestValid(object) then
-            table.remove(tab, i)
-        end
-    end
-end
-
-function CategoryFilter:CreateAiEntry(planet)
-    if not self.SpawnedAiDummies[planet] then
-        self.SpawnedAiDummies[planet] = {}
     end
 end
 
@@ -158,34 +121,6 @@ function CategoryFilter:SpawnCategoryDummy(selectedPlanet)
         SpawnList(typeList, selectedPlanet:get_game_object(), self.GalacticConquest.HumanPlayer, false, false)
 end
 
-function CategoryFilter:SpawnAiDummies(planet)
-    local owner = planet:get_owner()
-    if owner.Is_Human() or owner == Find_Player("Neutral") then
-        return
-    end
-
-    --hopefully prevents perception evaluation crashes
-    if owner and planet then
-        if EvaluatePerception("Has_Starbase", self.GalacticConquest.HumanPlayer, planet:get_game_object()) == 0 then
-            return
-        end
-    end
-
-    self:ClearAiDummies(planet)
-    self:CreateAiEntry(planet)
-
-    local typeList = {
-        "Non_Capital_Category_Dummy",
-        "Capital_Category_Dummy",
-        "Structure_Category_Dummy",
-        "Story_Category_Dummy"
-    }
-
-    local dummies = SpawnList(typeList, planet:get_game_object(), planet:get_owner(), false, false)
-    for _, dummy in pairs(dummies) do
-        table.insert(self.SpawnedAiDummies[planet], dummy)
-    end
-end
 
 function CategoryFilter:ClearDummies()
     local dummies = nil
@@ -206,17 +141,5 @@ function CategoryFilter:ClearDummies()
     end
 end
 
-function CategoryFilter:ClearAiDummies(planet)
-    if not self.SpawnedAiDummies[planet] then
-        return
-    end
-
-    for i, dummy in pairs(self.SpawnedAiDummies[planet]) do
-        if TestValid(dummy) then
-            dummy.Despawn()
-        end
-        table.remove(self.SpawnedAiDummies[planet], i)
-    end
-end
 
 return CategoryFilter

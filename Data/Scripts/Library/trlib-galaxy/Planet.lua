@@ -146,15 +146,13 @@ function Planet:update_influence_information()
             self.ownerInfluence = self.ownerInfluence + 2
         end
 
-        if EvaluatePerception("Planet_Has_Company", self:get_owner(), self.gameObject) == 1 then
-            self.ownerInfluence = self.ownerInfluence + 1
-        end
-
-        if EvaluatePerception("Recent_Conflict_Space", self:get_owner(), self.gameObject) == 1 then
+        self.ownerInfluence = self.ownerInfluence + EvaluatePerception("Planet_Has_Company", self:get_owner(), self.gameObject)
+            
+        if EvaluatePerception("Recent_Conflict_Space", self:get_owner(), self.gameObject) ~= 0 then
             self.ownerInfluence = self.ownerInfluence - 1
         end
 
-        if EvaluatePerception("Recent_Conflict_Ground", self:get_owner(), self.gameObject) == 1 then
+        if EvaluatePerception("Recent_Conflict_Ground", self:get_owner(), self.gameObject) ~= 0 then
             self.ownerInfluence = self.ownerInfluence - 2
         end
 

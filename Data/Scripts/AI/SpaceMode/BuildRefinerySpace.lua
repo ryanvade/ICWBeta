@@ -88,8 +88,6 @@ function MainForce_Thread()
 			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)
 		elseif faction_name == "TERADOC" then
 			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)
-		elseif faction_name == "YEVETHA" then
-			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)
 		elseif faction_name == "CORPORATE_SECTOR" then
 			MainForce.Build("UC_Empire_Mineral_Extractor", good_pad)				
 		else

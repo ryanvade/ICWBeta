@@ -229,18 +229,18 @@ GameObjectLibrary = {
     --  ["CREW_RESOURCE_DUMMY"]={
     --      Text="TEXT_DISPLAY_SLAYN_KORPIL"
     --  },
-    -- ["PLACEHOLDER_CATEGORY_DUMMY"]={
-    --     Text="TEXT_DISPLAY_PLACEHOLDER_CATEGORY_DUMMY"
-    -- },
-    -- ["NON_CAPITAL_CATEGORY_DUMMY"]={
-    --     Text="TEXT_DISPLAY_NON_CAPITAL_CATEGORY_DUMMY"
-    -- },
-    -- ["CAPITAL_CATEGORY_DUMMY"]={
-    --     Text="TEXT_DISPLAY_CAPITAL_CATEGORY_DUMMY"
-    -- },
-    -- ["STRUCTURE_CATEGORY_DUMMY"]={
-    --     Text="TEXT_DISPLAY_STRUCTURE_CATEGORY_DUMMY"
-    -- }
+        ["PLACEHOLDER_CATEGORY_DUMMY"]={
+            Text="TEXT_DISPLAY_PLACEHOLDER_CATEGORY_DUMMY"
+        },
+        ["NON_CAPITAL_CATEGORY_DUMMY"]={
+            Text="TEXT_DISPLAY_NON_CAPITAL_CATEGORY_DUMMY"
+        },
+        ["CAPITAL_CATEGORY_DUMMY"]={
+            Text="TEXT_DISPLAY_CAPITAL_CATEGORY_DUMMY"
+        },
+        ["STRUCTURE_CATEGORY_DUMMY"]={
+            Text="TEXT_DISPLAY_STRUCTURE_CATEGORY_DUMMY"
+        }
 
     },
     InfluenceLevels = { 
@@ -335,7 +335,6 @@ GameObjectLibrary = {
 			}
 		},
         ["LANCER_FRIGATE"]={
-            Ship_Crew_Requirement = 1,
             Scripts={
                 "MultiLayer",
                 "SingleUnitRetreat"
@@ -904,8 +903,7 @@ GameObjectLibrary = {
         },
         ["REPUBLIC_BOARDING_SHUTTLE"]={
             Scripts={
-				"MultiLayer",
-                "Boarding"
+	            "Boarding"
             },
             Fighters={
             }
@@ -3191,7 +3189,7 @@ GameObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters={
-                ["RIHKXYRK_SQUADRON"]={
+                ["AGGRESSOR_ASSAULT_FIGHTER_SQUADRON"]={
 					["REBEL"] = {
                         Reserve=0,
                         Initial=1
@@ -3634,7 +3632,6 @@ GameObjectLibrary = {
             }
         },
         ["GENERIC_STAR_DESTROYER"]={
-            Ship_Crew_Requirement = 30,
             Scripts={
                 "MultiLayer",
                 "FighterSpawn"

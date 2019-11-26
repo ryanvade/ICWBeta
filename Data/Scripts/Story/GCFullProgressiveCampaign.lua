@@ -44,7 +44,9 @@ function Definitions()
     Set_Subera_Jax = Empire_Fractures,
 	E_Level_Five = PellaeonSpawns,
 	Trigger_Council_Thrawn_Death = Ciutric_Breakaway,
-	Vassal_Release_Hapes = HapesVassalEmerge
+	Vassal_Release_Hapes = HapesVassalEmerge,
+	NewRep_Evac_Trigger = Check_Coruscant_Owner,
+	Empire_wins_Coruscant = Spawn_Empire_Reward
   }
 
 end
@@ -1340,3 +1342,26 @@ function HapesVassalEmerge(message)
   
 	end
   end
+  
+function Check_Coruscant_Owner(message)
+  if message == OnEnter then
+		p_newrep = Find_Player("Rebel")
+		
+		if FindPlanet("Coruscant").Get_Owner() == p_newrep then
+			Story_Event("ENABLE_BATTLE_OF_CORUSCANT")
+		end
+	end
+  end
+  
+function Spawn_Empire_Reward(message)
+  if message == OnEnter then
+
+    local p_empire = Find_Player("Empire")
+    local start_planet = FindPlanet("Coruscant")
+
+
+	spawn_list_coruscant = {"Generic_Star_Destroyer_Two", "Generic_Secutor", "Generic_Allegiance", "MTC_Sensor", "MTC_Sensor", "MTC_Sensor", "Generic_Interdictor_Cruiser", "Generic_Victory_Destroyer", "Vindicator_Cruiser", "Carrack_Cruiser", "Carrack_Cruiser", "Lancer_Frigate", "Lancer_Frigate", "Lancer_Frigate", "Raider_Pentastar", "Generic_Procursator", "Generic_Victory_Destroyer_Two", "Generic_Star_Destroyer", "Generic_Star_Destroyer", "Strike_Cruiser", "Strike_Cruiser", "Generic_Victory_Destroyer" }
+    CoruscantSpawn = SpawnList(spawn_list_coruscant, start_planet, p_empire,false,false)
+
+  end
+end

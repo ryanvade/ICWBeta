@@ -6,19 +6,21 @@ require("trlib-util/StoryUtil")
 ---@class DummyBasedResourceManager
 DummyBasedResourceManager = class()
 
-function DummyBasedResourceManager:new(planets, gc)
-    ---@type table<Planet, table<string, any>>
-    self.planets = {}
-
+---@param gc GalacticConquest
+---@param ai_dummy_handler AiDummyLifeCycleHandler
+function DummyBasedResourceManager:new(gc, ai_dummy_handler)
+    ---@private
     self.crew_resource_dummy_name = "Crew_Resource_Dummy"
+
+    ---@private
     self.crew_resource_dummy_type = Find_Object_Type("Crew_Resource_Dummy")
+
+    ---@private
     self.placeholder_dummy_type_name = "Placeholder_Category_Dummy"
 
-    ---@type GalacticConquest
-    self.galactic_conquest = gc
-
-    ---@type string
-    self.active_tier_ability_name = nil
+    ---@private
+    ---@type GameObject[]
+    self.player_dummies = {}
 
     self.ship_crews = 50
 
@@ -37,34 +39,13 @@ function DummyBasedResourceManager:new(planets, gc)
         Ship_Crew_Tier_1 = 1
     }
 
-    self:place_initial_placeholders(planets)
+    gc.Events.SelectedPlanetChanged:AttachListener(self.on_selected_planet_changed, self)
+    gc.Events.GalacticProductionStarted:AttachListener(self.on_production_queued, self)
+    gc.Events.GalacticProductionCanceled:AttachListener(self.on_production_canceled, self)
 
-    self.galactic_conquest.Events.SelectedPlanetChanged:AttachListener(self.on_selected_planet_changed, self)
-    self.galactic_conquest.Events.GalacticProductionStarted:AttachListener(self.on_production_queued, self)
-    self.galactic_conquest.Events.GalacticProductionCanceled:AttachListener(self.on_production_canceled, self)
+    ai_dummy_handler:add_to_ai_dummy_set(self:get_ai_dummy_table())
 
     self.resources_changed_event = Observable()
-end
-
----@private
----@param planets table<string, Planet>
-function DummyBasedResourceManager:place_initial_placeholders(planets)
-    ---@param planet Planet
-    for _, planet in pairs(planets) do
-        self.planets[planet] = {
-            dummy_objects = {}
-        }
-
-        if not planet:get_owner().Is_Human() then
-            self.planets[planet].dummy_objects =
-                GalacticUtil.spawn {
-                objects = self:get_ai_dummy_table(),
-                owner = planet:get_owner(),
-                location = planet:get_game_object()
-            }
-        end
-        DebugMessage("Placeholder spawn sequence cycled")
-    end
 end
 
 ---@private
@@ -91,20 +72,7 @@ function DummyBasedResourceManager:on_selected_planet_changed(planet)
         return
     end
 
-    local planet_entry = self.planets[planet]
-
-    for _, dummy in pairs(planet_entry.dummy_objects) do
-        if TestValid(dummy) then
-            dummy.Despawn()
-        end
-    end
-
-    planet_entry.dummy_objects =
-        GalacticUtil.spawn {
-        objects = self:get_required_dummy_types(),
-        owner = planet:get_owner(),
-        location = planet:get_game_object()
-    }
+    self:refresh_player_dummies(planet)
 end
 
 ---@param planet Planet
@@ -115,27 +83,13 @@ function DummyBasedResourceManager:on_production_queued(planet, game_object_type
         return
     end
 
-    local planet_entry = self.planets[planet]
-
     local removed_resources = self:remove_resources(game_object_type_name)
 
     if not removed_resources then
         return
     end
 
-    for _, dummy in pairs(planet_entry.dummy_objects) do
-        if TestValid(dummy) then
-            dummy.Despawn()
-        end
-    end
-
-    planet_entry.dummy_objects =
-        GalacticUtil.spawn {
-        objects = self:get_required_dummy_types(),
-        owner = planet:get_owner(),
-        location = planet:get_game_object()
-    }
-
+    self:refresh_player_dummies(planet)
     self.resources_changed_event:Notify(self.ship_crews)
 end
 
@@ -186,22 +140,24 @@ function DummyBasedResourceManager:on_production_canceled(planet, game_object_ty
 
     self.ship_crews = self.ship_crews + resource
 
-    local planet_entry = self.planets[planet]
+    self:refresh_player_dummies(planet)
+    self.resources_changed_event:Notify(self.ship_crews)
+end
 
-    for _, dummy in pairs(planet_entry.dummy_objects) do
+---@private
+function DummyBasedResourceManager:refresh_player_dummies(planet)
+    for _, dummy in pairs(self.player_dummies) do
         if TestValid(dummy) then
             dummy.Despawn()
         end
     end
 
-    planet_entry.dummy_objects =
+    self.player_dummies =
         GalacticUtil.spawn {
         objects = self:get_required_dummy_types(),
         owner = planet:get_owner(),
         location = planet:get_game_object()
     }
-
-    self.resources_changed_event:Notify(self.ship_crews)
 end
 
 function DummyBasedResourceManager:get_required_dummy_types()

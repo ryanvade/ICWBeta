@@ -25,7 +25,9 @@ require("trlib-std/ModContentLoader").get("GovernmentManager")
 require("trlib-galaxy/GalacticEvents")
 require("trlib-galaxy/Planet")
 
+---@class GalacticConquest
 GalacticConquest = class()
+
 function GalacticConquest:new(player_agnostic_plot, playableFactions)
     self.HumanPlayer = self:FindHumanPlayerInTable(playableFactions)
 
