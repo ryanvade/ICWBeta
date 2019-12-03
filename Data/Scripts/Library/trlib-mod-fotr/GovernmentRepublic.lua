@@ -102,15 +102,15 @@ function GovernmentRepublic:KDYContracts()
     }
    
     local contractObject = Find_First_Object("DUMMY_KUAT_CONTRACT")
-    --if contractObject then
-        local planet = FindPlanet("Kuat")
+    if contractObject then
+        local planet = contractObject.Get_Planet_Location()
         local spawnChance = GameRandom(1,100)
         if spawnChance <= 15 then
             table.remove(shipList, GameRandom(1,3))
             table.remove(shipList, GameRandom(1,2))
             local KDYspawn = SpawnList(shipList, planet, self.RepublicPlayer, true, false)
         end
-    --end
+    end
 
 end
 
