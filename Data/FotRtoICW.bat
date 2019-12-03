@@ -38,3 +38,17 @@ rename i_galactic_dashboard_wide_nr.DDS i_galactic_dashboard_wide_rebel.DDS
 cd ..\Maps
 rename Front_End_Demo_Attract.ted Front_End_Demo_Attract_FotR.ted
 rename Front_End_Demo_Attract_ICW.ted Front_End_Demo_Attract.ted
+rename Adumar.ted FOTR_Adumar.ted
+rename ICW_Adumar.ted Adumar.ted
+rename Bothawui.ted FotR_Bothawui.ted
+rename ICW_Bothawui.ted Bothawui.ted
+rename Kashyyyk.ted FotR_Kashyyyk.ted
+rename ICW_Kashyyyk.ted Kashyyyk.ted
+rename _Land_Planet_Ryloth_02.ted FotR_Land_Planet_Ryloth_02.ted
+rename ICW_Land_Planet_Ryloth_02.ted _Land_Planet_Ryloth_02.ted
+rename Mon_Calamari_Rogue.ted FotR_Mon_Calamari_Rogue.ted
+rename ICW_Mon_Calamari_Rogue.ted Mon_Calamari_Rogue.ted
+rename Naboo.ted FotR_Naboo.ted
+rename ICW_Naboo.ted Naboo.ted
+rename RhenVarRougey.ted FotR_RhenVarRougey.ted
+rename ICW_RhenVarRougey.ted RhenVarRougey.ted

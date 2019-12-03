@@ -472,7 +472,7 @@
 		<Targeting_Priority_Set>ATATAntiEverything</Targeting_Priority_Set>
 		<Autonomous_Move_Extension_Vs_Attacker>100.0</Autonomous_Move_Extension_Vs_Attacker>
 		<Weather_Category>LargeWalker</Weather_Category>
-		<Death_Clone>Damage_Normal, Large_Explosion_Land</Death_Clone>
+		<!-- <Death_Clone>Damage_Normal, Large_Explosion_Land</Death_Clone> -->
 		<Score_Cost_Credits>1000</Score_Cost_Credits>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 		<Vehicle_Thief_Inside_Clone>AT_TE_Walker_Captured</Vehicle_Thief_Inside_Clone>
@@ -1538,6 +1538,8 @@
 		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
 		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
 		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+		
+		<Death_Clone>Damage_Normal, A6_Juggernaut_Death_Clone</Death_Clone>
 
 		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
@@ -1622,6 +1624,24 @@
 		</Unit_Abilities_Data>
 	</GroundVehicle>
 	
+	
+	<GroundVehicle Name="A6_Juggernaut_Death_Clone">
+		<Variant_Of_Existing_Type>A6_Juggernaut</Variant_Of_Existing_Type>
+		<Land_Model_Name>a6_juggernaut_dc.alo</Land_Model_Name>
+		<Specific_Death_Anim_Type/>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Death_Projectiles>Proj_Heavy_Vehicle</Death_Projectiles>
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<Death_Persistence_Duration> 15 </Death_Persistence_Duration>
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+	</GroundVehicle>
 	<!-- ************** CIS Primary *******************-->
 	<!-- ************** CIS Primary *******************-->
 	<!-- ************** CIS Primary *******************-->
@@ -1705,7 +1725,7 @@
 		<MovementClass> Infantry </MovementClass>
 		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
 
-		<SFXEvent_Select>Unit_Select_Dark_Trooper_1</SFXEvent_Select>
+		<SFXEvent_Select>Unit_Select_b1_droid</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Dark_Trooper_1</SFXEvent_Move>
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_1</SFXEvent_Fleet_Move>
 		<SFXEvent_Attack>Unit_Attack_Dark_Trooper_1</SFXEvent_Attack>

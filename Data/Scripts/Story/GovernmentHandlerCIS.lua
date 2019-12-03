@@ -47,7 +47,7 @@ end
 function Support_IGBC(message)
     if message == OnEnter then
         currentSupport = GlobalValue.Get("IGBCApprovalRating")
-        GlobalValue.Set("IGBCApprovalRating", currentSupport + 75)
+        GlobalValue.Set("IGBCApprovalRating", currentSupport + 5)
 
         currentSupport = GlobalValue.Get("IGBCApprovalRating")
         if currentSupport > 99 then

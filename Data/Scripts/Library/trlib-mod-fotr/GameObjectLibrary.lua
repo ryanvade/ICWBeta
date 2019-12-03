@@ -235,22 +235,22 @@ GameObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters = {
-                ["ARC_170_SQUADRON"] = {
+				["V-WING_SQUADRON"] = {
                     ["EMPIRE"] = {
-                        Reserve = 9,
-                        Initial = 4
-                    }
-                },
-                ["TORRENT_SQUADRON"] = {
-                    ["EMPIRE"] = {
-                        Reserve = 10,
+                        Reserve = 8,
                         Initial = 3
-                    }
+                    },
                 },
+				["TWIN_ION_ENGINE_STARFIGHTER_SQUADRON"] = {
+                    ["EMPIRE"] = {
+                        Reserve = 8,
+                        Initial = 3
+                    },
+                },				
                 ["BTLB_Y-WING_SQUADRON"] = {
                     ["EMPIRE"] = {
-                        Reserve = 2,
-                        Initial = 1
+                        Reserve = 8,
+                        Initial = 3
                     }
                 }
             }
@@ -711,8 +711,8 @@ GameObjectLibrary = {
                 },
                 ["BTLB_Y-WING_SQUADRON"] = {
                     ["EMPIRE"] = {
-                        Reserve = 4,
-                        Initial = 2
+                        Reserve = 2,
+                        Initial = 1
                     }
                 }
             }

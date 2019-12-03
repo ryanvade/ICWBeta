@@ -59,7 +59,10 @@
 		<Variant_Of_Existing_Type>Generic_Star_Base_3</Variant_Of_Existing_Type>
 		<Affiliation>Rebel, Teradoc, Pentastar, Hutts, Pirates</Affiliation>
 		<Tech_Level>0</Tech_Level>
+		
 		<Prev_Level_Base>NR_Star_Base_2</Prev_Level_Base>
+		<Next_Level_Base>NR_Star_Base_4</Next_Level_Base>
+
 
 	<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
 		<Starting_Spawned_Units_Tech_0>Vulture_Squadron, 4</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
@@ -68,14 +71,53 @@
 		<Starting_Spawned_Units_Tech_0>Hyena_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>Hyena_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
-		<Starting_Spawned_Units_Tech_0>Gozanti_Cruiser_Squadron, 4</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
-		<Reserve_Spawned_Units_Tech_0>Gozanti_Cruiser_Squadron, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>Skirmish_C9979_Carrier, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_C9979_Carrier, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		<Starting_Spawned_Units_Tech_0>Munificent, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>Munificent, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		<Starting_Spawned_Units_Tech_0>Recusant, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
 		<Reserve_Spawned_Units_Tech_0>Recusant, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Tactical_Buildable_Objects_Campaign> 
+			Rebel,
+				RS_Enhanced_Shielding_L1_Upgrade,
+				RS_Enhanced_Shielding_L2_Upgrade,
+				RS_Improved_Weapons_L1_Upgrade,
+				RS_Improved_Weapons_L2_Upgrade,
+				RS_Reinforced_Armor_L1_Upgrade,
+				RS_Improved_Defenses_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+
+	</StarBase>
+	
+			<StarBase Name="NR_Star_Base_4">
+
+		<Variant_Of_Existing_Type>Generic_Star_Base_4</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Prev_Level_Base>NR_Star_Base_3</Prev_Level_Base>
+
+	<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+	<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>Vulture_Squadron, 4</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Vulture_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Hyena_Squadron, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Hyena_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_C9979_Carrier, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_C9979_Carrier, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_Munificent, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Munificent, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_Recusant, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Recusant, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_Providence, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Providence, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
 
 		<Tactical_Buildable_Objects_Campaign> 
 			Rebel,
@@ -145,7 +187,45 @@
 
 		<Variant_Of_Existing_Type>Generic_Star_Base_3</Variant_Of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
+		
 		<Prev_Level_Base>Remnant_Star_Base_2</Prev_Level_Base>
+				<Next_Level_Base>Remnant_Star_Base_4</Next_Level_Base>
+
+		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, -1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_LAC, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_LAC, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+		<Starting_Spawned_Units_Tech_0>Skirmish_Carrack_Cruiser_Lasers, 2</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Carrack_Cruiser_Lasers, 1</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+	
+		<Starting_Spawned_Units_Tech_0>Skirmish_Venator, 1</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
+		<Reserve_Spawned_Units_Tech_0>Skirmish_Venator, 2</Reserve_Spawned_Units_Tech_0> <!-- -1 == no limit -->
+
+
+		<Tactical_Buildable_Objects_Campaign>
+			Empire,
+				ES_Enhanced_Reactors_L1_Upgrade,
+				ES_Enhanced_Reactors_L2_Upgrade,
+				ES_Reinforced_Armor_L1_Upgrade,
+				ES_Reinforced_Armor_L2_Upgrade,
+				ES_Improved_Weapons_L1_Upgrade,
+				ES_Improved_Weapons_L2_Upgrade,
+				ES_Improved_Defenses_L1_Upgrade,
+		</Tactical_Buildable_Objects_Campaign>
+
+	</StarBase>
+	
+		<StarBase Name="Remnant_Star_Base_4">
+
+		<Variant_Of_Existing_Type>Generic_Star_Base_4</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Prev_Level_Base>Remnant_Star_Base_3</Prev_Level_Base>
 
 		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 3</Starting_Spawned_Units_Tech_0> <!-- 2 X-wing squadrons at a time -->
@@ -274,7 +354,7 @@
 
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+		<Reinforcement_Prevention_Radius> 2000 </Reinforcement_Prevention_Radius>
 
 		<!-- Tactical Production Options -->
 		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
@@ -418,7 +498,7 @@
 
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+		<Reinforcement_Prevention_Radius> 2000 </Reinforcement_Prevention_Radius>
 		<AI_Combat_Power>10000</AI_Combat_Power>
 
 		<!-- Tactical Production Options -->
@@ -495,7 +575,7 @@
 		
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
-		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+		<Reinforcement_Prevention_Radius> 2000 </Reinforcement_Prevention_Radius>
 		
 		<Shield_Points>20000</Shield_Points>
 		<Shield_Refresh_Rate>35</Shield_Refresh_Rate>
@@ -658,7 +738,7 @@
 
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+		<Reinforcement_Prevention_Radius> 2000 </Reinforcement_Prevention_Radius>
 		<AI_Combat_Power>10000</AI_Combat_Power>
 
 		<!-- Tactical Production Options -->
@@ -734,7 +814,7 @@
 
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+		<Reinforcement_Prevention_Radius> 2000 </Reinforcement_Prevention_Radius>
 		<AI_Combat_Power>10000</AI_Combat_Power>
 
 		<!-- Tactical Production Options -->
@@ -810,7 +890,7 @@
 
 		<Build_Initially_Locked>Yes</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
-		<Reinforcement_Prevention_Radius> 100 </Reinforcement_Prevention_Radius>
+		<Reinforcement_Prevention_Radius> 2000 </Reinforcement_Prevention_Radius>
 		<AI_Combat_Power>10000</AI_Combat_Power>
 
 		<!-- Tactical Production Options -->
