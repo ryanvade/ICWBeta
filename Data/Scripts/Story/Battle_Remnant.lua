@@ -59,15 +59,23 @@ function Begin_GC(message)
 		rebel = Find_Player("Rebel")
 		empire = Find_Player("Empire")
 		hapans = Find_Player("Hapes_Consortium")
+		eoth = Find_Player("Underworld")
 		
 		 empire.Make_Ally(hapans)
 		 empire.Make_Ally(rebel)
+		 empire.Make_Ally(eoth)
 		 
 		 rebel.Make_Ally(empire)
 		 rebel.Make_Ally(hapans)
+		 rebel.Make_Ally(eoth)
+
+		 eoth.Make_Ally(empire)
+		 eoth.Make_Ally(hapans)
+		 eoth.Make_Ally(rebel)
 		 
 		 hapans.Make_Ally(rebel)
 		 hapans.Make_Ally(empire)
+		 hapans.Make_Ally(eoth)
 		 
 		 	
 		empire_spawn_marker.Change_Owner(empire)
@@ -93,19 +101,30 @@ function Begin_Battle(message)
 
 		empire_spawn_marker.Make_Invulnerable(true)
 		rebel_spawn_marker.Make_Invulnerable(true)
+
 		
 		if TestValid(hapan_spawn_marker) then
 			hapan_spawn_marker.Make_Invulnerable(true)
 		end
+		if TestValid(eoth_spawn_marker) then
+			eoth_spawn_marker.Make_Invulnerable(true)
+		end
 		
-		 empire.Make_Enemy(hapans)
-		 empire.Make_Enemy(rebel)
-		 
-		 rebel.Make_Enemy(empire)
-		 rebel.Make_Enemy(hapans)
-		 
-		 hapans.Make_Enemy(rebel)
-		 hapans.Make_Enemy(empire)
+		empire.Make_Enemy(hapans)
+		empire.Make_Enemy(rebel)
+		empire.Make_Enemy(eoth)
+		
+		rebel.Make_Enemy(empire)
+		rebel.Make_Enemy(hapans)
+		rebel.Make_Enemy(eoth)
+
+		eoth.Make_Enemy(empire)
+		eoth.Make_Enemy(hapans)
+		eoth.Make_Enemy(rebel)
+		
+		hapans.Make_Enemy(rebel)
+		hapans.Make_Enemy(empire)
+		hapans.Make_Enemy(eoth)
 	end
 end
 

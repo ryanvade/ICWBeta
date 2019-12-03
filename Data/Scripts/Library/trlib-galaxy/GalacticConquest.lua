@@ -105,7 +105,7 @@ function GalacticConquest:GetPlanets()
     local planets = {}
     for _, planet in pairs(all_planets) do
         local planet_name = planet.Get_Type().Get_Name()
-        planets[planet_name] = Planet(planet_name)
+        planets[planet_name] = Planet(planet_name, self.HumanPlayer)
     end
 
     return planets

@@ -647,7 +647,7 @@
 
 	<SpaceUnit Name="Generic_Praetor">
 		<Galactic_Fleet_Override_Model_Name>Fleet_Praetor.ALO</Galactic_Fleet_Override_Model_Name>
-		<Text_ID>TEXT_UNIT_PRAETOR</Text_ID>
+		<Text_ID>TEXT_UNIT_PRAETOR_I</Text_ID>
 		<Affiliation>Empire</Affiliation>
 		<GUI_Row> 1 </GUI_Row>
 		<Space_Model_Name>REP_PraetorOne.ALO</Space_Model_Name>
@@ -807,7 +807,7 @@
 		<Radar_Icon_Scale_Space>0.1</Radar_Icon_Scale_Space>
 		<Radar_Icon_Name>i_radar_praetor.tga</Radar_Icon_Name>
 
-		<Encyclopedia_Text> TEXT_TOOLTIP_PRAETOR </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PRAETOR_I </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPITAL </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 45000</Score_Cost_Credits>
 
@@ -866,8 +866,58 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+
+		<Lua_Script>GenericGameObject</Lua_Script>
+
+	</SpaceUnit>
+	
+		<SpaceUnit Name="Generic_Secutor">
+		<Variant_Of_Existing_Type>Template_Secutor</Variant_Of_Existing_Type>
+    
+        <Affiliation>Empire</Affiliation>
+        <Tech_Level>99</Tech_Level>
+        <Required_Timeline>0</Required_Timeline>
+        <Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+        <Required_Planets />
+		
+		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BTLB_Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		
+		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>BTLB_Y-Wing_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+
+		<Lua_Script>GenericGameObject</Lua_Script>
+
+    </SpaceUnit>
+	
+	<SpaceUnit Name="Generic_Star_Destroyer">
+		<Variant_Of_Existing_Type>Template_Star_Destroyer</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_IMPERATOR</Text_ID>
+		
 		<Tech_Level>5</Tech_Level>
 		<Affiliation>Empire</Affiliation>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
+
+		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Early_Skipray_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_5>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>V-Wing_Squadron, 2</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>Early_Skipray_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 7</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Early_Skipray_Squadron, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_5>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>V-Wing_Squadron, 7</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>Early_Skipray_Squadron, 2</Reserve_Spawned_Units_Tech_5>
 
 		<Lua_Script>GenericGameObject</Lua_Script>
 
@@ -1084,7 +1134,7 @@
 		</HardPoints>
 
 		<CategoryMask> Frigate | AntiCorvette | Boardable </CategoryMask>
-		<Icon_Name>i_button_acclimator_cruiser.tga</Icon_Name>
+		<Icon_Name>I_BUTTON_ACCLAMATOR_I_REP.TGA</Icon_Name>
 		<GUI_Model_Name>EV_Acclamator.ALO</GUI_Model_Name>
 		<GUI_Distance>1100</GUI_Distance>
 		<GUI_Offset>0 0 0</GUI_Offset>
@@ -1292,7 +1342,7 @@
 		</HardPoints>
 
 		<CategoryMask> Frigate | AntiCorvette | Boardable </CategoryMask>
-		<Icon_Name>i_button_acclimator_cruiser.tga</Icon_Name>
+		<Icon_Name>I_BUTTON_ACCLAMATOR_II_REP.TGA</Icon_Name>
 		<GUI_Model_Name>EV_Acclamator.ALO</GUI_Model_Name>
 		<GUI_Distance>1100</GUI_Distance>
 		<GUI_Offset>0 0 0</GUI_Offset>
@@ -1500,7 +1550,7 @@
 		</HardPoints>
 
 		<CategoryMask> Frigate | AntiCorvette | Boardable </CategoryMask>
-		<Icon_Name>i_button_acclimator_cruiser.tga</Icon_Name>
+		<Icon_Name>I_BUTTON_ACCLAMATOR_REP.TGA</Icon_Name>
 		<GUI_Model_Name>EV_Acclamator.ALO</GUI_Model_Name>
 		<GUI_Distance>1100</GUI_Distance>
 		<GUI_Offset>0 0 0</GUI_Offset>
@@ -1651,6 +1701,7 @@
 
 	<SpaceUnit Name="Generic_Venator">
 		<Variant_Of_Existing_Type>Template_Venator</Variant_Of_Existing_Type>
+		<Icon_Name>I_BUTTON_ACCLAMATOR_REP.TGA</Icon_Name>
 
 		<Affiliation>Empire</Affiliation>
 		<Tech_Level>1</Tech_Level>
@@ -1695,34 +1746,7 @@
 		<Lua_Script>GenericGameObject</Lua_Script>
 	</SpaceUnit>
 
-	<SpaceUnit Name="Generic_Star_Destroyer">
-		<Variant_Of_Existing_Type>Template_Star_Destroyer</Variant_Of_Existing_Type>
-		<Text_ID>TEXT_UNIT_IMPERATOR</Text_ID>
-		
-		<Tech_Level>5</Tech_Level>
-		<Affiliation>Empire</Affiliation>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>3</Required_Star_Base_Level>
-		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
 
-		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Early_Skipray_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_5>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>V-Wing_Squadron, 2</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>Early_Skipray_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 7</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_0>Early_Skipray_Squadron, 2</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_5>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>V-Wing_Squadron, 7</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>Early_Skipray_Squadron, 2</Reserve_Spawned_Units_Tech_5>
-
-		<Lua_Script>GenericGameObject</Lua_Script>
-
-	</SpaceUnit>
 
 	<SpaceUnit Name="Invincible_Cruiser">
 		<Variant_Of_Existing_Type>Template_Invincible_Cruiser</Variant_Of_Existing_Type>

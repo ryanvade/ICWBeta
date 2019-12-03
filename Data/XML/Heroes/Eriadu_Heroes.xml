@@ -330,8 +330,9 @@
 		<Text_ID>TEXT_HUBLIN_SQUADRON</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_HUBLIN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_STORM_SQUADRON </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>175</Tactical_Health>
+		<Shield_Points>144</Shield_Points>
+		<Tactical_Health>260</Tactical_Health>
+		<Shield_Refresh_Rate>2</Shield_Refresh_Rate>
 		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
 		<Affiliation>Hutts</Affiliation>
    	
@@ -648,8 +649,9 @@
 		<Text_ID>TEXT_BREN_SQUADRON</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_BREN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_WHITE_DEATH </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>140</Tactical_Health>
+		<Shield_Points>24</Shield_Points>
+		<Shield_Refresh_Rate>2</Shield_Refresh_Rate>
+		<Tactical_Health>260</Tactical_Health>
 		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
 		<Affiliation>Hutts</Affiliation>
    	
@@ -854,9 +856,9 @@
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
 		<Required_Special_Structures />
 		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
-		<Squadron_Units>Cive_Rashon, TIE_Fighter, TIE_Fighter, TIE_Fighter</Squadron_Units>
-		<Squadron_Units>TIE_Fighter, TIE_Fighter, TIE_Fighter, TIE_Fighter</Squadron_Units>
-		<Squadron_Units>TIE_Fighter, TIE_Fighter</Squadron_Units>	
+		<Squadron_Units>Cive_Rashon, Obsidian_Squadron_TIE_Fighter, Obsidian_Squadron_TIE_Fighter, Obsidian_Squadron_TIE_Fighter</Squadron_Units>
+		<Squadron_Units>Obsidian_Squadron_TIE_Fighter, Obsidian_Squadron_TIE_Fighter, Obsidian_Squadron_TIE_Fighter, Obsidian_Squadron_TIE_Fighter</Squadron_Units>
+		<Squadron_Units>Obsidian_Squadron_TIE_Fighter, Obsidian_Squadron_TIE_Fighter</Squadron_Units>	
 		<Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
 		<Squadron_Offsets>0.0,30.0,0.0</Squadron_Offsets>
 		<Squadron_Offsets>0.0,-30.0,0.0</Squadron_Offsets>
@@ -907,16 +909,23 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_UNINTERESTING TEXT_TOOLTIP_BIO TEXT_TOOLTIP_RASHON TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_OBSIDIAN </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>140</Tactical_Health>
+		<Tactical_Health>230</Tactical_Health>
 		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
-
+       		<Hardpoints> HP_TIE_00, HP_TIE_Elite_00 </Hardpoints>
    	
 		<Property_Flags> SmallShip </Property_Flags>
 		<Icon_Name>i_button_rashon.tga</Icon_Name>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Affiliation>Hutts</Affiliation>
-		
  	</SpaceUnit>
+
+	<SpaceUnit Name="Obsidian_Squadron_TIE_Fighter">
+		<Variant_of_Existing_Type>TIE_Fighter</Variant_of_Existing_Type>
+		<Tactical_Health>11</Tactical_Health>
+       		<Hardpoints> HP_TIE_00, HP_TIE_Elite_00 </Hardpoints>
+ 	</SpaceUnit>
+
+
 	
 	<UniqueUnit Name="Night_Hammer">
 		<Variant_Of_Existing_Type>Generic_Executor</Variant_Of_Existing_Type>

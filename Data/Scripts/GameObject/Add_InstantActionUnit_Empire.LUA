@@ -1,6 +1,6 @@
 --//////////////////////////////////////////////////////////////////////////////////////
 -- Add Units to the reinforcement pool// This script is part of the Survival Mode
--- © Pox
+-- ï¿½ Pox
 --//////////////////////////////////////////////////////////////////////////////////////
 
 require("PGBase")
@@ -22,6 +22,7 @@ function Definitions()
 "STRIKE_CRUISER",
 "GENERIC_VICTORY_DESTROYER_TWO",
 "GENERIC_VICTORY_DESTROYER",
+"CRIMSON_VICTORY",
 "GENERIC_VENATOR",
 "MTC_SENSOR",
 "DREADNAUGHT_EMPIRE",

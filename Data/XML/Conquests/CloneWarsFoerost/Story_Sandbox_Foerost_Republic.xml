@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+
+
+
+<!--****************************************************-->
+<!--***** CAMPAIGN: Fractured Empire (Empire Version) *****-->
+<!--****************************************************-->
+
+
+
+<Story>
+
+ <Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+
+ </Event>
+ 
+ 
+	
+	<Event Name="Spawn_Screed">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Screed_Arlionne</Reward_Param1>
+		<Reward_Param2>Rendili</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		
+	<Event Name="Spawn_Dodonna">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Dodonna_Ardent</Reward_Param1>
+		<Reward_Param2>Rendili</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<!-- Venator Research -->
+	<!-- Venator Research -->
+	<!-- Venator Research -->
+	
+	<Event Name="Republic_Enters_Tech_02">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>2</Event_Param1>
+	</Event>
+	
+	<Event Name="Republic_Enters_Tech_03">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+	</Event>	
+
+	<Event Name="Unlock_Venator">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Generic_Venator</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Republic_Enters_Tech_04">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+	</Event>
+	
+	<!-- Clone Trooper Research -->
+	<!-- Clone Trooper Research -->
+	<!-- Clone Trooper Research -->
+
+	<Event Name="Unlock_Clone_Trooper_II">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Clonetrooper_Phase_Two_Team</Reward_Param1>
+	</Event>
+	
+	<Event Name="Lock_Phase_One">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Clonetrooper_Phase_One_Team</Reward_Param1>
+		<Prereq>Unlock_Clone_Trooper_II</Prereq>
+	</Event>
+
+	<Event Name="Unlock_ARC_Trooper_II">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>ARC_Phase_Two_Team</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_ARC_Phase_One">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>ARC_Phase_One_Team</Reward_Param1>
+		<Prereq>Unlock_ARC_Trooper_II</Prereq>
+	</Event>
+	
+	<!-- Victory Research -->
+	<!-- Victory Research -->
+	<!-- Victory Research -->
+
+	<Event Name="Unlock_Victory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Generic_Victory_Destroyer</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_Invincible">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Invincible_Cruiser</Reward_Param1>
+		<Prereq>Republic_Enters_Tech_04</Prereq>
+	</Event>
+	
+	<Event Name="Republic_Enters_Tech_05">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>5</Event_Param1>
+	</Event>
+
+</Story>

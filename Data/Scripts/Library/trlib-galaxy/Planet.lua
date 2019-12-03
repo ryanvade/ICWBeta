@@ -1,6 +1,5 @@
 require("trlib-std/class")
 
-
 ---@class Planet
 ---@field private gameObject GameObject
 ---@field private activeBonusTexts table<string, string>
@@ -10,18 +9,36 @@ require("trlib-std/class")
 ---@field private __orbital_structures_in_current_step table<string, number>
 Planet = class()
 
-function Planet:new(name)
+---@param name string
+---@param human_player FactionObject
+function Planet:new(name, human_player)
+    ---@private
     self.gameObject = FindPlanet(name)
+
+    ---@private
+    self.human_player = human_player
+
+    ---@private
     self.activeBonusTexts = {}
 
+    ---@private
     self.ForcedUpdate = 0
+
+    ---@private
     self.electionCycles = 0
+
+    ---@private
     self.ownerInfluence = 0
+
     self:update_influence_information()
 
+    ---@private
     self.__current_influence_dummies = nil
 
+    ---@private
     self.__step_calculated = false
+
+    ---@private
     self.__orbital_structures_in_current_step = {}
 end
 
@@ -123,7 +140,7 @@ end
 ---@param structure_info table<string, any> The structure information from GameObjectLibrary
 function Planet:__count_structure_occurences(structure_name, structure_info)
     if structure_info.Equation then
-        return EvaluatePerception(structure_info.Equation, self:get_owner(), self.gameObject)
+        return EvaluatePerception(structure_info.Equation, self.human_player, self.gameObject)
     end
 
     return self:__count_structures_manually(structure_name)
@@ -146,34 +163,42 @@ function Planet:update_influence_information()
             self.ownerInfluence = self.ownerInfluence + 2
         end
 
-        self.ownerInfluence = self.ownerInfluence + EvaluatePerception("Planet_Has_Company", self:get_owner(), self.gameObject)
-            
-        if EvaluatePerception("Recent_Conflict_Space", self:get_owner(), self.gameObject) ~= 0 then
+        self.ownerInfluence = self.ownerInfluence + EvaluatePerception("Planet_Has_Company", self.human_player, self.gameObject)
+
+        if EvaluatePerception("Recent_Conflict_Space", self.human_player, self.gameObject) ~= 0 then
             self.ownerInfluence = self.ownerInfluence - 1
         end
 
-        if EvaluatePerception("Recent_Conflict_Ground", self:get_owner(), self.gameObject) ~= 0 then
+        if EvaluatePerception("Recent_Conflict_Ground", self.human_player, self.gameObject) ~= 0 then
             self.ownerInfluence = self.ownerInfluence - 2
         end
 
-        if EvaluatePerception("Planet_Has_Local_Government_Building", self:get_owner(), self.gameObject) == 1 then
+        if EvaluatePerception("Planet_Has_Local_Government_Building", self.human_player, self.gameObject) == 1 then
             self.ownerInfluence = self.ownerInfluence + 1
         end
 
-        if EvaluatePerception("Planet_Has_Trade_Station", self:get_owner(), self.gameObject) == 1 then
-            self.ownerInfluence = self.ownerInfluence + 1
+        if EvaluatePerception("Planet_Has_Trade_Station", self.human_player, self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence + 2
         end
 
-        if EvaluatePerception("Planet_Has_Oto", self:get_owner(), self.gameObject) == 1 then
-            self.ownerInfluence = self.ownerInfluence + 1
+        if EvaluatePerception("Planet_Has_Oto", self.human_player, self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence + 2
         end
 
-        if EvaluatePerception("Planet_Has_Empress", self:get_owner(), self.gameObject) == 1 then
-            self.ownerInfluence = self.ownerInfluence + 1
+        if EvaluatePerception("Planet_Has_Empress", self.human_player, self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence + 2
         end
 
-        if EvaluatePerception("Planet_Has_Validusia", self:get_owner(), self.gameObject) == 1 then
-            self.ownerInfluence = self.ownerInfluence + 1
+        if EvaluatePerception("Planet_Has_Validusia", self.human_player, self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence + 2
+        end
+
+        if EvaluatePerception("Planet_Has_Black_Fifteen", self.human_player, self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence + 2
+        end
+        
+        if EvaluatePerception("Planet_Has_Slayn_Korpil", self.human_player, self.gameObject) == 1 then
+            self.ownerInfluence = self.ownerInfluence + 2
         end
 
         if self:get_owner() == Find_Player("Rebel") then
@@ -195,9 +220,9 @@ function Planet:update_influence_information()
         end
 
         if self:get_owner() ~= Find_Player("Rebel") then
-             if self:get_name() == "KASHYYYK" then
-                self.ownerInfluence = self.ownerInfluence -2
-             end
+            if self:get_name() == "KASHYYYK" then
+                self.ownerInfluence = self.ownerInfluence - 2
+            end
         end
 
         if self.ownerInfluence > 10 then
@@ -231,9 +256,7 @@ function Planet:apply_loyalty_modifiers()
 
     local dummylist = influence_structure_table[self.ownerInfluence]
 
-    if self:get_owner() == Find_Player("Rebel") then
-        table.insert(dummylist, GlobalValue.Get("ChiefOfState"))
-    end
+    table.insert(dummylist, GlobalValue.Get("ChiefOfState"))
 
     self.__current_influence_dummies = SpawnList(dummylist, self.gameObject, self:get_owner(), false, false)
 end

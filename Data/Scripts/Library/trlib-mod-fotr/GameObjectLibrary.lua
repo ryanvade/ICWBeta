@@ -235,36 +235,14 @@ GameObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters = {
-                ["TIE_AVENGER_SQUADRON"] = {
-                    ["TERADOC"] = {
+                ["ARC_170_SQUADRON"] = {
+                    ["EMPIRE"] = {
                         Reserve = 9,
                         Initial = 4
                     }
                 },
-                ["SCIMMY_SQUADRON"] = {
-                    ["EMPIRE"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    }
-                },
                 ["TORRENT_SQUADRON"] = {
-                    ["PENTASTAR"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["PIRATES"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["HUTTS"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["HOSTILE"] = {
-                        Reserve = 10,
-                        Initial = 3
-                    },
-                    ["WARLORDS"] = {
+                    ["EMPIRE"] = {
                         Reserve = 10,
                         Initial = 3
                     }
@@ -377,11 +355,11 @@ GameObjectLibrary = {
                     }					
                 },
                 ["NANTEX_SQUADRON"] = {
-                    ["PIRATES"] = {
+                    ["PENTASTAR"] = {
                         Reserve = 3,
                         Initial = 3
                     },
-                    ["HUTTS"] = {
+                    ["TERADOC"] = {
                         Reserve = 2,
                         Initial = 2
                     }					
@@ -453,11 +431,11 @@ GameObjectLibrary = {
                     }					
                 },
                 ["NANTEX_SQUADRON"] = {
-                    ["PIRATES"] = {
+                    ["PENTASTAR"] = {
                         Reserve = 2,
                         Initial = 2
                     },
-                    ["HUTTS"] = {
+                    ["TERADOC"] = {
                         Reserve = 2,
                         Initial = 2
                     }					
@@ -536,11 +514,11 @@ GameObjectLibrary = {
                     }					
                 },
                 ["NANTEX_SQUADRON_SQUADRON"] = {
-                    ["PIRATES"] = {
+                    ["PENTASTAR"] = {
                         Reserve = 8,
                         Initial = 2
                     },
-                    ["HUTTS"] = {
+                    ["TERADOC"] = {
                         Reserve = 8,
                         Initial = 2
                     }					
@@ -602,11 +580,11 @@ GameObjectLibrary = {
                         Reserve = 8,
                         Initial = 2
                     },
-                    ["PIRATES"] = {
+                    ["PENTASTAR"] = {
                         Reserve = 8,
                         Initial = 2
                     },
-                    ["HUTTS"] = {
+                    ["TERADOC"] = {
                         Reserve = 8,
                         Initial = 2
                     }					
@@ -828,20 +806,12 @@ GameObjectLibrary = {
                 "SingleUnitRetreat"
             },
             Fighters = {
-                ["NANTEX_SQUADRON"] = {
+                ["VULTURE_SQUADRON_DOUBLE"] = {
                     ["DEFAULT"] = {
-                        Reserve = 1,
-                        Initial = 1,
-						TechLevel = LessOrEqualTo(3)
+                        Reserve = 0,
+                        Initial = 1
                     }
-                },
-                ["Mankvim_Squadron"] = {
-                    ["DEFAULT"] = {
-                        Reserve = 1,
-                        Initial = 1,
-                        TechLevel = GreaterThan(3)
-                    }
-                }				
+                },				
             }
         },			
         ["BULWARK_I"] = {

@@ -7,14 +7,9 @@ CONSTANTS = ModContentLoader.get("GameConstants")
 GalacticEventsNewsSource = class(Observable)
 
 ---@param planet_owner_changed_event PlanetOwnerChangedEvent
-function GalacticEventsNewsSource:new(
-    planet_owner_changed_event,
-    galactic_hero_killed_event,
-    --election_event,
-    incoming_fleet_event)
+function GalacticEventsNewsSource:new(planet_owner_changed_event, galactic_hero_killed_event, incoming_fleet_event)
     planet_owner_changed_event:AttachListener(self.on_planet_owner_changed, self)
     galactic_hero_killed_event:AttachListener(self.on_galactic_hero_killed, self)
-    --election_event:AttachListener(self.on_election_held, self)
     incoming_fleet_event:AttachListener(self.on_incoming_fleet, self)
 end
 
@@ -38,14 +33,6 @@ function GalacticEventsNewsSource:on_galactic_hero_killed(hero_name)
         color = {r = 255, g = 0, b = 0}
     }
 end
-
---function GalacticEventsNewsSource:on_election_held(election_result)
---    self:Notify {
---        headline = "TEXT_NEWS_NR_ELECTION_RESULT",
---        var = election_result.winner,
---        color = {r = 239, g = 139, b = 9}
---    }
---end
 
 function GalacticEventsNewsSource:on_incoming_fleet(planet)
     if not planet:get_owner().Is_Human() then

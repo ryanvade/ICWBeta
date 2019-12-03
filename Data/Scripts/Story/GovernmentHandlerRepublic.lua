@@ -17,7 +17,6 @@
 --*   @License:             This source code may only be used with explicit permission from the developers
 --*   @Copyright:           © TR: Imperial Civil War Development Team
 --******************************************************************************
-
 require("PGStoryMode")
 require("PGSpawnUnits")
 require("trlib-util/ChangeOwnerUtilities")
@@ -27,33 +26,30 @@ function Definitions()
     DebugMessage("%s -- In Definitions", tostring(Script))
 
     StoryModeEvents = {
-        Support_Candidate_Leia = Leia_Support,
-        Support_Candidate_Borsk = Borsk_Support,
-        Support_Candidate_Mothma = Mothma_Support,
-        Support_Candidate_Gavrisom = Gavrisom_Support
+        Support_Palpatine = Palpatine_Support,
+        Lira_Contract = Palpatine_Support,
+        KDY_Deal_AI = Spawn_KDY_AI,
+        Support_Mothma = Mothma_Support
     }
 end
 
-function Leia_Support(message)
+function Palpatine_Support(message)
     if message == OnEnter then
-        GlobalValue.Set("ChiefOfStatePreference", "DUMMY_CHIEFOFSTATE_LEIA")
-    end
-end
-
-function Borsk_Support(message)
-    if message == OnEnter then
-        GlobalValue.Set("ChiefOfStatePreference", "DUMMY_CHIEFOFSTATE_FEYLYA")
+        GlobalValue.Set("ChiefOfState", "DUMMY_CHIEFOFSTATE_EMPEROR_PALPATINE")
     end
 end
 
 function Mothma_Support(message)
     if message == OnEnter then
-        GlobalValue.Set("ChiefOfStatePreference", "DUMMY_CHIEFOFSTATE_MOTHMA")
+        GlobalValue.Set("ChiefOfState", "DUMMY_CHIEFOFSTATE_MOTHMA")
     end
 end
 
-function Gavrisom_Support(message)
+function Spawn_KDY_AI(message)
     if message == OnEnter then
-        GlobalValue.Set("ChiefOfStatePreference", "DUMMY_CHIEFOFSTATE_GAVRISOM")
+        local KDY_OBJECT = {"DUMMY_KUAT_CONTRACT", "Generic_Star_Destroyer"}
+        local p_republic = Find_Player("Empire")
+        local start_planet = FindPlanet("Kuat")
+        local KDYspawn = SpawnList(KDY_OBJECT, start_planet, p_republic, true, false)
     end
 end

@@ -63,8 +63,22 @@ end
 function FighterSpawn:GetFighterEntry(tab)
     local owner = self.originalOwner
     local ownerName = owner.Get_Faction_Name()
+	local isImperial = false
+	local isCIS = false
 
-    if not tab[ownerName] and not tab["DEFAULT"] then
+	if tab["IMPERIAL"] then
+		if ownerName == "EMPIRE" or ownerName == "PENTASTAR" or ownerName == "PIRATES" or ownerName == "TERADOC" or ownerName == "HUTTS" then
+			isImperial = true
+		end
+	end
+	
+	if tab["CIS"] then
+		if ownerName == "REBEL" or ownerName == "PIRATES" or ownerName == "TERADOC" or ownerName == "PENTASTAR" or ownerName == "HUTTS" then
+			isCIS = true
+		end
+	end
+	
+    if not tab[ownerName] and not tab["DEFAULT"] and not isImperial and not isCIS then
         return nil
     end
 
@@ -81,6 +95,20 @@ function FighterSpawn:GetFighterEntry(tab)
         techIsEqual = (tab["DEFAULT"].TechLevel == nil) or (tab["DEFAULT"].TechLevel:evaluate(techLevel))
         if techIsEqual then
             return tab["DEFAULT"]
+        end
+    end
+	
+	if isImperial and tab["IMPERIAL"] then
+        techIsEqual = (tab["IMPERIAL"].TechLevel == nil) or (tab["IMPERIAL"].TechLevel:evaluate(techLevel))
+        if techIsEqual then
+            return tab["IMPERIAL"]
+        end
+    end
+	
+	if isCIS and tab["CIS"] then
+        techIsEqual = (tab["CIS"].TechLevel == nil) or (tab["CIS"].TechLevel:evaluate(techLevel))
+        if techIsEqual then
+            return tab["CIS"]
         end
     end
 

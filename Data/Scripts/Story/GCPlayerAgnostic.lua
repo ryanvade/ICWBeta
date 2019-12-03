@@ -22,12 +22,6 @@ require("PGDebug")
 require("PGStateMachine")
 require("PGStoryMode")
 
-GameObjectLibrary = ModContentLoader.get("GameObjectLibrary")
-
-require("trlib-transactions/init")
-require("trlib-galaxy/init")
-require("trlib-galaxy/ObjectivesDisplayComponentContainer")
-
 function Definitions()
     DebugMessage("%s -- In Definitions", tostring(Script))
 
@@ -38,63 +32,9 @@ end
 
 function Begin_GC(message)
     if message == OnEnter then
-        TM = TransactionManager()
-
-        local plot = StoryUtil.GetPlayerAgnosticPlot()
-        GC = GalacticConquest(plot, CONSTANTS.PLAYABLE_FACTIONS)
-
-        GC.HumanPlayer.Enable_Advisor_Hints("Galactic", false)
-        GC.HumanPlayer.Enable_Advisor_Hints("Space", false)
-        GC.HumanPlayer.Enable_Advisor_Hints("Land", false)
-
-        GCEventNewsSource =
-            GalacticEventsNewsSource(
-            GC.Events.PlanetOwnerChanged,
-            GC.Events.GalacticHeroKilled,
-            GC.Events.IncomingFleet
-        )
-
-        GalacticNewsFeed = NewsFeedDisplayComponent()
-        GalacticNewsFeed:add_news_source(GCEventNewsSource)
-
-        StructureDisplay =
-            PlanetInformationDisplayComponent(GC.Events.SelectedPlanetChanged, GC.Events.GalacticProductionFinished)
-
-        AiDummyHandler = AiDummyLifeCycleHandler(GC.Planets, GC.Events.PlanetOwnerChanged)
-        ResourceManagerInstance = DummyBasedResourceManager(GC, AiDummyHandler)
-
-        GalacticDisplay = DisplayComponentContainer()
-        GalacticDisplay:add_display_component(ShipCrewDisplayComponent(ResourceManagerInstance))
-        GalacticDisplay:add_display_component(StructureDisplay)
-        GalacticDisplay:add_display_component(GalacticNewsFeed)
-
-        -- ObjectivesDisplay =
-        -- ObjectivesDisplayComponentContainer(GC.Events.TacticalBattleStarting, GC.Events.TacticalBattleEnding)
-
-        -- ObjectivesDisplay:add_display_component(ShipCrewDisplayComponent(ResourceManagerInstance))
-
-        Filter = CategoryFilter(plot, GC, AiDummyHandler)
-
-        Create_Thread("TransactionManagerThread")
+        ModContentLoader.get("GameModImpl")
+        ActiveMod = GameModImpl()
     elseif message == OnUpdate then
-        GC:Update()
-        Filter:Update()
-        AiDummyHandler:update()
-        GalacticDisplay:update_components()
-    -- ObjectivesDisplay:update_components()
-    end
-end
-
-function TransactionManagerThread()
-    while true do
-        TM:ExecuteGameModeTransactions()
-        Sleep(1)
-    end
-end
-
-function CategoryFilterThread()
-    while true do
-        Filter:Update()
-        Sleep(0.1)
+        ActiveMod:update()
     end
 end

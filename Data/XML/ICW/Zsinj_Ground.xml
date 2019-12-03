@@ -443,8 +443,8 @@
 		
 		<Max_Squad_Size> 9 </Max_Squad_Size>
 		<Icon_Name>i_button_raptor_trooper.tga</Icon_Name>
-		<GUI_Model_Name>ZJ_Raptor.ALO</GUI_Model_Name>
-		<Land_Model_Name>ZJ_Raptor.ALO</Land_Model_Name>
+		<GUI_Model_Name>raptor_trooper.ALO</GUI_Model_Name>
+		<Land_Model_Name>raptor_trooper.ALO</Land_Model_Name>
 		<Scale_Factor>5</Scale_Factor>
 		<GUI_Offset>0 0 5</GUI_Offset>
 		<GUI_Velocity>45</GUI_Velocity>
@@ -553,17 +553,17 @@
 		<Variant_Of_Existing_Type>Stormtrooper</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_RAPTORTROOPER</Text_ID>
 		<Tactical_Health>14</Tactical_Health>
-		<Land_Model_Name>ZJ_Raptor.ALO</Land_Model_Name>
+		<Land_Model_Name>raptor_trooper.ALO</Land_Model_Name>
 		<Land_Terrain_Model_Mapping>
-			Temperate, 			ZJ_Raptor.ALO,
-			Urban, 				ZJ_Raptor.ALO,
-			Arctic, 			ZJ_Raptor.ALO,
-			Volcanic, 			ZJ_Raptor.ALO,
-			Desert, 			ZJ_Raptor.ALO,
-			Forest, 			ZJ_Raptor.ALO,
-			Swamp, 				ZJ_Raptor.ALO
+			Temperate, 			raptor_trooper.ALO,
+			Urban, 				raptor_trooper.ALO,
+			Arctic, 			raptor_trooper.ALO,
+			Volcanic, 			raptor_trooper.ALO,
+			Desert, 			raptor_trooper.ALO,
+			Forest, 			raptor_trooper.ALO,
+			Swamp, 				raptor_trooper.ALO
 		</Land_Terrain_Model_Mapping>
-		<Land_Model_Anim_Override_Name>ZJ_Raptor.ALO</Land_Model_Anim_Override_Name>
+		<Land_Model_Anim_Override_Name>stormtrooper.ALO</Land_Model_Anim_Override_Name>
 		<Affiliation>Pirates</Affiliation>
 		<Encyclopedia_Text>TEXT_TOOLTIP_RAPTORTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<No_Colorization_Color> 251, 174, 1, 255 </No_Colorization_Color>
@@ -573,7 +573,7 @@
 		<Max_Speed>1.1</Max_Speed>
 		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
 
-		<Scale_Factor>1.1</Scale_Factor>
+		<Scale_Factor>1.44</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
 		<Deploys>No</Deploys>
@@ -600,21 +600,21 @@
 		
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
 		
-		<Death_Clone>Damage_Force_Whirlwind, Stormtrooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Whirlwind, Raptor_Force_Whirlwind_Death_Clone</Death_Clone>
 		<Death_Clone>Damage_Force_Lightning, Infantry_Electric_Death_Clone_00</Death_Clone>
 		<Death_Clone>Damage_Force_Lightning, Infantry_Electric_Death_Clone_01</Death_Clone>
-		<Death_Clone>Damage_Crush, Stormtrooper_Crush_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Raptor_Crush_Death_Clone</Death_Clone>
 		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
 		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
 		<Death_Clone>Damage_Fire, Infantry_Fire_Death_Clone_00</Death_Clone>
 		<Death_Clone>Damage_Fire, Infantry_Fire_Death_Clone_01</Death_Clone>
 		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
-		<Death_Clone>Damage_Proton_GRND, Stormtrooper_Splode_Clone</Death_Clone>
+		<!--<Death_Clone>Damage_Proton_GRND, Stormtrooper_Splode_Clone</Death_Clone>
 		<Death_Clone>Damage_Bomb, Stormtrooper_Splode_Clone</Death_Clone>
 		<Death_Clone>Damage_Self_Destruct, Stormtrooper_Splode_Clone</Death_Clone>
 		<Death_Clone>Damage_Exploding_Barrel, Stormtrooper_Splode_Clone</Death_Clone>
 		<Death_Clone>Damage_Krayt_Damage_Blast, Stormtrooper_Splode_Clone</Death_Clone>
-		<Death_Clone>Damage_Turbo_GRND, Stormtrooper_Sploded_Clone</Death_Clone>
+		<Death_Clone>Damage_Turbo_GRND, Stormtrooper_Splode_Clone</Death_Clone-->
 		
 		<Presence_Induced_Animations>
 			Attention, 
@@ -635,9 +635,31 @@
 	
 	</GroundInfantry>
 	
-		<GroundInfantry Name="Raptor_Trooper_Plex">
+	<GroundInfantry Name="Raptor_Force_Whirlwind_Death_Clone">
 		<Variant_Of_Existing_Type>Raptor_Trooper</Variant_Of_Existing_Type>
-		<HardPoints>HP_PLX</HardPoints>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	<GroundInfantry Name="Raptor_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Raptor_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Raptor_Trooper_Plex">
+		<Variant_Of_Existing_Type>Raptor_Trooper</Variant_Of_Existing_Type>
+		<Land_Model_Name>heavy_raptor_trooper.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			heavy_raptor_trooper.ALO,
+			Urban, 				heavy_raptor_trooper.ALO,
+			Arctic, 			heavy_raptor_trooper.ALO,
+			Volcanic, 			heavy_raptor_trooper.ALO,
+			Desert, 			heavy_raptor_trooper.ALO,
+			Forest, 			heavy_raptor_trooper.ALO,
+			Swamp, 				heavy_raptor_trooper.ALO
+		</Land_Terrain_Model_Mapping>
+		<Land_Model_Anim_Override_Name>shock_trooper.ALO</Land_Model_Anim_Override_Name>
+		<HardPoints>HP_PLX_hand</HardPoints>
 		
 		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
 	</GroundInfantry>

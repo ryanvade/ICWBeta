@@ -10,8 +10,8 @@ function GovernmentNewRepublic:new(player_agnostic_plot)
     GlobalValue.Set("ChiefOfStatePreference", "DUMMY_CHIEFOFSTATE_MOTHMA")
     self.LastElectionTime = 0
 
-    --self.Events = {}
-    --self.Events.ElectionHeld = Observable()
+    self.Events = {}
+    self.Events.ElectionHeld = Observable()
 end
 
 function GovernmentNewRepublic:Update()
@@ -71,10 +71,10 @@ function GovernmentNewRepublic:ElectionHeld()
     end
 
     GlobalValue.Set("ChiefOfState", self.chief_of_state)
-    --self.Events.ElectionHeld:Notify {
-    --    winner = self.chief_of_state,
-    --    preferred_candidate = electionResult > 0
-    --}
+    self.Events.ElectionHeld:Notify {
+        winner = self.chief_of_state,
+        preferred_candidate = electionResult > 0
+    }
 end
 
 return GovernmentNewRepublic

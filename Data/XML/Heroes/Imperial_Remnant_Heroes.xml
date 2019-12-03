@@ -322,9 +322,9 @@
 		<Encyclopedia_Text>TEXT_TOOLTIP_RG_INTERCEPTOR</Encyclopedia_Text>
 		<Variant_Of_Existing_Type>Royal_Guard_Interceptor</Variant_Of_Existing_Type>
 		<Icon_Name>i_button_carnor_jax.tga</Icon_Name>
-		<Shield_Points>120</Shield_Points>
-		<Tactical_Health>120</Tactical_Health>
-		<Shield_Refresh_Rate>1.5</Shield_Refresh_Rate>
+		<Shield_Points>18</Shield_Points>
+		<Tactical_Health>233</Tactical_Health>
+		<Shield_Refresh_Rate>2</Shield_Refresh_Rate>
 		<Behavior>TRANSPORT</Behavior>
 	</SpaceUnit>
 	
@@ -1051,8 +1051,9 @@
 		<Text_ID> TEXT_181ST_STELE_SQUADRON </Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_MAAREK_STELE TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181STELE </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>150</Tactical_Health>
+		<Shield_Points>90</Shield_Points>
+		<Shield_Refresh_Rate>2</Shield_Refresh_Rate>
+		<Tactical_Health>275</Tactical_Health>
 		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
 
 
@@ -1101,8 +1102,8 @@
 
 	<SpaceUnit Name="TIE_Defender_Stele">
 		<Variant_of_Existing_Type>TIE_Defender</Variant_of_Existing_Type>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>100</Tactical_Health>
+		<Shield_Points>19</Shield_Points>
+		<Tactical_Health>16</Tactical_Health>
 		<Affiliation>Empire</Affiliation>
 
 		<!-- Non-Hero unit abilities description -->
@@ -1309,7 +1310,7 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_UNINTERESTING TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ELITE_SQUADRON TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ELITEST </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>150</Tactical_Health>
+		<Tactical_Health>244</Tactical_Health>
 		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
 
 		<SpaceBehavior> ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
@@ -1363,9 +1364,8 @@
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 		<Victory_Relevant>yes</Victory_Relevant>
 
-		<Tactical_Health>70</Tactical_Health>
+		<Tactical_Health>12</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
-		<Damage>5</Damage>
 
 		<Affiliation>Empire</Affiliation>
 
@@ -2715,7 +2715,7 @@
 		<Text_ID>TEXT_181ST_TIE_INTERCEPTOR_SQUADRON</Text_ID>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_181ST TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>150</Tactical_Health>
+		<Tactical_Health>248</Tactical_Health>
 		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
 
 		<Hyperspace>Yes</Hyperspace>
@@ -2740,15 +2740,6 @@
 		<SFXEvent_Enemy_Health_Low_Warning> Unit_Health_Low_Phennir </SFXEvent_Enemy_Health_Low_Warning>
 		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Enemy_Health_Critical_Wedge_Rogue </SFXEvent_Enemy_Health_Critical_Warning>
 
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<Unit_Ability>
-				<Type>REPLENISH_WINGMEN</Type>
-				<Recharge_Seconds>60</Recharge_Seconds>
-				<Active_By_Default>No</Active_By_Default>
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Respawn_Vader_Ship</SFXEvent_GUI_Unit_Ability_Activated>
-				<Supports_Autofire>True</Supports_Autofire>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
 
 		<Abilities SubObjectList="Yes">
 			<Combat_Bonus_Ability Name="Phennir_Combat_Bonus">
@@ -2788,22 +2779,20 @@
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
 		<Mass>0.985</Mass>
-		<Max_Speed>8.5</Max_Speed>
-		<Min_Speed>4.5</Min_Speed>
-		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
-		<Max_Lift>4</Max_Lift>
-		<Max_Thrust>1.0</Max_Thrust>
-		<Max_Rate_Of_Roll>6.0</Max_Rate_Of_Roll>
+		<Max_Speed>6.36</Max_Speed>
+		<Min_Speed>1.22</Min_Speed>
+		<Max_Rate_Of_Turn>5.2</Max_Rate_Of_Turn>
+		<Max_Lift>4.04</Max_Lift>
+		<Max_Thrust>4.04</Max_Thrust>
+		<Max_Rate_Of_Roll>5.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
 		<Begin_Turn_Towards_Distance>800.0</Begin_Turn_Towards_Distance>
-		<Fires_Forward>no</Fires_Forward>
-		<Turret_Rotate_Extent_Degrees>20</Turret_Rotate_Extent_Degrees>
-		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+
 		<Affiliation>Empire</Affiliation>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>100</Tactical_Health>
+		<Tactical_Health>24</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>500</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
@@ -2820,21 +2809,8 @@
 		<Size_Value>8</Size_Value>
 		<SpaceBehavior>ABILITY_COUNTDOWN, HUNT, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
-		<Damage>2</Damage>
 
-        <Damage_Type>Damage_Fighter</Damage_Type>
-		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Green</Projectile_Types>
-		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
-		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
-		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
-
-		<Fire_Inaccuracy_Distance> Fighter, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Bomber, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Transport, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Corvette, 30.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> SuperCapital, 30.0 </Fire_Inaccuracy_Distance>
+       		<Hardpoints> HP_TIE_Interceptor_00, HP_TIE_Interceptor_01, HP_Elite_Interceptor_00 </Hardpoints>
 
 		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
 		<Space_FOW_Reveal_Range>15000.0</Space_FOW_Reveal_Range>
@@ -2972,13 +2948,6 @@
 
 		<Population_Value>1</Population_Value>
 
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>REPLENISH_WINGMEN</Type>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
-
 	</Squadron>
 
 	<Container Name="181st_Phennir_TIE_Interceptor_Container">
@@ -3051,14 +3020,6 @@
 		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
-		<!-- Unit abilities description -->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<!-- Primary ability -->
-			<Unit_Ability>
-				<Type>REPLENISH_WINGMEN</Type>
-				<Supports_Autofire>True</Supports_Autofire>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
 	</Container>
 
 	<SpaceUnit Name="181_Fel">
@@ -3067,7 +3028,7 @@
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_ACEPILOT TEXT_TOOLTIP_BIO TEXT_TOOLTIP_SOONTIR_FEL_EMPIRE TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_181ST </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>200</Tactical_Health>
+		<Tactical_Health>260</Tactical_Health>
 		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
 		<Affiliation>Empire</Affiliation>
 
@@ -3137,12 +3098,12 @@
 		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
 		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
 		<Mass>0.985</Mass>
-		<Max_Speed>8.5</Max_Speed>
-		<Min_Speed>4.5</Min_Speed>
-		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
-		<Max_Lift>4</Max_Lift>
-		<Max_Thrust>1.0</Max_Thrust>
-		<Max_Rate_Of_Roll>6.0</Max_Rate_Of_Roll>
+		<Max_Speed>6.36</Max_Speed>
+		<Min_Speed>1.22</Min_Speed>
+		<Max_Rate_Of_Turn>5.2</Max_Rate_Of_Turn>
+		<Max_Lift>4.04</Max_Lift>
+		<Max_Thrust>4.04</Max_Thrust>
+		<Max_Rate_Of_Roll>5.2</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>40</Bank_Turn_Angle>
 		<Begin_Turn_Towards_Distance>800.0</Begin_Turn_Towards_Distance>
 		<Fires_Forward>no</Fires_Forward>
@@ -3152,7 +3113,7 @@
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>100</Tactical_Health>
+		<Tactical_Health>36</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>500</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
@@ -3169,21 +3130,8 @@
 		<Size_Value>8</Size_Value>
 		<SpaceBehavior>HUNT, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
-		<Damage>2</Damage>
 
-        <Damage_Type>Damage_Fighter</Damage_Type>
-		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Green</Projectile_Types>
-		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
-		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
-		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
-
-		<Fire_Inaccuracy_Distance> Fighter, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Bomber, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Transport, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Corvette, 30.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Super, 30.0 </Fire_Inaccuracy_Distance>
+       		<Hardpoints> HP_TIE_Interceptor_00, HP_TIE_Interceptor_01, HP_Elite_Interceptor_00 </Hardpoints>
 
 		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
 		<Space_FOW_Reveal_Range>15000.0</Space_FOW_Reveal_Range>
@@ -3482,10 +3430,9 @@
 		<Create_Team_Type>181st_TIE_Defender_Squadron</Create_Team_Type>
 		<Affiliation>Empire</Affiliation>
 
-		<Damage>25</Damage>
-		<Shield_Points>10</Shield_Points>
-		<Tactical_Health>20</Tactical_Health>
-		<Shield_Refresh_Rate>1</Shield_Refresh_Rate>
+		<Shield_Points>54</Shield_Points>
+		<Tactical_Health>245</Tactical_Health>
+		<Shield_Refresh_Rate>2</Shield_Refresh_Rate>
 
 		<SFXEvent_Select>Unit_Select_Phennir</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Phennir</SFXEvent_Move>
@@ -3535,10 +3482,9 @@
 
 		<Is_Named_Hero>No</Is_Named_Hero>
 
-		<Damage>20</Damage>
-		<Shield_Points>10</Shield_Points>
-		<Tactical_Health>15</Tactical_Health>
-		<Shield_Refresh_Rate>1</Shield_Refresh_Rate>
+		<Shield_Points>38</Shield_Points>
+		<Shield_Refresh_Rate>0.95</Shield_Refresh_Rate>
+		<Tactical_Health>32</Tactical_Health>
 		<Affiliation>Empire</Affiliation>
 
 		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
@@ -5613,7 +5559,7 @@
 
 		<Stealth_Capable>No</Stealth_Capable>
 		<Victory_Relevant>yes</Victory_Relevant>
-		<CategoryMask> LandHero | Frigate </CategoryMask>
+		<CategoryMask> LandHero </CategoryMask>
 		<Ranking_In_Category> 1 </Ranking_In_Category>
 		<MovementClass>Infantry</MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
@@ -5622,7 +5568,7 @@
 		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
 		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
 		<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
-		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
 		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
 
 		<Has_Land_Evaluator>True</Has_Land_Evaluator>
@@ -5769,20 +5715,6 @@
 				<Target_Particle_Bone_Name />
 			</Earthquake_Attack_Ability>
 
-			<Combat_Bonus_Ability Name="Joruus_Self_Bonus">
-				<Activation_Style>Space_Automatic</Activation_Style>
-				<Unit_Strength_Category />
-				<Applicable_Unit_Categories />
-				<Applicable_Unit_Types> Cboath_Carrack </Applicable_Unit_Types>
-				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
-				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
-				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
-				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
-				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
-				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
-				<Stacking_Category>1</Stacking_Category>
-			</Combat_Bonus_Ability>
-
 			<Combat_Bonus_Ability Name="Joruus_Battle_Meditation">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
@@ -5852,59 +5784,8 @@
 			</System_Spy_Ability>
 
 		</Abilities>
-		<Unique_Space_Unit>Cboath_Carrack</Unique_Space_Unit>
 
 	</HeroUnit>
-
-	<UniqueUnit Name="Cboath_Carrack">
-		<Variant_Of_Existing_Type>Carrack_Cruiser</Variant_Of_Existing_Type>
-		<Text_ID>TEXT_HERO_JORUUS_CBOATH</Text_ID>
-
-		<Tech_Level>99</Tech_Level>
-		<Affiliation>Empire</Affiliation>
-
-		<Icon_Name>i_button_cbaoth.tga</Icon_Name>
-
-		<SFXEvent_Select>Unit_Select_Joruus</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Select_Joruus</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Move_Joruus</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Joruus</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Move_Joruus</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Move_Joruus</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Attack_Joruus</SFXEvent_Group_Attack>
-
-		<SFXEvent_Stop>Unit_Move_Joruus</SFXEvent_Stop>
-		<SFXEvent_Barrage>Unit_Move_Joruus</SFXEvent_Barrage>
-		<SFXEvent_Move_Into_Asteroid_Field> Unit_Move_Joruus </SFXEvent_Move_Into_Asteroid_Field>
-		<SFXEvent_Move_Into_Nebula> Unit_Move_Joruus </SFXEvent_Move_Into_Nebula>
-
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Joruus </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Joruus </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Joruus </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Joruus </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Joruus </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Joruus </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Joruus </SFXEvent_Attack_Hardpoint>
-
-		<Death_SFXEvent_Start_Die>Unit_Attack_Joruus</Death_SFXEvent_Start_Die>
-
-				<CategoryMask> Frigate | SpaceHero </CategoryMask>
-
-
-		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_FORCESENSITIVE TEXT_TOOLTIP_BIO TEXT_TOOLTIP_CBOATH TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_CARRACK </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DARK_JEDI </Encyclopedia_Unit_Class>
-		<Score_Cost_Credits> 2500</Score_Cost_Credits>
-
-		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
-		<Tactical_Build_Time_Seconds>13</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
-		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
-		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-	</UniqueUnit>
 
 	<HeroCompany Name="Joruus_Cboath_Team">
 		<Text_ID>TEXT_HERO_JORUUS_CBOATH</Text_ID>
@@ -5966,7 +5847,7 @@
 
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_FORCESENSITIVE TEXT_TOOLTIP_BIO TEXT_TOOLTIP_CBOATH TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_CARRACK </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DARK_JEDI </Encyclopedia_Unit_Class>
-		<CategoryMask>LandHero | SpaceHero</CategoryMask>
+		<CategoryMask>LandHero </CategoryMask>
 		<Ranking_In_Category> 1 </Ranking_In_Category>
 		<Population_Value>1</Population_Value>
 	</HeroCompany>

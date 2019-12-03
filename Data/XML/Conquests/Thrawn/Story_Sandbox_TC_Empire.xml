@@ -351,7 +351,6 @@
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
 		<Reward_Param1>Branch_Obroa_Text</Reward_Param1>
 		<Reward_Param2>0</Reward_Param2>
-		<!--<Perpetual>true</Perpetual> Gonna make them have to be first -->
 	</Event>
 	
 	<Event Name="Wayland_Unlocked">
@@ -406,7 +405,7 @@
 		<Story_Dialog>Dialog_Remnant_Thrawn</Story_Dialog>
 		<Story_Chapter>2</Story_Chapter>
 		<Branch>Branch_Obroa_Text</Branch>
-		<Story_Tag>Obroa_Start</Story_Tag>
+		<Prereq>Obroa_Start</Prereq>
 	</Event>
 	
 	<Event Name="Obroa_Skai_Conquer_Text">
@@ -439,6 +438,119 @@
 		<Reward_Param9>Thrawn_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Wayland_Conquer</Prereq>
+	</Event>
+	
+	<Event Name="Nkllon_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>80</Event_Param1>
+		<Branch>Branch_Nkllon_Text</Branch>
+		<Prereq>Wayland_Conquer</Prereq>
+	</Event>
+	
+	<Event Name="Nkllon_Intro">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_THRAWN_NKLLON_INTRO</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Thrawn_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Branch>Branch_Nkllon_Text</Branch>
+		<Prereq>Nkllon_Start</Prereq>
+	</Event>
+  
+    <Event Name="Nkllon_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Remnant_Thrawn</Story_Dialog>
+		<Story_Chapter>3</Story_Chapter>
+		<Branch>Branch_Nkllon_Text</Branch>
+		<Prereq>Nkllon_Start</Prereq>
+	</Event>
+	
+	<Event Name="Nkllon_Conquer_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_THRAWN_NKLLON_CONCLUSION</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Thrawn_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Nkllon_Raid</Prereq>
+	</Event>
+	
+	<Event Name="Nkllon_Raid">
+  		<Event_Type>STORY_CONQUER</Event_Type>
+  		<Event_Param1>Nkllon</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_AND_ENEMY</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Branch_Nkllon_Text</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Mole_1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>Imperial_Boarding_Shuttle</Reward_Param1>
+		<Reward_Param2>Nkllon</Reward_Param2>
+		<Prereq>Nkllon_Raid</Prereq>
+	</Event>
+	
+	<Event Name="Mole_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>Imperial_Boarding_Shuttle</Reward_Param1>
+		<Reward_Param2>Nkllon</Reward_Param2>
+		<Prereq>Nkllon_Raid</Prereq>
+	</Event>
+	
+	<Event Name="Pantolomin_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1000</Event_Param1>
+		<Branch>Branch_Pantolomin_Text</Branch>
+	</Event>
+	
+	<Event Name="Pantolomin_Intro">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_THRAWN_NKLLON_INTRO</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Thrawn_Intro_Speech</Reward_Param8>
+		<Reward_Param9>Thrawn_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Branch>Branch_Pantolomin_Text</Branch>
+		<Prereq>Pantolomin_Start</Prereq>
+	</Event>
+  
+    <Event Name="Pantolomin_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>15</Event_Param1>
+		<Story_Dialog>Dialog_Remnant_Thrawn</Story_Dialog>
+		<Story_Chapter>4</Story_Chapter>
+		<Branch>Branch_Pantolomin_Text</Branch>
+		<Prereq>Pantolomin_Start</Prereq>
+	</Event>
+	
+	<Event Name="Pantolomin_Text_Kill">
+  		<Event_Type>STORY_TRI`</Event_Type>
+		<Reward_Param1>Branch_Pantolomin_Text</Reward_Param1>
+		<Prereq>Conquer_Pantolomin</Prereq>
+		<Reward_Param2>0</Reward_Param2>
 	</Event>
  
 </Story>

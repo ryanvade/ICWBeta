@@ -1,4 +1,5 @@
 require("trlib-std/class")
+StoryUtil = require("trlib-util/StoryUtil")
 
 ---@class GovernmentRepublic
 GovernmentRepublic = class()
@@ -11,6 +12,7 @@ function GovernmentRepublic:new(player_agnostic_plot)
     GlobalValue.Set("RepublicApprovalRating", 10)
     self.LastCycleTime = 0
     self.ApprovalRatingInfluence = 0
+    self.ChoiceMade = false
 
     --self.Events = {}
     --self.Events.ElectionHeld = Observable()
@@ -20,6 +22,7 @@ function GovernmentRepublic:Update()
     local current = GetCurrentTime()
     if current - self.LastCycleTime >= 40 then
         self:ApprovalRating()
+        self:KDYContracts()
         self.LastCycleTime = current
     end
 end
@@ -70,7 +73,44 @@ function GovernmentRepublic:ApprovalRating()
     local oldApprovalRating = GlobalValue.Get("RepublicApprovalRating")
     local overallApprovalRating = oldApprovalRating - oldValue + self.ApprovalRatingInfluence 
 
+    if overallApprovalRating >= 65 and self.ChoiceMade == false then
+        self:MakeLeaderChoice()
+    end    
+
     GlobalValue.Set("RepublicApprovalRating", overallApprovalRating)
+
+end
+
+function GovernmentRepublic:MakeLeaderChoice()
+
+    self.ChoiceMade = true
+    Get_Story_Plot("Conquests\\Story_Sandbox_Government_Rep.XML")
+    if Find_Player("Empire").Is_Human() then
+        Story_Event("LEADER_APPEAL")
+    else
+        Story_Event("LEADER_APPEAL_AI")
+    end
+
+end
+
+function GovernmentRepublic:KDYContracts()
+
+    local shipList =  {
+        "Generic_Star_Destroyer",
+        "Generic_Tector",
+        "Generic_Secutor"
+    }
+   
+    local contractObject = Find_First_Object("DUMMY_KUAT_CONTRACT")
+    --if contractObject then
+        local planet = FindPlanet("Kuat")
+        local spawnChance = GameRandom(1,100)
+        if spawnChance <= 15 then
+            table.remove(shipList, GameRandom(1,3))
+            table.remove(shipList, GameRandom(1,2))
+            local KDYspawn = SpawnList(shipList, planet, self.RepublicPlayer, true, false)
+        end
+    --end
 
 end
 

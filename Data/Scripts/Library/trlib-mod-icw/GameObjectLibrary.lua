@@ -229,18 +229,18 @@ GameObjectLibrary = {
     --  ["CREW_RESOURCE_DUMMY"]={
     --      Text="TEXT_DISPLAY_SLAYN_KORPIL"
     --  },
-        ["PLACEHOLDER_CATEGORY_DUMMY"]={
-            Text="TEXT_DISPLAY_PLACEHOLDER_CATEGORY_DUMMY"
-        },
-        ["NON_CAPITAL_CATEGORY_DUMMY"]={
-            Text="TEXT_DISPLAY_NON_CAPITAL_CATEGORY_DUMMY"
-        },
-        ["CAPITAL_CATEGORY_DUMMY"]={
-            Text="TEXT_DISPLAY_CAPITAL_CATEGORY_DUMMY"
-        },
-        ["STRUCTURE_CATEGORY_DUMMY"]={
-            Text="TEXT_DISPLAY_STRUCTURE_CATEGORY_DUMMY"
-        }
+    --    ["PLACEHOLDER_CATEGORY_DUMMY"]={
+    --        Text="TEXT_DISPLAY_PLACEHOLDER_CATEGORY_DUMMY"
+    --    },
+    --    ["NON_CAPITAL_CATEGORY_DUMMY"]={
+    --        Text="TEXT_DISPLAY_NON_CAPITAL_CATEGORY_DUMMY"
+    --    },
+    --    ["CAPITAL_CATEGORY_DUMMY"]={
+    --        Text="TEXT_DISPLAY_CAPITAL_CATEGORY_DUMMY"
+    --    },
+    --    ["STRUCTURE_CATEGORY_DUMMY"]={
+    --        Text="TEXT_DISPLAY_STRUCTURE_CATEGORY_DUMMY"
+    --    }
 
     },
     InfluenceLevels = { 
@@ -2113,6 +2113,22 @@ GameObjectLibrary = {
                     ["EMPIRE"] = {
                         Reserve=1,
                         Initial=1
+                    },
+					["PENTASTAR"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["PIRATES"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["TERADOC"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["HUTTS"] = {
+                        Reserve=1,
+                        Initial=1
                     }
                 },
                 ["TRIFOIL_SQUADRON"]={
@@ -2145,10 +2161,44 @@ GameObjectLibrary = {
                     ["EMPIRE"] = {
                         Reserve=0,
                         Initial=1
+                    },
+					["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["PIRATES"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["TERADOC"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["HUTTS"] = {
+                        Reserve=0,
+                        Initial=1
                     }
                 },
                 ["REBEL_X-WING_SQUADRON"]={
                     ["REBEL"] = {
+                        Reserve=2,
+                        Initial=1
+                    }
+                }
+            }
+        },
+		["NOVA_CRUISER_INFLUENCE"]={
+            Scripts={
+                "MultiLayer",
+                "FighterSpawn",
+                "SingleUnitRetreat"
+            },
+			Flags = {
+                HANGAR = true
+            },
+            Fighters={
+                ["MIYTIL_SQUADRON"]={
+                    ["DEFAULT"] = {
                         Reserve=2,
                         Initial=1
                     }
@@ -3194,24 +3244,16 @@ GameObjectLibrary = {
                         Reserve=0,
                         Initial=1
                     },
-                    ["MANDALORIANS"] = {
+                    ["WARLORDS"] = {
                         Reserve=0,
                         Initial=1
                     },
 					["HOSTILE"] = {
                         Reserve=0,
                         Initial=1
-                    },
-					["WARLORDS"] = {
-                        Reserve=0,
-                        Initial=1
                     }
                 },
                 ["STARVIPER_SQUADRON"]={
-                    ["MANDALORIANS"] = {
-                        Reserve=1,
-                        Initial=1
-                    },
 					["HOSTILE"] = {
                         Reserve=1,
                         Initial=1
@@ -3225,10 +3267,42 @@ GameObjectLibrary = {
                     ["EMPIRE"] = {
                         Reserve=0,
                         Initial=1
+                    },
+					["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["PIRATES"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["TERADOC"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["HUTTS"] = {
+                        Reserve=0,
+                        Initial=1
                     }
                 },
                 ["TIE_FIGHTER_SQUADRON"]={
                     ["EMPIRE"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["PENTASTAR"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["PIRATES"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["TERADOC"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["HUTTS"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -3243,6 +3317,26 @@ GameObjectLibrary = {
                     ["YEVETHA"] = {
                         Reserve=1,
                         Initial=2
+                    }
+                }
+            }
+        },
+		["KELDABE_INFLUENCE"]={
+            Scripts={
+                "MultiLayer",
+                "FighterSpawn"
+            },
+            Fighters={
+                ["AGGRESSOR_ASSAULT_FIGHTER_SQUADRON"]={
+					["DEFAULT"] = {
+                        Reserve=0,
+                        Initial=1
+                    }
+                },
+                ["STARVIPER_SQUADRON"]={
+					["DEFAULT"] = {
+                        Reserve=1,
+                        Initial=1
                     }
                 }
             }
@@ -3341,16 +3435,10 @@ GameObjectLibrary = {
                 HANGAR = true
             },
             Fighters={
-                ["A-WING_SQUADRON"]={
-                    ["DEFAULT"] = {
-                        Reserve=0,
-                        Initial=1
-                    }
-                },
                 ["Y-WING_SQUADRON"]={
                     ["DEFAULT"] = {
                         Reserve=1,
-                        Initial=2
+                        Initial=1
                     }
                 },
                 ["REBEL_X-WING_SQUADRON"]={
@@ -3849,7 +3937,47 @@ GameObjectLibrary = {
                 }
             }
         },
+		["ARMADIA_INFLUENCE"]={
+            Scripts={
+                "MultiLayer",
+				"FighterSpawn"
+            },
+            Flags = {
+                HANGAR = true
+            },
+            Fighters={
+                ["TRIFOIL_SQUADRON"]={
+                    ["DEFAULT"] = {
+                        Reserve=2,
+                        Initial=1
+                    }
+                }
+            }
+        },
 		["C_TYPE_THRUSTSHIP"]={
+            Scripts={
+                "MultiLayer",
+				"FighterSpawn"
+            },
+            Flags = {
+                HANGAR = true
+            },
+            Fighters={
+                ["TRIFOIL_SQUADRON"]={
+                    ["DEFAULT"] = {
+                        Reserve=2,
+                        Initial=3
+                    }
+                },
+				["TIE_BOMBER_SQUADRON"]={
+                    ["DEFAULT"] = {
+                        Reserve=2,
+                        Initial=2
+                    }
+                }
+            }
+        },
+		["C_TYPE_INFLUENCE"]={
             Scripts={
                 "MultiLayer",
 				"FighterSpawn"
@@ -3922,6 +4050,22 @@ GameObjectLibrary = {
                     ["EMPIRE"] = {
                         Reserve=1,
                         Initial=1
+                    },
+					["PENTASTAR"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["PIRATES"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["TERADOC"] = {
+                        Reserve=1,
+                        Initial=1
+                    },
+					["HUTTS"] = {
+                        Reserve=1,
+                        Initial=1
                     }
                 },
                 ["TRIFOIL_SQUADRON"]={
@@ -3968,10 +4112,47 @@ GameObjectLibrary = {
                     ["EMPIRE"] = {
                         Reserve=0,
                         Initial=1
+                    },
+					["PENTASTAR"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["PIRATES"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["TERADOC"] = {
+                        Reserve=0,
+                        Initial=1
+                    },
+					["HUTTS"] = {
+                        Reserve=0,
+                        Initial=1
                     }
                 },
                 ["REBEL_X-WING_SQUADRON"]={
                     ["REBEL"] = {
+                        Reserve=1,
+                        Initial=1
+                    }
+                }
+            }
+        },
+		["BATTLEDRAGON_INFLUENCE"]={
+            Scripts={
+                "MultiLayer",
+                "FighterSpawn",
+                "SingleUnitRetreat"
+            },
+            Fighters={
+                ["MIYTIL_BOMBER_SQUADRON"]={
+                    ["DEFAULT"] = {
+                        Reserve=0,
+                        Initial=1
+                    }
+                },
+                ["MIYTIL_SQUADRON"]={
+                    ["DEFAULT"] = {
                         Reserve=1,
                         Initial=1
                     }
@@ -4405,29 +4586,23 @@ GameObjectLibrary = {
                 HANGAR = true
             },
             Fighters={
-                ["IRD_SQUADRON"]={
-                    ["CORPORATE_SECTOR"] = {
-                        Reserve=1,
-                        Initial=2
-                    }
-                },
                 ["TIE_RAPTOR_SQUADRON"]={
                     ["PIRATES"] = {
                         Reserve=1,
-                        Initial=2
+                        Initial=1
                     },
                     ["HOSTILE"] = {
                         Reserve=1,
-                        Initial=2
+                        Initial=1
                     },
                     ["WARLORDS"] = {
                         Reserve=1,
-                        Initial=2
+                        Initial=1
                     }
                 },
                 ["PREYBIRD_SQUADRON"]={
                     ["CORPORATE_SECTOR"] = {
-                        Reserve=0,
+                        Reserve=1,
                         Initial=1
                     }
                 },
@@ -4448,20 +4623,6 @@ GameObjectLibrary = {
                     },
                     ["WARLORDS"] = {
                         Reserve=1,
-                        Initial=1
-                    }
-                },
-                ["HOWLRUNNER_SQUADRON"]={
-                    ["PIRATES"] = {
-                        Reserve=0,
-                        Initial=1
-                    },
-                    ["HOSTILE"] = {
-                        Reserve=0,
-                        Initial=1
-                    },
-                    ["WARLORDS"] = {
-                        Reserve=0,
                         Initial=1
                     }
                 }
@@ -4763,12 +4924,6 @@ GameObjectLibrary = {
                         Initial=1
                     }
                 },
-				["STARVIPER_SQUADRON"]={
-                    ["MANDALORIANS"] = {
-                        Reserve=0,
-                        Initial=1
-                    }
-                },
                 ["REBEL_X-WING_SQUADRON"]={
                     ["REBEL"] = {
                         Reserve=0,
@@ -4796,12 +4951,6 @@ GameObjectLibrary = {
                 },
                 ["Z95_HEADHUNTER_SQUADRON"]={
                     ["CORPORATE_SECTOR"] = {
-                        Reserve=0,
-                        Initial=1
-                    }
-                },
-				["STARVIPER_SQUADRON"]={
-                    ["MANDALORIANS"] = {
                         Reserve=0,
                         Initial=1
                     }
@@ -5564,7 +5713,13 @@ GameObjectLibrary = {
                         Reserve=10,
                         Initial=4
                     }
-                }
+                },
+                ["TIE_TERROR_SQUADRON"]={
+                    ["DEFAULT"] = {
+                        Reserve=2,
+                        Initial=1
+                    }
+                }				
             }
         },
         ["BLACK_15"]={

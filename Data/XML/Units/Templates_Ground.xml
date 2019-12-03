@@ -1704,13 +1704,14 @@
 		<CategoryMask> Infantry </CategoryMask>
 		<MovementClass> Infantry </MovementClass>
 		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
-		<SFXEvent_Select> Unit_Select_Mercenary </SFXEvent_Select>         		
-		<SFXEvent_Move> Unit_Move_Mercenary </SFXEvent_Move>  
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mercenary</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack> Unit_Attack_Mercenary </SFXEvent_Attack>         		 
-		<SFXEvent_Guard> Unit_Guard_Mercenary </SFXEvent_Guard>            		 
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Mercenary </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Mercenary </SFXEvent_Assist_Attack> 
+
+		<SFXEvent_Select>Unit_Select_Dark_Trooper_1</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Dark_Trooper_1</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_1</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Dark_Trooper_1</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Dark_Trooper_1</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Dark_Trooper_1 </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Dark_Trooper_1 </SFXEvent_Assist_Attack>
 		<Death_SFXEvent_Start_Die>Unit_Underworld_Soldier_Death</Death_SFXEvent_Start_Die>
 		<SFXEvent_Fire>Unit_Underworld_Infantry_Fire</SFXEvent_Fire>
 
@@ -2017,18 +2018,20 @@
 		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
 		<Fire_Category_Restrictions> Air </Fire_Category_Restrictions>
 		<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
-		<SFXEvent_Fire>Unit_Tie_Crawler_Fire</SFXEvent_Fire>
-		<SFXEvent_Select>Unit_Select_Tie_Mauler</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Tie_Mauler</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tie_Mauler</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Tie_Mauler</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Tie_Mauler</SFXEvent_Guard>
+
+		<SFXEvent_Select>Unit_Select_Dark_Trooper_3</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Dark_Trooper_3</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_3</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Dark_Trooper_3</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Dark_Trooper_3</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Dark_Trooper_3 </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Dark_Trooper_3 </SFXEvent_Assist_Attack>
 		<Selt_Destruct_SFXEvent_Start_Die> Unit_TIE_Mauler_Self_Destruct </Selt_Destruct_SFXEvent_Start_Die>
 		<!-- When self destruct sequence begins -->
 		<Death_SFXEvent_Start_Die> Unit_Tank_Death_SFX </Death_SFXEvent_Start_Die>
 		<!-- When self destructs -->
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Tie_Mauler </SFXEvent_Assist_Move>
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Tie_Mauler</SFXEvent_Assist_Attack>
+
+
 		<SFXEvent_Engine_Idle_Loop> Unit_Tracked_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
 		<SFXEvent_Engine_Moving_Loop> Unit_Tracked_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
 		<SFXEvent_Unit_Lost> EHD_Unit_Destroyed </SFXEvent_Unit_Lost>
@@ -2111,9 +2114,9 @@
   		<Encyclopedia_Text>TEXT_TOOLTIP_HAILFIRE</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
 
-		<Land_Model_Name>CIS_Hailfire.ALO</Land_Model_Name>
+		<Land_Model_Name>hailfire.ALO</Land_Model_Name>
 		<Mass>1.0</Mass>
-		<Scale_Factor>.6</Scale_Factor>
+		<Scale_Factor>1.35</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Tracked</Type>
 		<Deploys>No</Deploys>
@@ -2162,13 +2165,13 @@
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
 
 		<Behavior> SELECTABLE </Behavior>
-		<LandBehavior>AFFECTED_BY_SHIELD, TREAD_SCROLL, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, POWERED, REVEAL, HIDE_WHEN_FOGGED, SQUASH, SURFACE_FX, UNIT_AI, TELEKINESIS_TARGET,STUNNABLE,DAMAGE_TRACKING</LandBehavior>
+		<LandBehavior>AFFECTED_BY_SHIELD, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, POWERED, REVEAL, HIDE_WHEN_FOGGED, SQUASH, SURFACE_FX, UNIT_AI, TELEKINESIS_TARGET,STUNNABLE,DAMAGE_TRACKING</LandBehavior>
 		<Property_Flags>GoodInfantryCrusher</Property_Flags>
 		<SurfaceFX_Name>Generic_Track</SurfaceFX_Name>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
 
-		<Target_Bones> CYLINDER01, TREAD_R, TREAD_L </Target_Bones>
+		<Target_Bones> HULL </Target_Bones>
 
 		<HardPoints>
 			HP_Hailfire_Laser,
@@ -2217,7 +2220,7 @@
 		<Victory_Relevant>yes</Victory_Relevant>
 		<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
-		<Tread_Scroll_Rate>0.167</Tread_Scroll_Rate>
+		<!-- <Tread_Scroll_Rate>0.167</Tread_Scroll_Rate> -->
 		<Overall_Length>20.0</Overall_Length> <!-- For vehicle pitching up and down on terrain (40 by geometry -->
 		<Overall_Width>25.0</Overall_Width> <!-- For vehicle rolling left and right on terrain (50 by geometry) -->
 		<Has_Land_Evaluator>Yes</Has_Land_Evaluator>
@@ -2301,7 +2304,7 @@
 		<Movement_Animation_Speed> 3.0 </Movement_Animation_Speed>
 		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
 		<FormationOrder> 1 </FormationOrder>
-		<Scale_Factor>1.1</Scale_Factor>
+		<Scale_Factor>1.44</Scale_Factor>
 		<CanCellStack>yes</CanCellStack>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Hover</Type>
@@ -2438,7 +2441,7 @@
 		<Movement_Animation_Speed> 3.0 </Movement_Animation_Speed>
 		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
 		<FormationOrder> 1 </FormationOrder>
-		<Scale_Factor>1.1</Scale_Factor>
+		<Scale_Factor>1.44</Scale_Factor>
 		<CanCellStack>yes</CanCellStack>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Hover</Type>

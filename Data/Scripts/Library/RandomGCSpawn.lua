@@ -46,7 +46,6 @@ function Spawn_At_All_Planets()
 					,{Find_Object_Type("MC80B"), 1, "Space"}
 					,{Find_Object_Type("MC40a"), 3, "Space"}
 					,{Find_Object_Type("Rebel_Infantry_Squad"), 3, "Land"}
-					,{Find_Object_Type("Rebel_Tank_Buster_Squad"), 2, "Land"}
 					,{Find_Object_Type("Rebel_Light_Tank_Brigade"), 1, "Land"}
 					,{Find_Object_Type("Tracker_Company"), 1, "Land"}
 					}
@@ -99,7 +98,6 @@ function Spawn_At_All_Planets()
 					,{Find_Object_Type("Generic_Star_Destroyer_Two"), 1, "Space"}
 					,{Find_Object_Type("Generic_Star_Destroyer"), 1, "Space"}
 					,{Find_Object_Type("Combat_Escort_Carrier"), 3, "Space"}
-					,{Find_Object_Type("Shock_Soldier_Squad_Pentastar"), 4, "Land"}
 					,{Find_Object_Type("Pentastar_Army_Trooper_Squad"), 5, "Land"}
 					,{Find_Object_Type("Pentastar_Walker_Group"), 2, "Land"}
 					,{Find_Object_Type("Pentastar_Repulsor_Scout_Group"), 4, "Land"}
@@ -175,7 +173,7 @@ function Spawn_At_All_Planets()
 			-- Scaled combat power based on planet value, reduced by if connected to a player, then increased or decreased by difficulty level
 			scaled_combat_power = 20000 * EvaluatePerception("GenericPlanetValue", hostile, planet) * (1.5 - EvaluatePerception("Is_Connected_To_Player", hostile, planet)) * Difficulty_Modifier
 			-- pick a random unit selection table
-			random_table_index = GameRandom.Free_Random(1, 6)
+			random_table_index = GameRandom.Free_Random(1, table.getn(Unit_Table))
 			
 			DebugMessage("%s -- Attempting to spawn units at %s, from table number %s, combat power %s, difficulty modifier %s", tostring(Script), tostring(planet), tostring(random_table_index), tostring(scaled_combat_power), tostring(Difficulty_Modifier))
 			-- Spawns random units at the planet for the given faction and combat power per planet

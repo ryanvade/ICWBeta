@@ -4836,7 +4836,7 @@ function Begin_GC(message)
 	},
 	MANDALORE={
 		{
-			Owner="Mandalorians",
+			Owner="Warlords",
 			StartingForces={
 				listOf(2,"Canderous_Assault_Tank_Company"),
 				listOf(2,"MAL_Rocket_Vehicle_Company"),
@@ -4848,7 +4848,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Mandalorians",
+			Owner="Warlords",
 			StartingForces={
 				listOf(2,"Canderous_Assault_Tank_Company"),
 				listOf(2,"MAL_Rocket_Vehicle_Company"),
@@ -4860,7 +4860,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Mandalorians",
+			Owner="Warlords",
 			StartingForces={
 				listOf(2,"Canderous_Assault_Tank_Company"),
 				listOf(2,"MAL_Rocket_Vehicle_Company"),
@@ -4872,7 +4872,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Mandalorians",
+			Owner="Warlords",
 			StartingForces={
 				listOf(2,"Canderous_Assault_Tank_Company"),
 				listOf(2,"MAL_Rocket_Vehicle_Company"),
@@ -4884,7 +4884,7 @@ function Begin_GC(message)
 			},
 		},
 		{
-			Owner="Mandalorians",
+			Owner="Warlords",
 			StartingForces={
 				listOf(2,"Canderous_Assault_Tank_Company"),
 				listOf(2,"MAL_Rocket_Vehicle_Company"),

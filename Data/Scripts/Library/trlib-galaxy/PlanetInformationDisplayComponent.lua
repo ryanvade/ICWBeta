@@ -76,9 +76,9 @@ function PlanetInformationDisplayComponent:render()
     self:clear()
     self:render_basic_planet_information(owner_name, color)
 
-    -- if not self.selected_planet:get_owner().Is_Human() then
-    --     return
-    -- end
+    if not self.selected_planet:get_owner().Is_Human() then
+         return
+    end
 
     self:render_structure_information(color)
     self:render_influence_information(color)

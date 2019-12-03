@@ -748,14 +748,14 @@
 		<Select_Box_Z_Adjust>1.0f</Select_Box_Z_Adjust>
 		<Mass>0.98</Mass>
 
-		<Max_Speed>5.0</Max_Speed>
-		<Min_Speed>1.5</Min_Speed>
-		<Max_Lift>0.0f</Max_Lift>
-		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
-		<Max_Thrust>0.1</Max_Thrust>
+		<Max_Speed>5.05</Max_Speed>
+		<Min_Speed>1.34</Min_Speed>
+		<Max_Lift>2.55f</Max_Lift>
+		<Max_Rate_Of_Turn>3.75</Max_Rate_Of_Turn>
+		<Max_Thrust>2.55</Max_Thrust>
 		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
-		<Bank_Turn_Angle>60</Bank_Turn_Angle>
-		<Begin_Turn_Towards_Distance>300.0</Begin_Turn_Towards_Distance>
+		<Bank_Turn_Angle>90</Bank_Turn_Angle>
+		<Begin_Turn_Towards_Distance>400.0</Begin_Turn_Towards_Distance>
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 
@@ -765,9 +765,9 @@
 		<Armor_Type> Armor_Hero_Transport </Armor_Type>
 
 		<Affiliation>Rebel</Affiliation>
-		<Shield_Points>200</Shield_Points>
-		<Tactical_Health>500</Tactical_Health>
-		<Shield_Refresh_Rate>5</Shield_Refresh_Rate>
+		<Shield_Points>20</Shield_Points>
+		<Tactical_Health>252</Tactical_Health>
+		<Shield_Refresh_Rate>2</Shield_Refresh_Rate>
 		<Energy_Capacity>9999</Energy_Capacity>
 		<Energy_Refresh_Rate>500</Energy_Refresh_Rate>
 
@@ -777,30 +777,11 @@
 		<Squadron_Capacity>0</Squadron_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Size_Value>8</Size_Value>
-		<Damage>12</Damage>
-		
-		<Fires_Forward>no</Fires_Forward>
-		<Turret_Rotate_Extent_Degrees>20</Turret_Rotate_Extent_Degrees>
-		<Turret_Elevate_Extent_Degrees>20</Turret_Elevate_Extent_Degrees>
+
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
-		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Red</Projectile_Types>
-		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
-		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
-		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
 
-		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
-		<Space_FOW_Reveal_Range>10000.0</Space_FOW_Reveal_Range>
-		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
-		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
-		
-		<Fire_Inaccuracy_Distance> Fighter, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Bomber, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Transport, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Corvette, 15.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Frigate, 15.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Capital, 15.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> SuperCapital, 1.0 </Fire_Inaccuracy_Distance>
+		<Hardpoints> HP_Xwing_00, HP_Xwing_01, HP_Xwing_02 </Hardpoints>
 
 		<Fire_Category_Restrictions> Infantry, Vehicle, Structure, Air </Fire_Category_Restrictions>
 		
@@ -855,17 +836,23 @@
 
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
-			
+			<!-- Primary ability -->
+
 			<Unit_Ability>
-				<Type>SPOILER_LOCK</Type>
-				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
-				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
-				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
-				<Mod_Multiplier>SPEED_MULTIPLIER,		2</Mod_Multiplier>
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Ability_On_Luke</SFXEvent_GUI_Unit_Ability_Activated>
-				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Ability_Off_Luke</SFXEvent_GUI_Unit_Ability_Deactivated>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 1.2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
 			</Unit_Ability>
 
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
 		</Unit_Abilities_Data>
 
 	</UniqueUnit>
@@ -901,14 +888,14 @@
 		<Select_Box_Z_Adjust>1.0f</Select_Box_Z_Adjust>
 		<Mass>0.98</Mass>
 
-		<Max_Speed>5.0</Max_Speed>
-		<Min_Speed>1.5</Min_Speed>
-		<Max_Lift>0.0f</Max_Lift>
-		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
-		<Max_Thrust>0.1</Max_Thrust>
+		<Max_Speed>5.05</Max_Speed>
+		<Min_Speed>1.34</Min_Speed>
+		<Max_Lift>2.55f</Max_Lift>
+		<Max_Rate_Of_Turn>3.75</Max_Rate_Of_Turn>
+		<Max_Thrust>2.55</Max_Thrust>
 		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
 		<Bank_Turn_Angle>60</Bank_Turn_Angle>
-		<Begin_Turn_Towards_Distance>300.0</Begin_Turn_Towards_Distance>
+		<Begin_Turn_Towards_Distance>800.0</Begin_Turn_Towards_Distance>
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
 
@@ -918,9 +905,9 @@
 		<Armor_Type> Armor_Hero_Transport </Armor_Type>
 
 		<Affiliation>Rebel</Affiliation>
-		<Shield_Points>150</Shield_Points>
-		<Tactical_Health>450</Tactical_Health>
-		<Shield_Refresh_Rate>5</Shield_Refresh_Rate>
+		<Shield_Points>15</Shield_Points>
+		<Tactical_Health>239</Tactical_Health>
+		<Shield_Refresh_Rate>2</Shield_Refresh_Rate>
 		<Energy_Capacity>9999</Energy_Capacity>
 		<Energy_Refresh_Rate>500</Energy_Refresh_Rate>
 
@@ -930,30 +917,14 @@
 		<Squadron_Capacity>0</Squadron_Capacity>
 		<Number_per_Squadron>1</Number_per_Squadron>
 		<Size_Value>8</Size_Value>
-		<Damage>12</Damage>
-		
-		<Fires_Forward>no</Fires_Forward>
-		<Turret_Rotate_Extent_Degrees>20</Turret_Rotate_Extent_Degrees>
-		<Turret_Elevate_Extent_Degrees>20</Turret_Elevate_Extent_Degrees>
-		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
-
-		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Red</Projectile_Types>
-		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
-		<Projectile_Fire_Pulse_Delay_Seconds>0.12</Projectile_Fire_Pulse_Delay_Seconds>
-		<Projectile_Fire_Recharge_Seconds>3.5</Projectile_Fire_Recharge_Seconds>
 
 		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
 		<Space_FOW_Reveal_Range>10000.0</Space_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
 		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
 		
-		<Fire_Inaccuracy_Distance> Fighter, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Bomber, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Transport, 1.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Corvette, 15.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Frigate, 15.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> Capital, 15.0 </Fire_Inaccuracy_Distance>
-		<Fire_Inaccuracy_Distance> SuperCapital, 1.0 </Fire_Inaccuracy_Distance>
+
+		<Hardpoints> HP_Xwing_00, HP_Xwing_01, HP_Xwing_02 </Hardpoints>
 
 		<Fire_Category_Restrictions> Infantry, Vehicle, Structure, Air </Fire_Category_Restrictions>
 		
@@ -1008,19 +979,34 @@
 
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
-		
-			
+			<!-- Primary ability -->
+
 			<Unit_Ability>
-				<Type>SPOILER_LOCK</Type>
-				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
-				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
-				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
-				<Mod_Multiplier>SPEED_MULTIPLIER,		2</Mod_Multiplier>
-				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Ability_On_Luke</SFXEvent_GUI_Unit_Ability_Activated>
-				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Ability_Off_Luke</SFXEvent_GUI_Unit_Ability_Deactivated>
+				<Type>SENSOR_JAMMING</Type>
+				<GUI_Activated_Ability_Name> Fighter_Sensor_Jamming </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>55.0</Recharge_Seconds> 
+				<Expiration_Seconds>5.0</Expiration_Seconds>
+				<Effective_Radius>100.0</Effective_Radius> 
+                <SFXEvent_GUI_Unit_Ability_Activated> Unit_Jam_Sensors_On_Skipray </SFXEvent_GUI_Unit_Ability_Activated> 				
+				<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Jam_Sensors_Off_Skipray </SFXEvent_GUI_Unit_Ability_Deactivated> 
+				<Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
 			</Unit_Ability>
 
+			<!-- Secondary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
 		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+
+			<Sensor_Jamming_Ability Name="Fighter_Sensor_Jamming">
+				<Activation_Style> User_Input </Activation_Style>
+                		<Owner_Particle_Effect>Sensor_Jamming_Effect_Skipray</Owner_Particle_Effect>
+                		<Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+			</Sensor_Jamming_Ability>
+
+		</Abilities>
 
 	</UniqueUnit>
 

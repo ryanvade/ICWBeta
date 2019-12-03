@@ -361,7 +361,7 @@
 	<Want_To_Retreat_From_Space>
 		50.0
 		*
-		(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Category = GameObjectCategoryType[Interdictor]} > 0.0)
+		(Variable_Enemy.FriendlyForceUnnormalized{Parameter_Category = GameObjectCategoryType[Interdictor]} == 0.0)
 		*
 		(Variable_Self.IsDefender * (Game.Age > 20) +
 		(1 - Variable_Self.IsDefender) * (Game.Age > 120))
