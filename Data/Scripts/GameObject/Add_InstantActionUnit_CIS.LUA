@@ -19,6 +19,7 @@ function Definitions()
 "GEONOSIAN_CRUISER",
 "C9979_CARRIER",
 "MUNIFICENT",
+"RECUSANT_DREADNOUGHT", --Must be above Recusant so IA_Recusant_Dreadnought doesn't match with Recusant first
 "RECUSANT",
 "BULWARK_II",
 "BULWARK_I",
@@ -26,7 +27,8 @@ function Definitions()
 "GENERIC_LUCREHULK",
 "SUBJUGATOR",
 "CAPTOR",
-"AUXILIA"}
+"AUXILIA",
+"PROVIDENCE_DREADNOUGHT",}
 
 	Define_State("State_Init", State_Init);
 

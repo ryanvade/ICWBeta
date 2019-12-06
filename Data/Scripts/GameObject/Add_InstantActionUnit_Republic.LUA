@@ -1,6 +1,6 @@
 --//////////////////////////////////////////////////////////////////////////////////////
 -- Add Units to the reinforcement pool// This script is part of the Survival Mode
--- © Pox
+-- ï¿½ Pox
 --//////////////////////////////////////////////////////////////////////////////////////
 
 require("PGBase")
@@ -18,9 +18,9 @@ function Definitions()
 "LAC",
 "ARQUITENS",
 "CARRACK_CRUISER_LASERS",
-"GENERIC_ACCLAMATOR_ASSAULT_SHIP_I",
+"GENERIC_ACCLAMATOR_ASSAULT_SHIP_II",
 "GENERIC_ACCLAMATOR_ASSAULT_SHIP_LEVELER",
-"GENERIC_ACCLAMATOR_ASSAULT_SHIP",
+"GENERIC_ACCLAMATOR_ASSAULT_SHIP_I",
 "DREADNAUGHT_LASERS",
 "GENERIC_VICTORY_DESTROYER",
 "GENERIC_VENATOR",

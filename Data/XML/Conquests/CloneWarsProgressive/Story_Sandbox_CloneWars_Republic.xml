@@ -478,6 +478,15 @@
 		<Prereq>Clone_Trooper_II_AI_Force</Prereq>
 	</Event>
 	
+	<Event Name="Lock_Speeder">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Speeder_Bike_Squad</Reward_Param1>
+		<Prereq>Unlock_Clone_Trooper_II</Prereq>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+		<Prereq>Clone_Trooper_II_AI_Force</Prereq>
+	</Event>
+	
 	<Event Name="Lock_ARC_Trooper_II">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
@@ -516,7 +525,7 @@
 	
 	<Event Name="Victory_Research_Begin">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>160</Event_Param1>
+		<Event_Param1>20</Event_Param1>
 		<Prereq>Republic_Enters_Tech_04</Prereq>
 		<Branch>Era_Four</Branch>
 	</Event>
@@ -586,7 +595,7 @@
 	
 	<Event Name="Unlock_Victory_Force">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>800</Event_Param1>
+		<Event_Param1>180</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Victory_Destroyer</Reward_Param1>
 		<Prereq>Republic_Enters_Tech_04</Prereq>

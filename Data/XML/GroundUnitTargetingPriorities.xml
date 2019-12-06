@@ -9,10 +9,10 @@
 
 	<Priority_Set Name="AntiInfantry">
 		<Attack_Priorities>
-			LandHero, 0.5,	Infantry, 1.0,		Vehicle, 2.0,		Structure, 3.0
+			LandHero, 0.5,	Infantry, 1.0,		Vehicle, 2.0,		Structure, 3.0, Air, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
-			Wall, Air
+			Wall
 		</Category_Exclusions>
 		<Property_Exclusions>NotOpportunityTarget</Property_Exclusions>
 	</Priority_Set>
@@ -32,20 +32,20 @@
 
 	<Priority_Set Name="AntiVehicle">
 		<Attack_Priorities>
-			Vehicle, 1.0,  LandHero, 1.5,	   Infantry, 3.0,     Structure, 3.5
+			Vehicle, 1.0,  LandHero, 1.5,	   Infantry, 3.0,     Structure, 3.5, Air, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
-			Wall, Air
+			Wall
 		</Category_Exclusions>
 		<Property_Exclusions>NotOpportunityTarget</Property_Exclusions>
 	</Priority_Set>
 
     <Priority_Set Name="AntiVehicleStructure">
         <Attack_Priorities>
-            Vehicle, 1.0,  LandHero, 1.5,	  Infantry, 3.0, Structure, 4.0
+            Vehicle, 1.0,  LandHero, 1.5,	  Infantry, 3.0, Structure, 4.0, Air, 5.0
         </Attack_Priorities>
         <Category_Exclusions>
-            Wall, Air
+            Wall
         </Category_Exclusions>
 		<Property_Exclusions>NotOpportunityTarget</Property_Exclusions>
     </Priority_Set>
@@ -147,10 +147,11 @@
             Vehicle, 1.0, 
             LandHero, 3.0,
             Infantry, 4.0, 
-            Structure, 5.0
+            Structure, 5.0,
+			Air, 5.0
         </Attack_Priorities>
         <Category_Exclusions>
-            Wall, Air
+            Wall
         </Category_Exclusions>
 		<Property_Exclusions>NotOpportunityTarget</Property_Exclusions>				
 	</Priority_Set>
@@ -221,40 +222,40 @@
 
 	<Priority_Set Name="AntiStructure">
 		<Attack_Priorities>
-			Turret, 1.0,	Vehicle, 2.0,	Infantry, 3.0,	Structure, 4.0
+			Turret, 1.0,	Vehicle, 2.0,	Infantry, 3.0,	Structure, 4.0, Air, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
-			Wall, Air
+			Wall
 		</Category_Exclusions>
 		<Property_Exclusions>NotOpportunityTarget</Property_Exclusions>
 	</Priority_Set>
 
 	<Priority_Set Name="AntiInfantry_No_Structures">
 		<Attack_Priorities>
-			LandHero, 0.5,	Infantry, 1.0,	Structure, 5.0
+			LandHero, 0.5,	Infantry, 1.0,	Structure, 5.0, Air, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
-			Wall, Air
+			Wall
 		</Category_Exclusions>
 		<Property_Exclusions>NotOpportunityTarget</Property_Exclusions>
 	</Priority_Set>
 
 	<Priority_Set Name="AntiVehicle_No_Structures">
 		<Attack_Priorities>
-			Vehicle, 1.0,	LandHero, 1.5,	Structure, 5.0
+			Vehicle, 1.0,	LandHero, 1.5,	Structure, 5.0, Air, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
-			Wall, Air
+			Wall
 		</Category_Exclusions>
 		<Property_Exclusions>NotOpportunityTarget</Property_Exclusions>
 	</Priority_Set>
 
 	<Priority_Set Name="AvoidAntiInfantryTurrets">
 		<Attack_Priorities>
-			LandHero, 0.5,	Infantry, 1.0,		Vehicle, 3.0,     Structure, 4.0
+			LandHero, 0.5,	Infantry, 1.0,		Vehicle, 3.0,     Structure, 4.0, Air, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
-			Wall, Air
+			Wall
 		</Category_Exclusions>
 	
 		<Property_Exclusions>NotOpportunityTarget</Property_Exclusions>
@@ -262,7 +263,7 @@
 	
 	<Priority_Set Name="AvoidAntiInfantryTurretsAir">
 		<Attack_Priorities>
-			LandHero, 0.5,	Infantry, 1.0,		Air, 2.5,		Vehicle, 3.0,     Structure, 4.0
+			LandHero, 0.5,	Infantry, 1.0,		Air, 2.5,		Vehicle, 3.0,     Structure, 4.0,  Air, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
 			Wall
@@ -277,9 +278,10 @@
 			Infantry, 2.0,     
 			Vehicle, 3.0,
 			Structure, 5.0,
+			Air, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
-			Wall, Air
+			Wall
 		</Category_Exclusions>
 
 		<Property_Exclusions>
@@ -340,10 +342,11 @@
 			Vehicle, 2.0,  
 			LandHero, 5.0,
 			Infantry, 6.0,
-			Structure, 7.0
+			Structure, 7.0,
+			Air, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
-			Wall, Air
+			Wall
 		</Category_Exclusions>
 		<Unit_Exclusions>
 			Plex_Soldier_Team,
@@ -364,9 +367,10 @@
 			Infantry, 2.0,
 			Vehicle, 3.0,
 			Structure, 5.0,
+			Air, 5.0
 		</Attack_Priorities>
 		<Category_Exclusions>
-			Wall, Air
+			Wall
 		</Category_Exclusions>
 		<Unit_Exclusions>
 			Plex_Soldier_Team,

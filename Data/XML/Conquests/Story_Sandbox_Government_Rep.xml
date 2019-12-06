@@ -207,6 +207,13 @@
 		<Prereq>Build_KDY_Contract</Prereq>
 	</Event>
 		
+	<Event Name="Unlock_KDY">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>DUMMY_KUAT_CONTRACT</Reward_Param1>
+		<Prereq>Lira_Contract</Prereq>	
+	</Event>
+		
 	<Event Name="KDY_Deal_AI">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>200</Event_Param1>
@@ -217,7 +224,7 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Execute_Order_66_Dummy</Reward_Param1>
-		<Prereq>KDY_Patron_Completed</Prereq>
+		<Prereq>KDY_Patron_Completed</Prereq>	
 	</Event>
 	
 	<Event Name="Order66_Executed">
@@ -483,7 +490,7 @@
 		<Reward_Param6 />
 		<Reward_Param7 />
 		<Reward_Param8></Reward_Param8>
-		<Reward_Param9>Palpatine_Loop</Reward_Param9>
+		<Reward_Param9>Emperor_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Convo_Order66_13</Prereq>
 	</Event>
@@ -515,7 +522,7 @@
 		<Reward_Param6 />
 		<Reward_Param7 />
 		<Reward_Param8></Reward_Param8>
-		<Reward_Param9>Palpatine_Loop</Reward_Param9>
+		<Reward_Param9>Emperor_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Convo_Order66_15</Prereq>
 	</Event>

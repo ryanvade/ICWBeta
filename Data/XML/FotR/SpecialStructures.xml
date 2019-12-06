@@ -2710,157 +2710,6 @@
 	</SpecialStructure>
 
 
-
-	<!-- Template for Turbolaser Towers as they exist in land tactical battles. -->
-	<SpecialStructure Name="Template_Ground_Turbolaser_Tower">
-		<Text_ID>TEXT_GROUND_TURBOLASER_TOWER</Text_ID>
-		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_TURBOLASER_00  </Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TURRET</Encyclopedia_Unit_Class>
-
-		<GUI_Row> 0 </GUI_Row>
-		<Affiliation />
-		<Land_Model_Name>EB_TLTower.ALO</Land_Model_Name>
-		<Is_Dummy>No</Is_Dummy>
-		<Behavior>SELECTABLE, DUMMY_GROUND_STRUCTURE</Behavior>
-		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,TURRET,TARGETING,WEAPON,POWERED,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI, STUNNABLE,EARTHQUAKE_TARGET,ION_STUN_EFFECT </LandBehavior>
-		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
-
-		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
-		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
-
-		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
-		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
-		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
-
-		<Select_Box_Scale>140</Select_Box_Scale>
-		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
-		<Is_Community_Property>No</Is_Community_Property>
-		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
-		<GUI_Bracket_Size>2</GUI_Bracket_Size>
-		<GUI_Bounds_Scale>0.7</GUI_Bounds_Scale>
-		<AI_Combat_Power>300</AI_Combat_Power>
-
-		<Influences_Capture_Point>False</Influences_Capture_Point>
-		<Place_At_Every_Specific_Marker_Position>True</Place_At_Every_Specific_Marker_Position>
-
-		<Damage>300</Damage>
-		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
-		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
-		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
-
-		<Armor_Type> Armor_Structure </Armor_Type>
-		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
-		<Mass>1.0</Mass>
-		<Scale_Factor>0.75</Scale_Factor>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>400</Tactical_Health>
-		<Energy_Capacity>500</Energy_Capacity>
-		<Energy_Refresh_Rate>40</Energy_Refresh_Rate>
-
-		<Land_FOW_Reveal_Range>600.0</Land_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>600.0</Targeting_Max_Attack_Distance>
-		<Targeting_Min_Attack_Distance> 150 </Targeting_Min_Attack_Distance>
-
-		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
-		<!--<Projectile_Damage>125.0</Projectile_Damage>
-		<Projectile_Fire_Recharge_Seconds>4.0</Projectile_Fire_Recharge_Seconds>
-		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
-		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>-->
-
-		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
-
-		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
-		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
-		<SFXEvent_Fire>Unit_Turbo_Tower_Fire</SFXEvent_Fire>
-		<SFXEvent_Select> Structure_Turret_Select_SFX </SFXEvent_Select>
-
-		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
-		<Obstacle_Width>60.0</Obstacle_Width>
-		<Obstacle_Height>60.0</Obstacle_Height>
-		<Obstacle_X_Offset>-30.0</Obstacle_X_Offset>
-		<Obstacle_Y_Offset>-30.0</Obstacle_Y_Offset>
-
-		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
-		<Turret_Elevate_Extent_Degrees>45</Turret_Elevate_Extent_Degrees>
-		<Turret_Rotate_Speed>4.0</Turret_Rotate_Speed>
-		<Turret_Bone_Name>B_Turret_00</Turret_Bone_Name>
-		<Barrel_Bone_Name>B_Barrel_00</Barrel_Bone_Name>
-		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
-		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
-
-		<!-- Ground infantry priority 1, ground vehicles priority 1, air vehicles N/A (9999) -->
-		<Turret_Targets_Ground_Infantry> 3 </Turret_Targets_Ground_Infantry>
-		<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
-		<Turret_Targets_Air_Vehicles> 2 </Turret_Targets_Air_Vehicles>
-		<Turret_Targets_Anything_Else> 9999 </Turret_Targets_Anything_Else>     <!-- 9999 = won't target -->
-
-		<!--<Targeting_Fire_Inaccuracy> Infantry, 30.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> LandHero, 30.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Air, 10.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>-->
-		
-		<Target_Bones> ALT0, P_SMOKE_TINY01_ALT3 </Target_Bones>
-		
-		<Hardpoints>
-			HP_Turbolaser_Tower
-		</Hardpoints>
-
-		<Political_Control>0</Political_Control>
-		<Build_Cost_Credits>2000</Build_Cost_Credits>
-		<Build_Time_Seconds>30</Build_Time_Seconds>
-		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
-		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
-		<Size_Value>50</Size_Value>
-		<Build_Initially_Locked>Yes</Build_Initially_Locked>
-		<Base_Position>In_Base</Base_Position>
-		<Tech_Level>99</Tech_Level>
-		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
-		<Required_Timeline>0</Required_Timeline>
-		<Required_Star_Base_Level>0</Required_Star_Base_Level>
-		<Required_Planets />
-		<Icon_Name>i_button_turbolaser_tower.tga</Icon_Name>
-		<Victory_Relevant>No</Victory_Relevant>
-		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
-		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
-
-        <!-- Turn the turbolaser off when base power goes out -->
-		<Requires_Base_Power>True</Requires_Base_Power>
-
-		<CategoryMask> Structure | AntiVehicle</CategoryMask>
-		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
-		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
-
-		<!-- The ground structures have this data which looks like it's space only because the
-		snowspeeders are using space style pathfinding which needs this information so that we won't
-		path speeders through structures -->
-		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
-		<Space_Layer> Corvette </Space_Layer>
-		<Has_Land_Evaluator>True</Has_Land_Evaluator>
-
-		<Score_Cost_Credits> 20000 </Score_Cost_Credits>
-		<Property_Flags>InBase | Turret</Property_Flags>
-		<Abilities SubObjectList="Yes">
-			<Force_Healing_Ability Name="Ground_Turbolaser_Tower_Self_Repair">
-				<Activation_Style>Skirmish_Automatic</Activation_Style>
-				<Heal_Range>0.0</Heal_Range>
-				<Heal_Percent>0.025</Heal_Percent>
-				<Heal_Amount>0.0</Heal_Amount>
-				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
-				<Single_Target_Heal>Yes</Single_Target_Heal>
-				<Applicable_Unit_Categories />
-				<Applicable_Unit_Types />
-				<SFXEvent_Target_Affected />
-				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
-				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
-				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
-				<Owner_Light_Effect_Color2 />
-				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
-				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
-			</Force_Healing_Ability>
-		</Abilities>
-		<Targeting_Priority_Set>AntiVehicleAir</Targeting_Priority_Set>
-	</SpecialStructure>
 	<SpecialStructure Name="E_Ground_Turbolaser_Tower">
 		<Variant_Of_Existing_Type>Template_Ground_Turbolaser_Tower</Variant_Of_Existing_Type>
 		<Tactical_Additional_Structure_Type>Power_Generator_E</Tactical_Additional_Structure_Type>
@@ -3201,6 +3050,13 @@
 
 		<Starting_Spawned_Units_Tech_0>Republic_Speeder_Bike, 4</Starting_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Republic_Speeder_Bike, -1</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_5>Clonetrooper_Phase_Two_Team, 2</Starting_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>Clonetrooper_Phase_Two_Team, -1</Reserve_Spawned_Units_Tech_5>
+
+		<Starting_Spawned_Units_Tech_5>Republic_BARC_Speeder, 4</Starting_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_5>Republic_BARC_Speeder, -1</Reserve_Spawned_Units_Tech_5>
+
 
 		<Spawned_Squadron_Delay_Seconds>25</Spawned_Squadron_Delay_Seconds>
 		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>

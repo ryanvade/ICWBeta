@@ -15,13 +15,13 @@
 		<Tech_Level>99</Tech_Level>
 		<Affiliation>Rebel</Affiliation>
 		
-	<Starting_Spawned_Units_Tech_0>TriFighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_0>Vulture_Squadron, 4</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TriFighter_Squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Vulture_Squadron_Double, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Hyena_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_0>TriFighter_Squadron, 2</Reserve_Spawned_Units_Tech_0> 
-		<Reserve_Spawned_Units_Tech_0>Vulture_Squadron, 12</Reserve_Spawned_Units_Tech_0> 
-		<Reserve_Spawned_Units_Tech_0>Hyena_Squadron, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TriFighter_Squadron, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Vulture_Squadron_Double, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hyena_Squadron, 3</Reserve_Spawned_Units_Tech_0>
 		
 			<SFXEvent_Select>Unit_Select_Grievous</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Grievous</SFXEvent_Move>
@@ -40,6 +40,7 @@
 		<SFXEvent_Hero_Respawned>Unit_Select_Thrawn</SFXEvent_Hero_Respawned>
 	  
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
+		<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -285,7 +286,7 @@
 
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Company_Transport_Unit>Alliance_Shuttle</Company_Transport_Unit>
-		<Company_Units>General_Grievous, Magnaguard, Magnaguard</Company_Units>
+		<Company_Units>General_Grievous</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Is_Force_Sensitive>No</Is_Force_Sensitive>
 		<Available_In_Skirmish>yes</Available_In_Skirmish>
@@ -559,6 +560,7 @@
 		<SFXEvent_Hero_Respawned>Unit_Select_Thrawn</SFXEvent_Hero_Respawned>
 	  
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
+		<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -617,6 +619,7 @@
 		<SFXEvent_Hero_Respawned>Unit_Select_Thrawn</SFXEvent_Hero_Respawned>
 	  
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
+		<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -1472,7 +1475,7 @@
 		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
 			<Is_Named_Hero>Yes</Is_Named_Hero>	
 		<Text_ID>TEXT_HERO_TONITH</Text_ID>
-			<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_YULAREN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_CORPULENTUS </Encyclopedia_Text>
+			<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND1 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_TONITH TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_CORPULENTUS </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
@@ -1481,6 +1484,7 @@
 		<Affiliation>Rebel</Affiliation>
 		  
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
+		<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
 		
 		<Abilities SubObjectList="Yes">
@@ -1545,6 +1549,7 @@
 		
 		<CategoryMask> Frigate | SpaceHero | AntiCorvette </CategoryMask>
 		
+		<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
@@ -1874,7 +1879,7 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
 		
-		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<SpaceBehavior>SPAWN_SQUADRON, ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 		<Lua_Script></Lua_Script>
 
 		<Text_ID>TEXT_HERO_TRENCH</Text_ID>

@@ -121,7 +121,7 @@
 		<Auto_Deploys>Yes</Auto_Deploys>
 		<Deployment_Anim_Rate>3.0</Deployment_Anim_Rate>
 
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Rebel, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
 		<Size_Value>75</Size_Value>
 
 		<Armor_Type> Armor_Destroyer_Droid </Armor_Type>
@@ -238,7 +238,7 @@
 		<Is_Dummy>Yes</Is_Dummy>
 		<Damage>60</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Rebel, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
 		<Build_Cost_Credits>500</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -317,7 +317,7 @@
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Hover</Type>
 		<Deploys>No</Deploys>
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Rebel, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Size_Value>25</Size_Value>
 		<Damage>5</Damage>
@@ -351,19 +351,19 @@
 		<Wind_Disturbance_Sphere_Alpha>0.4</Wind_Disturbance_Sphere_Alpha>
 
 		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
-		<SFXEvent_Select>Unit_Select_Dark_Trooper_1</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Dark_Trooper_1</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_1</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Dark_Trooper_1</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Dark_Trooper_1</SFXEvent_Guard>
+		<SFXEvent_Select>Unit_Select_stap</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_stap</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_stap</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_stap</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_stap</SFXEvent_Guard>
 		<SFXEvent_Fire>Unit_Dark_Trooper_Blade_Swing</SFXEvent_Fire>
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Dark_Trooper_1 </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Dark_Trooper_1 </SFXEvent_Assist_Attack>
+		<SFXEvent_Assist_Move> Unit_Move_stap </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Attack_stap </SFXEvent_Assist_Attack>
 
 		<SFXEvent_Fire>Unit_Scout_Trooper_Fire</SFXEvent_Fire>
 
 
-		<Death_SFXEvent_Start_Die>Unit_Speeder_Bike_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_SFXEvent_Start_Die>Unit_Death_stap</Death_SFXEvent_Start_Die>
 
 
 		<SFXEvent_Ambient_Moving> Unit_Speederbike_Fly_By </SFXEvent_Ambient_Moving>
@@ -449,8 +449,8 @@
 
 		<SFXEvent_Build_Started>UHD_Build_Troops</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>UHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Mercenary</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mercenary</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_stap</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_stap</SFXEvent_Fleet_Move>
 
 		<Score_Cost_Credits>45</Score_Cost_Credits>
 
@@ -535,8 +535,8 @@
 
 		<SFXEvent_Build_Started>UHD_Build_Troops</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>UHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Mercenary</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mercenary</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_b1_droid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_b1_droid</SFXEvent_Fleet_Move>
 
 		<Score_Cost_Credits>45</Score_Cost_Credits>
 
@@ -629,8 +629,7 @@
 		<CanCellStack>yes</CanCellStack>
 		<Mass>1.0</Mass>
 
-<Target_Bones> root </Target_Bones>
-		
+	
 		<Movement_Animation_Speed> 0.8 </Movement_Animation_Speed>
 		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
 		<Walk_Animation_Speed> 1.0 </Walk_Animation_Speed>
@@ -649,7 +648,7 @@
 		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
 		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
 
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Rebel, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
 		<Build_Cost_Credits>0</Build_Cost_Credits>
 		<Build_Time_Seconds>0</Build_Time_Seconds>
 		<Size_Value>10</Size_Value>
@@ -678,7 +677,8 @@
 		<Land_FOW_Reveal_Range>170.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>300.0</Targeting_Max_Attack_Distance>
 
-		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
+		<Target_Bones> BONE17, BONE18 </Target_Bones>
 		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
@@ -884,7 +884,7 @@
 		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
 		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
 
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Rebel, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
 		<Build_Cost_Credits>0</Build_Cost_Credits>
 		<Build_Time_Seconds>0</Build_Time_Seconds>
 		<Size_Value>10</Size_Value>
@@ -922,13 +922,13 @@
 		<CategoryMask> Infantry </CategoryMask>
 		<MovementClass> Infantry </MovementClass>
 		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
-		<SFXEvent_Select>Unit_Select_MPTL_Spotter</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_MPTL_Spotter</SFXEvent_Move>
-		<SFXEvent_Attack>Unit_Attack_MPTL_Spotter</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_MPTL_Spotter</SFXEvent_Guard>
-		<SFXEvent_Assist_Move> Unit_Assist_Move_MPTL_Spotter </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_MPTL_Spotter </SFXEvent_Assist_Attack>
-		<Death_SFXEvent_Start_Die>Unit_Underworld_Soldier_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Select>Unit_Select_crab_droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_crab_droid</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_crab_droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_crab_droid</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Move_crab_droid </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Attack_crab_droid </SFXEvent_Assist_Attack>
+		<Death_SFXEvent_Start_Die>Unit_Death_crab_droid</Death_SFXEvent_Start_Die>
 		<SFXEvent_Fire>Unit_Underworld_Infantry_Fire</SFXEvent_Fire>
 
 		<OccupationStyle>1x1</OccupationStyle>
@@ -1010,8 +1010,8 @@
 
 		<SFXEvent_Build_Started>UHD_Build_Troops</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>UHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Mercenary</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mercenary</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_crab_droid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_move_crab_droid</SFXEvent_Fleet_Move>
 
 		<Score_Cost_Credits>45</Score_Cost_Credits>
 
@@ -1116,7 +1116,7 @@
 		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
 		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
 
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Rebel, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
 		<Build_Cost_Credits>0</Build_Cost_Credits>
 		<Build_Time_Seconds>0</Build_Time_Seconds>
 		<Size_Value>10</Size_Value>
@@ -1149,14 +1149,14 @@
 		<CategoryMask> Infantry </CategoryMask>
 		<MovementClass> Infantry </MovementClass>
 		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
-		<SFXEvent_Select>Unit_Select_Dark_Trooper_2</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Dark_Trooper_2</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_2</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Dark_Trooper_2</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Dark_Trooper_2</SFXEvent_Guard>
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Dark_Trooper_2 </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Dark_Trooper_2 </SFXEvent_Assist_Attack>
-		<Death_SFXEvent_Start_Die>Unit_Underworld_Soldier_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Select>Unit_Select_bx_commando</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_bx_commando</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_bx_commando</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_bx_commando</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_bx_commando</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Move_bx_commando </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Attack_bx_commando </SFXEvent_Assist_Attack>
+		<Death_SFXEvent_Start_Die>Unit_Death_bx_commando</Death_SFXEvent_Start_Die>
 		<SFXEvent_Fire>Unit_Underworld_Infantry_Fire</SFXEvent_Fire>
 
 		<OccupationStyle>1x1</OccupationStyle>
@@ -1211,7 +1211,7 @@
 		<Is_Dummy>Yes</Is_Dummy>
 		<Damage>45</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
-		<Affiliation>Rebel</Affiliation>
+		<Affiliation>Rebel, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
 		<Build_Cost_Credits>100</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
@@ -1245,8 +1245,8 @@
 
 		<SFXEvent_Build_Started>UHD_Build_Troops</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>UHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Mercenary</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mercenary</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_bx_commando</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_bx_commando</SFXEvent_Fleet_Move>
 
 		<Score_Cost_Credits>45</Score_Cost_Credits>
 

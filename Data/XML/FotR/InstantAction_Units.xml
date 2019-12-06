@@ -604,7 +604,7 @@
 		<Lua_Script>Add_InstantActionUnit_Republic</Lua_Script>
 	</UpgradeObject>	
 	
-	<UpgradeObject Name="IA_Generic_Acclamator_Assault_Ship">
+	<UpgradeObject Name="IA_Generic_Acclamator_Assault_Ship_II">
 		<Behavior>DUMMY_UPGRADE</Behavior>
 		<Affiliation>Empire, Rebel</Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 1800 </Tactical_Build_Cost_Multiplayer>
@@ -759,6 +759,58 @@
 		
 		<CategoryMask>Upgrade</CategoryMask>
 		<Lua_Script>Add_InstantActionUnit_Republic</Lua_Script>
+	</UpgradeObject>
+	
+	<UpgradeObject Name="IA_Recusant_Dreadnought">
+		<Behavior>DUMMY_UPGRADE</Behavior>
+		<Affiliation>Empire, Rebel</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 1800 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 3 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>-1</Build_Limit_Current_For_All_Allies>
+		
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>i_button_recusant.tga</Icon_Name>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_RECUSANT_DREADNOUGHT  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UNIT_RECUSANT_DREADNOUGHT </Text_ID>
+		
+		<SFXEvent_Build_Started>RHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		
+		<CategoryMask>Upgrade</CategoryMask>
+		<Lua_Script>Add_InstantActionUnit_CIS</Lua_Script>
+	</UpgradeObject>
+	
+	<UpgradeObject Name="IA_Providence_Dreadnought">
+		<Behavior>DUMMY_UPGRADE</Behavior>
+		<Affiliation>Empire, Rebel</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 1800 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 3 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>-1</Build_Limit_Current_For_All_Allies>
+		
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>i_button_prov.tga</Icon_Name>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UNIT_PROVIDENCE_DREADNOUGHT </Text_ID>
+		
+		<SFXEvent_Build_Started>RHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		
+		<CategoryMask>Upgrade</CategoryMask>
+		<Lua_Script>Add_InstantActionUnit_CIS</Lua_Script>
 	</UpgradeObject>
 	
 
