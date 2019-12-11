@@ -58,8 +58,7 @@ function Definitions()
         {
             "SpaceForce",
             "MinimumTotalSize = 5",
-            "Corvette = 20%",
-            "SpaceHero | Frigate | Capital | SuperCapital = 80%"
+            "SpaceHero | Corvette | Frigate | Capital | SuperCapital = 100%"
         },
         {
             "GroundForce",
@@ -155,7 +154,7 @@ function GroundForce_Thread()
     WasConflict = true
     if Invade(GroundForce) == false then
         GroundForce.Set_Plan_Result(false)
-		GroundForce.Move_To(FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, object))
+		GroundForce.Move_To(FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, AITarget))
         Exit_Plan_With_Possible_Sleep()
     end
 
@@ -179,7 +178,7 @@ function Exit_Plan_With_Possible_Sleep()
     sleep_duration = DifficultyBasedMinPause(difficulty)
 	
 	if SpaceForce and not LandSecured then
-		SpaceForce.Move_To(FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, object))
+		SpaceForce.Move_To(FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, AITarget))
 	end
 	
     if SpaceForce then

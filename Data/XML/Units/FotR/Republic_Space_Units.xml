@@ -315,6 +315,113 @@
 		<Death_Clone>Damage_Normal, Friggin_Huger_Explosion_Space</Death_Clone>
 
 	</StarBase>
+	
+	<StarBase Name="Generic_Star_Base_4">
+
+		<Affiliation>Neutral</Affiliation>
+		<GUI_Bounds_Scale>0.025</GUI_Bounds_Scale>
+		<Text_ID>TEXT_SUPERCAPITAL_SHIPYARDS</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION4 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>9.0</Scale_Factor>
+		<GUI_Row> 0 </GUI_Row>
+		<Is_Dummy>No</Is_Dummy>
+		<Space_Model_Name>capital_shipyard.alo</Space_Model_Name>
+		<Galactic_Model_Name>capital_shipyard.alo</Galactic_Model_Name>
+		<Select_Box_Scale>300</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-50</Select_Box_Z_Adjust>
+		<Build_Cost_Credits>2400</Build_Cost_Credits>
+		<AI_Combat_Power>300</AI_Combat_Power>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Tab_Space_Station>Yes</Build_Tab_Space_Station>
+		<Size_Value>30</Size_Value>
+		<Tech_Level>0</Tech_Level>
+		<Base_Level>4</Base_Level>
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, SPAWN_SQUADRON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<CategoryMask> Structure </CategoryMask>
+		<Property_Flags>IsStarbase</Property_Flags>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Autoresolve_Health>150</Autoresolve_Health>
+		<Damage>55</Damage>
+		<Shield_Points>4000</Shield_Points>
+		<Tactical_Health>5000</Tactical_Health>
+		<Shield_Refresh_Rate>60</Shield_Refresh_Rate>
+		<Energy_Capacity>5000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Space</Death_Explosions>
+		<Reinforcement_Prevention_Radius> 3000 </Reinforcement_Prevention_Radius>
+
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+
+		<HardPoints>
+			Shipyard_Hangar
+		</HardPoints>
+
+		<!-- Set to contuously spawn until fighter bay hard point is destroyed -->
+
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>20000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
+
+		<!-- Comm array and supply dock should be replaced by dummy hard points -->
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Ambient_Loop>Unit_Starbase_Engine_Loop</SFXEvent_Ambient_Loop>
+		<SFXEvent_Fire>Unit_Turbo_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Empire_Space_Station</SFXEvent_Select>
+		<SFXEvent_Attack>Unit_Attack_Empire_Space_Station</SFXEvent_Attack>
+		<SFXEvent_Barrage>Unit_Barrage_Empire_Space_Station</SFXEvent_Barrage>
+		<Death_SFXEvent_Start_Die>Unit_Space_Station_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Empire_Space_Station</SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Empire_Space_Station </SFXEvent_Attack_Hardpoint>
+
+
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  Unit_Lost_Missile_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  Unit_Lost_Torpedo_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_Empire_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
+
+		<SFXEvent_Unit_Under_Attack> EHD_Space_Station_Under_Attack </SFXEvent_Unit_Under_Attack>
+
+		<Has_Space_Evaluator>True</Has_Space_Evaluator>
+
+		<Custom_Soft_Footprint_Radius> 50 </Custom_Soft_Footprint_Radius>
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> StaticObject </Space_Layer>
+		<Layer_Z_Adjust> -200 </Layer_Z_Adjust>
+
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+        <Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Radar_Icon_Scale_Land>0.4</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>0.4</Radar_Icon_Scale_Space>
+		<Radar_Icon_Name>i_radar_capitalshipyard.tga</Radar_Icon_Name>
+
+		<Icon_Name>i_button_capital_shipyard.tga</Icon_Name>
+		<Score_Cost_Credits> 6000</Score_Cost_Credits>
+		<Retreat_Self_Destruct_Explosion>Self_Destruct_Star_Base_Level_3_Empire</Retreat_Self_Destruct_Explosion>
+
+		<Death_Clone>Damage_Normal, Friggin_Huger_Explosion_Space</Death_Clone>
+
+	</StarBase>
 
 
 	<GenericHeroUnit Name="Prowler_Probe_Droid">
@@ -875,13 +982,14 @@
 	
 		<SpaceUnit Name="Generic_Secutor">
 		<Variant_Of_Existing_Type>Template_Secutor</Variant_Of_Existing_Type>
-    
+		<Space_Model_Name>PA_Secutor_rep.ALO</Space_Model_Name>
+	
         <Affiliation>Empire</Affiliation>
         <Tech_Level>99</Tech_Level>
         <Required_Timeline>0</Required_Timeline>
         <Required_Ground_Base_Level>0</Required_Ground_Base_Level>
         <Required_Planets />
-		<Population_Value>27</Population_Value>
+		<Population_Value>26</Population_Value>
 	
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-Wing_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>V-Wing_Squadron, 3</Starting_Spawned_Units_Tech_0>
@@ -898,7 +1006,7 @@
 	<SpaceUnit Name="Generic_Star_Destroyer">
 		<Variant_Of_Existing_Type>Template_Star_Destroyer</Variant_Of_Existing_Type>
 		<Text_ID>TEXT_UNIT_IMPERATOR</Text_ID>
-		<Population_Value>19</Population_Value>
+		<Population_Value>16</Population_Value>
 		
 		<Tech_Level>99</Tech_Level>
 		<Affiliation>Empire</Affiliation>
@@ -955,6 +1063,7 @@
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
 		<Slice_Cost_Credits>1400</Slice_Cost_Credits>
+		<Build_Cost_Credits>1100</Build_Cost_Credits>
 		<Tech_Level>1</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
@@ -1260,7 +1369,7 @@
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		<Population_Value>9</Population_Value>
+		<Population_Value>8</Population_Value>
 
 	</SpaceUnit>
 
@@ -1676,7 +1785,7 @@
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		<Population_Value>8</Population_Value>
+		<Population_Value>7</Population_Value>
 
 	</SpaceUnit>
 
@@ -1703,7 +1812,7 @@
 
 	<SpaceUnit Name="Generic_Venator">
 		<Variant_Of_Existing_Type>Template_Venator</Variant_Of_Existing_Type>
-		<Population_Value>15</Population_Value>
+		<Population_Value>12</Population_Value>
 
 		<Affiliation>Empire</Affiliation>
 		<Tech_Level>1</Tech_Level>
@@ -1733,7 +1842,8 @@
 
 	<SpaceUnit Name="Generic_Victory_Destroyer">
 		<Variant_Of_Existing_Type>Template_Victory_Destroyer</Variant_Of_Existing_Type>
-
+		<Space_Model_Name>republic_victory_star_destroyer.ALO</Space_Model_Name>
+		
 		<Affiliation>Empire</Affiliation>
 		<Tech_Level>1</Tech_Level>
 		<Population_Value>9</Population_Value>
@@ -1741,7 +1851,7 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>2</Required_Star_Base_Level>
-		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
+		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
 		<Required_Planets />
 
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 1</Starting_Spawned_Units_Tech_0>
@@ -1759,7 +1869,7 @@
 
 	<SpaceUnit Name="Invincible_Cruiser">
 		<Variant_Of_Existing_Type>Template_Invincible_Cruiser</Variant_Of_Existing_Type>
-		<Population_Value>15</Population_Value>
+		<Population_Value>14</Population_Value>
 		<Affiliation>Empire</Affiliation>
 		<Tech_Level>1</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>

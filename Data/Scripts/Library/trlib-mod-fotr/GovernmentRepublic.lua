@@ -14,6 +14,11 @@ function GovernmentRepublic:new(player_agnostic_plot)
     self.ApprovalRatingInfluence = 0
     self.ChoiceMade = false
 
+    Get_Story_Plot("Conquests\\Story_Sandbox_Government_Rep.XML")
+    if Find_Player("Empire").Is_Human() then
+        Story_Event("ACTIVE_PLAYER")
+    end
+
     --self.Events = {}
     --self.Events.ElectionHeld = Observable()
 end
@@ -104,11 +109,13 @@ function GovernmentRepublic:KDYContracts()
     local contractObject = Find_First_Object("DUMMY_KUAT_CONTRACT")
     if contractObject then
         local planet = contractObject.Get_Planet_Location()
-        local spawnChance = GameRandom(1,100)
-        if spawnChance <= 15 then
-            table.remove(shipList, GameRandom(1,3))
-            table.remove(shipList, GameRandom(1,2))
-            local KDYspawn = SpawnList(shipList, planet, self.RepublicPlayer, true, false)
+        if planet.Get_Owner() == self.RepublicPlayer then
+            local spawnChance = GameRandom(1,100)
+            if spawnChance <= 15 then
+                table.remove(shipList, GameRandom(1,3))
+                table.remove(shipList, GameRandom(1,2))
+                local KDYspawn = SpawnList(shipList, planet, self.RepublicPlayer, true, false)
+            end
         end
     end
 

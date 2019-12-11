@@ -1004,7 +1004,7 @@
 		<Damage>13</Damage>
 		<Sensor_Range>80</Sensor_Range>
 		<Shield_Points>50</Shield_Points>
-		<Tactical_Health>60</Tactical_Health>
+		<Tactical_Health>90</Tactical_Health>
 		<Shield_Refresh_Rate>10</Shield_Refresh_Rate>
 		<Energy_Capacity>999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
@@ -1245,20 +1245,9 @@
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
 
 		<Ranged_Target_Z_Adjust>17.0</Ranged_Target_Z_Adjust>
-		<Land_FOW_Reveal_Range>450.0</Land_FOW_Reveal_Range>
+		<Land_FOW_Reveal_Range>600.0</Land_FOW_Reveal_Range>
 
-
-		<!--<Projectile_Types>Proj_LAAT_Cannon</Projectile_Types>
-		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
-		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
-		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
-		<Ranged_Target_Z_Adjust>30.0</Ranged_Target_Z_Adjust>
-
-		<Targeting_Fire_Inaccuracy> Infantry, 10.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Structure, 2.0 </Targeting_Fire_Inaccuracy>-->
-		<Targeting_Max_Attack_Distance>320.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
 
 		<Target_Bones> TARGET_00, COLLISION, ROOT, P_SMOKE_SMALL_SPUTTER_ALT2, P_ELECTRICALSTATIC3_ALT2, DOOR_R, DOOR_L </Target_Bones>
 
@@ -1275,7 +1264,7 @@
 		<Damaged_Smoke_Asset_Name>P_Smoke_Small02.alo</Damaged_Smoke_Asset_Name>
 		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
 
-		<Spin_Away_On_Death>Yes</Spin_Away_On_Death>
+		<Spin_Away_On_Death>No</Spin_Away_On_Death>
 		<Spin_Away_On_Death_Chance>0.2</Spin_Away_On_Death_Chance>
 		<Spin_Away_On_Death_Time>2.0f</Spin_Away_On_Death_Time>
 		<Spin_Away_On_Death_Explosion>Medium_Explosion_Land</Spin_Away_On_Death_Explosion>
@@ -1324,7 +1313,7 @@
 		<Guard_Chase_Range>50.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>50.0</Attack_Move_Response_Range>
 		<Targeting_Stickiness_Time_Threshold>3.0</Targeting_Stickiness_Time_Threshold>
-		<Targeting_Priority_Set>Lancet_TP</Targeting_Priority_Set>
+		<Targeting_Priority_Set>ATATAntiEverything</Targeting_Priority_Set>
 		<Autonomous_Move_Extension_Vs_Attacker>50.0</Autonomous_Move_Extension_Vs_Attacker>
 
 		<FormationGrouping> Solo </FormationGrouping>
@@ -1715,6 +1704,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
 		<Encyclopedia_Text> TEXT_TOOLTIP_BATTLEDROID TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
 		<Icon_Name>i_button_b1.tga</Icon_Name>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
 
 		<Land_Model_Name>b1_battledroid.ALO</Land_Model_Name>
 		<Scale_Factor>1.2</Scale_Factor>

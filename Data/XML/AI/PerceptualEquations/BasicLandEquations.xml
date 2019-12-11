@@ -113,8 +113,7 @@
 												,Parameter_Type = "Pentastar_Mineral_Processor"
 												,Parameter_Type = "Skirmish_Ground_Mining_Facility_E"
 												,Parameter_Type = "Skirmish_Ground_Mining_Facility_R"
-												,Parameter_Type = "Skirmish_Ground_Mining_Facility_U"
-												,Parameter_Type = "Skirmish_Ground_Mining_Facility_P" })
+												,Parameter_Type = "Skirmish_Ground_Mining_Facility_U" })
 			+
 			(15.0 * (1 - Variable_Target.Location.EnemyForce))
 			+
@@ -583,7 +582,7 @@
 			+
 			5 * clamp( (500 / (Variable_Target.DistanceToNearestFriendly + 1)), 0, 1)
 			+
-			5
+			0.1
 		)		
 		*
 		(1.0 - Function_May_Lose_Land_Control_Game.Evaluate)
@@ -632,8 +631,7 @@
 													,Parameter_Type = "Underworld_Mineral_Processor"
 													,Parameter_Type = "Skirmish_Ground_Mining_Facility_E"
 													,Parameter_Type = "Skirmish_Ground_Mining_Facility_R"
-													,Parameter_Type = "Skirmish_Ground_Mining_Facility_U"
-													,Parameter_Type = "Skirmish_Ground_Mining_Facility_P" }
+													,Parameter_Type = "Skirmish_Ground_Mining_Facility_U"}
 	</Number_Resource_Structures_Land>
 
 

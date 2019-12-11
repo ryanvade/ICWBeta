@@ -367,6 +367,53 @@
 		<Branch>Faction_Branch_CIS</Branch>
 	</Event>
 	
+		<Event Name="Lock_Venator_Research">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Dummy_Research_Venator</Reward_Param1>
+		<Prereq>Unlock_Venator_Forced</Prereq>
+	</Event>
+	
+		<Event Name="Spawn_Wieler">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Wieler_Resilient</Reward_Param1>
+		<Reward_Param2>Kuat</Reward_Param2>
+		<Prereq>Unlock_Venator_Research</Prereq>
+		<Prereq>Unlock_Venator_AI</Prereq>
+		<Prereq>Unlock_Venator</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Yularen">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Yularen_Resolute</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Unlock_Venator_Research</Prereq>
+		<Prereq>Unlock_Venator_AI</Prereq>
+		<Prereq>Unlock_Venator</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Tarkin">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Tarkin_Venator</Reward_Param1>
+		<Reward_Param2>Eriadu</Reward_Param2>
+		<Prereq>Unlock_Venator_Research</Prereq>
+		<Prereq>Unlock_Venator_AI</Prereq>
+		<Prereq>Unlock_Venator</Prereq>
+	</Event>	
+	
+	<Event Name="Spawn_Coburn">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Wieler_Triumphant</Reward_Param1>
+		<Reward_Param2>Kuat</Reward_Param2>
+		<Prereq>Unlock_Venator_Research</Prereq>
+		<Prereq>Unlock_Venator_AI</Prereq>
+		<Prereq>Unlock_Venator</Prereq>
+	</Event>
+	
 	
 	<Event Name="Republic_Enters_Tech_04">
 		<Event_Type>STORY_TECH_LEVEL</Event_Type>
@@ -610,6 +657,25 @@
 		<Reward_Param1>Dummy_Research_Victory</Reward_Param1>
 		<Prereq>Unlock_Victory</Prereq>
 	</Event>
+	
+	<Event Name="Spawn_Dodonna">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Dodonna_Ardent</Reward_Param1>
+		<Reward_Param2>Eriadu</Reward_Param2>
+		<Prereq>Unlock_Victory_Force</Prereq>
+		<Prereq>Unlock_Victory</Prereq>
+	</Event>	
+	
+	<Event Name="Spawn_Arlionne">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Screed_Arlionne</Reward_Param1>
+		<Reward_Param2>Kuat</Reward_Param2>
+		<Prereq>Unlock_Victory_Force</Prereq>
+		<Prereq>Unlock_Victory</Prereq>
+	</Event>
+	
 	
 	
 	

@@ -142,7 +142,7 @@
 		<Projectile_Damage>7.0</Projectile_Damage>
 		<Damage>6</Damage>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>100</Tactical_Health>
+		<Tactical_Health>70</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
@@ -156,7 +156,7 @@
 		<Ranged_Target_Z_Adjust>8.5</Ranged_Target_Z_Adjust>
 		<!-- 18 -->
 		<Turret_Rotate_Extent_Degrees>90</Turret_Rotate_Extent_Degrees>
-		<Turret_Elevate_Extent_Degrees>45</Turret_Elevate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
 		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
 		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
 		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
@@ -172,6 +172,15 @@
 		<Targeting_Fire_Inaccuracy> Structure, 2.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Corvette, 45.0 </Targeting_Fire_Inaccuracy>-->
 		<!-- LEAVE THIS FOR BARRAGE ABILITY -->
+
+
+		<Projectile_Types>Proj_Ground_Mortar_Light</Projectile_Types>
+		<Fire_Weapon_When_In_Rocket_Attack_Mode>Yes</Fire_Weapon_When_In_Rocket_Attack_Mode>
+		<Fire_Weapon_When_In_Normal_Attack_Mode>No</Fire_Weapon_When_In_Normal_Attack_Mode>
+		<Projectile_Fire_Recharge_Seconds>3</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
+
 		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
 		<Death_SFXEvent_Start_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_Start_Die>
 		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
@@ -204,7 +213,7 @@
 		<Overall_Width>0.0</Overall_Width>
 		<!-- 0.0 means don't roll left and right on terrain -->
 		<Has_Land_Evaluator>Yes</Has_Land_Evaluator>
-		<AI_Combat_Power>70</AI_Combat_Power>
+		<AI_Combat_Power>32</AI_Combat_Power>
 		<Idle_Chase_Range>0.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
@@ -222,9 +231,12 @@
 		<Tactical_Bribe_Cost>50</Tactical_Bribe_Cost>
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
- 			<Unit_Ability>
-  				<Type>HUNT</Type>
-  			</Unit_Ability>
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>320</Targeting_Max_Attack_Distance>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Recharge_Seconds>35</Recharge_Seconds>
+			</Unit_Ability>
 			
 			<Unit_Ability>
 				<Type>SPRINT</Type>
@@ -283,7 +295,17 @@
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
 			<Unit_Ability>
-				<Type>HUNT</Type>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>320</Targeting_Max_Attack_Distance>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 8.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 1.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Clone_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 
@@ -499,7 +521,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>9</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -704,7 +726,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>600</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>9</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -851,7 +873,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>9</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -926,7 +948,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>1350</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>12.5</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>--> 
@@ -1267,7 +1289,7 @@
 		<Has_Land_Evaluator>Yes</Has_Land_Evaluator>
 		<AI_Combat_Power>61</AI_Combat_Power>
 
-		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Idle_Chase_Range>-1.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
 		<Targeting_Stickiness_Time_Threshold>10.0</Targeting_Stickiness_Time_Threshold>

@@ -85,7 +85,7 @@ function MainForce_Thread()
 	end
 	if Invade(MainForce) == false then
 		MainForce.Set_Plan_Result(false)			
-		MainForce.Move_To(FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, object))
+		MainForce.Move_To(FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, AITarget))
 		ScriptExit()
 	end
 	

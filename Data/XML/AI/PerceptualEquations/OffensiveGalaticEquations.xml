@@ -216,6 +216,20 @@
 		*
 		(Variable_Self.MaxedGroundbases > 0.5)
 	 </Allow_Blind_Ground_Production>
+	 
+	 <Allow_Blind_Ground_Production_CISFederation>
+		0.01
+		+
+		(
+			0.5
+			*
+			(Variable_Enemy.GroundTotalUnnormalized {Parameter_Faction = "Empire"}  > (2.0 * Function_Friendly_Global_Land_Unit_Raw_Total.Evaluate))
+		)
+		*
+		(Script_AnyFreeLandSlots.Evaluate)
+		*
+		(Variable_Self.MaxedGroundbases > 0.5)
+	 </Allow_Blind_Ground_Production_CISFederation>
 
 	 
 	 <Allow_Blind_Space_Production>
@@ -233,6 +247,20 @@
 			Function_Needs_More_Space_Force_Globally.Evaluate
 		)
 	 </Allow_Blind_Space_Production>
+	 
+	  <Allow_Blind_Space_Production_CISFederation>
+		0.01
+		+
+		(Variable_Self.MaxedStarbases > 0.5)
+		*
+		(
+			1.0
+			+
+			(Variable_Enemy.SpaceTotalUnnormalized {Parameter_Faction = "Empire"} > (2.0 * Function_Friendly_Global_Space_Unit_Raw_Total.Evaluate))
+			+
+			Function_Needs_More_Space_Force_Globally.Evaluate
+		)
+	 </Allow_Blind_Space_Production_CISFederation>
 	 
 	
 	 <Allow_SuperCapital_Production>

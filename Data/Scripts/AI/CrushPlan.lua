@@ -151,7 +151,7 @@ function GroundForce_Thread()
     MovingGroundForceToTarget = false
     WasConflict = true
     if Invade(GroundForce) == false then
-		GroundForce.Move_To(FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, object))
+		GroundForce.Move_To(FindTarget.Reachable_Target(PlayerObject, "One", "Friendly", "Friendly_Only", 1.0, AITarget))
         GroundForce.Set_Plan_Result(false)
         Exit_Plan_With_Possible_Sleep()
     end

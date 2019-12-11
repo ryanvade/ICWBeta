@@ -34,6 +34,7 @@ function Begin_GC(message)
     if message == OnEnter then
         ModContentLoader.get("GameModImpl")
         ActiveMod = GameModImpl()
+        ActiveMod:mod_specific_setup()
     elseif message == OnUpdate then
         ActiveMod:update()
     end

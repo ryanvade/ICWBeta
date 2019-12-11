@@ -3,6 +3,15 @@
 
 
 <Story>
+
+	<Event Name="Determine_Player">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ACTIVE_PLAYER</Event_Param2>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Human</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Branch>Era_Start_Checker</Branch>
+	</Event>
 	
 	<Event Name="Government_Start">
 		<Event_Type>STORY_ELAPSED</Event_Type>
@@ -75,14 +84,14 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Support_Palpatine</Reward_Param1>
-		<Prereq>Palpatine_Appeal</Prereq>
+		<Prereq>Future_Of_The_Republic_Dialog</Prereq>
 	</Event>
 	
 	<Event Name="Unlock_Mothma">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Support_Mothma</Reward_Param1>
-		<Prereq>Palpatine_Appeal</Prereq>
+		<Prereq>Future_Of_The_Republic_Dialog</Prereq>
 	</Event>
 	
 	<Event Name="Future_Of_The_Republic_Dialog">
@@ -266,6 +275,7 @@
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Order66_Executed</Prereq>
 		<Prereq>Trigger_Order66</Prereq>
+		<Branch>Human</Branch>
 	</Event>
 	<Event Name="Convo_Order66_2">
 		<Event_Type>STORY_ELAPSED</Event_Type>

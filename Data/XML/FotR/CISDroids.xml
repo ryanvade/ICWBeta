@@ -47,9 +47,9 @@
 		<Expensive_Bribe_Cost>0</Expensive_Bribe_Cost>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>600</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>9</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
+		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
@@ -127,7 +127,7 @@
 		<Armor_Type> Armor_Destroyer_Droid </Armor_Type>
 
 		<Damage>6</Damage>
-		<Shield_Points>160</Shield_Points>
+		<Shield_Points>120</Shield_Points>
 		<Tactical_Health>95</Tactical_Health>
 		<Shield_Refresh_Rate>10</Shield_Refresh_Rate>
 		<Energy_Capacity>9999</Energy_Capacity>
@@ -202,7 +202,7 @@
 		<Overall_Length>20.0</Overall_Length> <!-- Hand tweaked for vehicle pitching up and down on terrain -->
 		<Overall_Width>0.0</Overall_Width> <!-- 0.0 means don't roll left and right on terrain -->
 		<Has_Land_Evaluator>Yes</Has_Land_Evaluator>
-		<AI_Combat_Power>124</AI_Combat_Power>
+		<AI_Combat_Power>114</AI_Combat_Power>
 
 		<Idle_Chase_Range>0.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
@@ -239,7 +239,7 @@
 		<Damage>60</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Rebel, Pentastar, Pirates, Teradoc, Hutts</Affiliation>
-		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Cost_Credits>300</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
 		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
@@ -269,9 +269,9 @@
 		<Expensive_Bribe_Cost>0</Expensive_Bribe_Cost>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->  
@@ -418,7 +418,7 @@
 		<Damage>45</Damage>
 		<Autoresolve_Health>48</Autoresolve_Health>
 		<Affiliation>Rebel, Hutts, Pirates, Teradoc, Pentastar</Affiliation>
-		<Build_Cost_Credits>50</Build_Cost_Credits>
+		<Build_Cost_Credits>70</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>5</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -456,7 +456,7 @@
 
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>210</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>8</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
@@ -476,6 +476,14 @@
 		<Tactical_Health>12</Tactical_Health>
 		<Encyclopedia_Text>TEXT_TOOLTIP_OOM_DROID TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<No_Colorization_Color> 250, 218, 94, 255 </No_Colorization_Color>
+
+	</GroundInfantry>
+
+	<GroundInfantry Name="OOM_Security">
+		<Variant_Of_Existing_Type>B1_Droid</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_OOM_SECURITY</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_OOM_SECURITY TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<No_Colorization_Color> 250, 74, 74, 255 </No_Colorization_Color>
 
 	</GroundInfantry>
 
@@ -525,7 +533,7 @@
 		<Company_Units>B1_Droid, B1_Droid, B1_Droid, B1_Droid, B1_Droid, B1_Droid, B1_Droid, OOM_Commander</Company_Units>
 		<Company_Units>B1_Droid, B1_Droid, B1_Droid, B1_Droid, B1_Droid, B1_Droid, B1_Droid, OOM_Commander</Company_Units>
 		
-		<Max_Squad_Size> 8 </Max_Squad_Size>
+		<Max_Squad_Size> 16 </Max_Squad_Size>
 		
 			<GUI_Model_Name>BDROID.ALO</GUI_Model_Name>
 		<Land_Model_Name>BDROID.ALO</Land_Model_Name>
@@ -542,7 +550,7 @@
 
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>8</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
@@ -688,14 +696,14 @@
 		<MovementClass> Infantry </MovementClass>
 		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
 
-		<SFXEvent_Select>Unit_Select_Dark_Trooper_1</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Dark_Trooper_1</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_1</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Dark_Trooper_1</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Dark_Trooper_1</SFXEvent_Guard>
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Dark_Trooper_1 </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Dark_Trooper_1 </SFXEvent_Assist_Attack>
-		<Death_SFXEvent_Start_Die>Unit_Underworld_Soldier_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Select>Unit_Select_B2_Droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_B2_Droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B2_Droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_B2_Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_B2_Droid</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_B2_Droid </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_B2_Droid </SFXEvent_Assist_Attack>
+		<Death_SFXEvent_Start_Die>Unit_Death_B2_Droid</Death_SFXEvent_Start_Die>
 		<SFXEvent_Fire>Unit_Underworld_Infantry_Fire</SFXEvent_Fire>
 
 		<OccupationStyle>1x1</OccupationStyle>
@@ -778,16 +786,16 @@
 
 		<SFXEvent_Build_Started>UHD_Build_Troops</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>UHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Mercenary</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mercenary</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_B2_Droid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B2_Droid</SFXEvent_Fleet_Move>
 
 		<Score_Cost_Credits>45</Score_Cost_Credits>
 
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>270</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>8</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
+		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>--> 
@@ -959,7 +967,7 @@
 		<MovementClass> Infantry </MovementClass>
 		
 
-			
+		<Death_Explosions>Small_Explosion_Land</Death_Explosions>	
 		<Death_Fade_Time>0.25</Death_Fade_Time>
 		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
 		
@@ -976,7 +984,7 @@
 		<Damage>45</Damage>
 		<Autoresolve_Health>48</Autoresolve_Health>
 		<Affiliation>Rebel, Hutts, Pirates, Teradoc, Pentastar</Affiliation>
-		<Build_Cost_Credits>30</Build_Cost_Credits>
+		<Build_Cost_Credits>50</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>5</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1017,7 +1025,7 @@
 
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>8</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
@@ -1252,9 +1260,9 @@
 
 		
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>600</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>8</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites />
+		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>--> 

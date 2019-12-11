@@ -2062,7 +2062,7 @@ A tactical battle will be launched if the corruption choice has valid entries fo
 		<Planet_Tech_Availability_Rating>3</Planet_Tech_Availability_Rating>
 		<Planet_Slice_Affinity_Types/>
 		<Describe_Population>TEXT_PLANET_NONE_INFO_WEA</Describe_Population>
-		<Describe_Wildlife>TEXT_PLANET_BIMMIEL_INFO_WL</Describe_Wildlife>
+		<Describe_Wildlife>TEXT_PLANET_NONE_INFO_WL</Describe_Wildlife>
 		<Describe_Terrain>TEXT_PLANET_BIMMIEL_INFO_TER</Describe_Terrain>
 		<!--<Describe_Weather>TEXT_PLANET_CRUSTAI_INFO_WEA</Describe_Weather>--><Describe_Weather>TEXT_PLANET_CORUSCANT_INFO_WEA</Describe_Weather>
 		<!--<Describe_Tactical>TEXT_PLANET_CRUSTAI_INFO_TAC</Describe_Tactical>--><Describe_Tactical>TEXT_PLANET_NONE_INFO_WEA</Describe_Tactical>
@@ -3128,7 +3128,7 @@ A tactical battle will be launched if the corruption choice has valid entries fo
 		<Galactic_Position>275, -45, 10</Galactic_Position>
 		<Special_Structures_Land>3</Special_Structures_Land>
 		<Special_Structures_Space>99</Special_Structures_Space>
-		<Max_Space_Base>1</Max_Space_Base>
+		<Max_Space_Base>2</Max_Space_Base>
 		<The_Force>Neutral</The_Force>
 		<Force_Strength>0.0</Force_Strength>
 		<Planet_Surface_Accessible> Yes </Planet_Surface_Accessible>
@@ -3893,7 +3893,7 @@ A tactical battle will be launched if the corruption choice has valid entries fo
 		<Max_Space_Base>1</Max_Space_Base>
 		<The_Force>Neutral</The_Force>
 		<Force_Strength>0.0</Force_Strength>
-		<Land_Tactical_Map> ConvertAnaxis.ted </Land_Tactical_Map>
+		<Land_Tactical_Map> ConvertAnaxes.ted </Land_Tactical_Map>
 		<Space_Tactical_Map>Space_Chorax.ted</Space_Tactical_Map>
 		<Destroyed_Space_Tactical_Map />
 		<Planet_Surface_Accessible> Yes </Planet_Surface_Accessible>
@@ -4383,6 +4383,7 @@ A tactical battle will be launched if the corruption choice has valid entries fo
 		<!--<Describe_Tactical>TEXT_PLANET_CORULAG_INFO_TAC</Describe_Tactical>--><Describe_Tactical>TEXT_PLANET_NONE_INFO_WEA</Describe_Tactical>
 		<!--TEXT_PLANET_CORULAG_INFO_ADV_01--><Describe_Advantage>TEXT_PLANET_NONE_INFO_WEA</Describe_Advantage>
 		<Describe_History>TEXT_PLANET_COLUMUS_INFO_HIS_01</Describe_History>
+		<Describe_Advantage>TEXT_PLANET_COLUMUS_INFO_TAC_00</Describe_Advantage>
 
 		<Planet_Ability_Name>TEXT_PLANET_LIGHT</Planet_Ability_Name>
 		<Planet_Ability_Description>TEXT_PLANET_LIGHT</Planet_Ability_Description>
@@ -4391,11 +4392,37 @@ A tactical battle will be launched if the corruption choice has valid entries fo
 		<Encyclopedia_Weather_Name>TEXT_WEATHER_NAME_RAIN</Encyclopedia_Weather_Name>
 		<Encyclopedia_Weather_Info>TEXT_TACTICAL_WEATHER_OBJECTIVE_RAIN</Encyclopedia_Weather_Info>
 
+		<Planet_Ability_Icon>i_pa_tactical_cloning.tga</Planet_Ability_Icon>
 		<!--<Native_Icon_Name>load_urban.tga</Native_Icon_Name>-->
 
 		<Additional_Population_Capacity>20</Additional_Population_Capacity>
 
 		<Potential_Indigenous_Power>Urban_Civilian_A, 450</Potential_Indigenous_Power>
+
+		<!-- need to add production time increase -->
+		<Abilities SubObjectList="Yes">
+
+			<Reduce_Production_Price_Ability Name="Columus_Infantry_Production_Cost_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories> Infantry </Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types>Night_Sister_Company</Excluded_Unit_Types>
+				<Price_Reduction_Percentage>0.99999</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="Columus_Infantry_Production_Time_Penalty">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories> Infantry </Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types>Night_Sister_Company</Excluded_Unit_Types>
+				<Time_Reduction_Percentage>-0.15</Time_Reduction_Percentage>			<!-- 15% longer build times -->
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+
+		</Abilities>
 
 	</Planet>
 
@@ -4964,7 +4991,7 @@ A tactical battle will be launched if the corruption choice has valid entries fo
 
 		<Describe_Population>TEXT_PLANET_THYFERRA_INFO_POP</Describe_Population>
 		<Describe_Wildlife>TEXT_PLANET_THYFERRA_INFO_WL</Describe_Wildlife>
-		<Describe_Terrain>TEXT_PLANET_THYFERRA_INFO_TER</Describe_Terrain>
+		<Describe_Terrain>TEXT_PLANET_CORVIS_INFO_TER</Describe_Terrain>
 		<!--<Describe_Weather>TEXT_PLANET_THYFERRA_INFO_WEA</Describe_Weather>--><Describe_Weather>TEXT_PLANET_CORUSCANT_INFO_WEA</Describe_Weather>
 		<!--<Describe_Tactical>TEXT_PLANET_THYFERRA_INFO_TAC</Describe_Tactical>--><Describe_Tactical>TEXT_PLANET_NONE_INFO_WEA</Describe_Tactical>
 		<!--TEXT_PLANET_THYFERRA_INFO_ADV--><Describe_Advantage>TEXT_PLANET_NONE_INFO_WEA</Describe_Advantage>
@@ -7264,7 +7291,7 @@ A tactical battle will be launched if the corruption choice has valid entries fo
 
 		<Describe_Population>TEXT_PLANET_NONE_INFO_POP</Describe_Population>
 		<Describe_Wildlife>TEXT_PLANET_BILBRINGI_INFO_WL</Describe_Wildlife>
-		<Describe_Terrain>TEXT_PLANET_BILBRINGI_INFO_TER</Describe_Terrain>
+		<Describe_Terrain>TEXT_PLANET_FONDOR_INFO_TER</Describe_Terrain>
 		<!--<Describe_Weather>TEXT_PLANET_BILBRINGI_INFO_WEA</Describe_Weather>--><Describe_Weather>TEXT_PLANET_CORUSCANT_INFO_WEA</Describe_Weather>
 		<!--<Describe_Tactical>TEXT_PLANET_BILBRINGI_INFO_TAC</Describe_Tactical>--><Describe_Tactical>TEXT_PLANET_NONE_INFO_WEA</Describe_Tactical>
 		<!--TEXT_PLANET_BILBRINGI_INFO_ADV_01--><Describe_Advantage>TEXT_PLANET_NONE_INFO_WEA</Describe_Advantage>

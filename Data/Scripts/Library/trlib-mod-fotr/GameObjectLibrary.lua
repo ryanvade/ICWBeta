@@ -373,68 +373,68 @@ GameObjectLibrary = {
                 ["VULTURE_SQUADRON_DOUBLE"] = {
                     ["REBEL"] = {
                         Reserve = 3,
-                        Initial = 2
+                        Initial = 1
                     },
                     ["PIRATES"] = {
                         Reserve = 3,
-                        Initial = 2
+                        Initial = 1
                     },
                     ["PENTASTAR"] = {
                         Reserve = 3,
-                        Initial = 2
+                        Initial = 1
                     },
                     ["TERADOC"] = {
                         Reserve = 3,
-                        Initial = 2
+                        Initial = 1
                     },
                     ["HUTTS"] = {
                         Reserve = 3,
-                        Initial = 2
+                        Initial = 1
                     }					
                 },
                 ["TRIFIGHTER_SQUADRON"] = {
                     ["REBEL"] = {
-                        Reserve = 3,
+                        Reserve = 4,
                         Initial = 2
                     },
                     ["PIRATES"] = {
-                        Reserve = 3,
+                        Reserve = 4,
                         Initial = 2
                     },
                     ["HUTTS"] = {
-                        Reserve = 3,
+                        Reserve = 4,
                         Initial = 2
                     }					
                 },
                 ["NANTEX_SQUADRON"] = {
                     ["PENTASTAR"] = {
-                        Reserve = 3,
+                        Reserve = 4,
                         Initial = 2
                     },
                     ["TERADOC"] = {
-                        Reserve = 3,
+                        Reserve = 4,
                         Initial = 2
                     }					
                 },				
                 ["HYENA_SQUADRON"] = {
                     ["REBEL"] = {
-                        Reserve = 3,
+                        Reserve = 4,
                         Initial = 2
                     },
                     ["PIRATES"] = {
-                        Reserve = 3,
+                        Reserve = 4,
                         Initial = 2
                     },
                     ["PENTASTAR"] = {
-                        Reserve = 3,
+                        Reserve = 4,
                         Initial = 2
                     },
                     ["TERADOC"] = {
-                        Reserve = 3,
+                        Reserve = 4,
                         Initial = 2
                     },
                     ["HUTTS"] = {
-                        Reserve = 3,
+                        Reserve = 4,
                         Initial = 2
                     }					
                 }
@@ -524,69 +524,69 @@ GameObjectLibrary = {
             Fighters = {
                 ["VULTURE_SQUADRON_DOUBLE"] = {
                     ["REBEL"] = {
-                        Reserve = 4,
-                        Initial = 4
+                        Reserve = 3,
+                        Initial = 6
                     },
                     ["PIRATES"] = {
-                        Reserve = 4,
-                        Initial = 4
+                        Reserve = 3,
+                        Initial = 6
                     },
                     ["PENTASTAR"] = {
-                        Reserve = 4,
-                        Initial = 4
+                        Reserve = 3,
+                        Initial = 6
                     },
                     ["TERADOC"] = {
-                        Reserve = 4,
-                        Initial = 4
+                        Reserve = 3,
+                        Initial = 6
                     },
                     ["HUTTS"] = {
-                        Reserve = 4,
-                        Initial = 4
+                        Reserve = 3,
+                        Initial = 6
                     }					
                 },
                 ["TRIFIGHTER_SQUADRON"] = {
                     ["REBEL"] = {
-                        Reserve = 2,
+                        Reserve = 1,
                         Initial = 2
                     },
                     ["PIRATES"] = {
-                        Reserve = 2,
+                        Reserve = 1,
                         Initial = 2
                     },
                     ["HUTTS"] = {
-                        Reserve = 2,
+                        Reserve = 1,
                         Initial = 2
                     }					
                 },
                 ["NANTEX_SQUADRON"] = {
                     ["PENTASTAR"] = {
-                        Reserve = 2,
+                        Reserve = 1,
                         Initial = 2
                     },
                     ["TERADOC"] = {
-                        Reserve = 2,
+                        Reserve = 1,
                         Initial = 2
                     }					
                 },				
                 ["HYENA_SQUADRON"] = {
                     ["REBEL"] = {
-                        Reserve = 2,
+                        Reserve = 1,
                         Initial = 2
                     },
                     ["PIRATES"] = {
-                        Reserve = 2,
+                        Reserve = 1,
                         Initial = 2
                     },
                     ["PENTASTAR"] = {
-                        Reserve = 2,
+                        Reserve = 1,
                         Initial = 2
                     },
                     ["TERADOC"] = {
-                        Reserve = 2,
+                        Reserve = 1,
                         Initial = 2
                     },
                     ["HUTTS"] = {
-                        Reserve = 2,
+                        Reserve = 1,
                         Initial = 2
                     }					
                 }
@@ -759,24 +759,24 @@ GameObjectLibrary = {
             Fighters = {
                 ["VULTURE_SQUADRON_DOUBLE"] = {
                     ["REBEL"] = {
-                        Reserve = 3,
-                        Initial = 3
+                        Reserve = 4,
+                        Initial = 2
                     },
                     ["PIRATES"] = {
-                        Reserve = 3,
-                        Initial = 3
+                        Reserve = 4,
+                        Initial = 2
                     },
                     ["PENTASTAR"] = {
-                        Reserve = 3,
-                        Initial = 3
+                        Reserve = 4,
+                        Initial = 2
                     },
                     ["TERADOC"] = {
-                        Reserve = 3,
-                        Initial = 3
+                        Reserve = 4,
+                        Initial = 2
                     },
                     ["HUTTS"] = {
-                        Reserve = 3,
-                        Initial = 3
+                        Reserve = 4,
+                        Initial = 2
                     }					
                 },
                 ["HYENA_SQUADRON"] = {

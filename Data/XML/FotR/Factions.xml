@@ -72,31 +72,31 @@
 		<Space_Retreat_Countdown_Color_RGBA> 44, 121, 216, 255 </Space_Retreat_Countdown_Color_RGBA>
 		<Space_Retreat_Countdown_Text_ID> TEXT_RETREAT_LAND_CIS_COUNTDOWN </Space_Retreat_Countdown_Text_ID>
 
-		<Space_Retreat_Begin_SFXEvent> RHD_Retreat_Started_Space </Space_Retreat_Begin_SFXEvent>
-  		<Space_Retreat_Enemy_Begin_SFXEvent> Unit_Enemy_Retreat_Rebel_Soldier </Space_Retreat_Enemy_Begin_SFXEvent>
-		<Space_Retreat_Cancel_SFXEvent> RHD_Retreat_Cancelled </Space_Retreat_Cancel_SFXEvent>
+		<Space_Retreat_Begin_SFXEvent> CIS_retreat </Space_Retreat_Begin_SFXEvent>
+  		<Space_Retreat_Enemy_Begin_SFXEvent> rep_retreat_from_CIS </Space_Retreat_Enemy_Begin_SFXEvent>
+		<Space_Retreat_Cancel_SFXEvent> CIS_retreat_aborted </Space_Retreat_Cancel_SFXEvent>
 		<Space_Retreat_Not_Allowed_SFXEvent> RHD_Retreat_Not_Allowed </Space_Retreat_Not_Allowed_SFXEvent>
 		<Space_Retreat_Not_Allowed_Reason_1_SFXEvent> RHD_Retreat_Interdictor </Space_Retreat_Not_Allowed_Reason_1_SFXEvent> <!-- Reason 1: Gravity Well -->
 		<Space_Retreat_Not_Allowed_Reason_2_SFXEvent> </Space_Retreat_Not_Allowed_Reason_2_SFXEvent>									<!-- Reason 2: Friendly Hero Preventing -->
 		<Space_Retreat_Not_Allowed_Reason_3_SFXEvent> </Space_Retreat_Not_Allowed_Reason_3_SFXEvent>									<!-- Reason 3: Tactical Superweaper Present -->
 		<Space_Forced_Retreat_Due_To_Superweapon> Unit_Victory_DS_Retreat_Rebel_Soldier </Space_Forced_Retreat_Due_To_Superweapon>
 
-		<Space_Surrender_SFXEvent> RHD_Retreat_Started_Space </Space_Surrender_SFXEvent>
+		<Space_Surrender_SFXEvent> CIS_lost </Space_Surrender_SFXEvent>
 
 		<Land_Retreat_Countdown_Seconds> 10.99 </Land_Retreat_Countdown_Seconds>
 		<Land_Retreat_Pursue_Max_Speed_Mod_Factor> 1.0 </Land_Retreat_Pursue_Max_Speed_Mod_Factor>		<Land_Retreat_Units_Damaged_Mod_Factor> 2.0 </Land_Retreat_Units_Damaged_Mod_Factor>
 		<Land_Retreat_Countdown_Color_RGBA> 44, 121, 216, 255 </Land_Retreat_Countdown_Color_RGBA>
 		<Land_Retreat_Countdown_Text_ID> TEXT_RETREAT_LAND_CIS_COUNTDOWN </Land_Retreat_Countdown_Text_ID>
 
-  		<Land_Retreat_Begin_SFXEvent> RHD_Retreat_Started_land  </Land_Retreat_Begin_SFXEvent>
-  		<Land_Retreat_Enemy_Begin_SFXEvent> Unit_Enemy_Retreat_Rebel_Soldier </Land_Retreat_Enemy_Begin_SFXEvent>
-		<Land_Retreat_Cancel_SFXEvent> RHD_Retreat_Cancelled </Land_Retreat_Cancel_SFXEvent>
+  		<Land_Retreat_Begin_SFXEvent> CIS_retreat </Land_Retreat_Begin_SFXEvent>
+  		<Land_Retreat_Enemy_Begin_SFXEvent> rep_retreat_from_CIS </Land_Retreat_Enemy_Begin_SFXEvent>
+		<Land_Retreat_Cancel_SFXEvent> CIS_retreat_aborted </Land_Retreat_Cancel_SFXEvent>
 		<Land_Retreat_Not_Allowed_SFXEvent> RHD_Retreat_Not_Allowed </Land_Retreat_Not_Allowed_SFXEvent>
 		<Land_Retreat_Not_Allowed_Reason_1_SFXEvent> </Land_Retreat_Not_Allowed_Reason_1_SFXEvent>		<!-- Reason 1: Gravity Well -->
 		<Land_Retreat_Not_Allowed_Reason_2_SFXEvent> </Land_Retreat_Not_Allowed_Reason_2_SFXEvent>      <!-- Reason 2: Friendly Hero Preventing -->
 		<Land_Retreat_Not_Allowed_Reason_3_SFXEvent> </Land_Retreat_Not_Allowed_Reason_3_SFXEvent>      <!-- Reason 3: Tactical Superweaper Present -->
 
-		<Land_Surrender_SFXEvent> RHD_Retreat_Started_land </Land_Surrender_SFXEvent>
+		<Land_Surrender_SFXEvent> CIS_lost </Land_Surrender_SFXEvent>
 
 		<!-- <Reinforcements_Selection_SFXEvent> RHD_Choose_Reinforcements </Reinforcements_Selection_SFXEvent> -->
 		<!-- <Reinforcements_Pick_Landing_Zone_SFXEvent> RHD_Choose_Landing </Reinforcements_Pick_Landing_Zone_SFXEvent> -->
@@ -271,10 +271,10 @@
 		<!-- REBEL TACTICAL BATTLE PENDING AUDIO EVENTS                             -->
 		<!-- ====================================================================== -->
 
-		<SFX_Event_Tactical_Land_Battle_Pending> RHD_Battle_Pending </SFX_Event_Tactical_Land_Battle_Pending>
-		<SFX_Event_Tactical_Space_Battle_Pending> RHD_Battle_Pending </SFX_Event_Tactical_Space_Battle_Pending>
-		<Music_Event_Tactical_Land_Battle_Pending> Tactical_Battle_Loading_Loop_Event </Music_Event_Tactical_Land_Battle_Pending>
-		<Music_Event_Tactical_Space_Battle_Pending> Tactical_Battle_Loading_Loop_Event </Music_Event_Tactical_Space_Battle_Pending>
+		<SFX_Event_Tactical_Land_Battle_Pending> CIS_tactical_battle_imminent </SFX_Event_Tactical_Land_Battle_Pending>
+		<SFX_Event_Tactical_Space_Battle_Pending> CIS_tactical_battle_imminent </SFX_Event_Tactical_Space_Battle_Pending>
+		<Music_Event_Tactical_Land_Battle_Pending> CIS_tactical_battle </Music_Event_Tactical_Land_Battle_Pending>
+		<Music_Event_Tactical_Space_Battle_Pending> CIS_tactical_battle </Music_Event_Tactical_Space_Battle_Pending>
 
 		<!-- ============================================== -->
 		<!-- REBEL MAPS MUSIC EVENTS - AMBIENT (NON-BATTLE) -->
@@ -554,10 +554,10 @@
 		<SFXEvent_HUD_Base_Shield_Penetrated> RHD_Base_Shield_Penetrated </SFXEvent_HUD_Base_Shield_Penetrated>							<!-- Our base shield was just penetrated by the enemy -->
 		<SFXEvent_HUD_Enemy_Base_Shield_Penetrated> RHD_Enemy_Base_Shield_Penetrated </SFXEvent_HUD_Enemy_Base_Shield_Penetrated>	<!-- We just penetrated then enemies base shield -->
 
-		<SFXEvent_HUD_Won_Land_Battle> RHD_Battle_End </SFXEvent_HUD_Won_Land_Battle> 															<!-- We won the land battle -->
-		<SFXEvent_HUD_Lost_Land_Battle> RHD_Defeated </SFXEvent_HUD_Lost_Land_Battle> 															<!-- We lost the land battle -->
-		<SFXEvent_HUD_Won_Space_Battle> RHD_Battle_End </SFXEvent_HUD_Won_Space_Battle> 															<!-- We won the space battle -->
-		<SFXEvent_HUD_Lost_Space_Battle> RHD_Defeated </SFXEvent_HUD_Lost_Space_Battle>                       							<!-- We lost the space battle -->
+		<SFXEvent_HUD_Won_Land_Battle> CIS_victory </SFXEvent_HUD_Won_Land_Battle> 															<!-- We won the land battle -->
+		<SFXEvent_HUD_Lost_Land_Battle> CIS_lost </SFXEvent_HUD_Lost_Land_Battle> 															<!-- We lost the land battle -->
+		<SFXEvent_HUD_Won_Space_Battle> CIS_victory </SFXEvent_HUD_Won_Space_Battle> 															<!-- We won the space battle -->
+		<SFXEvent_HUD_Lost_Space_Battle> CIS_lost </SFXEvent_HUD_Lost_Space_Battle>                       							<!-- We lost the space battle -->
 
 		<SFXEvent_HUD_Won_Land_Battle_Enemy_TSW_Present> RHD_Battle_End </SFXEvent_HUD_Won_Land_Battle_Enemy_TSW_Present> 			<!-- We won the land battle with enemy tactical superweapon present -->
 		<SFXEvent_HUD_Lost_Land_Battle_Enemy_TSW_Present> RHD_Defeated </SFXEvent_HUD_Lost_Land_Battle_Enemy_TSW_Present> 			<!-- We lost the land battle with enemy tactical superweapon present -->
@@ -2411,7 +2411,7 @@
 		<Space_Retreat_Unit_Increment_Wait_Frames> 1 </Space_Retreat_Unit_Increment_Wait_Frames>
 		<Space_Retreat_Off_Map_Dest_Pos> 12000.0, 12000.0, 0.0 </Space_Retreat_Off_Map_Dest_Pos>	<!-- WARNING: For some reason, non-0.0 Z crashes the game -->
 		<Space_Retreat_Countdown_Color_RGBA> 255, 255, 255, 255 </Space_Retreat_Countdown_Color_RGBA>
-		<Space_Retreat_Countdown_Text_ID> TEXT_RETREAT_SPACE_ZSINJ_COUNTDOWN </Space_Retreat_Countdown_Text_ID>
+		<Space_Retreat_Countdown_Text_ID> TEXT_RETREAT_SPACE_TF </Space_Retreat_Countdown_Text_ID>
 
 		<Space_Retreat_Begin_SFXEvent> EHD_Retreat_Started_Space </Space_Retreat_Begin_SFXEvent>
 		<Space_Retreat_Cancel_SFXEvent> EHD_Retreat_Cancelled </Space_Retreat_Cancel_SFXEvent>
@@ -2425,7 +2425,7 @@
 		<Land_Retreat_Countdown_Seconds> 10.99 </Land_Retreat_Countdown_Seconds>
 		<Land_Retreat_Pursue_Max_Speed_Mod_Factor> 1.0 </Land_Retreat_Pursue_Max_Speed_Mod_Factor>		<Land_Retreat_Units_Damaged_Mod_Factor> 2.0 </Land_Retreat_Units_Damaged_Mod_Factor>
 		<Land_Retreat_Countdown_Color_RGBA> 255, 255, 255, 255 </Land_Retreat_Countdown_Color_RGBA>
-		<Land_Retreat_Countdown_Text_ID> TEXT_RETREAT_LAND_ZSINJ_COUNTDOWN </Land_Retreat_Countdown_Text_ID>
+		<Land_Retreat_Countdown_Text_ID> TEXT_RETREAT_LAND_TF_COUNTDOWN </Land_Retreat_Countdown_Text_ID>
 
 		<Land_Retreat_Begin_SFXEvent> EHD_Retreat_Started_Land </Land_Retreat_Begin_SFXEvent>
 		<Land_Retreat_Cancel_SFXEvent> EHD_Retreat_Cancelled </Land_Retreat_Cancel_SFXEvent>
@@ -3131,7 +3131,7 @@
 		<Space_Retreat_Unit_Increment_Wait_Frames> 1 </Space_Retreat_Unit_Increment_Wait_Frames>
 		<Space_Retreat_Off_Map_Dest_Pos> 12000.0, 12000.0, 0.0 </Space_Retreat_Off_Map_Dest_Pos>	<!-- WARNING: For some reason, non-0.0 Z crashes the game -->
 		<Space_Retreat_Countdown_Color_RGBA> 255, 255, 255, 255 </Space_Retreat_Countdown_Color_RGBA>
-		<Space_Retreat_Countdown_Text_ID> TEXT_RETREAT_SPACE_TECHNOUNION_COUNTDOWN </Space_Retreat_Countdown_Text_ID>
+		<Space_Retreat_Countdown_Text_ID> TEXT_RETREAT_SPACE_TU </Space_Retreat_Countdown_Text_ID>
 
 		<Space_Retreat_Begin_SFXEvent> EHD_Retreat_Started_Space </Space_Retreat_Begin_SFXEvent>
 		<Space_Retreat_Cancel_SFXEvent> EHD_Retreat_Cancelled </Space_Retreat_Cancel_SFXEvent>
@@ -3145,7 +3145,7 @@
 		<Land_Retreat_Countdown_Seconds> 10.99 </Land_Retreat_Countdown_Seconds>
 		<Land_Retreat_Pursue_Max_Speed_Mod_Factor> 1.0 </Land_Retreat_Pursue_Max_Speed_Mod_Factor>		<Land_Retreat_Units_Damaged_Mod_Factor> 2.0 </Land_Retreat_Units_Damaged_Mod_Factor>
 		<Land_Retreat_Countdown_Color_RGBA> 255, 255, 255, 255 </Land_Retreat_Countdown_Color_RGBA>
-		<Land_Retreat_Countdown_Text_ID> TEXT_RETREAT_SPACE_TECHNOUNION_COUNTDOWN </Land_Retreat_Countdown_Text_ID>
+		<Land_Retreat_Countdown_Text_ID> TEXT_RETREAT_LAND_TU_COUNTDOWN </Land_Retreat_Countdown_Text_ID>
 
 		<Land_Retreat_Begin_SFXEvent> EHD_Retreat_Started_Land </Land_Retreat_Begin_SFXEvent>
 		<Land_Retreat_Cancel_SFXEvent> EHD_Retreat_Cancelled </Land_Retreat_Cancel_SFXEvent>
@@ -3850,7 +3850,7 @@
 		<Space_Retreat_Unit_Increment_Wait_Frames> 1 </Space_Retreat_Unit_Increment_Wait_Frames>
 		<Space_Retreat_Off_Map_Dest_Pos> 12000.0, 12000.0, 0.0 </Space_Retreat_Off_Map_Dest_Pos>	<!-- WARNING: For some reason, non-0.0 Z crashes the game -->
 		<Space_Retreat_Countdown_Color_RGBA> 255, 255, 255, 255 </Space_Retreat_Countdown_Color_RGBA>
-		<Space_Retreat_Countdown_Text_ID> TEXT_RETREAT_SPACE_PENTASTAR_COUNTDOWN </Space_Retreat_Countdown_Text_ID>
+		<Space_Retreat_Countdown_Text_ID> TEXT_RETREAT_SPACE_BC </Space_Retreat_Countdown_Text_ID>
 
 		<Space_Retreat_Begin_SFXEvent> EHD_Retreat_Started_Space </Space_Retreat_Begin_SFXEvent>
 		<Space_Retreat_Cancel_SFXEvent> EHD_Retreat_Cancelled </Space_Retreat_Cancel_SFXEvent>
@@ -3864,7 +3864,7 @@
 		<Land_Retreat_Countdown_Seconds> 10.99 </Land_Retreat_Countdown_Seconds>
 		<Land_Retreat_Pursue_Max_Speed_Mod_Factor> 1.0 </Land_Retreat_Pursue_Max_Speed_Mod_Factor>		<Land_Retreat_Units_Damaged_Mod_Factor> 2.0 </Land_Retreat_Units_Damaged_Mod_Factor>
 		<Land_Retreat_Countdown_Color_RGBA> 255, 255, 255, 255 </Land_Retreat_Countdown_Color_RGBA>
-		<Land_Retreat_Countdown_Text_ID> TEXT_RETREAT_LAND_PENTASTAR_COUNTDOWN </Land_Retreat_Countdown_Text_ID>
+		<Land_Retreat_Countdown_Text_ID> TEXT_RETREAT_LAND_BC_COUNTDOWN </Land_Retreat_Countdown_Text_ID>
 
 		<Land_Retreat_Begin_SFXEvent> EHD_Retreat_Started_Land </Land_Retreat_Begin_SFXEvent>
 		<Land_Retreat_Cancel_SFXEvent> EHD_Retreat_Cancelled </Land_Retreat_Cancel_SFXEvent>
@@ -4565,7 +4565,7 @@
 		<Land_Retreat_Countdown_Seconds> 10.99 </Land_Retreat_Countdown_Seconds>
 		<Land_Retreat_Pursue_Max_Speed_Mod_Factor> 1.0 </Land_Retreat_Pursue_Max_Speed_Mod_Factor>		<Land_Retreat_Units_Damaged_Mod_Factor> 2.0 </Land_Retreat_Units_Damaged_Mod_Factor>
 		<Land_Retreat_Countdown_Color_RGBA> 255, 255, 255, 255 </Land_Retreat_Countdown_Color_RGBA>
-		<Land_Retreat_Countdown_Text_ID> TEXT_RETREAT_SPACE_COMMERCE_GUILD_COUNTDOWN </Land_Retreat_Countdown_Text_ID>
+		<Land_Retreat_Countdown_Text_ID> TEXT_RETREAT_LAND_CG_COUNTDOWN </Land_Retreat_Countdown_Text_ID>
 
 		<Land_Retreat_Begin_SFXEvent> EHD_Retreat_Started_Land </Land_Retreat_Begin_SFXEvent>
 		<Land_Retreat_Cancel_SFXEvent> EHD_Retreat_Cancelled </Land_Retreat_Cancel_SFXEvent>

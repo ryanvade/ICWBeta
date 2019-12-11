@@ -45,12 +45,12 @@ function GameMod:new()
 
     self.category_filter = CategoryFilter(plot, self.galactic_conquest, self.ai_dummy_handler)
 
-    self:mod_specific_setup()
+    -- self:mod_specific_setup()
 
     Create_Thread("TransactionManagerThread")
 end
 
----@protected
+---@public
 function GameMod:mod_specific_setup()
     DebugMessage("No mod specific setup")
 end

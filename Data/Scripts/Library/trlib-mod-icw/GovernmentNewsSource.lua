@@ -9,7 +9,7 @@ function GovernmentNewsSource:new(government_manager)
     government_manager.NRGOV.Events.ElectionHeld:AttachListener(self.on_election_held, self)
 end
 
-function GalacticEventsNewsSource:on_election_held(election_result)
+function GovernmentNewsSource:on_election_held(election_result)
     self:Notify {
         headline = "TEXT_NEWS_NR_ELECTION_RESULT",
         var = election_result.winner,
