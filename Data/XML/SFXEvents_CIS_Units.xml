@@ -97,7 +97,6 @@
 						  Data\Audio\SFX\Units\b1\attack\firing_blaster_2.wav 
 						  Data\Audio\SFX\Units\b1\attack\all_units_charge_2.wav 
 						  Data\Audio\SFX\Units\b1\attack\battle_mode_activated_2.wav 
-						  Data\Audio\SFX\Units\b1\attack\all_units_charge_2.wav 
 						  Data\Audio\SFX\Units\b1\attack\goodbye_grenade_1.wav 
 						  Data\Audio\SFX\Units\b1\attack\die_clone_4.wav 
 						  Data\Audio\SFX\Units\b1\attack\firing_blaster_3.wav 
@@ -105,7 +104,7 @@
 						  Data\Audio\SFX\Units\b1\attack_assist\roger_roger_8.wav 
 						  Data\Audio\SFX\Units\b1\attack_assist\im_attacking_1.wav 
 						  Data\Audio\SFX\Units\b1\attack_assist\for_the_cis.wav 
-						   Data\Audio\SFX\Units\b1\attack\firing_blaster_2.wav 
+						  Data\Audio\SFX\Units\b1\attack\firing_blaster_4.wav 
 						  Data\Audio\SFX\Units\b1\attack_assist\go_find_ur_targets.wav 
 						  Data\Audio\SFX\Units\b1\attack_assist\give_up_clone_shout.wav 
 						  Data\Audio\SFX\Units\b1\attack_assist\hunter_program_1.wav 
@@ -150,8 +149,7 @@
 					  Data\Audio\SFX\Units\b1\defend\go_further_shut_down_1.wav
 					  Data\Audio\SFX\Units\b1\defend\sorry_overheated_2.wav
 					  Data\Audio\SFX\Units\b1\defend\gonk_gonk.wav
-					  Data\Audio\SFX\Units\b1\select\theme.wav
-					  
+					  Data\Audio\SFX\Units\b1\defend\theme.wav
 					  
 					  </Samples>
 						  <Localize> Yes </Localize>
@@ -178,7 +176,6 @@
 					  Data\Audio\SFX\Units\b1\death\servos_broken_3.wav
 					  Data\Audio\SFX\Units\b1\death\are_you_damaged_2.wav
 					  Data\Audio\SFX\Units\b1\death\servos_broken_2.wav
-					  Data\Audio\SFX\Units\b1\death\death_1.wav
 					  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> No </Play_Sequentially>
@@ -215,7 +212,7 @@
 						Data\Audio\SFX\Units\b2\select\patriot_protocol_engaged_2.wav 
 						Data\Audio\SFX\Units\b2\select\ready_for_attack_1.wav 
 						Data\Audio\SFX\Units\b2\select\rearming.wav 
-						Data\Audio\SFX\Units\b2\select\no_life_signs_2.wav.wav 
+						Data\Audio\SFX\Units\b2\select\no_life_signs_2.wav 
 						Data\Audio\SFX\Units\b2\select\well_done_1.wav 
 						Data\Audio\SFX\Units\b2\select\oho_watch_out_2.wav 
 					 </Samples>
@@ -428,7 +425,7 @@
 					  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> No </Play_Sequentially>
-						  <Probability>35</Probability>
+						  <Probability>30</Probability>
 							<Text_ID></Text_ID>
 					  <Overlap_Test> Unit_B2_Droid </Overlap_Test>
 				</SFXEvent>
@@ -1011,7 +1008,7 @@
 					  <Samples>
 					 Data\Audio\SFX\Units\bx_commando_droid\defend\bx_keep_your_distance.wav
 					 Data\Audio\SFX\Units\bx_commando_droid\defend\bx_jamming_republic_sensors.wav
-					 Data\Audio\SFX\Units\bx_commando_droid\select\bx_theme.wav
+					 Data\Audio\SFX\Units\bx_commando_droid\defend\bx_theme.wav
 					  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> Yes </Play_Sequentially>
@@ -1245,13 +1242,11 @@
 					 Data\Audio\SFX\Units\CIS_spotted_republic\hostiles_detected.wav
 					 Data\Audio\SFX\Units\CIS_spotted_republic\look_clones.wav
 					 Data\Audio\SFX\Units\CIS_spotted_republic\clones_attacking_1.wav
-					 Data\Audio\SFX\Units\CIS_spotted_republic\another_clone_1.wav
 					 Data\Audio\SFX\Units\CIS_spotted_republic\republic_is_here_2.wav
 					 Data\Audio\SFX\Units\CIS_spotted_republic\republic_defenders_2.wav
 					 Data\Audio\SFX\Units\CIS_spotted_republic\more_of_them_shout.wav
 					 Data\Audio\SFX\Units\CIS_spotted_republic\look_clones_shout.wav
 					 Data\Audio\SFX\Units\CIS_spotted_republic\another_trooper.wav
-					 Data\Audio\SFX\Units\CIS_spotted_republic\republic_is_here_2.wav
 					  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> No </Play_Sequentially>
@@ -1314,7 +1309,6 @@
 					 <Use_Preset>Preset_UR</Use_Preset>
 					  <Samples>
 						Data\Audio\SFX\Units\CIS_Tactical_droid\defeat_1.wav
-						Data\Audio\SFX\Units\CIS_Tactical_droid\defeat_2.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\defeat_3.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\defeat_4.wav
 					  </Samples>
@@ -1343,7 +1337,6 @@
 						<SFXEvent Name="CIS_retreat_aborted">
 					 <Use_Preset>Preset_UR</Use_Preset>
 					  <Samples>
-						Data\Audio\SFX\Units\CIS_Tactical_droid\retreat_aborted_1.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\retreat_aborted_2.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\retreat_aborted_3.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\retreat_aborted_4.wav
@@ -1355,12 +1348,12 @@
 				</SFXEvent>
 				
 					<!-- Republic retreat from CIS -->	
-				<SFXEvent Name="rep_retreat_from_CIS">
+					
+			<SFXEvent Name="rep_retreat_from_CIS">
 					 <Use_Preset>Preset_UR</Use_Preset>
 					  <Samples>
 						
 						Data\Audio\SFX\Units\CIS_Tactical_droid\REP_Retreat_2.wav
-						Data\Audio\SFX\Units\CIS_Tactical_droid\REP_Retreat_3.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\REP_Retreat_4.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\REP_Retreat_5.wav
 					  </Samples>
@@ -1371,17 +1364,16 @@
 				</SFXEvent>
 				
 					<!-- CIS Victory-->	
-						<SFXEvent Name="CIS_victory">
+					
+			<SFXEvent Name="CIS_victory">
 					 <Use_Preset>Preset_UR</Use_Preset>
 					  <Samples>
 						Data\Audio\SFX\Units\CIS_Tactical_droid\win_1.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\win_2.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\win_3.wav
-						Data\Audio\SFX\Units\CIS_Tactical_droid\win_4.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\win_5.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\win_6.wav
 						Data\Audio\SFX\Units\CIS_Tactical_droid\win_7.wav
-						Data\Audio\SFX\Units\CIS_Tactical_droid\win_8.wav
 					  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> No </Play_Sequentially>

@@ -131,7 +131,7 @@
 		<Build_Cost_Credits>1100</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
-		<Tech_Level>1</Tech_Level>
+		<Tech_Level>0</Tech_Level>
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
 		<Required_Timeline />
@@ -164,7 +164,7 @@
 		<Score_Cost_Credits> 420</Score_Cost_Credits>
 
 		<Encyclopedia_Text>TEXT_TOOLTIP_GOZANTI_CRUISER</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_GUNSHIP</Encyclopedia_Unit_Class>
 
 		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
@@ -194,20 +194,20 @@
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>2</Required_Star_Base_Level>
-		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
+		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
 		<Required_Planets />
 
 		<Lua_Script>GenericGameObject</Lua_Script>
 
 		<Starting_Spawned_Units_Tech_0>Vulture_Squadron_Double, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Hyena_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_5>Mankvim_Squadron, 2</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>Hyena_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_4>Mankvim_Squadron, 2</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Hyena_Squadron, 1</Starting_Spawned_Units_Tech_4>
 
 		<Reserve_Spawned_Units_Tech_0>Hyena_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Vulture_Squadron_Double, 1</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_5>Hyena_Squadron, 1</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>Mankvim_Squadron, 2</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_4>Hyena_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>Mankvim_Squadron, 2</Reserve_Spawned_Units_Tech_4>
 
 	</SpaceUnit>
 
@@ -278,15 +278,15 @@
 
 		<Starting_Spawned_Units_Tech_0>Vulture_Squadron_Double, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Hyena_Squadron, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_5>Vulture_Squadron_Double, 1</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>Mankvim_Squadron, 2</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>Hyena_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_4>Vulture_Squadron_Double, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Mankvim_Squadron, 2</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Hyena_Squadron, 1</Starting_Spawned_Units_Tech_4>
 
 		<Reserve_Spawned_Units_Tech_0>Hyena_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Vulture_Squadron_Double, 2</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_5>Hyena_Squadron, 2</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>Vulture_Squadron_Double, 1</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>Mankvim_Squadron, 2</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_4>Hyena_Squadron, 2</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>Vulture_Squadron_Double, 1</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>Mankvim_Squadron, 2</Reserve_Spawned_Units_Tech_4>
 
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 
@@ -394,7 +394,7 @@
 		</Unit_Abilities_Data>
 
 		<Abilities SubObjectList="Yes">
-			<Tractor_Beam_Attack_Ability Name="Bulwark_II_Tractor_Beam_Attack_Ability">
+			<!-- <Tractor_Beam_Attack_Ability Name="Bulwark_II_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 				<Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
@@ -402,10 +402,10 @@
 				<Activation_Min_Range>2</Activation_Min_Range>
 				<Activation_Max_Range>1500</Activation_Max_Range>
 
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				
 				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
 				<Stacking_Category>0</Stacking_Category>
-			</Tractor_Beam_Attack_Ability>
+			</Tractor_Beam_Attack_Ability> -->
 
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
@@ -436,7 +436,7 @@
 		<Space_Model_Name>CIS_Recusant.alo</Space_Model_Name>
 
 		<Affiliation>Rebel, Teradoc</Affiliation>
-		<Tech_Level>0</Tech_Level>
+		<Tech_Level>1</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>2</Required_Star_Base_Level>
@@ -489,7 +489,7 @@
 		<Energy_Refresh_Rate>500</Energy_Refresh_Rate>
 		<Surface_Bombardment_Capable>yes</Surface_Bombardment_Capable>
 		<Affiliation>Rebel, Teradoc</Affiliation>
-		<Tech_Level>0</Tech_Level>
+		<Tech_Level>1</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
@@ -612,7 +612,7 @@
 		<Variant_Of_Existing_Type>Template_Munificent</Variant_Of_Existing_Type>
 
 		<Affiliation>Rebel, Pentastar</Affiliation>
-		<Tech_Level>1</Tech_Level>
+		<Tech_Level>0</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>2</Required_Star_Base_Level>
@@ -997,7 +997,7 @@
 		<Population_Value>32</Population_Value>
 
 		<Affiliation>Rebel, Pirates, Pentastar</Affiliation>
-		<Tech_Level>1</Tech_Level>
+		<Tech_Level>0</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
@@ -1025,7 +1025,7 @@
 		<Variant_Of_Existing_Type>Template_Providence</Variant_Of_Existing_Type>
 		<No_Colorization_Color> 44, 121, 216, 255 </No_Colorization_Color>
 		<Affiliation>Rebel, Teradoc, Pirates</Affiliation>
-		<Tech_Level>1</Tech_Level>
+		<Tech_Level>0</Tech_Level>
 		<Population_Value>12</Population_Value>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
@@ -1206,7 +1206,7 @@
 		</Unit_Abilities_Data>
 
 		<Abilities SubObjectList="Yes">
-			<Tractor_Beam_Attack_Ability Name="Providence_Dread_Tractor_Beam_Attack_Ability">
+			<!-- <Tractor_Beam_Attack_Ability Name="Providence_Dread_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 				<Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
@@ -1214,10 +1214,10 @@
 				<Activation_Min_Range>2</Activation_Min_Range>
 				<Activation_Max_Range>1500</Activation_Max_Range>
 
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				
 				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
 				<Stacking_Category>0</Stacking_Category>
-			</Tractor_Beam_Attack_Ability>
+			</Tractor_Beam_Attack_Ability> -->
 
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
@@ -1302,7 +1302,7 @@
 		<Tech_Level>1</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
 		<Damage>70</Damage>
 		<Autoresolve_Health>23400</Autoresolve_Health>
@@ -1446,7 +1446,7 @@
 		</Unit_Abilities_Data>
 
 		<Abilities SubObjectList="Yes">
-			<Tractor_Beam_Attack_Ability Name="Subjugator_Tractor_Beam_Attack_Ability">
+			<!-- <Tractor_Beam_Attack_Ability Name="Subjugator_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 				<Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
@@ -1454,10 +1454,10 @@
 				<Activation_Min_Range>2</Activation_Min_Range>
 				<Activation_Max_Range>1500</Activation_Max_Range>
 
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				
 				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
 				<Stacking_Category>0</Stacking_Category>
-			</Tractor_Beam_Attack_Ability>
+			</Tractor_Beam_Attack_Ability> -->
 
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
@@ -1529,7 +1529,7 @@
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
 		<Required_Planets />
-		<Ship_Class>frigate</Ship_Class>
+		<Ship_Class>corvette</Ship_Class>
 		<Formation_Priority>3</Formation_Priority>
 		<Is_Escort>yes</Is_Escort>
 		<Is_Bomber>no</Is_Bomber>
@@ -1559,7 +1559,7 @@
 			 HP_Diamond_00, HP_Diamond_01, HP_Diamond_02, HP_Diamond_03, HP_Diamond_04, HP_Diamond_05
 		</HardPoints>
 
-		<CategoryMask> Frigate | AntiFighter | AntiBomber</CategoryMask>
+		<CategoryMask> Corvette | AntiFighter | AntiBomber </CategoryMask>
 		<Icon_Name>i_button_diamond.tga</Icon_Name>
 		<GUI_Model_Name>lancer.ALO</GUI_Model_Name>
 		<GUI_Distance>1200</GUI_Distance>
@@ -1715,7 +1715,7 @@
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
 		<Required_Planets />
-		<Ship_Class>frigate</Ship_Class>
+		<Ship_Class>corvette</Ship_Class>
 		<Formation_Priority>3</Formation_Priority>
 		<Is_Escort>yes</Is_Escort>
 		<Is_Bomber>no</Is_Bomber>
@@ -1750,7 +1750,7 @@
 			HP_GeonosianCruiser_Laser04, HP_GeonosianCruiser_Laser02, HP_GeonosianCruiser_Laser03, HP_GeonosianCruiser_Laser01, HP_GeonosianCruiser_Turbo02, HP_GeonosianCruiser_Turbo01
 		</HardPoints>
 
-		<CategoryMask> Frigate | AntiCorvette </CategoryMask>
+		<CategoryMask> Corvette | AntiCorvette </CategoryMask>
 		<Icon_Name>i_button_geonosiancruiser.tga</Icon_Name>
 		<GUI_Model_Name>CIS_GeonosianCruiser.ALO</GUI_Model_Name>
 		<GUI_Distance>1200</GUI_Distance>
@@ -2090,7 +2090,7 @@
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
 		<Slice_Cost_Credits>1400</Slice_Cost_Credits>
-		<Tech_Level>1</Tech_Level>
+		<Tech_Level>0</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>

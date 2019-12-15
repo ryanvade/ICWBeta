@@ -106,7 +106,7 @@ function Determine_Start_Era(message)
       
       techLevel = p_republic.Get_Tech_Level()
       
-		if techLevel <= 3 then
+		if techLevel <= 2 then
            -- Republic
 			if spawn_location_table["CORUSCANT"] then
 				start_planet = FindPlanet("Coruscant")
@@ -197,7 +197,7 @@ function Determine_Start_Era(message)
                 end
             end  
       
-        elseif techLevel == 4 then
+        elseif techLevel == 3 then
           
             -- Republic
 			if spawn_location_table["CORUSCANT"] then
@@ -322,7 +322,7 @@ function Determine_Start_Era(message)
                 end
             end  
  
-        elseif techLevel == 5 then
+        elseif techLevel >= 4 then
            
              -- Republic
             if spawn_location_table["CORUSCANT"] then

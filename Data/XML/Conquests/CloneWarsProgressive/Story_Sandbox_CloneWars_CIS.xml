@@ -155,6 +155,16 @@
 		<Event_Param2>START_LEVEL_05</Event_Param2>
 	</Event>
 	
+	<Event Name="Era_Two_Disable">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Era_Two</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>GC_Start_Force_Level_Three</Prereq>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+	</Event>
+	
 		
 	<Event Name="Era_Three_Disable">
 		<Event_Type>STORY_TRIGGER</Event_Type>
@@ -211,9 +221,9 @@
 	
 	<Event Name="Bulwark_Research_Begin">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>800</Event_Param1>
-		<Prereq>CIS_Enters_Tech_04</Prereq>
-		<Branch>Era_Four</Branch>
+		<Event_Param1>80</Event_Param1>
+		<Prereq>CIS_Enters_Tech_03</Prereq>
+		<Branch>Era_Three</Branch>
 	</Event>
 
 	<Event Name="Unlock_Bulwark_Speech">
@@ -230,7 +240,7 @@
 		<Reward_Param9></Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Bulwark_Research_Begin</Prereq>
-		<Branch>Era_Four</Branch>
+		<Branch>Era_Three</Branch>
 		<Branch>Faction_Branch_CIS</Branch>
 	</Event>
 	
@@ -241,7 +251,7 @@
 		<Story_Chapter>0</Story_Chapter>
 		<Story_Tag>Bulwark_Tag</Story_Tag>
 		<Prereq>Unlock_Victory_Speech</Prereq>
-		<Branch>Era_Four</Branch>
+		<Branch>Era_Three</Branch>
 		
 	</Event>
 	
@@ -251,7 +261,7 @@
 		<Reward_Param1>Bulwark_Tag</Reward_Param1>
 		<Prereq>Unlock_Bulwark</Prereq>
 		<Prereq>Unlock_Bulwark_Forced</Prereq>
-		<Branch>Era_Four</Branch>
+		<Branch>Era_Three</Branch>
 	</Event>
 	
 	<Event Name="Lock_Bulwark">
@@ -259,14 +269,14 @@
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Bulwark_I</Reward_Param1>
 		<Prereq>Universal_Story_Start</Prereq>
-		<Branch>Era_Four</Branch>
+		<Branch>Era_Three</Branch>
 	</Event>	
 	<Event Name="Lock_Bulwark_II">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Bulwark_II</Reward_Param1>
 		<Prereq>Universal_Story_Start</Prereq>
-		<Branch>Era_Four</Branch>
+		<Branch>Era_Three</Branch>
 	</Event>
 
  	<Event Name="Unlock_Bulwark_Research">
@@ -274,7 +284,6 @@
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Dummy_Research_Bulwark</Reward_Param1>
 		<Prereq>Unlock_Bulwark_Speech</Prereq>
-		<Branch>Era_Four</Branch>
 	</Event>
 	
 
@@ -307,16 +316,9 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Bulwark_I</Reward_Param1>
-		<Prereq>GC_Start_Force_Level_Five</Prereq>
-	</Event>
-
-	<Event Name="Unlock_Bulwark_Forced">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Bulwark_II</Reward_Param1>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
 		<Prereq>GC_Start_Force_Level_Five</Prereq>
 	</Event>
 
 
-	
 </Story>

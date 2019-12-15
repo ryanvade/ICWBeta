@@ -31,7 +31,7 @@
 		<Space_Layer> Land </Space_Layer>
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
 		<OverrideAcceleration> .2 </OverrideAcceleration>
-		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<OverrideDeceleration> .01 </OverrideDeceleration>
 		<FormationSpacing> .75 </FormationSpacing>
 		<FormationOrder> 4 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
@@ -48,7 +48,7 @@
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
         <Remove_Upon_Death>true</Remove_Upon_Death>
 
-		<Armor_Type> Armor_Mauler </Armor_Type>
+		<Armor_Type> ArmourG_LightVehicle </Armor_Type>
 		<Size_Value>60</Size_Value>
 		<Damage>5</Damage>
 		<Sensor_Range>80</Sensor_Range>
@@ -191,8 +191,8 @@
  		<Custom_Hard_XExtent>20.0</Custom_Hard_XExtent>
  		<Custom_Hard_YExtent>10.0</Custom_Hard_YExtent>
 		<MovementPredictionInterval> 3.0 </MovementPredictionInterval>
-		<Armor_Type> Armor_Juggernaut </Armor_Type>
-		<Shield_Armor_Type>Shield_Tank</Shield_Armor_Type>
+		<Armor_Type> ArmourG_HeavyVehicle </Armor_Type>
+		<Shield_Armor_Type>ShieldG_HeavyVehicle</Shield_Armor_Type>
 		<Size_Value>70</Size_Value>
 		<Damage>6</Damage>
 		<Shield_Points>0</Shield_Points>
@@ -367,8 +367,8 @@
 		<Movement_Animation_Speed> 2.0</Movement_Animation_Speed>
 		<Max_Speed>3.5</Max_Speed>
 		<Min_Speed>0.1</Min_Speed>
-		<OverrideAcceleration> .1 </OverrideAcceleration>
-		<OverrideDeceleration> .1 </OverrideDeceleration>
+		<OverrideAcceleration> .2 </OverrideAcceleration>
+		<OverrideDeceleration> .01 </OverrideDeceleration>
 		<Max_Rate_Of_Turn>3.2</Max_Rate_Of_Turn>
 		<Max_Rate_Of_Roll>3.2</Max_Rate_Of_Roll>
 		<Max_Lift>3.5</Max_Lift>
@@ -402,7 +402,7 @@
 		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
 		<Affiliation>PEntastar</Affiliation>
 
-		<Armor_Type> Armor_Speeder </Armor_Type>
+		<Armor_Type> ArmourG_SpeederHeavy </Armor_Type>
 		<Damage>8</Damage>
 		<Autoresolve_Health>40.0</Autoresolve_Health>
 		<Shield_Points>0</Shield_Points>
@@ -532,7 +532,7 @@
 		<Space_Layer> Land </Space_Layer>
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
 		<OverrideAcceleration> .2 </OverrideAcceleration>
-		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<OverrideDeceleration> .01 </OverrideDeceleration>
 		<FormationSpacing> 1.5 </FormationSpacing>
 		<FormationOrder> 4 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
@@ -547,8 +547,8 @@
  		<Custom_Hard_XExtent>20.0</Custom_Hard_XExtent>
  		<Custom_Hard_YExtent>30.0</Custom_Hard_YExtent>
 		<MovementPredictionInterval> 3.0 </MovementPredictionInterval>
-		<Armor_Type> Armor_T2B </Armor_Type>
-		<Shield_Armor_Type>Shield_Tank</Shield_Armor_Type>
+		<Armor_Type> ArmourG_LightVehicle </Armor_Type>
+		<Shield_Armor_Type>ShieldG_LightVehicle</Shield_Armor_Type>
 		<Size_Value>70</Size_Value>
 		<Damage>6</Damage>
 		<Tactical_Health>70</Tactical_Health>
@@ -680,8 +680,8 @@
 		<Max_Rate_Of_Turn>10.0</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
-		<OverrideAcceleration> .2 </OverrideAcceleration>
-		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<OverrideAcceleration> .5 </OverrideAcceleration>
+		<OverrideDeceleration> .5 </OverrideDeceleration>
 		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
 		<FormationSpacing> 0.8 </FormationSpacing>
 		<FormationOrder> 3 </FormationOrder>
@@ -695,7 +695,7 @@
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 		<Remove_Upon_Death>true</Remove_Upon_Death>
-		<Armor_Type> Armor_Mauler </Armor_Type>
+		<Armor_Type> ArmourG_HeavyVehicle </Armor_Type>
 		<Size_Value>75</Size_Value>
 		<Damage>4</Damage>
 		<Shield_Points>0</Shield_Points>
@@ -884,7 +884,7 @@
 		<Affiliation>Empire</Affiliation>
 		<Political_Control>0</Political_Control>
 		<Size_Value>150</Size_Value>
-		<Armor_Type> Armor_ATAT </Armor_Type>
+		<Armor_Type> ArmourG_HeavyVehicle </Armor_Type>
 		<Damage>100</Damage>
 		<Tactical_Health>500</Tactical_Health>
 		<Energy_Capacity>999</Energy_Capacity>
@@ -1132,8 +1132,8 @@
 		<Movement_Animation_Speed> 0.8117 </Movement_Animation_Speed>
 		<Rotation_Animation_Speed> 2.2 </Rotation_Animation_Speed>
 		<Max_Speed>1.2</Max_Speed>
-						<OverrideAcceleration>0.004</OverrideAcceleration>
-		<OverrideDeceleration>0.005</OverrideDeceleration>
+						<OverrideAcceleration>0.5</OverrideAcceleration>
+		<OverrideDeceleration>0.5</OverrideDeceleration>
 		<Max_Rate_Of_Turn>3.5</Max_Rate_Of_Turn>
 		<Stopped_Rate_Of_Turn>7.5</Stopped_Rate_Of_Turn>
 		<Walk_Transition>Yes</Walk_Transition>
@@ -1161,7 +1161,7 @@
 		<Political_Control>0</Political_Control>
 		<Required_Timeline>0</Required_Timeline>
 		<Size_Value>75</Size_Value>
-		<Armor_Type> Armor_ATST </Armor_Type>
+		<Armor_Type> ArmourG_LightVehicle </Armor_Type>
 		<Damage_Type>Damage_ATST</Damage_Type>
 		<Projectile_Damage>7.0</Projectile_Damage>
 		<Damage>6</Damage>
@@ -1385,7 +1385,7 @@
 		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
-		<Armor_Type> Armor_ATAA </Armor_Type>
+		<Armor_Type> ArmourG_MediumVehicle </Armor_Type>
 		<Size_Value>150</Size_Value>
 		<Damage>10</Damage>
 		<Shield_Points>0</Shield_Points>
@@ -1568,7 +1568,7 @@
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 
-		<Armor_Type> Armor_SPMAT </Armor_Type>
+		<Armor_Type> ArmourG_HeavyVehicle </Armor_Type>
 		<Size_Value>150</Size_Value>
 		<Damage>20</Damage>
 		<Shield_Points>0</Shield_Points>
@@ -1768,8 +1768,8 @@
 		<Max_Rate_Of_Turn>10.0</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
-		<OverrideAcceleration> .2 </OverrideAcceleration>
-		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<OverrideAcceleration> .5 </OverrideAcceleration>
+		<OverrideDeceleration> .5 </OverrideDeceleration>
 		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
 		<FormationSpacing> 1.0 </FormationSpacing>
 		<FormationOrder> 3 </FormationOrder>
@@ -1783,7 +1783,7 @@
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 		<Remove_Upon_Death>true</Remove_Upon_Death>
-		<Armor_Type> Armor_Mauler </Armor_Type>
+		<Armor_Type> ArmourG_LightVehicle </Armor_Type>
 		<Size_Value>75</Size_Value>
 		<Damage>4</Damage>
 		<Shield_Points>0</Shield_Points>
@@ -1967,8 +1967,8 @@
 		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
-		<OverrideAcceleration> .1 </OverrideAcceleration>
-		<OverrideDeceleration> .1 </OverrideDeceleration>
+		<OverrideAcceleration> .2 </OverrideAcceleration>
+		<OverrideDeceleration> .01 </OverrideDeceleration>
 		<FormationSpacing> 1.1 </FormationSpacing>
 		<FormationOrder> 5 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
@@ -1988,8 +1988,8 @@
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 		<Remove_Upon_Death>true</Remove_Upon_Death>
 		<Ranged_Target_Z_Adjust>12.0</Ranged_Target_Z_Adjust>
-		<Armor_Type> Armor_2M </Armor_Type>
-		<Shield_Armor_Type>Shield_Tank</Shield_Armor_Type>
+		<Armor_Type> ArmourG_MediumVehicle </Armor_Type>
+		<Shield_Armor_Type>ShieldG_LightVehicle</Shield_Armor_Type>
 		<Size_Value>60</Size_Value>
 		<Damage>13</Damage>
 		<Sensor_Range>80</Sensor_Range>
@@ -2231,7 +2231,7 @@
 		<Space_Layer> Land </Space_Layer>
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
 		<OverrideAcceleration> .2 </OverrideAcceleration>
-		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<OverrideDeceleration> .02 </OverrideDeceleration>
 		<FormationSpacing> .75 </FormationSpacing>
 		<FormationOrder> 4 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
@@ -2247,7 +2247,7 @@
 		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 		<Remove_Upon_Death>true</Remove_Upon_Death>
-		<Armor_Type> Armor_Mauler </Armor_Type>
+		<Armor_Type> ArmourG_LightVehicle </Armor_Type>
 		<Size_Value>60</Size_Value>
 		<Damage>5</Damage>
 		<Sensor_Range>80</Sensor_Range>
@@ -2380,7 +2380,7 @@
 		<Custom_Hard_YExtent> 25.0 </Custom_Hard_YExtent>
 		<MovementPredictionInterval> 3.0 </MovementPredictionInterval>
 
-		<Armor_Type> Armor_Juggernaut </Armor_Type>
+		<Armor_Type> ArmourG_HeavyVehicle </Armor_Type>
 		<Size_Value>75</Size_Value>
 		<Damage>20</Damage>
 		<Shield_Points>0</Shield_Points>

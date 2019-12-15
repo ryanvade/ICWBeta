@@ -160,7 +160,7 @@ function Planet:update_influence_information()
         self.ownerInfluence = 3
 
         if EvaluatePerception("Planet_Has_Capital_Building", self:get_owner(), self.gameObject) == 1 then
-            self.ownerInfluence = self.ownerInfluence + 2
+            self.ownerInfluence = self.ownerInfluence + 3
         end
 
         self.ownerInfluence = self.ownerInfluence + EvaluatePerception("Planet_Has_Company", self.human_player, self.gameObject)

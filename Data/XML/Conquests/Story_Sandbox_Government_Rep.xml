@@ -4,13 +4,37 @@
 
 <Story>
 
+	<Event Name="Buy_LoveMeRepublic">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>LoveMeRepublic</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>LoveMeRepublic</Event_Param3>
+		<Reward_Type>DESTROY_OBJECT</Reward_Type>
+		<Reward_Param1>LoveMeRepublic</Reward_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Exit_Function">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+		<Prereq>Buy_LoveMeRepublic</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+	<Event Name="Disable_human">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Human</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	</Event>
+	
 	<Event Name="Determine_Player">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>ACTIVE_PLAYER</Event_Param2>
 		<Reward_Type>DISABLE_BRANCH</Reward_Type>
 		<Reward_Param1>Human</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-		<Branch>Era_Start_Checker</Branch>
+		<Reward_Param2>0</Reward_Param2>
 	</Event>
 	
 	<Event Name="Government_Start">
@@ -61,6 +85,7 @@
 		<Reward_Param8></Reward_Param8>
 		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
+		<Branch>Human</Branch>
 	</Event>
 	
 	<Event Name="Palpatine_Appeal">
@@ -78,6 +103,7 @@
 		<Reward_Param9>PalpatineFotR_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Mothma_Appeal</Prereq>
+		<Branch>Human</Branch>
 	</Event>
 	
 	<Event Name="Unlock_Palpatine">
@@ -101,6 +127,7 @@
 		<Story_Chapter>0</Story_Chapter>
 		<Story_Tag>Leader_Tag</Story_Tag>
 		<Prereq>Palpatine_Appeal</Prereq>
+		<Branch>Human</Branch>
 	</Event>
 	
 	<Event Name="Future_Of_The_Republic_Completed">
@@ -167,6 +194,7 @@
 		<Reward_Param9>PalpatineFotR_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Support_Palpatine</Prereq>
+		<Branch>Human</Branch>
 	</Event>
 	
 	<Event Name="Lira_Contract">
@@ -184,6 +212,7 @@
 		<Reward_Param9>Lira_Blissex_Loop</Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Palpatine_Thanks</Prereq>
+		<Branch>Human</Branch>
 	</Event>
 	
 	<Event Name="KDY_Patron_Dialog">
@@ -193,6 +222,7 @@
 		<Story_Chapter>0</Story_Chapter>
 		<Story_Tag>Kuat_Tag</Story_Tag>
 		<Prereq>Lira_Contract</Prereq>
+		<Branch>Human</Branch>
 	</Event>
 	
 	<Event Name="KDY_Patron_Completed">
@@ -203,6 +233,7 @@
 		<Story_Dialog>Dialog_Republic_KDYContract</Story_Dialog>
 		<Story_Chapter>1</Story_Chapter>
 		<Story_Tag>Kuat_Tag</Story_Tag>
+		<Branch>Human</Branch>
 	</Event>
 	
 	
@@ -214,6 +245,7 @@
 		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
 		<Reward_Param1>Kuat_Tag</Reward_Param1>
 		<Prereq>Build_KDY_Contract</Prereq>
+		<Branch>Human</Branch>
 	</Event>
 		
 	<Event Name="Unlock_KDY">
@@ -234,6 +266,7 @@
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Execute_Order_66_Dummy</Reward_Param1>
 		<Prereq>KDY_Patron_Completed</Prereq>	
+		<Branch>Human</Branch>
 	</Event>
 	
 	<Event Name="Order66_Executed">
@@ -244,6 +277,7 @@
 		<Reward_Type>DESTROY_OBJECT</Reward_Type>
 		<Reward_Param1>Execute_Order_66_Dummy</Reward_Param1>
 		<Perpetual>true</Perpetual>
+		<Branch>Human</Branch>
 	</Event>
 	
 		

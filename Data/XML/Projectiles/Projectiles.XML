@@ -13,7 +13,7 @@
 		<Projectile_Damage>20.0</Projectile_Damage>
 		<Projectile_Blast_Area_Damage> 10 </Projectile_Blast_Area_Damage>
 		<Projectile_Blast_Area_Range> 20 </Projectile_Blast_Area_Range>
-		<Damage_Type> Damage_Proton_GRND </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Projectile_Object_Detonation_Particle>Beam_Impact</Projectile_Object_Detonation_Particle>
 		<Projectile_Object_Armor_Reduced_Detonation_Particle>Beam_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
 		<Projectile_Ground_Detonation_Particle>Beam_Impact</Projectile_Ground_Detonation_Particle>
@@ -55,7 +55,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>Proj_FailRocket.ALO</Land_Model_Name>
 		<Scale_Factor>0.075</Scale_Factor>
-		<Damage_Type> Damage_Proton_GRND </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>8.0</Max_Speed>
 		<Max_Rate_Of_Turn>0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -87,7 +87,7 @@
 	<Projectile Name="Proj_LAAT">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_BEAM_LAAT.ALO</Land_Model_Name>
-		<Damage_Type> Damage_AI_Turret </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Scale_Factor>0.03</Scale_Factor>
 		<Max_Speed>100</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -113,7 +113,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_G.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_AV_Turret </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -154,7 +154,7 @@
 		<Scale_Factor>1.0</Scale_Factor>
 		<Land_Model_Name>Proj_Beam.ALO</Land_Model_Name>
 		<Projectile_Damage>30</Projectile_Damage>
-		<Damage_Type> Damage_Laser_T4B </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Projectile_Object_Detonation_Particle>Medium_Damage_Space_Blue</Projectile_Object_Detonation_Particle>
 		<Projectile_Object_Armor_Reduced_Detonation_Particle>Medium_Damage_Space_Blue</Projectile_Object_Armor_Reduced_Detonation_Particle>
 		<Projectile_Ground_Detonation_Particle>Projectile_Dirt_Collide</Projectile_Ground_Detonation_Particle>
@@ -188,7 +188,7 @@
 
 		<Max_Secs_For_AE_Delayed_Damage>0.75</Max_Secs_For_AE_Delayed_Damage>
 		<Projectile_Damage>0.0</Projectile_Damage>
-		<Damage_Type> Damage_Flame </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<AI_Combat_Power>80</AI_Combat_Power>
 	</Projectile>
 
@@ -196,7 +196,7 @@
 		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Land_Model_Name>Proj_Beam.ALO</Land_Model_Name>
-		<Damage_Type>Damage_ATAT</Damage_Type>
+		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
 		<Projectile_Damage>240.0</Projectile_Damage>
 		<Projectile_Object_Detonation_Particle>Medium_Damage_Space_Blue</Projectile_Object_Detonation_Particle>
 		<Projectile_Object_Armor_Reduced_Detonation_Particle>Medium_Damage_Space_Blue</Projectile_Object_Armor_Reduced_Detonation_Particle>
@@ -223,7 +223,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_concussion_missile.alo</Land_Model_Name>
 		<Scale_Factor>0.025</Scale_Factor>
-		<Damage_Type> Damage_PLEX </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>6.5</Max_Speed>
 		<Max_Rate_Of_Turn>30</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -251,7 +251,7 @@
 	<Projectile Name="Proj_RCS_Blaster_Cannon_Red">
 		<!-- used by AT-ST -->
 		<Variant_Of_Existing_Type>Proj_Generic_Small_Red</Variant_Of_Existing_Type>
-		<Damage_Type> Damage_ATST </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Projectile_Blast_Area_Range>15.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>4.0</Projectile_Blast_Area_Damage>
 		<Projectile_Damage>10.0</Projectile_Damage>
@@ -265,7 +265,7 @@
 		<Projectile_Length>1.0</Projectile_Length>
 		<Projectile_Texture_Slot>0,1</Projectile_Texture_Slot>
 		<Scale_Factor>0.5</Scale_Factor>
-		<Damage_Type> Damage_Sniper </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -292,7 +292,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Scale_Factor>0.3</Scale_Factor>
 		<Land_Model_Name>PROJ_LASER_BLUE_G.ALO</Land_Model_Name>
-		<Damage_Type> Damage_Blaster_Cannon </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -318,7 +318,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Scale_Factor>0.05</Scale_Factor>
 		<Land_Model_Name>Proj_Maser_Blue_F.ALO</Land_Model_Name>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<Max_Speed>17</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -344,7 +344,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>P_MFLASHRED_THIN.ALO</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<Max_Speed>17</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -371,7 +371,7 @@
 		<Scale_Factor>0.05</Scale_Factor>
 		<Land_Model_Name>Proj_Maser_Blue_F.ALO</Land_Model_Name>
 
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<Max_Speed>14.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -397,7 +397,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Scale_Factor>0.05</Scale_Factor>
 		<Land_Model_Name>Proj_Maser_Blue_F.ALO</Land_Model_Name>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<Max_Speed>9.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -428,7 +428,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_grenade.ALO</Land_Model_Name>
 		<Scale_Factor>1.2</Scale_Factor>
-		<Damage_Type> Damage_Con_Grenade </Damage_Type>
+		<Damage_Type> DamageL_ConcussionWarhead </Damage_Type>
 		<Max_Speed>10.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -467,7 +467,7 @@
 		<Projectile_Length>3.0</Projectile_Length>
 		<Projectile_Texture_Slot>0,1</Projectile_Texture_Slot>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Sniper </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Max_Speed>35</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -497,7 +497,7 @@
 		<Projectile_Length>13.0</Projectile_Length>
 		<Projectile_Texture_Slot>3,0</Projectile_Texture_Slot>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Cannon </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>11.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -530,7 +530,7 @@
 		<Projectile_Grenade_Gravity>1.0</Projectile_Grenade_Gravity>
 		<Projectile_Grenade_Gravity_Lob_Mod>1.0</Projectile_Grenade_Gravity_Lob_Mod>
 		<Projectile_Grenade_Can_Lob_Slower>yes</Projectile_Grenade_Can_Lob_Slower>
-		<Damage_Type>Damage_StickyBomb</Damage_Type>
+		<Damage_Type>DamageL_ThermalWarhead</Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, BOMB</Behavior>
@@ -561,7 +561,7 @@
 		<Projectile_Length>1.0</Projectile_Length>
 		<Projectile_Texture_Slot>0,1</Projectile_Texture_Slot>
 		<Scale_Factor>0.5</Scale_Factor>
-		<Damage_Type> Damage_Sniper </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -587,7 +587,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Cannon </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>17</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -612,7 +612,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Cannon </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>17</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -641,7 +641,7 @@
 		<Projectile_Length>10.4</Projectile_Length>
 		<Projectile_Texture_Slot>3,0</Projectile_Texture_Slot>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_AV_Turret </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -686,7 +686,7 @@
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> Unit_Projectile_Infantry_Ricochet </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 
 		<Projectile_Damage>1.0</Projectile_Damage>
-		<Damage_Type> Damage_Droideka_Blaster </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<AI_Combat_Power>80</AI_Combat_Power>
 	</Projectile>
 	
@@ -714,7 +714,7 @@
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> Unit_Projectile_Infantry_Ricochet </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 
 		<Projectile_Damage>10.0</Projectile_Damage>
-		<Damage_Type> Damage_Ion_Cannon_Land </Damage_Type>
+		<Damage_Type> DamageL_Ion </Damage_Type>
 		<AI_Combat_Power>80</AI_Combat_Power>
 	</Projectile>
 
@@ -782,7 +782,7 @@
 		<Projectile_Ground_Detonation_SurfaceFX>PROJECTILE</Projectile_Ground_Detonation_SurfaceFX>
 
 		<Projectile_Damage>1.0</Projectile_Damage>
-		<Damage_Type> Damage_Fire </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<AI_Combat_Power>80</AI_Combat_Power>
 	</Projectile>
 
@@ -824,7 +824,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>p_greenglow.alo</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Turbolaser </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<AI_Combat_Power>200</AI_Combat_Power>
 		<Max_Speed>25.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -871,7 +871,7 @@
 		<Projectile_Blast_Area_Damage>5.0</Projectile_Blast_Area_Damage><!-- jdg was 175 -->
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<!-- <Projectile_Blast_Area_Max_Victims>1.0</Projectile_Blast_Area_Max_Victims> //to create a delay/chain effect, only damage one at a time -->
-		<Damage_Type>Damage_Bomb</Damage_Type>
+		<Damage_Type>DamageL_ConcussionWarhead</Damage_Type>
 		<Projectile_Damage_Delay_Secs>.5</Projectile_Damage_Delay_Secs>
 		<Projectile_SFXEvent_Detonate>SFX_Plex_Missile_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
@@ -897,7 +897,7 @@
 		<Projectile_Blast_Area_Damage>10.0</Projectile_Blast_Area_Damage><!-- jdg was 175 -->
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<!-- <Projectile_Blast_Area_Max_Victims>1.0</Projectile_Blast_Area_Max_Victims> //to create a delay/chain effect, only damage one at a time -->
-		<Damage_Type>Damage_Bomb</Damage_Type>
+		<Damage_Type>DamageL_ConcussionWarhead</Damage_Type>
 		<Projectile_Damage_Delay_Secs>.5</Projectile_Damage_Delay_Secs>
 		<Projectile_SFXEvent_Detonate>SFX_Plex_Missile_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
@@ -923,7 +923,7 @@
 		<Projectile_Blast_Area_Damage>20.0</Projectile_Blast_Area_Damage><!-- jdg was 175 -->
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<!-- <Projectile_Blast_Area_Max_Victims>1.0</Projectile_Blast_Area_Max_Victims> //to create a delay/chain effect, only damage one at a time -->
-		<Damage_Type>Damage_Bomb</Damage_Type>
+		<Damage_Type>DamageL_ConcussionWarhead</Damage_Type>
 		<Projectile_Damage_Delay_Secs>.5</Projectile_Damage_Delay_Secs>
 		<Projectile_SFXEvent_Detonate>SFX_Plex_Missile_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
@@ -938,7 +938,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_MISSILE_G.ALO</Land_Model_Name>
 		<Scale_Factor>0.075</Scale_Factor>
-		<Damage_Type> Damage_Flak_Pod </Damage_Type>
+		<Damage_Type> DamageL_ThermalWarhead </Damage_Type>
 		<Max_Speed>10</Max_Speed>
 		<Max_Rate_Of_Turn>1.4</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -968,7 +968,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>P_ROCKET_GREEN.alo</Land_Model_Name>
 		<Scale_Factor>1</Scale_Factor>
-		<Damage_Type> Damage_PLEX </Damage_Type>
+		<Damage_Type> DamageL_ThermalWarhead </Damage_Type>
 		<Max_Speed>9</Max_Speed>
 		<Max_Rate_Of_Turn>1.4</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1074,7 +1074,7 @@
 	<!-- Split off from Proton Torpedo to avoid 5x damage vs. cap ships, etc. -->
 	<Projectile Name="Proj_Ship_Proton_Torpedo_Light">
 		<Variant_Of_Existing_Type>Proj_Ship_Proton_Torpedo</Variant_Of_Existing_Type>
-		<Damage_Type> Damage_Proton_Torp_Light </Damage_Type>
+		<Damage_Type> DamageS_Torpedo </Damage_Type>
 	</Projectile>
 	<Projectile Name="Proj_Ship_Proton_Torpedo_Warlord">
 		<Variant_Of_Existing_Type>Proj_Ship_Proton_Torpedo</Variant_Of_Existing_Type>
@@ -1089,7 +1089,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Space_Model_Name>p_rocketsmall.alo</Space_Model_Name>
 		<Scale_Factor>.075</Scale_Factor>
-		<Damage_Type> Damage_Con_Missile </Damage_Type>
+		<Damage_Type> DamageS_Missile </Damage_Type>
 		<Max_Speed>20.0</Max_Speed>
 		<Max_Rate_Of_Turn>4.25</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1114,7 +1114,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Space_Model_Name>p_rocket.alo</Space_Model_Name>
 		<Scale_Factor>.15</Scale_Factor>
-		<Damage_Type> Damage_A_Con_Missile </Damage_Type>
+		<Damage_Type> DamageS_HeavyMissile </Damage_Type>
 		<Max_Speed>15.0</Max_Speed>
 		<Max_Rate_Of_Turn>4.5</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1139,7 +1139,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Space_Model_Name>p_rocket_green.alo</Space_Model_Name>
 		<Scale_Factor>.075</Scale_Factor>
-		<Damage_Type> Damage_Con_Missile </Damage_Type>
+		<Damage_Type> DamageS_Missile </Damage_Type>
 		<Max_Speed>20.0</Max_Speed>
 		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1222,7 +1222,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Space_Model_Name>W_concussion_missile.alo</Space_Model_Name>
 		<Scale_Factor>0.075</Scale_Factor>
-		<Damage_Type> Damage_Diamond_Missile </Damage_Type>
+		<Damage_Type> DamageS_HeavyMissile </Damage_Type>
 		<Max_Speed>7.5</Max_Speed>
 		<Max_Rate_Of_Turn>30</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1267,7 +1267,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_concussion_missile.alo</Land_Model_Name>
 		<Scale_Factor>0.05</Scale_Factor>
-		<Damage_Type> Damage_PLEX </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>9.0</Max_Speed>
 		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1301,7 +1301,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_concussion_missile.alo</Land_Model_Name>
 		<Scale_Factor>0.02</Scale_Factor>
-		<Damage_Type> Damage_PLEX </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>12.0</Max_Speed>
 		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1334,7 +1334,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Sniper </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Max_Speed>25</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1359,7 +1359,7 @@
 	<Projectile Name="Proj_Lightsaber">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
-		<Damage_Type> Damage_Lightsaber </Damage_Type>
+		<Damage_Type> DamageL_Lightsaber </Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Speed>11.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -1411,7 +1411,7 @@
 		<Projectile_Max_Flight_Distance>250.0</Projectile_Max_Flight_Distance>
 		<Projectile_Damage>13.0</Projectile_Damage>
 		<Projectile_Stun_Radius>23</Projectile_Stun_Radius>
-		<Damage_Type> Damage_Lightsaber </Damage_Type>
+		<Damage_Type> DamageL_Lightsaber </Damage_Type>
 		<Projectile_SFXEvent_Detonate>Unit_Light_Saber_Hit</Projectile_SFXEvent_Detonate>
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> Unit_Light_Saber_Hit </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 	</Projectile>
@@ -1423,7 +1423,7 @@
 	<Projectile Name="Proj_Force_Pike">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
-		<Damage_Type> Damage_Force_Pike </Damage_Type>
+		<Damage_Type> DamageL_Lightsaber </Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Speed>15.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -1660,7 +1660,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Wookiee </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Max_Speed>11.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1684,7 +1684,7 @@
 	<Projectile Name="Proj_Hand_Jawa_Ion_Blaster">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Jawa </Damage_Type>
+		<Damage_Type> DamageL_Ion </Damage_Type>
 		<Max_Speed>11.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1712,7 +1712,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_EWOK_ROCK.ALO</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<Max_Speed>7.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1739,7 +1739,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_GUNGAN_PROJECTILE.ALO</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_StickyBomb </Damage_Type>
+		<Damage_Type> DamageL_ConcussionWarhead </Damage_Type>
 		<Max_Speed>7.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1774,7 +1774,7 @@
 		<Projectile_Width>0.3</Projectile_Width>
 		<Projectile_Length>3.0</Projectile_Length>
 		<Projectile_Texture_Slot>0,0</Projectile_Texture_Slot>
-		<Damage_Type> Damage_Sniper </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Speed>11.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -1799,7 +1799,7 @@
 	<Projectile Name="Proj_Geonosian_Sonic_Blaster">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type>Damage_Sonic_Blaster</Damage_Type>
+		<Damage_Type>DamageL_ConcussionWarhead</Damage_Type>
 		<Max_Speed>10.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1826,7 +1826,7 @@
 	<Projectile Name="Proj_Pyngani_Carbonite_Gun">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<Max_Speed>8.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1862,7 +1862,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Cannon </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1887,7 +1887,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Cannon </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -1938,13 +1938,13 @@
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> Unit_Projectile_Infantry_Ricochet </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 
 		<Projectile_Damage>3.0</Projectile_Damage>
-		<Damage_Type> Damage_Blaster_T2B </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<AI_Combat_Power>80</AI_Combat_Power>
 	</Projectile>
 	<Projectile Name="Proj_ATST_Blaster_Cannon_Red">
 		<!-- used by AT-ST -->
 		<Variant_Of_Existing_Type>Proj_Generic_Small_Red</Variant_Of_Existing_Type>
-		<Damage_Type> Damage_ATST </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Projectile_Blast_Area_Range>25.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>4.0</Projectile_Blast_Area_Damage>
 		<Projectile_Damage>5.0</Projectile_Damage>
@@ -1954,7 +1954,7 @@
 	<Projectile Name="Proj_ATPT_Blaster_Cannon_Green">
 		<!-- used by AT-ST -->
 		<Variant_Of_Existing_Type>Proj_Blaster_Cannon_Green</Variant_Of_Existing_Type>
-		<Damage_Type> Damage_ATST </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Projectile_Blast_Area_Range>25.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>4.0</Projectile_Blast_Area_Damage>
 		<Projectile_Damage>5.0</Projectile_Damage>
@@ -1965,7 +1965,7 @@
 		<!-- used by AT-ST -->
 		<Variant_Of_Existing_Type>Proj_Generic_Small_Red</Variant_Of_Existing_Type>
 		<Projectile_Width>0.8</Projectile_Width>
-		<Damage_Type> Damage_ATST </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Projectile_Length>2.0</Projectile_Length>
 		<Projectile_Blast_Area_Range>35.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>8.0</Projectile_Blast_Area_Damage>
@@ -1980,7 +1980,7 @@
 		<Land_Model_Name>P_FLAKPROJ.ALO</Land_Model_Name>
 		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
 		<Scale_Factor>2.0</Scale_Factor>
-		<Damage_Type> Damage_Flak_Pod </Damage_Type>
+		<Damage_Type> DamageL_FLAK </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2009,7 +2009,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_G.ALO</Land_Model_Name>
 		<Scale_Factor>0.175</Scale_Factor>
-		<Damage_Type> Damage_Flak_Pod </Damage_Type>
+		<Damage_Type> DamageL_FLAK </Damage_Type>
 		<Max_Speed>50</Max_Speed>
 		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2034,7 +2034,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_G.ALO</Land_Model_Name>
 		<Scale_Factor>0.175</Scale_Factor>
-		<Damage_Type> Damage_Flak_Pod </Damage_Type>
+		<Damage_Type> DamageL_FLAK </Damage_Type>
 		<Max_Speed>50.0</Max_Speed>
 		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2061,7 +2061,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_AI_Turret </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Max_Speed>25</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2086,7 +2086,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_TIE_Mauler </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2112,7 +2112,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_AI_Turret </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Projectile_Damage>4.0</Projectile_Damage>
 		<Max_Speed>25</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -2137,7 +2137,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_G.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Laser_GRND </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>40.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2165,7 +2165,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_G.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Laser_GRND </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>40.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2191,7 +2191,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_Green_G.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Laser_GRND </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>40.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2214,7 +2214,7 @@
 	</Projectile>
 	<Projectile Name="Proj_Ground_Laser_Cannon_Red_DT3">
 		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
-		<Damage_Type> Damage_2M_Repulsortank </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 	</Projectile>
 	<Projectile Name="Proj_Veers_AT_AT_Max_Power_Laser_Red">
 		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
@@ -2229,34 +2229,34 @@
 	</Projectile>
 	<Projectile Name="Proj_Snowspeeder_Laser_Cannon">
 		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
-		<Damage_Type>Damage_Airspeeder</Damage_Type>
+		<Damage_Type>DamageL_AntiInfantryBlaster</Damage_Type>
 		<Projectile_Damage>15.0</Projectile_Damage>
 	</Projectile>
 	<Projectile Name="Proj_Ground_Laser_Cannon_Red_T4B">
 		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
-		<Damage_Type> Damage_Laser_T4B </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 	</Projectile>
 		<Projectile Name="Proj_Ground_Laser_Cannon_Red_Xwing">
 		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
-		<Damage_Type>Damage_Turbo_GRND</Damage_Type>
+		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
 		<Projectile_Damage>40.0</Projectile_Damage>
 	</Projectile>
 			<Projectile Name="Proj_Ground_Laser_Cannon_Green_TIE">
 		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
 		<Land_Model_Name>PROJ_LASER_GREEN_G.ALO</Land_Model_Name>
-		<Damage_Type>Damage_Turbo_GRND</Damage_Type>
+		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
 		<Projectile_Damage>40.0</Projectile_Damage>
 	</Projectile>
 	<Projectile Name="Proj_Ground_Laser_Cannon_Red_ATAT">
 		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
-		<Damage_Type>Damage_ATAT</Damage_Type>
+		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
 		<Projectile_Object_Detonation_Particle>Large_LaserHit_Land</Projectile_Object_Detonation_Particle>
 		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_LaserHit_Land</Projectile_Object_Armor_Reduced_Detonation_Particle>
 		<Projectile_Damage>25.0</Projectile_Damage>
 	</Projectile>
 		<Projectile Name="Proj_Ground_Laser_Cannon_Red_Juggernaut">
 		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
-		<Damage_Type>Damage_ATAT</Damage_Type>
+		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
 		<Projectile_Damage>25.0</Projectile_Damage>
 	</Projectile>
 	<Projectile Name="Proj_Ground_AV_Turret_Laser_Green">
@@ -2264,7 +2264,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_G.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_AV_Turret </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2291,7 +2291,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_BLUE_G.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_AV_Turret </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2318,7 +2318,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_G.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_AV_Turret </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2348,7 +2348,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>w_proton_projectile.alo</Land_Model_Name>
 		<Scale_Factor>0.5</Scale_Factor>
-		<Damage_Type> Damage_Proton_GRND </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>8.0</Max_Speed>
 		<Max_Rate_Of_Turn>0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2393,7 +2393,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_concussion_missile.alo</Land_Model_Name>
 		<Scale_Factor>0.075</Scale_Factor>
-		<Damage_Type> Damage_Con_Missile_T4B </Damage_Type>
+		<Damage_Type> DamageS_Missile </Damage_Type>
 		<Max_Speed>12</Max_Speed>
 		<Max_Rate_Of_Turn>30</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2425,7 +2425,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_concussion_missile.alo</Land_Model_Name>
 		<Scale_Factor>0.075</Scale_Factor>
-		<Damage_Type> Damage_Con_Missile_T4B </Damage_Type>
+		<Damage_Type> DamageL_ConcussionWarhead </Damage_Type>
 		<Max_Speed>6.5</Max_Speed>
 		<Max_Rate_Of_Turn>30</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2457,7 +2457,7 @@
 		<Land_Model_Name>p_artyshell.ALO</Land_Model_Name>
 		<!-- This should be blue -->
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_SPMAT_Grenade </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>55.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2502,7 +2502,7 @@
 		<Land_Model_Name>p_mortarfire.ALO</Land_Model_Name>
 		<!-- This should be blue -->
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_SPMAT_Grenade </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>55.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2535,7 +2535,7 @@
 		<Land_Model_Name>p_mortarfire.ALO</Land_Model_Name>
 		<!-- This should be blue -->
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_SPMAT_Grenade </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>55.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2568,7 +2568,7 @@
 		<Land_Model_Name>p_artyshell.ALO</Land_Model_Name>
 		<!-- This should be blue -->
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_SPMAT_Grenade </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>30.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2600,7 +2600,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>p_hyper_gun_slug.ALO</Land_Model_Name>
 		<Space_Model_Name>p_hyper_gun_slug.ALO</Space_Model_Name>
-		<Damage_Type> Damage_Hyper_Gun </Damage_Type>
+		<Damage_Type> DamageS_HypervelocityGun </Damage_Type>
 		<Projectile_Damages_Random_Hard_Points>yes</Projectile_Damages_Random_Hard_Points>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Speed>70.0</Max_Speed>
@@ -2631,7 +2631,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>P_ion_cannon00.alo</Land_Model_Name>
 		<Space_Model_Name>P_ion_cannon00.alo</Space_Model_Name>
-		<Damage_Type> Damage_Ion_Planet </Damage_Type>
+		<Damage_Type> DamageS_GTSIon </Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Speed>400.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -2668,7 +2668,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_TURBO_GREEN.ALO</Land_Model_Name>
 		<Scale_Factor>0.4</Scale_Factor>
-		<Damage_Type> Damage_Turbo_GRND </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>45.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2694,7 +2694,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_TURBO_GREEN.ALO</Land_Model_Name>
 		<Scale_Factor>0.4</Scale_Factor>
-		<Damage_Type> Damage_Turbo_GRND </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>45.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2719,7 +2719,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>p_turbolaser_burst_med00.ALO</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Turbo_GRND </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>25.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -2743,14 +2743,14 @@
 	</Projectile>
 	<Projectile Name="Proj_Laser_Cannon_Garm">
 		<Variant_Of_Existing_Type>Proj_Ground_Turbolaser_Red</Variant_Of_Existing_Type>
-		<Damage_Type>Damage_ATAT</Damage_Type>
+		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
 		<Projectile_Damage>45.0</Projectile_Damage>
 	</Projectile>
 	<Projectile Name="Magnepulse_Blob">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>p_magnepulse_shot.alo</Land_Model_Name>
 		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
-		<Damage_Type> Damage_Default </Damage_Type>
+		<Damage_Type> DamageL_ThermalWarhead </Damage_Type>
 		<Scale_Factor>3.0</Scale_Factor>
 		<Max_Speed>40</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -2788,7 +2788,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>p_magnepulse_shot.alo</Land_Model_Name>
 		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
-		<Damage_Type> Damage_Default </Damage_Type>
+		<Damage_Type> DamageL_ThermalWarhead </Damage_Type>
 		<Scale_Factor>3.0</Scale_Factor>
 		<Max_Speed>40</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -2825,7 +2825,7 @@
 		<Land_Model_Name>P_PROTONBOMB.ALO</Land_Model_Name>
 		<Scale_Factor>2.0</Scale_Factor>
 		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
-		<Damage_Type> Damage_Bomb </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>4.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED, REVEAL</Behavior>
@@ -2857,7 +2857,7 @@
 		<Land_Model_Name>P_PROTONBOMB.ALO</Land_Model_Name>
 		<Scale_Factor>5.0</Scale_Factor>
 		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
-		<Damage_Type> Damage_Bomb </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>2.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED, REVEAL</Behavior>
@@ -2889,7 +2889,7 @@
 		<Land_Model_Name>w_thermal_detonator_underworld.alo</Land_Model_Name>
 		<Scale_Factor>5.0</Scale_Factor>
 		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
-		<Damage_Type> Damage_Bomb </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>4.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED, REVEAL</Behavior>
@@ -2949,7 +2949,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>w_invisible.alo</Land_Model_Name>
 		<Scale_Factor>5.0</Scale_Factor>
-		<Damage_Type> Damage_Bomb </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>4.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior> PROJECTILE </Behavior>
@@ -2976,7 +2976,7 @@
 		<Land_Model_Name>p_protonbomb_white.alo</Land_Model_Name>
 		<Scale_Factor>5.0</Scale_Factor>
 		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
-		<Damage_Type> Damage_Bomb </Damage_Type>
+		<Damage_Type> DamageL_ProtonWarhead </Damage_Type>
 		<Max_Speed>4.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED, REVEAL</Behavior>
@@ -3011,7 +3011,7 @@
 		<Space_Model_Name>p_seismic_bomb00.ALO</Space_Model_Name>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
 		<Max_Speed>0.0</Max_Speed>
-		<Damage_Type> Damage_StickyBomb </Damage_Type>
+		<Damage_Type> DamageS_SeismicCharge </Damage_Type>
 		<Scale_Factor>3.0</Scale_Factor>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, BOMB</Behavior>
@@ -3053,7 +3053,7 @@
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<!-- <Projectile_Blast_Area_Max_Victims>1.0</Projectile_Blast_Area_Max_Victims> //to create a delay/chain effect, only damage one at a time -->
 		<Projectile_Blast_Area_Immune_Faction> Rebel </Projectile_Blast_Area_Immune_Faction>
-		<Damage_Type>Damage_Bomb</Damage_Type>
+		<Damage_Type>DamageS_HeavyTorpedo</Damage_Type>
 		<Projectile_Damage_Delay_Secs>.5</Projectile_Damage_Delay_Secs>
 		<Projectile_SFXEvent_Detonate>SFX_Plex_Missile_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
@@ -3077,13 +3077,13 @@
 		<Space_Model_Name>w_smallbomb.ALO</Space_Model_Name>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
 		<Max_Speed>0.0</Max_Speed>
-		<Damage_Type> Damage_StickyBomb </Damage_Type>
+		<Damage_Type> DamageL_ConcussionWarhead </Damage_Type>
 		<Scale_Factor>2.0</Scale_Factor>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, BOMB</Behavior>
 		<Projectile_Category>STATIC_BOMB</Projectile_Category>
-		<Projectile_Blast_Area_Range>40.0</Projectile_Blast_Area_Range>
-		<Projectile_Blast_Area_Damage>20.0</Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range>80.0</Projectile_Blast_Area_Range>
+		<Projectile_Blast_Area_Damage>75.0</Projectile_Blast_Area_Damage>
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<Projectile_Grenade_Sticks_On_Collision>no</Projectile_Grenade_Sticks_On_Collision>
 		<Projectile_Damage>75.0</Projectile_Damage>
@@ -3117,7 +3117,7 @@
 		<Projectile_Grenade_Gravity>1.0</Projectile_Grenade_Gravity>
 		<Projectile_Grenade_Gravity_Lob_Mod>1.0</Projectile_Grenade_Gravity_Lob_Mod>
 		<Projectile_Grenade_Can_Lob_Slower>yes</Projectile_Grenade_Can_Lob_Slower>
-		<Damage_Type>Damage_StickyBomb</Damage_Type>
+		<Damage_Type>DamageL_ThermalWarhead</Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, BOMB</Behavior>
@@ -3155,7 +3155,7 @@
 		<Projectile_Grenade_Gravity>1.0</Projectile_Grenade_Gravity>
 		<Projectile_Grenade_Gravity_Lob_Mod>1.0</Projectile_Grenade_Gravity_Lob_Mod>
 		<Projectile_Grenade_Can_Lob_Slower>yes</Projectile_Grenade_Can_Lob_Slower>
-		<Damage_Type>Damage_StickyBomb</Damage_Type>
+		<Damage_Type>DamageL_Ion</Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, BOMB</Behavior>
@@ -3199,7 +3199,7 @@
 
 	<Projectile Name="Proj_Mara_Jade_Sticky_Bomb">
 		<Variant_Of_Existing_Type>Proj_Sticky_Bomb</Variant_Of_Existing_Type>
-		<Damage_Type>Damage_Hero_StickyBomb</Damage_Type>
+		<Damage_Type>DamageL_ProtonWarhead</Damage_Type>
 		<Projectile_Blast_Area_Range>100.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>300.0</Projectile_Blast_Area_Damage>
 		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
@@ -3208,7 +3208,7 @@
 	</Projectile>
 	<Projectile Name="Proj_Kyle_Katarn_Sticky_Bomb">
 		<Variant_Of_Existing_Type>Proj_Sticky_Bomb</Variant_Of_Existing_Type>
-		<Damage_Type>Damage_Hero_StickyBomb</Damage_Type>
+		<Damage_Type>DamageL_ProtonWarhead</Damage_Type>
 		<Projectile_Blast_Area_Range>100.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>300.0</Projectile_Blast_Area_Damage>
 		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
@@ -3242,7 +3242,7 @@
 		<Variant_Of_Existing_Type>Proj_Lightsaber</Variant_Of_Existing_Type>
 		<Projectile_Max_Flight_Distance>100.0</Projectile_Max_Flight_Distance>
 		<Projectile_Damage>400.0</Projectile_Damage>
-		<Damage_Type>Damage_Rancor</Damage_Type>
+		<Damage_Type>DamageL_MassDriver</Damage_Type>
 		<Internal_Damage_Type> Damage_Force_Whirlwind </Internal_Damage_Type>
 		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
 		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
@@ -3259,7 +3259,7 @@
 		<Variant_Of_Existing_Type>Proj_Lightsaber</Variant_Of_Existing_Type>
 		<Projectile_Max_Flight_Distance>50.0</Projectile_Max_Flight_Distance>
 		<Projectile_Damage>70.0</Projectile_Damage>
-		<Damage_Type>Damage_Wampa</Damage_Type>
+		<Damage_Type>DamageL_MassDriver</Damage_Type>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
 		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
 		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
@@ -3277,7 +3277,7 @@
 		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
 		<Max_Speed>15.0</Max_Speed>
-		<Damage_Type>Damage_BugBite</Damage_Type>
+		<Damage_Type>DamageL_InfantryBlaster</Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -3314,7 +3314,7 @@
 		<Projectile_Blast_Area_Range>125.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>150.0</Projectile_Blast_Area_Damage>
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
-		<Damage_Type>Damage_Self_Destruct</Damage_Type>
+		<Damage_Type>DamageL_ThermalWarhead</Damage_Type>
 		<Projectile_SFXEvent_Detonate>SFX_Plex_Missile_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
 		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
@@ -3399,7 +3399,7 @@
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
 		<Projectile_Blast_Area_Dropoff_Tiers>5</Projectile_Blast_Area_Dropoff_Tiers>
-		<Damage_Type>Damage_StarBase_Self_Destruct</Damage_Type>
+		<Damage_Type>DamageL_ThermalWarhead</Damage_Type>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
 		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
 		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
@@ -3479,7 +3479,7 @@
 	<Projectile Name="Proj_Hand_Disruptor_Cannon">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Disruptor_Hand </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Max_Speed>11.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -3510,7 +3510,7 @@
 		<Projectile_Length>3.0</Projectile_Length>
 		<Projectile_Texture_Slot>0,0</Projectile_Texture_Slot>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Max_Speed>11.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -3537,7 +3537,7 @@
 	<!-- Used by IG-88 -->
 	<Projectile Name="Proj_Hand_Pulse_Cannon">
 		<Text_ID>TEXT_NONE</Text_ID>
-		<Damage_Type> Damage_Pulse_Cannon </Damage_Type>
+		<Damage_Type> DamageL_ThermalWarhead </Damage_Type>
 		<Max_Speed>20.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -3566,7 +3566,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_concussion_missile.alo</Land_Model_Name>
 		<Scale_Factor>0.3</Scale_Factor>
-		<Damage_Type> Damage_PLEX </Damage_Type>
+		<Damage_Type> DamageL_ConcussionWarhead </Damage_Type>
 		<Max_Speed>9.0</Max_Speed>
 		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -3623,7 +3623,7 @@
 		<Projectile_Texture_Slot>2,0</Projectile_Texture_Slot>
 		<Projectile_Laser_Color>104,181,230,255</Projectile_Laser_Color>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Ion_Cannon_Land </Damage_Type>
+		<Damage_Type> DamageL_Ion </Damage_Type>
 		<Max_Speed>25.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -3651,7 +3651,7 @@
 		<Projectile_Texture_Slot>2,0</Projectile_Texture_Slot>
 		<Projectile_Laser_Color>238,71,54,255</Projectile_Laser_Color>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Droideka_Blaster </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Max_Speed>11.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -3802,7 +3802,7 @@
 	<Projectile Name="Proj_Juggernaut_Turret_Gun">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_LASER_SMALLG.ALO</Land_Model_Name>
-		<Damage_Type> Damage_Juggernaut_Turret </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Projectile_Custom_Render>1</Projectile_Custom_Render>
 		<Projectile_Width>0.3</Projectile_Width>
 		<Projectile_Length>3.0</Projectile_Length>
@@ -3883,7 +3883,7 @@
 		<Space_Model_Name>p_kraytdestoyer_presuperblast.alo</Space_Model_Name>
 		<Land_Model_Name>p_kraytdestoyer_presuperblast.alo</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Ion_Planet </Damage_Type>
+		<Damage_Type> DamageL_Ion </Damage_Type>
 		<Max_Speed>20.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED, REVEAL</Behavior>
@@ -3938,7 +3938,7 @@
 		<Space_Model_Name>p_kraytdestoyer_superblast.alo</Space_Model_Name>
 		<Land_Model_Name>p_kraytdestoyer_superblast.alo</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Damage_Type> DamageL_ThermalWarhead </Damage_Type>
 		<Max_Speed>16.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -3973,7 +3973,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>P_BLUEGLOW2_SINGLESHOT.ALO</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_IonCannon_LRG </Damage_Type>
+		<Damage_Type> DamageL_Ion </Damage_Type>
 		<AI_Combat_Power>200</AI_Combat_Power>
 		<Max_Speed>25.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -4021,7 +4021,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_TURBO_GREEN.alo</Land_Model_Name>
 		<Scale_Factor>1.1</Scale_Factor>
-		<Damage_Type> Damage_Turbolaser </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<AI_Combat_Power>200</AI_Combat_Power>
 		<Max_Speed>80.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -4060,7 +4060,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_TURBO_BLUE.alo</Land_Model_Name>
 		<Scale_Factor>1.1</Scale_Factor>
-		<Damage_Type> Damage_Turbolaser </Damage_Type>
+		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<AI_Combat_Power>200</AI_Combat_Power>
 		<Max_Speed>80.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -4095,7 +4095,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>p_proton_Vengance_small.alo</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Mass_Driver_Turret </Damage_Type>
+		<Damage_Type> DamageL_MassDriver </Damage_Type>
 		<Max_Speed>20.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -4123,7 +4123,7 @@
 		<Projectile_Width>0.3</Projectile_Width>
 		<Projectile_Length>3.0</Projectile_Length>
 		<Projectile_Texture_Slot>0,0</Projectile_Texture_Slot>
-		<Damage_Type> Damage_AI_Turret </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Projectile_Damage>1.0</Projectile_Damage>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Speed>11.0</Max_Speed>
@@ -4219,7 +4219,7 @@
 		<!-- Ask artists to adjust detonation particle to be the same size as area blast range for correct visual effect -->
 		<Projectile_Blast_Area_Range>200.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>300.0</Projectile_Blast_Area_Damage>
-		<Damage_Type>Damage_Self_Destruct</Damage_Type>
+		<Damage_Type>DamageL_MassDriver</Damage_Type>
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<Projectile_SFXEvent_Detonate>SFX_Plex_Missile_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
@@ -4243,7 +4243,7 @@
 		<!-- Ask artists to adjust detonation particle to be the same size as area blast range for correct visual effect -->
 		<Projectile_Blast_Area_Range>700.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>1500.0</Projectile_Blast_Area_Damage>
-		<Damage_Type>Damage_StarBase_Self_Destruct</Damage_Type>
+		<Damage_Type>DamageS_HeavyTorpedo</Damage_Type>
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<Projectile_SFXEvent_Detonate>SFX_Plex_Missile_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
@@ -4267,7 +4267,7 @@
 		<!-- Ask artists to adjust detonation particle to be the same size as area blast range for correct visual effect -->
 		<Projectile_Blast_Area_Range>1000.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>12000.0</Projectile_Blast_Area_Damage>
-		<Damage_Type>Damage_StarBase_Self_Destruct</Damage_Type>
+		<Damage_Type>DamageS_HeavyTorpedo</Damage_Type>
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<Projectile_SFXEvent_Detonate>SFX_Plex_Missile_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
@@ -4305,7 +4305,7 @@
 	<Projectile Name="Proj_Silri_Lightsaber_Whip">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
-		<Damage_Type> Damage_Lightsaber </Damage_Type>
+		<Damage_Type> DamageL_Lightsaber </Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Speed>11.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -4327,7 +4327,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Space_Model_Name>p_proton_Vengance.ALO</Space_Model_Name>
 		<Scale_Factor>3.0</Scale_Factor>
-		<Damage_Type> Damage_Mass_Driver_Space </Damage_Type>
+		<Damage_Type> DamageS_HypervelocityGun </Damage_Type>
 		<Max_Speed>70.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -4350,7 +4350,7 @@
 	<Projectile Name="Proj_Mobile_Pulse_Cannon_Blast">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>P_mz8Shot.alo</Land_Model_Name>
-		<Damage_Type> Damage_Pulse_Cannon_Tank </Damage_Type>
+		<Damage_Type> DamageL_MassDriver </Damage_Type>
 		<Max_Speed>11.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -4375,7 +4375,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Space_Model_Name>p_proton_Vengance.ALO</Space_Model_Name>
 		<Scale_Factor>3.0</Scale_Factor>
-		<Damage_Type> Damage_Mass_Driver_Space </Damage_Type>
+		<Damage_Type> DamageS_HypervelocityGun </Damage_Type>
 		<Max_Speed>70.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -4406,7 +4406,7 @@
 		<Projectile_Damage>0.0</Projectile_Damage>
 		<Projectile_Blast_Area_Range>1200.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>100.0</Projectile_Blast_Area_Damage>
-		<Damage_Type>Damage_StarBase_Self_Destruct</Damage_Type>
+		<Damage_Type>DamageS_HypervelocityGun</Damage_Type>
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
 		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
@@ -4425,7 +4425,7 @@
 	<Projectile Name="Proj_Plasma_Space_Turret_Blast">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Space_Model_Name>P_mz8Shot.alo</Space_Model_Name>
-		<Damage_Type> Damage_Pulse_Cannon_Tank </Damage_Type>
+		<Damage_Type> DamageS_Turbolaser </Damage_Type>
 		<Max_Speed>15.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.2</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -4450,7 +4450,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Space_Model_Name>W_concussion_missile.alo</Space_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Diamond_Missile </Damage_Type>
+		<Damage_Type> DamageS_HeavyMissile </Damage_Type>
 		<Max_Speed>20</Max_Speed>
 		<Max_Rate_Of_Turn>360</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -4486,7 +4486,7 @@
 		<Scale_Factor>10.0</Scale_Factor>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
 		<Max_Speed>12.0</Max_Speed>
-		<Damage_Type>Damage_Bomb</Damage_Type>
+		<Damage_Type>DamageS_HeavyTorpedo</Damage_Type>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, BOMB</Behavior>
 		<Projectile_Category>CLUSTER_BOMB</Projectile_Category>
@@ -4518,8 +4518,8 @@
 		<Projectile_Grenade_Gravity>1.0</Projectile_Grenade_Gravity>
 		<Projectile_Grenade_Gravity_Lob_Mod>1.0</Projectile_Grenade_Gravity_Lob_Mod>
 		<Projectile_Grenade_Can_Lob_Slower>yes</Projectile_Grenade_Can_Lob_Slower>
-		<Damage_Type>Damage_Bomb</Damage_Type>
-		<Internal_Damage_Type>Damage_Remote_Bomb</Internal_Damage_Type>
+		<Damage_Type>DamageL_ThermalWarhead</Damage_Type>
+		<Internal_Damage_Type>DamageL_ThermalWarhead</Internal_Damage_Type>
 		<Scale_Factor>2.0</Scale_Factor>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, BOMB, REVEAL, DAMAGE_TRACKING, HIDE_WHEN_FOGGED, PROXIMITY_MINE, SELECTABLE</Behavior>
@@ -4563,7 +4563,7 @@
 	<Projectile Name="Proj_Urai_Cortosis_Blades">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
-		<Damage_Type> Damage_Lightsaber </Damage_Type>
+		<Damage_Type> DamageL_Lightsaber </Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Speed>12.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -4624,7 +4624,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_grenade.ALO</Land_Model_Name>
 		<Scale_Factor>1.2</Scale_Factor>
-		<Damage_Type> Damage_Con_Grenade </Damage_Type>
+		<Damage_Type> DamageL_ConcussionWarhead </Damage_Type>
 		<Max_Speed>10.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -4657,7 +4657,7 @@
 		<Max_Speed>7.0</Max_Speed>
 		<Max_Rate_Of_Turn>30</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
-		<Damage_Type> Damage_Con_Missile_GRND </Damage_Type>
+		<Damage_Type> DamageL_ConcussionWarhead </Damage_Type>
 		<Projectile_Category>ROCKET</Projectile_Category>
 		<Projectile_Rocket_Curve_Distance>70</Projectile_Rocket_Curve_Distance>
 		<Projectile_Rocket_Curve_Offset>15</Projectile_Rocket_Curve_Offset>
@@ -4785,7 +4785,7 @@
 	<Projectile Name="Proj_Indig_Nightsister_Lightning">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
-		<Damage_Type> Damage_Force_Pike </Damage_Type>
+		<Damage_Type> DamageL_Lightsaber </Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Speed>25.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -4811,7 +4811,7 @@
 		<Projectile_Length>3.0</Projectile_Length>
 		<Projectile_Texture_Slot>0,0</Projectile_Texture_Slot>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Max_Speed>11.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -4890,7 +4890,7 @@
 	<Projectile Name="Proj_Tyber_Zann_Blaster_Shotgun">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
-		<Damage_Type> Damage_Tyber_Shotgun </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Speed>20.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -4915,7 +4915,7 @@
 	<Projectile Name="Proj_Shev_Blaster_Shotgun">
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
-		<Damage_Type> Damage_Tyber_Shotgun </Damage_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Scale_Factor>1.0</Scale_Factor>
 		<Max_Speed>20.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
@@ -4944,7 +4944,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.1</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<Max_Speed>17</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -4971,7 +4971,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>p_proton_Vengance_small.alo</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Mass_Driver_Turret </Damage_Type>
+		<Damage_Type> DamageL_MassDriver </Damage_Type>
 		<Max_Speed>20.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -4996,7 +4996,7 @@
 		<Space_Model_Name>p_ui_spacestation.alo</Space_Model_Name>
 		<Land_Model_Name>p_ui_spacestation.alo</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Damage_Type> DamageS_HypervelocityGun </Damage_Type>
 		<Max_Speed>70.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -5090,7 +5090,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_concussion_missile.alo</Land_Model_Name>
 		<Scale_Factor>0.075</Scale_Factor>
-		<Damage_Type> Damage_MDU_Rocket </Damage_Type>
+		<Damage_Type> DamageS_HypervelocityGun </Damage_Type>
 		<Max_Speed>7.0</Max_Speed>
 		<Max_Rate_Of_Turn>8</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -5121,7 +5121,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_grenade.ALO</Land_Model_Name>
 		<Scale_Factor>1.2</Scale_Factor>
-		<Damage_Type> Damage_MDU_Grenade </Damage_Type>
+		<Damage_Type> DamageL_ConcussionWarhead </Damage_Type>
 		<Max_Speed>11.5</Max_Speed>
 		<Max_Rate_Of_Turn>0.01</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -5152,7 +5152,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Space_Model_Name>W_PROTONTORP.ALO</Space_Model_Name>
 		<Scale_Factor>0.5</Scale_Factor>
-		<Damage_Type>Damage_Proton_Torp_Light</Damage_Type>
+		<Damage_Type>DamageS_HeavyTorpedo</Damage_Type>
 		<Max_Speed>14.0</Max_Speed>
 		<Max_Rate_Of_Turn>6.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -5184,7 +5184,7 @@
 		<Space_Model_Name>W_LASER_INVISIBLE.ALO</Space_Model_Name>
 		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Damage_Type> DamageL_Ion </Damage_Type>
 		<Max_Speed>16.0</Max_Speed>
 		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -5213,7 +5213,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.1</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<Max_Speed>17</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -5245,7 +5245,7 @@
 			<Text_ID>TEXT_NONE</Text_ID>
 			<Land_Model_Name>PROJ_LASER_RED_INF.ALO</Land_Model_Name>
 			<Scale_Factor>0.1</Scale_Factor>
-			<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+			<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 			<Max_Speed>17</Max_Speed>
 			<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 			<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -5271,7 +5271,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<Max_Speed>17</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -5296,7 +5296,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>W_Invisible.ALO</Land_Model_Name>
 		<Scale_Factor>1.0</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<Max_Speed>17</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -5318,7 +5318,7 @@
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_INF.ALO</Land_Model_Name>
 		<Scale_Factor>0.2</Scale_Factor>
-		<Damage_Type> Damage_Blaster_Hand </Damage_Type>
+		<Damage_Type> DamageL_InfantryBlaster </Damage_Type>
 		<Max_Speed>17</Max_Speed>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
@@ -5345,7 +5345,7 @@
 		<Space_Model_Name>p_seismic_bomb00.ALO</Space_Model_Name>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
 		<Max_Speed>0.0</Max_Speed>
-		<Damage_Type> Damage_StickyBomb </Damage_Type>
+		<Damage_Type> DamageS_GTSIon </Damage_Type>
 		<Scale_Factor>3.0</Scale_Factor>
 		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
 		<Behavior>PROJECTILE, BOMB</Behavior>

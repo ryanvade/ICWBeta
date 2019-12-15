@@ -414,7 +414,7 @@
 				<Activation_Min_Range>0</Activation_Min_Range>
 	            <Activation_Max_Range>20000</Activation_Max_Range>
 
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				
 				<Damage_Per_Frame>400</Damage_Per_Frame>
 				<Fire_Frame>106</Fire_Frame>
 				<Beam_Texture_Name>tractor_beam01.tga</Beam_Texture_Name>
@@ -679,7 +679,7 @@
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
 			
-			<Tractor_Beam_Attack_Ability Name="WD_Tractor_Beam_Attack_Ability">
+			<!-- <Tractor_Beam_Attack_Ability Name="WD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
@@ -687,10 +687,10 @@
 				<Activation_Min_Range>2</Activation_Min_Range>
 	            <Activation_Max_Range>1500</Activation_Max_Range>
 
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				
 				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
 				<Stacking_Category>0</Stacking_Category>
-			</Tractor_Beam_Attack_Ability>
+			</Tractor_Beam_Attack_Ability> -->
 		</Abilities>
 
 	</SpaceUnit>
@@ -1389,7 +1389,7 @@
 		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
 		<Space_FOW_Reveal_Range>6000.0</Space_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
-		<Death_Explosions></Death_Explosions>
+		<Death_Explosions>Tiny_Explosion_Space</Death_Explosions>
 		<Death_SFXEvent_Start_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_Start_Die>
 
 		<Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>

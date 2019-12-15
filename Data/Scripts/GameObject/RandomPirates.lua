@@ -34,7 +34,12 @@ function State_Init(message)
 			"Coorshas_Cross",
 			"Kath_Scarlet",
 			"Entel_Night_Wind",
-			"Slader_Raider_II"
+			"Slader_Raider_II",
+			"Miktiss_Asagov_Raider",
+			"Ardella_Smokeswimmer",
+			"Kaerobani_Interdictor",
+			{"Mabin_Squadron", "Mabin_Gozanti"},
+			"Vulture_Pirates"
 		}
 		
 		Random_Replacement(Object, PirateHeroes, true)

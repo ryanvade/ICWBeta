@@ -894,6 +894,62 @@
 
 
 
+	<Marker Name="Victory_Point">
+		<Text_ID> TEXT_TOOLTIP_VICTORY_POINT_NAME </Text_ID>
+		<Tooltip_Text>TEXT_TOOLTIP_VICTORY_POINT_DESCRIPTION</Tooltip_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_REINFORCEMENT_POINT_DESCRIPTION </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>W_Pedistal_Faction.alo</Land_Model_Name>
+		<Scale_Factor>1.8</Scale_Factor>
+		<Space_Model_Name />
+		<Behavior> CAPTURE_POINT, REVEAL, REINFORCEMENT_POINT, DUMMY_TOOLTIP </Behavior>
+		<Capture_Point_Transition_Time_Seconds>60.0</Capture_Point_Transition_Time_Seconds>
+		<Is_Decoration>No</Is_Decoration>
+		<Has_Land_Evaluator>Yes</Has_Land_Evaluator>
+		<Reinforcement_Enabling_Radius>250.0</Reinforcement_Enabling_Radius>
+		<Land_FOW_Reveal_Range>275.0</Land_FOW_Reveal_Range>
+		<Capture_Point_Radius>250.0</Capture_Point_Radius>
+
+		<Is_Visible_On_Radar>True</Is_Visible_On_Radar>
+		<Radar_Show_Facing>No</Radar_Show_Facing>
+		<Radar_Range_Icon_Name>i_radar_landing.tga</Radar_Range_Icon_Name>
+		<Radar_Icon_Name>i_radar_starhome.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.08  0.08</Radar_Icon_Size>
+
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<Begin_Control_Transition_Radar_Event>DEFAULT_CONTROL_POINT_TRANSITION</Begin_Control_Transition_Radar_Event>
+		<End_Control_Transition_Radar_Event>DEFAULT_CONTROL_POINT_TRANSITION</End_Control_Transition_Radar_Event>
+		<Reinforcement_Region_Blob_Name>Reinforcement_Point_Radius_Overlay</Reinforcement_Region_Blob_Name>
+
+		<Faction_Anim_Subindex>Rebel, 0</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Empire, 1</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Pentastar, 8</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Neutral, 2</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Pirates, 1</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Teradoc, 1</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Hutts, 1</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Underworld, 3</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Hostile, 2</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Hapes_Consortium, 7</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Yevetha, 2</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Corporate_Sector, 4</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Warlords, 2</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Hutt_Cartels, 2</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Chiss, 3</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>Mandalorians, 2</Faction_Anim_Subindex>
+		<Faction_Anim_Subindex>SsiRuuvi_Imperium, 2</Faction_Anim_Subindex>
+
+		<Influences_Capture_Point>True</Influences_Capture_Point>
+		<Control_Point_Domination_Condition_Relevant>Yes</Control_Point_Domination_Condition_Relevant>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, Pentastar, Yevetha, Hapes_Consortium, Teradoc, Hutts, Hutt_Cartels, Corporate_Sector, Warlords, Chiss, Mandalorians, SsiRuuvi_Imperium</Affiliation>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>True</Initial_State_Visible_Under_FOW>
+		<Additional_Population_Capacity>5</Additional_Population_Capacity>
+		<Property_Flags>IsRushTarget</Property_Flags>
+		<Immune_To_Damage>True</Immune_To_Damage>
+		<Include_In_UI_Map_Header>true</Include_In_UI_Map_Header>
+	 </Marker>
+
 
 
     <Marker Name="Reinforcement_Point">

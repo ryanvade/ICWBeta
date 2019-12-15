@@ -35,7 +35,8 @@ function State_Init(message)
 			"Xufush_Fa-Loh-Sui",
 			"Safonnes_Sword",
 			"Renthals_Vigilance",
-			"Veiled_Queen_Savrip"
+			"Veiled_Queen_Savrip",
+			"Trillili_Personal_Profit"
 		}
 		
 		Random_Replacement(Object, PirateHeroes, true)

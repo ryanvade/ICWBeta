@@ -74,7 +74,7 @@
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
 			
-			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
+			<!-- <Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
@@ -82,10 +82,10 @@
 				<Activation_Min_Range>2</Activation_Min_Range>
 	            <Activation_Max_Range>1500</Activation_Max_Range>
 
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				
 				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
 				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
+			  </Tractor_Beam_Attack_Ability> -->
 		</Abilities>
 	
 	</SpaceUnit>
@@ -637,7 +637,7 @@
 				<Stacking_Category>1</Stacking_Category>
 			</Combat_Bonus_Ability>
 	   
-	      <Tractor_Beam_Attack_Ability Name="CR90N_Tractor_Beam_Attack_Ability">
+	      <!-- <Tractor_Beam_Attack_Ability Name="CR90N_Tractor_Beam_Attack_Ability">
 	            <Activation_Style> User_Input </Activation_Style>
 	            <Applicable_Unit_Categories>Transport | Corvette </Applicable_Unit_Categories>
 	            <Applicable_Unit_Types> Millennium_Falcon, Fel_Ascent, Wild_Karrde, Lady_Luck, Moldy_Crow, Jade_Fire </Applicable_Unit_Types>
@@ -645,10 +645,10 @@
 	            <Activation_Min_Range>10</Activation_Min_Range>
 	            <Activation_Max_Range>600</Activation_Max_Range>
 
-	            <!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+	            
 	            <Target_Speed_Decrease_Percent>0.40</Target_Speed_Decrease_Percent>
 	            <Stacking_Category>0</Stacking_Category>            
-	      </Tractor_Beam_Attack_Ability>
+	      </Tractor_Beam_Attack_Ability> -->
 
 	   </Abilities>
 	   
@@ -983,7 +983,7 @@
 				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
 			</Planet_Income_Bonus_Ability>
 			
-			<Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
+			<!-- <Tractor_Beam_Attack_Ability Name="Executor_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital </Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
@@ -991,10 +991,10 @@
 				<Activation_Min_Range>2</Activation_Min_Range>
 	            <Activation_Max_Range>1500</Activation_Max_Range>
 
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				
 				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
 				<Stacking_Category>0</Stacking_Category>
-			  </Tractor_Beam_Attack_Ability>
+			  </Tractor_Beam_Attack_Ability> -->
 		</Abilities>
 	
 	</UniqueUnit>
@@ -1118,7 +1118,7 @@
 	<!-- Non-Hero unit abilities description -->
 		<Abilities SubObjectList="Yes">
 
-			<Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
+			<!-- <Tractor_Beam_Attack_Ability Name="ISD_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 	            <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
@@ -1126,10 +1126,10 @@
 				<Activation_Min_Range>2</Activation_Min_Range>
 	            <Activation_Max_Range>1500</Activation_Max_Range>
 
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				
 				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
 				<Stacking_Category>2</Stacking_Category>
-			</Tractor_Beam_Attack_Ability>
+			</Tractor_Beam_Attack_Ability> -->
 			
 			<Combat_Bonus_Ability Name="Trigit_Self_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
@@ -1994,7 +1994,11 @@
 
 			</Unit_Ability>
 		</Unit_Abilities_Data>
-	</SpaceUnit>	
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Random_Pirate_Hero_2">
+		<Variant_Of_Existing_Type>Random_Pirate_Hero</Variant_Of_Existing_Type>
+	</SpaceUnit>
 	
 	<SpaceUnit Name="Dane_Sweet_Victory">
 		<Variant_Of_Existing_Type>Marauder_Missile_Cruiser</Variant_Of_Existing_Type>
@@ -2253,7 +2257,7 @@
 		<Starting_Spawned_Units_Tech_1>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>Z95_Headhunter_Squadron, 1</Starting_Spawned_Units_Tech_1>
 		<Starting_Spawned_Units_Tech_1>Skirmish_Zsinj_CR90, 1</Starting_Spawned_Units_Tech_1>
-		<Starting_Spawned_Units_Tech_1>Skirmish_Raider_Pentastar, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Skirmish_Raider_Pentastar, 1</Starting_Spawned_Units_Tech_1> <!-- standin for Imperial light corvette -->
 		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
 		
 		<Build_Cost_Credits>4800</Build_Cost_Credits>
@@ -2345,9 +2349,9 @@
 		<Affiliation>Pirates</Affiliation>
 		
 		<Starting_Spawned_Units_Tech_1>Skirmish_Interceptor_Frigate, 2</Starting_Spawned_Units_Tech_1>
-		<Starting_Spawned_Units_Tech_1>Skirmish_Zsinj_CR90, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Skirmish_Zsinj_CR90, 1</Starting_Spawned_Units_Tech_1> <!-- standin for Consular -->
 		<Starting_Spawned_Units_Tech_1>Skirmish_Citadel_Cruiser_Squadron, 1</Starting_Spawned_Units_Tech_1>
-		<Starting_Spawned_Units_Tech_1>T-Wing_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Z95_Headhunter_Squadron, 1</Starting_Spawned_Units_Tech_1> <!-- standin for Cutlass -->
 		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
 		
 		<Build_Cost_Credits>4800</Build_Cost_Credits>
@@ -2389,6 +2393,78 @@
 			</Combat_Bonus_Ability>
 			
 			<Combat_Bonus_Ability Name="Veiled_Queen_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>		
+		</Abilities>
+
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Trillili_Personal_Profit">
+		<Variant_Of_Existing_Type>Entel_Night_Wind</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Population_Value>3</Population_Value>
+		
+		<Text_ID>TEXT_HERO_TRILLILI</Text_ID>
+		<Lua_Script></Lua_Script>
+		<Affiliation>Pirates</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_1>Skirmish_Interceptor_Frigate, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>CC7700, 1</Starting_Spawned_Units_Tech_1> <!-- standin for Super Transport VII interdictor -->
+		<Starting_Spawned_Units_Tech_1>Skipray_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
+		
+		<Build_Cost_Credits>4800</Build_Cost_Credits>
+
+		<Icon_Name>i_button_trillili.tga</Icon_Name>
+		
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		
+		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, SPAWN_SQUADRON, REVEAL, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, UNIT_AI, NEBULA </SpaceBehavior>
+		<Tech_Level>99</Tech_Level>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_TRILLILI TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_PERSONAL_PROFIT TEXT_TOOLTIP_ESCORTS TEXT_UNIT_INTERCEPTOR4_FRIGATE TEXT_UNIT_CC7700</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PIRATE </Encyclopedia_Unit_Class>
+		
+		<HardPoints> 
+			HP_CR90_Hangar
+		</HardPoints>
+
+		<Required_Special_Structures>Pirate_Base </Required_Special_Structures>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>21</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->		
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Trillili_Queen_Self_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types> Trillili_Personal_Profit </Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Trillili_Queen_Combat_Bonus">
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
 				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
@@ -2774,7 +2850,8 @@
 		
 		<Death_Clone>Damage_Normal, Millennium_Falcon_Death_Clone</Death_Clone>
 		<Lua_Script>ObjectScript_MillenniumFalcon</Lua_Script>
-		<Space_Override_Population_Value>1</Space_Override_Population_Value>
+		
+		<Population_Value>1</Population_Value>
 
 	</UniqueUnit>
 
@@ -2820,4 +2897,448 @@
 			</Combat_Bonus_Ability>
 		</Abilities>
 	</UniqueUnit>
+	
+	<SpaceUnit Name="Miktiss_Skipray_Squadron">
+
+		<Variant_Of_Existing_Type>Skipray_Squadron</Variant_Of_Existing_Type>
+		<Squadron_Units>Skipray_Blastboat, Skipray_Blastboat, Skipray_Blastboat</Squadron_Units>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Miktiss_Asagov_Raider">
+		<Variant_Of_Existing_Type>Template_Interceptor_Frigate</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Space_Model_Name>RV_WildKarrde.ALO</Space_Model_Name>
+		<Select_Box_Scale>30</Select_Box_Scale>
+		<Scale_Factor>8.0</Scale_Factor>
+		<Death_Clone>Damage_Normal, Wild_Karrde_Death_Clone</Death_Clone>
+		
+		<Text_ID>TEXT_HERO_MIKTISS</Text_ID>
+		<Lua_Script></Lua_Script>
+		<Affiliation>Pirates</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_1>Miktiss_Skipray_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
+
+		<Icon_Name>i_button_miktiss.tga</Icon_Name>
+		
+		<CategoryMask> Corvette | SpaceHero | AntiFighter | AntiBomber </CategoryMask>
+
+		<HardPoints> HP_Asagov_Raider_00, HP_Asagov_Raider_01, HP_Asagov_Raider_02, HP_CR90_Hangar </HardPoints>
+		
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, SPAWN_SQUADRON, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<Tech_Level>99</Tech_Level>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_MIKTISS TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ASAGOV_RAIDER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PIRATE </Encyclopedia_Unit_Class>
+
+		<Required_Special_Structures>Pirate_Base </Required_Special_Structures>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>21</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>TURBO</Type>
+
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.50f</Mod_Multiplier> <!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.50f</Mod_Multiplier> <!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>150</Recharge_Seconds>
+				<Expiration_Seconds>8</Expiration_Seconds>
+
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Miktiss_Self_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types> Miktiss_Asagov_Raider </Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Miktiss_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+		</Abilities>
+
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Ardella_N1_Squadron">
+
+		<Variant_Of_Existing_Type>Torrent_Squadron</Variant_Of_Existing_Type>
+		<Squadron_Units>Torrent, Torrent, Torrent, Torrent</Squadron_Units> <!-- Not N-1s, but maybe we'll get there someday -->
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Ardella_Smokeswimmer">
+		<Variant_Of_Existing_Type>Corellian_Corvette</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_HERO_ARDELLA</Text_ID>
+		<Lua_Script></Lua_Script>
+		<Affiliation>Pirates</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_1>Ardella_N1_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>Imperial_Landing_Craft, 1</Starting_Spawned_Units_Tech_1>
+		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
+
+		<Icon_Name>i_button_ardella.tga</Icon_Name>
+		
+		<CategoryMask> Corvette | SpaceHero | AntiFighter | AntiBomber </CategoryMask>
+		
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, SPAWN_SQUADRON, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<Tech_Level>99</Tech_Level>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_ARDELLA TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_SMOKESWIMMER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PIRATE </Encyclopedia_Unit_Class>
+		
+		<HardPoints> 
+			HP_Corellian_Corvette_01, HP_Corellian_Corvette_02, HP_Corellian_Corvette_03, HP_Corellian_Corvette_04, HP_CR90_Hangar
+		</HardPoints>
+
+		<Required_Special_Structures>Pirate_Base </Required_Special_Structures>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>21</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>TURBO</Type>
+
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Ardella_Self_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types> Ardella_Smokeswimmer </Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Ardella_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+		</Abilities>
+
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Kaerobani_Interdictor">
+		<Variant_Of_Existing_Type>Generic_Interdictor_Cruiser</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_HERO_KAEROBANI</Text_ID>
+		<Lua_Script></Lua_Script>
+		<Affiliation>Pirates</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_1>Starwing_Squadron, 1</Starting_Spawned_Units_Tech_1>
+		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
+		
+		<Build_Cost_Credits>4800</Build_Cost_Credits>
+
+		<Icon_Name>i_button_kaerobani.tga</Icon_Name>
+		
+			<CategoryMask> Frigate | SpaceHero </CategoryMask>
+
+		
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, SPAWN_SQUADRON, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<Tech_Level>99</Tech_Level>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_KAEROBANI TEXT_TOOLTIP_COMMANDS TEXT_UNIT_INTERDICTOR_CRUISER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PIRATE </Encyclopedia_Unit_Class>
+
+		<Required_Special_Structures>Pirate_Base </Required_Special_Structures>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>21</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->		
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Kaerobani_Self_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types> Kaerobani_Interdictor </Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Kaerobani_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+		</Abilities>
+
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Mabin_Gozanti">
+		<Variant_Of_Existing_Type>Template_Gozanti_Cruiser</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_HERO_GUNDA_MABIN</Text_ID>
+		<Lua_Script></Lua_Script>
+		<Affiliation>Pirates</Affiliation>
+		
+		<Build_Cost_Credits>4800</Build_Cost_Credits>
+
+		<Icon_Name>i_button_mabin.tga</Icon_Name>
+		
+		<CategoryMask> Corvette | AntiFighter | AntiBomber | SpaceHero </CategoryMask>
+
+		
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Tech_Level>99</Tech_Level>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_TRAIT_RECKLESS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GUNDA_MABIN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_MABIN</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PIRATE </Encyclopedia_Unit_Class>
+
+		<Required_Special_Structures>Pirate_Base </Required_Special_Structures>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>21</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->		
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Mabin_Self_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types> Mabin_Gozanti </Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Mabin_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>-0.15</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.15</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+		</Abilities>
+
+	</SpaceUnit>
+
+	<Squadron Name="Mabin_Squadron">
+		<Text_ID>TEXT_HERO_GUNDA_MABIN</Text_ID>
+		<!--<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>-->
+		<!--<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>-->
+		<GUI_Row> 0 </GUI_Row>
+		<Hyperspace>Yes</Hyperspace>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Autoresolve_Health>30</Autoresolve_Health>
+		<Damage>25</Damage>
+		<Affiliation>Pirates</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>1100</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Required_Timeline />
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Non_Capital_Category_Dummy</Required_Special_Structures>
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<Squadron_Units>Mabin_Gozanti, Citadel_Cruiser, Citadel_Cruiser, Gozanti_Cruiser, Citadel_Cruiser</Squadron_Units>
+		<Squadron_Offsets>60.0,0.0,10.0</Squadron_Offsets>
+		<Squadron_Offsets>25.0,40.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,-42.0,-3.0</Squadron_Offsets>
+		<Squadron_Offsets>-28.0,32.0,8.0</Squadron_Offsets>
+		<Squadron_Offsets>-17.0,-50.0,0.0</Squadron_Offsets>
+		<Max_Squad_Size> 12 </Max_Squad_Size>
+		<Icon_Name>i_button_mabin.tga</Icon_Name>
+		<GUI_Model_Name>CSA_Gozanti.ALO</GUI_Model_Name>
+		<GUI_Distance>120</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
+
+		<FormationOrder>1</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>10.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1200.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>500.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Property_Flags> SmallShip </Property_Flags>
+		<Score_Cost_Credits> 420</Score_Cost_Credits>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND5 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_GUNDA_MABIN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_MABIN</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_PIRATE</Encyclopedia_Unit_Class>
+
+		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+
+		<Population_Value>1</Population_Value>
+	</Squadron>
+	
+	<SpaceUnit Name="Vulture_Pirates">
+		<Variant_Of_Existing_Type>Marauder_Missile_Cruiser</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Text_ID>TEXT_HERO_VULTURE_PIRATES</Text_ID>
+		<Lua_Script></Lua_Script>
+		<Affiliation>Pirates</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_1>Y-Wing_Squadron, 2</Starting_Spawned_Units_Tech_1> <!-- one of these should actually be Toscans -->
+		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
+		
+		<Build_Cost_Credits>4800</Build_Cost_Credits>
+
+		<Icon_Name>i_button_vultures.tga</Icon_Name>
+		
+			<CategoryMask> Frigate | SpaceHero </CategoryMask>
+
+		
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, POWERED, SHIELDED, SPAWN_SQUADRON, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<Tech_Level>99</Tech_Level>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_UNINTERESTING TEXT_TOOLTIP_BIO TEXT_TOOLTIP_VULTURE_PIRATES TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_VULTURE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_PIRATE </Encyclopedia_Unit_Class>
+
+		<Required_Special_Structures>Pirate_Base </Required_Special_Structures>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>21</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->		
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Vulture_Self_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types> Vulture_Pirates </Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+		</Abilities>
+
+	</SpaceUnit>
+	
 </Remnant_Space_Units>

@@ -786,6 +786,31 @@
 		 -Oksana   -->
 
 	<Damage_Types>
+	
+		<!-- TR Rework Ground Damage Types -->
+		DamageL_InfantryBlaster,
+		DamageL_AntiInfantryBlaster,
+		DamageL_AntiVehicleBlaster,
+		DamageL_ConcussionWarhead,
+		DamageL_ProtonWarhead,
+		DamageL_ThermalWarhead,
+		DamageL_MassDriver,
+		DamageL_Lightsaber,
+		DamageL_FLAK,
+		DamageL_Ion,		
+		<!-- TR Rework Space Damage types -->
+		DamageS_Laser,
+		DamageS_Ion,
+		DamageS_Turbolaser,
+		DamageS_TurboIon,
+		DamageS_Missile,
+		DamageS_HeavyMissile,
+		DamageS_Torpedo,
+		DamageS_HeavyTorpedo,
+		DamageS_HypervelocityGun,
+		DamageS_GTSIon,
+		DamageS_SeismicCharge,		
+		<!-- Base Game Residual Damage Types -->
 		Damage_Default,
 		Damage_ATST,
 		Damage_ATAT,
@@ -803,7 +828,6 @@
 		Damage_PLEX,
 		Damage_Sniper,
 		Damage_Lightning,
-		Damage_Lightsaber,
 		Damage_ThermDet,
 		Damage_Wookiee,
 		Damage_Jawa,
@@ -905,6 +929,39 @@
 			  then change the armor type and associated damage-vs-armor value.
 	 -->
 	<Armor_Types>
+		<!--TR Rework Ground Armour Types -->
+		ShieldG_Infantry,
+		ShieldG_LightVehicle,
+		ShieldG_HeavyVehicle,
+		ShieldG_Speeder,
+		ShieldG_SpeederHeavy,
+		ArmourG_Infantry,
+		ArmourG_Droid,
+		ArmourG_LightVehicle,
+		ArmourG_MediumVehicle,
+		ArmourG_HeavyVehicle,
+		ArmourG_Hero,
+		ArmourG_Structure,
+		ArmourG_Speeder,
+		ArmourG_SpeederHeavy,
+		
+		<!-- TR Rework Space Armour Types -->
+		ShieldS_Fighter,
+		ShieldS_Gunship,
+		ShieldS_Corvette,
+		ShieldS_Frigate,
+		ShieldS_HeavyFrigate,
+		ShieldS_Capital,
+		ShieldS_SuperCapital,
+		ArmourS_Fighter,
+		ArmourS_Gunship,
+		ArmourS_Corvette,
+		ArmourS_Frigate,
+		ArmourS_HeavyFrigate,
+		ArmourS_Capital,
+		ArmourS_SuperCapital,
+		
+		<!-- Base Game Residual Armour Types -->
 		Armor_Default,
 		Shield_Default,
         Shield_Capital,
@@ -960,6 +1017,317 @@
 		Armor_SSD			<!-- Armor for the Executor and other SSDs-->
 
 	</Armor_Types>
+	
+	
+	<!-- Damage Armour Reworked Matrix - Ground -->
+	
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ShieldG_LightVehicle, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ShieldG_HeavyVehicle, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ShieldG_Speeder, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ArmourG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ArmourG_Droid, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ArmourG_LightVehicle, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ArmourG_MediumVehicle, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ArmourG_HeavyVehicle, 0.15 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ArmourG_Hero, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ArmourG_Structure, 0.1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ArmourG_Speeder, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ArmourG_SpeederHeavy, 0.25 </Damage_To_Armor_Mod>
+
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ShieldG_LightVehicle, 0.2 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ShieldG_HeavyVehicle, 0.1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ShieldG_Speeder, 0.2 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_Droid, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_LightVehicle, 0.2 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_MediumVehicle, 0.1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_HeavyVehicle, 0.05 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_Hero, 10.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_Structure, 0.1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_Speeder, 0.2 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_SpeederHeavy, 0.1 </Damage_To_Armor_Mod>
+	
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ShieldG_LightVehicle, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ShieldG_HeavyVehicle, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ShieldG_Speeder, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_Infantry, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_Droid, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_MediumVehicle, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_HeavyVehicle, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_Hero, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_Structure, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_Speeder, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_SpeederHeavy, 0.5 </Damage_To_Armor_Mod>
+	
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ShieldG_HeavyVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ShieldG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_Droid, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_LightVehicle, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_MediumVehicle, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_HeavyVehicle, 0.125 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_Hero, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_Structure, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_Speeder, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_SpeederHeavy, 0.25 </Damage_To_Armor_Mod>
+	
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ShieldG_HeavyVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ShieldG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_Infantry, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_Droid, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_MediumVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_HeavyVehicle, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_Hero, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_Structure, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_SpeederHeavy, 1 </Damage_To_Armor_Mod>
+	
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ShieldG_HeavyVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ShieldG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_Droid, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_MediumVehicle, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_HeavyVehicle, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_Hero, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_Structure, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_SpeederHeavy, 0.75 </Damage_To_Armor_Mod>
+	
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ShieldG_HeavyVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ShieldG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_Droid, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_MediumVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_HeavyVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_Hero, 0.33 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_Structure, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_SpeederHeavy, 1 </Damage_To_Armor_Mod>
+	
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ShieldG_HeavyVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ShieldG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_Infantry, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_Droid, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_MediumVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_HeavyVehicle, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_Hero, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_Structure, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_SpeederHeavy, 1 </Damage_To_Armor_Mod>
+	
+	<Damage_To_Armor_Mod> DamageL_Flak, ShieldG_Infantry, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ShieldG_HeavyVehicle, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ShieldG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_Infantry, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_Droid, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_MediumVehicle, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_HeavyVehicle, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_Hero, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_Structure, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_SpeederHeavy, 0.25 </Damage_To_Armor_Mod>	
+	
+	<Damage_To_Armor_Mod> DamageL_Ion, ShieldG_Infantry, 2 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ShieldG_HeavyVehicle, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ShieldG_Speeder, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_Infantry, 0.1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_Droid, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_LightVehicle, 0.3 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_MediumVehicle, 0.25 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_HeavyVehicle, 0.2 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_Hero, 0.05 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_Structure, 0.1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_Speeder, 0.3 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_SpeederHeavy, 0.75 </Damage_To_Armor_Mod>
+
+	<!-- Damage Armour Reworked Matrix - Space -->
+	
+	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	
+		<Damage_To_Armor_Mod> DamageL_Ion, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ShieldS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Ion, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>	
+	
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>	
+	
+	<Damage_To_Armor_Mod> DamageS_Missille, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ShieldS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Missille, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>	
+	
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ShieldS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyMissile, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>	
+	
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ShieldS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Torpedo, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>
+
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ShieldS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HeavyTorpedo, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>
+
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>
+
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>
+
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>	
+	
 
 	<!-- DAMAGE vs. ARMOR Matrix -->
 
@@ -4043,6 +4411,8 @@
 		Lucrehulk_CSA, 						Data\ShipNames\Lucrehulk.txt,
 		Invincible_Cruiser, 				Data\ShipNames\Invincible.txt,
 		Recusant, 							Data\ShipNames\Recusant.txt,
+		Recusant_Dreadnought, 				Data\ShipNames\Recusant_Dreadnought.txt,
+		Providence_Dreadnought, 			Data\ShipNames\Providence_Dreadnought.txt,
 		MTC_CSA, 							Data\ShipNames\MTC.txt,
 		Bulwark_I, 							Data\ShipNames\Bulwark_I.txt,
 		Bulwark_II, 						Data\ShipNames\Bulwark_II.txt,

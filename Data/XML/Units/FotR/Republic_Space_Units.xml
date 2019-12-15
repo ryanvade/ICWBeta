@@ -522,7 +522,7 @@
 		<Build_Initially_Locked>No</Build_Initially_Locked>
 		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
 		<Slice_Cost_Credits>1400</Slice_Cost_Credits>
-		<Tech_Level>1</Tech_Level>
+		<Tech_Level>2</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
@@ -796,7 +796,7 @@
 		<Tech_Level>1</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
-		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
 		<Damage>70</Damage>
 		<Autoresolve_Health>23400</Autoresolve_Health>
@@ -840,7 +840,7 @@
 		<HardPoints>
 			Praetor_One_Bay, Praetor_One_Shield, Praetor_One_Engines_One, Praetor_One_Engines_Two,
 			Praetor_One_Engines_Three, HP_Praetor_One_Turbo_01, HP_Praetor_One_Turbo_02, HP_Praetor_One_Turbo_03,
-			HP_Praetor_One_Turbo_04, HP_Praetor_One_Turbo_07,
+			HP_Praetor_One_Turbo_04, HP_Praetor_One_Turbo_05, HP_Praetor_One_Turbo_06, HP_Praetor_One_Turbo_07,
 			HP_Praetor_One_Turbo_08, HP_Praetor_One_Turbo_09, HP_Praetor_One_Turbo_10, HP_Praetor_One_Turbo_11,
 			HP_Praetor_One_Turbo_12, HP_Praetor_One_Turbo_13, HP_Praetor_One_Turbo_14, HP_Praetor_One_Quad_01,
 			HP_Praetor_One_Quad_02, HP_Praetor_One_Quad_03, HP_Praetor_One_Quad_04, HP_Praetor_One_Quad_05,
@@ -938,7 +938,7 @@
 		</Unit_Abilities_Data>
 
 		<Abilities SubObjectList="Yes">
-			<Tractor_Beam_Attack_Ability Name="Praetor_Tractor_Beam_Attack_Ability">
+			<!-- <Tractor_Beam_Attack_Ability Name="Praetor_Tractor_Beam_Attack_Ability">
 				<Activation_Style> User_Input </Activation_Style>
 				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
 				<Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
@@ -946,10 +946,10 @@
 				<Activation_Min_Range>2</Activation_Min_Range>
 				<Activation_Max_Range>1500</Activation_Max_Range>
 
-				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				
 				<Target_Speed_Decrease_Percent>.98</Target_Speed_Decrease_Percent>
 				<Stacking_Category>0</Stacking_Category>
-			</Tractor_Beam_Attack_Ability>
+			</Tractor_Beam_Attack_Ability> -->
 
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">
 				<Specific_Mod_Source_Text>TEXT_ECONOMY_UNIT_UPKEEP</Specific_Mod_Source_Text>
@@ -1018,16 +1018,16 @@
 		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Early_Skipray_Squadron, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_5>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>V-Wing_Squadron, 2</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>Early_Skipray_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_4>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>V-Wing_Squadron, 2</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>Early_Skipray_Squadron, 1</Starting_Spawned_Units_Tech_4>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 7</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Early_Skipray_Squadron, 2</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_5>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>V-Wing_Squadron, 7</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>Early_Skipray_Squadron, 2</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_4>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>V-Wing_Squadron, 7</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>Early_Skipray_Squadron, 2</Reserve_Spawned_Units_Tech_4>
 
 		<Lua_Script>GenericGameObject</Lua_Script>
 
@@ -1410,7 +1410,7 @@
 		<Energy_Refresh_Rate>400</Energy_Refresh_Rate>
 		<Lua_Script>GenericGameObject</Lua_Script>
 		<Affiliation>Empire</Affiliation>
-		<Tech_Level>5</Tech_Level>
+		<Tech_Level>4</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
@@ -1433,10 +1433,10 @@
 		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
 		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
 
-		<Starting_Spawned_Units_Tech_5>V-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_4>V-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_5>V-Wing_Squadron, 2</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_4>V-Wing_Squadron, 2</Reserve_Spawned_Units_Tech_4>
 		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
@@ -1800,10 +1800,10 @@
 		<Required_Special_Structures>Capital_Category_Dummy</Required_Special_Structures>
 		<Required_Planets />
 
-		<Starting_Spawned_Units_Tech_5>Twin_Ion_Engine_Starfighter_Squadron, 2</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_3>Twin_Ion_Engine_Starfighter_Squadron, 2</Starting_Spawned_Units_Tech_3>
 		<Starting_Spawned_Units_Tech_0>Z95_Headhunter_Squadron, 2</Starting_Spawned_Units_Tech_0>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
-		<Reserve_Spawned_Units_Tech_5>Twin_Ion_Engine_Starfighter_Squadron, 4</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_3>Twin_Ion_Engine_Starfighter_Squadron, 4</Reserve_Spawned_Units_Tech_3>
 		<Reserve_Spawned_Units_Tech_0>Z95_Headhunter_Squadron, 4</Reserve_Spawned_Units_Tech_0>
 
 		<Lua_Script>GenericGameObject</Lua_Script>
@@ -1815,7 +1815,7 @@
 		<Population_Value>12</Population_Value>
 
 		<Affiliation>Empire</Affiliation>
-		<Tech_Level>1</Tech_Level>
+		<Tech_Level>0</Tech_Level>
 		<Required_Timeline>0</Required_Timeline>
 		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>3</Required_Star_Base_Level>
@@ -1825,16 +1825,16 @@
 		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_5>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>V-Wing_Squadron, 3</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_4>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>V-Wing_Squadron, 3</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_4>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 10</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_5>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>V-Wing_Squadron, 10</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_4>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>V-Wing_Squadron, 10</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_4>
 
 		<Lua_Script>GenericGameObject</Lua_Script>
 
@@ -1845,7 +1845,7 @@
 		<Space_Model_Name>republic_victory_star_destroyer.ALO</Space_Model_Name>
 		
 		<Affiliation>Empire</Affiliation>
-		<Tech_Level>1</Tech_Level>
+		<Tech_Level>0</Tech_Level>
 		<Population_Value>9</Population_Value>
 
 		<Required_Timeline>0</Required_Timeline>
@@ -1858,9 +1858,9 @@
 		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 1</Reserve_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_0>
 
-		<Starting_Spawned_Units_Tech_5>V-Wing_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>V-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_4>V-Wing_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>V-Wing_Squadron, 1</Reserve_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_4>
 
 		<Lua_Script>GenericGameObject</Lua_Script>
 	</SpaceUnit>
@@ -2037,7 +2037,7 @@
 		<Build_Cost_Credits>300</Build_Cost_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
-		<Tech_Level>0</Tech_Level>
+		<Tech_Level>99</Tech_Level>
 		<Required_Timeline />
 		<Required_Star_Base_Level>1</Required_Star_Base_Level>
 		<Required_Special_Structures />

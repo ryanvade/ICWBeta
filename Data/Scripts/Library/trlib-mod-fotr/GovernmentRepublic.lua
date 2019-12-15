@@ -14,11 +14,6 @@ function GovernmentRepublic:new(player_agnostic_plot)
     self.ApprovalRatingInfluence = 0
     self.ChoiceMade = false
 
-    Get_Story_Plot("Conquests\\Story_Sandbox_Government_Rep.XML")
-    if Find_Player("Empire").Is_Human() then
-        Story_Event("ACTIVE_PLAYER")
-    end
-
     --self.Events = {}
     --self.Events.ElectionHeld = Observable()
 end

@@ -11,7 +11,7 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
 		<Text_ID>TEXT_HERO_YODA</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_YODA </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_TRAIT_FORCESENSITIVE TEXT_TOOLTIP_BIO TEXT_TOOLTIP_YODA </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_MASTER </Encyclopedia_Unit_Class>
 		<Land_Model_Name>RI_YODA.ALO</Land_Model_Name>
 		<Icon_Name>i_button_RI_Yoda.tga</Icon_Name>
@@ -249,7 +249,7 @@
                 <Berserker_Damage>35.0</Berserker_Damage>
                 <Berserker_Damage_Range>12.0</Berserker_Damage_Range>
                 <Berserker_Duration_In_Secs>6.0</Berserker_Duration_In_Secs>
-				<Applicable_Unit_Categories>Infantry | Vehicle </Applicable_Unit_Categories>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
             </Berserker_Ability>
 
             <Force_Sight_Ability Name="Yoda_Force_Sight">
@@ -261,15 +261,16 @@
                 <Activation_Style>Combat_Automatic</Activation_Style>
                 <Unit_Strength_Category>Capital | Corvette | Frigate | Fighter | Vehicle | Infantry | Air</Unit_Strength_Category>
                 <Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter | Vehicle | Infantry | Air</Applicable_Unit_Categories>
-                <Applicable_Unit_Types />
-                <Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
-                <Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
-                <Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
-                <Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
-                <Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
-                <Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
-                <Stacking_Category>0</Stacking_Category>
-            </Combat_Bonus_Ability>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types> </Excluded_Unit_Types>
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.05</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.05</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.05</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
 
 			<Remove_Corruption_Ability Name="Yoda_Remove_Corruption">
 				<Initially_Enabled>Yes</Initially_Enabled>
@@ -2098,7 +2099,7 @@
 		<SFXEvent_Holster_Weapon> Unit_Light_Saber_Off </SFXEvent_Holster_Weapon>
 		<Holster_Weapon_Bone_Name> b_saber </Holster_Weapon_Bone_Name>
 		<Holster_Drawn_Bone_Translation> 0.0, 0.0, 0.0 </Holster_Drawn_Bone_Translation>
-		<Holster_Holstered_Bone_Translation> 0.0, -5.1705, 0.0 </Holster_Holstered_Bone_Translation>
+		<Holster_Holstered_Bone_Translation> 0.0, 0.0, 0.0 </Holster_Holstered_Bone_Translation>
 		<Holster_Transition_Time_In_Secs> 0.17 </Holster_Transition_Time_In_Secs>
 		<Holster_Minimum_Drawn_Time_In_Secs> 15.0 </Holster_Minimum_Drawn_Time_In_Secs>
 		<Holster_Disable_Engine_Loops> Yes </Holster_Disable_Engine_Loops>
@@ -2485,10 +2486,10 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_TRAIT_FORCESENSITIVE TEXT_TOOLTIP_BIO TEXT_TOOLTIP_OBI_WAN_KENOBI  </Encyclopedia_Text>
 
-		<Space_Model_Name>rv_XWing.ALO</Space_Model_Name>
+		<Space_Model_Name>RV_Eta2_Windu.ALO</Space_Model_Name>
 		<Icon_Name>i_button_obiwan.tga</Icon_Name>
 
-		<Scale_Factor>0.23</Scale_Factor>
+		<Scale_Factor>0.1875</Scale_Factor>
 		<Select_Box_Scale>40</Select_Box_Scale>
 		<Select_Box_Z_Adjust>1.0f</Select_Box_Z_Adjust>
 		<Mass>0.98</Mass>
@@ -2626,7 +2627,7 @@
 		<SFXEvent_Holster_Weapon> Unit_Light_Saber_Off </SFXEvent_Holster_Weapon>
 		<Holster_Weapon_Bone_Name> b_saber </Holster_Weapon_Bone_Name>
 		<Holster_Drawn_Bone_Translation> 0.0, 0.0, 0.0 </Holster_Drawn_Bone_Translation>
-		<Holster_Holstered_Bone_Translation> 0.0, -5.1705, 0.0 </Holster_Holstered_Bone_Translation>
+		<Holster_Holstered_Bone_Translation> 0.0, 0.0, 0.0 </Holster_Holstered_Bone_Translation>
 		<Holster_Transition_Time_In_Secs> 0.17 </Holster_Transition_Time_In_Secs>
 		<Holster_Minimum_Drawn_Time_In_Secs> 15.0 </Holster_Minimum_Drawn_Time_In_Secs>
 		<Holster_Disable_Engine_Loops> Yes </Holster_Disable_Engine_Loops>
@@ -3001,10 +3002,10 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
 		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_TRAIT_FORCESENSITIVE TEXT_TOOLTIP_BIO TEXT_TOOLTIP_PLO_KOON  </Encyclopedia_Text>
 
-		<Space_Model_Name>rv_XWing.ALO</Space_Model_Name>
+		<Space_Model_Name>RV_Eta2_Windu.ALO</Space_Model_Name>
 		<Icon_Name>i_button_plokoon.tga</Icon_Name>
 
-		<Scale_Factor>0.23</Scale_Factor>
+		<Scale_Factor>0.1875</Scale_Factor>
 		<Select_Box_Scale>40</Select_Box_Scale>
 		<Select_Box_Z_Adjust>1.0f</Select_Box_Z_Adjust>
 		<Mass>0.98</Mass>
@@ -4258,8 +4259,8 @@
 		<Size_Value>10</Size_Value>
 		<Sensor_Range>20</Sensor_Range>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>160</Tactical_Health>
-		<Autoresolve_Health>160</Autoresolve_Health>
+		<Tactical_Health>190</Tactical_Health>
+		<Autoresolve_Health>190</Autoresolve_Health>
 		<Damage>100</Damage>
 		<Stealth_Capable>No</Stealth_Capable>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -4556,7 +4557,7 @@
 		<SFXEvent_Holster_Weapon> Unit_Light_Saber_Off </SFXEvent_Holster_Weapon>
 		<Holster_Weapon_Bone_Name> b_saber </Holster_Weapon_Bone_Name>
 		<Holster_Drawn_Bone_Translation> 0.0, 0.0, 0.0 </Holster_Drawn_Bone_Translation>
-		<Holster_Holstered_Bone_Translation> 0.0, -5.1705, 0.0 </Holster_Holstered_Bone_Translation>
+		<Holster_Holstered_Bone_Translation> 0.0, 0.0 0.0 </Holster_Holstered_Bone_Translation>
 		<Holster_Transition_Time_In_Secs> 0.17 </Holster_Transition_Time_In_Secs>
 		<Holster_Minimum_Drawn_Time_In_Secs> 15.0 </Holster_Minimum_Drawn_Time_In_Secs>
 		<Holster_Disable_Engine_Loops> Yes </Holster_Disable_Engine_Loops>

@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Origin of Corruption (Rebel)	******-->
+<!--******************************************************-->
+
+
+
+<Story>
+
+	<Event Name="Battle_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+
+
+  <Event Name="Capture_Victory_Speech">
+    <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+    <Event_Param2>CAPTURE_POINT_PRESENT</Event_Param2>
+    <Reward_Type>SCREEN_TEXT</Reward_Type>
+	<Reward_Param1>TEXT_TACTICAL_EVENT_VICTORYPOINT</Reward_Param1>
+	<Reward_Param7>Task</Reward_Param7><!-- TASK color coding - Blue -->
+	<Reward_Param2>20</Reward_Param2>
+	<Prereq>Battle_Start</Prereq>
+  </Event>
+  
+   <Event Name="Destroy_Enemy_Speech">
+    <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+    <Event_Param2>CAPTURE_POINT_NOT_PRESENT</Event_Param2>
+    <Reward_Type>SCREEN_TEXT</Reward_Type>
+	<Reward_Param1>TEXT_TACTICAL_EVENT_DESTROYALL</Reward_Param1>
+	<Reward_Param7>Task</Reward_Param7><!-- TASK color coding - Blue -->
+	<Reward_Param2>20</Reward_Param2>
+	<Prereq>Battle_Start</Prereq>
+  </Event>  
+  
+   <Event Name="Set_Victor_Rebel">
+    <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+    <Event_Param2>SET_VICTOR_NEWREP_FLAG</Event_Param2>
+	<Reward_Type>VICTORY</Reward_Type>
+	<Reward_Param1>Rebel</Reward_Param1>
+  </Event>
+     
+   <Event Name="Set_Victor_Empire">
+    <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+    <Event_Param2>SET_VICTOR_EMPIRE_FLAG</Event_Param2>
+	<Reward_Type>VICTORY</Reward_Type>
+	<Reward_Param1>Empire</Reward_Param1>
+  </Event>
+  
+   <Event Name="Set_Victor_EotH">
+    <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+    <Event_Param2>SET_VICTOR_EOTH_FLAG</Event_Param2>
+	<Reward_Type>VICTORY</Reward_Type>
+	<Reward_Param1>Underworld</Reward_Param1>
+  </Event>
+     
+   <Event Name="Set_Victor_Eriadu">
+    <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+    <Event_Param2>SET_VICTOR_ERIADU_FLAG</Event_Param2>
+	<Reward_Type>VICTORY</Reward_Type>
+	<Reward_Param1>Hutts</Reward_Param1>
+  </Event>
+  
+    <Event Name="Set_Victor_Pentastar">
+    <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+    <Event_Param2>SET_VICTOR_PENTASTAR_FLAG</Event_Param2>
+	<Reward_Type>VICTORY</Reward_Type>
+	<Reward_Param1>Pentastar</Reward_Param1>
+  </Event>
+     
+   <Event Name="Set_Victor_Zsinj">
+    <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+    <Event_Param2>SET_VICTOR_ZSINJ_FLAG</Event_Param2>
+	<Reward_Type>VICTORY</Reward_Type>
+	<Reward_Param1>Pirates</Reward_Param1>
+  </Event>
+  
+   <Event Name="Set_Victor_Teradoc">
+    <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+    <Event_Param2>SET_VICTOR_TERADOC_FLAG</Event_Param2>
+	<Reward_Type>VICTORY</Reward_Type>
+	<Reward_Param1>Teradoc</Reward_Param1>
+  </Event>
+     
+   <Event Name="Set_Victor_CSA">
+    <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+    <Event_Param2>SET_VICTOR_CORPORATE_SECTOR_FLAG</Event_Param2>
+	<Reward_Type>VICTORY</Reward_Type>
+	<Reward_Param1>Corporate_Sector</Reward_Param1>
+  </Event>
+
+ <Event Name="End_Raid_Speech">
+          <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+      <Event_Param2>END_SPEECH</Event_Param2>
+    <Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_DETECTED_FLEET</Reward_Param1>
+		<Reward_Param4>remove</Reward_Param4>
+    <Prereq>Battle_Start</Prereq>
+  </Event>
+
+<Event Name="Disable_Retreat_NR">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NO_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Disable_Retreat_Empire">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NO_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Disable_Retreat_Teradoc">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NO_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Teradoc</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+
+<Event Name="Disable_Retreat_EotH">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NO_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Underworld</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Disable_Retreat_Pentastar">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NO_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Pentastar</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Disable_Retreat_Eriadu">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NO_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Hutts</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Disable_Retreat_Zsinj">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NO_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Pirates</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	<Perpetual>true</Perpetual>
+	</Event>
+	
+<!-- <Event Name="Disable_Retreat_Yevetha">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NO_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Yevetha</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event> -->
+
+<Event Name="Disable_Retreat_CSA">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NO_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Corporate_Sector</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Enable_Retreat_NR">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>YES_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Enable_Retreat_Empire">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>YES_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Enable_Retreat_Teradoc">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>YES_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Teradoc</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+<Event Name="Enable_Retreat_EotH">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>YES_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Underworld</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Enable_Retreat_Pentastar">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>YES_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Pentastar</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Enable_Retreat_Eriadu">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>YES_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Hutts</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+<Event Name="Enable_Retreat_Zsinj">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>YES_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Pirates</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	<Perpetual>true</Perpetual>
+	</Event>
+	
+<!-- <Event Name="Enable_Retreat_Yevetha">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>YES_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Yevetha</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event> -->
+
+<Event Name="Enable_Retreat_CSA">
+	<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>YES_RETREAT</Event_Param2>
+	<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Corporate_Sector</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	<Perpetual>true</Perpetual>
+</Event>
+
+
+</Story>
+

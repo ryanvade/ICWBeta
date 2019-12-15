@@ -369,10 +369,33 @@
 	<!--******************** UNIVERSAL EVENTS *********************-->
 	<!--***********************************************************-->	
 	<!--***********************************************************-->	
+
+	<Event Name="Trigger_Era_Three">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2080</Event_Param1>
+	</Event> 
+		
+	 <Event Name="R_Level_Three">
+  		<Event_Type>STORY_TRIGGER</Event_Type>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>3</Reward_Param2>	
+		<Prereq>Trigger_Era_Three</Prereq>
+	</Event> 
+	
+	<Event Name="C_Level_FThree">
+  		<Event_Type>STORY_TRIGGER</Event_Type>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>	
+		<Prereq>Trigger_Era_Three</Prereq>	
+	</Event>
 	
 	<Event Name="Trigger_Era_Four">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>2080</Event_Param1>
+		<Prereq>Trigger_Era_Five</Prereq>
+
 	</Event> 
 	
 	

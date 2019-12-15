@@ -22,6 +22,9 @@
 require("PGStateMachine")
 require("PGSpawnUnits")
 
+--check_uniqueness ensures that an option will not be duplicated if it's already on the map, unless all options are present
+--for this to work properly for squadrons, make a 2 element table entry of the squadron followed by a unit within it
+
 function Random_Replacement(source_object, option_list, check_uniqueness)
 	if Get_Game_Mode() ~= "Galactic" then
         ScriptExit()
@@ -32,7 +35,11 @@ function Random_Replacement(source_object, option_list, check_uniqueness)
 	local iterations = 1
 	
 	while check_uniqueness do
-		checkObject = Find_First_Object(option_list[rando])
+		if type(option_list[rando]) == "table" then
+			checkObject = Find_First_Object(option_list[rando][2])
+		else
+			checkObject = Find_First_Object(option_list[rando])
+		end
 		
 		if TestValid(checkObject) then
 			rando = rando+1
@@ -49,7 +56,12 @@ function Random_Replacement(source_object, option_list, check_uniqueness)
 		end
 	end
 	
-	spawn_list_random = { option_list[rando] }
+	if type(option_list[rando]) == "table" then
+		spawn_list_random = { option_list[rando][1] }
+	else
+		spawn_list_random = { option_list[rando] }
+	end
+	
 	PirateSpawn = SpawnList(spawn_list_random, source_object.Get_Planet_Location(), source_object.Get_Owner(),true,false)
 
     source_object.Despawn()

@@ -29,8 +29,36 @@ function Definitions()
         Support_Palpatine = Palpatine_Support,
         Lira_Contract = Palpatine_Support,
         KDY_Deal_AI = Spawn_KDY_AI,
-        Support_Mothma = Mothma_Support
+        Government_Start = IsPlayer,
+        Rebels_Enter_Tech_03 = Increase_Support,
+        Rebels_Enter_Tech_04 = Increase_Support,
+        Buy_LoveMeRepublic = Increase_Support,
+        Support_Mothma = Mothma_Support,
+        Exit_Function = Safeguard
     }
+end
+
+function Increase_Support(message)
+    if message == OnEnter then
+        currentSupport = GlobalValue.Get("RepublicApprovalRating")
+        GlobalValue.Set("RepublicApprovalRating", currentSupport + 5)
+    end
+end
+
+
+function IsPlayer(message)
+    if message == OnEnter then
+        republic_player = Find_Player("Empire")
+        if republic_player.Is_Human() then
+            Story_Event("ACTIVE_PLAYER")
+        end
+    end
+end
+
+function Safeguard(message)
+    if message == OnEnter then
+
+    end
 end
 
 function Palpatine_Support(message)
@@ -47,9 +75,33 @@ end
 
 function Spawn_KDY_AI(message)
     if message == OnEnter then
+
+        spawn_location_table = {
+            ["KUAT"] = false
+        }
+
+        all_planets = FindPlanet.Get_All_Planets()
+
+        Set_Existing_Planets(all_planets, spawn_location_table)
         local KDY_OBJECT = {"DUMMY_KUAT_CONTRACT", "Generic_Star_Destroyer"}
         local p_republic = Find_Player("Empire")
-        local start_planet = FindPlanet("Kuat")
-        local KDYspawn = SpawnList(KDY_OBJECT, start_planet, p_republic, true, false)
+        if spawn_location_table["KUAT"] then
+            local start_planet = FindPlanet("Kuat")
+            if start_planet.Get_Owner() == Find_Player("Empire") then
+                local KDYspawn = SpawnList(KDY_OBJECT, start_planet, p_republic, true, false)
+            end
+        end    
+    end
+end
+
+function Set_Existing_Planets(planet_list, planet_table)
+
+    for _, planet in pairs(planet_list) do
+
+        name = planet.Get_Type().Get_Name()
+        
+        if planet_table[name] ~= nil then
+            planet_table[name] = true
+        end
     end
 end
