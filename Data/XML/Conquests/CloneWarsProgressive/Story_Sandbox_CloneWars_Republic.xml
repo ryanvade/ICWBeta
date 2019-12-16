@@ -291,8 +291,8 @@
 	<Event Name="Venator_Research_Begin">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>400</Event_Param1>
-		<Prereq>Republic_Enters_Tech_03</Prereq>
-		<Prereq>GC_Start_Force_Level_Three</Prereq>
+		<Prereq>Republic_Enters_Tech_02</Prereq>
+		<Prereq>GC_Start_Force_Level_Two</Prereq>
 	</Event>
 
 	<Event Name="Unlock_Venator_Speech">
@@ -448,7 +448,7 @@
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>40</Event_Param1>
 		<Prereq>Republic_Enters_Tech_03</Prereq>
-		<Branch>Era_Four</Branch>
+		<Branch>Era_Three</Branch>
 	</Event>
 
 	<Event Name="Unlock_Clone_Trooper_II_Speech">
@@ -551,7 +551,7 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>BARC_Squad</Reward_Param1>
-				<Prereq>Unlock_Clone_Trooper_II</Prereq>
+			<Prereq>Unlock_Clone_Trooper_II</Prereq>
 		<Prereq>GC_Start_Force_Level_Four</Prereq>
 		<Prereq>GC_Start_Force_Level_Five</Prereq>
 		<Prereq>Clone_Trooper_II_AI_Force</Prereq>
