@@ -73,7 +73,7 @@
 		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
 		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
 
-		<!--<Projectile_Types>Proj_Blaster_Cannon_Green</Projectile_Types>
+		<!--<Projectile_Types>Proj_Light_AV_Blaster_Green</Projectile_Types>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
@@ -254,7 +254,7 @@
 		<Turret_Targets_Air_Vehicles> 4 </Turret_Targets_Air_Vehicles>
 		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
 
-		<!--<Projectile_Types>Proj_Ground_AV_Turret_Laser_Green</Projectile_Types>
+		<!--<Projectile_Types>Proj_Heavy_AV_Blaster_Green</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>3.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>-->
@@ -317,7 +317,7 @@
 		<GUI_Bracket_Size>1</GUI_Bracket_Size>
 		<Weather_Category>Tracked</Weather_Category>
 		<Icon_Name>i_button_fortress.tga</Icon_Name>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 		<Tactical_Bribe_Cost>100</Tactical_Bribe_Cost>
 
@@ -337,7 +337,7 @@
 				<Area_Effect_Decal_Distance> 250.0 </Area_Effect_Decal_Distance>
 				<GUI_Activated_Ability_Name>
 				</GUI_Activated_Ability_Name>
-				<!-- GUI Command Bar support -->
+				
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 
@@ -496,7 +496,7 @@
 				<Area_Effect_Decal_Distance> 250.0 </Area_Effect_Decal_Distance>
 				<GUI_Activated_Ability_Name>
 				</GUI_Activated_Ability_Name>
-				<!-- GUI Command Bar support -->
+				
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 
@@ -677,7 +677,7 @@
 		<Scale_Factor>1.45</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Tracked</Type>
-		<Death_Projectiles>Proj_Heavy_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Heavy_Concussion_Missile</Death_Projectiles>
 		<Deploys>No</Deploys>
 		<Affiliation>Empire</Affiliation>
 		<Political_Control>0</Political_Control>
@@ -723,7 +723,7 @@
 		
 		<Land_FOW_Reveal_Range>500.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
-		<!--<Projectile_Types>Proj_Tank_Droid_Beam</Projectile_Types>
+		<!--<Projectile_Types>Proj_Heavy_AV_Beam_Blue</Projectile_Types>
 		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
 		<Projectile_Fire_Recharge_Seconds>3.5</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
@@ -852,7 +852,7 @@
 		<Garrison_Radius>30</Garrison_Radius>
 		<Property_Flags>CanContainGarrison</Property_Flags>
 
-		<!--<Projectile_Types>Proj_Blaster_Cannon_Green</Projectile_Types>
+		<!--<Projectile_Types>Proj_Light_AV_Blaster_Green</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>0.6</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>-->
@@ -981,7 +981,7 @@
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
 		<OverrideAcceleration> .5 </OverrideAcceleration>
 		<OverrideDeceleration> .5 </OverrideDeceleration>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<FormationSpacing> 0.8 </FormationSpacing>
 		<FormationOrder> 3 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
@@ -1027,7 +1027,7 @@
 		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
-		<!--<Projectile_Types> Proj_Mauler_Cannon_Green </Projectile_Types>
+		<!--<Projectile_Types> Proj_Heavy_AI_Blaster_Green </Projectile_Types>
 		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>0.0</Projectile_Fire_Recharge_Seconds>
@@ -1210,7 +1210,7 @@
 		<Targeting_Fire_Inaccuracy> Air, 10.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>
 		<Ranged_Target_Z_Adjust>50.0</Ranged_Target_Z_Adjust>
-		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_ATAT</Projectile_Types>
+		<Projectile_Types>Proj_Ground_SuperHeavy_AV_Blaster_Red</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds> -->
@@ -1324,7 +1324,7 @@
 		<Specific_Death_Anim_Type>CA_DIE</Specific_Death_Anim_Type>
 		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
 		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
-		<Death_Projectiles>Proj_Heavy_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Heavy_Concussion_Missile</Death_Projectiles>
 		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
 		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
 		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
@@ -1340,7 +1340,7 @@
 		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
 		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
 		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
-		<Death_Projectiles>Proj_Heavy_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Heavy_Concussion_Missile</Death_Projectiles>
 		<Glory_Cinematics> CAM_ATAT_Death_01.tec, CAM_ATAT_Death_02.tec, CAM_ATAT_Death_03.tec </Glory_Cinematics>
 		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
 		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
@@ -1358,7 +1358,7 @@
 		<Specific_Death_Anim_Index> 1 </Specific_Death_Anim_Index>
 		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
 		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
-		<Death_Projectiles>Proj_Heavy_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Heavy_Concussion_Missile</Death_Projectiles>
 		<Glory_Cinematics> CAM_ATAT_Death_01.tec, CAM_ATAT_Death_02.tec, CAM_ATAT_Death_03.tec </Glory_Cinematics>
 		<Custom_Hard_YExtent_Offset> -24.0 </Custom_Hard_YExtent_Offset>
 		<Custom_Hard_XExtent_Offset> 8.0 </Custom_Hard_XExtent_Offset>
@@ -1377,7 +1377,7 @@
 		<Specific_Death_Anim_Index> 2 </Specific_Death_Anim_Index>
 		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
 		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
-		<Death_Projectiles>Proj_Heavy_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Heavy_Concussion_Missile</Death_Projectiles>
 		<Glory_Cinematics> CAM_ATAT_Death_01.tec, CAM_ATAT_Death_02.tec, CAM_ATAT_Death_03.tec </Glory_Cinematics>
 		<Custom_Hard_YExtent_Offset> 21.0 </Custom_Hard_YExtent_Offset>
 		<Custom_Hard_XExtent_Offset> 8.0 </Custom_Hard_XExtent_Offset>
@@ -1478,7 +1478,7 @@
 		<Energy_Capacity>999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
-		<!--<Projectile_Types>Proj_ATST_Blaster_Cannon_Red</Projectile_Types>
+		<!--<Projectile_Types>Proj_AOE_AI_Blaster_Red</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds> -->
@@ -1624,7 +1624,7 @@
 		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
 		<Death_Persistence_Duration> 30 </Death_Persistence_Duration>
 		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
 		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
 		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
@@ -1638,7 +1638,7 @@
 		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
 		<Death_Persistence_Duration> 30 </Death_Persistence_Duration>
 		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
 		<Specific_Death_Anim_Index> 1 </Specific_Death_Anim_Index>
 		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
@@ -1651,7 +1651,7 @@
 		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
 		<Death_Persistence_Duration> 30 </Death_Persistence_Duration>
 		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
 		<Specific_Death_Anim_Index> 2 </Specific_Death_Anim_Index>
 		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
@@ -1719,7 +1719,7 @@
 		<!-- <Attack_Category_Restrictions> Infantry | Vehicle | LandHero | Structure </Attack_Category_Restrictions> -->
 		<Land_FOW_Reveal_Range>380.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
-		<!--<Projectile_Types>Proj_Flak_Pod</Projectile_Types>
+		<!--<Projectile_Types>Proj_Heavy_Flak</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>3.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
@@ -1774,7 +1774,7 @@
 		<Autonomous_Move_Extension_Vs_Attacker>100.0</Autonomous_Move_Extension_Vs_Attacker>
 		<Select_Box_Scale>60</Select_Box_Scale>
 		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
-		<Death_Projectiles>Proj_Med_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Concussion_Missile</Death_Projectiles>
 		<GUI_Bracket_Size>1</GUI_Bracket_Size>
 		<Weather_Category>Walker</Weather_Category>
 		<Score_Cost_Credits>167</Score_Cost_Credits>
@@ -1922,7 +1922,7 @@
 		<Targeting_Max_Attack_Distance>1800.0</Targeting_Max_Attack_Distance>
 		<Targeting_Min_Attack_Distance> 350.0 </Targeting_Min_Attack_Distance>
 
-		<Projectile_Types>Proj_Ground_SPMAT_Grenade</Projectile_Types>
+		<Projectile_Types>Proj_Thermal_Grenade</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>25.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
@@ -2098,7 +2098,7 @@
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
 		<OverrideAcceleration> .5 </OverrideAcceleration>
 		<OverrideDeceleration> .5 </OverrideDeceleration>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<FormationSpacing> 1.0 </FormationSpacing>
 		<FormationOrder> 3 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
@@ -2143,7 +2143,7 @@
 		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
-		<!-- <Projectile_Types> Proj_Mauler_Cannon_Green </Projectile_Types>
+		<!-- <Projectile_Types> Proj_Heavy_AI_Blaster_Green </Projectile_Types>
 		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>0.0</Projectile_Fire_Recharge_Seconds>
@@ -2295,7 +2295,7 @@
 		<Political_Control>0</Political_Control>
 		<Ranking_In_Category>6</Ranking_In_Category>
 		<Max_Speed>2.80</Max_Speed>
-		<Death_Projectiles>Proj_Med_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Concussion_Missile</Death_Projectiles>
 		<Movement_Animation_Speed> 2.30 </Movement_Animation_Speed>
 		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>
@@ -2573,7 +2573,7 @@
 		<FormationSpacing> .75 </FormationSpacing>
 		<FormationOrder> 4 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<MinimumPushReturnDistance> 100 </MinimumPushReturnDistance>
 		<UseSecondaryFacing> true </UseSecondaryFacing>
 		<SecondaryTurnInPlaceROTCoefficient> .5 </SecondaryTurnInPlaceROTCoefficient>
@@ -2611,7 +2611,7 @@
 		<Turret_Targets_Ground_Infantry> 1 </Turret_Targets_Ground_Infantry>
 		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
 		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
-		<Projectile_Types>Proj_Blaster_Cannon_Green</Projectile_Types>
+		<Projectile_Types>Proj_Light_AV_Blaster_Green</Projectile_Types>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
@@ -2838,7 +2838,7 @@
             <Unit_Ability>
                 <Type>LASER_DEFENSE</Type>
                 <Recharge_Seconds>35.0</Recharge_Seconds>
-                <GUI_Activated_Ability_Name> Juggernaut_Laser_Defense </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+                <GUI_Activated_Ability_Name> Juggernaut_Laser_Defense </GUI_Activated_Ability_Name> 
                 <SFXEvent_GUI_Unit_Ability_Activated> Unit_Defense_On_Juggernaut </SFXEvent_GUI_Unit_Ability_Activated>
 					 <SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Defense_Off_Juggernaut </SFXEvent_GUI_Unit_Ability_Deactivated>
 					 <Effective_Radius> 500.0 </Effective_Radius>
@@ -3191,7 +3191,7 @@
 				<Area_Effect_Decal_Distance> 250.0 </Area_Effect_Decal_Distance>
 				<GUI_Activated_Ability_Name>
 				</GUI_Activated_Ability_Name>
-				<!-- GUI Command Bar support -->
+				
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 	</GroundVehicle>
@@ -3268,7 +3268,7 @@
 		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
 		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
 
-		<!--<Projectile_Types>Proj_Blaster_Cannon_Green</Projectile_Types>
+		<!--<Projectile_Types>Proj_Light_AV_Blaster_Green</Projectile_Types>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
@@ -3402,7 +3402,7 @@
 		<Political_Control>0</Political_Control>
 		<Ranking_In_Category>6</Ranking_In_Category>
 		<Max_Speed>3.50</Max_Speed>
-		<Death_Projectiles>Proj_Med_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Concussion_Missile</Death_Projectiles>
 		<Movement_Animation_Speed> 2.30 </Movement_Animation_Speed>
 		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>

@@ -382,16 +382,7 @@
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 		<Targeting_Priority_Set>Capital</Targeting_Priority_Set>
 
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<Unit_Ability>
-				<Type>TRACTOR_BEAM</Type>
-				<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-				<GUI_Activated_Ability_Name>Bulwark_II_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-				<Recharge_Seconds>30</Recharge_Seconds>
-				<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
+
 
 		<Abilities SubObjectList="Yes">
 			<!-- <Tractor_Beam_Attack_Ability Name="Bulwark_II_Tractor_Beam_Attack_Ability">
@@ -1194,16 +1185,7 @@
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 55000</Score_Cost_Credits>
 
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<Unit_Ability>
-				<Type>TRACTOR_BEAM</Type>
-				<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-				<GUI_Activated_Ability_Name>Providence_Dread_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-				<Recharge_Seconds>30</Recharge_Seconds>
-				<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
+
 
 		<Abilities SubObjectList="Yes">
 			<!-- <Tractor_Beam_Attack_Ability Name="Providence_Dread_Tractor_Beam_Attack_Ability">
@@ -1316,7 +1298,7 @@
 		<!--<Political_Control>1</Political_Control>-->
 		<Political_Faction>Rebel</Political_Faction>
 		<Squadron_Capacity>40</Squadron_Capacity>
-		<Build_Cost_Credits>15000</Build_Cost_Credits>
+		<Build_Cost_Credits>20000</Build_Cost_Credits>
 		<AI_Combat_Power>4800</AI_Combat_Power>
 		<Build_Time_Seconds>90</Build_Time_Seconds>
 		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
@@ -1430,20 +1412,9 @@
 		<Tactical_Build_Time_Seconds>100</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
-		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<Build_Limit_Current_Per_Player>5</Build_Limit_Current_Per_Player>
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<Unit_Ability>
-				<Type>TRACTOR_BEAM</Type>
-				<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-				<GUI_Activated_Ability_Name>Subjugator_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-				<Recharge_Seconds>30</Recharge_Seconds>
-				<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
 
 		<Abilities SubObjectList="Yes">
 			<!-- <Tractor_Beam_Attack_Ability Name="Subjugator_Tractor_Beam_Attack_Ability">
@@ -2361,6 +2332,10 @@
 				<SFXEvent_Target_Ability> Unit_Buzz_Droids_Star_Viper </SFXEvent_Target_Ability>
 				<!-- Make this double the Chase_Radius in the special ability-->
 				<Area_Effect_Decal_Distance> 300.0 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
 			</Unit_Ability>
 
 		</Unit_Abilities_Data>
@@ -3403,7 +3378,6 @@
 		<No_Colorization_Color> 63, 63, 127, 255 </No_Colorization_Color>
 		
 		<Lua_Script>GenericGameObject</Lua_Script>
-
 	</SpaceUnit>
 
 	<SpaceUnit Name="Banking_Clan_Dreadnaught_Lasers">

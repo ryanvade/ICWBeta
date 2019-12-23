@@ -288,6 +288,12 @@
 		<Event_Param1>3</Event_Param1>
 	</Event>
 	
+	<Event Name="Republic_Enters_Tech_03_AI">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+		<Branch>Faction_Branch_CIS</Branch>
+	</Event>
+	
 	<Event Name="Venator_Research_Begin">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>400</Event_Param1>
@@ -370,7 +376,6 @@
 	<Event Name="Unlock_Venator_AI">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>400</Event_Param1>
-		<Prereq>GC_Start_Force_Level_Three</Prereq>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Venator</Reward_Param1>
 		<Branch>Faction_Branch_CIS</Branch>
@@ -388,7 +393,7 @@
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Wieler_Resilient</Reward_Param1>
 		<Reward_Param2>Kuat</Reward_Param2>
-		<Prereq>Unlock_Venator_Research</Prereq>
+		<Prereq>Unlock_Venator_Forced</Prereq>
 		<Prereq>Unlock_Venator_AI</Prereq>
 		<Prereq>Unlock_Venator</Prereq>
 	</Event>
@@ -398,7 +403,7 @@
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Yularen_Resolute</Reward_Param1>
 		<Reward_Param2>Coruscant</Reward_Param2>
-		<Prereq>Unlock_Venator_Research</Prereq>
+		<Prereq>Unlock_Venator_Forced</Prereq>
 		<Prereq>Unlock_Venator_AI</Prereq>
 		<Prereq>Unlock_Venator</Prereq>
 	</Event>
@@ -408,7 +413,7 @@
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Tarkin_Venator</Reward_Param1>
 		<Reward_Param2>Eriadu</Reward_Param2>
-		<Prereq>Unlock_Venator_Research</Prereq>
+		<Prereq>Unlock_Venator_Forced</Prereq>
 		<Prereq>Unlock_Venator_AI</Prereq>
 		<Prereq>Unlock_Venator</Prereq>
 	</Event>	
@@ -418,7 +423,7 @@
 		<Reward_Type>SPAWN_HERO</Reward_Type>
 		<Reward_Param1>Wieler_Triumphant</Reward_Param1>
 		<Reward_Param2>Kuat</Reward_Param2>
-		<Prereq>Unlock_Venator_Research</Prereq>
+		<Prereq>Unlock_Venator_Forced</Prereq>
 		<Prereq>Unlock_Venator_AI</Prereq>
 		<Prereq>Unlock_Venator</Prereq>
 	</Event>
@@ -428,12 +433,17 @@
 		<Event_Type>STORY_TECH_LEVEL</Event_Type>
 		<Event_Param1>4</Event_Param1>
 	</Event>
+		
+	<Event Name="Republic_Enters_Tech_04_AI">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+		<Branch>Faction_Branch_CIS</Branch>
+	</Event>
 	
 	<Event Name="Unlock_Venator_Forced">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Generic_Venator</Reward_Param1>
-		<Prereq>Republic_Enters_Tech_04</Prereq>
 		<Prereq>GC_Start_Force_Level_Three</Prereq>
 		<Prereq>GC_Start_Force_Level_Four</Prereq>
 		<Prereq>GC_Start_Force_Level_Five</Prereq>
@@ -474,6 +484,7 @@
 		<Event_Param1>40</Event_Param1>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Clonetrooper_Phase_Two_Team</Reward_Param1>
+		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
 		<Prereq>GC_Start_Force_Level_Four</Prereq>
 		<Prereq>GC_Start_Force_Level_Three</Prereq>
 		<Prereq>GC_Start_Force_Level_Five</Prereq>
@@ -505,7 +516,7 @@
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Clonetrooper_Phase_Two_Team</Reward_Param1>
-		<Prereq>Republic_Enters_Tech_03</Prereq>
+		<Prereq>Republic_Enters_Tech_02</Prereq>
 		<Branch>Era_Three</Branch>
 	</Event>
 
@@ -535,6 +546,7 @@
 		<Prereq>GC_Start_Force_Level_Four</Prereq>
 		<Prereq>GC_Start_Force_Level_Five</Prereq>
 		<Prereq>Clone_Trooper_II_AI_Force</Prereq>
+		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
 	</Event>
 	
 	<Event Name="Lock_Speeder">
@@ -545,6 +557,7 @@
 		<Prereq>GC_Start_Force_Level_Four</Prereq>
 		<Prereq>GC_Start_Force_Level_Five</Prereq>
 		<Prereq>Clone_Trooper_II_AI_Force</Prereq>
+		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
 	</Event>
 	
 	<Event Name="Unlock_BARC">
@@ -555,6 +568,7 @@
 		<Prereq>GC_Start_Force_Level_Four</Prereq>
 		<Prereq>GC_Start_Force_Level_Five</Prereq>
 		<Prereq>Clone_Trooper_II_AI_Force</Prereq>
+		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
 	</Event>
 
 	
@@ -563,6 +577,7 @@
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>ARC_Phase_Two_Team</Reward_Param1>
 		<Prereq>Republic_Enters_Tech_03</Prereq>
+		<Branch>Era_Three</Branch>
 	</Event>
 
 	<Event Name="Unlock_ARC_Trooper_II">
@@ -572,6 +587,7 @@
 		<Prereq>Lock_ARC_Phase_One</Prereq>
 		<Prereq>GC_Start_Force_Level_Four</Prereq>
 		<Prereq>GC_Start_Force_Level_Five</Prereq>
+		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
 	</Event>
 	
 	<Event Name="Lock_ARC_Phase_One">
@@ -582,6 +598,7 @@
 		<Prereq>Clone_Trooper_II_AI_Force</Prereq>
 		<Prereq>GC_Start_Force_Level_Five</Prereq>
 		<Prereq>GC_Start_Force_Level_Four</Prereq>
+		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
 	</Event>
 			
 	<Event Name="Research_Clone_Trooper_II_Remove">

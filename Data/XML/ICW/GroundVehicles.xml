@@ -102,7 +102,7 @@
 		<Turret_Targets_Air_Vehicles> 4 </Turret_Targets_Air_Vehicles>
 		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
 
-		<!--<Projectile_Types>Proj_Ground_AV_Turret_Laser_Red</Projectile_Types>
+		<!--<Projectile_Types>Proj_Heavy_AV_Blaster_Red</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
@@ -163,7 +163,7 @@
 		<GUI_Bracket_Size>1</GUI_Bracket_Size>
 		<Weather_Category>Tracked</Weather_Category>
 		<Icon_Name>i_button_tracker.tga</Icon_Name>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 		<Vehicle_Thief_Inside_Clone>T2B_Tank_Captured</Vehicle_Thief_Inside_Clone>
 		<Tactical_Bribe_Cost>100</Tactical_Bribe_Cost>
@@ -184,7 +184,7 @@
 				<Area_Effect_Decal_Distance> 250.0 </Area_Effect_Decal_Distance>
 				<GUI_Activated_Ability_Name>
 				</GUI_Activated_Ability_Name>
-				<!-- GUI Command Bar support -->
+				
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 		<Vehicle_Thief_Inside_Clone>Heavy_Tracker_Captured</Vehicle_Thief_Inside_Clone>
@@ -281,7 +281,7 @@
 		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
 
-		<!--<Projectile_Types>Proj_Ground_AV_Turret_Laser_Red</Projectile_Types>
+		<!--<Projectile_Types>Proj_Heavy_AV_Blaster_Red</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
@@ -342,7 +342,7 @@
 		<GUI_Bracket_Size>1</GUI_Bracket_Size>
 		<Weather_Category>Tracked</Weather_Category>
 		<Icon_Name>i_button_aa5_truck.tga</Icon_Name>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 		<Tactical_Bribe_Cost>100</Tactical_Bribe_Cost>
 
@@ -470,7 +470,7 @@
 		<GUI_Bracket_Size>1</GUI_Bracket_Size>
 		<Weather_Category>Tracked</Weather_Category>
 		<Icon_Name>i_button_freerunner.tga</Icon_Name>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 		<Tactical_Bribe_Cost>100</Tactical_Bribe_Cost>
 		<!-- Non-Hero unit abilities description -->
@@ -551,7 +551,7 @@
 		<Turret_Elevate_Extent_Degrees>50.0</Turret_Elevate_Extent_Degrees>
 
 
-		<!--<Projectile_Types>Proj_Snowspeeder_Laser_Cannon</Projectile_Types>
+		<!--<Projectile_Types>Proj_Air_AI_Blaster_Red</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
@@ -640,7 +640,7 @@
 			<Unit_Ability>
 				<Type>CABLE_ATTACK</Type>
 				<Recharge_Seconds>120</Recharge_Seconds>
-				<GUI_Activated_Ability_Name>Cable</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<GUI_Activated_Ability_Name>Cable</GUI_Activated_Ability_Name> 
 				<SFXEvent_Target_Ability> Unit_ATAT_Assault_Speeder </SFXEvent_Target_Ability>
 				<Supports_Autofire>True</Supports_Autofire>
 			</Unit_Ability>
@@ -750,7 +750,7 @@
 		<Turret_Elevate_Extent_Degrees>50.0</Turret_Elevate_Extent_Degrees>
 
 		<!--<Projectile_Damage>8.0</Projectile_Damage>
-		<Projectile_Types>Proj_Snowspeeder_Laser_Cannon</Projectile_Types>
+		<Projectile_Types>Proj_Air_AI_Blaster_Red</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
@@ -1232,7 +1232,7 @@
 		<!-- This is considered a repulsorlift-driven unit -->
 		<Garrison_Category> Vehicle | AntiAir </Garrison_Category>
 		<Garrison_Value>2</Garrison_Value>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<SurfaceFX_Name>Hover</SurfaceFX_Name>
 		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
 		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
@@ -1375,7 +1375,7 @@
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>100</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
-		<Death_Projectiles>Proj_Heavy_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Heavy_Concussion_Missile</Death_Projectiles>
 		<Energy_Capacity>999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
 		<Behavior>SELECTABLE</Behavior>
@@ -1396,7 +1396,7 @@
 		<Turret_Targets_Ground_Vehicles> 2 </Turret_Targets_Ground_Vehicles>
 		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
 		<Turret_Targets_Anything_Else> 1 </Turret_Targets_Anything_Else>
-		<!--<Projectile_Types>Proj_Ground_Proton_Torpedo</Projectile_Types>-->
+		<!--<Projectile_Types>Proj_Heavy_Proton_Missile</Projectile_Types>-->
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>1800.0</Targeting_Max_Attack_Distance>
 		<Targeting_Min_Attack_Distance> 350 </Targeting_Min_Attack_Distance>
@@ -1699,7 +1699,7 @@
 		<Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
 		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
 		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
-		<!-- <Projectile_Types>Proj_Blaster_Cannon_Red_T2B</Projectile_Types> -->
+		<!-- <Projectile_Types>Proj_Light_AI_Blaster_Red</Projectile_Types> -->
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>300.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>13.0</Ranged_Target_Z_Adjust>
@@ -1761,7 +1761,7 @@
 		<GUI_Bracket_Size>1</GUI_Bracket_Size>
 		<Weather_Category>Tracked</Weather_Category>
 		<Icon_Name>i_button_t-1b_repulsor_tank.tga</Icon_Name>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 		<Vehicle_Thief_Inside_Clone>T2B_Tank_Captured</Vehicle_Thief_Inside_Clone>
 		<Tactical_Bribe_Cost>100</Tactical_Bribe_Cost>
@@ -1907,7 +1907,7 @@
 		<GUI_Bracket_Size>1</GUI_Bracket_Size>
 		<Weather_Category>Tracked</Weather_Category>
 		<Icon_Name>i_button_freerunner.tga</Icon_Name>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 		<Vehicle_Thief_Inside_Clone>T2B_Tank_Captured</Vehicle_Thief_Inside_Clone>
 		<Tactical_Bribe_Cost>100</Tactical_Bribe_Cost>
@@ -1992,7 +1992,7 @@
 		<!-- <Attack_Category_Restrictions> Infantry | Vehicle | LandHero | Structure </Attack_Category_Restrictions> -->
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>290.0</Targeting_Max_Attack_Distance>
-		<!--<Projectile_Types>Proj_Flak_Pod</Projectile_Types>
+		<!--<Projectile_Types>Proj_Heavy_Flak</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>3.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
@@ -2057,7 +2057,7 @@
 		<GUI_Bracket_Size>1</GUI_Bracket_Size>
 		<Weather_Category>Tracked</Weather_Category>
 		<Icon_Name>i_button_t1b.tga</Icon_Name>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 		<Tactical_Bribe_Cost>100</Tactical_Bribe_Cost>
 
@@ -2086,7 +2086,7 @@
 		<Scale_Factor>1.1</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Tracked</Type>
-		<Death_Projectiles>Proj_Heavy_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Heavy_Concussion_Missile</Death_Projectiles>
 		<Deploys>No</Deploys>
 		<Affiliation>Rebel</Affiliation>
 		<Political_Control>0</Political_Control>
@@ -2230,7 +2230,7 @@
 		<Scale_Factor>.8</Scale_Factor>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Tracked</Type>
-		<Death_Projectiles>Proj_Heavy_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Heavy_Concussion_Missile</Death_Projectiles>
 		<Deploys>No</Deploys>
 		<Affiliation>Rebel</Affiliation>
 		<Political_Control>0</Political_Control>
@@ -2408,7 +2408,7 @@
 		<Turret_Elevate_Extent_Degrees>20</Turret_Elevate_Extent_Degrees>
 		<Land_FOW_Reveal_Range>220.0</Land_FOW_Reveal_Range>
 		<Targeting_Max_Attack_Distance>200.0</Targeting_Max_Attack_Distance>
-		<Projectile_Types>Proj_Ground_Proton_Torpedo</Projectile_Types>
+		<Projectile_Types>Proj_Heavy_Proton_Missile</Projectile_Types>
 		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>

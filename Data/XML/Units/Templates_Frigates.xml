@@ -709,16 +709,6 @@
         <!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
         <!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
-		<Unit_Abilities_Data SubObjectList="Yes">
-        <Unit_Ability>
-	            <Type>TRACTOR_BEAM</Type>
-	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>Venator_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-	            <Recharge_Seconds>30</Recharge_Seconds>
-	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-				   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-	      </Unit_Ability>
-       </Unit_Abilities_Data>
 
 	    <Abilities SubObjectList="Yes">
 			<!-- <Tractor_Beam_Attack_Ability Name="Venator_Tractor_Beam_Attack_Ability">
@@ -902,16 +892,7 @@
         <Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
         <Score_Cost_Credits> 2250</Score_Cost_Credits>
 			
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<Unit_Ability>
-					<Type>TRACTOR_BEAM</Type>
-					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-					<GUI_Activated_Ability_Name>VSD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-					<Recharge_Seconds>30</Recharge_Seconds>
-					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-					   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
+
 			
 		<Abilities SubObjectList="Yes">
 				
@@ -1259,16 +1240,7 @@
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 		<Targeting_Priority_Set>Frigate</Targeting_Priority_Set>
 
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<Unit_Ability>
-				<Type>TRACTOR_BEAM</Type>
-	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>Bulwark_I_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-	            <Recharge_Seconds>30</Recharge_Seconds>
-	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-			</Unit_Ability>
-		</Unit_Abilities_Data>
+
 
 		<Abilities SubObjectList="Yes">
 			<Planet_Income_Bonus_Ability Name="Maintenance_Cost">

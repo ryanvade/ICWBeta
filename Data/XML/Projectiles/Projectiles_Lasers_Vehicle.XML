@@ -2,7 +2,7 @@
 <Projectiles>
 
 
-	<Projectile Name="Proj_Ground_Turbolaser_Green">
+	<Projectile Name="Proj_AV_Turbolaser_Green">
 		<Projectile_Texture_Slot>0,3</Projectile_Texture_Slot>
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_TURBO_GREEN.ALO</Land_Model_Name>
@@ -28,10 +28,10 @@
 		<Projectile_SFXEvent_Detonate>SFX_Land_Blaster_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 	</Projectile>
-	<Projectile Name="Proj_AT_AP">
+	<Projectile Name="Proj_Mass_Driver">
 		<Projectile_Texture_Slot>0,3</Projectile_Texture_Slot>
 		<Text_ID>TEXT_NONE</Text_ID>
-		<Land_Model_Name>PROJ_TURBO_GREEN.ALO</Land_Model_Name>
+		<Land_Model_Name>P_proton_blue.alo</Land_Model_Name>
 		<Scale_Factor>0.4</Scale_Factor>
 		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 		<Max_Speed>45.0</Max_Speed>
@@ -87,7 +87,7 @@
 	</Projectile>
 
 	
-		<Projectile Name="Proj_Ground_Kirov_Laser_Green">
+		<Projectile Name="Proj_VeryLight_AV_Blaster_Green">
 		<!-- used by empire AV turret -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Projectile_Custom_Render>1</Projectile_Custom_Render>
@@ -116,7 +116,7 @@
 	</Projectile>
 	
 	<!-- Ground Vehicle/Turret Projectiles USE THESE ONLY FOR GROUND VEHICLES OR TURRETS!!! -->
-	<Projectile Name="Proj_Blaster_Cannon_Green">
+	<Projectile Name="Proj_Light_AV_Blaster_Green">
 		<!-- used by pirate skiff -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_INF.ALO</Land_Model_Name>
@@ -174,7 +174,7 @@
 		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
 		<AI_Combat_Power>80</AI_Combat_Power>
 	</Projectile>
-	<Projectile Name="Proj_Blaster_Cannon_Red_T2B">
+	<Projectile Name="Proj_Light_AI_Blaster_Red">
 		<!-- used by T2B -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_INF.ALO</Land_Model_Name>
@@ -201,7 +201,7 @@
 		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<AI_Combat_Power>80</AI_Combat_Power>
 	</Projectile>
-	<Projectile Name="Proj_ATST_Blaster_Cannon_Red">
+	<Projectile Name="Proj_AOE_AI_Blaster_Red">
 		<!-- used by AT-ST -->
 		<Variant_Of_Existing_Type>Proj_Generic_Small_Red</Variant_Of_Existing_Type>
 		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
@@ -211,9 +211,9 @@
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<AI_Combat_Power>80</AI_Combat_Power>
 	</Projectile>
-	<Projectile Name="Proj_ATPT_Blaster_Cannon_Green">
+	<Projectile Name="Proj_AOE_AI_Blaster_Green">
 		<!-- used by AT-ST -->
-		<Variant_Of_Existing_Type>Proj_Blaster_Cannon_Green</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Proj_Light_AV_Blaster_Green</Variant_Of_Existing_Type>
 		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
 		<Projectile_Blast_Area_Range>25.0</Projectile_Blast_Area_Range>
 		<Projectile_Blast_Area_Damage>4.0</Projectile_Blast_Area_Damage>
@@ -235,7 +235,7 @@
 		<AI_Combat_Power>80</AI_Combat_Power>
 	</Projectile>
 
-	<Projectile Name="Proj_HRB_Cannon_Green">
+	<Projectile Name="Proj_AI_Blaster_Green">
 		<!-- used by empire anti-inf turret -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_INF.ALO</Land_Model_Name>
@@ -260,7 +260,7 @@
 		<Projectile_SFXEvent_Detonate>SFX_Land_Blaster_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> Unit_Projectile_Infantry_Ricochet </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 	</Projectile>
-	<Projectile Name="Proj_Mauler_Cannon_Green">
+	<Projectile Name="Proj_Heavy_AI_Blaster_Green">
 		<!-- used by tie mauler -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_INF.ALO</Land_Model_Name>
@@ -286,7 +286,7 @@
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 	</Projectile>
 
-	<Projectile Name="Proj_HRB_Cannon_Red">
+	<Projectile Name="Proj_AI_Blaster_Red">
 		<!-- used by rebel & pirate anti-inf turret -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_INF.ALO</Land_Model_Name>
@@ -311,7 +311,7 @@
 		<Projectile_SFXEvent_Detonate>SFX_Land_Blaster_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 	</Projectile>
-	<Projectile Name="Proj_Ground_Laser_Cannon_Red">
+	<Projectile Name="Proj_AV_Blaster_Red">
 		<!-- used by AT-AT & pirate / rebel anti-vech turret -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_G.ALO</Land_Model_Name>
@@ -339,7 +339,7 @@
 	</Projectile>
 
 
-	<Projectile Name="Proj_Air_Laser_Cannon_Red">
+	<Projectile Name="Proj_Air_AV_Blaster_Red">
 		<!-- used by AT-AT & pirate / rebel anti-vech turret -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_G.ALO</Land_Model_Name>
@@ -365,7 +365,7 @@
 		<Projectile_SFXEvent_Detonate>SFX_Land_Blaster_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 	</Projectile>
-	<Projectile Name="Proj_Air_Laser_Cannon_Green">
+	<Projectile Name="Proj_Air_AV_Blaster_Green">
 		<!-- used by AT-AT & pirate / rebel anti-vech turret -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_Green_G.ALO</Land_Model_Name>
@@ -392,11 +392,11 @@
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 	</Projectile>
 	<Projectile Name="Proj_Ground_Laser_Cannon_Red_DT3">
-		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Proj_AV_Blaster_Red</Variant_Of_Existing_Type>
 		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 	</Projectile>
 	<Projectile Name="Proj_Veers_AT_AT_Max_Power_Laser_Red">
-		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Proj_AV_Blaster_Red</Variant_Of_Existing_Type>
 		<Max_Speed>60.0</Max_Speed>
 		<!-- does more physical damage -->
 		<Projectile_Blast_Area_Damage> 40 </Projectile_Blast_Area_Damage>
@@ -406,39 +406,39 @@
 		<Projectile_Object_Armor_Reduced_Detonation_Particle>Veers_Maximum_Firepower_Explosion_Land</Projectile_Object_Armor_Reduced_Detonation_Particle>
 		<Projectile_Ground_Detonation_Particle>Veers_Maximum_Firepower_Explosion_Land</Projectile_Ground_Detonation_Particle>
 	</Projectile>
-	<Projectile Name="Proj_Snowspeeder_Laser_Cannon">
-		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
+	<Projectile Name="Proj_Air_AI_Blaster_Red">
+		<Variant_Of_Existing_Type>Proj_AV_Blaster_Red</Variant_Of_Existing_Type>
 		<Damage_Type>DamageL_AntiInfantryBlaster</Damage_Type>
 		<Projectile_Damage>15.0</Projectile_Damage>
 	</Projectile>
 	<Projectile Name="Proj_Ground_Laser_Cannon_Red_T4B">
-		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Proj_AV_Blaster_Red</Variant_Of_Existing_Type>
 		<Damage_Type> DamageL_AntiVehicleBlaster </Damage_Type>
 	</Projectile>
 		<Projectile Name="Proj_Ground_Laser_Cannon_Red_Xwing">
-		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Proj_AV_Blaster_Red</Variant_Of_Existing_Type>
 		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
 		<Projectile_Damage>40.0</Projectile_Damage>
 	</Projectile>
 			<Projectile Name="Proj_Ground_Laser_Cannon_Green_TIE">
-		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Proj_AV_Blaster_Red</Variant_Of_Existing_Type>
 		<Land_Model_Name>PROJ_LASER_GREEN_G.ALO</Land_Model_Name>
 		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
 		<Projectile_Damage>40.0</Projectile_Damage>
 	</Projectile>
-	<Projectile Name="Proj_Ground_Laser_Cannon_Red_ATAT">
-		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
+	<Projectile Name="Proj_Ground_SuperHeavy_AV_Blaster_Red">
+		<Variant_Of_Existing_Type>Proj_AV_Blaster_Red</Variant_Of_Existing_Type>
 		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
 		<Projectile_Object_Detonation_Particle>Large_LaserHit_Land</Projectile_Object_Detonation_Particle>
 		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_LaserHit_Land</Projectile_Object_Armor_Reduced_Detonation_Particle>
 		<Projectile_Damage>25.0</Projectile_Damage>
 	</Projectile>
 		<Projectile Name="Proj_Ground_Laser_Cannon_Red_Juggernaut">
-		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Proj_AV_Blaster_Red</Variant_Of_Existing_Type>
 		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
 		<Projectile_Damage>25.0</Projectile_Damage>
 	</Projectile>
-	<Projectile Name="Proj_Ground_AV_Turret_Laser_Green">
+	<Projectile Name="Proj_Heavy_AV_Blaster_Green">
 		<!-- used by empire AV turret -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_GREEN_G.ALO</Land_Model_Name>
@@ -464,7 +464,7 @@
 		<Projectile_SFXEvent_Detonate>SFX_Land_Blaster_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 	</Projectile>
-	<Projectile Name="Proj_Ground_AV_Turret_Laser_Blue">
+	<Projectile Name="Proj_Heavy_AV_Blaster_Blue">
 		<!-- used by empire AV turret -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_BLUE_G.ALO</Land_Model_Name>
@@ -490,7 +490,7 @@
 		<Projectile_SFXEvent_Detonate>SFX_Land_Blaster_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 	</Projectile>
-	<Projectile Name="Proj_Ground_AV_Turret_Laser_Red">
+	<Projectile Name="Proj_Heavy_AV_Blaster_Red">
 		<!-- used by Rebel AV turret -->
 		<Text_ID>TEXT_NONE</Text_ID>
 		<Land_Model_Name>PROJ_LASER_RED_G.ALO</Land_Model_Name>
@@ -517,7 +517,7 @@
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 	</Projectile>
 	<Projectile Name="Proj_M1_Laser_Cannon">
-		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Proj_AV_Blaster_Red</Variant_Of_Existing_Type>
 		<Projectile_Damage>9.0</Projectile_Damage>
 	</Projectile>
 	
@@ -631,7 +631,7 @@
 	</Projectile>
 	
 		<Projectile Name="Proj_Swamp_Speeder_Cannon_Red">
-		<Variant_Of_Existing_Type>Proj_Hand_Blaster_Red</Variant_Of_Existing_Type>
+		<Variant_Of_Existing_Type>Proj_Rifle_Red</Variant_Of_Existing_Type>
 		<Projectile_Damage>6.0</Projectile_Damage>
 	</Projectile>
 

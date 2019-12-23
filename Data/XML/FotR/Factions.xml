@@ -226,7 +226,7 @@
 
 		<!-- MusicEvents -->
 		<Strategic_Map_Music_Event> Galactic_Map_Rebel_Music_Event </Strategic_Map_Music_Event>
-		<Music_Event_Battle_Load_Screen> Tactical_Battle_Loading_Loop_Event </Music_Event_Battle_Load_Screen>
+		<Music_Event_Battle_Load_Screen> CIS_tactical_battle </Music_Event_Battle_Load_Screen>
 
 		<!-- ============================================= -->
 		<!-- REBEL WIN/LOSE MUSIC EVENTS                   -->
@@ -335,19 +335,19 @@
 		<!-- ============================================== -->
 		<!-- OBJECT SPOTTED ANNOUNCEMENTS	                -->
 		<!-- ============================================== -->
-
-		<SFXEvent_Unit_Type_Spotted>Generic_Field_Commander_Empire, Unit_Announce_E_Field_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
+										<!-- Spotting friendly forces-->
+										
 		<SFXEvent_Unit_Type_Spotted>Emperor_Palpatine,					Unit_Announce_Emperor_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
+		<SFXEvent_Unit_Type_Spotted>Dooku,								CIS_Spotting_Dooku</SFXEvent_Unit_Type_Spotted>
+		
+										<!-- Spotting hostile forces-->
+										
 		<SFXEvent_Unit_Type_Spotted>Yoda,								CIS_Spotting_yoda</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Republic_AT_TE_Walker,							CIS_Spotted_Republic_AT_TE_Walker</SFXEvent_Unit_Type_Spotted>
-		<SFXEvent_Unit_Type_Spotted>Generic_Field_Commander_Rebel,	Unit_Announce_R_Field_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
-		<SFXEvent_Unit_Type_Spotted>Dooku,								CIS_Spotting_Dooku</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Anakin,						CIS_Spotting_Anakin</SFXEvent_Unit_Type_Spotted>
-        <SFXEvent_Unit_Type_Spotted>Grand_Admiral_Thrawn,		        Unit_Announce_Thrawn_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
-        <SFXEvent_Unit_Type_Spotted>Generic_Executor,		Unit_Announce_Executor_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
-        <SFXEvent_Unit_Type_Spotted>Luke_Skywalker_Jedi,		        Unit_Announce_Luke_Rebel_Soldier</SFXEvent_Unit_Type_Spotted>
-		<SFXEvent_Unit_Type_Spotted>Generic_Interdictor_Cruiser,				Unit_Interdictor_Assault_Frigate</SFXEvent_Unit_Type_Spotted>
 
+										<!--Generic spotting of hostile forces-->
+										
 		<SFXEvent_Enemy_Spotted> CIS_spotted_republic </SFXEvent_Enemy_Spotted>
 
 		<Galactic_Advisor_Hints>
@@ -956,7 +956,7 @@
 
 		<!-- MusicEvents -->
 		<Strategic_Map_Music_Event> Galactic_Map_Empire_Music_Event </Strategic_Map_Music_Event>
-		<Music_Event_Battle_Load_Screen> Tactical_Battle_Loading_Loop_Event </Music_Event_Battle_Load_Screen>
+		<Music_Event_Battle_Load_Screen> REP_tactical_battle </Music_Event_Battle_Load_Screen>
 
 		<!-- ============================================== -->
 		<!-- EMPIRE WIN/LOSE MUSIC EVENTS                   -->

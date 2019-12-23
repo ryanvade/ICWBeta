@@ -24,6 +24,7 @@ require("trlib-std/class")
 require("trlib-std/ModContentLoader").get("GovernmentManager")
 require("trlib-galaxy/GalacticEvents")
 require("trlib-galaxy/Planet")
+require("trlib-galaxy/MissionManager")
 
 ---@class GalacticConquest
 GalacticConquest = class()
@@ -32,6 +33,7 @@ function GalacticConquest:new(player_agnostic_plot, playableFactions)
     self.HumanPlayer = self:FindHumanPlayerInTable(playableFactions)
 
     self.Governments = GovernmentManager()
+    self.Missions = MissionManager()
 
     self.Planets = self:GetPlanets()
     self:InitializeEvents(player_agnostic_plot)
@@ -66,6 +68,7 @@ function GalacticConquest:Update()
         for _, planet in pairs(self.Planets) do
             planet:update_influence_information()
         end
+        self.Missions:Update()
         self.LastCycleTime = current
     end
     self.Governments:Update()

@@ -147,7 +147,7 @@
 		<Energy_Capacity>999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
-		<!--<Projectile_Types>Proj_Blaster_Cannon_Green</Projectile_Types>
+		<!--<Projectile_Types>Proj_Light_AV_Blaster_Green</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>-->
@@ -174,7 +174,7 @@
 		<!-- LEAVE THIS FOR BARRAGE ABILITY -->
 
 
-		<Projectile_Types>Proj_Ground_Mortar_Light</Projectile_Types>
+		<Projectile_Types>Proj_Proton_Grenade</Projectile_Types>
 		<Fire_Weapon_When_In_Rocket_Attack_Mode>Yes</Fire_Weapon_When_In_Rocket_Attack_Mode>
 		<Fire_Weapon_When_In_Normal_Attack_Mode>No</Fire_Weapon_When_In_Normal_Attack_Mode>
 		<Projectile_Fire_Recharge_Seconds>3</Projectile_Fire_Recharge_Seconds>
@@ -549,6 +549,24 @@
 		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
 	</GroundVehicle>
 	
+	<GroundVehicle Name="Republic_Speeder_Bike">
+		<Variant_Of_Existing_Type>Template_Speeder_Bike</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_74-z_speeder_bike.ALO</Land_Model_Name>
+		<Icon_Name>i_button_scout_trooper.tga</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+	
+		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		
+		<Destruction_Survivors> Clone_Phase_One_No_Bike, 1.0 </Destruction_Survivors>
+	</GroundVehicle>
+	
 	<GroundCompany Name="Speeder_Bike_Squad">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_IMPERIAL_LIGHT_SCOUT_SQUAD</Text_ID>
@@ -575,7 +593,7 @@
 		<Formation_Priority>1</Formation_Priority>
 		<Is_Escort>yes</Is_Escort>
 		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
+		<Company_Transport_Unit>CR20_Landing_Craft_Light_Vehicles</Company_Transport_Unit>
 		<Company_Units>Republic_Speeder_Bike, Republic_Speeder_Bike</Company_Units>
 		<Company_Units>Republic_Speeder_Bike, Republic_Speeder_Bike</Company_Units>
 		<Max_Squad_Size> 1 </Max_Squad_Size>
@@ -617,6 +635,24 @@
 		<Population_Value>1</Population_Value>
 		<Score_Cost_Credits>150</Score_Cost_Credits>
 	</GroundCompany>
+	
+	<GroundVehicle Name="Republic_BARC_Speeder">
+		<Variant_Of_Existing_Type>Template_BARC_Speeder</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Land_Model_Name>rep_barc_speeder.ALO</Land_Model_Name>
+		<Icon_Name>i_button_barc_speeder.tga</Icon_Name>
+		
+		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		
+		<Destruction_Survivors> Clone_Phase_Two_No_Bike, 1.0 </Destruction_Survivors>
+	</GroundVehicle>
 	
 	<GroundCompany Name="BARC_Squad">
 		<LOD_Bias>5</LOD_Bias>
@@ -1242,7 +1278,7 @@
 		<Targeting_Max_Attack_Distance>1800.0</Targeting_Max_Attack_Distance>
 		<Targeting_Min_Attack_Distance> 350.0 </Targeting_Min_Attack_Distance>
 
-		<Projectile_Types>Proj_Ground_SPMAT_Grenade</Projectile_Types>
+		<Projectile_Types>Proj_Thermal_Grenade</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>8.333</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>

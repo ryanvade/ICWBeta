@@ -544,13 +544,77 @@
 	
 	<Initial_Grace_Period>
 		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Easy]}
-		* (200.0 + (20.0 * Variable_Human.PlanetsControlledUnnormalized))
+		* (200.0 
+			+ 
+			(40.0 * (3 # 5) * Variable_Self.IsFaction{Parameter_Faction = "Empire"})
+			+           
+			(40.0 * (3 # 5) * Variable_Self.IsFaction{Parameter_Faction = "Rebel"})
+			+           
+			(40.0 * (3 # 5) * Variable_Self.IsFaction{Parameter_Faction = "Underworld"})
+			+           
+			(40.0 * (3 # 5) * Variable_Self.IsFaction{Parameter_Faction = "Pirates"})
+			+            
+			(40.0 * (3 # 5) * Variable_Self.IsFaction{Parameter_Faction = "Hutts"})
+			+          
+			(40.0 * (3 # 5) * Variable_Self.IsFaction{Parameter_Faction = "Penstatar"})
+			+          
+			(40.0 * (3 # 5) * Variable_Self.IsFaction{Parameter_Faction = "Teradoc"})
+			+          
+			(40.0 * (3 # 5) * Variable_Self.IsFaction{Parameter_Faction = "Hutt_Cartels"})
+			+          
+			(40.0 * (3 # 5) * Variable_Self.IsFaction{Parameter_Faction = "SsiRuuvi_Imperium"})
+			+          
+			(40.0 * (3 # 5) * Variable_Self.IsFaction{Parameter_Faction = "Corporate_Sector"})
+			)
 		+
 		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Normal]}
-		* (40.0 + (10.0 * Variable_Human.PlanetsControlledUnnormalized))
+		* (
+			40.0 
+			+ 
+			(40.0 * (1 # 4) * Variable_Self.IsFaction{Parameter_Faction = "Empire"})
+			+            
+			(40.0 * (1 # 4) * Variable_Self.IsFaction{Parameter_Faction = "Rebel"})
+			+            
+			(40.0 * (1 # 4) * Variable_Self.IsFaction{Parameter_Faction = "Underworld"})
+			+            
+			(40.0 * (1 # 4) * Variable_Self.IsFaction{Parameter_Faction = "Pirates"})
+			+           
+			(40.0 * (1 # 4) * Variable_Self.IsFaction{Parameter_Faction = "Hutts"})
+			+            
+			(40.0 * (1 # 4) * Variable_Self.IsFaction{Parameter_Faction = "Penstatar"})
+			+           
+			(40.0 * (1 # 4) * Variable_Self.IsFaction{Parameter_Faction = "Teradoc"})
+			+           
+			(40.0 * (1 # 4) * Variable_Self.IsFaction{Parameter_Faction = "Hutt_Cartels"})
+			+            
+			(40.0 * (1 # 4) * Variable_Self.IsFaction{Parameter_Faction = "SsiRuuvi_Imperium"})
+			+            
+			(40.0 * (1 # 4) * Variable_Self.IsFaction{Parameter_Faction = "Corporate_Sector"})
+			)
 		+
 		Variable_Self.IsDifficulty{Parameter_Difficulty_Level_Type = DifficultyLevelType[Hard]}
-		* (10.0 + (5.0  * Variable_Human.PlanetsControlledUnnormalized))
+		* (10.0
+			+ 
+			(40.0 * (1 # 2) * Variable_Self.IsFaction{Parameter_Faction = "Empire"})
+			+            
+			(40.0 * (1 # 2) * Variable_Self.IsFaction{Parameter_Faction = "Rebel"})
+			+            
+			(40.0 * (1 # 2) * Variable_Self.IsFaction{Parameter_Faction = "Underworld"})
+			+            
+			(40.0 * (1 # 2) * Variable_Self.IsFaction{Parameter_Faction = "Pirates"})
+			+            
+			(40.0 * (1 # 2) * Variable_Self.IsFaction{Parameter_Faction = "Hutts"})
+			+            
+			(40.0 * (1 # 2) * Variable_Self.IsFaction{Parameter_Faction = "Penstatar"})
+			+            
+			(40.0 * (1 # 2) * Variable_Self.IsFaction{Parameter_Faction = "Teradoc"})
+			+            
+			(40.0 * (1 # 2) * Variable_Self.IsFaction{Parameter_Faction = "Hutt_Cartels"})
+			+            
+			(40.0 * (1 # 2) * Variable_Self.IsFaction{Parameter_Faction = "SsiRuuvi_Imperium"})
+			+            
+			(40.0 * (1 # 2) * Variable_Self.IsFaction{Parameter_Faction = "Corporate_Sector"})
+			)
 	</Initial_Grace_Period>
 
 

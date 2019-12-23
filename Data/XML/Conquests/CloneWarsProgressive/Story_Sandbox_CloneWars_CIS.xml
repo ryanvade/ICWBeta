@@ -319,6 +319,41 @@
 		<Prereq>GC_Start_Force_Level_Four</Prereq>
 		<Prereq>GC_Start_Force_Level_Five</Prereq>
 	</Event>
+	
+	<Event Name="Unlock_Bulwark_II_Forced">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Bulwark_II</Reward_Param1>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+	</Event>
+	
+	<Event Name="Unlock_Bulwark_Forced_AI">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>80</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Bulwark_I</Reward_Param1>
+		<Prereq>CIS_Enters_Tech_04</Prereq>
+		<Branch>Faction_Branch_Republic</Branch>
+	</Event>
+	
+	<Event Name="Unlock_Bulwark_II_Forced_AI">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>80</Event_Param1>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Bulwark_II</Reward_Param1>
+		<Prereq>CIS_Enters_Tech_04</Prereq>
+		<Branch>Faction_Branch_Republic</Branch>
+	</Event>
+	
+	<Event Name="Spawn_Ningo">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Dua_Ningo_Unrepentant</Reward_Param1>
+		<Reward_Param2>Empress</Reward_Param2>
+		<Prereq>Unlock_Bulwark_Forced</Prereq>
+		<Prereq>Unlock_Bulwark</Prereq>
+	</Event>
 
 
 </Story>

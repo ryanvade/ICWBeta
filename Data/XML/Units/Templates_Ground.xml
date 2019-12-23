@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <Templates_Ground>
 	<!-- These aren't actually templates so much as full units because the there are few reasons to separate them into variants -->
 	
@@ -19,12 +19,12 @@
 		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
 		<Required_Star_Base_Level>0</Required_Star_Base_Level>
 		<Required_Special_Structures>E_Ground_Barracks</Required_Special_Structures>
-		<Required_Planets/>
+		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
 		<Formation_Priority>1</Formation_Priority>
 		<Is_Escort>yes</Is_Escort>
 		<Ship_Class>infantry</Ship_Class>
-		<Company_Transport_Unit>Imperial_Landing_Craft_Troops</Company_Transport_Unit>
+		<Company_Transport_Unit>Imperial_Landing_Craft</Company_Transport_Unit>
 
 
 		<Max_Squad_Size>1</Max_Squad_Size>
@@ -43,7 +43,7 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
 		<Tactical_Build_Cost_Multiplayer>800</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
-		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
@@ -124,7 +124,7 @@
 		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
 		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
 		<Victory_Relevant>yes</Victory_Relevant>
-		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Projectile_Types>Proj_Rifle_Red</Projectile_Types>
 		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
 		<Ranged_Target_Z_Adjust>4.5</Ranged_Target_Z_Adjust>
 		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
@@ -251,7 +251,7 @@
 		<Energy_Capacity>999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
-		<!--<Projectile_Types>Proj_Blaster_Cannon_Green</Projectile_Types>
+		<!--<Projectile_Types>Proj_Light_AV_Blaster_Green</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>-->
@@ -319,7 +319,7 @@
             		<Unit_Ability>
                 		<Type>LASER_DEFENSE</Type>
                 		<Recharge_Seconds>30.0</Recharge_Seconds>
-                		<GUI_Activated_Ability_Name> ATPT_Laser_Defense </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+                		<GUI_Activated_Ability_Name> ATPT_Laser_Defense </GUI_Activated_Ability_Name> 
                 		<SFXEvent_GUI_Unit_Ability_Activated> Unit_Defense_On_Juggernaut </SFXEvent_GUI_Unit_Ability_Activated>
 				<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Defense_Off_Juggernaut </SFXEvent_GUI_Unit_Ability_Deactivated>
 				<Effective_Radius> 200.0 </Effective_Radius>
@@ -378,7 +378,7 @@
            		<Unit_Ability>
                 		<Type>LASER_DEFENSE</Type>
                 		<Recharge_Seconds>30.0</Recharge_Seconds>
-                		<GUI_Activated_Ability_Name> ATPT_Laser_Defense </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+                		<GUI_Activated_Ability_Name> ATPT_Laser_Defense </GUI_Activated_Ability_Name> 
                 		<SFXEvent_GUI_Unit_Ability_Activated> Unit_Defense_On_Juggernaut </SFXEvent_GUI_Unit_Ability_Activated>
 				<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Defense_Off_Juggernaut </SFXEvent_GUI_Unit_Ability_Deactivated>
 				<Effective_Radius> 200.0 </Effective_Radius>
@@ -554,7 +554,7 @@
 				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
 				<!-- We can block/redirect shots from the following units types: -->
 				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
-				<Applicable_Unit_Types/>
+				<Applicable_Unit_Types />
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
 			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L2_Bonus">
@@ -569,7 +569,7 @@
 				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
 				<!-- We can block/redirect shots from the following units types: -->
 				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
-				<Applicable_Unit_Types/>
+				<Applicable_Unit_Types />
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
 		</Abilities>
@@ -671,7 +671,7 @@
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Collidable_By_Projectile_Dead>No</Collidable_By_Projectile_Dead>
 
-		<!--<Projectile_Types>Proj_AT_AP</Projectile_Types>
+		<!--<Projectile_Types>Proj_Mass_Driver</Projectile_Types>
 		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.8</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>6</Projectile_Fire_Recharge_Seconds>
@@ -972,7 +972,7 @@
 		<Political_Control>0</Political_Control>
 		<Ranking_In_Category>6</Ranking_In_Category>
 		<Max_Speed>2.50</Max_Speed>
-		<Death_Projectiles>Proj_Med_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Concussion_Missile</Death_Projectiles>
 		<Movement_Animation_Speed> 2.30 </Movement_Animation_Speed>
 		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn>
 		<Space_Layer> Land </Space_Layer>
@@ -998,13 +998,13 @@
 		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
 		<Remove_Upon_Death>true</Remove_Upon_Death>
 		<Ranged_Target_Z_Adjust>12.0</Ranged_Target_Z_Adjust>
-		<Armor_Type> ArmourG_LightVehicle </Armor_Type>
+		<Armor_Type> ArmourG_MediumVehicle </Armor_Type>
 		<Shield_Armor_Type>ShieldG_LightVehicle</Shield_Armor_Type>
 		<Size_Value>70</Size_Value>
 		<Damage>13</Damage>
 		<Sensor_Range>80</Sensor_Range>
-		<Shield_Points>50</Shield_Points>
-		<Tactical_Health>90</Tactical_Health>
+		<Shield_Points>75</Shield_Points>
+		<Tactical_Health>120</Tactical_Health>
 		<Shield_Refresh_Rate>10</Shield_Refresh_Rate>
 		<Energy_Capacity>999</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
@@ -1084,7 +1084,7 @@
 		<Influences_Capture_Point> False </Influences_Capture_Point>
 		<Tactical_Bribe_Cost>125</Tactical_Bribe_Cost>
 
-		<!--<Projectile_Types>Proj_IFX_BLUE_LASER</Projectile_Types>
+		<!--<Projectile_Types>Proj_AV_Blaster_Blue</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
@@ -1120,7 +1120,7 @@
 				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
 				<!-- We can block/redirect shots from the following units types: -->
 				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
-				<Applicable_Unit_Types/>
+				<Applicable_Unit_Types />
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
 			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L2_Bonus">
@@ -1135,7 +1135,7 @@
 				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
 				<!-- We can block/redirect shots from the following units types: -->
 				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
-				<Applicable_Unit_Types/>
+				<Applicable_Unit_Types />
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
 		</Abilities>
@@ -1239,7 +1239,7 @@
 		<Damage>8</Damage>
 		<Autoresolve_Health>40.0</Autoresolve_Health>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>450</Tactical_Health>
+		<Tactical_Health>400</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>1000</Energy_Capacity>
 		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
@@ -1461,7 +1461,7 @@
       <Garrison_Bone_Names>Garrison_00, Garrison_01, Garrison_02, Garrison_03</Garrison_Bone_Names>
 
 		<Tactical_Bribe_Cost>1100</Tactical_Bribe_Cost>
-		<Lua_Script></Lua_Script>
+		<Lua_Script />
 
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
@@ -1636,7 +1636,7 @@
       <Garrison_Bone_Names>GARRISON_00</Garrison_Bone_Names>
 
 		<Tactical_Bribe_Cost>1100</Tactical_Bribe_Cost>
-		<Lua_Script></Lua_Script>
+		<Lua_Script />
 
 		<!-- Non-Hero unit abilities description -->
 		<Unit_Abilities_Data SubObjectList="Yes">
@@ -1680,11 +1680,11 @@
 	<GroundVehicle Name="A6_Juggernaut_Death_Clone">
 		<Variant_Of_Existing_Type>A6_Juggernaut</Variant_Of_Existing_Type>
 		<Land_Model_Name>a6_juggernaut_dc.alo</Land_Model_Name>
-		<Specific_Death_Anim_Type/>
+		<Specific_Death_Anim_Type />
 		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
 		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
 		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
-		<Death_Projectiles>Proj_Heavy_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Heavy_Concussion_Missile</Death_Projectiles>
 		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
 		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
 		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
@@ -1746,7 +1746,7 @@
 		<Damage>1</Damage>
 		<Sensor_Range>20</Sensor_Range>
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>6</Tactical_Health>
+		<Tactical_Health>4</Tactical_Health>
 		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>0</Energy_Capacity>
 		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
@@ -1890,7 +1890,7 @@
 		<Size_Value>75</Size_Value>
 
 		<Armor_Type> ArmourG_Droid </Armor_Type>
-
+		<Shield_Armor_Type>ShieldG_Infantry</Shield_Armor_Type>
 		<Damage>6</Damage>
 		<Shield_Points>60</Shield_Points>
 		<Tactical_Health>20</Tactical_Health>
@@ -1900,7 +1900,7 @@
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Autoresolve_Health>375</Autoresolve_Health>
 
-		<!-- <Projectile_Types>Proj_Dekalzr</Projectile_Types>
+		<!-- <Projectile_Types>Proj_Droideka</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>0.1</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
@@ -2025,7 +2025,7 @@
 		<UnitCollisionClass> Vehicle </UnitCollisionClass>
 		<OverrideAcceleration> .025 </OverrideAcceleration>
 		<OverrideDeceleration> .05 </OverrideDeceleration>
-		<Death_Projectiles>Proj_Light_Vehicle</Death_Projectiles>
+		<Death_Projectiles>Proj_Light_Concussion_Missile</Death_Projectiles>
 		<FormationSpacing> 0.8 </FormationSpacing>
 		<FormationOrder> 3 </FormationOrder>
 		<FormationGrouping> Standard </FormationGrouping>
@@ -2070,7 +2070,7 @@
 		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
-		<!--<Projectile_Types> Proj_Mauler_Cannon_Green </Projectile_Types>
+		<!--<Projectile_Types> Proj_Heavy_AI_Blaster_Green </Projectile_Types>
 		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>0.0</Projectile_Fire_Recharge_Seconds>
@@ -2082,7 +2082,7 @@
 		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>-->
 		<CategoryMask> Vehicle | AntiInfantry</CategoryMask>
-		<Icon_Name/>
+		<Icon_Name />
 		<MovementClass>Tracked</MovementClass>
 		<OccupationStyle>1x1</OccupationStyle>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -2155,7 +2155,7 @@
 				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
 				<!-- We can block/redirect shots from the following units types: -->
 				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
-				<Applicable_Unit_Types/>
+				<Applicable_Unit_Types />
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
 			<Redirect_Blaster_Ability Name="EL_Light_Reflective_Armor_L2_Bonus">
@@ -2170,7 +2170,7 @@
 				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
 				<!-- We can block/redirect shots from the following units types: -->
 				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
-				<Applicable_Unit_Types/>
+				<Applicable_Unit_Types />
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
 		</Abilities>
@@ -2219,7 +2219,7 @@
 		<Targeting_Fire_Inaccuracy_Fixed_Radius> 5 </Targeting_Fire_Inaccuracy_Fixed_Radius>
 
 		<!--<Projectile_Damage>8.0</Projectile_Damage>
-		<Projectile_Types>Proj_Hailfire</Projectile_Types>
+		<Projectile_Types>Proj_Proton_Missile</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
@@ -2327,7 +2327,7 @@
 		<Death_Clone>Damage_Normal, Medium_Explosion_Land</Death_Clone>
 	</GroundVehicle>
 	
-	<GroundInfantry Name="Republic_Speeder_Bike">
+	<GroundInfantry Name="Template_Speeder_Bike">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_UNIT_SCOUT_TROOPER</Text_ID>
 		<!--<Encyclopedia_Good_Against> Rebel_Trooper MPTL MZ8_Pulse_Cannon_Tank </Encyclopedia_Good_Against>-->
@@ -2361,7 +2361,7 @@
 		<Movement_Animation_Speed> 3.0 </Movement_Animation_Speed>
 		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
 		<FormationOrder> 1 </FormationOrder>
-		<Scale_Factor>1.44</Scale_Factor>
+		<Scale_Factor>1.22</Scale_Factor>
 		<CanCellStack>yes</CanCellStack>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Hover</Type>
@@ -2387,7 +2387,7 @@
 		<Targeting_Max_Attack_Distance>150.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
 		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
-		<!--<Projectile_Types>Proj_Blaster_Cannon_Green</Projectile_Types>
+		<!--<Projectile_Types>Proj_Light_AV_Blaster_Green</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
@@ -2464,7 +2464,7 @@
 		</Unit_Abilities_Data>
 	</GroundInfantry>
 	
-	<GroundInfantry Name="Republic_BARC_Speeder">
+	<GroundInfantry Name="Template_BARC_Speeder">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_UNIT_BARC_SPEEDER</Text_ID>
 		<!--<Encyclopedia_Good_Against> Rebel_Trooper MPTL MZ8_Pulse_Cannon_Tank </Encyclopedia_Good_Against>-->
@@ -2499,7 +2499,7 @@
 		<Movement_Animation_Speed> 3.0 </Movement_Animation_Speed>
 		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
 		<FormationOrder> 1 </FormationOrder>
-		<Scale_Factor>1.44</Scale_Factor>
+		<Scale_Factor>1.22</Scale_Factor>
 		<CanCellStack>yes</CanCellStack>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Hover</Type>
@@ -2525,7 +2525,7 @@
 		<Targeting_Max_Attack_Distance>150.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
 		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
-		<!--<Projectile_Types>Proj_Blaster_Cannon_Green</Projectile_Types>
+		<!--<Projectile_Types>Proj_Light_AV_Blaster_Green</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
@@ -2539,7 +2539,6 @@
 		<Wind_Disturbance_Strength>10</Wind_Disturbance_Strength>
 		<Wind_Disturbance_Sphere_Alpha>0.4</Wind_Disturbance_Sphere_Alpha>
 		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
-		<Destruction_Survivors> Clone_Phase_Two, 1.0 </Destruction_Survivors>
 		
 		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
@@ -2684,7 +2683,7 @@
 		
 		<Text_ID>TEXT_STRUCTURE_TURRET_AA</Text_ID>
 
-		<Tactical_Health>200</Tactical_Health>
+		<Tactical_Health>100</Tactical_Health>
 		<Tactical_Sell_Credits> 600 </Tactical_Sell_Credits>
 
 		<Damage>20</Damage>
@@ -2731,7 +2730,7 @@
 		
 		<Text_ID>TEXT_STRUCTURE_TURRET_AI</Text_ID>
 
-		<Tactical_Health>300</Tactical_Health>
+		<Tactical_Health>150</Tactical_Health>
 		<Tactical_Sell_Credits> 400 </Tactical_Sell_Credits>
 
 		<Scale_Factor> 1.0 </Scale_Factor> 
@@ -2787,7 +2786,7 @@
 		<Damage_Type> Damage_AV_Turret </Damage_Type>
 		
 		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>300</Tactical_Health>
+		<Tactical_Health>150</Tactical_Health>
 		<Tactical_Sell_Credits> 500 </Tactical_Sell_Credits>
 
 		<Energy_Capacity>999</Energy_Capacity>
@@ -3050,7 +3049,7 @@
 
 		<Ranged_Target_Z_Adjust>8.0</Ranged_Target_Z_Adjust>
 		
-		<!--<Projectile_Types>Proj_Flak_Pod_Green</Projectile_Types>-->
+		<!--<Projectile_Types>Proj_Flak_Green</Projectile_Types>-->
 		
 		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
 
@@ -3070,7 +3069,7 @@
 		<Icon_Name>i_button_r_anti_aircraft.tga</Icon_Name>
 
 		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
-		<!-- <Projectile_Types>Proj_Flak_Pod_Red</Projectile_Types> -->
+		<!-- <Projectile_Types>Proj_Flak_Red</Projectile_Types> -->
 		
 		<Target_Bones> TURRET_00 </Target_Bones>
 		<Hardpoints>
@@ -3097,7 +3096,7 @@
 		<Land_Model_Name>EB_INFANTRYTURRET.ALO</Land_Model_Name>
 		<Icon_Name>i_button_e_anti_infantry.tga</Icon_Name>
 
-		<!-- Projectile_Types>Proj_HRB_Cannon_Green</Projectile_Types> -->
+		<!-- Projectile_Types>Proj_AI_Blaster_Green</Projectile_Types> -->
 		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
 
 		<!-- <Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
@@ -3132,7 +3131,7 @@
 		
 		<Scale_Factor>1.3</Scale_Factor>
 
-		<!-- <Projectile_Types>Proj_HRB_Cannon_Red</Projectile_Types>
+		<!-- <Projectile_Types>Proj_AI_Blaster_Red</Projectile_Types>
 
 		<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Vehicle, 30.0 </Targeting_Fire_Inaccuracy>
@@ -3166,7 +3165,7 @@
 		<Land_Model_Name>EB_VEHICLETURRET.ALO</Land_Model_Name>
 		<Icon_Name>i_button_e_anti_vehicle.tga</Icon_Name>
 
-		<!-- <Projectile_Types>Proj_Ground_AV_Turret_Laser_Green</Projectile_Types> -->
+		<!-- <Projectile_Types>Proj_Heavy_AV_Blaster_Green</Projectile_Types> -->
 		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
 
 		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
@@ -3196,7 +3195,7 @@
 		
 		<Scale_Factor>1.0</Scale_Factor>
 
-		<!-- <Projectile_Types>Proj_Ground_AV_Turret_Laser_Red</Projectile_Types> -->
+		<!-- <Projectile_Types>Proj_Heavy_AV_Blaster_Red</Projectile_Types> -->
 		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
 
 		<!-- <Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
@@ -3267,7 +3266,7 @@
 		<Tactical_Health>700</Tactical_Health>
 		<Energy_Capacity>500</Energy_Capacity>
 		<Energy_Refresh_Rate>40</Energy_Refresh_Rate>
-		<!-- <Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types> -->
+		<!-- <Projectile_Types>Proj_AV_Turbolaser_Green</Projectile_Types> -->
 		
 		<Target_Bones> ALT0, P_SMOKE_TINY01_ALT3 </Target_Bones>
 		

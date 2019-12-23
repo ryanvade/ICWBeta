@@ -295,7 +295,7 @@
 			<Unit_Ability>
 				<Type>FORCE_WHIRLWIND</Type>
 				<Recharge_Seconds>25.0</Recharge_Seconds>
-				<GUI_Activated_Ability_Name> Lanu_Force_Whirlwind </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<GUI_Activated_Ability_Name> Lanu_Force_Whirlwind </GUI_Activated_Ability_Name> 
 				<Effective_Radius> 500.0 </Effective_Radius>
 				<Spawned_Object_Type> Force_Whirlwind_Particles </Spawned_Object_Type>
 				<Supports_Autofire>True</Supports_Autofire>
@@ -608,18 +608,6 @@
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
 		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player> 
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		
-		<Unit_Abilities_Data SubObjectList="Yes">
-	      <!-- Primary ability -->
-	      <Unit_Ability>
-	            <Type>TRACTOR_BEAM</Type>
-	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name> SD_Tractor_Beam_Attack_Ability </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-	            <Recharge_Seconds>20</Recharge_Seconds>
-	            <SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
-					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-	      </Unit_Ability>
-	   </Unit_Abilities_Data>
 
 	   <Abilities SubObjectList="Yes">
 	   
@@ -1642,7 +1630,7 @@
 		
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
-		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Projectile_Types>Proj_Rifle_Red</Projectile_Types>
         	<Damage_Type>Damage_Wookiee</Damage_Type>
 		<Projectile_Damage>9.0</Projectile_Damage>
 		<Projectile_Fire_Recharge_Seconds>0.8</Projectile_Fire_Recharge_Seconds>

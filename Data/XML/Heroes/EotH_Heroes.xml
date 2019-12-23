@@ -132,7 +132,7 @@
 
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
-		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Projectile_Types>Proj_Rifle_Red</Projectile_Types>
         <Damage_Type>Damage_Wookiee</Damage_Type>
 		<Projectile_Damage>30.0</Projectile_Damage>
 		<Projectile_Fire_Recharge_Seconds>0.8</Projectile_Fire_Recharge_Seconds>
@@ -211,7 +211,7 @@
 			<Unit_Ability>
 				<Type>AREA_EFFECT_STUN</Type>
 				<Recharge_Seconds>40.0</Recharge_Seconds>
-				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
 				<Spawned_Object_Type> Proj_Special_Han_Solo_Stun_Blast </Spawned_Object_Type>
 				<Supports_Autofire>True</Supports_Autofire>
 			</Unit_Ability>
@@ -1497,14 +1497,14 @@
 		<!-- Hero abilities for Commander Stent added to ship; Hero "moveable" unit removed -->
 
 		<Unit_Abilities_Data SubObjectList="Yes">
-				<Unit_Ability>
+				<!--<Unit_Ability>
 					<Type>TRACTOR_BEAM</Type>
 					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-					<GUI_Activated_Ability_Name>Ascendancy_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+					<GUI_Activated_Ability_Name>Ascendancy_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> 
 					<Recharge_Seconds>30</Recharge_Seconds>
 					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-				</Unit_Ability>
+				</Unit_Ability>-->
 	   </Unit_Abilities_Data>
 		
 		<Abilities SubObjectList="Yes">
@@ -1743,14 +1743,14 @@
 				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
 
-			<Unit_Ability>
+	<!-- 		<Unit_Ability>
 					<Type>TRACTOR_BEAM</Type>
 					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-					<GUI_Activated_Ability_Name>VSD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+					<GUI_Activated_Ability_Name>VSD_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> 
 					<Recharge_Seconds>30</Recharge_Seconds>
 					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 					   <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-			</Unit_Ability>
+			</Unit_Ability> -->
 
 		</Unit_Abilities_Data>
 
@@ -1943,14 +1943,14 @@
 				<CategoryMask> Capital |  AntiFrigate | SpaceHero </CategoryMask>
 
 		<Unit_Abilities_Data SubObjectList="Yes">
-				<Unit_Ability>
+<!-- 				<Unit_Ability>
 					<Type>TRACTOR_BEAM</Type>
 					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-					<GUI_Activated_Ability_Name>Syndic_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+					<GUI_Activated_Ability_Name>Syndic_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> 
 					<Recharge_Seconds>30</Recharge_Seconds>
 					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-				</Unit_Ability>
+				</Unit_Ability> -->
 		</Unit_Abilities_Data>
 
 		<Abilities SubObjectList="Yes">

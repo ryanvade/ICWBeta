@@ -417,16 +417,16 @@
 		<Targeting_Max_Attack_Distance>20.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
-		<SFXEvent_Select>Unit_Select_Luke_Land</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Luke_Land</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke_Land</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Luke_Land</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Luke_Land</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Group_Move_Luke_Land</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Group_Attack_Luke_Land</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Luke_Land </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Luke_Land </SFXEvent_Health_Critical_Warning>
-		<Death_SFXEvent_Start_Die> Unit_Defeat_Luke_Land </Death_SFXEvent_Start_Die>   
+		<SFXEvent_Select>Unit_Select_Magnaguard</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Magnaguard</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Magnaguard</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Magnaguard</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Magnaguards</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Move_Magnaguard</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Attack_Magnaguard</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Magnaguard </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Magnaguard </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Magnaguard </Death_SFXEvent_Start_Die>   
 
 		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
 		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
@@ -509,8 +509,8 @@
 		<GUI_Velocity>45</GUI_Velocity>
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_ST</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_ST</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_Magnaguard</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Magnaguard</SFXEvent_Fleet_Move>
 		<Score_Cost_Credits>150</Score_Cost_Credits>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -869,7 +869,7 @@
        			<Unit_Ability>
 				<Type>FORCE_CONFUSE</Type>
 				<Recharge_Seconds>40.0</Recharge_Seconds>
-				<GUI_Activated_Ability_Name> Sora_Bulq_Confuse </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<GUI_Activated_Ability_Name> Sora_Bulq_Confuse </GUI_Activated_Ability_Name> 
 				<Effective_Radius> 500.0 </Effective_Radius>
 				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Confuse_Obi_Wan </SFXEvent_GUI_Unit_Ability_Activated>
 				<Supports_Autofire>True</Supports_Autofire>
@@ -1255,7 +1255,7 @@
 			<Unit_Ability>
 				<Type>FORCE_WHIRLWIND</Type>
 				<Recharge_Seconds>25.0</Recharge_Seconds>
-				<GUI_Activated_Ability_Name> SevRance_Force_Whirlwind </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<GUI_Activated_Ability_Name> SevRance_Force_Whirlwind </GUI_Activated_Ability_Name> 
 				<Effective_Radius> 500.0 </Effective_Radius>
 				<Spawned_Object_Type> Force_Whirlwind_Particles </Spawned_Object_Type>
 				<Supports_Autofire>True</Supports_Autofire>
@@ -2276,7 +2276,7 @@
 			<Unit_Ability>
 				<Type>FORCE_WHIRLWIND</Type>
 				<Recharge_Seconds>25.0</Recharge_Seconds>
-				<GUI_Activated_Ability_Name> Ventress_Force_Whirlwind </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<GUI_Activated_Ability_Name> Ventress_Force_Whirlwind </GUI_Activated_Ability_Name> 
 				<Effective_Radius> 500.0 </Effective_Radius>
 				<Spawned_Object_Type> Force_Whirlwind_Particles </Spawned_Object_Type>
 				<Supports_Autofire>True</Supports_Autofire>
@@ -2615,15 +2615,19 @@
 		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy>
 		
-				<SFXEvent_Select>Unit_Select_Jerec</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Jerec</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Move_Jerec</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Jerec</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Move_Jerec</SFXEvent_Guard>
-		<SFXEvent_Announce>Unit_Select_Jerec</SFXEvent_Announce>
-		<SFXEvent_Group_Move>Unit_Move_Jerec</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Attack_Jerec</SFXEvent_Group_Attack>
-		<Death_SFXEvent_Start_Die> Unit_Defeat_Jerec </Death_SFXEvent_Start_Die>
+					<!-- Count Dooku VO -->
+				
+		<SFXEvent_Select>Unit_Select_Dooku</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Dooku</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dooku</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Dooku</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Dooku</SFXEvent_Guard>
+		<SFXEvent_Announce>Unit_Select_Dooku</SFXEvent_Announce>
+		<SFXEvent_Group_Move>Unit_Group_Move_Dooku</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Dooku</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Dooku </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Dooku </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Dooku </Death_SFXEvent_Start_Die>
 		
 
 		
@@ -2687,14 +2691,14 @@
 			<Unit_Ability>
 				<Type>FORCE_LIGHTNING</Type>
 				<Recharge_Seconds>20.0</Recharge_Seconds>
-				<GUI_Activated_Ability_Name> Dooku_Force_Lightning </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<GUI_Activated_Ability_Name> Dooku_Force_Lightning </GUI_Activated_Ability_Name> 
 				<SFXEvent_Target_Ability>  </SFXEvent_Target_Ability> 
 			</Unit_Ability>
 
 			<Unit_Ability>
 				<Type>AREA_EFFECT_CONVERT</Type>
 				<Recharge_Seconds>90.0</Recharge_Seconds>
-				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
 				<Spawned_Object_Type> Proj_Special_Emperor_Instant_Dark_Side_Corrupt_Blast </Spawned_Object_Type>
 				<SFXEvent_Target_Ability>  </SFXEvent_Target_Ability>  
 			</Unit_Ability>
@@ -2914,14 +2918,14 @@
 			<Unit_Ability>
 				<Type>FORCE_LIGHTNING</Type>
 				<Recharge_Seconds>20.0</Recharge_Seconds>
-				<GUI_Activated_Ability_Name> Dooku_Force_Lightning </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<GUI_Activated_Ability_Name> Dooku_Force_Lightning </GUI_Activated_Ability_Name> 
 			</Unit_Ability>
 
 			<!-- Secondary ability -->
 			<Unit_Ability>
 				<Type>AREA_EFFECT_CONVERT</Type>
 				<Recharge_Seconds>20.0</Recharge_Seconds>
-				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
 				<Spawned_Object_Type> Proj_Special_Emperor_Instant_Dark_Side_Corrupt_Blast </Spawned_Object_Type>
 			</Unit_Ability>
 		</Unit_Abilities_Data>

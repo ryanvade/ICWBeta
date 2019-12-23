@@ -1109,6 +1109,7 @@ GameObjectLibrary = {
        ["TECHNO_UNION_MARAUDER_MISSILE_CRUISER"] = {
             Scripts = {
                 "MultiLayer",
+                "FighterSpawn",
                 "SingleUnitRetreat"
             },
             Fighters = {
@@ -1291,18 +1292,10 @@ GameObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters = {
-                ["MANKVIM_SQUADRON"] = {
-                    ["DEFAULT"] = {
-                        Reserve = 0,
-                        Initial = 2,
-                        TechLevel = GreaterThan(2)
-                    }
-                },
                 ["NANTEX_SQUADRON"] = {
                     ["DEFAULT"] = {
                         Reserve = 0,
-                        Initial = 2,
-                        TechLevel = LessOrEqualTo(2)
+                        Initial = 2
                     }
                 }
             }
@@ -1313,18 +1306,10 @@ GameObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters = {
-                ["MANKVIM_SQUADRON"] = {
-                    ["DEFAULT"] = {
-                        Reserve = 0,
-                        Initial = 2,
-                        TechLevel = GreaterThan(2)
-                    }
-                },
                 ["NANTEX_SQUADRON"] = {
                     ["DEFAULT"] = {
                         Reserve = 0,
-                        Initial = 2,
-                        TechLevel = LessOrEqualTo(2)
+                        Initial = 2
                     }
                 }
             }
@@ -1335,13 +1320,6 @@ GameObjectLibrary = {
                 "FighterSpawn"
             },
             Fighters = {
-                ["MANKVIM_SQUADRON"] = {
-                    ["DEFAULT"] = {
-                        Reserve = 0,
-                        Initial = 2,
-                        TechLevel = GreaterThan(2)
-                    }
-                },
                 ["NANTEX_SQUADRON"] = {
                     ["DEFAULT"] = {
                         Reserve = 0,
@@ -1358,19 +1336,43 @@ GameObjectLibrary = {
             },
             Fighters = {
                 ["TWIN_ION_ENGINE_STARFIGHTER_SQUADRON"] = {
-                    ["DEFAULT"] = {
+                    ["EMPIRE"] = {
                         Reserve = 0,
                         Initial = 2,
                         TechLevel = GreaterThan(2)
                     }
                 },
                 ["Z95_HEADHUNTER_SQUADRON"] = {
-                    ["DEFAULT"] = {
+                    ["EMPIRE"] = {
                         Reserve = 0,
                         Initial = 2,
                         TechLevel = LessOrEqualTo(2)
                     }
-                }
+                },
+                ["NANTEX_SQUADRON"] = {
+                    ["REBEL"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    },
+                    ["PENTASTAR"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    },
+                    ["TERADOC"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    }					
+                },
+                ["TRIFIGHTER_SQUADRON"] = {
+                    ["PIRATES"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    },
+                    ["HUTTS"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    }					
+                }				
             }
         },
         ["EMPIRE_GOLAN_TWO"] = {
@@ -1380,19 +1382,43 @@ GameObjectLibrary = {
             },
             Fighters = {
                 ["TWIN_ION_ENGINE_STARFIGHTER_SQUADRON"] = {
-                    ["DEFAULT"] = {
+                    ["EMPIRE"] = {
                         Reserve = 0,
                         Initial = 2,
                         TechLevel = GreaterThan(2)
                     }
                 },
                 ["Z95_HEADHUNTER_SQUADRON"] = {
-                    ["DEFAULT"] = {
+                    ["EMPIRE"] = {
                         Reserve = 0,
                         Initial = 2,
                         TechLevel = LessOrEqualTo(2)
                     }
-                }
+                },
+                ["NANTEX_SQUADRON"] = {
+                    ["REBEL"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    },
+                    ["PENTASTAR"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    },
+                    ["TERADOC"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    }					
+                },
+                ["TRIFIGHTER_SQUADRON"] = {
+                    ["PIRATES"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    },
+                    ["HUTTS"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    }					
+                }				
             }
         },
         ["EMPIRE_GOLAN_ONE"] = {
@@ -1402,19 +1428,43 @@ GameObjectLibrary = {
             },
             Fighters = {
                 ["TWIN_ION_ENGINE_STARFIGHTER_SQUADRON"] = {
-                    ["DEFAULT"] = {
+                    ["EMPIRE"] = {
                         Reserve = 0,
                         Initial = 2,
                         TechLevel = GreaterThan(2)
                     }
                 },
                 ["Z95_HEADHUNTER_SQUADRON"] = {
-                    ["DEFAULT"] = {
+                    ["EMPIRE"] = {
                         Reserve = 0,
                         Initial = 2,
                         TechLevel = LessOrEqualTo(2)
                     }
-                }
+                },
+                ["NANTEX_SQUADRON"] = {
+                    ["REBEL"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    },
+                    ["PENTASTAR"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    },
+                    ["TERADOC"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    }					
+                },
+                ["TRIFIGHTER_SQUADRON"] = {
+                    ["PIRATES"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    },
+                    ["HUTTS"] = {
+                        Reserve = 0,
+                        Initial = 2
+                    }					
+                }				
             }
         }		
     }

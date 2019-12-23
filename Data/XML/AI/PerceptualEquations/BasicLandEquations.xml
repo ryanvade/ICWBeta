@@ -582,6 +582,8 @@
 			+
 			5 * clamp( (500 / (Variable_Target.DistanceToNearestFriendly + 1)), 0, 1)
 			+
+			20.0 * (1 - Variable_Self.IsDefender) * Variable_Target.Type.IsType {Parameter_Type = "Victory_Point"}
+			+
 			0.1
 		)		
 		*
@@ -846,6 +848,14 @@
 		Variable_Self.IsDefender
 		*
 		Variable_Target.AdditionalPopulationCapacity
+		+
+		20.0
+		*
+		Game.IsCampaignGame
+		*
+		Variable_Self.IsDefender
+		*
+		Variable_Target.Type.IsType {Parameter_Type = "Victory_Point"}
 		+
 		10.0
 		*

@@ -145,16 +145,7 @@
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
-		<Unit_Abilities_Data SubObjectList="Yes">
-			<Unit_Ability>
-					<Type>TRACTOR_BEAM</Type>
-					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-					<GUI_Activated_Ability_Name>Oto_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-					<Recharge_Seconds>30</Recharge_Seconds>
-					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-			</Unit_Ability>
-       </Unit_Abilities_Data>
+
 	   
 	   <Abilities SubObjectList="Yes">
 			<Force_Healing_Ability Name="Trade_Facility_Self_Repair">
@@ -311,15 +302,7 @@
 				<Alternate_Description_Text>TEXT_ABILITY_ROTATE_DESCRIPTION</Alternate_Description_Text>
 				<Alternate_Icon_Name>I_SA_ASSAULT.TGA</Alternate_Icon_Name>
 			</Unit_Ability>
-			
-			<Unit_Ability>
-					<Type>TRACTOR_BEAM</Type>
-					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-					<GUI_Activated_Ability_Name>Visvia_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-					<Recharge_Seconds>30</Recharge_Seconds>
-					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-			</Unit_Ability>
+
 	    </Unit_Abilities_Data>
 		
 		<Abilities SubObjectList="Yes">
@@ -546,7 +529,7 @@
 		<Death_Clone>Damage_Normal, Small_Explosion_Space</Death_Clone>
 
 
-<Projectile_Types>Proj_IFX_BLUE_LASER</Projectile_Types>
+<Projectile_Types>Proj_AV_Blaster_Blue</Projectile_Types>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
@@ -3135,14 +3118,7 @@
 				<SFXEvent_GUI_Unit_Ability_Deactivated />
 			</Unit_Ability>
 
-			<Unit_Ability>
-				<Type>TRACTOR_BEAM</Type>
-	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>Phalanx_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-	            <Recharge_Seconds>30</Recharge_Seconds>
-	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-			</Unit_Ability>
+
 
 	   </Unit_Abilities_Data>
 
@@ -3392,36 +3368,6 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		<Population_Value>24</Population_Value>
 
-			<Unit_Abilities_Data SubObjectList="Yes">
-	     	<Unit_Ability>
-				<Type>TURBO</Type>
-
-				<Expiration_Seconds>0</Expiration_Seconds>
-				<Recharge_Seconds>60</Recharge_Seconds>
-				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
-				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
-				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
-				<Mod_Multiplier>SPEED_MULTIPLIER,		0.01f</Mod_Multiplier>
-
-				<Alternate_Name_Text>TEXT_ABILITY_RETREAT</Alternate_Name_Text>
-				<Alternate_Description_Text>TEXT_ABILITY_RETREAT_DESCRIPTION</Alternate_Description_Text>
-				<Alternate_Icon_Name>I_SA_FORCE_CONFUSE.TGA</Alternate_Icon_Name>
-				<SFXEvent_GUI_Unit_Ability_Activated></SFXEvent_GUI_Unit_Ability_Activated>
-				<SFXEvent_GUI_Unit_Ability_Activated>RHD_Retreat_Started_Space</SFXEvent_GUI_Unit_Ability_Activated>
-				<SFXEvent_GUI_Unit_Ability_Deactivated />
-			</Unit_Ability>
-
-			<Unit_Abilities_Data SubObjectList="Yes">
-				<Unit_Ability>
-					<Type>TRACTOR_BEAM</Type>
-					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-					<GUI_Activated_Ability_Name>Intego_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-					<Recharge_Seconds>30</Recharge_Seconds>
-					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-				</Unit_Ability>
-			</Unit_Abilities_Data>
-	   </Unit_Abilities_Data>
 
 
 		<Abilities SubObjectList="Yes">
@@ -3652,7 +3598,7 @@
 				<Unit_Ability>
 					<Type>TRACTOR_BEAM</Type>
 					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-					<GUI_Activated_Ability_Name>Syndic_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+					<GUI_Activated_Ability_Name>Syndic_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> 
 					<Recharge_Seconds>30</Recharge_Seconds>
 					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
 					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
@@ -3865,14 +3811,6 @@
 				<SFXEvent_GUI_Unit_Ability_Deactivated />
 			</Unit_Ability>
 
-				<Unit_Ability>
-					<Type>TRACTOR_BEAM</Type>
-					<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-					<GUI_Activated_Ability_Name>Ascendancy_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-					<Recharge_Seconds>30</Recharge_Seconds>
-					<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-				</Unit_Ability>
 	   </Unit_Abilities_Data>
 
 		<Space_Full_Stop_Command> Yes </Space_Full_Stop_Command>
@@ -4141,14 +4079,6 @@
 				<SFXEvent_GUI_Unit_Ability_Deactivated />			        
 			</Unit_Ability>
 
-			<Unit_Ability>
-				<Type>TRACTOR_BEAM</Type>
-	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
-	            <GUI_Activated_Ability_Name>Peltast_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
-	            <Recharge_Seconds>30</Recharge_Seconds>
-	            <SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
-				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
-			</Unit_Ability>
 
 	   </Unit_Abilities_Data>
 
