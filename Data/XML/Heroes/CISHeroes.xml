@@ -1436,7 +1436,7 @@
 		<Required_Special_Structures></Required_Special_Structures>
 		<Required_Planets></Required_Planets>
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Company_Transport_Unit>Hardcell_Landing_Craft</Company_Transport_Unit>
+		<Company_Transport_Unit>SevRance_Ginivex</Company_Transport_Unit>
 		<Company_Units>SevRance</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
@@ -1468,6 +1468,43 @@
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 	</HeroCompany>
+
+	<UniqueUnit Name="SevRance_Ginivex">
+		<Variant_Of_Existing_Type>Ginivex</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_SEVRANCE</Text_ID>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_TRAIT_FORCESENSITIVE TEXT_TOOLTIP_BIO TEXT_HERO_SEVRANCE_DESCRIPTION  </Encyclopedia_Text>
+
+		<Icon_Name>i_button_sevrance.tga</Icon_Name>
+
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+
+		<Armor_Type> Armor_Hero_Transport </Armor_Type>
+
+		<Shield_Points>56</Shield_Points>
+		<Tactical_Health>224</Tactical_Health>
+	
+		<SFXEvent_Select>Unit_Select_Mara_Jade</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Mara_Jade</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mara_Jade</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Mara_Jade</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Mara_Jade</SFXEvent_Guard>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Mara_Jade </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Mara_Jade </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Mara_Jade </Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Fire>Unit_X_Wing_Fire</SFXEvent_Fire>
+		<SFXEvent_Ambient_Moving> Unit_X_Wing_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_X_Wing_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<CategoryMask> Fighter | SpaceHero | AntiFighter | AntiBomber </CategoryMask>
+		<Victory_Relevant>yes</Victory_Relevant>
+
+		<Landing_Transport_Variant>Hardcell_Landing_Craft</Landing_Transport_Variant>
+
+	</UniqueUnit>
 	
 	<UniqueUnit Name="Tonith_Corpulentus">
 		<Variant_Of_Existing_Type>Generic_Lucrehulk</Variant_Of_Existing_Type>
@@ -2506,18 +2543,14 @@
 		<Shield_Points>64</Shield_Points>
 		<Tactical_Health>232</Tactical_Health>
 	
-		<SFXEvent_Select>Unit_Select_Luke</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Luke</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Luke</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Luke</SFXEvent_Guard>
-		<SFXEvent_Assist_Move>Unit_Assist_Move_Luke </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack>Unit_Assist_Attack_Luke </SFXEvent_Assist_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Luke </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Luke </SFXEvent_Health_Critical_Warning>
-		<SFXEvent_Enemy_Health_Low_Warning> Unit_Enemy_Health_Low_Luke </SFXEvent_Enemy_Health_Low_Warning>
-		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Enemy_Health_Critical_Luke </SFXEvent_Enemy_Health_Critical_Warning>		
-		<SFXEvent_Unit_Lost> Unit_Defeat_Luke </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Unit_Select_Mara_Jade</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Mara_Jade</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mara_Jade</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Mara_Jade</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Mara_Jade</SFXEvent_Guard>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Mara_Jade </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Mara_Jade </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Mara_Jade </Death_SFXEvent_Start_Die>
 
 		<SFXEvent_Fire>Unit_X_Wing_Fire</SFXEvent_Fire>
 		<SFXEvent_Ambient_Moving> Unit_X_Wing_Fly_By </SFXEvent_Ambient_Moving>
