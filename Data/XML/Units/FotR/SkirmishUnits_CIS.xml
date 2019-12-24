@@ -101,7 +101,7 @@
 		
 		
 			   		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>3600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>1600</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>RC_Level_TWo_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
@@ -109,6 +109,25 @@
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 
 	</SpaceUnit>
+
+	<SpaceUnit Name="Skirmish_Hardcell">
+		<Variant_Of_Existing_Type>Hardcell</Variant_Of_Existing_Type>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR,POWERED, SHIELDED,   SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<Lua_Script></Lua_Script>
+		<Tech_Level>99</Tech_Level>
+		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>
+		
+
+			   		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+
+	</SpaceUnit>	
+
 	<SpaceUnit Name="Skirmish_Bulwark_I">
 		<Variant_Of_Existing_Type>Bulwark_I</Variant_Of_Existing_Type>
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR,POWERED, SHIELDED,   SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
@@ -302,6 +321,43 @@
 		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
 
 	</SpaceUnit>	
+
+	<SpaceUnit Name="Skirmish_Captor">
+		<Variant_Of_Existing_Type>Captor</Variant_Of_Existing_Type>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR,POWERED, SHIELDED,   SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<Lua_Script></Lua_Script>
+		<Tech_Level>99</Tech_Level>
+		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>
+		
+
+			   		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>2700</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>16</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+
+	</SpaceUnit>
+
+	<SpaceUnit Name="Skirmish_Auxilia">
+		<Variant_Of_Existing_Type>Auxilia</Variant_Of_Existing_Type>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR,POWERED, SHIELDED,   SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
+		<Lua_Script></Lua_Script>
+		<Tech_Level>99</Tech_Level>
+		<Space_FOW_Reveal_Range>2800.0</Space_FOW_Reveal_Range>
+		
+
+			   		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>16</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+
+	</SpaceUnit>		
+
 	<SpaceUnit Name="Skirmish_Lucrehulk">
 		<Variant_Of_Existing_Type>Generic_Lucrehulk</Variant_Of_Existing_Type>
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR,POWERED, SHIELDED,   SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
