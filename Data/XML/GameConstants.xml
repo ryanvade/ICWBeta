@@ -36,7 +36,7 @@
 
 	<!-- GameObjectType and Hard Point Max Health multiplier factors per mode: 1.0 = no change, 0.5 = half, 2.0 = double, etc. -->
 	<Object_Max_Health_Multiplier_Space> 2.8 </Object_Max_Health_Multiplier_Space> <!-- AI  changed from 3 and 2 respectively -->
-	<Object_Max_Health_Multiplier_Land> 2.4 </Object_Max_Health_Multiplier_Land>
+	<Object_Max_Health_Multiplier_Land> 1.0 </Object_Max_Health_Multiplier_Land>
 
 	<Use_Neutral_UI_Color>true</Use_Neutral_UI_Color>
 	<Neutral_UI_Color>150, 150, 150, 255</Neutral_UI_Color>
@@ -786,7 +786,7 @@
 		 -Oksana   -->
 
 	<Damage_Types>
-	
+		Damage_Default,
 		<!-- TR Rework Ground Damage Types -->
 		DamageL_InfantryBlaster,
 		DamageL_AntiInfantryBlaster,
@@ -811,7 +811,6 @@
 		DamageS_GTSIon,
 		DamageS_SeismicCharge,		
 		<!-- Base Game Residual Damage Types -->
-		Damage_Default,
 		Damage_ATST,
 		Damage_ATAT,
 		Damage_Fighter,
@@ -930,6 +929,7 @@
 	 -->
 	<Armor_Types>
 		<!--TR Rework Ground Armour Types -->
+		Armor_Default,
 		ShieldG_Infantry,
 		ShieldG_LightVehicle,
 		ShieldG_HeavyVehicle,
@@ -962,7 +962,6 @@
 		ArmourS_SuperCapital,
 		
 		<!-- Base Game Residual Armour Types -->
-		Armor_Default,
 		Shield_Default,
         Shield_Capital,
         Shield_Frigate,
