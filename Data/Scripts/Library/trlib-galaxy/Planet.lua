@@ -18,6 +18,10 @@ function Planet:new(name, human_player)
     ---@private
     self.human_player = human_player
 
+    self.weeksControlled = 0
+
+    self.oldOwner = Find_Player("Neutral")
+
     ---@private
     self.activeBonusTexts = {}
 
@@ -156,8 +160,28 @@ function Planet:update_influence_information()
 
     local oldInfluence = self.ownerInfluence
 
+
+
     if self:get_owner() ~= Find_Player("Neutral") then
         self.ownerInfluence = 3
+
+        self.newOwner = self:get_owner()
+
+        if self.newOwner == self.oldOwner then
+            self.weeksControlled =  self.weeksControlled + 1
+        else
+            self.weeksControlled = 0
+        end
+
+        if self.weeksControlled >= 25 then 
+            self.ownerInfluence = self.ownerInfluence + 1
+        end
+        if self.weeksControlled >= 15 then 
+            self.ownerInfluence = self.ownerInfluence + 1
+        end
+        if self.weeksControlled >= 5 then 
+            self.ownerInfluence = self.ownerInfluence + 1
+        end
 
         if EvaluatePerception("Planet_Has_Capital_Building", self:get_owner(), self.gameObject) == 1 then
             self.ownerInfluence = self.ownerInfluence + 3
@@ -231,6 +255,12 @@ function Planet:update_influence_information()
 
         if self.ownerInfluence <= 0 then
             self.ownerInfluence = 1
+        end
+
+        self.oldOwner = self:get_owner()
+
+        if self:get_owner() ~= Find_Player("Neutral") then
+            self.gameObject.Attach_Particle_Effect("Display_Influence_" .. tostring(self.ownerInfluence))
         end
 
         self:apply_loyalty_modifiers()

@@ -21,7 +21,6 @@ function GameMod:new()
         GalacticEventsNewsSource(
         self.galactic_conquest.Events.PlanetOwnerChanged,
         self.galactic_conquest.Events.GalacticHeroKilled,
-        self.galactic_conquest.Governments.NRGOV.Events.ElectionHeld,
         self.galactic_conquest.Events.IncomingFleet
     )
 
@@ -45,19 +44,7 @@ function GameMod:new()
 
     self.category_filter = CategoryFilter(plot, self.galactic_conquest, self.ai_dummy_handler)
 
-    -- self:mod_specific_setup()
-
     Create_Thread("TransactionManagerThread")
-end
-
----@public
-function GameMod:mod_specific_setup()
-    DebugMessage("No mod specific setup")
-end
-
----@protected
-function GameMod:mod_specific_update()
-    DebugMessage("No mod specific components to update")
 end
 
 function GameMod:update()
@@ -65,7 +52,6 @@ function GameMod:update()
     self.category_filter:Update()
     self.ai_dummy_handler:update()
     self.galactic_display:update_components()
-    self:mod_specific_update()
 end
 
 function TransactionManagerThread()
@@ -76,3 +62,5 @@ function TransactionManagerThread()
         Sleep(1)
     end
 end
+
+return GameMod

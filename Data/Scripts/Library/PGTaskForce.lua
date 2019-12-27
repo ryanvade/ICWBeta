@@ -534,7 +534,7 @@ function GalacticAttackAllowed(difficulty, ai_territories_just_gained)
 		-- Difficulty will dictate aggressiveness and amount of contrived breathing room the AI gives for free
 		min_player_wins_unresponded = 8
 		max_player_wins_unresponded = 10
-		max_ai_attacks_allowed = 2
+		max_ai_attacks_allowed = 1
 		if difficulty == "Normal" then
 			min_player_wins_unresponded = 2
 			max_player_wins_unresponded = 4

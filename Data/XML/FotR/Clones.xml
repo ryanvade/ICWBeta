@@ -4,7 +4,7 @@
 	<GroundInfantry Name="Clone_Phase_One">
 		<LOD_Bias>5</LOD_Bias>
 		<Text_ID>TEXT_UNIT_PHASE_ONE</Text_ID>
-		<Land_Model_Name>clone_phase1.ALO</Land_Model_Name>
+		<Land_Model_Name>clone_phase1_legions.ALO</Land_Model_Name>
 		
 		<Behavior>SELECTABLE</Behavior>
 		<LandBehavior>SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
@@ -16,10 +16,13 @@
 		<Icon_Name>I_BUTTON_CLONE_P1.tga</Icon_Name>
 		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier, High_Ground</SurfaceFX_Name>
 		<Garrison_Category> Infantry </Garrison_Category>
+		<Land_Model_Anim_Override_Name>clone_phase1.ALO</Land_Model_Anim_Override_Name>
 		
 		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
         
 		<HardPoints> HP_Clone_DC15</HardPoints>
+		
+		<Lua_Script>CloneLegionFinder</Lua_Script>
 
 		
 		<Movement_Animation_Speed>0.8</Movement_Animation_Speed>
@@ -43,7 +46,7 @@
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Type>Walk</Type>
 		<Deploys>No</Deploys>
-		<Affiliation>Empire</Affiliation>
+		<Affiliation>Empire, Hostile</Affiliation>
 		<!--<Is_Sprite>No</Is_Sprite>-->
 		<Political_Control>0</Political_Control>
 		<Size_Value>10</Size_Value>
@@ -82,16 +85,17 @@
   		<Turret_Targets_Anything_Else>4</Turret_Targets_Anything_Else>
 		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
 
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
+		<SFXEvent_Select>Unit_Select_clonetrooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_clonetrooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_clonetrooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_clonetrooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_clonetrooper</SFXEvent_Guard>
 		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>
-		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
 		
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<Death_SFXEvent_Start_Die>Unit_Death_clonetrooper</Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_clonetrooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_clonetrooper </SFXEvent_Assist_Attack>
 
 		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
 		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
@@ -111,7 +115,7 @@
         <Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
 		<Is_Squashable> Yes </Is_Squashable>
 		<Create_Team>Yes</Create_Team>
-		<AI_Combat_Power>7</AI_Combat_Power>
+		<AI_Combat_Power>3</AI_Combat_Power>
 
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 		<Targeting_Priority_Set>AvoidAntiInfantryTurrets</Targeting_Priority_Set>
@@ -179,7 +183,7 @@
 	
 	<GroundInfantry Name="Clone_Phase_One_Plex">
 		<Variant_Of_Existing_Type>Clone_Phase_One</Variant_Of_Existing_Type>
-		<Land_Model_Name>heavy_clone_phase1.ALO</Land_Model_Name>
+		<Land_Model_Name>heavy_clone_phase1_legions.ALO</Land_Model_Name>
 		<Icon_Name>I_BUTTON_CLONE_P1.tga</Icon_Name>
 
 		<HardPoints>HP_RPS_Hand</HardPoints>
@@ -276,7 +280,7 @@
 		<Damage>18</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health> <!-- changed to reflect the real health of the units-->
 		<Affiliation>Empire</Affiliation>
-		<Build_Cost_Credits>60</Build_Cost_Credits>
+		<Build_Cost_Credits>200</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -521,7 +525,7 @@
 		<Damage>18</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health> <!-- changed to reflect the real health of the units-->
 		<Affiliation>Empire</Affiliation>
-		<Build_Cost_Credits>60</Build_Cost_Credits>
+		<Build_Cost_Credits>200</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -885,7 +889,7 @@
 		<!-- Placeholder events for Frank -->
 		<Is_Squashable> Yes </Is_Squashable>
 		<Create_Team>No</Create_Team>
-		<AI_Combat_Power>11.3</AI_Combat_Power>
+		<AI_Combat_Power>9</AI_Combat_Power>
 		<Idle_Chase_Range>50.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
@@ -968,7 +972,7 @@
 		<Damage>8</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Empire</Affiliation>
-		<Build_Cost_Credits>100</Build_Cost_Credits>
+		<Build_Cost_Credits>200</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1044,6 +1048,7 @@
 		<Icon_Name>I_BUTTON_CLONE_ARC_P2.tga</Icon_Name>
 		<Land_Model_Anim_Override_Name>clone_phase1.ALO</Land_Model_Anim_Override_Name>
 		<HardPoints> HP_Clone_DC15</HardPoints>
+		<AI_Combat_Power>10</AI_Combat_Power>
 	</GroundInfantry>
 	
 	<GroundInfantry Name="ARC_Phase_Two_Plex">

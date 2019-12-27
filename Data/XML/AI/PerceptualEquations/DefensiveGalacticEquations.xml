@@ -252,6 +252,55 @@
 		+
 		Function_Recent_Conflict_Space.Evaluate * Function_Self_Present.Evaluate * Function_Is_Connected_To_Enemy.Evaluate
 	</Space_Priority_Defense_Score>
+	
+	<CIS_Ground_Priority_Defense_Score>
+		(
+			Variable_Target.Hints.Chokepoint
+			+
+			Variable_Target.Hints.PriorityTarget
+			+
+			Function_GenericPlanetValue.Evaluate
+			+
+			2.0 * Variable_Target.IsConnectedTo{Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+			+
+			2.0 * (Variable_Target.TradeRoutes - Variable_Target.ActiveTradeRoutes)
+			+
+			Variable_Target.HasStructure {Parameter_Type = "E_Ground_Base_Shield", Parameter_Type = "R_Ground_Base_Shield",
+											Parameter_Type = "E_Galactic_Turbolaser_Tower_Defenses", Parameter_Type = "R_Galactic_Turbolaser_Tower_Defenses",
+											Parameter_Type = "U_Galactic_Turbolaser_Tower_Defenses", Parameter_Type = "Y_Galactic_Turbolaser_Tower_Defenses"}
+			+
+			2.0 * Function_Recent_Conversion.Evaluate * Function_Self_Present.Evaluate * Function_Is_Connected_To_Enemy.Evaluate
+			+
+			Function_Recent_Conflict_Ground.Evaluate * Function_Self_Present.Evaluate * Function_Is_Connected_To_Enemy.Evaluate
+			+
+			Function_Recent_Conflict_Space.Evaluate * Function_Self_Present.Evaluate * Function_Is_Connected_To_Enemy.Evaluate
+			+
+			2.0 * Function_Planet_Has_Capital_Building.Evaluate
+		)
+		*
+		Function_Can_Park_Ground_Unit.Evaluate
+	</CIS_Ground_Priority_Defense_Score>
+
+	
+	<CIS_Space_Priority_Defense_Score>
+		Variable_Target.Hints.Chokepoint
+		+
+		Variable_Target.Hints.PriorityTarget
+		+
+		2.0 * Variable_Target.IsConnectedTo{Parameter_Faction = "Empire", Parameter_Attenuator = 0.0}
+		+
+		2.0 * (Variable_Target.TradeRoutes - Variable_Target.ActiveTradeRoutes)
+		+
+		Function_GenericPlanetValue.Evaluate
+		+
+		Variable_Target.HasStructure {Parameter_Type = "Ground_Ion_Cannon", Parameter_Type = "Ground_Empire_Hypervelocity_Gun", Parameter_Type = "Ground_Pentastar_Hypervelocity_Gun"}
+		+
+		2.0 * Function_Planet_Has_Capital_Building.Evaluate
+		+
+		2.0 * Function_Recent_Conversion.Evaluate * Function_Self_Present.Evaluate * Function_Is_Connected_To_Enemy.Evaluate
+		+
+		Function_Recent_Conflict_Space.Evaluate * Function_Self_Present.Evaluate * Function_Is_Connected_To_Enemy.Evaluate
+	</CIS_Space_Priority_Defense_Score>
 
 	
 	<Ground_Staging_Planet>

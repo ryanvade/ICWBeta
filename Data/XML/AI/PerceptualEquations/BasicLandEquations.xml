@@ -572,6 +572,8 @@
 				+
 				10 * Script_TargetHasProperty.Evaluate{Parameter_Script_String = "IsRushTarget"}
 				* (Variable_Self.ReinforcementsUnnormalized > 0) * (1 - Variable_Self.UnitSpaceAvailable)
+				+
+				20.0 * Variable_Target.Type.IsType {Parameter_Type = "Victory_Point"}
 			)
 		)
 		*
@@ -582,7 +584,7 @@
 			+
 			5 * clamp( (500 / (Variable_Target.DistanceToNearestFriendly + 1)), 0, 1)
 			+
-			20.0 * (1 - Variable_Self.IsDefender) * Variable_Target.Type.IsType {Parameter_Type = "Victory_Point"}
+			20.0 * (1.0 - Variable_Self.IsDefender) * Variable_Target.Type.IsType {Parameter_Type = "Victory_Point"}
 			+
 			0.1
 		)		
