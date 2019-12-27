@@ -52,7 +52,7 @@ end
 
 function Accumulate_Observer()
 
-	while human.Get_Credits() < target do
+	while human.Get_Credits() <= 25000 do
 		Sleep(1)
 	end	
 

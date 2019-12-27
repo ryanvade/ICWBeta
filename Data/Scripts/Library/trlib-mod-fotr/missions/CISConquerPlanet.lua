@@ -61,11 +61,9 @@ function Conquer_Observer_CIS()
 	event.Clear_Dialog_Text()
 	event.Add_Dialog_Text("TEXT_INTERVENTION_REWARD", reward_unit, reward_count) 
 
-	republic = Find_Player("Empire")
-
-	republic = Find_Player("Empire")
+	cis = Find_Player("Rebel")
 	spawn_list_reward = { "Auxilia" , "Auxilia", "Auxilia", "Auxilia" }
-	SpawnList(spawn_list_reward, reward_location, republic, true, false)
+	SpawnList(spawn_list_reward, reward_location, cis, true, false)
 
 	currentSupport = GlobalValue.Get("TechnoApprovalRating")
 	GlobalValue.Set("TechnoApprovalRating", currentSupport + 5)

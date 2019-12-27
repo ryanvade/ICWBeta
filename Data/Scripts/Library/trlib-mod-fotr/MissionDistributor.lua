@@ -13,12 +13,14 @@ function MissionDistributor:new(player_agnostic_plot)
     self.cis = Find_Player("Rebel")
     self.republic = Find_Player("Empire")
  
+    -- Universal Missions
     self.AccumulateMission = MissionAccumulate()
     
-
+    -- CIS-Specific Missions
     self.CISConquerPlanet = MissionCISConquerPlanet()
     self.CISBuildShipyardsMission = MissionCISBuildShipyards()
     
+    -- Republic-Specific Missions
     self.RepConquerPlanet = MissionRepConquerPlanet()
     self.RepBuildShipyardsMission = MissionRepBuildShipyards()
 
@@ -39,7 +41,7 @@ function MissionDistributor:Assign()
 
     elseif self.cis.Is_Human() then
         self.missionChoice = GameRandom(1,3)
-          self.AccumulateMission:begin()
+        
         if self.missionChoice == 1 then
             self.AccumulateMission:begin()
         elseif self.missionChoice == 2 then
