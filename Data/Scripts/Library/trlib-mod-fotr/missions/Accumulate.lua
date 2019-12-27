@@ -59,12 +59,7 @@ function Accumulate_Observer()
 	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Accumulate_Credits_Agnostic.xml")
 	Story_Event("CREDITS_ACCUMULATED")
 
-	reward_location = StoryUtil.FindFriendlyPlanet(Find_Player(human))
-
-	event.Set_Dialog(dialog)
-	event.Clear_Dialog_Text()
-	event.Add_Dialog_Text("TEXT_INTERVENTION_REWARD", reward_unit, reward_count) 
-
+	reward_location = StoryUtil.FindFriendlyPlanet(human)
 
 	if cis.Is_Human() then
 
