@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Campaigns>
+
+<!-- ******************************************************************** -->
+<!-- *************** SANDBOX CAMPAIGN "Corporate Acquistions" *********** -->
+<!-- ******************************************************************** -->
+
+
+
+	<Campaign Name="Sandbox_CSA_Rebel">
+		<Campaign_Set>Sandbox_CSA</Campaign_Set>
+		
+		<Sort_Order>14</Sort_Order>
+		
+		<Text_ID> TEXT_CAMPAIGN_SINGLE_CSA </Text_ID>
+        <Description_Text> TEXT_CAMPAIGN_SINGLE_DESCRIPTION_CSA </Description_Text>
+
+        <Camera_Shift_X> 40.0 </Camera_Shift_X>
+        <Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+        <Camera_Distance> 1200.0 </Camera_Distance>
+		
+		<Locations>
+			Galaxy_Core_Art_Model, 
+			Atchorb,
+			Bonadan,
+			Desevro,
+			Dromund,
+			Emmer,
+			Ession,
+			Etti_IV,
+			Felucia,
+			Galidraan,
+			Hast,
+			Kalla,
+			Lianna,
+			Maryo,
+			MonCalimari,
+			Mytus,
+			NespisVIII,
+			NewAlderaan,
+			Orron,
+			Oslumpex,
+			Raxus,
+			Raxus_Second,
+			Saffalore,
+			Ulicia,
+		</Locations>
+		<Trade_Routes>
+			Atchorb_Bonadan,
+			Atchorb_Etti,
+			Atchorb_Mytus,
+			Atchorb_Ulicia,
+			Bonadan_Saffalore,
+			Bonadan_Ulicia,
+			Desevro_Emmer,
+			Desevro_Ession,
+			Desevro_Felucia,
+			Desevro_Lianna,
+			Desevro_Raxus,
+			Dromund_Felucia,
+			Emmer_Ession,
+			Ession_Etti,
+			Ession_Kalla,
+			Ession_Maryo,
+			Ession_Saffalore,
+			Felucia_Lianna,
+			Galidraan_Lianna,
+			Hast_MonCal,
+			Hast_Orron,
+			Kalla_Oslumpex,
+			Lianna_Nespis,
+			MonCal_NewAlderaan,
+			Nespis_NewAlderaan,
+			Orron_Saffalore,
+			Orron_Raxus_Second,
+			Oslumpex_Saffalore,
+			Raxus_Raxus_Second
+		</Trade_Routes>
+
+		<Home_Location> Rebel, MonCalimari </Home_Location>
+        <Home_Location> Empire, Emmer </Home_Location>
+		<Home_Location> Pirates, Desevro </Home_Location>
+		<Home_Location> Corporate_Sector, Etti_IV </Home_Location>
+
+        <Starting_Active_Player> Rebel </Starting_Active_Player>
+		
+		<Rebel_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Rebel.xml</Rebel_Story_Name>
+        <Empire_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Empire.xml</Empire_Story_Name>
+		<Underworld_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Container.xml</Underworld_Story_Name>
+
+		
+		<AI_Player_Control> Rebel, SandboxHuman </AI_Player_Control>
+		<AI_Player_Control> Empire, SmallGCAI </AI_Player_Control>
+		<AI_Player_Control> Pirates, SmallGCAI </AI_Player_Control>
+		<AI_Player_Control> Corporate_Sector, SmallGCAI </AI_Player_Control>
+		
+		<AI_Player_Control> Pentastar, None</AI_Player_Control>
+		<AI_Player_Control> Underworld, None </AI_Player_Control>
+		
+		<AI_Player_Control> Hapes_Consortium, None </AI_Player_Control>
+		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
+		<AI_Player_Control> Hutts, None </AI_Player_Control>				
+		<AI_Player_Control> Warlords, None </AI_Player_Control>				
+
+		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Underworld, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Pirates, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Teradoc, DefaultMaldroodHints </Markup_Filename>			
+		<Markup_Filename>Pentastar, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
+		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
+		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
+		<Markup_Filename>Hapes_Consortium, DefaultGalacticHints </Markup_Filename>
+		
+		
+		
+		<Supports_Custom_Settings>True</Supports_Custom_Settings>
+		<Show_Completed_Tab>True</Show_Completed_Tab>
+
+		<!-- Win Conditions -->
+
+		<Human_Victory_Conditions>
+				Galactic_All_Planets_Controlled
+		</Human_Victory_Conditions>
+
+		<AI_Victory_Conditions>
+				Galactic_All_Planets_Controlled
+		</AI_Victory_Conditions>
+		
+		<Starting_Credits> Rebel,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
+		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
+		
+		<!-- MonCalimari Land Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, NewRep_Senate </Starting_Forces>
+				
+		<Starting_Credits> Empire,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Empire, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Empire, 3 </Max_Tech_Level>
+		
+		<Starting_Forces> Empire, Emmer, Placement_Dummy</Starting_Forces>
+		
+		<Starting_Credits> Pirates,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Pirates, 2 </Max_Tech_Level>
+		
+		<Starting_Forces> Pirates, Desevro, Placement_Dummy</Starting_Forces>
+		
+		<Starting_Credits> Corporate_Sector,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Corporate_Sector, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Corporate_Sector, 5 </Max_Tech_Level>
+		
+		<!-- Etti_IV Land Forces -->
+		<Starting_Forces> Corporate_Sector, Etti_IV, CSA_LocalOffice </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Etti_IV, CSA_Capital </Starting_Forces>
+		
+
+	</Campaign>
+
+	<Campaign Name="Sandbox_CSA_CSA">
+		<Campaign_Set>Sandbox_CSA</Campaign_Set>
+		
+		<Sort_Order>14</Sort_Order>
+		
+		<Text_ID> TEXT_CAMPAIGN_SINGLE_CSA </Text_ID>
+        <Description_Text> TEXT_CAMPAIGN_SINGLE_DESCRIPTION_CSA </Description_Text>
+
+        <Camera_Shift_X> 40.0 </Camera_Shift_X>
+        <Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+        <Camera_Distance> 1200.0 </Camera_Distance>
+		
+		<Locations>
+			Galaxy_Core_Art_Model, 
+			Atchorb,
+			Bonadan,
+			Desevro,
+			Dromund,
+			Emmer,
+			Ession,
+			Etti_IV,
+			Felucia,
+			Galidraan,
+			Hast,
+			Kalla,
+			Lianna,
+			Maryo,
+			MonCalimari,
+			Mytus,
+			NespisVIII,
+			NewAlderaan,
+			Orron,
+			Oslumpex,
+			Raxus,
+			Raxus_Second,
+			Saffalore,
+			Ulicia,
+		</Locations>
+		<Trade_Routes>
+			Atchorb_Bonadan,
+			Atchorb_Etti,
+			Atchorb_Mytus,
+			Atchorb_Ulicia,
+			Bonadan_Saffalore,
+			Bonadan_Ulicia,
+			Desevro_Emmer,
+			Desevro_Ession,
+			Desevro_Felucia,
+			Desevro_Lianna,
+			Desevro_Raxus,
+			Dromund_Felucia,
+			Emmer_Ession,
+			Ession_Etti,
+			Ession_Kalla,
+			Ession_Maryo,
+			Ession_Saffalore,
+			Felucia_Lianna,
+			Galidraan_Lianna,
+			Hast_MonCal,
+			Hast_Orron,
+			Kalla_Oslumpex,
+			Lianna_Nespis,
+			MonCal_NewAlderaan,
+			Nespis_NewAlderaan,
+			Orron_Saffalore,
+			Orron_Raxus_Second,
+			Oslumpex_Saffalore,
+			Raxus_Raxus_Second
+		</Trade_Routes>
+
+		<Home_Location> Rebel, MonCalimari </Home_Location>
+        <Home_Location> Empire, Emmer </Home_Location>
+		<Home_Location> Pirates, Desevro </Home_Location>
+		<Home_Location> Corporate_Sector, Etti_IV </Home_Location>
+
+        <Starting_Active_Player> Corporate_Sector </Starting_Active_Player>
+		
+		<Rebel_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Rebel.xml</Rebel_Story_Name>
+        <Empire_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Empire.xml</Empire_Story_Name>
+		<Underworld_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Container.xml</Underworld_Story_Name>
+
+		
+		<AI_Player_Control> Rebel, SmallGCAI </AI_Player_Control>
+		<AI_Player_Control> Empire, SmallGCAI </AI_Player_Control>
+		<AI_Player_Control> Pirates, SmallGCAI </AI_Player_Control>
+		<AI_Player_Control> Corporate_Sector, SandboxHuman </AI_Player_Control>
+		
+		<AI_Player_Control> Pentastar, None</AI_Player_Control>
+		<AI_Player_Control> Underworld, None </AI_Player_Control>
+		
+		<AI_Player_Control> Hapes_Consortium, None </AI_Player_Control>
+		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
+		<AI_Player_Control> Hutts, None </AI_Player_Control>				
+		<AI_Player_Control> Warlords, None </AI_Player_Control>				
+
+		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Underworld, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Pirates, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Teradoc, DefaultMaldroodHints </Markup_Filename>			
+		<Markup_Filename>Pentastar, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
+		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
+		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
+		<Markup_Filename>Hapes_Consortium, DefaultGalacticHints </Markup_Filename>
+		
+		
+		
+		<Supports_Custom_Settings>True</Supports_Custom_Settings>
+		<Show_Completed_Tab>True</Show_Completed_Tab>
+
+		<!-- Win Conditions -->
+
+		<Human_Victory_Conditions>
+				Galactic_All_Planets_Controlled
+		</Human_Victory_Conditions>
+
+		<AI_Victory_Conditions>
+				Galactic_All_Planets_Controlled
+		</AI_Victory_Conditions>
+		
+		<Starting_Credits> Rebel,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
+		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
+		
+		<!-- MonCalimari Land Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, NewRep_Senate </Starting_Forces>
+				
+		<Starting_Credits> Empire,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Empire, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Empire, 3 </Max_Tech_Level>
+		
+		<Starting_Forces> Empire, Emmer, Placement_Dummy</Starting_Forces>
+		
+		<Starting_Credits> Pirates,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Pirates, 2 </Max_Tech_Level>
+		
+		<Starting_Forces> Pirates, Desevro, Placement_Dummy</Starting_Forces>
+		
+		<Starting_Credits> Corporate_Sector,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Corporate_Sector, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Corporate_Sector, 5 </Max_Tech_Level>
+		
+		<!-- Etti_IV Land Forces -->
+		<Starting_Forces> Corporate_Sector, Etti_IV, CSA_LocalOffice </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Etti_IV, CSA_Capital </Starting_Forces>
+		
+
+	</Campaign>
+
+	<Campaign Name="Sandbox_CSA_Empire">
+		<Campaign_Set>Sandbox_CSA</Campaign_Set>
+		
+		<Sort_Order>14</Sort_Order>
+		
+		<Text_ID> TEXT_CAMPAIGN_SINGLE_CSA </Text_ID>
+        <Description_Text> TEXT_CAMPAIGN_SINGLE_DESCRIPTION_CSA </Description_Text>
+
+        <Camera_Shift_X> 40.0 </Camera_Shift_X>
+        <Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+        <Camera_Distance> 1200.0 </Camera_Distance>
+		
+		<Locations>
+			Galaxy_Core_Art_Model, 
+			Atchorb,
+			Bonadan,
+			Desevro,
+			Dromund,
+			Emmer,
+			Ession,
+			Etti_IV,
+			Felucia,
+			Galidraan,
+			Hast,
+			Kalla,
+			Lianna,
+			Maryo,
+			MonCalimari,
+			Mytus,
+			NespisVIII,
+			NewAlderaan,
+			Orron,
+			Oslumpex,
+			Raxus,
+			Raxus_Second,
+			Saffalore,
+			Ulicia,
+		</Locations>
+		<Trade_Routes>
+			Atchorb_Bonadan,
+			Atchorb_Etti,
+			Atchorb_Mytus,
+			Atchorb_Ulicia,
+			Bonadan_Saffalore,
+			Bonadan_Ulicia,
+			Desevro_Emmer,
+			Desevro_Ession,
+			Desevro_Felucia,
+			Desevro_Lianna,
+			Desevro_Raxus,
+			Dromund_Felucia,
+			Emmer_Ession,
+			Ession_Etti,
+			Ession_Kalla,
+			Ession_Maryo,
+			Ession_Saffalore,
+			Felucia_Lianna,
+			Galidraan_Lianna,
+			Hast_MonCal,
+			Hast_Orron,
+			Kalla_Oslumpex,
+			Lianna_Nespis,
+			MonCal_NewAlderaan,
+			Nespis_NewAlderaan,
+			Orron_Saffalore,
+			Orron_Raxus_Second,
+			Oslumpex_Saffalore,
+			Raxus_Raxus_Second
+		</Trade_Routes>
+
+		<Home_Location> Rebel, MonCalimari </Home_Location>
+        <Home_Location> Empire, Emmer </Home_Location>
+		<Home_Location> Pirates, Desevro </Home_Location>
+		<Home_Location> Corporate_Sector, Etti_IV </Home_Location>
+
+        <Starting_Active_Player> Empire </Starting_Active_Player>
+		
+		<Rebel_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Rebel.xml</Rebel_Story_Name>
+        <Empire_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Empire.xml</Empire_Story_Name>
+		<Underworld_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Container.xml</Underworld_Story_Name>
+
+		
+		<AI_Player_Control> Rebel, SmallGCAI </AI_Player_Control>
+		<AI_Player_Control> Empire, SandboxHuman </AI_Player_Control>
+		<AI_Player_Control> Pirates, SmallGCAI </AI_Player_Control>
+		<AI_Player_Control> Corporate_Sector, SmallGCAI </AI_Player_Control>
+		
+		<AI_Player_Control> Pentastar, None</AI_Player_Control>
+		<AI_Player_Control> Underworld, None </AI_Player_Control>
+		
+		<AI_Player_Control> Hapes_Consortium, None </AI_Player_Control>
+		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
+		<AI_Player_Control> Hutts, None </AI_Player_Control>				
+		<AI_Player_Control> Warlords, None </AI_Player_Control>				
+
+		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Underworld, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Pirates, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Teradoc, DefaultMaldroodHints </Markup_Filename>			
+		<Markup_Filename>Pentastar, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
+		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
+		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
+		<Markup_Filename>Hapes_Consortium, DefaultGalacticHints </Markup_Filename>
+		
+		
+		
+		<Supports_Custom_Settings>True</Supports_Custom_Settings>
+		<Show_Completed_Tab>True</Show_Completed_Tab>
+
+		<!-- Win Conditions -->
+
+		<Human_Victory_Conditions>
+				Galactic_All_Planets_Controlled
+		</Human_Victory_Conditions>
+
+		<AI_Victory_Conditions>
+				Galactic_All_Planets_Controlled
+		</AI_Victory_Conditions>
+		
+		<Starting_Credits> Rebel,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
+		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
+		
+		<!-- MonCalimari Land Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, NewRep_Senate </Starting_Forces>
+				
+		<Starting_Credits> Empire,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Empire, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Empire, 3 </Max_Tech_Level>
+		
+		<Starting_Forces> Empire, Emmer, Placement_Dummy</Starting_Forces>
+		
+		<Starting_Credits> Pirates,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Pirates, 2 </Max_Tech_Level>
+		
+		<Starting_Forces> Pirates, Desevro, Placement_Dummy</Starting_Forces>
+		
+		<Starting_Credits> Corporate_Sector,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Corporate_Sector, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Corporate_Sector, 5 </Max_Tech_Level>
+		
+		<!-- Etti_IV Land Forces -->
+		<Starting_Forces> Corporate_Sector, Etti_IV, CSA_LocalOffice </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Etti_IV, CSA_Capital </Starting_Forces>
+		
+
+	</Campaign>
+
+	<Campaign Name="Sandbox_CSA_Zsinj">
+		<Campaign_Set>Sandbox_CSA</Campaign_Set>
+		
+		<Sort_Order>14</Sort_Order>
+		
+		<Text_ID> TEXT_CAMPAIGN_SINGLE_CSA </Text_ID>
+        <Description_Text> TEXT_CAMPAIGN_SINGLE_DESCRIPTION_CSA </Description_Text>
+
+        <Camera_Shift_X> 40.0 </Camera_Shift_X>
+        <Camera_Shift_Y> 0.0 </Camera_Shift_Y>
+        <Camera_Distance> 1200.0 </Camera_Distance>
+		
+		<Locations>
+			Galaxy_Core_Art_Model, 
+			Atchorb,
+			Bonadan,
+			Desevro,
+			Dromund,
+			Emmer,
+			Ession,
+			Etti_IV,
+			Felucia,
+			Galidraan,
+			Hast,
+			Kalla,
+			Lianna,
+			Maryo,
+			MonCalimari,
+			Mytus,
+			NespisVIII,
+			NewAlderaan,
+			Orron,
+			Oslumpex,
+			Raxus,
+			Raxus_Second,
+			Saffalore,
+			Ulicia,
+		</Locations>
+		<Trade_Routes>
+			Atchorb_Bonadan,
+			Atchorb_Etti,
+			Atchorb_Mytus,
+			Atchorb_Ulicia,
+			Bonadan_Saffalore,
+			Bonadan_Ulicia,
+			Desevro_Emmer,
+			Desevro_Ession,
+			Desevro_Felucia,
+			Desevro_Lianna,
+			Desevro_Raxus,
+			Dromund_Felucia,
+			Emmer_Ession,
+			Ession_Etti,
+			Ession_Kalla,
+			Ession_Maryo,
+			Ession_Saffalore,
+			Felucia_Lianna,
+			Galidraan_Lianna,
+			Hast_MonCal,
+			Hast_Orron,
+			Kalla_Oslumpex,
+			Lianna_Nespis,
+			MonCal_NewAlderaan,
+			Nespis_NewAlderaan,
+			Orron_Saffalore,
+			Orron_Raxus_Second,
+			Oslumpex_Saffalore,
+			Raxus_Raxus_Second
+		</Trade_Routes>
+
+		<Home_Location> Rebel, MonCalimari </Home_Location>
+        <Home_Location> Empire, Emmer </Home_Location>
+		<Home_Location> Pirates, Desevro </Home_Location>
+		<Home_Location> Corporate_Sector, Etti_IV </Home_Location>
+
+        <Starting_Active_Player> Pirates </Starting_Active_Player>
+		
+		<Rebel_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Rebel.xml</Rebel_Story_Name>
+        <Empire_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Empire.xml</Empire_Story_Name>
+		<Underworld_Story_Name>Conquests\CSA\Story_Plots_Sandbox_CSA_Container.xml</Underworld_Story_Name>
+
+		
+		<AI_Player_Control> Rebel, SmallGCAI </AI_Player_Control>
+		<AI_Player_Control> Empire, SmallGCAI </AI_Player_Control>
+		<AI_Player_Control> Pirates, SandboxHuman </AI_Player_Control>
+		<AI_Player_Control> Corporate_Sector, SmallGCAI </AI_Player_Control>
+		
+		<AI_Player_Control> Pentastar, None</AI_Player_Control>
+		<AI_Player_Control> Underworld, None </AI_Player_Control>
+		
+		<AI_Player_Control> Hapes_Consortium, None </AI_Player_Control>
+		<AI_Player_Control> Teradoc, None </AI_Player_Control>      
+		<AI_Player_Control> Hutts, None </AI_Player_Control>				
+		<AI_Player_Control> Warlords, None </AI_Player_Control>				
+
+		<Markup_Filename>Empire, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Rebel, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Underworld, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Pirates, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Teradoc, DefaultMaldroodHints </Markup_Filename>			
+		<Markup_Filename>Pentastar, DefaultGalacticHints </Markup_Filename>
+		<Markup_Filename>Hutts, DefaultEriaduHints </Markup_Filename>				
+		<Markup_Filename>Corporate_Sector, DefaultGalacticHints </Markup_Filename>		
+		<Markup_Filename>Warlords, DefaultGalacticHints </Markup_Filename>			
+		<Markup_Filename>Hapes_Consortium, DefaultGalacticHints </Markup_Filename>
+		
+		
+		
+		<Supports_Custom_Settings>True</Supports_Custom_Settings>
+		<Show_Completed_Tab>True</Show_Completed_Tab>
+
+		<!-- Win Conditions -->
+
+		<Human_Victory_Conditions>
+				Galactic_All_Planets_Controlled
+		</Human_Victory_Conditions>
+
+		<AI_Victory_Conditions>
+				Galactic_All_Planets_Controlled
+		</AI_Victory_Conditions>
+		
+		<Starting_Credits> Rebel,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Rebel, 0 </Starting_Tech_Level>
+		<Max_Tech_Level> Rebel, 4 </Max_Tech_Level>
+		
+		<!-- MonCalimari Land Forces -->
+		<Starting_Forces> Rebel, MonCalimari, NewRep_SenatorsOffice </Starting_Forces>
+		<Starting_Forces> Rebel, MonCalimari, NewRep_Senate </Starting_Forces>
+				
+		<Starting_Credits> Empire,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Empire, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Empire, 3 </Max_Tech_Level>
+		
+		<Starting_Forces> Empire, Emmer, Placement_Dummy</Starting_Forces>
+		
+		<Starting_Credits> Pirates,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Pirates, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Pirates, 2 </Max_Tech_Level>
+		
+		<Starting_Forces> Pirates, Desevro, Placement_Dummy</Starting_Forces>
+		
+		<Starting_Credits> Corporate_Sector,  8000 </Starting_Credits>
+		<Starting_Tech_Level> Corporate_Sector, 1 </Starting_Tech_Level>
+		<Max_Tech_Level> Corporate_Sector, 5 </Max_Tech_Level>
+		
+		<!-- Etti_IV Land Forces -->
+		<Starting_Forces> Corporate_Sector, Etti_IV, CSA_LocalOffice </Starting_Forces>
+		<Starting_Forces> Corporate_Sector, Etti_IV, CSA_Capital </Starting_Forces>
+		
+
+	</Campaign>
+
+</Campaigns>

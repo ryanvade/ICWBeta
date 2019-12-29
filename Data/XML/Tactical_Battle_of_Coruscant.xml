@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Origin of Corruption (Rebel)	******-->
+<!--******************************************************-->
+
+
+
+<Story>
+
+<Event Name="Battle_Start">
+<Event_Type>STORY_ELAPSED</Event_Type>
+<Event_Param1>0</Event_Param1>
+</Event>
+
+<Event Name="Wave2_Spawn">
+<Event_Type>STORY_ELAPSED</Event_Type>
+<Event_Param1>80</Event_Param1>
+</Event>
+
+<Event Name="Wave3_Spawn">
+<Event_Type>STORY_ELAPSED</Event_Type>
+<Event_Param1>150</Event_Param1>
+</Event>
+
+<Event Name="Disable_Autoresolve">
+<Event_Type>STORY_TRIGGER</Event_Type>
+<Reward_Type>DISABLE_AUTORESOLVE</Reward_Type>
+<Prereq>Battle_Start</Prereq>
+</Event>
+ 
+ <Event Name="Disable_Retreat_NR">
+<Event_Type>STORY_TRIGGER</Event_Type>
+<Reward_Type>DISABLE_RETREAT</Reward_Type>
+<Reward_Param1>Rebel</Reward_Param1>
+<Reward_Param2>1</Reward_Param2>
+<Prereq>Battle_Start</Prereq>
+</Event>
+
+<Event Name="Battle_of_Corusant_Speech">
+     <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_SPEECH</Event_Param2>
+    	<Reward_Type>SCREEN_TEXT</Reward_Type>
+    		<Reward_Param1>TEXT_CONQUEST_SHADOWHAND_NR_CORUSCANT_BATTLE</Reward_Param1>
+    		<Reward_Param2>-1</Reward_Param2>
+	<Prereq>Battle_Start</Prereq>
+  </Event>
+  
+  <Event Name="Intro_Speech">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_SHADOWHAND_NR_CORUSCANT_BATTLE</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Nonexistant_Speech</Reward_Param8>
+		<Reward_Param9>Rebel_Trooper_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Battle_Start</Prereq>
+	</Event>
+
+<Event Name="Retreat_OK">
+<Event_Type>STORY_ELAPSED</Event_Type>
+<Event_Param1>270</Event_Param1>
+</Event>
+
+<Event Name="Enable_Retreat_NR">
+<Event_Type>STORY_TRIGGER</Event_Type>
+<Reward_Type>DISABLE_RETREAT</Reward_Type>
+<Reward_Param1>Rebel</Reward_Param1>
+<Reward_Param2>0</Reward_Param2>
+<Prereq>Retreat_OK</Prereq>
+</Event>
+
+<Event Name="Battle_of_Corusant_Retreat_Speech">
+     <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_SPEECH</Event_Param2>
+    	<Reward_Type>SCREEN_TEXT</Reward_Type>
+    		<Reward_Param1>TEXT_CONQUEST_SHADOWHAND_NR_CORUSCANT_BATTLE_RETREAT</Reward_Param1>
+    		<Reward_Param2>-1</Reward_Param2>
+	<Prereq>Retreat_OK</Prereq>
+  </Event>
+  
+  <Event Name="Retreat_OK_Speech">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_CONQUEST_SHADOWHAND_NR_CORUSCANT_BATTLE_RETREAT</Reward_Param1>
+		<Reward_Param2>15</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8>Nonexistant_Speech</Reward_Param8>
+		<Reward_Param9>Rebel_Trooper_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Retreat_OK</Prereq>
+	</Event>
+
+
+	<Event Name="STORY_VICTORY_Player">
+		<Event_Type>STORY_VICTORY</Event_Type>
+		<Event_Param1>Rebel</Event_Param1>
+	</Event>
+       
+</Story>

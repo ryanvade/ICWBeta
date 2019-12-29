@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Rim World Conflict (Rebel)	******-->
+<!--******************************************************-->
+
+
+
+<Story>
+
+
+ <Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+ </Event>
+ 
+	<Event Name="Spawn_Ningo">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Dua_Ningo_Unrepentant</Reward_Param1>
+		<Reward_Param2>Empress</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		
+	<Event Name="CIS_Enters_Tech_02">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>2</Event_Param1>
+	</Event>
+	
+	<Event Name="CIS_Enters_Tech_03">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+	</Event>
+	
+	<Event Name="CIS_Enters_Tech_04">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+	</Event>
+	
+	<Event Name="CIS_Enters_Tech_05">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>5</Event_Param1>
+	</Event>
+
+	
+</Story>

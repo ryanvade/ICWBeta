@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+
+
+
+<!--****************************************************-->
+<!--***** CAMPAIGN: Fractured Empire (Empire Version) *****-->
+<!--****************************************************-->
+
+
+
+<Story>
+
+ <Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+
+ </Event>
+	
+	<Event Name="Spawn_Gorgon">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+  		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Gorgon</Reward_Param1>
+		<Reward_Param2>The_Maw</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Sivron">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+  		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Sivron_Team</Reward_Param1>
+		<Reward_Param2>The_Maw</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Odosk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+  		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Odosk_Team</Reward_Param1>
+		<Reward_Param2>The_Maw</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Knight_Hammer">
+			<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Kampe</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>Knight_Hammer</Reward_Param1>
+		<Reward_Param2>Kampe</Reward_Param2>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+
+	<Event Name="Spawn_Cronus">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Kampe</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>13X</Reward_Param1>
+		<Reward_Param2>Kampe</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	
+	
+	<Event Name="Spawn_Pellaeon_Palpateam">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Hakassi</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>Chimera_Pellaeon_Vice</Reward_Param1>
+		<Reward_Param2>Hakassi</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+</Story>
