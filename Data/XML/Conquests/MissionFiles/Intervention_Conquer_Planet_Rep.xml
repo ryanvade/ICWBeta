@@ -31,19 +31,5 @@
 		<Reward_Param1>CONQUER_PLANETS_NOTIFICATION_00</Reward_Param1>
 	</Event>
 	
-		<Event Name="Notify_Government">
- 	 <Event_Type>STORY_TRIGGER</Event_Type>
-  	<Reward_Type>FLASH_GUI</Reward_Type>
-  	<Reward_Param1>b_doc_filter01</Reward_Param1>
-  	<Prereq>Conquer_Planet_03</Prereq>
- 	</Event>
-	
-		<Event Name="Build_Objective_Complete2">
- 	 <Event_Type>STORY_ELAPSED</Event_Type>
- 	 <Event_Param1>3</Event_Param1>
- 		 <Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
- 		 <Prereq>Notify_Government</Prereq>
- 	</Event>
-
 </Story>
 

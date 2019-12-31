@@ -43,7 +43,7 @@ function Begin_GC(message)
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
-						listOf(2,"Diamond_Frigate"),
+						"Diamond_Frigate",
 						"Captor",
 						"NR_Star_Base_1",
 					},
@@ -55,7 +55,7 @@ function Begin_GC(message)
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
-						listOf(2,"Diamond_Frigate"),
+						"Diamond_Frigate",
 						"Captor",
 						"NR_Star_Base_1",
 					},
@@ -67,7 +67,7 @@ function Begin_GC(message)
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
-						listOf(2,"Diamond_Frigate"),
+						"Diamond_Frigate",
 						"Captor",
 						"NR_Star_Base_1",
 					},
@@ -79,7 +79,7 @@ function Begin_GC(message)
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
-						listOf(2,"Diamond_Frigate"),
+						"Diamond_Frigate",
 						"Captor",
 						"NR_Star_Base_1",
 					},
@@ -91,7 +91,7 @@ function Begin_GC(message)
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
-						listOf(2,"Diamond_Frigate"),
+						"Diamond_Frigate",
 						"Captor",
 						"NR_Star_Base_1",
 					},
@@ -101,7 +101,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -113,7 +113,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -125,7 +125,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -137,7 +137,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -149,7 +149,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -169,7 +169,7 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Dreadnaught_Lasers",
 						"Generic_Acclamator_Assault_Ship_I",
-						listOf(3,"Corellian_Corvette"),
+						listOf(2,"Corellian_Corvette"),
 						"Remnant_Star_Base_1",
 					},
 				},
@@ -182,7 +182,7 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Dreadnaught_Lasers",
 						"Generic_Acclamator_Assault_Ship_I",
-						listOf(3,"Corellian_Corvette"),
+						listOf(2,"Corellian_Corvette"),
 						"Remnant_Star_Base_1",
 					},
 				},
@@ -195,7 +195,7 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Dreadnaught_Lasers",
 						"Generic_Acclamator_Assault_Ship_I",
-						listOf(3,"Corellian_Corvette"),
+						listOf(2,"Corellian_Corvette"),
 						"Remnant_Star_Base_1",
 					},
 				},
@@ -208,7 +208,7 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Dreadnaught_Lasers",
 						"Generic_Acclamator_Assault_Ship_I",
-						listOf(3,"Corellian_Corvette"),
+						listOf(2,"Corellian_Corvette"),
 						"Remnant_Star_Base_1",
 					},
 				},
@@ -221,7 +221,7 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Dreadnaught_Lasers",
 						"Generic_Acclamator_Assault_Ship_I",
-						listOf(3,"Corellian_Corvette"),
+						listOf(2,"Corellian_Corvette"),
 						"Remnant_Star_Base_1",
 					},
 				},
@@ -240,9 +240,9 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						listOf(2,"Generic_Acclamator_Assault_Ship_I"),
-						"Invincible_Cruiser",
-						listOf(4,"Dreadnaught_Lasers"),
-						listOf(4,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Invincible_Cruiser"),
+						listOf(2,"Dreadnaught_Lasers"),
+						listOf(2,"Carrack_Cruiser_Lasers"),
 						listOf(2,"Remnant_Star_Base_1"),
 					},
 				},
@@ -259,9 +259,9 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						listOf(2,"Generic_Acclamator_Assault_Ship_I"),
-						"Invincible_Cruiser",
-						listOf(4,"Dreadnaught_Lasers"),
-						listOf(4,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Invincible_Cruiser"),
+						listOf(2,"Dreadnaught_Lasers"),
+						listOf(2,"Carrack_Cruiser_Lasers"),
 						listOf(2,"Remnant_Star_Base_1"),
 					},
 				},
@@ -278,9 +278,9 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						listOf(2,"Generic_Acclamator_Assault_Ship_I"),
-						"Invincible_Cruiser",
-						listOf(4,"Dreadnaught_Lasers"),
-						listOf(4,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Invincible_Cruiser"),
+						listOf(2,"Dreadnaught_Lasers"),
+						listOf(2,"Carrack_Cruiser_Lasers"),
 						listOf(2,"Remnant_Star_Base_1"),
 					},
 				},
@@ -297,9 +297,9 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						listOf(2,"Generic_Acclamator_Assault_Ship_I"),
-						"Invincible_Cruiser",
-						listOf(4,"Dreadnaught_Lasers"),
-						listOf(4,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Invincible_Cruiser"),
+						listOf(2,"Dreadnaught_Lasers"),
+						listOf(2,"Carrack_Cruiser_Lasers"),
 						listOf(2,"Remnant_Star_Base_1"),
 					},
 				},
@@ -316,9 +316,9 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						listOf(2,"Generic_Acclamator_Assault_Ship_I"),
-						"Invincible_Cruiser",
-						listOf(4,"Dreadnaught_Lasers"),
-						listOf(4,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Invincible_Cruiser"),
+						listOf(2,"Dreadnaught_Lasers"),
+						listOf(2,"Carrack_Cruiser_Lasers"),
 						listOf(2,"Remnant_Star_Base_1"),
 					},
 				},
@@ -461,7 +461,7 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						"Dreadnaught_Lasers",
-						listOf(4,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Carrack_Cruiser_Lasers"),
 						"Remnant_Star_Base_1",
 					},
 				},
@@ -473,7 +473,7 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						"Dreadnaught_Lasers",
-						listOf(4,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Carrack_Cruiser_Lasers"),
 						"Remnant_Star_Base_1",
 					},
 				},
@@ -485,7 +485,7 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						"Dreadnaught_Lasers",
-						listOf(4,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Carrack_Cruiser_Lasers"),
 						"Remnant_Star_Base_1",
 					},
 				},
@@ -497,7 +497,7 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						"Dreadnaught_Lasers",
-						listOf(4,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Carrack_Cruiser_Lasers"),
 						"Remnant_Star_Base_1",
 					},
 				},
@@ -509,7 +509,7 @@ function Begin_GC(message)
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						"Dreadnaught_Lasers",
-						listOf(4,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Carrack_Cruiser_Lasers"),
 						"Remnant_Star_Base_1",
 					},
 				},
@@ -519,7 +519,7 @@ function Begin_GC(message)
 					Owner="Hutts",
 					StartingForces={
 						"B1_Droid_Squad",
-						listOf(3,"Hardcell"),
+						listOf(2,"Hardcell"),
 						"Destroyer_Droid_Company",
 						"Cargo_Lucrehulk",
 						"Munificent",
@@ -527,7 +527,7 @@ function Begin_GC(message)
 						"R_Ground_Light_Vehicle_Factory",
 						"NewRep_SenatorsOffice",
 						"NR_Star_Base_2",
-						listOf(2,"Persuader_Company"),
+						"Persuader_Company",
 						"Empire_Golan_One",
 					},
 				},
@@ -535,7 +535,7 @@ function Begin_GC(message)
 					Owner="Hutts",
 					StartingForces={
 						"B1_Droid_Squad",
-						listOf(3,"Hardcell"),
+						listOf(2,"Hardcell"),
 						"Destroyer_Droid_Company",
 						"Cargo_Lucrehulk",
 						"Munificent",
@@ -543,7 +543,7 @@ function Begin_GC(message)
 						"R_Ground_Light_Vehicle_Factory",
 						"NewRep_SenatorsOffice",
 						"NR_Star_Base_2",
-						listOf(2,"Persuader_Company"),
+						"Persuader_Company",
 						"Empire_Golan_One",
 					},
 				},
@@ -551,7 +551,7 @@ function Begin_GC(message)
 					Owner="Hutts",
 					StartingForces={
 						"B1_Droid_Squad",
-						listOf(3,"Hardcell"),
+						listOf(2,"Hardcell"),
 						"Destroyer_Droid_Company",
 						"Cargo_Lucrehulk",
 						"Munificent",
@@ -559,7 +559,7 @@ function Begin_GC(message)
 						"R_Ground_Light_Vehicle_Factory",
 						"NewRep_SenatorsOffice",
 						"NR_Star_Base_2",
-						listOf(2,"Persuader_Company"),
+						"Persuader_Company",
 						"Empire_Golan_One",
 					},
 				},
@@ -567,7 +567,7 @@ function Begin_GC(message)
 					Owner="Hutts",
 					StartingForces={
 						"B1_Droid_Squad",
-						listOf(3,"Hardcell"),
+						listOf(2,"Hardcell"),
 						"Destroyer_Droid_Company",
 						"Cargo_Lucrehulk",
 						"Munificent",
@@ -575,7 +575,7 @@ function Begin_GC(message)
 						"R_Ground_Light_Vehicle_Factory",
 						"NewRep_SenatorsOffice",
 						"NR_Star_Base_2",
-						listOf(2,"Persuader_Company"),
+						"Persuader_Company",
 						"Empire_Golan_One",
 					},
 				},
@@ -583,7 +583,7 @@ function Begin_GC(message)
 					Owner="Hutts",
 					StartingForces={
 						"B1_Droid_Squad",
-						listOf(3,"Hardcell"),
+						listOf(2,"Hardcell"),
 						"Destroyer_Droid_Company",
 						"Cargo_Lucrehulk",
 						"Munificent",
@@ -591,7 +591,7 @@ function Begin_GC(message)
 						"R_Ground_Light_Vehicle_Factory",
 						"NewRep_SenatorsOffice",
 						"NR_Star_Base_2",
-						listOf(2,"Persuader_Company"),
+						"Persuader_Company",
 						"Empire_Golan_One",
 					},
 				},
@@ -608,7 +608,7 @@ function Begin_GC(message)
 						"Diamond_Frigate",
 						"Hardcell",
 						"C9979_Carrier",
-						listOf(2,"Persuader_Company"),
+						"Persuader_Company",
 					},
 				},
 				{
@@ -622,7 +622,7 @@ function Begin_GC(message)
 						"Diamond_Frigate",
 						"Hardcell",
 						"C9979_Carrier",
-						listOf(2,"Persuader_Company"),
+						"Persuader_Company",
 					},
 				},
 				{
@@ -636,7 +636,7 @@ function Begin_GC(message)
 						"Diamond_Frigate",
 						"Hardcell",
 						"C9979_Carrier",
-						listOf(2,"Persuader_Company"),
+						"Persuader_Company",
 					},
 				},
 				{
@@ -650,7 +650,7 @@ function Begin_GC(message)
 						"Diamond_Frigate",
 						"Hardcell",
 						"C9979_Carrier",
-						listOf(2,"Persuader_Company"),
+						"Persuader_Company",
 					},
 				},
 				{
@@ -664,7 +664,7 @@ function Begin_GC(message)
 						"Diamond_Frigate",
 						"Hardcell",
 						"C9979_Carrier",
-						listOf(2,"Persuader_Company"),
+						"Persuader_Company",
 					},
 				},
 			},
@@ -1051,7 +1051,7 @@ function Begin_GC(message)
 					StartingForces={
 						"Generic_Acclamator_Assault_Ship_I",
 						"Clonetrooper_Phase_One_Team",
-						listOf(4,"Dreadnaught_Lasers"),
+						listOf(3,"Dreadnaught_Lasers"),
 						"LAC",
 						"Remnant_Star_Base_2",
 						"E_Ground_Barracks",
@@ -1063,7 +1063,7 @@ function Begin_GC(message)
 					StartingForces={
 						"Generic_Acclamator_Assault_Ship_I",
 						"Clonetrooper_Phase_One_Team",
-						listOf(4,"Dreadnaught_Lasers"),
+						listOf(3,"Dreadnaught_Lasers"),
 						"LAC",
 						"Remnant_Star_Base_2",
 						"E_Ground_Barracks",
@@ -1075,7 +1075,7 @@ function Begin_GC(message)
 					StartingForces={
 						"Generic_Acclamator_Assault_Ship_I",
 						"Clonetrooper_Phase_One_Team",
-						listOf(4,"Dreadnaught_Lasers"),
+						listOf(3,"Dreadnaught_Lasers"),
 						"LAC",
 						"Remnant_Star_Base_2",
 						"E_Ground_Barracks",
@@ -1087,7 +1087,7 @@ function Begin_GC(message)
 					StartingForces={
 						"Generic_Acclamator_Assault_Ship_I",
 						"Clonetrooper_Phase_One_Team",
-						listOf(4,"Dreadnaught_Lasers"),
+						listOf(3,"Dreadnaught_Lasers"),
 						"LAC",
 						"Remnant_Star_Base_2",
 						"E_Ground_Barracks",
@@ -1099,7 +1099,7 @@ function Begin_GC(message)
 					StartingForces={
 						"Generic_Acclamator_Assault_Ship_I",
 						"Clonetrooper_Phase_One_Team",
-						listOf(4,"Dreadnaught_Lasers"),
+						listOf(3,"Dreadnaught_Lasers"),
 						"LAC",
 						"Remnant_Star_Base_2",
 						"E_Ground_Barracks",
@@ -1446,7 +1446,7 @@ function Begin_GC(message)
 				{
 					Owner="Pirates",
 					StartingForces={
-						listOf(3,"C9979_Carrier"),
+						listOf(2,"C9979_Carrier"),
 						"B1_Droid_Squad",
 						listOf(2,"Persuader_Company"),
 						"Auxilia",
@@ -1467,7 +1467,7 @@ function Begin_GC(message)
 				{
 					Owner="Pirates",
 					StartingForces={
-						listOf(3,"C9979_Carrier"),
+						listOf(2,"C9979_Carrier"),
 						"B1_Droid_Squad",
 						listOf(2,"Persuader_Company"),
 						"Auxilia",
@@ -1488,7 +1488,7 @@ function Begin_GC(message)
 				{
 					Owner="Pirates",
 					StartingForces={
-						listOf(3,"C9979_Carrier"),
+						listOf(2,"C9979_Carrier"),
 						"B1_Droid_Squad",
 						listOf(2,"Persuader_Company"),
 						"Auxilia",
@@ -1509,7 +1509,7 @@ function Begin_GC(message)
 				{
 					Owner="Pirates",
 					StartingForces={
-						listOf(3,"C9979_Carrier"),
+						listOf(2,"C9979_Carrier"),
 						"B1_Droid_Squad",
 						listOf(2,"Persuader_Company"),
 						"Auxilia",
@@ -1530,7 +1530,7 @@ function Begin_GC(message)
 				{
 					Owner="Pirates",
 					StartingForces={
-						listOf(3,"C9979_Carrier"),
+						listOf(2,"C9979_Carrier"),
 						"B1_Droid_Squad",
 						listOf(2,"Persuader_Company"),
 						"Auxilia",
@@ -2040,13 +2040,13 @@ function Begin_GC(message)
 					Owner="Rebel",
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Hardcell"),
+						"Hardcell",
 						"C9979_Carrier",
 						"AAT_Company",
 						"Recusant",
 						"Destroyer_Droid_Company",
 						"Generic_Lucrehulk",
-						listOf(2,"Munificent"),
+						"Munificent",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
 						"NR_Star_Base_1",
@@ -2059,13 +2059,13 @@ function Begin_GC(message)
 					Owner="Rebel",
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Hardcell"),
+						"Hardcell",
 						"C9979_Carrier",
 						"AAT_Company",
 						"Recusant",
 						"Destroyer_Droid_Company",
 						"Generic_Lucrehulk",
-						listOf(2,"Munificent"),
+						"Munificent",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
 						"NR_Star_Base_1",
@@ -2078,13 +2078,13 @@ function Begin_GC(message)
 					Owner="Rebel",
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Hardcell"),
+						"Hardcell",
 						"C9979_Carrier",
 						"AAT_Company",
 						"Recusant",
 						"Destroyer_Droid_Company",
 						"Generic_Lucrehulk",
-						listOf(2,"Munificent"),
+						"Munificent",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
 						"NR_Star_Base_1",
@@ -2097,13 +2097,13 @@ function Begin_GC(message)
 					Owner="Rebel",
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Hardcell"),
+						"Hardcell",
 						"C9979_Carrier",
 						"AAT_Company",
 						"Recusant",
 						"Destroyer_Droid_Company",
 						"Generic_Lucrehulk",
-						listOf(2,"Munificent"),
+						"Munificent",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
 						"NR_Star_Base_1",
@@ -2116,13 +2116,13 @@ function Begin_GC(message)
 					Owner="Rebel",
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Hardcell"),
+						"Hardcell",
 						"C9979_Carrier",
 						"AAT_Company",
 						"Recusant",
 						"Destroyer_Droid_Company",
 						"Generic_Lucrehulk",
-						listOf(2,"Munificent"),
+						"Munificent",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
 						"NR_Star_Base_1",
@@ -2431,10 +2431,9 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(6,"Corellian_Corvette"),
-						listOf(6,"Corellian_Gunboat"),
-						listOf(3,"LAC"),
-						listOf(2,"Dreadnaught_Lasers"),
+						listOf(5,"Corellian_Corvette"),
+						listOf(5,"Corellian_Gunboat"),
+						listOf(3,"Dreadnaught_Lasers"),
 						listOf(2,"Clonetrooper_Phase_One_Team"),
 						listOf(2,"Imperial_ATPT_Squad"),
 						"A5_Juggernaut_Company",
@@ -2449,10 +2448,9 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(6,"Corellian_Corvette"),
-						listOf(6,"Corellian_Gunboat"),
-						listOf(3,"LAC"),
-						listOf(2,"Dreadnaught_Lasers"),
+						listOf(5,"Corellian_Corvette"),
+						listOf(5,"Corellian_Gunboat"),
+						listOf(3,"Dreadnaught_Lasers"),
 						listOf(2,"Clonetrooper_Phase_One_Team"),
 						listOf(2,"Imperial_ATPT_Squad"),
 						"A5_Juggernaut_Company",
@@ -2467,10 +2465,9 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(6,"Corellian_Corvette"),
-						listOf(6,"Corellian_Gunboat"),
-						listOf(3,"LAC"),
-						listOf(2,"Dreadnaught_Lasers"),
+						listOf(5,"Corellian_Corvette"),
+						listOf(5,"Corellian_Gunboat"),
+						listOf(3,"Dreadnaught_Lasers"),
 						listOf(2,"Clonetrooper_Phase_One_Team"),
 						listOf(2,"Imperial_ATPT_Squad"),
 						"A5_Juggernaut_Company",
@@ -2485,10 +2482,9 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(6,"Corellian_Corvette"),
-						listOf(6,"Corellian_Gunboat"),
-						listOf(3,"LAC"),
-						listOf(2,"Dreadnaught_Lasers"),
+						listOf(5,"Corellian_Corvette"),
+						listOf(5,"Corellian_Gunboat"),
+						listOf(3,"Dreadnaught_Lasers"),
 						listOf(2,"Clonetrooper_Phase_One_Team"),
 						listOf(2,"Imperial_ATPT_Squad"),
 						"A5_Juggernaut_Company",
@@ -2503,10 +2499,9 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(6,"Corellian_Corvette"),
-						listOf(6,"Corellian_Gunboat"),
-						listOf(3,"LAC"),
-						listOf(2,"Dreadnaught_Lasers"),
+						listOf(5,"Corellian_Corvette"),
+						listOf(5,"Corellian_Gunboat"),
+						listOf(3,"Dreadnaught_Lasers"),
 						listOf(2,"Clonetrooper_Phase_One_Team"),
 						listOf(2,"Imperial_ATPT_Squad"),
 						"A5_Juggernaut_Company",
@@ -3124,6 +3119,53 @@ function Begin_GC(message)
 						"Dreadnaught_Lasers",
 						listOf(4,"Techno_Union_Marauder_Missile_Cruiser"),
 						listOf(2,"Carrack_Cruiser_Lasers"),
+					},
+				},
+			},
+			DENON={
+				{
+					Owner="Warlords",
+					StartingForces={
+						"Captor",
+						listOf(2,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Invincible_Cruiser"),
+						listOf(2,"Generic_Providence"),
+					},
+				},
+				{
+					Owner="Warlords",
+					StartingForces={
+						"Captor",
+						listOf(2,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Invincible_Cruiser"),
+						listOf(2,"Generic_Providence"),
+					},
+				},
+				{
+					Owner="Warlords",
+					StartingForces={
+						"Captor",
+						listOf(2,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Invincible_Cruiser"),
+						listOf(2,"Generic_Providence"),
+					},
+				},
+				{
+					Owner="Warlords",
+					StartingForces={
+						"Captor",
+						listOf(2,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Invincible_Cruiser"),
+						listOf(2,"Generic_Providence"),
+					},
+				},
+				{
+					Owner="Warlords",
+					StartingForces={
+						"Captor",
+						listOf(2,"Carrack_Cruiser_Lasers"),
+						listOf(2,"Invincible_Cruiser"),
+						listOf(2,"Generic_Providence"),
 					},
 				},
 			},
@@ -3817,7 +3859,7 @@ function Begin_GC(message)
 					Owner="Empire",
 					StartingForces={
 						listOf(2,"Arquitens"),
-						listOf(6,"LAC"),
+						listOf(3,"LAC"),
 						listOf(4,"Dreadnaught_Lasers"),
 						listOf(3,"Clonetrooper_Phase_One_Team"),
 						listOf(2,"Carrack_Cruiser_Lasers"),
@@ -3834,7 +3876,7 @@ function Begin_GC(message)
 					Owner="Empire",
 					StartingForces={
 						listOf(2,"Arquitens"),
-						listOf(6,"LAC"),
+						listOf(3,"LAC"),
 						listOf(4,"Dreadnaught_Lasers"),
 						listOf(3,"Clonetrooper_Phase_One_Team"),
 						listOf(2,"Carrack_Cruiser_Lasers"),
@@ -3851,7 +3893,7 @@ function Begin_GC(message)
 					Owner="Empire",
 					StartingForces={
 						listOf(2,"Arquitens"),
-						listOf(6,"LAC"),
+						listOf(3,"LAC"),
 						listOf(4,"Dreadnaught_Lasers"),
 						listOf(3,"Clonetrooper_Phase_One_Team"),
 						listOf(2,"Carrack_Cruiser_Lasers"),
@@ -3868,7 +3910,7 @@ function Begin_GC(message)
 					Owner="Empire",
 					StartingForces={
 						listOf(2,"Arquitens"),
-						listOf(6,"LAC"),
+						listOf(3,"LAC"),
 						listOf(4,"Dreadnaught_Lasers"),
 						listOf(3,"Clonetrooper_Phase_One_Team"),
 						listOf(2,"Carrack_Cruiser_Lasers"),
@@ -3885,7 +3927,7 @@ function Begin_GC(message)
 					Owner="Empire",
 					StartingForces={
 						listOf(2,"Arquitens"),
-						listOf(6,"LAC"),
+						listOf(3,"LAC"),
 						listOf(4,"Dreadnaught_Lasers"),
 						listOf(3,"Clonetrooper_Phase_One_Team"),
 						listOf(2,"Carrack_Cruiser_Lasers"),
@@ -4032,13 +4074,13 @@ function Begin_GC(message)
 				{
 					Owner="Hutts",
 					StartingForces={
-						listOf(3,"Munificent"),
-						listOf(3,"Auxilia"),
+						listOf(2,"Munificent"),
+						listOf(2,"Auxilia"),
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Gozanti_Cruiser_Squadron"),
+						"Gozanti_Cruiser_Squadron",
 						"Generic_Providence",
 						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
-						listOf(2,"Hailfire_Company"),
+						"Hailfire_Company",
 						"Crab_Droid_Squad",
 						"NewRep_SenatorsOffice",
 						"NR_Star_Base_3",
@@ -4048,13 +4090,13 @@ function Begin_GC(message)
 				{
 					Owner="Hutts",
 					StartingForces={
-						listOf(3,"Munificent"),
-						listOf(3,"Auxilia"),
+						listOf(2,"Munificent"),
+						listOf(2,"Auxilia"),
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Gozanti_Cruiser_Squadron"),
+						"Gozanti_Cruiser_Squadron",
 						"Generic_Providence",
 						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
-						listOf(2,"Hailfire_Company"),
+						"Hailfire_Company",
 						"Crab_Droid_Squad",
 						"NewRep_SenatorsOffice",
 						"NR_Star_Base_3",
@@ -4064,13 +4106,13 @@ function Begin_GC(message)
 				{
 					Owner="Hutts",
 					StartingForces={
-						listOf(3,"Munificent"),
-						listOf(3,"Auxilia"),
+						listOf(2,"Munificent"),
+						listOf(2,"Auxilia"),
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Gozanti_Cruiser_Squadron"),
+						"Gozanti_Cruiser_Squadron",
 						"Generic_Providence",
 						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
-						listOf(2,"Hailfire_Company"),
+						"Hailfire_Company",
 						"Crab_Droid_Squad",
 						"NewRep_SenatorsOffice",
 						"NR_Star_Base_3",
@@ -4080,13 +4122,13 @@ function Begin_GC(message)
 				{
 					Owner="Hutts",
 					StartingForces={
-						listOf(3,"Munificent"),
-						listOf(3,"Auxilia"),
+						listOf(2,"Munificent"),
+						listOf(2,"Auxilia"),
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Gozanti_Cruiser_Squadron"),
+						"Gozanti_Cruiser_Squadron",
 						"Generic_Providence",
 						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
-						listOf(2,"Hailfire_Company"),
+						"Hailfire_Company",
 						"Crab_Droid_Squad",
 						"NewRep_SenatorsOffice",
 						"NR_Star_Base_3",
@@ -4096,13 +4138,13 @@ function Begin_GC(message)
 				{
 					Owner="Hutts",
 					StartingForces={
-						listOf(3,"Munificent"),
-						listOf(3,"Auxilia"),
+						listOf(2,"Munificent"),
+						listOf(2,"Auxilia"),
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Gozanti_Cruiser_Squadron"),
+						"Gozanti_Cruiser_Squadron",
 						"Generic_Providence",
 						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
-						listOf(2,"Hailfire_Company"),
+						"Hailfire_Company",
 						"Crab_Droid_Squad",
 						"NewRep_SenatorsOffice",
 						"NR_Star_Base_3",
@@ -4377,12 +4419,11 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"B2_Droid_Squad",
 						listOf(4,"Geonosian_Cruiser"),
 						listOf(4,"Munificent"),
-						listOf(4,"Recusant"),
-						"Generic_Lucrehulk",
+						listOf(2,"Generic_Lucrehulk"),
 						"Generic_Providence",
 						"Hailfire_Company",
 						"Destroyer_Droid_Company",
@@ -4399,12 +4440,11 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"B2_Droid_Squad",
 						listOf(4,"Geonosian_Cruiser"),
 						listOf(4,"Munificent"),
-						listOf(4,"Recusant"),
-						"Generic_Lucrehulk",
+						listOf(2,"Generic_Lucrehulk"),
 						"Generic_Providence",
 						"Hailfire_Company",
 						"Destroyer_Droid_Company",
@@ -4421,12 +4461,11 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"B2_Droid_Squad",
 						listOf(4,"Geonosian_Cruiser"),
 						listOf(4,"Munificent"),
-						listOf(4,"Recusant"),
-						"Generic_Lucrehulk",
+						listOf(2,"Generic_Lucrehulk"),
 						"Generic_Providence",
 						"Hailfire_Company",
 						"Destroyer_Droid_Company",
@@ -4443,12 +4482,11 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"B2_Droid_Squad",
 						listOf(4,"Geonosian_Cruiser"),
 						listOf(4,"Munificent"),
-						listOf(4,"Recusant"),
-						"Generic_Lucrehulk",
+						listOf(2,"Generic_Lucrehulk"),
 						"Generic_Providence",
 						"Hailfire_Company",
 						"Destroyer_Droid_Company",
@@ -4465,12 +4503,11 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"B2_Droid_Squad",
 						listOf(4,"Geonosian_Cruiser"),
 						listOf(4,"Munificent"),
-						listOf(4,"Recusant"),
-						"Generic_Lucrehulk",
+						listOf(2,"Generic_Lucrehulk"),
 						"Generic_Providence",
 						"Hailfire_Company",
 						"Destroyer_Droid_Company",
@@ -4646,6 +4683,7 @@ function Begin_GC(message)
 						"E_Ground_Heavy_Vehicle_Factory",
 						"E_Ground_Light_Vehicle_Factory",
 						"E_Ground_Barracks",
+						listOf(2,"Empire_Ground_Mining_Facility"),
 						"Empire_MoffPalace",
 						listOf(3,"Invincible_Cruiser"),
 						"Imperial_ATPT_Squad",
@@ -4664,6 +4702,7 @@ function Begin_GC(message)
 						"E_Ground_Heavy_Vehicle_Factory",
 						"E_Ground_Light_Vehicle_Factory",
 						"E_Ground_Barracks",
+						listOf(2,"Empire_Ground_Mining_Facility"),
 						"Empire_MoffPalace",
 						listOf(3,"Invincible_Cruiser"),
 						"Imperial_ATPT_Squad",
@@ -4682,6 +4721,7 @@ function Begin_GC(message)
 						"E_Ground_Heavy_Vehicle_Factory",
 						"E_Ground_Light_Vehicle_Factory",
 						"E_Ground_Barracks",
+						listOf(2,"Empire_Ground_Mining_Facility"),
 						"Empire_MoffPalace",
 						listOf(3,"Invincible_Cruiser"),
 						"Imperial_ATPT_Squad",
@@ -4700,6 +4740,7 @@ function Begin_GC(message)
 						"E_Ground_Heavy_Vehicle_Factory",
 						"E_Ground_Light_Vehicle_Factory",
 						"E_Ground_Barracks",
+						listOf(2,"Empire_Ground_Mining_Facility"),
 						"Empire_MoffPalace",
 						listOf(3,"Invincible_Cruiser"),
 						"Imperial_ATPT_Squad",
@@ -4718,6 +4759,7 @@ function Begin_GC(message)
 						"E_Ground_Heavy_Vehicle_Factory",
 						"E_Ground_Light_Vehicle_Factory",
 						"E_Ground_Barracks",
+						listOf(2,"Empire_Ground_Mining_Facility"),
 						"Empire_MoffPalace",
 						listOf(3,"Invincible_Cruiser"),
 						"Imperial_ATPT_Squad",
@@ -5134,7 +5176,7 @@ function Begin_GC(message)
 						listOf(5,"Clonetrooper_Phase_One_Team"),
 						"LAAT_Group",
 						"Republic_Heavy_Assault_Company",
-						"R_Ground_Light_Vehicle_Factory",
+						"E_Ground_Light_Vehicle_Factory",
 						listOf(2,"E_Ground_Barracks"),
 						"Empire_MoffPalace",
 						listOf(4,"Generic_Acclamator_Assault_Ship_I"),
@@ -5151,7 +5193,7 @@ function Begin_GC(message)
 						listOf(5,"Clonetrooper_Phase_One_Team"),
 						"LAAT_Group",
 						"Republic_Heavy_Assault_Company",
-						"R_Ground_Light_Vehicle_Factory",
+						"E_Ground_Light_Vehicle_Factory",
 						listOf(2,"E_Ground_Barracks"),
 						"Empire_MoffPalace",
 						listOf(4,"Generic_Acclamator_Assault_Ship_I"),
@@ -5168,7 +5210,7 @@ function Begin_GC(message)
 						listOf(5,"Clonetrooper_Phase_One_Team"),
 						"LAAT_Group",
 						"Republic_Heavy_Assault_Company",
-						"R_Ground_Light_Vehicle_Factory",
+						"E_Ground_Light_Vehicle_Factory",
 						listOf(2,"E_Ground_Barracks"),
 						"Empire_MoffPalace",
 						listOf(4,"Generic_Acclamator_Assault_Ship_I"),
@@ -5185,7 +5227,7 @@ function Begin_GC(message)
 						listOf(5,"Clonetrooper_Phase_One_Team"),
 						"LAAT_Group",
 						"Republic_Heavy_Assault_Company",
-						"R_Ground_Light_Vehicle_Factory",
+						"E_Ground_Light_Vehicle_Factory",
 						listOf(2,"E_Ground_Barracks"),
 						"Empire_MoffPalace",
 						listOf(4,"Generic_Acclamator_Assault_Ship_I"),
@@ -5202,7 +5244,7 @@ function Begin_GC(message)
 						listOf(5,"Clonetrooper_Phase_One_Team"),
 						"LAAT_Group",
 						"Republic_Heavy_Assault_Company",
-						"R_Ground_Light_Vehicle_Factory",
+						"E_Ground_Light_Vehicle_Factory",
 						listOf(2,"E_Ground_Barracks"),
 						"Empire_MoffPalace",
 						listOf(4,"Generic_Acclamator_Assault_Ship_I"),
@@ -5356,24 +5398,54 @@ function Begin_GC(message)
 			},
 			KLATOOINE={
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						listOf(4,"Dreadnaught_Lasers"),
+						listOf(2,"Corellian_Corvette"),
+						"Corellian_Gunboat",
+						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
+						listOf(4,"Gozanti_Cruiser_Squadron"),
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						listOf(4,"Dreadnaught_Lasers"),
+						listOf(2,"Corellian_Corvette"),
+						"Corellian_Gunboat",
+						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
+						listOf(4,"Gozanti_Cruiser_Squadron"),
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						listOf(4,"Dreadnaught_Lasers"),
+						listOf(2,"Corellian_Corvette"),
+						"Corellian_Gunboat",
+						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
+						listOf(4,"Gozanti_Cruiser_Squadron"),
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						listOf(4,"Dreadnaught_Lasers"),
+						listOf(2,"Corellian_Corvette"),
+						"Corellian_Gunboat",
+						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
+						listOf(4,"Gozanti_Cruiser_Squadron"),
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						listOf(4,"Dreadnaught_Lasers"),
+						listOf(2,"Corellian_Corvette"),
+						"Corellian_Gunboat",
+						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
+						listOf(4,"Gozanti_Cruiser_Squadron"),
+					},
 				},
 			},
 			KOORIVA={
@@ -5724,7 +5796,7 @@ function Begin_GC(message)
 					StartingForces={
 						listOf(2,"B2_Droid_Squad"),
 						listOf(2,"Munificent"),
-						listOf(2,"Recusant"),
+						"Recusant",
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -5737,7 +5809,7 @@ function Begin_GC(message)
 					StartingForces={
 						listOf(2,"B2_Droid_Squad"),
 						listOf(2,"Munificent"),
-						listOf(2,"Recusant"),
+						"Recusant",
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -5750,7 +5822,7 @@ function Begin_GC(message)
 					StartingForces={
 						listOf(2,"B2_Droid_Squad"),
 						listOf(2,"Munificent"),
-						listOf(2,"Recusant"),
+						"Recusant",
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -5763,7 +5835,7 @@ function Begin_GC(message)
 					StartingForces={
 						listOf(2,"B2_Droid_Squad"),
 						listOf(2,"Munificent"),
-						listOf(2,"Recusant"),
+						"Recusant",
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -5776,7 +5848,7 @@ function Begin_GC(message)
 					StartingForces={
 						listOf(2,"B2_Droid_Squad"),
 						listOf(2,"Munificent"),
-						listOf(2,"Recusant"),
+						"Recusant",
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -6012,10 +6084,10 @@ function Begin_GC(message)
 				{
 					Owner="Hutts",
 					StartingForces={
-						listOf(2,"B1_Droid_Squad"),
+						"B1_Droid_Squad",
 						listOf(3,"B2_Droid_Squad"),
 						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
-						listOf(2,"Hardcell"),
+						"Hardcell",
 						"Munificent",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -6027,10 +6099,10 @@ function Begin_GC(message)
 				{
 					Owner="Hutts",
 					StartingForces={
-						listOf(2,"B1_Droid_Squad"),
+						"B1_Droid_Squad",
 						listOf(3,"B2_Droid_Squad"),
 						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
-						listOf(2,"Hardcell"),
+						"Hardcell",
 						"Munificent",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -6042,10 +6114,10 @@ function Begin_GC(message)
 				{
 					Owner="Hutts",
 					StartingForces={
-						listOf(2,"B1_Droid_Squad"),
+						"B1_Droid_Squad",
 						listOf(3,"B2_Droid_Squad"),
 						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
-						listOf(2,"Hardcell"),
+						"Hardcell",
 						"Munificent",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -6057,10 +6129,10 @@ function Begin_GC(message)
 				{
 					Owner="Hutts",
 					StartingForces={
-						listOf(2,"B1_Droid_Squad"),
+						"B1_Droid_Squad",
 						listOf(3,"B2_Droid_Squad"),
 						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
-						listOf(2,"Hardcell"),
+						"Hardcell",
 						"Munificent",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -6072,10 +6144,10 @@ function Begin_GC(message)
 				{
 					Owner="Hutts",
 					StartingForces={
-						listOf(2,"B1_Droid_Squad"),
+						"B1_Droid_Squad",
 						listOf(3,"B2_Droid_Squad"),
 						listOf(2,"Techno_Union_Marauder_Missile_Cruiser"),
-						listOf(2,"Hardcell"),
+						"Hardcell",
 						"Munificent",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -6471,7 +6543,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(2,"B1_Droid_Squad"),
 						listOf(2,"Munificent"),
 						listOf(2,"Destroyer_Droid_Company"),
 						"NewRep_SenatorsOffice",
@@ -6484,7 +6556,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(2,"B1_Droid_Squad"),
 						listOf(2,"Munificent"),
 						listOf(2,"Destroyer_Droid_Company"),
 						"NewRep_SenatorsOffice",
@@ -6497,7 +6569,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(2,"B1_Droid_Squad"),
 						listOf(2,"Munificent"),
 						listOf(2,"Destroyer_Droid_Company"),
 						"NewRep_SenatorsOffice",
@@ -6510,7 +6582,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(2,"B1_Droid_Squad"),
 						listOf(2,"Munificent"),
 						listOf(2,"Destroyer_Droid_Company"),
 						"NewRep_SenatorsOffice",
@@ -6523,7 +6595,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(2,"B1_Droid_Squad"),
 						listOf(2,"Munificent"),
 						listOf(2,"Destroyer_Droid_Company"),
 						"NewRep_SenatorsOffice",
@@ -6539,7 +6611,7 @@ function Begin_GC(message)
 					Owner="Pentastar",
 					StartingForces={
 						listOf(2,"Banking_Clan_Interceptor_Frigate"),
-						listOf(6,"Munificent"),
+						listOf(5,"Munificent"),
 						listOf(2,"Hardcell"),
 						listOf(2,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
@@ -6556,7 +6628,7 @@ function Begin_GC(message)
 					Owner="Pentastar",
 					StartingForces={
 						listOf(2,"Banking_Clan_Interceptor_Frigate"),
-						listOf(6,"Munificent"),
+						listOf(5,"Munificent"),
 						listOf(2,"Hardcell"),
 						listOf(2,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
@@ -6573,7 +6645,7 @@ function Begin_GC(message)
 					Owner="Pentastar",
 					StartingForces={
 						listOf(2,"Banking_Clan_Interceptor_Frigate"),
-						listOf(6,"Munificent"),
+						listOf(5,"Munificent"),
 						listOf(2,"Hardcell"),
 						listOf(2,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
@@ -6590,7 +6662,7 @@ function Begin_GC(message)
 					Owner="Pentastar",
 					StartingForces={
 						listOf(2,"Banking_Clan_Interceptor_Frigate"),
-						listOf(6,"Munificent"),
+						listOf(5,"Munificent"),
 						listOf(2,"Hardcell"),
 						listOf(2,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
@@ -6607,7 +6679,7 @@ function Begin_GC(message)
 					Owner="Pentastar",
 					StartingForces={
 						listOf(2,"Banking_Clan_Interceptor_Frigate"),
-						listOf(6,"Munificent"),
+						listOf(5,"Munificent"),
 						listOf(2,"Hardcell"),
 						listOf(2,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
@@ -6626,7 +6698,6 @@ function Begin_GC(message)
 					Owner="Pentastar",
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Gozanti_Cruiser_Squadron"),
 						"Munificent",
 						"Crab_Droid_Squad",
 						"NewRep_SenatorsOffice",
@@ -6642,7 +6713,6 @@ function Begin_GC(message)
 					Owner="Pentastar",
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Gozanti_Cruiser_Squadron"),
 						"Munificent",
 						"Crab_Droid_Squad",
 						"NewRep_SenatorsOffice",
@@ -6658,7 +6728,6 @@ function Begin_GC(message)
 					Owner="Pentastar",
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Gozanti_Cruiser_Squadron"),
 						"Munificent",
 						"Crab_Droid_Squad",
 						"NewRep_SenatorsOffice",
@@ -6674,7 +6743,6 @@ function Begin_GC(message)
 					Owner="Pentastar",
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Gozanti_Cruiser_Squadron"),
 						"Munificent",
 						"Crab_Droid_Squad",
 						"NewRep_SenatorsOffice",
@@ -6690,7 +6758,6 @@ function Begin_GC(message)
 					Owner="Pentastar",
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
-						listOf(2,"Gozanti_Cruiser_Squadron"),
 						"Munificent",
 						"Crab_Droid_Squad",
 						"NewRep_SenatorsOffice",
@@ -7011,8 +7078,8 @@ function Begin_GC(message)
 					Owner="Empire",
 					StartingForces={
 						"Clonetrooper_Phase_One_Team",
-						listOf(3,"Corellian_Corvette"),
-						"Arquitens",
+						"Corellian_Corvette",
+						listOf(2,"Arquitens"),
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						"Generic_Acclamator_Assault_Ship_I",
@@ -7024,8 +7091,8 @@ function Begin_GC(message)
 					Owner="Empire",
 					StartingForces={
 						"Clonetrooper_Phase_One_Team",
-						listOf(3,"Corellian_Corvette"),
-						"Arquitens",
+						"Corellian_Corvette",
+						listOf(2,"Arquitens"),
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						"Generic_Acclamator_Assault_Ship_I",
@@ -7037,8 +7104,8 @@ function Begin_GC(message)
 					Owner="Empire",
 					StartingForces={
 						"Clonetrooper_Phase_One_Team",
-						listOf(3,"Corellian_Corvette"),
-						"Arquitens",
+						"Corellian_Corvette",
+						listOf(2,"Arquitens"),
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						"Generic_Acclamator_Assault_Ship_I",
@@ -7050,8 +7117,8 @@ function Begin_GC(message)
 					Owner="Empire",
 					StartingForces={
 						"Clonetrooper_Phase_One_Team",
-						listOf(3,"Corellian_Corvette"),
-						"Arquitens",
+						"Corellian_Corvette",
+						listOf(2,"Arquitens"),
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
 						"Generic_Acclamator_Assault_Ship_I",
@@ -7138,10 +7205,10 @@ function Begin_GC(message)
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
 						listOf(2,"B2_Droid_Squad"),
-						listOf(4,"Generic_Providence"),
+						listOf(3,"Generic_Providence"),
 						listOf(4,"Recusant"),
-						listOf(4,"Hardcell"),
-						listOf(4,"Diamond_Frigate"),
+						"Hardcell",
+						listOf(3,"Diamond_Frigate"),
 						"Hailfire_Company",
 						listOf(2,"OG9_Company"),
 						"Destroyer_Droid_Company",
@@ -7154,10 +7221,10 @@ function Begin_GC(message)
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
 						listOf(2,"B2_Droid_Squad"),
-						listOf(4,"Generic_Providence"),
+						listOf(3,"Generic_Providence"),
 						listOf(4,"Recusant"),
-						listOf(4,"Hardcell"),
-						listOf(4,"Diamond_Frigate"),
+						"Hardcell",
+						listOf(3,"Diamond_Frigate"),
 						"Hailfire_Company",
 						listOf(2,"OG9_Company"),
 						"Destroyer_Droid_Company",
@@ -7170,10 +7237,10 @@ function Begin_GC(message)
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
 						listOf(2,"B2_Droid_Squad"),
-						listOf(4,"Generic_Providence"),
+						listOf(3,"Generic_Providence"),
 						listOf(4,"Recusant"),
-						listOf(4,"Hardcell"),
-						listOf(4,"Diamond_Frigate"),
+						"Hardcell",
+						listOf(3,"Diamond_Frigate"),
 						"Hailfire_Company",
 						listOf(2,"OG9_Company"),
 						"Destroyer_Droid_Company",
@@ -7186,10 +7253,10 @@ function Begin_GC(message)
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
 						listOf(2,"B2_Droid_Squad"),
-						listOf(4,"Generic_Providence"),
+						listOf(3,"Generic_Providence"),
 						listOf(4,"Recusant"),
-						listOf(4,"Hardcell"),
-						listOf(4,"Diamond_Frigate"),
+						"Hardcell",
+						listOf(3,"Diamond_Frigate"),
 						"Hailfire_Company",
 						listOf(2,"OG9_Company"),
 						"Destroyer_Droid_Company",
@@ -7202,10 +7269,10 @@ function Begin_GC(message)
 					StartingForces={
 						listOf(2,"B1_Droid_Squad"),
 						listOf(2,"B2_Droid_Squad"),
-						listOf(4,"Generic_Providence"),
+						listOf(3,"Generic_Providence"),
 						listOf(4,"Recusant"),
-						listOf(4,"Hardcell"),
-						listOf(4,"Diamond_Frigate"),
+						"Hardcell",
+						listOf(3,"Diamond_Frigate"),
 						"Hailfire_Company",
 						listOf(2,"OG9_Company"),
 						"Destroyer_Droid_Company",
@@ -7595,7 +7662,7 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(7,"Dreadnaught_Lasers"),
+						listOf(6,"Dreadnaught_Lasers"),
 						listOf(2,"Clonetrooper_Phase_One_Team"),
 						"E_Ground_Barracks",
 						listOf(2,"Republic_Artillery_Corp"),
@@ -7608,7 +7675,7 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(7,"Dreadnaught_Lasers"),
+						listOf(6,"Dreadnaught_Lasers"),
 						listOf(2,"Clonetrooper_Phase_One_Team"),
 						"E_Ground_Barracks",
 						listOf(2,"Republic_Artillery_Corp"),
@@ -7621,7 +7688,7 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(7,"Dreadnaught_Lasers"),
+						listOf(6,"Dreadnaught_Lasers"),
 						listOf(2,"Clonetrooper_Phase_One_Team"),
 						"E_Ground_Barracks",
 						listOf(2,"Republic_Artillery_Corp"),
@@ -7634,7 +7701,7 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(7,"Dreadnaught_Lasers"),
+						listOf(6,"Dreadnaught_Lasers"),
 						listOf(2,"Clonetrooper_Phase_One_Team"),
 						"E_Ground_Barracks",
 						listOf(2,"Republic_Artillery_Corp"),
@@ -7647,7 +7714,7 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(7,"Dreadnaught_Lasers"),
+						listOf(6,"Dreadnaught_Lasers"),
 						listOf(2,"Clonetrooper_Phase_One_Team"),
 						"E_Ground_Barracks",
 						listOf(2,"Republic_Artillery_Corp"),
@@ -8524,24 +8591,49 @@ function Begin_GC(message)
 			},
 			SLEHEYRON={
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						"Invincible_Cruiser",
+						listOf(3,"Captor"),
+						listOf(3,"Dreadnaught_Lasers"),
+						listOf(2,"Banking_Clan_Interceptor_Frigate"),
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						"Invincible_Cruiser",
+						listOf(3,"Captor"),
+						listOf(3,"Dreadnaught_Lasers"),
+						listOf(2,"Banking_Clan_Interceptor_Frigate"),
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						"Invincible_Cruiser",
+						listOf(3,"Captor"),
+						listOf(3,"Dreadnaught_Lasers"),
+						listOf(2,"Banking_Clan_Interceptor_Frigate"),
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						"Invincible_Cruiser",
+						listOf(3,"Captor"),
+						listOf(3,"Dreadnaught_Lasers"),
+						listOf(2,"Banking_Clan_Interceptor_Frigate"),
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						"Invincible_Cruiser",
+						listOf(3,"Captor"),
+						listOf(3,"Dreadnaught_Lasers"),
+						listOf(2,"Banking_Clan_Interceptor_Frigate"),
+					},
 				},
 			},
 			SLUIS_VAN={
@@ -8692,7 +8784,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -8707,7 +8799,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -8722,7 +8814,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -8737,7 +8829,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -8752,7 +8844,7 @@ function Begin_GC(message)
 				{
 					Owner="Rebel",
 					StartingForces={
-						listOf(4,"B1_Droid_Squad"),
+						listOf(3,"B1_Droid_Squad"),
 						"Destroyer_Droid_Company",
 						"NewRep_SenatorsOffice",
 						"R_Ground_Barracks",
@@ -9613,24 +9705,34 @@ function Begin_GC(message)
 			},
 			VORPAYA={
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						"Dreadnaught_Lasers",
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						"Dreadnaught_Lasers",
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						"Dreadnaught_Lasers",
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						"Dreadnaught_Lasers",
+					},
 				},
 				{
-					Owner="Neutral",
-					StartingForces={},
+					Owner="Warlords",
+					StartingForces={
+						"Dreadnaught_Lasers",
+					},
 				},
 			},
 			VULPTER={
@@ -9744,7 +9846,7 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(4,"Clonetrooper_Phase_One_Team"),
+						listOf(2,"Clonetrooper_Phase_One_Team"),
 						"Carrack_Cruiser_Lasers",
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
@@ -9756,7 +9858,7 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(4,"Clonetrooper_Phase_One_Team"),
+						listOf(2,"Clonetrooper_Phase_One_Team"),
 						"Carrack_Cruiser_Lasers",
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
@@ -9768,7 +9870,7 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(4,"Clonetrooper_Phase_One_Team"),
+						listOf(2,"Clonetrooper_Phase_One_Team"),
 						"Carrack_Cruiser_Lasers",
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
@@ -9780,7 +9882,7 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(4,"Clonetrooper_Phase_One_Team"),
+						listOf(2,"Clonetrooper_Phase_One_Team"),
 						"Carrack_Cruiser_Lasers",
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",
@@ -9792,7 +9894,7 @@ function Begin_GC(message)
 				{
 					Owner="Empire",
 					StartingForces={
-						listOf(4,"Clonetrooper_Phase_One_Team"),
+						listOf(2,"Clonetrooper_Phase_One_Team"),
 						"Carrack_Cruiser_Lasers",
 						"E_Ground_Barracks",
 						"Empire_MoffPalace",

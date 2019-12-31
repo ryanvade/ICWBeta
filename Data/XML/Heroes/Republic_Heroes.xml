@@ -296,7 +296,7 @@
 
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>220</Tactical_Health>
-		<Shield_Refresh_Rate>6</Shield_Refresh_Rate>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>600</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
 		<Behavior>SELECTABLE, TRANSPORT</Behavior>
@@ -441,7 +441,7 @@
         <GUI_Bracket_Size>0</GUI_Bracket_Size>
 
 		<GalacticBehavior>SELECTABLE</GalacticBehavior>
-		<LandBehavior>SELECTABLE, VEHICLE_THIEF, ABILITY_COUNTDOWN, SURFACE_FX, WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
+		<LandBehavior>SELECTABLE, VEHICLE_THIEF, ABILITY_COUNTDOWN, SURFACE_FX, POWERED, SHIELDED, WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
 		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
@@ -474,11 +474,12 @@
 		<Armor_Type> ArmourG_Hero </Armor_Type>
 		<Damage>25</Damage>
 		<Sensor_Range>20</Sensor_Range>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>200</Tactical_Health>
-		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
-		<Energy_Capacity>0</Energy_Capacity>
-		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
+		<Shield_Armor_Type> ShieldG_Infantry </Shield_Armor_Type>
+		<Shield_Points>100</Shield_Points>
+		<Tactical_Health>150</Tactical_Health>
+		<Shield_Refresh_Rate>10</Shield_Refresh_Rate>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
 		<Stealth_Capable>No</Stealth_Capable>
 		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
 		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
@@ -487,14 +488,16 @@
 
 		<Land_FOW_Reveal_Range>250.0</Land_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
-		<Targeting_Max_Attack_Distance>100.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>350.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
-		<Projectile_Types>Proj_Boss_Blaster_blue</Projectile_Types>
+		<!-- <Projectile_Types>Proj_Boss_Blaster_blue</Projectile_Types>
         	<Projectile_Damage>4.5</Projectile_Damage>
 		<Projectile_Fire_Recharge_Seconds>1.3</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>25</Projectile_Fire_Pulse_Count>
-		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds> -->
+		
+		<Hardpoints>HP_Clone_Commando_Blaster</Hardpoints>
 
 
 		<Targeting_Fire_Inaccuracy> Infantry, 3.0 </Targeting_Fire_Inaccuracy>
@@ -532,7 +535,7 @@
         <Highlight_Blob_Material_Name>Highlight_Empire_Hero</Highlight_Blob_Material_Name>
 
 		<Has_Land_Evaluator>True</Has_Land_Evaluator>
-		<AI_Combat_Power>250</AI_Combat_Power>
+		<AI_Combat_Power>84</AI_Combat_Power>
 		<Idle_Chase_Range>100.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
@@ -572,7 +575,7 @@
         <GUI_Bracket_Size>0</GUI_Bracket_Size>
 
 		<GalacticBehavior>SELECTABLE</GalacticBehavior>
-		<LandBehavior>SELECTABLE, VEHICLE_THIEF, ABILITY_COUNTDOWN, SURFACE_FX, WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
+		<LandBehavior>SELECTABLE, VEHICLE_THIEF, ABILITY_COUNTDOWN, SURFACE_FX, POWERED, SHIELDED, WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
 		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
@@ -603,13 +606,14 @@
 		<Size_Value>10</Size_Value>
 
 		<Armor_Type> ArmourG_Hero </Armor_Type>
+		<Shield_Armor_Type> ShieldG_Infantry </Shield_Armor_Type>
 		<Damage>30</Damage>
 		<Sensor_Range>20</Sensor_Range>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>200</Tactical_Health>
-		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
-		<Energy_Capacity>0</Energy_Capacity>
-		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
+		<Shield_Points>100</Shield_Points>
+		<Tactical_Health>150</Tactical_Health>
+		<Shield_Refresh_Rate>10</Shield_Refresh_Rate>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
 		<Stealth_Capable>No</Stealth_Capable>
 		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
 		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
@@ -618,11 +622,12 @@
 
 		<Land_FOW_Reveal_Range>250.0</Land_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
-		<Targeting_Max_Attack_Distance>100.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>200.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
 		
 		<Projectile_Types>Proj_Boss_Concussion_Grenade</Projectile_Types>
+		<!-- <Projectile_Blast_Area_Damage> 20.0 </Projectile_Blast_Area_Damage> -->
 		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
 		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
 		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
@@ -663,7 +668,7 @@
         <Highlight_Blob_Material_Name>Highlight_Empire_Hero</Highlight_Blob_Material_Name>
 
 		<Has_Land_Evaluator>True</Has_Land_Evaluator>
-		<AI_Combat_Power>250</AI_Combat_Power>
+		<AI_Combat_Power>68</AI_Combat_Power>
 		<Idle_Chase_Range>100.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
@@ -749,7 +754,7 @@
         <GUI_Bracket_Size>0</GUI_Bracket_Size>
 
 		<GalacticBehavior>SELECTABLE</GalacticBehavior>
-		<LandBehavior>SELECTABLE, VEHICLE_THIEF, ABILITY_COUNTDOWN, SURFACE_FX, WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
+		<LandBehavior>SELECTABLE, VEHICLE_THIEF, ABILITY_COUNTDOWN, SURFACE_FX, POWERED, SHIELDED, WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
 		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
@@ -780,13 +785,14 @@
 		<Size_Value>10</Size_Value>
 
 		<Armor_Type> ArmourG_Hero </Armor_Type>
+		<Shield_Armor_Type>ShieldG_Infantry</Shield_Armor_Type>
 		<Damage>30</Damage>
 		<Sensor_Range>20</Sensor_Range>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>200</Tactical_Health>
-		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
-		<Energy_Capacity>0</Energy_Capacity>
-		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
+		<Shield_Points>100</Shield_Points>
+		<Tactical_Health>150</Tactical_Health>
+		<Shield_Refresh_Rate>10</Shield_Refresh_Rate>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
 		<Stealth_Capable>No</Stealth_Capable>
 		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
 		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
@@ -795,11 +801,11 @@
 
 		<Land_FOW_Reveal_Range>250.0</Land_FOW_Reveal_Range>
 		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
-		<Targeting_Max_Attack_Distance>100.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>350.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
 		
-		<Projectile_Types>Proj_Boss_Blaster_blue</Projectile_Types>
+		<!-- <Projectile_Types>Proj_Boss_Blaster_blue</Projectile_Types>
         	<Projectile_Damage>4.5</Projectile_Damage>
 		<Projectile_Fire_Recharge_Seconds>1.3</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>25</Projectile_Fire_Pulse_Count>
@@ -809,7 +815,9 @@
 		<Targeting_Fire_Inaccuracy> Infantry, 3.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Vehicle, 1.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 20.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy> -->
+		
+		<Hardpoints>HP_Clone_Commando_Blaster</Hardpoints>
 
 		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
@@ -841,7 +849,7 @@
         <Highlight_Blob_Material_Name>Highlight_Empire_Hero</Highlight_Blob_Material_Name>
 
 		<Has_Land_Evaluator>True</Has_Land_Evaluator>
-		<AI_Combat_Power>250</AI_Combat_Power>
+		<AI_Combat_Power>84</AI_Combat_Power>
 		<Idle_Chase_Range>100.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
@@ -926,7 +934,7 @@
         <GUI_Bracket_Size>0</GUI_Bracket_Size>
 
 		<GalacticBehavior>SELECTABLE</GalacticBehavior>
-		<LandBehavior>SELECTABLE, VEHICLE_THIEF, ABILITY_COUNTDOWN, SURFACE_FX, WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
+		<LandBehavior>SELECTABLE, VEHICLE_THIEF, ABILITY_COUNTDOWN, SURFACE_FX, POWERED, SHIELDED, WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,UNIT_AI, GARRISON_UNIT</LandBehavior>
 		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
 		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
 		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
@@ -957,13 +965,14 @@
 		<Size_Value>10</Size_Value>
 
 		<Armor_Type> ArmourG_Hero </Armor_Type>
+		<Shield_Armor_Type> ShieldG_Infantry </Shield_Armor_Type>
 		<Damage>25</Damage>
 		<Sensor_Range>20</Sensor_Range>
-		<Shield_Points>0</Shield_Points>
-		<Tactical_Health>200</Tactical_Health>
-		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
-		<Energy_Capacity>0</Energy_Capacity>
-		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
+		<Shield_Points>100</Shield_Points>
+		<Tactical_Health>150</Tactical_Health>
+		<Shield_Refresh_Rate>10</Shield_Refresh_Rate>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
 		<Stealth_Capable>No</Stealth_Capable>
 		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
 		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
@@ -975,8 +984,10 @@
 		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
+		<Hardpoints>HP_Clone_Commando_Sniper</Hardpoints>
+
 		
-		<Projectile_Types>Proj_Sev_Blaster</Projectile_Types>
+		<!-- <Projectile_Types>Proj_Sev_Blaster</Projectile_Types>
         	<Projectile_Damage>43.0</Projectile_Damage>
 		<Projectile_Fire_Recharge_Seconds>1.2</Projectile_Fire_Recharge_Seconds>
 		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
@@ -986,7 +997,7 @@
 		<Targeting_Fire_Inaccuracy> Infantry, 3.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Vehicle, 1.0 </Targeting_Fire_Inaccuracy>
 		<Targeting_Fire_Inaccuracy> Air, 20.0 </Targeting_Fire_Inaccuracy>
-		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy> -->
 
 		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
 		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
@@ -1018,7 +1029,7 @@
         <Highlight_Blob_Material_Name>Highlight_Empire_Hero</Highlight_Blob_Material_Name>
 
 		<Has_Land_Evaluator>True</Has_Land_Evaluator>
-		<AI_Combat_Power>250</AI_Combat_Power>
+		<AI_Combat_Power>61</AI_Combat_Power>
 		<Idle_Chase_Range>100.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
@@ -1373,7 +1384,7 @@
 
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>230</Tactical_Health>
-		<Shield_Refresh_Rate>6</Shield_Refresh_Rate>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>600</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
 		<Behavior>SELECTABLE, TRANSPORT</Behavior>
@@ -2476,7 +2487,7 @@
 
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>220</Tactical_Health>
-		<Shield_Refresh_Rate>6</Shield_Refresh_Rate>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>600</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
 		<Behavior>SELECTABLE, TRANSPORT</Behavior>
@@ -2914,7 +2925,7 @@
 
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>230</Tactical_Health>
-		<Shield_Refresh_Rate>6</Shield_Refresh_Rate>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>600</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
 		<Behavior>SELECTABLE, TRANSPORT</Behavior>
@@ -3523,7 +3534,7 @@
 
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>280</Tactical_Health>
-		<Shield_Refresh_Rate>6</Shield_Refresh_Rate>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>600</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
 		<Behavior>SELECTABLE, TRANSPORT</Behavior>
@@ -3984,7 +3995,7 @@
 
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>220</Tactical_Health>
-		<Shield_Refresh_Rate>6</Shield_Refresh_Rate>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>600</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
 		<Behavior>SELECTABLE, TRANSPORT</Behavior>
@@ -4331,7 +4342,7 @@
 
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>220</Tactical_Health>
-		<Shield_Refresh_Rate>6</Shield_Refresh_Rate>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>600</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
 		<Behavior>SELECTABLE, TRANSPORT</Behavior>
@@ -4719,7 +4730,7 @@
 
 		<Shield_Points>0</Shield_Points>
 		<Tactical_Health>220</Tactical_Health>
-		<Shield_Refresh_Rate>6</Shield_Refresh_Rate>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
 		<Energy_Capacity>600</Energy_Capacity>
 		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
 		<Behavior>SELECTABLE, TRANSPORT</Behavior>

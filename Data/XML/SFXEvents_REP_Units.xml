@@ -2,35 +2,45 @@
 
 <SFXEvents>
 
-<SFXEvent Name="Unit_Complete_clonetrooper">
+
+			<!-- Clone troopers  -->
+
+	<SFXEvent Name="Unit_Complete_clonetrooper">
 			<Use_Preset>Preset_UR</Use_Preset>
 				<Samples>
-					
+					Data\Audio\SFX\Units\republic\clonetrooper\select\squad_stands_togheter.wav
 				</Samples>
 					<Localize> Yes </Localize>
 					<Play_Sequentially> Yes </Play_Sequentially>
 					<Text_ID></Text_ID>
 					<Overlap_Test> Unit_clonetrooper </Overlap_Test>
 		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_clonetrooper">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\republic\clonetrooper\move\lets_go_3.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_clonetrooper </Overlap_Test>
+				</SFXEvent>
 
 	
 		<SFXEvent Name="Unit_Select_clonetrooper">
 			<Use_Preset>Preset_UR</Use_Preset>
 					 <Samples>
+						Data\Audio\SFX\Units\republic\clonetrooper\select\lets_do_this_2.wav 
+						Data\Audio\SFX\Units\republic\clonetrooper\select\took_a_while.wav 
 						Data\Audio\SFX\Units\republic\clonetrooper\select\squad_stands_togheter.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\calling_a_shiny.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\oh_no_1.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\123.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\ay.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\uhh_1.wav 
 						Data\Audio\SFX\Units\republic\clonetrooper\select\yess_1.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\woo_1.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\guard_your_backs.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\hahaha_1.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\you_and_me.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\wasnt_me.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\not_the_droids_you_looking_for.wav 
-						Data\Audio\SFX\Units\republic\clonetrooper\select\in_it_for_the_money.wav 
+						Data\Audio\SFX\Units\republic\clonetrooper\select\123.wav 
+						Data\Audio\SFX\Units\republic\clonetrooper\select\with_you_trooper_2.wav 
+						Data\Audio\SFX\Units\republic\clonetrooper\select\watch_those_wrist_rockets2.wav 
+						Data\Audio\SFX\Units\republic\clonetrooper\select\ay.wav 
+						Data\Audio\SFX\Units\republic\clonetrooper\select\he_doesnt_like_you.wav 
 					 </Samples>
 					<Localize> Yes </Localize>
 					<Play_Sequentially> Yes </Play_Sequentially>
@@ -42,40 +52,25 @@
 		 <SFXEvent Name="Unit_Move_clonetrooper">
 					  <Use_Preset>Preset_UR</Use_Preset>
 						  <Samples>
-							Data\Audio\SFX\Units\republic\clonetrooper\move\chaging_weapons.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\closing_range_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\come_on_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\follow_behind_me_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\for_the_republic_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\going_in_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\got_droids_over_there.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\blast_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\ow_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\changing_weapons_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\phew_finally_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\spread_out.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\stay_togheter_3.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\thats_how_you_do_it.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\togheter_2.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\vanguard_2.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\there_we_go_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\going_in_tight_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\follow_me_fast_and_hard_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\eh_watch_this.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\now_we_talking_1.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\lets_go_3.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\like_we_drilled_go.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\i_got_point_1.wav
 							Data\Audio\SFX\Units\republic\clonetrooper\move\for_our_brothers_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\holding_this_postion_2.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\we_do_this_togheter_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\yeah_take_that.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\closing_range_2.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\roger_roger.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\move_in.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\now_we_talking_1.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\move_to_cover.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\phew_finally_1.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\securing_position.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\spread_out.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\stay_in_the_battlezone.wav
 							Data\Audio\SFX\Units\republic\clonetrooper\move\stay_togheter_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\holding_this_position_1.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\going_in_tight_2.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\follow_me_hard_and_fast_2.wav
-							Data\Audio\SFX\Units\republic\clonetrooper\move\you_and_me_2.wav
-							
-							
+							Data\Audio\SFX\Units\republic\clonetrooper\move\stay_small_move_fast.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\stick_with_the_plan.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\togheter_1.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\vanguard_2.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\we_do_this_togheter_1.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\there_we_go_1.wav
+							Data\Audio\SFX\Units\republic\clonetrooper\move\stay_togheter_3.wav
 						  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> Yes </Play_Sequentially>
@@ -86,14 +81,21 @@
 		<SFXEvent Name="Unit_Assist_Move_clonetrooper">
 					  <Use_Preset>Preset_UR</Use_Preset>
 						  <Samples>
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_move\go_i_got_ur_back_1.wav
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_move\i_got_u.wav
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_move\this_should_help_1.wav
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_move\with_you_trooper_1.wav
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_move\with_you_trooper_2.wav
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_move\togheter_1.wav
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_move\goo_got_your_back.wav
-						  
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\go_i_got_ur_back_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\clanker_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_u.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\runn.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\watch_the_charge.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\with_you_trooper_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\woo_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\droid_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_point.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\taking_vanguard.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\med_support.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\you_and_me.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\sweep_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\togheter_2.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\bom.wav
 						  					  
 						  </Samples>
 						  <Localize> Yes </Localize>
@@ -103,31 +105,23 @@
 					  <Overlap_Test> Unit_clonetrooper </Overlap_Test>
 				</SFXEvent>
 				
-		<SFXEvent Name="Unit_Fleet_Move_clonetrooper">
-					  <Use_Preset>Preset_UR</Use_Preset>
-					  <Samples>
-					  Data\Audio\SFX\Units\republic\clonetrooper\move\we_do_this_togheter_1.wav
-					  </Samples>
-						  <Localize> Yes </Localize>
-						  <Play_Sequentially> Yes </Play_Sequentially>
-						<Text_ID></Text_ID>
-					  <Overlap_Test> Unit_clonetrooper </Overlap_Test>
-				</SFXEvent>
 				
 		<SFXEvent Name="Unit_Attack_clonetrooper">
 					  <Use_Preset>Preset_UR</Use_Preset>
 						  <Samples>
-						 Data\Audio\SFX\Units\republic\clonetrooper\attack\charge_1.wav
-						 Data\Audio\SFX\Units\republic\clonetrooper\attack\close_range_assault_1.wav
-						 Data\Audio\SFX\Units\republic\clonetrooper\attack\this_will_show_them_1.wav
-						 Data\Audio\SFX\Units\republic\clonetrooper\attack\targeting_hostiles_1.wav
-						 Data\Audio\SFX\Units\republic\clonetrooper\attack\sweep_1.wav
-						 Data\Audio\SFX\Units\republic\clonetrooper\attack\starting_assault_1.wav
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\assault_position.wav
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\going_in_tight_1.wav
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\for_the_clone_army.wav
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\blast_it_blast_it.wav
 						 Data\Audio\SFX\Units\republic\clonetrooper\attack\squad_engaging.wav
-						 Data\Audio\SFX\Units\republic\clonetrooper\attack\starting_assault_2.wav
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\for_the_republic_1.wav
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\stand_your_ground.wav
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\starting_kill_sweep.wav
 						 Data\Audio\SFX\Units\republic\clonetrooper\attack\starting_kill_sweep_1.wav
-						 Data\Audio\SFX\Units\republic\clonetrooper\attack\now_commander_attack_1.wav
-						 Data\Audio\SFX\Units\republic\clonetrooper\attack\starting_killsweep.wav
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\droids_keep_coming.wav
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\target_the_sentry.wav
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\troopers_move_in.wav
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\watch_those_wrist_rockets.wav
 						  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> Yes </Play_Sequentially>
@@ -138,13 +132,34 @@
 		  <SFXEvent Name="Unit_Assist_Attack_clonetrooper">
 					  <Use_Preset>Preset_UR</Use_Preset>
 						  <Samples> 
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_attack\covering_fire_2.wav 
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_attack\covering_fire_go_2.wav 
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_attack\covering_fire_4.wav 
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_attack\got_ur_back_2.wav 
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_attack\got_your_back_1.wav 
-						  Data\Audio\SFX\Units\republic\clonetrooper\assist_attack\arming_grenade_2.wav 
-						
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\buy_me_time.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_4.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_go_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_charging.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_vanguard.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\eh_watch_this.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\enemy_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\follow_me_fast_and_hard_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_clone_army.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_republic_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\get_to_the_batte_trooper.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\good_shooting.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_ur_back_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_your_back_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\grenade_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\i_got_you_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\imploder_grenade.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\incoming_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\its_still_active.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\keep_at_them.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\pulling_turret_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\taking_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targeting_hostiles_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targetting_droid.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\watch_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\we_have_to_fight_our_way_in.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\yeahah.wav 
 						  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> No </Play_Sequentially>
@@ -156,14 +171,21 @@
 			<SFXEvent Name="Unit_Guard_clonetrooper">
 					 <Use_Preset>Preset_UR</Use_Preset>
 					  <Samples>
-					  Data\Audio\SFX\Units\republic\clonetrooper\guard\guard_duty1.wav
-					  Data\Audio\SFX\Units\republic\clonetrooper\guard\tiered_11.wav 
-					  Data\Audio\SFX\Units\republic\clonetrooper\guard\gonk_gonk.wav 
-					  Data\Audio\SFX\Units\republic\clonetrooper\guard\theme.wav 
-					  
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\allright_boys_guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\defence_is_set.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\falling_back_to_cool.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\gonk_gonk.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_droids_on_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_your_backs.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\hold_postion.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_position_1.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_postion_2.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\remain_here.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\take_cover.wav
 					  </Samples>
 						  <Localize> Yes </Localize>
-						  <Play_Sequentially> Yes </Play_Sequentially>
+						  <Play_Sequentially> No </Play_Sequentially>
 							<Text_ID></Text_ID>
 					  <Overlap_Test> Unit_clonetrooper </Overlap_Test>
 				</SFXEvent>
@@ -171,6 +193,7 @@
 			<SFXEvent Name="Unit_Death_clonetrooper">
 					 <Use_Preset>Preset_EXP</Use_Preset>
 					  <Samples>
+					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_0.wav
 					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_1.wav 
 					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_2.wav 
 					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_3.wav 
@@ -184,96 +207,1874 @@
 					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_11.wav
 					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_12.wav 
 					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_13.wav
-					  Data\Audio\SFX\Units\republic\clonetrooper\death\uff_1.wav
+					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_14.wav
+					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_15.wav
+					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_16.wav
 					  
 					  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> No </Play_Sequentially>
-						  <Probability>15</Probability>
+						  <Probability>20</Probability>
 							<Text_ID></Text_ID>
 					  <Overlap_Test> Unit_clonetrooper </Overlap_Test>
 				</SFXEvent>
+				
+				
+				
+				<!-- ARC Troopers (To be added) -->
+				
+				
+				<SFXEvent Name="Unit_Complete_ARC_Trooper">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_ARC_Trooper </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_ARC_Trooper">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_ARC_Trooper </Overlap_Test>
+				</SFXEvent>
 
-		<!-- Coreys VO, to be replaced -->
 	
-		 <SFXEvent Name="Unit_Select_Clone_Trooper">
+		<SFXEvent Name="Unit_Select_ARC_Trooper">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_ARC_Trooper </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_ARC_Trooper">
 					  <Use_Preset>Preset_UR</Use_Preset>
-					  <Samples>data\audio\SFX\Units\Clones\Clone_Select1.wav data\audio\SFX\Units\Clones\Clone_Select2.wav data\audio\SFX\Units\Clones\Clone_Select3.wav data\audio\SFX\Units\Clones\Clone_Select4.wav data\audio\SFX\Units\Clones\Clone_Select5.wav data\audio\SFX\Units\Clones\Clone_Select6.wav data\audio\SFX\Units\Clones\Clone_Select7.wav data\audio\SFX\Units\Clones\Clone_Select8.wav</Samples>
-						  <Localize> Yes </Localize>
-						  <Play_Sequentially> Yes </Play_Sequentially>
-						  <Text_ID></Text_ID>
-					  <Overlap_Test> Unit_Clone_Trooper </Overlap_Test>
-				</SFXEvent>
+						  <Samples>
+						
 
-		 <SFXEvent Name="Unit_Complete_Clone_Trooper">
-					  <Use_Preset>Preset_UR</Use_Preset>
-					  <Samples>data\audio\SFX\Units\Clones\Clone_Select1.wav</Samples>
-						  <Localize> Yes </Localize>
-						  <Play_Sequentially> Yes </Play_Sequentially>
-						<Text_ID></Text_ID>
-					  <Overlap_Test> Unit_Clone_Trooper </Overlap_Test>
-				</SFXEvent>
-
-
-			  <SFXEvent Name="Unit_Move_Clone_Trooper">
-					  <Use_Preset>Preset_UR</Use_Preset>
-						  <Samples>data\audio\SFX\Units\Clones\Clone_Move1.wav data\audio\SFX\Units\Clones\Clone_Move2.wav data\audio\SFX\Units\Clones\Clone_Move3.wav data\audio\SFX\Units\Clones\Clone_Move4.wav data\audio\SFX\Units\Clones\Clone_Move5.wav data\audio\SFX\Units\Clones\Clone_Move6.wav data\audio\SFX\Units\Clones\Clone_Move7.wav </Samples>
-						  <Localize> Yes </Localize>
-						  <Play_Sequentially> Yes </Play_Sequentially>
-						 						<Text_ID></Text_ID>
-					  <Overlap_Test> Unit_Clone_Trooper </Overlap_Test>
-				</SFXEvent>
-
-			  <SFXEvent Name="Unit_Fleet_Move_Clone_Trooper">
-					  <Use_Preset>Preset_UR</Use_Preset>
-					  <Samples>data\audio\SFX\Units\Clones\Clone_Move1.wav</Samples>
+						  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> Yes </Play_Sequentially>
 						<Text_ID></Text_ID>
-					  <Overlap_Test> Unit_Clone_Trooper </Overlap_Test>
+					  <Overlap_Test> Unit_ARC_Trooper </Overlap_Test>
 				</SFXEvent>
-
-
-			  <SFXEvent Name="Unit_Attack_Clone_Trooper">
+				
+		<SFXEvent Name="Unit_Assist_Move_ARC_Trooper">
 					  <Use_Preset>Preset_UR</Use_Preset>
-						  <Samples>data\audio\SFX\Units\Clones\Clone_Attack1.wav data\audio\SFX\Units\Clones\Clone_Attack2.wav data\audio\SFX\Units\Clones\Clone_Attack3.wav data\audio\SFX\Units\Clones\Clone_Attack4.wav data\audio\SFX\Units\Clones\Clone_Attack5.wav data\audio\SFX\Units\Clones\Clone_Attack6.wav data\audio\SFX\Units\Clones\Clone_Attack7.wav data\audio\SFX\Units\Clones\Clone_Attack8.wav data\audio\SFX\Units\Clones\Clone_Attack9.wav data\audio\SFX\Units\Clones\Clone_Attack10.wav</Samples>
+						  <Samples>
+						 
+						  
+						  					  
+						  </Samples>
 						  <Localize> Yes </Localize>
-						  <Play_Sequentially> Yes </Play_Sequentially>
-						<Text_ID></Text_ID>
-					  <Overlap_Test> Unit_Clone_Trooper </Overlap_Test>
-				</SFXEvent>
-
-			  <SFXEvent Name="Unit_Assist_Move_Clone_Trooper">
-					  <Use_Preset>Preset_UR</Use_Preset>
-						  <Samples>data\audio\SFX\Units\Clones\Clone_Move1.wav data\audio\SFX\Units\Clones\Clone_Move2.wav data\audio\SFX\Units\Clones\Clone_Move3.wav data\audio\SFX\Units\Clones\Clone_Move4.wav data\audio\SFX\Units\Clones\Clone_Move5.wav data\audio\SFX\Units\Clones\Clone_Move6.wav data\audio\SFX\Units\Clones\Clone_Move7.wav </Samples>
-						  <Localize> Yes </Localize>
-						  <Play_Sequentially> Yes </Play_Sequentially>
+						  <Play_Sequentially> No </Play_Sequentially>
 						  <Probability>60</Probability>
 						<Text_ID></Text_ID>
-					  <Overlap_Test> Unit_Clone_Trooper </Overlap_Test>
+					  <Overlap_Test> Unit_ARC_Trooper </Overlap_Test>
 				</SFXEvent>
-
-			  <SFXEvent Name="Unit_Assist_Attack_Clone_Trooper">
+				
+				
+		<SFXEvent Name="Unit_Attack_ARC_Trooper">
 					  <Use_Preset>Preset_UR</Use_Preset>
-						  <Samples>data\audio\SFX\Units\Clones\Clone_Move1.wav data\audio\SFX\Units\Clones\Clone_Move2.wav data\audio\SFX\Units\Clones\Clone_Move3.wav data\audio\SFX\Units\Clones\Clone_Move4.wav data\audio\SFX\Units\Clones\Clone_Move5.wav data\audio\SFX\Units\Clones\Clone_Move6.wav data\audio\SFX\Units\Clones\Clone_Move7.wav </Samples>
+						  <Samples>
+
+						  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_ARC_Trooper </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_ARC_Trooper">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						 
+						
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
 						  <Probability>60</Probability>
 						<Text_ID></Text_ID>
-					  <Overlap_Test> Unit_Clone_Trooper </Overlap_Test>
+					  <Overlap_Test> Unit_ARC_Trooper </Overlap_Test>
 				</SFXEvent>
-
-
-			  <SFXEvent Name="Unit_Guard_Clone_Trooper">
-					  <Use_Preset>Preset_UR</Use_Preset>
-					  <Samples>data\audio\SFX\Units\Clones\Clone_Cover1.wav data\audio\SFX\Units\Clones\Clone_Cover2.wav</Samples>
+				
+			<SFXEvent Name="Unit_Guard_ARC_Trooper">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					 
+					  
+					  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> Yes </Play_Sequentially>
 							<Text_ID></Text_ID>
-					  <Overlap_Test> Unit_Clone_Trooper </Overlap_Test>
+					  <Overlap_Test> Unit_ARC_Trooper </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_ARC_Trooper">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_ARC_Trooper </Overlap_Test>
+				</SFXEvent>
+				
+				
+				<!-- Jedi -->
+				
+		<SFXEvent Name="Unit_Complete_Jedi">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_Jedi </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_Jedi">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clonetrooper\move\we_do_this_togheter_1.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Jedi </Overlap_Test>
 				</SFXEvent>
 
+	
+		<SFXEvent Name="Unit_Select_Jedi">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\Units\republic\clonetrooper\select\squad_stands_togheter.wav 
 
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_Jedi </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_Jedi">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\clonetrooper\move\chaging_weapons.wav
+							
+							
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Jedi </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_Jedi">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						  Data\Audio\SFX\Units\republic\clonetrooper\assist_move\go_i_got_ur_back_1.wav
+
+						  
+						  					  
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Jedi </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_Jedi">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						 Data\Audio\SFX\Units\republic\clonetrooper\attack\charge_1.wav
+
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Jedi </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_Jedi">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						  Data\Audio\SFX\Units\republic\clonetrooper\assist_attack\covering_fire_2.wav 
+						
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Jedi </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_Jedi">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clonetrooper\guard\guard_duty1.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Jedi </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_Jedi">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_1.wav 
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_clonetrooper </Overlap_Test>
+			</SFXEvent>
+				
+			<SFXEvent Name="Unit_Health_Low_Jedi">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clonetrooper\death\dies_1.wav 
+					
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_clonetrooper </Overlap_Test>
+				</SFXEvent>
+				
+				<!-- LAAT -->
+				
+		<SFXEvent Name="Unit_Complete_LAAT">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\laat\now_were_even.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_LAAT </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_LAAT">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\laat\select\get_ready_to_move_in.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_LAAT </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_LAAT">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\Units\republic\laat\select\shield_up.wav 
+						Data\Audio\SFX\Units\republic\laat\select\get_ready_to_move_in.wav 
+						Data\Audio\SFX\Units\republic\laat\select\support_ready.wav 
+						Data\Audio\SFX\Units\republic\laat\select\now_were_even.wav 
+						Data\Audio\SFX\Units\republic\laat\select\auto_guns_online.wav 
+						Data\Audio\SFX\Units\republic\laat\select\shield_deployed.wav 
+						Data\Audio\SFX\Units\republic\laat\select\trouble_maker.wav 
+						Data\Audio\SFX\Units\republic\laat\select\your_reinforcement-.wav 
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_LAAT </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_LAAT">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\laat\move\on_it_2.wav
+							Data\Audio\SFX\Units\republic\laat\move\area_not_secure.wav
+							Data\Audio\SFX\Units\republic\laat\move\buy_some_time.wav
+							Data\Audio\SFX\Units\republic\laat\move\cadet_misstake.wav
+							Data\Audio\SFX\Units\republic\laat\move\closing_range_1.wav
+							Data\Audio\SFX\Units\republic\laat\move\got_droids_over_there.wav
+							Data\Audio\SFX\Units\republic\laat\move\theme.wav
+							Data\Audio\SFX\Units\republic\laat\move\yeah_take_that.wav
+							Data\Audio\SFX\Units\republic\laat\move\that_was_some_droid.wav
+							
+							
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_LAAT </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_LAAT">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\go_i_got_ur_back_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\clanker_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_u.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\runn.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\watch_the_charge.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\with_you_trooper_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\woo_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\droid_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_point.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\taking_vanguard.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\med_support.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\you_and_me.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\sweep_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\togheter_2.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\bom.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_LAAT </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_LAAT">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						 Data\Audio\SFX\Units\republic\laat\attack\fire_from_the_sky.wav
+						 Data\Audio\SFX\Units\republic\laat\attack\for_the_clone_army.wav
+						 Data\Audio\SFX\Units\republic\laat\attack\firing.wav
+						 Data\Audio\SFX\Units\republic\laat\attack\guns_hot.wav
+						 Data\Audio\SFX\Units\republic\laat\attack\guns_locking.wav
+						 Data\Audio\SFX\Units\republic\laat\attack\for_the_republic_1.wav
+						 Data\Audio\SFX\Units\republic\laat\attack\keep_em_busy.wav
+						 Data\Audio\SFX\Units\republic\laat\attack\locked_and_firing_1.wav
+						 Data\Audio\SFX\Units\republic\laat\attack\more_hostiles_coming_in.wav
+						 Data\Audio\SFX\Units\republic\laat\attack\stay_on_it.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_LAAT </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_LAAT">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\buy_me_time.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_4.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_go_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_charging.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_vanguard.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\eh_watch_this.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\enemy_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\follow_me_fast_and_hard_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_clone_army.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_republic_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\get_to_the_batte_trooper.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\good_shooting.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_ur_back_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_your_back_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\grenade_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\i_got_you_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\imploder_grenade.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\incoming_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\its_still_active.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\keep_at_them.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\pulling_turret_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\taking_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targeting_hostiles_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targetting_droid.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\watch_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\we_have_to_fight_our_way_in.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\yeahah.wav 
+						
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_LAAT </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_LAAT">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\allright_boys_guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\defence_is_set.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\falling_back_to_cool.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\gonk_gonk.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_droids_on_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_your_backs.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\hold_postion.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_position_1.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_postion_2.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\remain_here.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\take_cover.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_LAAT </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_LAAT">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\death\argh.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_find_shelter.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_run.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\get_clear.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\guns_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_pinned_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_sourrounded.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\might_be_in_trouble.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\ouw.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\they_are_trying_to_blind_us.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\trouble_breathing.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\uff.wav 
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_LAAT </Overlap_Test>
+			</SFXEvent>
+				
+			<SFXEvent Name="Unit_Health_Low_LAAT">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\about_to_blow.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_cant_take_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_failing.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_is_coming_apart.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\get_clear.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\im_boxed_in.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\incoming_rapid_fire.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\not_sure_i_can_make_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\thats_a_hit.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\took_a_hit_nothing_serious.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>70</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_LAAT </Overlap_Test>
+				</SFXEvent>
+				
+			
+			<!-- Heavy Walkers Production -->
+				
+		<SFXEvent Name="Unit_Complete_ATTE">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\heavy_walkers\select\turret_powered_up.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_ATTE </Overlap_Test>
+		</SFXEvent>
+		
+		<SFXEvent Name="Unit_Complete_ATAP">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\heavy_walkers\select\this_should_help_1.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_ATAP </Overlap_Test>
+		</SFXEvent>
+		
+		<SFXEvent Name="Unit_Complete_UTAT">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\heavy_walkers\move\turret_support_online_1.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_UTAT </Overlap_Test>
+		</SFXEvent>
+						
+						<!-- Heavy Walkers -->
+		
+		<SFXEvent Name="Unit_Fleet_Move_heavy_walkers">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\republic\heavy_walkers\move\hey_check_your_map.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_heavy_walkers </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_heavy_walkers">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\Units\republic\heavy_walkers\select\turret_online_1.wav
+						Data\Audio\SFX\Units\republic\heavy_walkers\select\at_the_objective.wav
+						Data\Audio\SFX\Units\republic\heavy_walkers\select\autogun_ready_2.wav
+						Data\Audio\SFX\Units\republic\heavy_walkers\select\turret_ready_1.wav
+						Data\Audio\SFX\Units\republic\heavy_walkers\select\turret_powered_up.wav
+						Data\Audio\SFX\Units\republic\heavy_walkers\select\turret_online_4.wav
+						Data\Audio\SFX\Units\republic\heavy_walkers\select\thats_how_you_do_it.wav
+						Data\Audio\SFX\Units\republic\heavy_walkers\select\autogun_ready_3.wav
+						Data\Audio\SFX\Units\republic\heavy_walkers\select\hahaha_1.wav
+						Data\Audio\SFX\Units\republic\heavy_walkers\select\turret_ready_3.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_heavy_walkers </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_heavy_walkers">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\heavy_walkers\move\come_on_1.wav
+							Data\Audio\SFX\Units\republic\heavy_walkers\move\secure_the_zone.wav
+							Data\Audio\SFX\Units\republic\heavy_walkers\move\confirmed.wav
+							Data\Audio\SFX\Units\republic\heavy_walkers\move\now_commander_attack_1.wav
+							Data\Audio\SFX\Units\republic\heavy_walkers\move\this_should_help_1.wav
+							Data\Audio\SFX\Units\republic\heavy_walkers\move\hey_check_your_map.wav
+							Data\Audio\SFX\Units\republic\heavy_walkers\move\turret_support_online_1.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_heavy_walkers </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_heavy_walkers">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\go_i_got_ur_back_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\clanker_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_u.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\runn.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\watch_the_charge.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\with_you_trooper_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\woo_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\droid_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_point.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\taking_vanguard.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\med_support.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\you_and_me.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\sweep_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\togheter_2.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\bom.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_heavy_walkers </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_heavy_walkers">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						 Data\Audio\SFX\Units\republic\heavy_walkers\attack\fire.wav
+						 Data\Audio\SFX\Units\republic\heavy_walkers\attack\repelling_the_assault.wav
+						 Data\Audio\SFX\Units\republic\heavy_walkers\attack\maintain_fire.wav
+						 Data\Audio\SFX\Units\republic\heavy_walkers\attack\shoot_it.wav
+						 Data\Audio\SFX\Units\republic\heavy_walkers\attack\starting_assault.wav
+						 Data\Audio\SFX\Units\republic\heavy_walkers\attack\enemies_arround_the_target_zone.wav
+						 Data\Audio\SFX\Units\republic\heavy_walkers\attack\there_heavy_fire.wav
+						 Data\Audio\SFX\Units\republic\heavy_walkers\attack\this_will_show_them_1.wav
+						 Data\Audio\SFX\Units\republic\heavy_walkers\attack\watch_that_volley.wav
+						 Data\Audio\SFX\Units\republic\heavy_walkers\attack\nice_work.wav
+						 Data\Audio\SFX\Units\republic\heavy_walkers\attack\starting_assault_2.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_heavy_walkers </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_heavy_walkers">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\buy_me_time.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_4.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_go_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_charging.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_vanguard.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\eh_watch_this.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\enemy_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\follow_me_fast_and_hard_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_clone_army.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_republic_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\get_to_the_batte_trooper.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\good_shooting.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_ur_back_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_your_back_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\grenade_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\i_got_you_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\imploder_grenade.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\incoming_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\its_still_active.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\keep_at_them.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\pulling_turret_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\taking_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targeting_hostiles_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targetting_droid.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\watch_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\we_have_to_fight_our_way_in.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\yeahah.wav 
+						
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_heavy_walkers </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_heavy_walkers">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\allright_boys_guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\defence_is_set.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\falling_back_to_cool.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\gonk_gonk.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_droids_on_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_your_backs.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\hold_postion.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_position_1.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_postion_2.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\remain_here.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\take_cover.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_heavy_walkers </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_heavy_walkers">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\death\argh.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_find_shelter.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_run.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\get_clear.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\guns_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_pinned_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_sourrounded.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\might_be_in_trouble.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\ouw.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\they_are_trying_to_blind_us.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\trouble_breathing.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\uff.wav 
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_heavy_walkers </Overlap_Test>
+			</SFXEvent>
+				
+			<SFXEvent Name="Unit_Health_Low_heavy_walkers">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\about_to_blow.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_cant_take_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_failing.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_is_coming_apart.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\get_clear.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\im_boxed_in.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\incoming_rapid_fire.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\not_sure_i_can_make_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\thats_a_hit.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\took_a_hit_nothing_serious.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>70</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_heavy_walkers </Overlap_Test>
+				</SFXEvent>	
+				
+
+
+				<!-- Light Walkers Production -->
+				
+		<SFXEvent Name="Unit_Complete_AT_PT">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\light_walkers\move\lets_go_1.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_AT>_PT </Overlap_Test>
+		</SFXEvent>
+		
+		<SFXEvent Name="Unit_Complete_RT_ISP">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\light_walkers\select\lets_do_this_4.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_RT_ISP </Overlap_Test>
+		</SFXEvent>
+		
+		<SFXEvent Name="Unit_Complete_ULAV">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\light_walkers\select\do_i_look_like_a_droid.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_ULAV </Overlap_Test>
+		</SFXEvent>
+				
+				
+				<!-- Light Walkers -->
+		
+		<SFXEvent Name="Unit_Fleet_Move_light_walkers">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\republic\light_walkers\move\move_forward_2.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_light_walkers </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_light_walkers">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\Units\republic\light_walkers\select\lets_do_this_4.wav
+						Data\Audio\SFX\Units\republic\light_walkers\select\autoguns_online_3.wav
+						Data\Audio\SFX\Units\republic\light_walkers\select\violating_orders.wav
+						Data\Audio\SFX\Units\republic\light_walkers\select\n_that_droid.wav
+						Data\Audio\SFX\Units\republic\light_walkers\select\do_i_look_like_a_droid.wav
+						Data\Audio\SFX\Units\republic\light_walkers\select\autoguns_online_2.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_light_walkers </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_light_walkers">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\light_walkers\move\lets_go_1.wav
+							Data\Audio\SFX\Units\republic\light_walkers\move\move_in2.wav
+							Data\Audio\SFX\Units\republic\light_walkers\move\push_forward.wav
+							Data\Audio\SFX\Units\republic\light_walkers\move\move_forward_2.wav
+							Data\Audio\SFX\Units\republic\light_walkers\move\on_it.wav
+							Data\Audio\SFX\Units\republic\light_walkers\move\stay_togheter.wav
+							Data\Audio\SFX\Units\republic\light_walkers\move\we_not_secured_area.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_light_walkers </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_light_walkers">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\go_i_got_ur_back_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\clanker_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_u.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\runn.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\watch_the_charge.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\with_you_trooper_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\woo_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\droid_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_point.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\taking_vanguard.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\med_support.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\you_and_me.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\sweep_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\togheter_2.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_light_walkers </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_light_walkers">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\light_walkers\attack\end_of_the_scrap.wav
+							Data\Audio\SFX\Units\republic\light_walkers\attack\for_the_clone_army.wav
+							Data\Audio\SFX\Units\republic\light_walkers\attack\take_em_out.wav
+							Data\Audio\SFX\Units\republic\light_walkers\attack\targeting_droid_1.wav
+							Data\Audio\SFX\Units\republic\light_walkers\attack\changing_weapons_1.wav
+							Data\Audio\SFX\Units\republic\light_walkers\attack\for_the_republic_1.wav
+							Data\Audio\SFX\Units\republic\light_walkers\attack\there_blast_it.wav
+							Data\Audio\SFX\Units\republic\light_walkers\attack\watch_where_you_shooting.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_light_walkers </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_light_walkers">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\buy_me_time.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_4.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_go_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_charging.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_vanguard.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\eh_watch_this.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\enemy_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\follow_me_fast_and_hard_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_clone_army.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_republic_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\get_to_the_batte_trooper.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\good_shooting.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_ur_back_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_your_back_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\grenade_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\i_got_you_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\imploder_grenade.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\incoming_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\its_still_active.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\keep_at_them.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\pulling_turret_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\taking_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targeting_hostiles_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targetting_droid.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\watch_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\we_have_to_fight_our_way_in.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\yeahah.wav 
+						
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_light_walkers </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_light_walkers">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\allright_boys_guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\defence_is_set.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\falling_back_to_cool.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\gonk_gonk.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_droids_on_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_your_backs.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\hold_postion.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_position_1.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_postion_2.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\remain_here.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\take_cover.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_light_walkers </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_light_walkers">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\death\argh.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_find_shelter.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_run.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\get_clear.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\guns_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_pinned_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_sourrounded.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\might_be_in_trouble.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\ouw.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\they_are_trying_to_blind_us.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\trouble_breathing.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\uff.wav 
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_light_walkers </Overlap_Test>
+			</SFXEvent>
+				
+			<SFXEvent Name="Unit_Health_Low_light_walkers">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\about_to_blow.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_cant_take_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_failing.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_is_coming_apart.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\get_clear.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\im_boxed_in.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\incoming_rapid_fire.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\not_sure_i_can_make_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\thats_a_hit.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\took_a_hit_nothing_serious.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>70</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_light_walkers </Overlap_Test>
+				</SFXEvent>		
+				
+					<!-- Speeders Production -->
+				
+		<SFXEvent Name="Unit_Complete_barc">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\speeders\move\scout_for_seppies.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_barc </Overlap_Test>
+		</SFXEvent>
+		
+		<SFXEvent Name="Unit_Complete_bike">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\speeders\select\get_me_recon.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_bike </Overlap_Test>
+		</SFXEvent>
+				
+				<!-- Speeders -->
+		
+		<SFXEvent Name="Unit_Fleet_Move_Speeders">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\republic\speeders\move\coming_in_fast.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Speeders </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_Speeders">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\Units\republic\speeders\select\Speeder_3.wav
+						Data\Audio\SFX\Units\republic\speeders\select\get_me_recon.wav
+						Data\Audio\SFX\Units\republic\speeders\select\scout_for_snipers.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_Speeders </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_Speeders">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\speeders\move\lets_go.wav
+							Data\Audio\SFX\Units\republic\speeders\move\nothing_useful_out_there.wav
+							Data\Audio\SFX\Units\republic\speeders\move\coming_in_fast.wav
+							Data\Audio\SFX\Units\republic\speeders\move\closing_range_2.wav
+							Data\Audio\SFX\Units\republic\speeders\move\move_forward.wav
+							Data\Audio\SFX\Units\republic\speeders\move\real_good.wav
+							Data\Audio\SFX\Units\republic\speeders\move\scout_for_seppies.wav
+							Data\Audio\SFX\Units\republic\speeders\move\return_at_ones.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Speeders</Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_Speeders">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\go_i_got_ur_back_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\clanker_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_u.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\runn.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\watch_the_charge.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\with_you_trooper_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\woo_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\droid_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_point.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\taking_vanguard.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\med_support.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\you_and_me.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\sweep_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\togheter_2.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Speeders </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_Speeders">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\speeders\attack\get_ready_for_their_attack.wav
+							Data\Audio\SFX\Units\republic\speeders\attack\enemy_approaching.wav
+							Data\Audio\SFX\Units\republic\speeders\attack\no_you_dont.wav
+							Data\Audio\SFX\Units\republic\speeders\attack\scanning_hostiles_2.wav
+							Data\Audio\SFX\Units\republic\speeders\attack\take_down_that_sentry.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Speeders </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_Speeders">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\buy_me_time.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_4.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_go_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_charging.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_vanguard.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\eh_watch_this.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\enemy_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\follow_me_fast_and_hard_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_clone_army.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_republic_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\get_to_the_batte_trooper.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\good_shooting.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_ur_back_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_your_back_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\grenade_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\i_got_you_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\imploder_grenade.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\incoming_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\its_still_active.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\keep_at_them.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\pulling_turret_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\taking_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targeting_hostiles_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targetting_droid.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\watch_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\we_have_to_fight_our_way_in.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\yeahah.wav 
+						
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Speeders </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_Speeders">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\allright_boys_guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\defence_is_set.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\falling_back_to_cool.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\gonk_gonk.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_droids_on_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_your_backs.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\hold_postion.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_position_1.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_postion_2.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\remain_here.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\take_cover.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Speeders </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_Speeders">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\death\argh.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_find_shelter.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_run.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\get_clear.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\guns_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_pinned_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_sourrounded.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\might_be_in_trouble.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\ouw.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\they_are_trying_to_blind_us.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\trouble_breathing.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\uff.wav 
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Speeders </Overlap_Test>
+			</SFXEvent>
+				
+			<SFXEvent Name="Unit_Health_Speeders">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\about_to_blow.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_cant_take_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_failing.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_is_coming_apart.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\get_clear.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\im_boxed_in.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\incoming_rapid_fire.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\not_sure_i_can_make_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\thats_a_hit.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\took_a_hit_nothing_serious.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>70</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Speeders </Overlap_Test>
+				</SFXEvent>	
+				
+				<!-- TX 130 Saber  -->
+				
+		<SFXEvent Name="Unit_Complete_saber">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\tx_130_saber\select\shield_up.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_saber </Overlap_Test>
+		</SFXEvent>
+				
+				
+		
+		<SFXEvent Name="Unit_Fleet_Move_saber">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\republic\tx_130_saber\move\follow_me.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_saber </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_saber">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\Units\republic\tx_130_saber\select\armor_holding_up.wav
+						Data\Audio\SFX\Units\republic\tx_130_saber\select\shield_up.wav
+						Data\Audio\SFX\Units\republic\tx_130_saber\select\turret_support_online.wav
+						Data\Audio\SFX\Units\republic\tx_130_saber\select\watch_the_crossfire.wav
+						Data\Audio\SFX\Units\republic\tx_130_saber\select\shield_deployed.wav
+						Data\Audio\SFX\Units\republic\tx_130_saber\select\need_time_to_cool.wav
+						Data\Audio\SFX\Units\republic\tx_130_saber\select\wired_up.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_saber </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_saber">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\tx_130_saber\move\follow_behind_me_1.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\move\move.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\move\goo_got_your_back.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\move\follow_me.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\move\scanning_infantry_1.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\move\secure_the_zone_2.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\move\where_you_going_trooper.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_saber</Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_saber">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\go_i_got_ur_back_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\clanker_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_u.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\runn.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\watch_the_charge.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\with_you_trooper_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\woo_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\droid_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_point.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\taking_vanguard.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\med_support.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\you_and_me.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\sweep_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\togheter_2.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_saber </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_saber">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\close_range_assault_1.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\enemy_behind.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\for_the_clone_army.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\on_target.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\primed_1.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\starting_assault_1.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\tight_sweep.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\for_the_republic_1.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\starting_killsweep.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\target_damaged.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_saber </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_saber">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\buy_me_time.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_4.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_go_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_charging.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_vanguard.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\eh_watch_this.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\enemy_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\follow_me_fast_and_hard_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_clone_army.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_republic_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\get_to_the_batte_trooper.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\good_shooting.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_ur_back_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_your_back_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\grenade_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\i_got_you_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\imploder_grenade.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\incoming_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\its_still_active.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\keep_at_them.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\pulling_turret_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\taking_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targeting_hostiles_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targetting_droid.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\watch_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\we_have_to_fight_our_way_in.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\yeahah.wav 
+						
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_saber </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_saber">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\allright_boys_guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\defence_is_set.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\falling_back_to_cool.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\gonk_gonk.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_droids_on_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_your_backs.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\hold_postion.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_position_1.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_postion_2.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\remain_here.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\take_cover.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_saber </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_saber">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\death\argh.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_find_shelter.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_run.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\get_clear.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\guns_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_pinned_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_sourrounded.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\might_be_in_trouble.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\ouw.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\they_are_trying_to_blind_us.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\trouble_breathing.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\uff.wav 
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_saber </Overlap_Test>
+			</SFXEvent>
+				
+			<SFXEvent Name="Unit_Health_saber">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\about_to_blow.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_cant_take_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_failing.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_is_coming_apart.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\get_clear.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\im_boxed_in.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\incoming_rapid_fire.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\not_sure_i_can_make_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\thats_a_hit.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\took_a_hit_nothing_serious.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>70</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_saber </Overlap_Test>
+				</SFXEvent>	
+				
+				
+				<!-- AV-7 -->
+				
+		<SFXEvent Name="Unit_Complete_av_7 ">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\av_7\select\heavy_guns_operational.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_av_7 </Overlap_Test>
+		</SFXEvent>
+				
+				
+		
+		<SFXEvent Name="Unit_Fleet_Move_av_7">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\republic\av_7\move\moving_into_target_zone.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_av_7 </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_av_7">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\Units\republic\av_7\select\heavy_guns_ready.wav
+						Data\Audio\SFX\Units\republic\av_7\select\its_armed.wav
+						Data\Audio\SFX\Units\republic\av_7\select\maintain_position.wav
+						Data\Audio\SFX\Units\republic\av_7\select\support_fire_ready_1.wav
+						Data\Audio\SFX\Units\republic\av_7\select\turret_ready_2.wav
+						Data\Audio\SFX\Units\republic\av_7\select\heavy_guns_operational.wav
+						Data\Audio\SFX\Units\republic\av_7\select\support_ready_1.wav
+						Data\Audio\SFX\Units\republic\av_7\select\turret_set_1.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_av_7 </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_av_7">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\av_7\move\hold_postions_here.wav
+							Data\Audio\SFX\Units\republic\av_7\move\careful.wav
+							Data\Audio\SFX\Units\republic\av_7\move\closing_range.wav
+							Data\Audio\SFX\Units\republic\av_7\move\moving_into_target_zone.wav
+							Data\Audio\SFX\Units\republic\av_7\move\placing_turret.wav
+							Data\Audio\SFX\Units\republic\av_7\move\turret_powered_up_1.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_av_7</Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_av_7">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\go_i_got_ur_back_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\clanker_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_u.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\runn.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\watch_the_charge.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\with_you_trooper_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\woo_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\droid_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_point.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\taking_vanguard.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\med_support.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\you_and_me.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\sweep_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\togheter_2.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_av_7 </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_av_7">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\av_7\attack\heavy_bombardment.wav
+							Data\Audio\SFX\Units\republic\av_7\attack\canons_hot.wav
+							Data\Audio\SFX\Units\republic\av_7\attack\engaging_foe.wav
+							Data\Audio\SFX\Units\republic\av_7\attack\defence_is_holding.wav
+							Data\Audio\SFX\Units\republic\av_7\attack\keep_firing.wav
+							Data\Audio\SFX\Units\republic\av_7\attack\keep_them_back.wav
+							Data\Audio\SFX\Units\republic\av_7\attack\laying_down_covering_fire_1.wav
+							Data\Audio\SFX\Units\republic\av_7\attack\shield_your_eyes.wav
+							Data\Audio\SFX\Units\republic\av_7\attack\slow_that_charge.wav
+							Data\Audio\SFX\Units\republic\av_7\attack\take_aim.wav
+							Data\Audio\SFX\Units\republic\av_7\attack\take_the_shot.wav
+							Data\Audio\SFX\Units\republic\av_7\attack\turn_and_fire.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_av_7 </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_av_7">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\buy_me_time.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_4.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_go_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_charging.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_vanguard.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\eh_watch_this.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\enemy_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\follow_me_fast_and_hard_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_clone_army.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_republic_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\get_to_the_batte_trooper.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\good_shooting.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_ur_back_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_your_back_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\grenade_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\i_got_you_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\imploder_grenade.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\incoming_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\its_still_active.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\keep_at_them.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\pulling_turret_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\taking_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targeting_hostiles_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targetting_droid.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\watch_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\we_have_to_fight_our_way_in.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\yeahah.wav 
+						
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_av_7 </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_av_7">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\allright_boys_guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\defence_is_set.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\falling_back_to_cool.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\gonk_gonk.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_droids_on_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_your_backs.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\hold_postion.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_position_1.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_postion_2.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\remain_here.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\take_cover.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_av_7 </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_av_7">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\death\argh.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_find_shelter.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_run.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\get_clear.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\guns_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_pinned_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_sourrounded.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\might_be_in_trouble.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\ouw.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\they_are_trying_to_blind_us.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\trouble_breathing.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\uff.wav 
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_saber </Overlap_Test>
+			</SFXEvent>
+				
+			<SFXEvent Name="Unit_Health_av_7">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\about_to_blow.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_cant_take_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_failing.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_is_coming_apart.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\get_clear.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\im_boxed_in.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\incoming_rapid_fire.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\not_sure_i_can_make_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\thats_a_hit.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\took_a_hit_nothing_serious.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>70</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_av_7 </Overlap_Test>
+				</SFXEvent>	
+				
+				
+				
+				
+				<!-- juggernauts  -->
+				
+		<SFXEvent Name="Unit_Complete_juggernauts">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\Units\republic\juggernauts\select\autoguns_online_4.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_juggernauts </Overlap_Test>
+		</SFXEvent>
+				
+				
+		
+		<SFXEvent Name="Unit_Fleet_Move_juggernauts">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\republic\juggernauts\move\defensive_positions.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_juggernauts </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_juggernauts">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\Units\republic\juggernauts\select\autoguns_online_1.wav
+						Data\Audio\SFX\Units\republic\juggernauts\select\covering_fire.wav
+						Data\Audio\SFX\Units\republic\juggernauts\select\auto_gun_ready.wav
+						Data\Audio\SFX\Units\republic\juggernauts\select\good_job.wav
+						Data\Audio\SFX\Units\republic\juggernauts\select\support_fire_ready_2.wav
+						Data\Audio\SFX\Units\republic\juggernauts\select\autoguns_online_4.wav
+						Data\Audio\SFX\Units\republic\juggernauts\select\you_wont_be_more_trouble.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_juggernauts </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_juggernauts">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\juggernauts\move\going_in_1.wav
+							Data\Audio\SFX\Units\republic\juggernauts\move\chaging_weapons.wav
+							Data\Audio\SFX\Units\republic\juggernauts\move\defensive_positions.wav
+							Data\Audio\SFX\Units\republic\juggernauts\move\form_a_wall.wav
+							Data\Audio\SFX\Units\republic\juggernauts\move\go_2.wav
+							Data\Audio\SFX\Units\republic\juggernauts\move\i_got_you.wav
+							Data\Audio\SFX\Units\republic\juggernauts\move\lock_it_down.wav
+							Data\Audio\SFX\Units\republic\juggernauts\move\going_in_tight_2.wav
+							Data\Audio\SFX\Units\republic\juggernauts\move\move_forward_1.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_juggernauts</Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_juggernauts">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\go_i_got_ur_back_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\clanker_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_u.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\runn.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\watch_the_charge.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\with_you_trooper_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\woo_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\droid_scanned_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\i_got_point.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\taking_vanguard.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\med_support.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\you_and_me.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\sweep_1.wav
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_move\togheter_2.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_juggernauts </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_juggernauts">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\close_range_assault_1.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\enemy_behind.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\for_the_clone_army.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\on_target.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\primed_1.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\starting_assault_1.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\tight_sweep.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\for_the_republic_1.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\starting_killsweep.wav
+							Data\Audio\SFX\Units\republic\tx_130_saber\attack\target_damaged.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_juggernauts </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_juggernauts">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\buy_me_time.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_4.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\covering_fire_go_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_charging.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\droid_vanguard.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\eh_watch_this.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\enemy_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\follow_me_fast_and_hard_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_clone_army.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\for_the_republic_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\get_to_the_batte_trooper.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\good_shooting.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_ur_back_2.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\got_your_back_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\grenade_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\i_got_you_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\imploder_grenade.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\incoming_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\its_still_active.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\keep_at_them.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\pulling_turret_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\taking_fire.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targeting_hostiles_1.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\targetting_droid.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\watch_out.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\we_have_to_fight_our_way_in.wav 
+						  Data\Audio\SFX\Units\republic\clones_generic\assist_attack\yeahah.wav 
+						
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_juggernauts </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_juggernauts">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\allright_boys_guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\defence_is_set.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\falling_back_to_cool.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\gonk_gonk.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_droids_on_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_duty.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\guard_your_backs.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\hold_postion.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_position_1.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\holding_this_postion_2.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\remain_here.wav
+					  Data\Audio\SFX\Units\republic\clones_generic\guard\take_cover.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_juggernauts </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_juggernauts">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					  Data\Audio\SFX\Units\republic\clones_generic\death\argh.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_find_shelter.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\detonator_run.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\get_clear.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\guns_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_pinned_down.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\im_sourrounded.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\might_be_in_trouble.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\ouw.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\they_are_trying_to_blind_us.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\trouble_breathing.wav 
+					  Data\Audio\SFX\Units\republic\clones_generic\death\uff.wav 
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_juggernauts </Overlap_Test>
+			</SFXEvent>
+				
+			<SFXEvent Name="Unit_Health_juggernauts">
+					 <Use_Preset>Preset_EXP_LR</Use_Preset>
+					  <Samples>
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\about_to_blow.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_cant_take_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_failing.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\armor_is_coming_apart.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\get_clear.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\im_boxed_in.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\incoming_rapid_fire.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\not_sure_i_can_make_it.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\thats_a_hit.wav
+					 Data\Audio\SFX\Units\republic\clones_generic\critical_health\took_a_hit_nothing_serious.wav
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>70</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_juggernauts </Overlap_Test>
+				</SFXEvent>	
+				
+				
+				
+				
+				
+				<!-- REP Spotted CIS -->
+						
+				<SFXEvent Name="REP_spotted_CIS">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					 Data\Audio\SFX\Units\republic\republic_spotted\clanker_spotted.wav
+					 Data\Audio\SFX\Units\republic\republic_spotted\droids_on_the_objective.wav
+					 Data\Audio\SFX\Units\republic\republic_spotted\enemy_contact.wav
+					 Data\Audio\SFX\Units\republic\republic_spotted\enemy_movement.wav
+					 Data\Audio\SFX\Units\republic\republic_spotted\hostiles_in_the_area.wav
+					 Data\Audio\SFX\Units\republic\republic_spotted\its_a_trap_1.wav
+					 Data\Audio\SFX\Units\republic\republic_spotted\look_the_droids_we_looking_for.wav
+					 Data\Audio\SFX\Units\republic\republic_spotted\objective_looks_protected.wav
+					 Data\Audio\SFX\Units\republic\republic_spotted\they_are_allready_in_place.wav
+					 Data\Audio\SFX\Units\republic\republic_spotted\pinged_hostiles_1.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_HUD </Overlap_Test>
+				</SFXEvent>
+				
+				
+				
+				
+				
+				
+				
+				
+
+		<!-- Coreys VO, to be replaced -->
+	
 			  <SFXEvent Name="Unit_Take_Cover_Clone_Trooper">
 					  <Use_Preset>Preset_UR</Use_Preset>
 					  <Samples>data\audio\SFX\Units\Clones\Clone_Cover1.wav data\audio\SFX\Units\Clones\Clone_Cover2.wav</Samples>

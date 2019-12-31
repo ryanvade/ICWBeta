@@ -38,6 +38,26 @@ function Definitions()
     p_corporate = Find_Player("Corporate_Sector")
     p_hapes = Find_Player("Hapes_Consortium")
 
+    if p_newrep.Is_Human() then
+        p_human = p_newrep
+	elseif p_empire.Is_Human() then
+		p_human = p_empire
+	elseif p_eoth.Is_Human() then
+		p_human = p_eoth
+	elseif p_eriadu.Is_Human() then
+		p_human = p_eriadu
+	elseif p_pentastar.Is_Human() then
+		p_human = p_pentastar
+	elseif p_zsinj.Is_Human() then
+		p_human = p_zsinj
+	elseif p_maldrood.Is_Human() then
+		p_human = p_maldrood
+	elseif p_corporate.Is_Human() then
+		p_human = p_corporate
+	elseif p_hapes.Is_Human() then
+		p_human = p_hapes
+	end
+
 	StoryModeEvents =
 	{
 		Battle_Start = DetermineEvents
@@ -51,11 +71,20 @@ function DetermineEvents(message)
     if message == OnEnter then
         victoryPoint = Find_First_Object("Victory_Point")
 
-        if victoryPoint then
-            victoryPoint.Highlight(true)
-            Story_Event("CAPTURE_POINT_PRESENT")
+        if EvaluatePerception("Is_Defender", p_human) == 0 then
+            if victoryPoint then
+                victoryPoint.Highlight(true)
+                Story_Event("CAPTURE_POINT_PRESENT")
+            else
+                Story_Event("CAPTURE_POINT_NOT_PRESENT")
+            end
         else
-            Story_Event("CAPTURE_POINT_NOT_PRESENT")
+            if victoryPoint then
+                victoryPoint.Highlight(true)
+                Story_Event("CAPTURE_POINT_PRESENT_DEFENDER")
+            else
+                Story_Event("CAPTURE_POINT_NOT_PRESENT_DEFENDER")
+            end
         end
     elseif message == OnUpdate then
         if victoryPoint.Get_Owner() ~= Find_Player("Neutral") then

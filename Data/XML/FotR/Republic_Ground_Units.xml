@@ -5,14 +5,20 @@
 		<Variant_Of_Existing_Type>AT_PT_Walker</Variant_Of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
 		
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Select>Unit_Select_light_walkers</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_light_walkers</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_light_walkers</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_light_walkers</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_light_walkers</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Attack_light_walkers</SFXEvent_Fire>	
+	
+		<SFXEvent_Assist_Move> Unit_Assist_Move_light_walkers </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_light_walkers </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_light_walkers </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Low_light_walkers </SFXEvent_Health_Critical_Warning>
+		
+		<Death_SFXEvent_Start_Die>Unit_Death_light_walkers</Death_SFXEvent_Start_Die>		
 	</GroundVehicle>
 	
 	<GroundCompany Name="Imperial_ATPT_Squad">
@@ -52,8 +58,8 @@
 		<GUI_Velocity>45</GUI_Velocity>
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_ST</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_ST</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_AT_PT</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_light_walkers</SFXEvent_Fleet_Move>
 		<Score_Cost_Credits>150</Score_Cost_Credits>
 
 		<!-- Non-Hero unit abilities description -->
@@ -182,17 +188,22 @@
 		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds> -->
 
 		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
-		<Death_SFXEvent_Start_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_Start_Die>
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>
-		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Select>Unit_Select_light_walkers</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_light_walkers</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_light_walkers</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_light_walkers</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_light_walkers</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Attack_light_walkers</SFXEvent_Fire>	
+	
+		<SFXEvent_Assist_Move> Unit_Assist_Move_light_walkers </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_light_walkers </SFXEvent_Assist_Attack>
 		
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_light_walkers </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Low_light_walkers </SFXEvent_Health_Critical_Warning>
+		
+		<Death_SFXEvent_Start_Die>Unit_Death_light_walkers</Death_SFXEvent_Start_Die>	
+		
+		
 		<SFXEvent_Unit_Lost> EHD_Unit_Destroyed </SFXEvent_Unit_Lost>
 		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
 		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
@@ -290,8 +301,8 @@
 		<GUI_Velocity>45</GUI_Velocity>
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_ST</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_ST</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_RT_ISP</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_light_walkers</SFXEvent_Fleet_Move>
 		<Score_Cost_Credits>150</Score_Cost_Credits>
 
 		<!-- Non-Hero unit abilities description -->
@@ -405,14 +416,18 @@
 		<Land_Model_Name>all_terrain_tactical_enforcer.alo</Land_Model_Name>
 		<Affiliation>Empire</Affiliation>
 		
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Select>Unit_Select_heavy_walkers</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_heavy_walkers</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_heavy_walkers</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_heavy_walkers</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_heavy_walkers</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Clone_heavy_walkers</SFXEvent_Fire>	
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_heavy_walkers </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_heavy_walkers </SFXEvent_Assist_Attack>
+		
+		<Death_SFXEvent_Start_Die>Unit_Death_heavy_walkers</Death_SFXEvent_Start_Die>
+		
 	</GroundVehicle>
 	
 	<GroundCompany Name="Republic_Heavy_Assault_Company">
@@ -449,8 +464,8 @@
 		<GUI_Velocity>45</GUI_Velocity>
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_AT_AT</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_AT</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_ATTE</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_heavy_walkers</SFXEvent_Fleet_Move>
 		<Score_Cost_Credits>1000</Score_Cost_Credits>
 
 
@@ -476,14 +491,17 @@
 		<Variant_Of_Existing_Type>Pentastar_Walker</Variant_Of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
 		
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Select>Unit_Select_heavy_walkers</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_heavy_walkers</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_heavy_walkers</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_heavy_walkers</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_heavy_walkers</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Clone_heavy_walkers</SFXEvent_Fire>	
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_heavy_walkers </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_heavy_walkers </SFXEvent_Assist_Attack>
+		
+		<Death_SFXEvent_Start_Die>Unit_Death_heavy_walkers</Death_SFXEvent_Start_Die>
 	</GroundVehicle>
 	
 	<GroundCompany Name="Pentastar_Walker_Group">
@@ -516,8 +534,8 @@
 		<Icon_Name>i_button_pod_walker.tga</Icon_Name>
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_2M_Tank</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_2M_Tank</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_ATAP</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_heavy_walkers</SFXEvent_Fleet_Move>
 		<Score_Cost_Credits>500</Score_Cost_Credits>
 
 
@@ -542,14 +560,20 @@
 		<Land_Model_Name>REP_ISP.alo</Land_Model_Name>
 		<Affiliation>Empire</Affiliation>
 		
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Select>Unit_Select_light_walkers</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_light_walkers</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_light_walkers</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_light_walkers</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_light_walkers</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Attack_light_walkers</SFXEvent_Fire>	
+	
+		<SFXEvent_Assist_Move> Unit_Assist_Move_light_walkers </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_light_walkers </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_light_walkers </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Low_light_walkers </SFXEvent_Health_Critical_Warning>
+		
+		<Death_SFXEvent_Start_Die>Unit_Death_light_walkers</Death_SFXEvent_Start_Die>	
 	</GroundVehicle>
 	
 	<GroundVehicle Name="Republic_Speeder_Bike">
@@ -558,14 +582,16 @@
 		<Icon_Name>i_button_scout_trooper_rep.tga</Icon_Name>
 		<Affiliation>Empire</Affiliation>
 	
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Select>Unit_Select_Speeders</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Speeders</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Speeders</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Speeders</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Speeders</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Clone_Speeders</SFXEvent_Fire>	
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Speeders </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Speeders </SFXEvent_Assist_Attack>
+		
+		<Death_SFXEvent_Start_Die>Unit_Death_Speeders</Death_SFXEvent_Start_Die>
 		
 		<Destruction_Survivors> Clone_Phase_One_No_Bike, 1.0 </Destruction_Survivors>
 	</GroundVehicle>
@@ -609,8 +635,8 @@
 		<GUI_Velocity>45</GUI_Velocity>
 		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Clone_Trooper</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_bike</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Speeders</SFXEvent_Fleet_Move>
 
         
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -647,14 +673,16 @@
 		<Land_Model_Name>rep_barc_speeder.ALO</Land_Model_Name>
 		<Icon_Name>i_button_barc_speeder.tga</Icon_Name>
 		
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Select>Unit_Select_Speeders</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Speeders</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Speeders</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Speeders</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Speeders</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Clone_Speeders</SFXEvent_Fire>	
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Speeders </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Speeders </SFXEvent_Assist_Attack>
+		
+		<Death_SFXEvent_Start_Die>Unit_Death_Speeders</Death_SFXEvent_Start_Die>
 		
 		<Destruction_Survivors> Clone_Phase_Two_No_Bike, 1.0 </Destruction_Survivors>
 	</GroundVehicle>
@@ -700,8 +728,8 @@
 		<GUI_Velocity>45</GUI_Velocity>
 		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Clone_Trooper</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_barc</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Speeders</SFXEvent_Fleet_Move>
 
         
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
@@ -790,14 +818,14 @@
 		<Variant_Of_Existing_Type>IFX_Fighter_tank_Empire_Armor</Variant_Of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
 		
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Select>Unit_Select_saber</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_saber</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_saber</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_saber</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_saber</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Attack_saber</SFXEvent_Fire>	
+		<SFXEvent_Assist_Move> Unit_Assist_Move_saber </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_saber </SFXEvent_Assist_Attack>
 	</GroundVehicle>
 	
 	<GroundCompany Name="Imperial_IFTX_Group">
@@ -830,8 +858,8 @@
 		<Icon_Name>i_button_iftx.tga</Icon_Name>
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_2M_Tank</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_2M_Tank</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_saber</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_saber</SFXEvent_Fleet_Move>
 		<Score_Cost_Credits>500</Score_Cost_Credits>
 
 
@@ -870,14 +898,19 @@
 		<Variant_Of_Existing_Type>LAAT</Variant_Of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
 		
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Select>Unit_Select_LAAT</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_LAAT</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_LAAT</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_LAAT</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_LAAT</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Attack_LAAT</SFXEvent_Fire>	
+		<SFXEvent_Assist_Move> Unit_Assist_Move_LAAT </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_LAAT </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_LAAT </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Low_LAAT </SFXEvent_Health_Critical_Warning>
+		
+		<Death_SFXEvent_Start_Die>Unit_Death_LAAT</Death_SFXEvent_Start_Die>
 	</GroundVehicle>
 	
 	<GroundCompany Name="LAAT_Group">
@@ -910,8 +943,8 @@
 		<Icon_Name>i_button_laat.tga</Icon_Name>
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_2M_Tank</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_2M_Tank</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_LAAT</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_LAAT</SFXEvent_Fleet_Move>
 		<Score_Cost_Credits>500</Score_Cost_Credits>
 
 
@@ -936,14 +969,19 @@
 		<Variant_Of_Existing_Type>A5_Juggernaut</Variant_Of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
 		
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Select>Unit_Select_juggernauts</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_juggernauts</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_juggernauts</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_juggernauts</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_juggernauts</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Attack_juggernauts</SFXEvent_Fire>	
+		<SFXEvent_Assist_Move> Unit_Assist_Move_juggernauts </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_juggernauts </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_LAAT </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Low_LAAT </SFXEvent_Health_Critical_Warning>
+		
+		<Death_SFXEvent_Start_Die>Unit_Death_LAAT</Death_SFXEvent_Start_Die>
 	</GroundVehicle>
 	
 	<GroundCompany Name="A5_Juggernaut_Company">
@@ -984,8 +1022,8 @@
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Juggernaut</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_juggernauts</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_juggernauts</SFXEvent_Fleet_Move>
 		
 		<Score_Cost_Credits>600</Score_Cost_Credits>
         <Maintenance_Cost>0.05</Maintenance_Cost>
@@ -1009,14 +1047,19 @@
 		<Variant_Of_Existing_Type>A6_Juggernaut</Variant_Of_Existing_Type>
 		<Affiliation>Empire</Affiliation>
 		
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>	
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Select>Unit_Select_juggernauts</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_juggernauts</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_juggernauts</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_juggernauts</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_juggernauts</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Attack_juggernauts</SFXEvent_Fire>	
+		<SFXEvent_Assist_Move> Unit_Assist_Move_juggernauts </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_juggernauts </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_LAAT </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Low_LAAT </SFXEvent_Health_Critical_Warning>
+		
+		<Death_SFXEvent_Start_Die>Unit_Death_LAAT</Death_SFXEvent_Start_Die>
 	</GroundVehicle>
 	
 	<GroundCompany Name="A6_Juggernaut_Company">
@@ -1057,8 +1100,8 @@
 
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Juggernaut</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_juggernauts</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_juggernauts</SFXEvent_Fleet_Move>
 
 		<Score_Cost_Credits>600</Score_Cost_Credits>
         <Maintenance_Cost>0.05</Maintenance_Cost>
@@ -1306,14 +1349,16 @@
 
 		<SFXEvent_Fire>Unit_SPMAT_Projectile_Fire</SFXEvent_Fire>
 		
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
+		<SFXEvent_Select>Unit_Select_av_7</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_av_7</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_av_7</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_av_7</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_av_7</SFXEvent_Guard>
+		
+		<Death_SFXEvent_Start_Die>Unit_Death_LAAT</Death_SFXEvent_Start_Die>
 
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_av_7 </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_av_7 </SFXEvent_Assist_Attack>
 		<SFXEvent_Unit_Lost> EHD_Unit_Destroyed </SFXEvent_Unit_Lost>
 		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
 		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
@@ -1421,8 +1466,8 @@
 		<Icon_Name>i_button_av7.tga</Icon_Name>
 		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_SPMAT</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_av_7</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Unit_Fleet_Move_av_7</SFXEvent_Fleet_Move>
 		
 		<Score_Cost_Credits>650</Score_Cost_Credits>
 

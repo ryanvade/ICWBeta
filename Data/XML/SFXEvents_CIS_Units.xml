@@ -1218,6 +1218,124 @@
 							<Text_ID></Text_ID>
 					  <Overlap_Test> Unit_HUD </Overlap_Test>
 				</SFXEvent>
+				
+				<!-- Hailfire -->
+				
+			<SFXEvent Name="Unit_Complete_Hailfire_droid">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						<Samples>
+							Data\Audio\SFX\Units\Separatists\hailfire\move\misslie_robot_on_the_go.wav
+							</Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_Hailfire </Overlap_Test>
+			</SFXEvent>		
+				
+			<SFXEvent Name="Unit_Fleet_Move_Hailfire_droid">
+					<Use_Preset>Preset_UR</Use_Preset>
+						<Samples>
+							Data\Audio\SFX\Units\Separatists\hailfire\move\moving.wav
+							</Samples>
+						<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID>TEXT_SFX_OBI_GUARD_1, TEXT_SFX_OBI_GUARD_2</Text_ID>
+			<Overlap_Test> Unit_Hailfire</Overlap_Test>
+			</SFXEvent>
+				
+	<SFXEvent Name="Unit_Attack_Hailfire_droid">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>
+		Data\Audio\SFX\Units\Separatists\hailfire\attack\battleprogram_activated.wav
+		Data\Audio\SFX\Units\Separatists\hailfire\attack\compensating_for_shields.wav
+		Data\Audio\SFX\Units\Separatists\hailfire\attack\get_them.wav
+		Data\Audio\SFX\Units\Separatists\hailfire\attack\launching.wav
+		Data\Audio\SFX\Units\Separatists\hailfire\attack\perimiter_attack.wav
+		Data\Audio\SFX\Units\Separatists\hailfire\attack\prep_for_attack.wav
+		Data\Audio\SFX\Units\Separatists\hailfire\attack\air_units_detected.wav
+		Data\Audio\SFX\Units\Separatists\hailfire\attack\weapons_activated.wav
+		</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_OBI_GUARD_1, TEXT_SFX_OBI_GUARD_2</Text_ID>
+		<Overlap_Test>Unit_Hailfire</Overlap_Test>
+	</SFXEvent>
+
+		<SFXEvent Name="Unit_Die_Hailfire_droid">
+		 <Use_Preset>Preset_EXP_LR</Use_Preset>
+		<Samples>
+		Data\Audio\SFX\Units\Separatists\hailfire\death\deonation_sequence.wav
+		Data\Audio\SFX\Units\Separatists\hailfire\death\dies_1.wav
+		Data\Audio\SFX\Units\Separatists\hailfire\death\dies_2.wav
+		</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> No </Play_Sequentially>
+		<Text_ID>TEXT_SFX_OBI_GUARD_1, TEXT_SFX_OBI_GUARD_2</Text_ID>
+		<Overlap_Test> Unit_Hailfire </Overlap_Test>
+	</SFXEvent>
+
+
+		<SFXEvent Name="Unit_Guard_Hailfire_droid">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>
+		Data\Audio\SFX\Units\Separatists\hailfire\move\keep_watching_the_skies.wav
+		</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> No </Play_Sequentially>
+		<Text_ID>TEXT_SFX_OBI_GUARD_1, TEXT_SFX_OBI_GUARD_2</Text_ID>
+		<Overlap_Test> Unit_Hailfire</Overlap_Test>
+	</SFXEvent>
+	
+		<SFXEvent Name="Unit_Health_Critical_Hailfire_droid">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>
+		Data\Audio\SFX\Units\Separatists\hailfire\low_health\direct_hit.wav
+		
+		</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> No </Play_Sequentially>
+		<Text_ID>TEXT_SFX_OBI_GUARD_1, TEXT_SFX_OBI_GUARD_2</Text_ID>
+		<Overlap_Test> Unit_Hailfire</Overlap_Test>
+	</SFXEvent>
+	
+	<SFXEvent Name="Unit_Move_Hailfire_droid">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>
+			Data\Audio\SFX\Units\Separatists\hailfire\move\yes_sir.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\move\blast_radious_check.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\move\circuts_functional.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\move\clear.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\move\downloading_instructions.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\move\keep_watching_the_skies.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\move\yes_general.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\move\misslie_robot_on_the_go.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\move\moving.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\move\scanning.wav
+		</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_OBI_GUARD_1, TEXT_SFX_OBI_GUARD_2</Text_ID>
+		<Overlap_Test> Unit_Hailfire</Overlap_Test>
+	</SFXEvent>
+
+	
+	<SFXEvent Name="Unit_Select_Hailfire_droid">
+		<Use_Preset>Preset_UR</Use_Preset>
+		<Samples>
+			Data\Audio\SFX\Units\Separatists\hailfire\select\missile_armed.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\select\commander.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\select\droid_program_activated.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\select\armed_for_combat.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\select\ready.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\select\selected.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\select\misslie_ready.wav
+			Data\Audio\SFX\Units\Separatists\hailfire\select\your_command.wav
+		</Samples>
+		<Localize> Yes </Localize>
+		<Play_Sequentially> Yes </Play_Sequentially>
+		<Text_ID>TEXT_SFX_OBI_GUARD_1, TEXT_SFX_OBI_GUARD_2</Text_ID>
+		<Overlap_Test> Unit_Hailfire</Overlap_Test>
+	</SFXEvent>
 						
 							<!-- ATTE -->
 						

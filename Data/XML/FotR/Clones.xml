@@ -90,7 +90,7 @@
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_clonetrooper</SFXEvent_Fleet_Move>
 		<SFXEvent_Attack>Unit_Attack_clonetrooper</SFXEvent_Attack>
 		<SFXEvent_Guard>Unit_Guard_clonetrooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire> 
 		
 		<Death_SFXEvent_Start_Die>Unit_Death_clonetrooper</Death_SFXEvent_Start_Die>
 		
@@ -118,7 +118,7 @@
 		<AI_Combat_Power>3</AI_Combat_Power>
 
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
-		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
+		<Targeting_Priority_Set>AvoidAntiInfantryTurrets</Targeting_Priority_Set>
 
 		<Targeting_Max_Attack_Distance>325.0</Targeting_Max_Attack_Distance>
 		<Idle_Chase_Range>50.0</Idle_Chase_Range>
@@ -319,7 +319,7 @@
 
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
@@ -563,7 +563,7 @@
 
 
 		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
-		<Tactical_Build_Cost_Multiplayer>225</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
@@ -869,16 +869,17 @@
 		<No_Refraction_Below_Detail_Level>99</No_Refraction_Below_Detail_Level>
 		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
 		<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
-		<SFXEvent_Select>Unit_Select_Clone_Trooper</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Clone_Trooper</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Clone_Trooper</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Clone_Trooper</SFXEvent_Guard>
-		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire>
-		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Select>Unit_Select_clonetrooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_clonetrooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_clonetrooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_clonetrooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_clonetrooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Clone_Trooper_Fire</SFXEvent_Fire> 
 		
-		<SFXEvent_Assist_Move> Unit_Assist_Move_Clone_Trooper </SFXEvent_Assist_Move>		
-		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clone_Trooper </SFXEvent_Assist_Attack>
+		<Death_SFXEvent_Start_Die>Unit_Death_clonetrooper</Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_clonetrooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_clonetrooper </SFXEvent_Assist_Attack>
 
 		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
 		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
@@ -894,7 +895,7 @@
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
-		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
+		<Targeting_Priority_Set>AvoidAntiInfantryTurretsAir</Targeting_Priority_Set>
 		<Death_Clone>Damage_Force_Lightning, Infantry_Electric_Death_Clone_00</Death_Clone>
 		<Death_Clone>Damage_Force_Lightning, Infantry_Electric_Death_Clone_01</Death_Clone>
 		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
@@ -1001,7 +1002,7 @@
 		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
 		
 		
-		<Tactical_Build_Cost_Multiplayer>200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Multiplayer>500</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
@@ -1078,7 +1079,7 @@
 		<Damage>8</Damage>
 		<Autoresolve_Health>100</Autoresolve_Health>
 		<Affiliation>Empire</Affiliation>
-		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Build_Cost_Credits>100</Build_Cost_Credits>
 		<Piracy_Value_Credits>50</Piracy_Value_Credits>
 		<Build_Time_Seconds>15</Build_Time_Seconds>
 		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
@@ -1103,9 +1104,9 @@
 		<Icon_Name>I_BUTTON_CLONE_ARC_P2.tga</Icon_Name>
 		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
-		<SFXEvent_Build_Complete>Unit_Complete_Clone_Trooper</SFXEvent_Build_Complete>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clone_Trooper</SFXEvent_Fleet_Move>
-		<Tactical_Build_Cost_Multiplayer>225</Tactical_Build_Cost_Multiplayer>
+		<SFXEvent_Build_Complete>Unit_Complete_clonetrooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_clonetrooper</SFXEvent_Fleet_Move>
+		<Tactical_Build_Cost_Multiplayer>500</Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>

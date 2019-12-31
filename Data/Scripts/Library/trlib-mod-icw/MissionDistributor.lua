@@ -25,13 +25,11 @@ require("trlib-std/class")
 MissionDistributor = class()
 
 function MissionDistributor:new(player_agnostic_plot)
-    -- self.cis = Find_Player("Rebel")
-    -- self.republic = Find_Player("Empire")
-    -- self.RepMissions = MissionsRep()
-    -- self.CISMissions = MissionsCIS()
+    self.newRepublic = Find_Player("Rebel")
+    self.empire = Find_Player("Empire")
 end
 
-function MissionDistributor:MissionStart()
+function MissionDistributor:Assign()
     -- if self.republic.Is_Human() then
     --     self.RepMissions:Assign()
     -- elseif self.cis.Is_Human() then

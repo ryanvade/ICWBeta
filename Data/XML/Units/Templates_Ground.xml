@@ -1846,6 +1846,7 @@
 
         <Shielded_Only_When_Deployed>Yes</Shielded_Only_When_Deployed>
 		<Is_Squashable_By_Supercrusher>Yes</Is_Squashable_By_Supercrusher>
+		<Should_Reinforcements_Move> false </Should_Reinforcements_Move>
 		
 		<Garrison_Category> Infantry </Garrison_Category>
 		<Garrison_Value>1</Garrison_Value>
@@ -1897,7 +1898,7 @@
 		<Shield_Armor_Type>ShieldG_Infantry</Shield_Armor_Type>
 		<Damage>6</Damage>
 		<Shield_Points>60</Shield_Points>
-		<Tactical_Health>20</Tactical_Health>
+		<Tactical_Health>25</Tactical_Health>
 		<Shield_Refresh_Rate>10</Shield_Refresh_Rate>
 		<Energy_Capacity>9999</Energy_Capacity>
 		<Energy_Refresh_Rate>9999</Energy_Refresh_Rate>
@@ -1924,7 +1925,7 @@
 		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
 
 		<Land_FOW_Reveal_Range>180.0</Land_FOW_Reveal_Range>
-		<Targeting_Max_Attack_Distance>150.0</Targeting_Max_Attack_Distance>
+		<Targeting_Max_Attack_Distance>250.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>8.0</Ranged_Target_Z_Adjust>
 
 
@@ -1965,14 +1966,14 @@
 		<Overall_Length>20.0</Overall_Length> <!-- Hand tweaked for vehicle pitching up and down on terrain -->
 		<Overall_Width>0.0</Overall_Width> <!-- 0.0 means don't roll left and right on terrain -->
 		<Has_Land_Evaluator>Yes</Has_Land_Evaluator>
-		<AI_Combat_Power>4</AI_Combat_Power>
+		<AI_Combat_Power>10</AI_Combat_Power>
 
 		<Idle_Chase_Range>0.0</Idle_Chase_Range>
 		<Guard_Chase_Range>200.0</Guard_Chase_Range>
 		<Attack_Move_Response_Range>150.0</Attack_Move_Response_Range>
 		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
 		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
-		<Autonomous_Move_Extension_Vs_Attacker>150.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Autonomous_Move_Extension_Vs_Attacker>145.0</Autonomous_Move_Extension_Vs_Attacker>
 
 		<Weather_Category>Walker</Weather_Category>
 
@@ -2261,19 +2262,21 @@
 		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
 		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
 
-		<SFXEvent_Fire>Unit_Tank_T4B_Fire</SFXEvent_Fire>
-		<SFXEvent_Select>Unit_Select_Hailfire</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Hailfire</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Move_Hailfire</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Hailfire</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Move_Hailfire</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Attack_Hailfire_droid</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Hailfire_droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Hailfire_droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Hailfire_droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Hailfire_droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Hailfire_droid</SFXEvent_Guard>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Critical_Hailfire_droid </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Hailfire_droid </SFXEvent_Health_Critical_Warning> 
 
-		<SFXEvent_Assist_Move> Unit_Move_Hailfire </SFXEvent_Assist_Move>
-		<SFXEvent_Assist_Attack> Unit_Attack_Hailfire</SFXEvent_Assist_Attack>
+		<SFXEvent_Assist_Move> Unit_Move_Hailfire_droid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Attack_Hailfire_droid</SFXEvent_Assist_Attack>
 
 		<SFXEvent_Turret_Rotating_Loop> Vehicle_Turret_Motor </SFXEvent_Turret_Rotating_Loop>
 
-		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_SFXEvent_Start_Die>Unit_Die_Hailfire_droid</Death_SFXEvent_Start_Die>
 
 		<SFXEvent_Engine_Idle_Loop> Unit_Tracked_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
 		<SFXEvent_Engine_Moving_Loop> Unit_Tracked_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
