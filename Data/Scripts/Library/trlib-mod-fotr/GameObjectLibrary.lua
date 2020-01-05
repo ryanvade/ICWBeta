@@ -265,6 +265,24 @@ GameObjectLibrary = {
                 }
             }
         },
+        ["NEUTRON_STAR"] = {
+            Scripts = {
+                "MultiLayer",
+                "FighterSpawn",
+                "SingleUnitRetreat"
+            },
+            Flags = {
+                HANGAR = true
+            },
+            Fighters = {
+                ["ARC_170_SQUADRON"] = {
+                    ["DEFAULT"] = {
+                        Reserve = 2,
+                        Initial = 1
+                    }
+                }
+            }
+        },		
         ["GENERIC_SECUTOR"] = {
             Scripts = {
                 "MultiLayer",
@@ -274,9 +292,17 @@ GameObjectLibrary = {
 				["V-WING_SQUADRON"] = {
                     ["DEFAULT"] = {
                         Reserve = 8,
-                        Initial = 3
+                        Initial = 3,
+						TechLevel = GreaterThan(3)
                     },
                 },
+                ["TORRENT_SQUADRON"] = {
+                    ["DEFAULT"] = {
+                        Reserve = 8,
+                        Initial = 3,
+						TechLevel = LessOrEqualTo(3)
+                    }
+                },				
 				["TWIN_ION_ENGINE_STARFIGHTER_SQUADRON"] = {
                     ["DEFAULT"] = {
                         Reserve = 8,
@@ -421,17 +447,37 @@ GameObjectLibrary = {
                 ["TRIFIGHTER_SQUADRON"] = {
                     ["REBEL"] = {
                         Reserve = 4,
-                        Initial = 2
+                        Initial = 2,
+                        TechLevel = GreaterThan(1)
                     },
                     ["PIRATES"] = {
                         Reserve = 4,
-                        Initial = 2
+                        Initial = 2,
+						TechLevel = GreaterThan(3)
                     },
                     ["HUTTS"] = {
                         Reserve = 4,
-                        Initial = 2
+                        Initial = 2,
+						TechLevel = GreaterThan(3)
                     }					
                 },
+                ["SCARAB_SQUADRON"] = {
+                    ["REBEL"] = {
+                        Reserve = 4,
+                        Initial = 2,
+                        TechLevel = LessOrEqualTo(1)						
+                    },
+                    ["PIRATES"] = {
+                        Reserve = 4,
+                        Initial = 2,
+                        TechLevel = LessOrEqualTo(3)						
+                    },
+                    ["HUTTS"] = {
+                        Reserve = 4,
+                        Initial = 2,
+                        TechLevel = LessOrEqualTo(3)						
+                    }					
+                },				
                 ["NANTEX_SQUADRON"] = {
                     ["PENTASTAR"] = {
                         Reserve = 4,
@@ -523,17 +569,37 @@ GameObjectLibrary = {
                 ["TRIFIGHTER_SQUADRON"] = {
                     ["REBEL"] = {
                         Reserve = 6,
-                        Initial = 4
+                        Initial = 4,
+						TechLevel = GreaterThan(1)
                     },
                     ["PIRATES"] = {
                         Reserve = 6,
-                        Initial = 4
+                        Initial = 4,
+						TechLevel = GreaterThan(3)
                     },
                     ["HUTTS"] = {
                         Reserve = 6,
-                        Initial = 4
+                        Initial = 4,
+						TechLevel = GreaterThan(3)
                     }					
                 },
+                ["SCARAB_SQUADRON"] = {
+                    ["REBEL"] = {
+                        Reserve = 6,
+                        Initial = 4,
+                        TechLevel = LessOrEqualTo(1)						
+                    },
+                    ["PIRATES"] = {
+                        Reserve = 6,
+                        Initial = 4,
+                        TechLevel = LessOrEqualTo(3)						
+                    },
+                    ["HUTTS"] = {
+                        Reserve = 6,
+                        Initial = 4,
+                        TechLevel = LessOrEqualTo(3)						
+                    }					
+                },					
                 ["NANTEX_SQUADRON"] = {
                     ["PENTASTAR"] = {
                         Reserve = 6,
@@ -625,17 +691,37 @@ GameObjectLibrary = {
                 ["TRIFIGHTER_SQUADRON"] = {
                     ["REBEL"] = {
                         Reserve = 2,
-                        Initial = 1
+                        Initial = 1,
+						TechLevel = GreaterThan(1)
                     },
                     ["PIRATES"] = {
                         Reserve = 2,
-                        Initial = 1
+                        Initial = 1,
+						TechLevel = GreaterThan(3)
                     },
                     ["HUTTS"] = {
                         Reserve = 2,
-                        Initial = 1
+                        Initial = 1,
+						TechLevel = GreaterThan(3)
                     }					
                 },
+                ["SCARAB_SQUADRON"] = {
+                    ["REBEL"] = {
+                        Reserve = 2,
+                        Initial = 1,
+						TechLevel = LessOrEqualTo(1)
+                    },
+                    ["PIRATES"] = {
+                        Reserve = 2,
+                        Initial = 1,
+						TechLevel = LessOrEqualTo(3)
+                    },
+                    ["HUTTS"] = {
+                        Reserve = 2,
+                        Initial = 1,
+						TechLevel = LessOrEqualTo(3)
+                    }					
+                },								
                 ["NANTEX_SQUADRON"] = {
                     ["PENTASTAR"] = {
                         Reserve = 2,
@@ -734,17 +820,37 @@ GameObjectLibrary = {
                 ["TRIFIGHTER_SQUADRON"] = {
                     ["REBEL"] = {
                         Reserve = 8,
-                        Initial = 2
+                        Initial = 2,
+						TechLevel = GreaterThan(1)
                     },
                     ["PIRATES"] = {
                         Reserve = 8,
-                        Initial = 2
+                        Initial = 2,
+						TechLevel = GreaterThan(3)
                     },
                     ["HUTTS"] = {
                         Reserve = 8,
-                        Initial = 2
+                        Initial = 2,
+						TechLevel = GreaterThan(3)
                     }					
                 },
+                ["SCARAB_SQUADRON"] = {
+                    ["REBEL"] = {
+                        Reserve = 8,
+                        Initial = 2,
+						TechLevel = LessOrEqualTo(1)
+                    },
+                    ["PIRATES"] = {
+                        Reserve = 8,
+                        Initial = 2,
+						TechLevel = LessOrEqualTo(3)
+                    },
+                    ["HUTTS"] = {
+                        Reserve = 8,
+                        Initial = 2,
+						TechLevel = LessOrEqualTo(3)
+                    }					
+                },	
                 ["NANTEX_SQUADRON"] = {
                     ["PENTASTAR"] = {
                         Reserve = 8,
@@ -836,15 +942,35 @@ GameObjectLibrary = {
                 ["TRIFIGHTER_SQUADRON"] = {
                     ["REBEL"] = {
                         Reserve = 8,
-                        Initial = 2
-                    },
-                    ["HUTTS"] = {
-                        Reserve = 8,
-                        Initial = 2
+                        Initial = 2,
+						TechLevel = GreaterThan(1)
                     },
                     ["PIRATES"] = {
                         Reserve = 8,
-                        Initial = 2
+                        Initial = 2,
+						TechLevel = GreaterThan(3)
+                    },
+                    ["HUTTS"] = {
+                        Reserve = 8,
+                        Initial = 2,
+						TechLevel = GreaterThan(3)
+                    }					
+                },
+                ["SCARAB_SQUADRON"] = {
+                    ["REBEL"] = {
+                        Reserve = 8,
+                        Initial = 2,
+						TechLevel = LessOrEqualTo(1)
+                    },
+                    ["PIRATES"] = {
+                        Reserve = 8,
+                        Initial = 2,
+						TechLevel = LessOrEqualTo(3)
+                    },
+                    ["HUTTS"] = {
+                        Reserve = 8,
+                        Initial = 2,
+						TechLevel = LessOrEqualTo(3)
                     }					
                 },
                 ["NANTEX_SQUADRON"] = {
@@ -1128,6 +1254,11 @@ GameObjectLibrary = {
             },
             Fighters = {
                 ["VULTURE_SQUADRON_DOUBLE"] = {
+                    ["HOSTILE"] = {
+                        Reserve = 1,
+                        Initial = 1,
+                        TechLevel = LessOrEqualTo(2)
+                    },
                     ["REBEL"] = {
                         Reserve = 1,
                         Initial = 1,
@@ -1157,6 +1288,11 @@ GameObjectLibrary = {
                         Initial = 2,
                         TechLevel = GreaterThan(2)
                     },
+                    ["HOSTILE"] = {
+                        Reserve = 2,
+                        Initial = 2,
+                        TechLevel = GreaterThan(2)
+                    },
                    ["HUTTS"] = {
                         Reserve = 2,
                         Initial = 2,
@@ -1164,6 +1300,10 @@ GameObjectLibrary = {
                     }					
                 },
                 ["HYENA_SQUADRON"] = {
+                    ["HOSTILE"] = {
+                        Reserve = 1,
+                        Initial = 1
+                    },
                     ["REBEL"] = {
                         Reserve = 1,
                         Initial = 1
@@ -1323,8 +1463,7 @@ GameObjectLibrary = {
                 ["NANTEX_SQUADRON"] = {
                     ["DEFAULT"] = {
                         Reserve = 0,
-                        Initial = 2,
-                        TechLevel = LessOrEqualTo(2)
+                        Initial = 2
                     }
                 }
             }

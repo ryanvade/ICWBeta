@@ -58,7 +58,7 @@ function Definitions()
 	},
 	{
 		"GroundForce"
-		,"MinimumTotalForce = 1500"				
+		,"MinimumTotalForce = 1000"				
 		,"Vehicle | Infantry | Air = 100%"
 	}
 	}

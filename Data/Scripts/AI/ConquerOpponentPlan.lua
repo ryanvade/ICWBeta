@@ -62,7 +62,7 @@ function Definitions()
         },
         {
             "GroundForce",
-            "MinimumTotalForce = 2000",
+            "MinimumTotalForce = 1000",
             "LandHero | Vehicle | Infantry | Air = 100%"
         }
     }

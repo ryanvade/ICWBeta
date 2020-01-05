@@ -358,7 +358,7 @@
 		<Required_Special_Structures />
 		<Required_Planets />
 		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
-		<Company_Transport_Unit>CR20_Landing_Craft</Company_Transport_Unit>
+		<Company_Transport_Unit>Yoda_Eta</Company_Transport_Unit>
 		<Company_Units>Yoda</Company_Units>
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
@@ -378,7 +378,7 @@
 		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 		<Unit_Abilities_Data SubObjectList="Yes"> </Unit_Abilities_Data>
@@ -425,10 +425,10 @@
 		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 
-		<Encyclopedia_Text>TEXT_TOOLTIP_DELTA</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_DELTA </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COMMANDO_SQUAD </Encyclopedia_Unit_Class>
 		<Population_Value>1</Population_Value>
 	</HeroCompany>
@@ -549,7 +549,7 @@
 
 		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
 		
-		<Encyclopedia_Text> TEXT_TOOLTIP_FIXER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_FIXER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COMMANDO </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 5000 </Score_Cost_Credits>
 
@@ -682,7 +682,7 @@
 
 		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
 		
-		<Encyclopedia_Text> TEXT_TOOLTIP_SCORCH TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_SCORCH TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COMMANDO </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 5000 </Score_Cost_Credits>
 
@@ -863,7 +863,7 @@
 
 		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
 		
-		<Encyclopedia_Text> TEXT_TOOLTIP_BOSS TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_BOSS TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COMMANDO </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 5000 </Score_Cost_Credits>
 
@@ -1043,7 +1043,7 @@
 
 		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
 		
-		<Encyclopedia_Text> TEXT_TOOLTIP_SEV TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_BIO TEXT_TOOLTIP_SEV TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>		
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COMMANDO </Encyclopedia_Unit_Class>
 		<Score_Cost_Credits> 5000 </Score_Cost_Credits>
 
@@ -1083,7 +1083,8 @@
 		<Is_Named_Hero>Yes</Is_Named_Hero>
 		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
 		<Text_ID>TEXT_HERO_MACE_WINDU</Text_ID>
-		<Encyclopedia_Text> TEXT_TOOLTIP_WINDU TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_WINDU TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_MASTER </Encyclopedia_Unit_Class>
 		
 		<Land_Model_Name>REP_WINDU.ALO</Land_Model_Name>
@@ -1245,6 +1246,21 @@
 				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
 			</Redirect_Blaster_Ability>
 
+			<Combat_Bonus_Ability Name="Windu_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Excluded_Unit_Types> </Excluded_Unit_Types>
+				<Health_Bonus_Percentage>0.05</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.05</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.05</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.05</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+
 			<Absorb_Blaster_Ability Name="Windu_Absorb_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
 				<Absorb_Chance>0.3</Absorb_Chance>
@@ -1376,8 +1392,8 @@
 
 	<UniqueUnit Name="Windu_Eta">
 		<Text_ID>TEXT_HERO_MACE_WINDU</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_WINDU TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_MASTER </Encyclopedia_Unit_Class>
-		<Encyclopedia_Text>TEXT_TOOLTIP_WINDU</Encyclopedia_Text>
 		<Variant_Of_Existing_Type>Eta2_Actis</Variant_Of_Existing_Type>
 		<Hyperspace>Yes</Hyperspace>
 		<Hyperspace_Speed>1.5</Hyperspace_Speed>
@@ -1489,11 +1505,12 @@
 		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
-		<Encyclopedia_Text>TEXT_TOOLTIP_WINDU</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_WINDU TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_MASTER </Encyclopedia_Unit_Class>
+
 		<CategoryMask>LandHero</CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
 		<Population_Value>1</Population_Value>
@@ -1523,7 +1540,7 @@
 		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
 		
 		<Population_Value>1</Population_Value>
@@ -1536,7 +1553,7 @@
 		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
 		
 		<Text_ID>TEXT_HERO_WIELER</Text_ID>
-			<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_WIELER TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_RESILIENT</Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND4 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_WIELER TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_RESILIENT</Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADMIRAL </Encyclopedia_Unit_Class>
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
@@ -1548,16 +1565,16 @@
 		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_5>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>V-Wing_Squadron, 3</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_4>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>V-Wing_Squadron, 3</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_4>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 10</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_5>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>V-Wing_Squadron, 10</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_5>
+		<Reserve_Spawned_Units_Tech_4>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>V-Wing_Squadron, 10</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_4>
 		  
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
@@ -1673,26 +1690,26 @@
 		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_3>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Torrent_Squadron, 2</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Eta2_Actis_Squadron, 1</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_3>
 		<Starting_Spawned_Units_Tech_4>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_4>
-		<Starting_Spawned_Units_Tech_4>Torrent_Squadron, 2</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>V-Wing_Squadron, 2</Starting_Spawned_Units_Tech_4>
 		<Starting_Spawned_Units_Tech_4>Eta2_Actis_Squadron, 1</Starting_Spawned_Units_Tech_4>
 		<Starting_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_4>
-		<Starting_Spawned_Units_Tech_5>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>V-Wing_Squadron, 2</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>Eta2_Actis_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_5>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 10</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_3>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>Torrent_Squadron, 7</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>Eta2_Actis_Squadron, 3</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_3>
 		<Reserve_Spawned_Units_Tech_4>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_4>
-		<Reserve_Spawned_Units_Tech_4>Torrent_Squadron, 7</Reserve_Spawned_Units_Tech_4>
 		<Reserve_Spawned_Units_Tech_4>Eta2_Actis_Squadron, 3</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>V-Wing_Squadron, 7</Reserve_Spawned_Units_Tech_4>
 		<Reserve_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_4>
-		<Reserve_Spawned_Units_Tech_5>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>Eta2_Actis_Squadron, 3</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>V-Wing_Squadron, 7</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_5>
 
 
 
@@ -1750,8 +1767,8 @@
 		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
 			<Is_Named_Hero>Yes</Is_Named_Hero>	
 		<Text_ID>TEXT_HERO_TARKIN</Text_ID>
-			<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND2 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_TARKIN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ERIADU</Encyclopedia_Text>
-		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPTAIN </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TRAITS TEXT_TOOLTIP_TRAIT_COMMAND2 TEXT_TOOLTIP_BIO TEXT_TOOLTIP_TARKIN TEXT_TOOLTIP_COMMANDS TEXT_TOOLTIP_COMMAND_ERIADU</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_POLITICAL </Encyclopedia_Unit_Class>
 		
 		<SpaceBehavior> ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, SELECTABLE, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA</SpaceBehavior>
 		<Lua_Script></Lua_Script>
@@ -1761,13 +1778,13 @@
 		
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 2</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_4>Twin_Ion_Engine_Starfighter_Squadron, 3</Starting_Spawned_Units_Tech_4>
-		<Starting_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 2</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_3>Twin_Ion_Engine_Starfighter_Squadron, 3</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>BTLB_Y-WING_SQUADRON, 2</Starting_Spawned_Units_Tech_3>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 10</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 4</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_4>Twin_Ion_Engine_Starfighter_Squadron, 10</Reserve_Spawned_Units_Tech_4>
-		<Reserve_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 4</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_3>Twin_Ion_Engine_Starfighter_Squadron, 10</Reserve_Spawned_Units_Tech_3>
+		<Reserve_Spawned_Units_Tech_3>BTLB_Y-WING_SQUADRON, 4</Reserve_Spawned_Units_Tech_3>
 		  
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>
@@ -1822,16 +1839,16 @@
 		<Starting_Spawned_Units_Tech_0>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>Torrent_Squadron, 3</Starting_Spawned_Units_Tech_0>
 		<Starting_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_0>
-		<Starting_Spawned_Units_Tech_5>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>V-Wing_Squadron, 3</Starting_Spawned_Units_Tech_5>
-		<Starting_Spawned_Units_Tech_5>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_4>ARC_170_Squadron, 1</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>V-Wing_Squadron, 3</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 1</Starting_Spawned_Units_Tech_4>
 		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
 		<Reserve_Spawned_Units_Tech_0>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>Torrent_Squadron, 10</Reserve_Spawned_Units_Tech_0>
 		<Reserve_Spawned_Units_Tech_0>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_0>
-		<Reserve_Spawned_Units_Tech_5>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>V-Wing_Squadron, 10</Reserve_Spawned_Units_Tech_5>
-		<Reserve_Spawned_Units_Tech_5>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_5>	
+		<Reserve_Spawned_Units_Tech_4>ARC_170_Squadron, 2</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>V-Wing_Squadron, 10</Reserve_Spawned_Units_Tech_4>
+		<Reserve_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_4>	
 		  
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
 		<CategoryMask> Capital | SpaceHero | AntiFrigate </CategoryMask>

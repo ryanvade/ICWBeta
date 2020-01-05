@@ -63,6 +63,15 @@ function Absorb_IGBC()
 	    	ChangePlanetOwnerAndReplace(planet, p_cis)
 		end
     end
+
+    local allUnitsPerOwner = {}
+    local owner = Find_Player("Pentastar")
+    allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
+    local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
+    for i,unit in pairs(allUnitsOfCurrentOwner) do
+        unit.Despawn()
+    end    
+
     Story_Event("IGBC_ABSORBED")
 
     start_planet = StoryUtil.FindFriendlyPlanet(p_cis)
@@ -95,6 +104,15 @@ function Absorb_Techno()
     	    	ChangePlanetOwnerAndReplace(planet, p_cis)
 		end
     end
+
+    local allUnitsPerOwner = {}
+    local owner = Find_Player("Hutts")
+    allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
+    local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
+    for i,unit in pairs(allUnitsOfCurrentOwner) do
+        unit.Despawn()
+    end   
+
     Story_Event("TECHNO_ABSORBED")
     if p_cis.Is_Human() then
         Story_Event("TECHNO_JOINS_SPEECH")
@@ -121,6 +139,15 @@ function Absorb_Commerce()
             ChangePlanetOwnerAndReplace(planet, p_cis)
 		end
     end
+
+    local allUnitsPerOwner = {}
+    local owner = Find_Player("Teradoc")
+    allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
+    local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
+    for i,unit in pairs(allUnitsOfCurrentOwner) do
+        unit.Despawn()
+    end  
+
     Story_Event("COMMERCE_ABSORBED")
     if p_cis.Is_Human() then
         Story_Event("COMMERCE_JOINS_SPEECH")
@@ -147,6 +174,15 @@ function Absorb_TradeFed()
             ChangePlanetOwnerAndReplace(planet, p_cis)
         end
     end
+
+    local allUnitsPerOwner = {}
+    local owner = Find_Player("Pirates")
+    allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
+    local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
+    for i,unit in pairs(allUnitsOfCurrentOwner) do
+        unit.Despawn()
+    end   
+
     Story_Event("TRADEFED_ABSORBED")
 
     start_planet = StoryUtil.FindFriendlyPlanet(p_cis)

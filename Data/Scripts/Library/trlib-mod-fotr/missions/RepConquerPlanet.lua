@@ -51,7 +51,7 @@ function Conquer_Observer_Rep()
 	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Conquer_Planet_Rep.xml")
 
 	republic = Find_Player("Empire")
-	reward_location = StoryUtil.FindFriendlyPlanet(republic)
+	reward_location = StoryUtil.FindFriendlyPlanet(Find_Player("Empire"))
 	spawn_list_reward = { "Generic_Acclamator_Assault_Ship_I" , "Generic_Acclamator_Assault_Ship_I", "Generic_Acclamator_Assault_Ship_I", "Generic_Acclamator_Assault_Ship_I" }
 	SpawnList(spawn_list_reward, reward_location, republic, true, false)
 

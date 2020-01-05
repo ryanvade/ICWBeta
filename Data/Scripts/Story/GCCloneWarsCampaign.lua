@@ -181,7 +181,7 @@ function Determine_Start_Era(message)
                     start_planet = StoryUtil.FindFriendlyPlanet(p_cis)
                 end
                 if start_planet then
-                    spawn_list = { "Whorm_Team" }
+                    spawn_list = { "Whorm_Team", "Trench_Invincible" }
                     SpawnList(spawn_list, start_planet, p_cis, true, false)
                 end
             end
@@ -295,7 +295,7 @@ function Determine_Start_Era(message)
                     start_planet = StoryUtil.FindFriendlyPlanet(p_cis)
                 end
                 if start_planet then
-                    spawn_list = { "Whorm_Team" }
+                    spawn_list = { "Whorm_Team", "Trench_Invincible" }
                     SpawnList(spawn_list, start_planet, p_cis, true, false)
                 end
             end
@@ -420,7 +420,7 @@ function Determine_Start_Era(message)
                     start_planet = StoryUtil.FindFriendlyPlanet(p_cis)
                 end
                 if start_planet then
-                    spawn_list = { "Whorm_Team" }
+                    spawn_list = { "Whorm_Team", "Trench_Invincible"  }
                     SpawnList(spawn_list, start_planet, p_cis, true, false)
                 end
             end

@@ -32,7 +32,7 @@
 		<Basic_AI>GenericAI</Basic_AI>
 		<Can_Win_By_Destroying_Super_Weapon>Yes</Can_Win_By_Destroying_Super_Weapon>
 		<Faction_Super_Weapon>  </Faction_Super_Weapon>
-		<Skirmish_Land_Bomber> Y-Wing_Bombing_Run </Skirmish_Land_Bomber>
+		<Skirmish_Land_Bomber> Hyena_Bombing_Run </Skirmish_Land_Bomber>
 		<Space_Tactical_Unit_Cap>120</Space_Tactical_Unit_Cap>
 		<Maintenance_Cost>0.25</Maintenance_Cost>
 		<Scatters_From_Crushers> true </Scatters_From_Crushers>
@@ -54,7 +54,7 @@
 		before displaying it to the player otherwise it won't match the tech tree we show in-game. -->
 		<Displayed_Tech_Level_Adjustment> +1 </Displayed_Tech_Level_Adjustment>
 
-		<Infantry_Icon_Name>i_button_rebel_soldier.tga</Infantry_Icon_Name>
+		<Infantry_Icon_Name>I_BUTTON_B1.TGA</Infantry_Icon_Name>
 		<Vehicle_Icon_Name>i_r_vehicle.tga</Vehicle_Icon_Name>
 		<Carrier_Icon_Name>i_r_carrier.tga</Carrier_Icon_Name>
 		<Frigate_Icon_Name>i_r_frigate.tga</Frigate_Icon_Name>
@@ -110,7 +110,7 @@
 		<Reinforcements_Requesting_SFXEvent> RHD_Request_Assistance </Reinforcements_Requesting_SFXEvent>
 		<Reinforcements_Ready_SFXEvent> RHD_Reinforcements_Available </Reinforcements_Ready_SFXEvent>
 
-		<Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_Rebel </Reinforcements_Shadow_Blob_Material_Name>
+		<Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_CIS </Reinforcements_Shadow_Blob_Material_Name>
 
 		<Bombing_Run_Shadow_Blob_Material_Name> Bombing_Run_Rebel </Bombing_Run_Shadow_Blob_Material_Name>
 		<Bombing_Run_Blob_Size> 100.0 </Bombing_Run_Blob_Size>
@@ -118,28 +118,23 @@
 		<Bombardment_Shadow_Blob_Material_Name> Bombardment_Rebel </Bombardment_Shadow_Blob_Material_Name>
 		<Bombardment_Blob_Size> 150.0 </Bombardment_Blob_Size>
 		<Bombardment_Required_Orbital_Ships>
-		<!--Light Frigates-->
-		Carrack_Cruiser, Generic_Acclamator_Assault_Ship, Dreadnaught, Katana_Dreadnaught, Enforcer, Generic_Gladiator, Munificent, Neutron_Star, Strike_Cruiser, Vindicator_Cruiser,
-		<!--Heavy Frigates-->
-		Generic_Procursator, Generic_Providence, Generic_Venator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, MTC_Sensor,
-		Alliance_Assault_Frigate, BAC, Dreadnaught, Katana_Dreadnaught, MC40a,
-		<!--Capitals-->
-		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Torpedo_Sphere,
-		Endurance, Majestic, Home_One_Type, Calamari_Cruiser, MC80B, MC90, Nebula, Dauntless
-		<!--Supers-->
-		Viscount,
+		Bulwark_II, Bulwark_I, Recusant, Recusant_Dreadnought, Munificent, Captor, Auxilia, Generic_Lucrehulk, Generic_Providence,
+		Providence_Dreadnought, Subjugator,
 		<!--Heroes-->
-		Bell_Endurance, Bell_Swift_Liberty, Yonka_Freedom, Vantai_Moonshadow, Galactic_Voyager, Home_One, Abaht_Intrepid, Sovv_Dauntless, Wedge_Lusankya, Nantz_Independence, Iillor_Corusca, Iblis_Selonian_Fire, Iblis_Peregrine, Ackbar_Guardian, Solo_Remonda, Errant_Venture, Errant_Venture_Two </Bombardment_Required_Orbital_Ships>
+		Invisible_Hand, Grievous_Recusant, Grievous_Malevolence, Tonith_Corpulentus, Canteval_Munificent, Dua_Ningo_Unrepentant
+		
+		</Bombardment_Required_Orbital_Ships>
 		<Bombardment_Projectile> Proj_NR_Bombardment_Turbolaser </Bombardment_Projectile>
-			<Bombardment_Number_Of_Salvos> 3 </Bombardment_Number_Of_Salvos>
-		<Bombardment_Shots_Per_Salvo> 20 </Bombardment_Shots_Per_Salvo>
-		<Bombardment_Shot_Delay> 0.1 </Bombardment_Shot_Delay>
+		<Bombardment_Particle> Bombard_Particle_Effect </Bombardment_Particle>
+		<Bombardment_Number_Of_Salvos> 1 </Bombardment_Number_Of_Salvos>
+		<Bombardment_Shots_Per_Salvo> 1 </Bombardment_Shots_Per_Salvo>
+		<Bombardment_Shot_Delay> 0.2 </Bombardment_Shot_Delay>
 		<Bombardment_Salvo_Delay> 1.0 </Bombardment_Salvo_Delay>
-        <Bombardment_Initial_Delay> 3.0 </Bombardment_Initial_Delay>
+        <Bombardment_Initial_Delay> 4.0 </Bombardment_Initial_Delay>
 
 		<Bombardment_Lighting_Color_List>1.0,0.2,0.2</Bombardment_Lighting_Color_List>
 		<Bombardment_Lighting_Intensity_List>0.4</Bombardment_Lighting_Intensity_List>
-		<Bombardment_Lighting_Seconds_List>3</Bombardment_Lighting_Seconds_List>
+		<Bombardment_Lighting_Seconds_List>2</Bombardment_Lighting_Seconds_List>
 		<Land_Mode_Selection_Blob_Material_Name>Selection_CIS</Land_Mode_Selection_Blob_Material_Name>
 		<Space_Mode_Selection_Blob_Material_Name>Selection_CIS</Space_Mode_Selection_Blob_Material_Name>
 		<Land_Mode_Garrison_Selection_Blob_Material_Name>Selection_CIS</Land_Mode_Garrison_Selection_Blob_Material_Name>
@@ -772,7 +767,7 @@
 		<Minimum_Visible_Base_Level>0</Minimum_Visible_Base_Level>
 		<Basic_AI>GenericAI</Basic_AI>
 		<Faction_Super_Weapon> </Faction_Super_Weapon>
-		<Skirmish_Land_Bomber> TIE_Bomber_Bombing_Run </Skirmish_Land_Bomber>
+		<Skirmish_Land_Bomber> BTL_Y-Wing_Bombing_Run </Skirmish_Land_Bomber>
 		<Space_Tactical_Unit_Cap>120</Space_Tactical_Unit_Cap>
 		<Maintenance_Cost>0.25</Maintenance_Cost>
 
@@ -788,7 +783,7 @@
 
 		<Scatters_From_Crushers> false </Scatters_From_Crushers>
 
-		<Infantry_Icon_Name>i_button_storm_trooper.tga</Infantry_Icon_Name>
+		<Infantry_Icon_Name>I_BUTTON_CLONEP1.TGA</Infantry_Icon_Name>
 		<Vehicle_Icon_Name>i_e_vehicle.tga</Vehicle_Icon_Name>
 		<Carrier_Icon_Name>i_e_carrier.tga</Carrier_Icon_Name>
 		<Frigate_Icon_Name>i_e_frigate.tga</Frigate_Icon_Name>
@@ -841,7 +836,7 @@
 		<Reinforcements_Requesting_SFXEvent> EHD_Request_Assistance </Reinforcements_Requesting_SFXEvent>
 		<Reinforcements_Ready_SFXEvent> EHD_Reinforcements_Available </Reinforcements_Ready_SFXEvent>
 
-		<Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_Empire </Reinforcements_Shadow_Blob_Material_Name>
+		<Reinforcements_Shadow_Blob_Material_Name> Reinforcement_Overlay_Republic </Reinforcements_Shadow_Blob_Material_Name>
 
 		<Bombing_Run_Shadow_Blob_Material_Name> Bombing_Run_Empire </Bombing_Run_Shadow_Blob_Material_Name>
 		<Bombing_Run_Blob_Size> 100.0 </Bombing_Run_Blob_Size>
@@ -850,27 +845,26 @@
 		<Bombardment_Shadow_Blob_Material_Name> Bombardment_Empire </Bombardment_Shadow_Blob_Material_Name>
 		<Bombardment_Blob_Size> 150.0 </Bombardment_Blob_Size>
 		<Bombardment_Required_Orbital_Ships>
-		<!--Light Frigates-->
-		Carrack_Cruiser, Generic_Acclamator_Assault_Ship, Dreadnaught, Katana_Dreadnaught, Enforcer, Generic_Gladiator, Munificent, Neutron_Star, Strike_Cruiser, Vindicator_Cruiser,
-		<!--Heavy Frigates-->
-		Generic_Procursator, Generic_Providence, Generic_Venator, Generic_Victory_Destroyer, Generic_Victory_Destroyer_Two, Crimson_Victory, MTC_Sensor,
-		<!--Capitals-->
-		Generic_Allegiance, Generic_Dominator, Generic_Lucrehulk, Generic_Praetor, Generic_Secutor, Generic_Star_Destroyer, Generic_Star_Destroyer_Two, Torpedo_Sphere,
-		<!--Supers-->
-		Generic_Bellator, Generic_Executor, Sovereign, Dominion, Megador,
+			Generic_Praetor, Generic_Tector, Generic_Secutor, Generic_Star_Destroyer,
+			Carrack_Cruiser, Carrack_Cruiser_Lasers, Dreadnaught, Dreadnaught_Lasers,
+			Katana_Dreadnaught, Generic_Acclamator_Assault_Ship_I, Generic_Acclamator_Assault_Ship_II,
+			Generic_Acclamator_Assault_Ship_Leveler, Generic_Acclamator_Assault_Ship, Generic_Venator,
+			Generic_Victory_Destroyer, Invincible_Cruiser,
 		<!--Heroes-->
-		Wieler_Resilient, Tarkin_Venator, Yularen_Resolute, Wieler_Triumphant, Corrupter_Star_Destroyer, Scylla, Knight_Hammer, Gorgon, CrimsonSunrise_Star_Destroyer, 13X, Relentless_Star_Destroyer, Agonizer_Star_Destroyer, Emperors_Revenge_Star_Destroyer, Rogriss_Aurora, Rogriss_Dominion, Lusankya, Chimera_Pellaeon_Vice, Pellaeon_Reaper, Chimera_Pellaeon_Grand, Eclipse_Star_Destroyer, Cboath_Carrack, Sinister_Relentless, Grunger_Aggressor, Makati_Steadfast, Takel_MagicDragon, Klev_Silencer7, Kermen_Belligerent, Yonka_Avarice, Darron_Direption, Phulik_Binder
+		Wieler_Resilient, Tarkin_Venator, Yularen_Resolute, Coburn_Triumphant, Kilian_Endurance, Pellaeon_Leveler, Screed_Arlionne,
+		Dodonna_Ardent, Dallin_Kebir
 		</Bombardment_Required_Orbital_Ships>
 		<Bombardment_Projectile> Proj_Republic_Bombardment_Turbolaser </Bombardment_Projectile>
-			<Bombardment_Number_Of_Salvos> 3 </Bombardment_Number_Of_Salvos>
-		<Bombardment_Shots_Per_Salvo> 20 </Bombardment_Shots_Per_Salvo>
-		<Bombardment_Shot_Delay> 0.1 </Bombardment_Shot_Delay>
+		<Bombardment_Particle> Bombard_Particle_Effect </Bombardment_Particle>
+		<Bombardment_Number_Of_Salvos> 1 </Bombardment_Number_Of_Salvos>
+		<Bombardment_Shots_Per_Salvo> 1 </Bombardment_Shots_Per_Salvo>
+		<Bombardment_Shot_Delay> 0.2 </Bombardment_Shot_Delay>
 		<Bombardment_Salvo_Delay> 1.0 </Bombardment_Salvo_Delay>
-        <Bombardment_Initial_Delay> 3.0 </Bombardment_Initial_Delay>
+        <Bombardment_Initial_Delay> 4.0 </Bombardment_Initial_Delay>
 
 		<Bombardment_Lighting_Color_List>0.2,0.2,1.0</Bombardment_Lighting_Color_List>
 		<Bombardment_Lighting_Intensity_List>0.4</Bombardment_Lighting_Intensity_List>
-		<Bombardment_Lighting_Seconds_List>3</Bombardment_Lighting_Seconds_List>
+		<Bombardment_Lighting_Seconds_List>2</Bombardment_Lighting_Seconds_List>
 		<Land_Mode_Selection_Blob_Material_Name>Selection_GalacticRepublic</Land_Mode_Selection_Blob_Material_Name>
 		<Space_Mode_Selection_Blob_Material_Name>Selection_GalacticRepublic</Space_Mode_Selection_Blob_Material_Name>
 		<Land_Mode_Garrison_Selection_Blob_Material_Name>Selection_GalacticRepublic</Land_Mode_Garrison_Selection_Blob_Material_Name>
@@ -1072,7 +1066,9 @@
 		<!-- OBJECT SPOTTED ANNOUNCEMENTS	  		         -->
 		<!-- ============================================= -->
 
-		<SFXEvent_Unit_Type_Spotted>Generic_Field_Commander_Empire, Unit_Announce_E_Field_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
+		<SFXEvent_Unit_Type_Spotted>General_Grievous, REP_Spotting_General_Grievous</SFXEvent_Unit_Type_Spotted>
+		
+		
 		<SFXEvent_Unit_Type_Spotted>Emperor_Palpatine,					Unit_Announce_Emperor_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Boba_Fett,								Unit_Announce_Fett_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
 		<SFXEvent_Unit_Type_Spotted>Kyle_Katarn,							Unit_Announce_Katarn_Storm_Trooper</SFXEvent_Unit_Type_Spotted>
@@ -1213,10 +1209,12 @@
 		<SFXEvent_HUD_Base_Shield_Penetrated> EHD_Base_Shield_Penetrated </SFXEvent_HUD_Base_Shield_Penetrated>							<!-- Our base shield was just penetrated by the enemy -->
 		<SFXEvent_HUD_Enemy_Base_Shield_Penetrated> EHD_Enemy_Base_Shield_Penetrated </SFXEvent_HUD_Enemy_Base_Shield_Penetrated>	<!-- We just penetrated then enemies base shield -->
 
-		<SFXEvent_HUD_Won_Land_Battle> EHD_Battle_End </SFXEvent_HUD_Won_Land_Battle> 															<!-- We won the land battle -->
+		<SFXEvent_HUD_Won_Land_Battle> REP_Victory </SFXEvent_HUD_Won_Land_Battle> 															<!-- We won the land battle -->
 		<SFXEvent_HUD_Lost_Land_Battle> EHD_Defeated </SFXEvent_HUD_Lost_Land_Battle> 															<!-- We lost the land battle -->
-		<SFXEvent_HUD_Won_Space_Battle> EHD_Battle_End </SFXEvent_HUD_Won_Space_Battle> 													   	<!-- We won the space battle -->
-		<SFXEvent_HUD_Lost_Space_Battle> EHD_Defeated </SFXEvent_HUD_Lost_Space_Battle>                       							<!-- We lost the space battle -->
+		<SFXEvent_HUD_Won_Space_Battle> REP_Victory </SFXEvent_HUD_Won_Space_Battle> 													   	<!-- We won the space battle -->
+		<SFXEvent_HUD_Lost_Space_Battle> EHD_Defeated </SFXEvent_HUD_Lost_Space_Battle>  
+
+        <Space_Retreat_Enemy_Begin_SFXEvent> CIS_retreat_from_REP </Space_Retreat_Enemy_Begin_SFXEvent>	
 
 		<SFXEvent_HUD_Won_Land_Battle_Enemy_TSW_Present> EHD_Battle_End </SFXEvent_HUD_Won_Land_Battle_Enemy_TSW_Present> 			<!-- We won the land battle with enemy tactical superweapon present -->
 		<SFXEvent_HUD_Lost_Land_Battle_Enemy_TSW_Present> EHD_Defeated </SFXEvent_HUD_Lost_Land_Battle_Enemy_TSW_Present> 			<!-- We lost the land battle with enemy tactical superweapon present -->
@@ -2474,15 +2472,16 @@
 		<!--Heroes-->
 		</Bombardment_Required_Orbital_Ships>
 		<Bombardment_Projectile> Proj_NR_Bombardment_Turbolaser </Bombardment_Projectile>
-		<Bombardment_Number_Of_Salvos> 3 </Bombardment_Number_Of_Salvos>
-		<Bombardment_Shots_Per_Salvo> 20 </Bombardment_Shots_Per_Salvo>
-		<Bombardment_Shot_Delay> 0.1 </Bombardment_Shot_Delay>
+		<Bombardment_Particle> Bombard_Particle_Effect </Bombardment_Particle>
+		<Bombardment_Number_Of_Salvos> 1 </Bombardment_Number_Of_Salvos>
+		<Bombardment_Shots_Per_Salvo> 1 </Bombardment_Shots_Per_Salvo>
+		<Bombardment_Shot_Delay> 0.2 </Bombardment_Shot_Delay>
 		<Bombardment_Salvo_Delay> 1.0 </Bombardment_Salvo_Delay>
-        <Bombardment_Initial_Delay> 3.0 </Bombardment_Initial_Delay>
+        <Bombardment_Initial_Delay> 4.0 </Bombardment_Initial_Delay>
 
 		<Bombardment_Lighting_Color_List>1.0,0.2,0.2</Bombardment_Lighting_Color_List>
 		<Bombardment_Lighting_Intensity_List>0.4</Bombardment_Lighting_Intensity_List>
-		<Bombardment_Lighting_Seconds_List>3</Bombardment_Lighting_Seconds_List>
+		<Bombardment_Lighting_Seconds_List>2</Bombardment_Lighting_Seconds_List>
 		<Land_Mode_Selection_Blob_Material_Name>Selection_Zsinj</Land_Mode_Selection_Blob_Material_Name>
 		<Space_Mode_Selection_Blob_Material_Name>Selection_Zsinj</Space_Mode_Selection_Blob_Material_Name>
 		<Land_Mode_Garrison_Selection_Blob_Material_Name>Selection_Zsinj</Land_Mode_Garrison_Selection_Blob_Material_Name>
@@ -3090,7 +3089,7 @@
 		<Squadron_Icon_Name> g_squad.tga </Squadron_Icon_Name>
 
 		<Color>  255, 255, 255, 255 </Color>
-		<No_Colorization_Color> 355, 255, 255, 255 </No_Colorization_Color>
+		<No_Colorization_Color> 225, 225, 125, 255 </No_Colorization_Color>
 		<Display_Font_Color>  20, 255, 8, 255 </Display_Font_Color>
 		<Big_Fleet_Color>  20, 255, 8, 255 </Big_Fleet_Color>
 
@@ -3198,15 +3197,16 @@
 		Prittick_Tyrant, Kabalian_Star_Destroyer, Retribution_Star_Destroyer, Pryl_Thunderflare, Night_Hammer, Zed_Stalker
 		</Bombardment_Required_Orbital_Ships>
 		<Bombardment_Projectile> Proj_NR_Bombardment_Turbolaser </Bombardment_Projectile>
-		<Bombardment_Number_Of_Salvos> 3 </Bombardment_Number_Of_Salvos>
-		<Bombardment_Shots_Per_Salvo> 20 </Bombardment_Shots_Per_Salvo>
-		<Bombardment_Shot_Delay> 0.1 </Bombardment_Shot_Delay>
+		<Bombardment_Particle> Bombard_Particle_Effect </Bombardment_Particle>
+		<Bombardment_Number_Of_Salvos> 1 </Bombardment_Number_Of_Salvos>
+		<Bombardment_Shots_Per_Salvo> 1 </Bombardment_Shots_Per_Salvo>
+		<Bombardment_Shot_Delay> 0.2 </Bombardment_Shot_Delay>
 		<Bombardment_Salvo_Delay> 1.0 </Bombardment_Salvo_Delay>
-        <Bombardment_Initial_Delay> 3.0 </Bombardment_Initial_Delay>
+        <Bombardment_Initial_Delay> 4.0 </Bombardment_Initial_Delay>
 
 		<Bombardment_Lighting_Color_List>1.0,0.2,0.2</Bombardment_Lighting_Color_List>
 		<Bombardment_Lighting_Intensity_List>0.4</Bombardment_Lighting_Intensity_List>
-		<Bombardment_Lighting_Seconds_List>3</Bombardment_Lighting_Seconds_List>
+		<Bombardment_Lighting_Seconds_List>2</Bombardment_Lighting_Seconds_List>
 		<Land_Mode_Selection_Blob_Material_Name>Selection_Eriadu</Land_Mode_Selection_Blob_Material_Name>
 		<Space_Mode_Selection_Blob_Material_Name>Selection_Eriadu</Space_Mode_Selection_Blob_Material_Name>
 		<Land_Mode_Garrison_Selection_Blob_Material_Name>Selection_Eriadu</Land_Mode_Garrison_Selection_Blob_Material_Name>
@@ -3919,15 +3919,16 @@
 		<!--Heroes-->
 		Vengeance_Jerec, Reaper_Kaine, Grant_Oriflamme, Dynamic_Besk, Dekeet_Praetor, Otro_Enforcer </Bombardment_Required_Orbital_Ships>
 		<Bombardment_Projectile> Proj_NR_Bombardment_Turbolaser </Bombardment_Projectile>
-		<Bombardment_Number_Of_Salvos> 3 </Bombardment_Number_Of_Salvos>
-		<Bombardment_Shots_Per_Salvo> 20 </Bombardment_Shots_Per_Salvo>
-		<Bombardment_Shot_Delay> 0.1 </Bombardment_Shot_Delay>
+		<Bombardment_Particle> Bombard_Particle_Effect </Bombardment_Particle>
+		<Bombardment_Number_Of_Salvos> 1 </Bombardment_Number_Of_Salvos>
+		<Bombardment_Shots_Per_Salvo> 1 </Bombardment_Shots_Per_Salvo>
+		<Bombardment_Shot_Delay> 0.2 </Bombardment_Shot_Delay>
 		<Bombardment_Salvo_Delay> 1.0 </Bombardment_Salvo_Delay>
-        <Bombardment_Initial_Delay> 3.0 </Bombardment_Initial_Delay>
+        <Bombardment_Initial_Delay> 4.0 </Bombardment_Initial_Delay>
 
 		<Bombardment_Lighting_Color_List>1.0,0.2,0.2</Bombardment_Lighting_Color_List>
 		<Bombardment_Lighting_Intensity_List>0.4</Bombardment_Lighting_Intensity_List>
-		<Bombardment_Lighting_Seconds_List>3</Bombardment_Lighting_Seconds_List>
+		<Bombardment_Lighting_Seconds_List>2</Bombardment_Lighting_Seconds_List>
 		<Land_Mode_Selection_Blob_Material_Name>Selection_Alignment</Land_Mode_Selection_Blob_Material_Name>
 		<Space_Mode_Selection_Blob_Material_Name>Selection_Alignment</Space_Mode_Selection_Blob_Material_Name>
 		<Land_Mode_Garrison_Selection_Blob_Material_Name>Selection_Alignment</Land_Mode_Garrison_Selection_Blob_Material_Name>
@@ -4515,7 +4516,7 @@
 		<Ship_Icon_Name> g_fleet.tga </Ship_Icon_Name>
 		<Squadron_Icon_Name> g_squad.tga </Squadron_Icon_Name>
 		<Color> 20, 250, 50, 255 </Color>
-		<No_Colorization_Color> 255, 20, 50, 255 </No_Colorization_Color>
+		<No_Colorization_Color> 20, 250, 50, 255 </No_Colorization_Color>
 		<Display_Font_Color> 255, 20, 50, 144 </Display_Font_Color>
 		<Big_Fleet_Color> 255, 20, 50, 144 </Big_Fleet_Color>
 		<Credits_Accumulation_Factor> 1.00 </Credits_Accumulation_Factor>
@@ -4623,15 +4624,16 @@
 		13X_Teradoc, Lancet_Kosh, Tavira_Invidious, Syn_Silooth, Larm_Carrack, Gendarr_Reliance, 13X_Pellaeon, Trier_Secutor, Therbon_Allegiance, Neomen_Ion_Storm
 		</Bombardment_Required_Orbital_Ships>
 		<Bombardment_Projectile> Proj_NR_Bombardment_Turbolaser </Bombardment_Projectile>
-		<Bombardment_Number_Of_Salvos> 3 </Bombardment_Number_Of_Salvos>
-		<Bombardment_Shots_Per_Salvo> 20 </Bombardment_Shots_Per_Salvo>
-		<Bombardment_Shot_Delay> 0.1 </Bombardment_Shot_Delay>
+		<Bombardment_Particle> Bombard_Particle_Effect </Bombardment_Particle>
+		<Bombardment_Number_Of_Salvos> 1 </Bombardment_Number_Of_Salvos>
+		<Bombardment_Shots_Per_Salvo> 1 </Bombardment_Shots_Per_Salvo>
+		<Bombardment_Shot_Delay> 0.2 </Bombardment_Shot_Delay>
 		<Bombardment_Salvo_Delay> 1.0 </Bombardment_Salvo_Delay>
-        <Bombardment_Initial_Delay> 3.0 </Bombardment_Initial_Delay>
+        <Bombardment_Initial_Delay> 4.0 </Bombardment_Initial_Delay>
 
 		<Bombardment_Lighting_Color_List>1.0,0.2,0.2</Bombardment_Lighting_Color_List>
 		<Bombardment_Lighting_Intensity_List>0.4</Bombardment_Lighting_Intensity_List>
-		<Bombardment_Lighting_Seconds_List>3</Bombardment_Lighting_Seconds_List>
+		<Bombardment_Lighting_Seconds_List>2</Bombardment_Lighting_Seconds_List>
 		<Land_Mode_Selection_Blob_Material_Name>Selection_Maldrood</Land_Mode_Selection_Blob_Material_Name>
 		<Space_Mode_Selection_Blob_Material_Name>Selection_Maldrood</Space_Mode_Selection_Blob_Material_Name>
 		<Land_Mode_Garrison_Selection_Blob_Material_Name>Selection_Maldrood</Land_Mode_Garrison_Selection_Blob_Material_Name>
@@ -5426,11 +5428,12 @@
 		Grumby_Notropis, Sloane_Enforce, Krin_Invincible, Judicator_Star_Destroyer, Chimera, Shockwave_Star_Destroyer, Reckoning_Star_Destroyer, Corrupter_Star_Destroyer, Scylla, Knight_Hammer, Gorgon, CrimsonSunrise_Star_Destroyer, 13X, Relentless_Star_Destroyer, Agonizer_Star_Destroyer, Emperors_Revenge_Star_Destroyer, Rogriss_Aurora, Rogriss_Dominion, Lusankya, Chimera_Pellaeon_Vice, Pellaeon_Reaper, Chimera_Pellaeon_Grand, Eclipse_Star_Destroyer, Cboath_Carrack, Sinister_Relentless, Grunger_Aggressor, Makati_Steadfast, Takel_MagicDragon, Klev_Silencer7, Kermen_Belligerent, Yonka_Avarice, Darron_Direption, Phulik_Binder
 		</Bombardment_Required_Orbital_Ships>
 		<Bombardment_Projectile> Proj_Empire_Bombardment_Turbolaser </Bombardment_Projectile>
-		<Bombardment_Number_Of_Salvos> 3 </Bombardment_Number_Of_Salvos>
-		<Bombardment_Shots_Per_Salvo> 20 </Bombardment_Shots_Per_Salvo>
-		<Bombardment_Shot_Delay> 0.1 </Bombardment_Shot_Delay>
+		<Bombardment_Particle> Bombard_Particle_Effect </Bombardment_Particle>
+		<Bombardment_Number_Of_Salvos> 1 </Bombardment_Number_Of_Salvos>
+		<Bombardment_Shots_Per_Salvo> 1 </Bombardment_Shots_Per_Salvo>
+		<Bombardment_Shot_Delay> 0.2 </Bombardment_Shot_Delay>
 		<Bombardment_Salvo_Delay> 1.0 </Bombardment_Salvo_Delay>
-        <Bombardment_Initial_Delay> 3.0 </Bombardment_Initial_Delay>
+        <Bombardment_Initial_Delay> 4.0 </Bombardment_Initial_Delay>
 		
 		<Space_Skirmish_Unit_Buy_Credits> 100000 </Space_Skirmish_Unit_Buy_Credits>
 		<Space_Skirmish_AI_Default_Forces>

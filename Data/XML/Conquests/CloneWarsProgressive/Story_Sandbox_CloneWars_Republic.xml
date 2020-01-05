@@ -453,16 +453,16 @@
 	<!-- Clone Trooper Research -->
 	<!-- Clone Trooper Research -->
 	
-	
-	<Event Name="Clone_Trooper_II_Research_Begin">
+	<Event Name="PhaseII_Research_Begin">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>40</Event_Param1>
 		<Prereq>Republic_Enters_Tech_03</Prereq>
 		<Branch>Era_Three</Branch>
 	</Event>
-
+	
 	<Event Name="Unlock_Clone_Trooper_II_Speech">
-		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>40</Event_Param1>
 		<Reward_Type>MULTIMEDIA</Reward_Type>
 		<Reward_Param1>TEXT_SPEECH_RESEARCH_CLONE_TROOPER_II</Reward_Param1>
 		<Reward_Param2>15</Reward_Param2>
@@ -474,24 +474,10 @@
 		<Reward_Param8></Reward_Param8>
 		<Reward_Param9></Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Clone_Trooper_II_Research_Begin</Prereq>
+		<Prereq>PhaseII_Research_Begin</Prereq>
 		<Branch>Era_Three</Branch>
 		<Branch>Faction_Branch_Republic</Branch>
 	</Event>
-	
-	<Event Name="Clone_Trooper_II_AI_Force">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>40</Event_Param1>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Clonetrooper_Phase_Two_Team</Reward_Param1>
-		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
-		<Prereq>GC_Start_Force_Level_Four</Prereq>
-		<Prereq>GC_Start_Force_Level_Three</Prereq>
-		<Prereq>GC_Start_Force_Level_Five</Prereq>
-		<Prereq>Republic_Enters_Tech_03</Prereq>
-		<Branch>Faction_Branch_CIS</Branch>
-	</Event>
-
 	
 	<Event Name="Clone_Trooper_II_Dialog">
 		<Event_Type>STORY_ELAPSED</Event_Type>
@@ -509,7 +495,15 @@
 		<Reward_Param1>Clone_Trooper_II_Tag</Reward_Param1>
 		<Prereq>Unlock_Clone_Trooper_II</Prereq>
 		<Prereq>Unlock_Clone_Trooper_II_Forced</Prereq>
-		<Branch>Era_Three</Branch>
+		<Branch>Era_Two</Branch>
+	</Event>
+	
+	<Event Name="Unlock_Clone_Trooper_II_Research">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Dummy_Research_Clone_Trooper_II</Reward_Param1>
+		<Prereq>Unlock_Clone_Trooper_II_Speech</Prereq>
+		<Branch>Faction_Branch_Republic</Branch>
 	</Event>
 	
 	<Event Name="Lock_Clone_Trooper_II">
@@ -517,67 +511,77 @@
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Clonetrooper_Phase_Two_Team</Reward_Param1>
 		<Prereq>Republic_Enters_Tech_02</Prereq>
-		<Branch>Era_Three</Branch>
-	</Event>
-
- 	<Event Name="Unlock_Clone_Trooper_II_Research">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Dummy_Research_Clone_Trooper_II</Reward_Param1>
-		<Prereq>Unlock_Clone_Trooper_II_Speech</Prereq>
-		
+		<Branch>Era_Two</Branch>
 	</Event>
 	
-
-	<Event Name="Unlock_Clone_Trooper_II">
+	<Event Name="Research_Phase_II">
 		<Event_Type>STORY_CONSTRUCT</Event_Type>
 		<Event_Param1>Dummy_Research_Clone_Trooper_II</Event_Param1>
 		<Event_Param2>1</Event_Param2>
 		<Event_Param3>Empire</Event_Param3>
+	</Event>
+	
+	<Event Name="Research_Clone_Trooper_II_Remove">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DESTROY_OBJECT</Reward_Type>
+		<Reward_Param1>Dummy_Research_Clone_Trooper_II</Reward_Param1>
+		<Prereq>Research_Phase_II</Prereq>
+	</Event>
+	
+	<Event Name="Phase_II_Unlock_AI">
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>Clonetrooper_Phase_Two_Team</Reward_Param1>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
+		<Prereq>GC_Start_Force_Level_Three</Prereq>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+		<Prereq>Republic_Enters_Tech_03</Prereq>
+		<Prereq>Republic_Enters_Tech_04</Prereq>
+		<Branch>Faction_Branch_CIS</Branch>
+	</Event>
+	
+	<Event Name="Phase_II_Unlock_Human">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Clonetrooper_Phase_Two_Team</Reward_Param1>
+		<Prereq>GC_Start_Force_Level_Three</Prereq>
+		<Prereq>GC_Start_Force_Level_Four</Prereq>
+		<Prereq>GC_Start_Force_Level_Five</Prereq>
+		<Prereq>Research_Phase_II</Prereq>
+		<Branch>Faction_Branch_Republic</Branch>
 	</Event>
 	
 	<Event Name="Lock_Phase_One">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Clonetrooper_Phase_One_Team</Reward_Param1>
-		<Prereq>Unlock_Clone_Trooper_II</Prereq>
-		<Prereq>GC_Start_Force_Level_Four</Prereq>
-		<Prereq>GC_Start_Force_Level_Five</Prereq>
-		<Prereq>Clone_Trooper_II_AI_Force</Prereq>
-		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
+		<Prereq>Phase_II_Unlock_Human</Prereq>
+		<Prereq>Phase_II_Unlock_AI</Prereq>
 	</Event>
 	
+
 	<Event Name="Lock_Speeder">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Speeder_Bike_Squad</Reward_Param1>
-		<Prereq>Unlock_Clone_Trooper_II</Prereq>
-		<Prereq>GC_Start_Force_Level_Four</Prereq>
-		<Prereq>GC_Start_Force_Level_Five</Prereq>
-		<Prereq>Clone_Trooper_II_AI_Force</Prereq>
-		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
+		<Prereq>Phase_II_Unlock_Human</Prereq>
+		<Prereq>Phase_II_Unlock_AI</Prereq>
 	</Event>
 	
 	<Event Name="Unlock_BARC">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>BARC_Squad</Reward_Param1>
-			<Prereq>Unlock_Clone_Trooper_II</Prereq>
-		<Prereq>GC_Start_Force_Level_Four</Prereq>
-		<Prereq>GC_Start_Force_Level_Five</Prereq>
-		<Prereq>Clone_Trooper_II_AI_Force</Prereq>
-		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
+		<Prereq>Phase_II_Unlock_Human</Prereq>
+		<Prereq>Phase_II_Unlock_AI</Prereq>
 	</Event>
 
-	
-	<Event Name="Lock_ARC_Trooper_II">
+	<Event Name="Lock_ARC_Phase_One">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
-		<Reward_Param1>ARC_Phase_Two_Team</Reward_Param1>
-		<Prereq>Republic_Enters_Tech_03</Prereq>
-		<Branch>Era_Three</Branch>
+		<Reward_Param1>ARC_Phase_One_Team</Reward_Param1>
+		<Prereq>Phase_II_Unlock_Human</Prereq>
+		<Prereq>Phase_II_Unlock_AI</Prereq>
 	</Event>
 
 	<Event Name="Unlock_ARC_Trooper_II">
@@ -585,28 +589,11 @@
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>ARC_Phase_Two_Team</Reward_Param1>
 		<Prereq>Lock_ARC_Phase_One</Prereq>
-		<Prereq>GC_Start_Force_Level_Four</Prereq>
-		<Prereq>GC_Start_Force_Level_Five</Prereq>
-		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
+		<Prereq>Phase_II_Unlock_Human</Prereq>
+		<Prereq>Phase_II_Unlock_AI</Prereq>
 	</Event>
 	
-	<Event Name="Lock_ARC_Phase_One">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>LOCK_UNIT</Reward_Type>
-		<Reward_Param1>ARC_Phase_One_Team</Reward_Param1>
-		<Prereq>Unlock_Clone_Trooper_II</Prereq>
-		<Prereq>Clone_Trooper_II_AI_Force</Prereq>
-		<Prereq>GC_Start_Force_Level_Five</Prereq>
-		<Prereq>GC_Start_Force_Level_Four</Prereq>
-		<Prereq>Republic_Enters_Tech_04_AI</Prereq>
-	</Event>
-			
-	<Event Name="Research_Clone_Trooper_II_Remove">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>DESTROY_OBJECT</Reward_Type>
-		<Reward_Param1>Dummy_Research_Clone_Trooper_II</Reward_Param1>
-		<Prereq>Unlock_Clone_Trooper_II</Prereq>
-	</Event>
+
 	
 	
 	<!-- Victory Research -->

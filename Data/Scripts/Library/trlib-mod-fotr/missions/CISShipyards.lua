@@ -58,7 +58,7 @@ function ShipyardMission_Observer_CIS()
 	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Upgrade_Space_Station_CIS.xml")
 	
 	cis = Find_Player("Rebel")
-	reward_location = StoryUtil.FindFriendlyPlanet(cis)
+	reward_location = StoryUtil.FindFriendlyPlanet(Find_Player("Rebel"))
 	spawn_list_reward = { "MTT_Company" , "MTT_Company" }
 	SpawnList(spawn_list_reward, reward_location, cis, true, false)
 

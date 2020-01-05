@@ -2067,6 +2067,199 @@
 				
 				
 				
+							<!-- Republic Spotting hostile heros -->
+						
+				
+				<SFXEvent Name="REP_Spotting_General_Grievous">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\republic\republic_spotted\grevious\Republic_Grevious_dont_attack.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_HUD </Overlap_Test>
+				</SFXEvent>
+				
+			
+				<!-- CIS retreat from Republic -->	
+					
+			<SFXEvent Name="CIS_retreat_from_REP">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						
+						Data\Audio\SFX\Units\republic\republic_spotted\battlefield_announcer\enemy_retreat\Republic_enemy_on_the_run.wav
+						Data\Audio\SFX\Units\republic\republic_spotted\battlefield_announcer\enemy_retreat\Republic_the_tide_has_turned.wav
+						
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_HUD </Overlap_Test>
+				</SFXEvent>
+			
+			
+				<!-- Republic Victory -->	
+					
+			<SFXEvent Name="REP_Victory">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						
+						Data\Audio\SFX\Units\republic\republic_spotted\battlefield_announcer\victory\Republic_the_battle_is_ours.wav
+						Data\Audio\SFX\Units\republic\republic_spotted\battlefield_announcer\victory\Republic_we_got_upper_hand.wav
+						
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_HUD </Overlap_Test>
+				</SFXEvent>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+						<!-- CIS_friendly_heros -->
+				
+				<SFXEvent Name="CIS_Spotting_Dooku">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+					
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_HUD </Overlap_Test>
+				</SFXEvent>
+				
+						<!-- CIS lost -->	
+				<SFXEvent Name="CIS_lost">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\CIS_Tactical_droid\defeat_1.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\defeat_3.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\defeat_4.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_HUD </Overlap_Test>
+				</SFXEvent>
+						
+						<!-- CIS retreat -->	
+						<SFXEvent Name="CIS_retreat">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\CIS_Tactical_droid\retreat_1.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\retreat_2.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\retreat_3.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_HUD </Overlap_Test>
+				</SFXEvent>
+				
+				
+						<!-- CIS retreat aborted -->	
+						<SFXEvent Name="CIS_retreat_aborted">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\CIS_Tactical_droid\retreat_aborted_2.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\retreat_aborted_3.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\retreat_aborted_4.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_HUD </Overlap_Test>
+				</SFXEvent>
+				
+					<!-- Republic retreat from CIS -->	
+					
+			<SFXEvent Name="rep_retreat_from_CIS">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						
+						Data\Audio\SFX\Units\CIS_Tactical_droid\REP_Retreat_2.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\REP_Retreat_4.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\REP_Retreat_5.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_HUD </Overlap_Test>
+				</SFXEvent>
+				
+					<!-- CIS Victory-->	
+					
+			<SFXEvent Name="CIS_victory">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\CIS_Tactical_droid\win_1.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\win_2.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\win_3.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\win_5.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\win_6.wav
+						Data\Audio\SFX\Units\CIS_Tactical_droid\win_7.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_HUD </Overlap_Test>
+				</SFXEvent>
+				
+				
+				<!-- CIS Tactical Battle -->
+
+			<SFXEvent Name="CIS_tactical_battle_imminent">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\Units\CIS_Tactical_droid\tactical_battle_imminent.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_HUD </Overlap_Test>
+				</SFXEvent>			
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				
 				
 				

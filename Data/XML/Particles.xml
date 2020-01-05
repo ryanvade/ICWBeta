@@ -1601,11 +1601,11 @@
 	</Particle>
 	<Particle Name="empire_bombard_explosion">
 		<Land_Model_Name>P_Explosion_bombard.ALO</Land_Model_Name>
-		<Scale_Factor>1.0</Scale_Factor>
+		<Scale_Factor>2.0</Scale_Factor>
 		<Is_Decoration>Yes</Is_Decoration>
 		<Behavior>PARTICLE</Behavior>
 		<Particle_Lifetime_Frames>270</Particle_Lifetime_Frames>
-		<Explosion_Scorch_Mark>EXPLOSION_SCORCH_MARK_LARGE</Explosion_Scorch_Mark>
+		<Explosion_Scorch_Mark>EXPLOSION_SCORCH_MARK_HUGE</Explosion_Scorch_Mark>
 	</Particle>
 	<Particle Name="rebel_bombard">
 		<Land_Model_Name>p_blueglow.alo</Land_Model_Name>
@@ -1833,6 +1833,14 @@
 		<Scale_Factor>1.0</Scale_Factor>
 		<Is_Decoration>Yes</Is_Decoration>
 		<Behavior>PARTICLE</Behavior>
+	</Particle>
+	<Particle Name="Sensor_Jamming_Effect_Large">
+		<Land_Model_Name>p_sensorjammerbig.alo</Land_Model_Name>
+		<Space_Model_Name>p_sensorjammerbig.alo</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Decoration>Yes</Is_Decoration>
+		<Behavior>PARTICLE</Behavior>
+		<Particle_Lifetime_Frames>900</Particle_Lifetime_Frames>
 	</Particle>
 	<Particle Name="Sensor_Jamming_Effect_Skipray">
 		<Land_Model_Name>p_sensorjammer.alo</Land_Model_Name>

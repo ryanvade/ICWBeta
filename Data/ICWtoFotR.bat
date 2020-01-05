@@ -42,7 +42,7 @@ rename Adumar.ted ICW_Adumar.ted
 rename FotR_Adumar.ted Adumar.ted
 rename Bothawui.ted ICW_Bothawui.ted
 rename FotR_Bothawui.ted Bothawui.ted
-rename Kashyyyk.ted ICW_Kashyyyk.ted
+rename Kashyyyk.ted TR_Kashyyyk.ted
 rename FotR_Kashyyyk.ted Kashyyyk.ted
 rename _Land_Planet_Ryloth_02.ted ICW_Land_Planet_Ryloth_02.ted
 rename FotR_Land_Planet_Ryloth_02.ted _Land_Planet_Ryloth_02.ted

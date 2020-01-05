@@ -51,7 +51,7 @@ function Conquer_Observer_CIS()
 	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Conquer_Planet_CIS.xml")
 
 	cis = Find_Player("Rebel")
-	reward_location = StoryUtil.FindFriendlyPlanet(cis)
+	reward_location = StoryUtil.FindFriendlyPlanet(Find_Player("Rebel"))
 
 	spawn_list_reward = { "Auxilia" , "Auxilia", "Auxilia", "Auxilia" }
 	SpawnList(spawn_list_reward, reward_location, cis, true, false)
