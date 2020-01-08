@@ -1,4 +1,5 @@
 require("trlib-std/class")
+require("trlib-mod-fotr/missions/Accumulate")
 require("trlib-mod-fotr/missions/CISShipyards")
 require("trlib-mod-fotr/missions/CISConquerPlanet")
 require("trlib-mod-fotr/missions/RepShipyards")
@@ -11,7 +12,9 @@ function MissionDistributor:new(player_agnostic_plot)
 
     self.cis = Find_Player("Rebel")
     self.republic = Find_Player("Empire")
- 
+
+    -- Universal Missions
+    self.UniversalAccumulate = MissionAccumulate() 
    
     -- CIS-Specific Missions
     self.CISConquerPlanet = MissionCISConquerPlanet()
@@ -29,6 +32,7 @@ function MissionDistributor:Assign()
         self.missionChoice = GameRandom(1,3)
 
         if self.missionChoice == 1 then
+            self.UniversalAccumulate:begin()
         elseif self.missionChoice == 2 then
             self.RepBuildShipyardsMission:begin()
         elseif self.missionChoice == 3 then
@@ -39,6 +43,7 @@ function MissionDistributor:Assign()
         self.missionChoice = GameRandom(1,3)
         
         if self.missionChoice == 1 then
+            self.UniversalAccumulate:begin()
         elseif self.missionChoice == 2 then
             self.CISBuildShipyardsMission:begin()
         elseif self.missionChoice == 3 then

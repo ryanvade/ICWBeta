@@ -97,9 +97,9 @@ function Accumulate_Observer_Agnostic()
 
 	plot.Reset()
 
-	if Accumulate_Observer_Agnostic then
-		Thread.Kill(Accumulate_Observer_Agnostic)
-		Accumulate_Observer_Agnostic = nil
+	if AccumulateObserverThread then
+		Thread.Kill(AccumulateObserverThread)
+		AccumulateObserverThread = nil
 	end
 
 end
