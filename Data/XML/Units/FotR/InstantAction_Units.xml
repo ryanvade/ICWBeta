@@ -364,7 +364,85 @@
 		<CategoryMask>Upgrade</CategoryMask>
 		<Lua_Script>Add_InstantActionUnit_CIS</Lua_Script>
 	</UpgradeObject>
-
+	
+		
+	<UpgradeObject Name="IA_Recusant_Dreadnought">
+		<Behavior>DUMMY_UPGRADE</Behavior>
+		<Affiliation>Empire, Rebel</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 1800 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 3 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>-1</Build_Limit_Current_For_All_Allies>
+		
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_RESUSANT_DREADNOUGHT.tga</Icon_Name>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_RECUSANT_DREADNOUGHT  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UNIT_RECUSANT_DREADNOUGHT </Text_ID>
+		
+		<SFXEvent_Build_Started>RHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		
+		<CategoryMask>Upgrade</CategoryMask>
+		<Lua_Script>Add_InstantActionUnit_CIS</Lua_Script>
+	</UpgradeObject>
+	
+	<UpgradeObject Name="IA_Providence_Dreadnought">
+		<Behavior>DUMMY_UPGRADE</Behavior>
+		<Affiliation>Empire, Rebel</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 1800 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 3 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>-1</Build_Limit_Current_For_All_Allies>
+		
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_PROVIDENCE_DREADNOUGHT.tga</Icon_Name>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UNIT_PROVIDENCE_DREADNOUGHT </Text_ID>
+		
+		<SFXEvent_Build_Started>RHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		
+		<CategoryMask>Upgrade</CategoryMask>
+		<Lua_Script>Add_InstantActionUnit_CIS</Lua_Script>
+	</UpgradeObject>
+	
+	<UpgradeObject Name="IA_Supply_Ship">
+		<Behavior>DUMMY_UPGRADE</Behavior>
+		<Affiliation>Empire, Rebel</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 1800 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 3 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>-1</Build_Limit_Current_For_All_Allies>
+		
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>i_button_supplyship.tga</Icon_Name>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_SUPPLYSHIP  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UNIT_SUPPLYSHIP </Text_ID>
+		
+		<SFXEvent_Build_Started>RHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		
+		<CategoryMask>Upgrade</CategoryMask>
+		<Lua_Script>Add_InstantActionUnit_CIS</Lua_Script>
+	</UpgradeObject>
 
 <!-- *********************************************************************** -->
 <!-- *******************   EMPIRE UNIT SET FOR SURVIVAL MODE   ************* -->
@@ -382,7 +460,7 @@
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_corellian_corvette.tga</Icon_Name>
+		<Icon_Name>I_BUTTON_CR90_REP.tga</Icon_Name>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_CORELLIAN_CORVETTE  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
@@ -460,7 +538,7 @@
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_arquitens.tga</Icon_Name>
+		<Icon_Name>I_BUTTON_ARQUITENS_REP.tga</Icon_Name>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_ARQUITENS  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
@@ -486,7 +564,7 @@
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_crack.tga</Icon_Name>
+		<Icon_Name>i_button_crack_rep.tga</Icon_Name>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_CARRACK  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
@@ -512,7 +590,7 @@
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_tector.tga</Icon_Name>
+		<Icon_Name>I_BUTTON_TECTOR_REP.tga</Icon_Name>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_TECTOR  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
@@ -538,7 +616,7 @@
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_imperator.tga</Icon_Name>
+		<Icon_Name>i_button_imperator_rep.tga</Icon_Name>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_STAR_DESTROYER  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
@@ -550,7 +628,8 @@
 		
 		<CategoryMask>Upgrade</CategoryMask>
 		<Lua_Script>Add_InstantActionUnit_Republic</Lua_Script>
-	</UpgradeObject>	
+	</UpgradeObject>
+	
 	<UpgradeObject Name="IA_GENERIC_SECUTOR">
 		<Behavior>DUMMY_UPGRADE</Behavior>
 		<Affiliation>Empire, Rebel</Affiliation>
@@ -563,7 +642,7 @@
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_secutor.tga</Icon_Name>
+		<Icon_Name>I_BUTTON_SECUTOR_REP.tga</Icon_Name>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_SECUTOR  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
@@ -615,7 +694,7 @@
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>I_BUTTON_ACCLAMATOR_REP.tga</Icon_Name>
+		<Icon_Name>I_BUTTON_ACCLAMATOR_Level_REP.TGA</Icon_Name>>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_ACCLAMATOR_LEVELER  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
@@ -693,7 +772,7 @@
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_victory_class.tga</Icon_Name>
+		<Icon_Name>i_button_victory_class_rep.tga</Icon_Name>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_VICTORY1  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
@@ -719,7 +798,7 @@
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_jedi_Cruiser.tga</Icon_Name>
+		<Icon_Name>i_button_jedi_Cruiser_rep.tga</Icon_Name>>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_VENATOR  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
@@ -772,7 +851,7 @@
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_dreadnaught.tga</Icon_Name>
+		<Icon_Name>I_BUTTON_DREADNAUGHT_REP.tga</Icon_Name>
 		
 		<Encyclopedia_Text> TEXT_TOOLTIP_DREADNAUGHT  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
@@ -786,59 +865,57 @@
 		<Lua_Script>Add_InstantActionUnit_Republic</Lua_Script>
 	</UpgradeObject>
 	
-	<UpgradeObject Name="IA_Recusant_Dreadnought">
+	<UpgradeObject Name="IA_Pelta_Assault">
 		<Behavior>DUMMY_UPGRADE</Behavior>
 		<Affiliation>Empire, Rebel</Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 1800 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>1</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 3 </Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>-1</Build_Limit_Current_For_All_Allies>
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_recusant.tga</Icon_Name>
+		<Icon_Name>i_button_pelta_assault.tga</Icon_Name>
 		
-		<Encyclopedia_Text> TEXT_TOOLTIP_RECUSANT_DREADNOUGHT  </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PELTAASSAULT  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
-		<Text_ID>TEXT_UNIT_RECUSANT_DREADNOUGHT </Text_ID>
+		<Text_ID>TEXT_UNIT_PELTAASSAULT </Text_ID>
 		
 		<SFXEvent_Build_Started>RHD_Upgrade_Progress</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>RHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
 		<SFXEvent_Build_Complete>RHD_Upgrade_Complete</SFXEvent_Build_Complete>
 		
 		<CategoryMask>Upgrade</CategoryMask>
-		<Lua_Script>Add_InstantActionUnit_CIS</Lua_Script>
+		<Lua_Script>Add_InstantActionUnit_Republic</Lua_Script>
 	</UpgradeObject>
 	
-	<UpgradeObject Name="IA_Providence_Dreadnought">
+	<UpgradeObject Name="IA_Pelta_Support">
 		<Behavior>DUMMY_UPGRADE</Behavior>
 		<Affiliation>Empire, Rebel</Affiliation>
 		<Tactical_Build_Cost_Multiplayer> 1800 </Tactical_Build_Cost_Multiplayer>
 		<Tactical_Build_Cost_Campaign>1</Tactical_Build_Cost_Campaign>
 		<Tactical_Build_Time_Seconds> 3 </Tactical_Build_Time_Seconds>
 		<Tactical_Build_Prerequisites></Tactical_Build_Prerequisites>
-		<Tactical_Production_Queue>Tactical_Upgrades</Tactical_Production_Queue>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_For_All_Allies>-1</Build_Limit_Current_For_All_Allies>
 		
 		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
 		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
-		<Icon_Name>i_button_prov.tga</Icon_Name>
+		<Icon_Name>i_button_pelta_support.tga</Icon_Name>
 		
-		<Encyclopedia_Text> TEXT_TOOLTIP_PROVIDENCE_DREADNOUGHT  </Encyclopedia_Text>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PELTASUPPORT  </Encyclopedia_Text>
 		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OFFENSE </Encyclopedia_Unit_Class>
-		<Text_ID>TEXT_UNIT_PROVIDENCE_DREADNOUGHT </Text_ID>
+		<Text_ID>TEXT_UNIT_PELTASUPPORT </Text_ID>
 		
 		<SFXEvent_Build_Started>RHD_Upgrade_Progress</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>RHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
 		<SFXEvent_Build_Complete>RHD_Upgrade_Complete</SFXEvent_Build_Complete>
 		
 		<CategoryMask>Upgrade</CategoryMask>
-		<Lua_Script>Add_InstantActionUnit_CIS</Lua_Script>
+		<Lua_Script>Add_InstantActionUnit_Republic</Lua_Script>
 	</UpgradeObject>
-	
-
 	
 <!-- *********************************************************************** -->
 <!-- *******************   EMPIRE UNIT SET FOR SURVIVAL MODE   ************* -->

@@ -28,7 +28,9 @@ function Definitions()
 "GENERIC_STAR_DESTROYER",
 "GENERIC_SECUTOR",
 "GENERIC_TECTOR",
-"GENERIC_PRAETOR"}
+"GENERIC_PRAETOR",
+"PELTA_ASSAULT",
+"PELTA_SUPPORT"}
 
 	Define_State("State_Init", State_Init);
 

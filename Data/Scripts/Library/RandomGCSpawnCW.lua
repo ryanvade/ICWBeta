@@ -19,6 +19,8 @@ function Spawn_At_All_Planets_CW()
 					,{Find_Object_Type("Generic_Acclamator_Assault_Ship_Leveler"), 4, "Space"}
 					,{Find_Object_Type("Generic_Acclamator_Assault_Ship_II"), 4, "Space"}
 					,{Find_Object_Type("Arquitens"), 3, "Space"}
+					,{Find_Object_Type("Pelta_Assault"), 3, "Space"}
+					,{Find_Object_Type("Pelta_Support"), 3, "Space"}
 					,{Find_Object_Type("LAC"), 5, "Space"}
 					,{Find_Object_Type("Clonetrooper_Phase_Two_Team"), 5, "Land"}
 					,{Find_Object_Type("AT_RT_Squad"), 2, "Land"}
@@ -47,6 +49,7 @@ function Spawn_At_All_Planets_CW()
 					{Find_Object_Type("Invincible_Cruiser"), 3, "Space"}
 					,{Find_Object_Type("Katana_Dreadnaught"), 4, "Space"}
 					,{Find_Object_Type("Dreadnaught_Lasers"), 4, "Space"}
+					,{Find_Object_Type("Neutron_Star"), 4, "Space"}
 					,{Find_Object_Type("Carrack_Cruiser_Lasers"), 5, "Space"}
 					,{Find_Object_Type("Generic_Acclamator_Assault_Ship_I"), 4, "Space"}
 					,{Find_Object_Type("Generic_Acclamator_Assault_Ship_Leveler"), 4, "Space"}
@@ -72,6 +75,7 @@ function Spawn_At_All_Planets_CW()
 					,{Find_Object_Type("Diamond_Frigate"), 5, "Space"}
 					,{Find_Object_Type("Geonosian_Cruiser"), 5, "Space"}
 					,{Find_Object_Type("Gozanti_Cruiser_Squadron"), 5, "Space"}
+					,{Find_Object_Type("Supply_Ship"), 4, "Space"}
 					,{Find_Object_Type("B2_Droid_Squad"), 3, "Land"}
 					,{Find_Object_Type("Crab_Droid_Squad"), 2, "Land"}
 					,{Find_Object_Type("OG9_Company"), 1, "Land"}

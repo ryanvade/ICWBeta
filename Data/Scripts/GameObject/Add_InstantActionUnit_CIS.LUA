@@ -28,7 +28,8 @@ function Definitions()
 "SUBJUGATOR",
 "CAPTOR",
 "AUXILIA",
-"PROVIDENCE_DREADNOUGHT",}
+"PROVIDENCE_DREADNOUGHT",
+"SUPPLY_SHIP",}
 
 	Define_State("State_Init", State_Init);
 

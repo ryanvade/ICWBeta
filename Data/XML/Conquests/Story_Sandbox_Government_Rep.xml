@@ -166,16 +166,6 @@
 		<Perpetual>true</Perpetual>
 	</Event>
 	
-	<Event Name="Support_Mothma">
-		<Event_Type>STORY_CONSTRUCT</Event_Type>
-		<Event_Param1>Support_Mothma</Event_Param1>
-		<Event_Param2>1</Event_Param2>
-		<Event_Param3>Empire</Event_Param3>
-		<Reward_Type>DESTROY_OBJECT</Reward_Type>
-		<Reward_Param1>Support_Mothma</Reward_Param1>
-		<Perpetual>true</Perpetual>
-	</Event>	
-	
 	<Event Name="Lock_Palpatine">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
@@ -191,6 +181,10 @@
 		<Prereq>Support_Mothma</Prereq>
 		<Prereq>Support_Palpatine</Prereq>
 	</Event>
+	
+	<!-- ****************************************** Order 66 ******************************************** -->
+	<!-- ****************************************** Order 66 ******************************************** -->
+	<!-- ****************************************** Order 66 ******************************************** -->
 	
 	<Event Name="Support_AI">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
@@ -627,6 +621,38 @@
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Plo_Koon_Team</Reward_Param1>
 		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<!-- ****************************************** Delegation of 2000 ******************************************** -->
+	<!-- ****************************************** Delegation of 2000 ******************************************** -->
+	<!-- ****************************************** Delegation of 2000 ******************************************** -->
+	
+	<Event Name="Support_Mothma">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Support_Mothma</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>Empire</Event_Param3>
+		<Reward_Type>DESTROY_OBJECT</Reward_Type>
+		<Reward_Param1>Support_Mothma</Reward_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>	
+	
+	<Event Name="Mothma_Thanks">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>20</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_GOVERNMENT_REPUBLIC_MOTHMA_THANKS</Reward_Param1>
+		<Reward_Param2>20</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Support_Mothma</Prereq>
+		<Branch>Human</Branch>
 	</Event>
 	
 

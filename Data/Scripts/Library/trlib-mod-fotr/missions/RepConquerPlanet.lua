@@ -12,9 +12,7 @@ end
 
 function MissionRepConquerPlanet:begin()
 
-	if ConquerObserverThread then
-
-	else
+	if not ConquerObserverThread then
 
 		dialog = "MISSION_DIALOG_REP_CONQUER_PLANET"
 		
@@ -44,9 +42,13 @@ end
 
 function Conquer_Observer_Rep()
 
-	while not Check_Story_Flag(Find_Player("Empire"), "CONQUER_PLANETS_NOTIFICATION_00", nil, true) do
+	while not Find_First_Object("Dummy_Intervention_Conquer") do
 		Sleep(1)
 	end	
+
+	object = Find_First_Object("Dummy_Intervention_Conquer")
+	object.Despawn()
+
 
 	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Conquer_Planet_Rep.xml")
 

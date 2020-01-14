@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Rim World Conflict (Rebel)	******-->
+<!--******************************************************-->
+
+
+
+<Story>
+
+	
+	
+
+	<Event Name="Upgrade_Invisible_Hand">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Grievous_Team</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>Rebel</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Death_Downgrades</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+	<Event Name="Upgrade_Malevolence">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Grievous_Team_Malevolence</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>Rebel</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Death_Downgrades</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+	<Event Name="Remove_Recusant">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Grievous_Team_Recusant</Reward_Param1>
+		<Prereq>Upgrade_Invisible_Hand</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+		
+	<Event Name="Remove_Invisible_Hand">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Grievous_Team</Reward_Param1>
+		<Prereq>Upgrade_Malevolence</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Reenable_Branch">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Death_Downgrades</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Remove_Invisible_Hand</Prereq>
+		<Prereq>Remove_Recusant</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<!-- Death Downgrades -->
+	
+		
+	<Event Name="Invisible_Hand_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Grievous_Team</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Grievous_Team_Recusant</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Branch>Death_Downgrades</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+				
+	<Event Name="Malevolence_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Grievous_Team_Malevolence</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Grievous_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Branch>Death_Downgrades</Branch>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+
+
+</Story>

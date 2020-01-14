@@ -178,7 +178,7 @@
 			
 			<Absorb_Blaster_Ability Name="Yoda_Absorb_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
-				<Absorb_Chance>0.6</Absorb_Chance>
+				<Absorb_Chance>0.1</Absorb_Chance>
 				<!-- Absorb Percentage and Amount work together in the following way: -->
 				<!-- Actual Amount healed = (Projectile Damage * Absorb Percentage) + Absorb Amount -->
 				<!-- Either value can be zero, but at least one should be non-zero. -->
@@ -200,7 +200,7 @@
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Heal_Range>5.0</Heal_Range>
 				<Heal_Amount> 0.0 </Heal_Amount>
-				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Percent> 0.02 </Heal_Percent>
 				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
 				<Single_Target_Heal>Yes</Single_Target_Heal>
 				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
@@ -561,6 +561,35 @@
 				Grand_Admiral_Thrawn,
 				Thrawn_Clone
 		</Presence_Induced_Animations>
+
+		<Abilities SubObjectList="Yes">
+			<Force_Healing_Ability Name="Fixer_Healing">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>50.0</Heal_Range>
+				<Heal_Amount>8.0</Heal_Amount>
+				<Heal_Interval_In_Secs>4.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<!-- We can heal the following unit types: -->
+				<Applicable_Unit_Categories>Vehicle</Applicable_Unit_Categories>
+				<Applicable_Unit_Types>Scout_Trooper, Droid_R2D2, Droid_C3P0, MPTL_Spotter, Veers_AT_AT_Walker, </Applicable_Unit_Types>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Shield_Sparks_Medium</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_TURRET, TURRET_00, B_TURRET_BASE</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 1.2, 2.0</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+				<!--<Lightning_Effect_Name>Repair_Facility_Effect</Lightning_Effect_Name>-->
+			</Force_Healing_Ability>
+		</Abilities>
 
 		<Death_Fade_Time>0.25</Death_Fade_Time>
 		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
@@ -1159,16 +1188,20 @@
 		<Projectile_Appearance_Delay_Frames> 8 </Projectile_Appearance_Delay_Frames>
 		<Projectile_Fire_Recharge_Seconds>0.2</Projectile_Fire_Recharge_Seconds>
 
-		<SFXEvent_Select>Unit_Select_Emperor</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Emperor</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Emperor</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Emperor</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Emperor</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Group_Move_Emperor</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Group_Attack_Emperor</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Emperor </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Emperor </SFXEvent_Health_Critical_Warning>
-		<Death_SFXEvent_Start_Die> Unit_Defeat_Emperor </Death_SFXEvent_Start_Die>
+		<SFXEvent_Select>Unit_Select_Mace_Windu</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Mace_Windu</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mace_Windu</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Mace_Windu</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Mace_Windu</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Assist_Move_Mace_Windu</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Assist_Attack_Mace_Windu</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Mace_Windu </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Mace_Windu </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Mace_Windu </Death_SFXEvent_Start_Die>   
+
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Mace_Windu </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
 
 		<Stealth_Capable>No</Stealth_Capable>
 		<Victory_Relevant>yes</Victory_Relevant>
@@ -1214,7 +1247,7 @@
 				<Type>FORCE_TELEKINESIS</Type>
 				<Recharge_Seconds>30.0</Recharge_Seconds>
 				<GUI_Activated_Ability_Name> Windu_Force_Telekinesis </GUI_Activated_Ability_Name> 
-				<SFXEvent_Target_Ability> Unit_Lift_Vader </SFXEvent_Target_Ability> 
+				<SFXEvent_Target_Ability> Unit_ability_Mace_Windu </SFXEvent_Target_Ability> 
 				<Supports_Autofire>True</Supports_Autofire>
 			</Unit_Ability>
 			
@@ -1263,7 +1296,7 @@
 
 			<Absorb_Blaster_Ability Name="Windu_Absorb_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
-				<Absorb_Chance>0.3</Absorb_Chance>
+				<Absorb_Chance>0.06</Absorb_Chance>
 				<!-- Absorb Percentage and Amount work together in the following way: -->
 				<!-- Actual Amount healed = (Projectile Damage * Absorb Percentage) + Absorb Amount -->
 				<!-- Either value can be zero, but at least one should be non-zero. -->
@@ -1285,7 +1318,7 @@
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Heal_Range>5.0</Heal_Range>
 				<Heal_Amount> 0.0 </Heal_Amount>
-				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Percent> 0.02 </Heal_Percent>
 				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
 				<Single_Target_Heal>Yes</Single_Target_Heal>
 				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
@@ -1409,25 +1442,19 @@
         	<Shield_Armor_Type>Shield_Fighter</Shield_Armor_Type>
 
 		<Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
-		<SFXEvent_Fire>Unit_A_Wing_Fire</SFXEvent_Fire>
-		<SFXEvent_Select>Unit_Select_A_Wing</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_A_Wing</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_A_Wing</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_A_Wing</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_A_Wing</SFXEvent_Guard>
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_A_Wing </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_A_Wing </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_A_Wing </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_A_Wing </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_A_Wing </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_A_Wing </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_A_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Attack_Mace_Windu </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Attack_Mace_Windu </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Attack_Mace_Windu </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Attack_Mace_Windu </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Attack_Mace_Windu </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Attack_Mace_Windu </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Attack_Mace_Windu </SFXEvent_Attack_Hardpoint>
 
-		<SFXEvent_Health_Low_Warning> Unit_Health_Low_A_Wing </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_A_Wing </SFXEvent_Health_Critical_Warning>
-		<SFXEvent_Enemy_Damaged_Health_Low_Warning> Unit_Enemy_Health_Low_A_Wing </SFXEvent_Enemy_Damaged_Health_Low_Warning>
-		<SFXEvent_Enemy_Damaged_Health_Critical_Warning> Unit_Enemy_Health_Critical_A_Wing </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Mace_Windu </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Mace_Windu </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Low_Warning> UUnit_Attack_Mace_Windu </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Critical_Warning> Unit_Attack_Mace_Windu </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
 		<SFXEvent_Ambient_Moving> Unit_A_Wing_Fly_By </SFXEvent_Ambient_Moving>
 		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
 		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
@@ -1438,6 +1465,24 @@
 		<Population_Value>0</Population_Value>	
 		<Icon_Name>i_button_windu.tga</Icon_Name>
 		<Landing_Transport_Variant>CR20_Landing_Craft</Landing_Transport_Variant>
+		
+		<SFXEvent_Select>Unit_Select_Mace_Windu</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Mace_Windu</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mace_Windu</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Mace_Windu</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Mace_Windu</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Assist_Move_Mace_Windu</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Assist_Attack_Mace_Windu</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Mace_Windu </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Mace_Windu </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Mace_Windu </Death_SFXEvent_Start_Die>   
+
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Mace_Windu </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		
+		
 	</UniqueUnit>
 
 	
@@ -1465,9 +1510,9 @@
 		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
 		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
-		<SFXEvent_Build_Complete>Unit_Respawn_Emperor</SFXEvent_Build_Complete>
-		<SFXEvent_Hero_Respawned>Unit_Respawn_Emperor</SFXEvent_Hero_Respawned>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Emperor</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_Mace_Windu</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Complete_Mace_Windu</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mace_Windu</SFXEvent_Fleet_Move>
 
 		<Unit_Abilities_Data SubObjectList="Yes">
 			<!-- Primary ability -->
@@ -1712,7 +1757,28 @@
 		<Reserve_Spawned_Units_Tech_4>BTLB_Y-WING_SQUADRON, 2</Reserve_Spawned_Units_Tech_4>
 
 
+		<SFXEvent_Select>Unit_Select_Admiral_Yularen</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Admiral_Yularen</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Admiral_Yularen</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Admiral_Yularen</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Admiral_Yularen</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Assist_Move_Admiral_Yularen</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Assist_Attack_Admiral_Yularen</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Admiral_Yularen </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Admiral_Yularen </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Admiral_Yularen </Death_SFXEvent_Start_Die>   
 
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Admiral_Yularen </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Admiral_Yularen </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Admiral_Yularen</SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Admiral_Yularen </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Admiral_Yularen </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Admiral_Yularen </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Admiral_Yularen </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Admiral_Yularen </SFXEvent_Attack_Hardpoint>
 		
 		<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
 		<Score_Cost_Credits> 60000 </Score_Cost_Credits>
@@ -1815,8 +1881,43 @@
 		<Tactical_Build_Prerequisites />
 		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
 		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
-		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies> 		
 		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		
+		<SFXEvent_Select>Unit_Select_Admiral_Tarkin</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Admiral_Tarkin</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Admiral_Tarkin</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Admiral_Tarkin</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Admiral_Tarkin</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Assist_Move_Admiral_Tarkin</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Assist_Attack_Admiral_Tarkin</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Admiral_Tarkin </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Admiral_Tarkin </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Admiral_Tarkin </Death_SFXEvent_Start_Die>   
+
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Admiral_Tarkin </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Admiral_Tarkin </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Admiral_Tarkin</SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Admiral_Tarkin </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Admiral_Tarkin </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Admiral_Tarkin</SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Admiral_Tarkin </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Admiral_Tarkin </SFXEvent_Attack_Hardpoint>
+		
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Acclamator </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  Unit_Lost_Missile_Acclamator </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  Unit_Lost_Torpedo_Acclamator </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Die_Admiral_Tarkin </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Health_Critical_Admiral_Tarkin </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Health_Critical_Admiral_Tarkin </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
 
 
 	</UniqueUnit>
@@ -2198,14 +2299,14 @@
 		<SFXEvent_Guard>Unit_Guard_ObiWan</SFXEvent_Guard>
 		<SFXEvent_Group_Move>Unit_Move_ObiWan</SFXEvent_Group_Move>
 		<SFXEvent_Group_Attack>Unit_Attack_ObiWan</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning>  </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning>  </SFXEvent_Health_Critical_Warning>
-		<Death_SFXEvent_Start_Die>  </Death_SFXEvent_Start_Die>   
+		<SFXEvent_Health_Low_Warning>Unit_Health_Low_ObiWan  </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning>Unit_Health_Critical_ObiWan </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die>Unit_Die_ObiWan </Death_SFXEvent_Start_Die>   
 
 		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
-		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_ObiWan </SFXEvent_Tactical_Build_Complete>		
 		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
-
+		
 		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
 
 		<CategoryMask> LandHero </CategoryMask>
@@ -2255,6 +2356,7 @@
 				<Effective_Radius> 500.0 </Effective_Radius>
 				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Confuse_Obi_Wan </SFXEvent_GUI_Unit_Ability_Activated>
 				<Supports_Autofire>True</Supports_Autofire>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_ability_ObiWan</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
 			
 			<!-- Secondary ability -->
@@ -2335,7 +2437,7 @@
 			
 			<Absorb_Blaster_Ability Name="Obi_Wan_Absorb_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
-				<Absorb_Chance>0.1</Absorb_Chance>
+				<Absorb_Chance>0.05</Absorb_Chance>
 				<!-- Absorb Percentage and Amount work together in the following way: -->
 				<!-- Actual Amount healed = (Projectile Damage * Absorb Percentage) + Absorb Amount -->
 				<!-- Either value can be zero, but at least one should be non-zero. -->
@@ -2357,7 +2459,7 @@
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Heal_Range>5.0</Heal_Range>
 				<Heal_Amount> 0.0 </Heal_Amount>
-				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Percent> 0.02 </Heal_Percent>
 				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
 				<Single_Target_Heal>Yes</Single_Target_Heal>
 				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
@@ -2472,9 +2574,9 @@
 				
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>RHD_Request_Canceled</SFXEvent_Build_Cancelled>		
-		<SFXEvent_Build_Complete>Unit_Select_Luke_Land</SFXEvent_Build_Complete>
-		<SFXEvent_Hero_Respawned>Unit_Select_Luke_Land</SFXEvent_Hero_Respawned>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke_Land</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_ObiWan</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Complete_ObiWan</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_ObiWan</SFXEvent_Fleet_Move>
 
 		<CategoryMask>LandHero | SpaceHero</CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
@@ -2519,9 +2621,13 @@
 		<SFXEvent_Guard>Unit_Guard_ObiWan</SFXEvent_Guard>
 		<SFXEvent_Group_Move>Unit_Move_ObiWan</SFXEvent_Group_Move>
 		<SFXEvent_Group_Attack>Unit_Attack_ObiWan</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning>  </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning>  </SFXEvent_Health_Critical_Warning>
-		<Death_SFXEvent_Start_Die>  </Death_SFXEvent_Start_Die>   
+		<SFXEvent_Health_Low_Warning>Unit_Health_Low_ObiWan  </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning>Unit_Health_Critical_ObiWan </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die>Unit_Die_ObiWan </Death_SFXEvent_Start_Die>   
+
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_ObiWan </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>  
 
 
 		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_ObiWan </SFXEvent_Attack_Hardpoint>
@@ -2577,7 +2683,7 @@
 		<CanCellStack>yes</CanCellStack>
 		<Mass>1.0</Mass>
 		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
-		<Unique_Space_Unit>Plo_Koon_Delta</Unique_Space_Unit>
+		<Unique_Space_Unit>Plo_Koon_Eta</Unique_Space_Unit>
 		
 		<Movement_Animation_Speed> 1.0 </Movement_Animation_Speed>
 		<Max_Speed>1.45</Max_Speed>
@@ -2628,20 +2734,21 @@
 		<Targeting_Max_Attack_Distance>25.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
-		<SFXEvent_Select>Unit_Select_Luke_Land</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Luke_Land</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke_Land</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Luke_Land</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Luke_Land</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Group_Move_Luke_Land</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Group_Attack_Luke_Land</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Luke_Land </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Luke_Land </SFXEvent_Health_Critical_Warning>
-		<Death_SFXEvent_Start_Die> Unit_Defeat_Luke_Land </Death_SFXEvent_Start_Die>   
+		<SFXEvent_Select>Unit_Select_Plo_Koon</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Plo_Koon</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Plo_Koon</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Plo_Koon</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Plo_Koon</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Assist_Move_Plo_Koon</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Assist_Attack_Plo_Koon</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Plo_Koon </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Plo_Koon </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Plo_Koon </Death_SFXEvent_Start_Die>   
 
 		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
-		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Plo_Koon </SFXEvent_Tactical_Build_Complete>		
 		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
 
 		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
 
@@ -2692,6 +2799,7 @@
 				<Effective_Radius> 500.0 </Effective_Radius>
 				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Confuse_Plo_Koon </SFXEvent_GUI_Unit_Ability_Activated>
 				<Supports_Autofire>True</Supports_Autofire>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_ability_Plo_Koon</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
 			
 			<!-- Secondary ability -->
@@ -2702,7 +2810,9 @@
 				<Spawned_Object_Type> Proj_Special_Obiwan_Instant_Invulnerability_Blast </Spawned_Object_Type>
 				<Effective_Radius>400</Effective_Radius>
 				<Friendly_Ability> true </Friendly_Ability>
-				<Supports_Autofire>True</Supports_Autofire>				
+				<Supports_Autofire>True</Supports_Autofire>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_ability_Plo_Koon</SFXEvent_GUI_Unit_Ability_Activated>				
+				
 			</Unit_Ability>
         </Unit_Abilities_Data>
 
@@ -2712,7 +2822,7 @@
 				<Activation_Style>Space_Automatic</Activation_Style>
 				<Unit_Strength_Category />
 				<Applicable_Unit_Categories />
-				<Applicable_Unit_Types> Plo_Koon_Delta </Applicable_Unit_Types>
+				<Applicable_Unit_Types> Plo_Koon_Delta, Plo_Koon_Eta </Applicable_Unit_Types>
 				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
 				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
 				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
@@ -2772,7 +2882,7 @@
 			
 			<Absorb_Blaster_Ability Name="Plo_Koon_Absorb_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
-				<Absorb_Chance>0.1</Absorb_Chance>
+				<Absorb_Chance>0.05</Absorb_Chance>
 				<!-- Absorb Percentage and Amount work together in the following way: -->
 				<!-- Actual Amount healed = (Projectile Damage * Absorb Percentage) + Absorb Amount -->
 				<!-- Either value can be zero, but at least one should be non-zero. -->
@@ -2794,7 +2904,7 @@
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Heal_Range>5.0</Heal_Range>
 				<Heal_Amount> 0.0 </Heal_Amount>
-				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Percent> 0.02 </Heal_Percent>
 				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
 				<Single_Target_Heal>Yes</Single_Target_Heal>
 				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
@@ -2909,9 +3019,9 @@
 				
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>RHD_Request_Canceled</SFXEvent_Build_Cancelled>		
-		<SFXEvent_Build_Complete>Unit_Select_Luke_Land</SFXEvent_Build_Complete>
-		<SFXEvent_Hero_Respawned>Unit_Select_Luke_Land</SFXEvent_Hero_Respawned>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke_Land</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_Plo_Koon</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Complete_Plo_Koon</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Plo_Koon</SFXEvent_Fleet_Move>
 
 		<CategoryMask>LandHero | SpaceHero</CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
@@ -2950,25 +3060,29 @@
 		<Armor_Type> Armor_Hero_Transport </Armor_Type>
         	<Shield_Armor_Type>Shield_Fighter</Shield_Armor_Type>
 
-		<SFXEvent_Select>Unit_Select_ObiWan</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_ObiWan</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_ObiWan</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_ObiWan</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_ObiWan</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Move_ObiWan</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Attack_ObiWan</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning>  </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning>  </SFXEvent_Health_Critical_Warning>
-		<Death_SFXEvent_Start_Die>  </Death_SFXEvent_Start_Die>   
+		<SFXEvent_Select>Unit_Select_Plo_Koon</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Plo_Koon</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Plo_Koon</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Plo_Koon</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Plo_Koon</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Assist_Move_Plo_Koon</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Assist_Attack_Plo_Koon</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Plo_Koon </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Plo_Koon </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Plo_Koon </Death_SFXEvent_Start_Die>   
+
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Plo_Koon </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>   
 
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_ObiWan </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_ObiWan </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_ObiWan </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_ObiWan </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_ObiWan </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_ObiWan </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_ObiWan </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Plo_Koon </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Plo_Koon</SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Plo_Koon </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Plo_Koon </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Plo_Koon </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Plo_Koon </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Plo_Koon </SFXEvent_Attack_Hardpoint>
 
 		<SFXEvent_Ambient_Moving> Unit_A_Wing_Fly_By </SFXEvent_Ambient_Moving>
 		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
@@ -2978,10 +3092,23 @@
 		<Create_Team>No</Create_Team>
 		<AI_Combat_Power>80</AI_Combat_Power>
 		<Population_Value>0</Population_Value>	
-		<Landing_Transport_Variant>CR20_Landing_Craft</Landing_Transport_Variant>
+		<Landing_Transport_Variant>Plo_Koon_Eta_Landing</Landing_Transport_Variant>
 	</UniqueUnit>
 
-
+	<TransportUnit Name="Plo_Koon_Eta_Landing">
+		<Variant_Of_Existing_Type>Plo_Koon_Eta</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_XWing_Landing.alo</Land_Model_Name>
+		<Icon_Name>i_button_x_wing.tga</Icon_Name>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>3.5</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior> 
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+      	<UnitCollisionClass>Landing Transport</UnitCollisionClass>	
+	</TransportUnit>
 		
 	<UniqueUnit Name="Plo_Koon_Delta">
 		<LOD_Bias>5</LOD_Bias>
@@ -3206,19 +3333,19 @@
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
 
-		<SFXEvent_Select>Unit_Select_Anakin</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Anakin</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Anakin</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Anakin</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Anakin</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Move_Anakin</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Attack_Anakin</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Land_Low_Anakin </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning>  </SFXEvent_Health_Critical_Warning>
-		<Death_SFXEvent_Start_Die>  </Death_SFXEvent_Start_Die>   
+		<SFXEvent_Select>Unit_Select_Anakin_Skywalker</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Anakin_Skywalker</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Anakin_Skywalker</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Anakin_Skywalker</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Anakin_Skywalker</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Move_Anakin_Skywalker</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Attack_Anakin_Skywalker</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Anakin_Skywalker </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning>Unit_Health_Critical_Anakin_Skywalker</SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Anakin_Skywalker </Death_SFXEvent_Start_Die>   
 
 		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
-		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Anakin_Skywalker </SFXEvent_Tactical_Build_Complete>		
 		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
 
 		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
@@ -3268,6 +3395,8 @@
 				<GUI_Activated_Ability_Name> Vader_Force_Telekinesis </GUI_Activated_Ability_Name> 
 				<SFXEvent_Target_Ability> Unit_Lift_Vader </SFXEvent_Target_Ability> 
 				<Supports_Autofire>True</Supports_Autofire>
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_ability_crush_Anakin_Skywalker</SFXEvent_GUI_Unit_Ability_Activated>
+					<SFXEvent_Target_Ability> Unit_ability_crush_Anakin_Skywalker </SFXEvent_Target_Ability> 	
 			</Unit_Ability>
 			
 			<!-- Secondary ability -->
@@ -3278,6 +3407,8 @@
 				<Effective_Radius> 500.0 </Effective_Radius>
 				<Spawned_Object_Type> Force_Whirlwind_Particles </Spawned_Object_Type>
 				<Supports_Autofire>True</Supports_Autofire>
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_ability_push_Anakin_Skywalker </SFXEvent_GUI_Unit_Ability_Activated>
+					<SFXEvent_Target_Ability> Unit_ability_push_Anakin_Skywalker </SFXEvent_Target_Ability> 	
 			</Unit_Ability>
 		</Unit_Abilities_Data>
 
@@ -3347,7 +3478,7 @@
 			
 			<Absorb_Blaster_Ability Name="Anakin_Absorb_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
-				<Absorb_Chance>0.1</Absorb_Chance>
+				<Absorb_Chance>0.06</Absorb_Chance>
 				<!-- Absorb Percentage and Amount work together in the following way: -->
 				<!-- Actual Amount healed = (Projectile Damage * Absorb Percentage) + Absorb Amount -->
 				<!-- Either value can be zero, but at least one should be non-zero. -->
@@ -3369,7 +3500,7 @@
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Heal_Range>5.0</Heal_Range>
 				<Heal_Amount> 0.0 </Heal_Amount>
-				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Percent> 0.02 </Heal_Percent>
 				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
 				<Single_Target_Heal>Yes</Single_Target_Heal>
 				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
@@ -3505,9 +3636,9 @@
 				
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>RHD_Request_Canceled</SFXEvent_Build_Cancelled>		
-		<SFXEvent_Build_Complete>Unit_Select_Luke_Land</SFXEvent_Build_Complete>
-		<SFXEvent_Hero_Respawned>Unit_Select_Luke_Land</SFXEvent_Hero_Respawned>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke_Land</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_Anakin_Skywalker</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Complete_Anakin_Skywalker</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Anakin_Skywalker</SFXEvent_Fleet_Move>
 
 		<CategoryMask>LandHero | SpaceHero</CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
@@ -3559,22 +3690,24 @@
 		<Armor_Type> Armor_Hero_Transport </Armor_Type>
         	<Shield_Armor_Type>Shield_Fighter</Shield_Armor_Type>
 
-		<SFXEvent_Select>Unit_Select_Anakin</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Anakin</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Anakin</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Anakin</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Anakin</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Move_Anakin</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Attack_Anakin</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Land_Low_Anakin </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Select>Unit_Select_Anakin_Skywalker</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Anakin_Skywalker</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Anakin_Skywalker</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Anakin_Skywalker</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Anakin_Skywalker</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Move_Anakin_Skywalker</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Attack_Anakin_Skywalker</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Anakin_Skywalker </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning>Unit_Health_Critical_Anakin_Skywalker</SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Anakin_Skywalker </Death_SFXEvent_Start_Die>   
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Anakin_Skywalker </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Anakin_Skywalker </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Anakin_Skywalker </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Anakin_Skywalker </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Anakin_Skywalker </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Anakin_Skywalker </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Anakin_Skywalker </SFXEvent_Attack_Hardpoint>
 
 		<SFXEvent_Ambient_Moving> Unit_A_Wing_Fly_By </SFXEvent_Ambient_Moving>
 		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
@@ -3685,19 +3818,19 @@
 		<Targeting_Max_Attack_Distance>25.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
-		<SFXEvent_Select>Unit_Select_Luke_Land</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Luke_Land</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke_Land</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Luke_Land</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Luke_Land</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Group_Move_Luke_Land</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Group_Attack_Luke_Land</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Luke_Land </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Luke_Land </SFXEvent_Health_Critical_Warning>
-		<Death_SFXEvent_Start_Die> Unit_Defeat_Luke_Land </Death_SFXEvent_Start_Die>   
+		<SFXEvent_Select>Unit_Select_Kit_Fisto</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Kit_Fisto</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Kit_Fisto</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Kit_Fisto</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Kit_Fisto</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Assist_Move_Kit_Fisto</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Assist_Attack_Kit_Fisto</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Kit_Fisto </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Kit_Fisto </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Kit_Fisto</Death_SFXEvent_Start_Die>   
 
 		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
-		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Kit_Fisto </SFXEvent_Tactical_Build_Complete>		
 		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
 
 		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
@@ -3749,6 +3882,7 @@
 				<Effective_Radius> 500.0 </Effective_Radius>
 				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Confuse_Kit_Fisto </SFXEvent_GUI_Unit_Ability_Activated>
 				<Supports_Autofire>True</Supports_Autofire>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_ability_kit_fisto</SFXEvent_GUI_Unit_Ability_Activated>
 			</Unit_Ability>
 			
 			<!-- Secondary ability -->
@@ -3759,7 +3893,9 @@
 				<Spawned_Object_Type> Proj_Special_Obiwan_Instant_Invulnerability_Blast </Spawned_Object_Type>
 				<Effective_Radius>400</Effective_Radius>
 				<Friendly_Ability> true </Friendly_Ability>
-				<Supports_Autofire>True</Supports_Autofire>				
+				<Supports_Autofire>True</Supports_Autofire>	
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_ability_kit_fisto</SFXEvent_GUI_Unit_Ability_Activated>
+					<SFXEvent_Target_Ability> Unit_ability_kit_fisto </SFXEvent_Target_Ability> 				
 			</Unit_Ability>
         </Unit_Abilities_Data>
 
@@ -3829,7 +3965,7 @@
 			
 			<Absorb_Blaster_Ability Name="Kit_Fisto_Absorb_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
-				<Absorb_Chance>0.1</Absorb_Chance>
+				<Absorb_Chance>0.05</Absorb_Chance>
 				<!-- Absorb Percentage and Amount work together in the following way: -->
 				<!-- Actual Amount healed = (Projectile Damage * Absorb Percentage) + Absorb Amount -->
 				<!-- Either value can be zero, but at least one should be non-zero. -->
@@ -3851,7 +3987,7 @@
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Heal_Range>5.0</Heal_Range>
 				<Heal_Amount> 0.0 </Heal_Amount>
-				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Percent> 0.02 </Heal_Percent>
 				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
 				<Single_Target_Heal>Yes</Single_Target_Heal>
 				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
@@ -3966,9 +4102,9 @@
 				
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>RHD_Request_Canceled</SFXEvent_Build_Cancelled>		
-		<SFXEvent_Build_Complete>Unit_Select_Luke_Land</SFXEvent_Build_Complete>
-		<SFXEvent_Hero_Respawned>Unit_Select_Luke_Land</SFXEvent_Hero_Respawned>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke_Land</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_Kit_Fisto</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Complete_Kit_Fisto</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Move_Kit_Fisto</SFXEvent_Fleet_Move>
 
 		<CategoryMask>LandHero | SpaceHero</CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
@@ -4020,22 +4156,28 @@
 		<Armor_Type> Armor_Hero_Transport </Armor_Type>
         	<Shield_Armor_Type>Shield_Fighter</Shield_Armor_Type>
 
-		<SFXEvent_Select>Unit_Select_Anakin</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Anakin</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Anakin</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Anakin</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Anakin</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Move_Anakin</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Attack_Anakin</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Land_Low_Anakin </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Select>Unit_Select_Kit_Fisto</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Kit_Fisto</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Kit_Fisto</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Kit_Fisto</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Kit_Fisto</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Assist_Move_Kit_Fisto</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Assist_Attack_Kit_Fisto</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Kit_Fisto </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Kit_Fisto </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Kit_Fisto</Death_SFXEvent_Start_Die>   
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Kit_Fisto </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Kit_Fisto </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Kit_Fisto </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Kit_Fisto </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Kit_Fisto </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Kit_Fisto </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Kit_Fisto </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Kit_Fisto </SFXEvent_Attack_Hardpoint>
 
 		<SFXEvent_Ambient_Moving> Unit_A_Wing_Fly_By </SFXEvent_Ambient_Moving>
 		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
@@ -4146,19 +4288,19 @@
 		<Targeting_Max_Attack_Distance>25.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
-		<SFXEvent_Select>Unit_Select_Luke_Land</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Luke_Land</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke_Land</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Luke_Land</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Luke_Land</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Group_Move_Luke_Land</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Group_Attack_Luke_Land</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Luke_Land </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Luke_Land </SFXEvent_Health_Critical_Warning>
-		<Death_SFXEvent_Start_Die> Unit_Defeat_Luke_Land </Death_SFXEvent_Start_Die>   
+		<SFXEvent_Select>Unit_Select_Aayla_Secura</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Aayla_Secura</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Aayla_Secura</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Aayla_Secura</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Aayla_Secura</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Assist_Move_Aayla_Secura</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Assist_Attack_Aayla_Secura</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Aayla_Secura </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Aayla_Secura </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Aayla_Secura </Death_SFXEvent_Start_Die>   
 
 		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
-		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Aayla_Secura </SFXEvent_Tactical_Build_Complete>		
 		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
 
 		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
@@ -4212,7 +4354,10 @@
 				<Spawned_Object_Type> Proj_Special_Obiwan_Instant_Invulnerability_Blast </Spawned_Object_Type>
 				<Effective_Radius>400</Effective_Radius>
 				<Friendly_Ability> true </Friendly_Ability>
-				<Supports_Autofire>True</Supports_Autofire>				
+				<Supports_Autofire>True</Supports_Autofire>	
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_ability_Aayla_Secura</SFXEvent_GUI_Unit_Ability_Activated>
+					<SFXEvent_Target_Ability> Unit_ability_Aayla_Secura </SFXEvent_Target_Ability> 
+								
 			</Unit_Ability>
         </Unit_Abilities_Data>
 
@@ -4269,7 +4414,7 @@
 			
 			<Absorb_Blaster_Ability Name="Aayla_Secura_Absorb_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
-				<Absorb_Chance>0.1</Absorb_Chance>
+				<Absorb_Chance>0.05</Absorb_Chance>
 				<!-- Absorb Percentage and Amount work together in the following way: -->
 				<!-- Actual Amount healed = (Projectile Damage * Absorb Percentage) + Absorb Amount -->
 				<!-- Either value can be zero, but at least one should be non-zero. -->
@@ -4291,7 +4436,7 @@
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Heal_Range>5.0</Heal_Range>
 				<Heal_Amount> 0.0 </Heal_Amount>
-				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Percent> 0.02 </Heal_Percent>
 				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
 				<Single_Target_Heal>Yes</Single_Target_Heal>
 				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
@@ -4367,22 +4512,28 @@
 		<Armor_Type> Armor_Hero_Transport </Armor_Type>
         	<Shield_Armor_Type>Shield_Fighter</Shield_Armor_Type>
 
-		<SFXEvent_Select>Unit_Select_Anakin</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Anakin</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Anakin</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Anakin</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Anakin</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Move_Anakin</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Attack_Anakin</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Land_Low_Anakin </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Select>Unit_Select_Aayla_Secura</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Aayla_Secura</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Aayla_Secura</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Aayla_Secura</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Aayla_Secura</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Assist_Move_Aayla_Secura</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Assist_Attack_Aayla_Secura</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Aayla_Secura </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Aayla_Secura </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Aayla_Secura </Death_SFXEvent_Start_Die>   
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Aayla_Secura </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Aayla_Secura </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Aayla_Secura </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Aayla_Secura </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Aayla_Secura </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Aayla_Secura </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Aayla_Secura </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Aayla_Secura </SFXEvent_Attack_Hardpoint>
 
 		<SFXEvent_Ambient_Moving> Unit_A_Wing_Fly_By </SFXEvent_Ambient_Moving>
 		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
@@ -4432,9 +4583,9 @@
 				
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>RHD_Request_Canceled</SFXEvent_Build_Cancelled>		
-		<SFXEvent_Build_Complete>Unit_Select_Luke_Land</SFXEvent_Build_Complete>
-		<SFXEvent_Hero_Respawned>Unit_Select_Luke_Land</SFXEvent_Hero_Respawned>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke_Land</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_Aayla_Secura</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Complete_Aayla_Secura</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Aayla_Secura</SFXEvent_Fleet_Move>
 
 		<CategoryMask>LandHero</CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>
@@ -4534,19 +4685,19 @@
 		<Targeting_Max_Attack_Distance>25.0</Targeting_Max_Attack_Distance>
 		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
 
-		<SFXEvent_Select>Unit_Select_Luke_Land</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Luke_Land</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke_Land</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Luke_Land</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Luke_Land</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Group_Move_Luke_Land</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Group_Attack_Luke_Land</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Luke_Land </SFXEvent_Health_Low_Warning>
-		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Luke_Land </SFXEvent_Health_Critical_Warning>
-		<Death_SFXEvent_Start_Die> Unit_Defeat_Luke_Land </Death_SFXEvent_Start_Die>   
+		<SFXEvent_Select>Unit_Select_Shaak_Ti</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Shaak_Ti</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Shaak_Ti</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Shaak_Ti</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Shaak_Ti</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Move_Shaak_Ti</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Attack_Shaak_Ti</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Shaak_Ti </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning>Unit_Health_Critical_Shaak_Ti</SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Shaak_Ti </Death_SFXEvent_Start_Die>   
 
 		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
-		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Shaak_Ti </SFXEvent_Tactical_Build_Complete>		
 		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
 
 		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
@@ -4657,7 +4808,7 @@
 			
 			<Absorb_Blaster_Ability Name="Shaak_Ti_Absorb_Blaster">
 				<Activation_Style>Take_Damage</Activation_Style>
-				<Absorb_Chance>0.1</Absorb_Chance>
+				<Absorb_Chance>0.05</Absorb_Chance>
 				<!-- Absorb Percentage and Amount work together in the following way: -->
 				<!-- Actual Amount healed = (Projectile Damage * Absorb Percentage) + Absorb Amount -->
 				<!-- Either value can be zero, but at least one should be non-zero. -->
@@ -4679,7 +4830,7 @@
 				<Activation_Style>Ground_Automatic</Activation_Style>
 				<Heal_Range>5.0</Heal_Range>
 				<Heal_Amount> 0.0 </Heal_Amount>
-				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Percent> 0.02 </Heal_Percent>
 				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
 				<Single_Target_Heal>Yes</Single_Target_Heal>
 				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
@@ -4755,22 +4906,28 @@
 		<Armor_Type> Armor_Hero_Transport </Armor_Type>
         	<Shield_Armor_Type>Shield_Fighter</Shield_Armor_Type>
 
-		<SFXEvent_Select>Unit_Select_Anakin</SFXEvent_Select>
-		<SFXEvent_Move>Unit_Move_Anakin</SFXEvent_Move>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Anakin</SFXEvent_Fleet_Move>
-		<SFXEvent_Attack>Unit_Attack_Anakin</SFXEvent_Attack>
-		<SFXEvent_Guard>Unit_Guard_Anakin</SFXEvent_Guard>
-		<SFXEvent_Group_Move>Unit_Move_Anakin</SFXEvent_Group_Move>
-		<SFXEvent_Group_Attack>Unit_Attack_Anakin</SFXEvent_Group_Attack>
-		<SFXEvent_Health_Low_Warning> Unit_Land_Low_Anakin </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Select>Unit_Select_Shaak_Ti</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Shaak_Ti</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Shaak_Ti</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Shaak_Ti</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Shaak_Ti</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Move_Shaak_Ti</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Attack_Shaak_Ti</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Shaak_Ti </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning>Unit_Health_Critical_Shaak_Ti</SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Die_Shaak_Ti </Death_SFXEvent_Start_Die>   
 
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
-		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Anakin </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Shaak_Ti </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Shaak_Ti </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Shaak_Ti </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Shaak_Ti </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Shaak_Ti </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Shaak_Ti </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Shaak_Ti </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Shaak_Ti </SFXEvent_Attack_Hardpoint>
 
 		<SFXEvent_Ambient_Moving> Unit_A_Wing_Fly_By </SFXEvent_Ambient_Moving>
 		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
@@ -4820,9 +4977,9 @@
 				
 		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
 		<SFXEvent_Build_Cancelled>RHD_Request_Canceled</SFXEvent_Build_Cancelled>		
-		<SFXEvent_Build_Complete>Unit_Select_Luke_Land</SFXEvent_Build_Complete>
-		<SFXEvent_Hero_Respawned>Unit_Select_Luke_Land</SFXEvent_Hero_Respawned>
-		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Luke_Land</SFXEvent_Fleet_Move>
+		<SFXEvent_Build_Complete>Unit_Complete_Shaak_Ti</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Complete_Shaak_Ti</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Move_Shaak_Ti</SFXEvent_Fleet_Move>
 
 		<CategoryMask>LandHero</CategoryMask>
 		<Ranking_In_Category> 3 </Ranking_In_Category>

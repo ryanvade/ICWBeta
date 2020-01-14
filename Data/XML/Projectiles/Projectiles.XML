@@ -95,6 +95,7 @@
 		<Projectile_Rocket_Curve_Distance>3</Projectile_Rocket_Curve_Distance>
 		<Projectile_Rocket_Straight_Distance>0</Projectile_Rocket_Straight_Distance>
 		<Projectile_Max_Flight_Distance>800.0</Projectile_Max_Flight_Distance>
+		<Explode_When_Reached_Target_Radius> True </Explode_When_Reached_Target_Radius>
 		<Projectile_Max_Scan_Range>700.0</Projectile_Max_Scan_Range>
 		<Projectile_Damage>15.0</Projectile_Damage>
 		<Projectile_Blast_Area_Damage> 10 </Projectile_Blast_Area_Damage>
@@ -2032,6 +2033,16 @@
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<AI_Combat_Power>80</AI_Combat_Power>
 	</Projectile>
+	<Projectile Name="Proj_AOE_AI_Blaster_Blue">
+		<!-- used by AT-ST -->
+		<Variant_Of_Existing_Type>Proj_AV_Blaster_Blue</Variant_Of_Existing_Type>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
+		<Projectile_Blast_Area_Range>25.0</Projectile_Blast_Area_Range>
+		<Projectile_Blast_Area_Damage>3.0</Projectile_Blast_Area_Damage>
+		<Projectile_Damage>3.0</Projectile_Damage>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		<AI_Combat_Power>80</AI_Combat_Power>
+	</Projectile>
 	<Projectile Name="AT_ST_Barrage">
 		<!-- used by AT-ST -->
 		<Variant_Of_Existing_Type>Proj_Generic_Small_Red</Variant_Of_Existing_Type>
@@ -2203,6 +2214,33 @@
 		<Projectile_SFXEvent_Detonate>SFX_Land_Blaster_Detonation</Projectile_SFXEvent_Detonate>
 		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
 	</Projectile>
+	
+	<Projectile Name="Proj_AI_Blaster_Blue">
+		<!-- used by empire anti-inf turret -->
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>Proj_Maser_Blue_F.ALO</Land_Model_Name>
+		<Scale_Factor>0.2</Scale_Factor>
+		<Damage_Type> DamageL_AntiInfantryBlaster </Damage_Type>
+		<Max_Speed>25</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Max_Flight_Distance>400.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>4.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>1.5</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>Small_Damage_Land_Green</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Small_Damage_Land_Green</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Projectile_Dirt_Collide_Green</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Projectile_Dirt_Collide_Green</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Medium</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Projectile_SFXEvent_Detonate>SFX_Land_Blaster_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> Unit_Projectile_Infantry_Ricochet </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+	</Projectile>
+	
 	<Projectile Name="Proj_AV_Blaster_Red">
 		<!-- used by AT-AT & pirate / rebel anti-vech turret -->
 		<Text_ID>TEXT_NONE</Text_ID>
@@ -2325,6 +2363,13 @@
 		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_LaserHit_Land</Projectile_Object_Armor_Reduced_Detonation_Particle>
 		<Projectile_Damage>30.0</Projectile_Damage>
 	</Projectile>
+	<Projectile Name="Proj_SuperHeavy_AV_Blaster_Blue">
+		<Variant_Of_Existing_Type>Proj_AV_Blaster_Blue</Variant_Of_Existing_Type>
+		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
+		<Projectile_Object_Detonation_Particle>Large_LaserHit_Land</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_LaserHit_Land</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Damage>30.0</Projectile_Damage>
+	</Projectile>	
 		<Projectile Name="Proj_Ground_Laser_Cannon_Red_Juggernaut">
 		<Variant_Of_Existing_Type>Proj_AV_Blaster_Red</Variant_Of_Existing_Type>
 		<Damage_Type>DamageL_AntiVehicleBlaster</Damage_Type>
@@ -2550,11 +2595,17 @@
 		<Projectile_Object_Detonation_Particle>empire_bombard_explosion</Projectile_Object_Detonation_Particle>
 		<Projectile_Ground_Detonation_Particle>empire_bombard_explosion</Projectile_Ground_Detonation_Particle>
 		<Projectile_Lifetime_Detonation_Particle/>
-		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Large</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>empire_bombard_explosion</Projectile_Absorbed_By_Shields_Particle>
 		<Projectile_SFXEvent_Detonate>SFX_Proton_Torpedo_Detonation</Projectile_SFXEvent_Detonate>
 		<AI_Combat_Power>600</AI_Combat_Power>
 		<!--<Lua_Script>FriendlyFire_Imparty</Lua_Script>-->
 	</Projectile>
+
+	<Projectile Name="Proj_Thermal_Grenade_Blue">
+		<Variant_Of_Existing_Type>Proj_Thermal_Grenade</Variant_Of_Existing_Type>
+		<Land_Model_Name>p_artyshell_blue.ALO</Land_Model_Name>
+	</Projectile>
+
 	<Projectile Name="Proj_Ground_SPMAT_Dummy">
 		<Variant_Of_Existing_Type>Proj_Thermal_Grenade</Variant_Of_Existing_Type>
 		<Land_Model_Name>EV_SPMAT.ALO</Land_Model_Name> <!-- It's invisible -->
@@ -4107,8 +4158,8 @@
 		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
 		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
 		<Projectile_Blast_Area_Range>100.0</Projectile_Blast_Area_Range>
-		<Projectile_Damage>3000.0</Projectile_Damage>
-		<Projectile_Blast_Area_Damage>1500</Projectile_Blast_Area_Damage>
+		<Projectile_Damage>0.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>3000</Projectile_Blast_Area_Damage>
 		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
 		<Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
 		<Projectile_Blast_Area_Dropoff_Tiers>4</Projectile_Blast_Area_Dropoff_Tiers>

@@ -73,7 +73,7 @@ function GovernmentRepublic:ApprovalRating()
     local oldApprovalRating = GlobalValue.Get("RepublicApprovalRating")
     local overallApprovalRating = oldApprovalRating - oldValue + self.ApprovalRatingInfluence 
 
-    if overallApprovalRating >= 65 and self.ChoiceMade == false then
+    if overallApprovalRating >= 80 and self.ChoiceMade == false then
         self:MakeLeaderChoice()
     end    
 

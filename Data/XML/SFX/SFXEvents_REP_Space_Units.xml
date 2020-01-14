@@ -8,7 +8,7 @@
 	<SFXEvent Name="Unit_Complete_praetor_battlecruiser">
 			<Use_Preset>Preset_UR</Use_Preset>
 				<Samples>
-					Data\Audio\SFX\space_units\republic\praetor\move\M6.wav
+					Data\Audio\SFX\space_units\republic\praetor\move\M7.wav
 				</Samples>
 					<Localize> Yes </Localize>
 					<Play_Sequentially> Yes </Play_Sequentially>
@@ -20,7 +20,16 @@
 		<SFXEvent Name="Unit_Fleet_Move_praetor_battlecruiser">
 					  <Use_Preset>Preset_UR</Use_Preset>
 					  <Samples>
+						Data\Audio\SFX\space_units\republic\praetor\move\M1.wav
+						Data\Audio\SFX\space_units\republic\praetor\move\M2.wav
+						Data\Audio\SFX\space_units\republic\praetor\move\M3.wav
 						Data\Audio\SFX\space_units\republic\praetor\move\M4.wav
+						Data\Audio\SFX\space_units\republic\praetor\move\M5.wav
+						Data\Audio\SFX\space_units\republic\praetor\move\M6.wav
+						Data\Audio\SFX\space_units\republic\praetor\move\M7.wav
+						Data\Audio\SFX\space_units\republic\praetor\move\M8.wav
+						Data\Audio\SFX\space_units\republic\praetor\move\M9.wav
+						Data\Audio\SFX\space_units\republic\praetor\move\M10.wav
 					  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> Yes </Play_Sequentially>
@@ -38,9 +47,7 @@
 						Data\Audio\SFX\space_units\republic\praetor\select\S4.wav 
 						Data\Audio\SFX\space_units\republic\praetor\select\S5.wav 
 						Data\Audio\SFX\space_units\republic\praetor\select\S6.wav 
-						Data\Audio\SFX\space_units\republic\praetor\select\S7.wav 
-						Data\Audio\SFX\space_units\republic\praetor\select\S8.wav 
-						
+						Data\Audio\SFX\space_units\republic\praetor\select\S7.wav  
 					 </Samples>
 					<Localize> Yes </Localize>
 					<Play_Sequentially> Yes </Play_Sequentially>
@@ -61,10 +68,7 @@
 							Data\Audio\SFX\space_units\republic\praetor\move\M7.wav
 							Data\Audio\SFX\space_units\republic\praetor\move\M8.wav
 							Data\Audio\SFX\space_units\republic\praetor\move\M9.wav
-							Data\Audio\SFX\space_units\republic\praetor\move\M10.wav
-							Data\Audio\SFX\space_units\republic\praetor\move\M11.wav
-							Data\Audio\SFX\space_units\republic\praetor\move\M12.wav
-							
+							Data\Audio\SFX\space_units\republic\praetor\move\M10.wav	
 						  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> Yes </Play_Sequentially>
@@ -85,9 +89,6 @@
 							Data\Audio\SFX\space_units\republic\praetor\move\M8.wav
 							Data\Audio\SFX\space_units\republic\praetor\move\M9.wav
 							Data\Audio\SFX\space_units\republic\praetor\move\M10.wav
-							Data\Audio\SFX\space_units\republic\praetor\move\M11.wav
-							Data\Audio\SFX\space_units\republic\praetor\move\M12.wav
-						  					  
 						  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> No </Play_Sequentially>
@@ -105,7 +106,7 @@
 						Data\Audio\SFX\space_units\republic\praetor\attack\A3.wav
 						Data\Audio\SFX\space_units\republic\praetor\attack\A4.wav
 						Data\Audio\SFX\space_units\republic\praetor\attack\A5.wav
-						
+						Data\Audio\SFX\space_units\republic\praetor\attack\A6.wav
 						  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> Yes </Play_Sequentially>
@@ -121,12 +122,13 @@
 						Data\Audio\SFX\space_units\republic\praetor\attack\A3.wav
 						Data\Audio\SFX\space_units\republic\praetor\attack\A4.wav
 						Data\Audio\SFX\space_units\republic\praetor\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\praetor\attack\A6.wav
 						  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> No </Play_Sequentially>
 						  <Probability>60</Probability>
 						<Text_ID></Text_ID>
-					  <Overlap_Test> Unit_praetor </Overlap_Test>
+					  <Overlap_Test> Unit_praetor_battlecruiser </Overlap_Test>
 				</SFXEvent>
 				
 			<SFXEvent Name="Unit_Guard_praetor_battlecruiser">
@@ -139,7 +141,6 @@
 						Data\Audio\SFX\space_units\republic\praetor\select\S5.wav 
 						Data\Audio\SFX\space_units\republic\praetor\select\S6.wav 
 						Data\Audio\SFX\space_units\republic\praetor\select\S7.wav 
-						Data\Audio\SFX\space_units\republic\praetor\select\S8.wav 
 					  </Samples>
 						  <Localize> Yes </Localize>
 						  <Play_Sequentially> No </Play_Sequentially>
@@ -163,10 +164,2361 @@
 				
 				
 				
+				
+			<!-- Republic Venator  -->
+			
+
+	<SFXEvent Name="Unit_Complete_rep_venator">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\Venator\select\S2.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_venator </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_venator">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Venator\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M9.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M10.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M11.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M12.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M13.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M14.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M15.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M16.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M17.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M18.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M19.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M20.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M21.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_venator </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_venator">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\Venator\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S4.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S5.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S6.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S7.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S8.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S9.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S10.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S11.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S12.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S13.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S14.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S15.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S16.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S17.wav 
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_venator </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_venator">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Venator\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M9.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M10.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M11.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M12.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M13.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M14.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M15.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M16.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M17.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M18.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M19.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M20.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M21.wav	
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_venator </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_venator">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Venator\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M9.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M10.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M11.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M12.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M13.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M14.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M15.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M16.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M17.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M18.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M19.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M20.wav
+						Data\Audio\SFX\space_units\republic\Venator\move\M21.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_venator </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_venator">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Venator\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A9.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A10.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A11.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A12.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A13.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A14.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A15.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A16.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_venator </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_venator">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\Venator\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A9.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A10.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A11.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A12.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A13.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A14.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A15.wav
+						Data\Audio\SFX\space_units\republic\Venator\attack\A16.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_venator </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_venator">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Venator\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S4.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S5.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S6.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S7.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S8.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S9.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S10.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S11.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S12.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S13.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S14.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S15.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S16.wav
+						Data\Audio\SFX\space_units\republic\Venator\select\S17.wav  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_venator </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_venator">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_venator </Overlap_Test>
+				</SFXEvent>
+
+
+			<!-- Republic Victory Star Destroyer  -->
+			
+
+	<SFXEvent Name="Unit_Complete_rep_Victory_Star_Destroyer">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\Victory\attack\A6.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_Victory_Star_Destroyer </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_Victory_Star_Destroyer">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Victory\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M8.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Victory_Star_Destroyer </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_Victory_Star_Destroyer">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\Victory\select\S1.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S2.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S3.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S4.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S5.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S6.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S7.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S8.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_Victory_Star_Destroyer </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_Victory_Star_Destroyer">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Victory\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M8.wav	
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Victory_Star_Destroyer </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_Victory_Star_Destroyer">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Victory\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Victory\move\M8.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Victory_Star_Destroyer </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_Victory_Star_Destroyer">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Victory\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A8.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Victory_Star_Destroyer </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_Victory_Star_Destroyer">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\Victory\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\Victory\attack\A8.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Victory_Star_Destroyer </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_Victory_Star_Destroyer">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						  Data\Audio\SFX\space_units\republic\Victory\select\S1.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S2.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S3.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S4.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S5.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S6.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S7.wav
+						  Data\Audio\SFX\space_units\republic\Victory\select\S8.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Victory_Star_Destroyer </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_Victory_Star_Destroyer">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Victory_Star_Destroyer </Overlap_Test>
+				</SFXEvent>
+				
+				
+				
+				
+				
+			<!-- Republic Victory Star Destroyer  -->
+			
+
+	<SFXEvent Name="Unit_Complete_rep_Invincible">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\Invincible\move\M1.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_Invincible </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_Invincible">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Invincible\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Invincible\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Invincible\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Invincible\move\M4.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Invincible </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_Invincible">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\Invincible\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Invincible\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Invincible\select\S3.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_Invincible </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_Invincible">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Invincible\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Invincible\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Invincible\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Invincible\move\M4.wav	
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Invincible </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_Invincible">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Invincible\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Invincible\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Invincible\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Invincible\move\M4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Invincible </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_Invincible">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Invincible\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Invincible\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Invincible\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Invincible\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Invincible\attack\A5.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Invincible </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_Invincible">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\Invincible\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Invincible\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Invincible\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Invincible\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Invincible\attack\A5.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Invincible </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_Invincible">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Invincible\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Invincible\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Invincible\select\S3.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Invincible </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_Invincible">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Invincible </Overlap_Test>
+				</SFXEvent>
+
+			
+			
+			
+			
+			<!-- Republic Acclamator  -->
+			
+
+	<SFXEvent Name="Unit_Complete_rep_Acclamator">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\Acclamator\move\M1.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_Acclamator </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_Acclamator">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M4.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_Acclamator">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\select\S4.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_Acclamator </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_Acclamator">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M4.wav	
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_Acclamator">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\move\M4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_Acclamator">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\attack\A4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_Acclamator">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\Acclamator\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\attack\A4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_Acclamator">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator\select\S4.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_Acclamator">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator </Overlap_Test>
+				</SFXEvent>
+				
+				
+				
+				
+			<!-- Republic Acclamator Assault -->
+			
+
+	<SFXEvent Name="Unit_Complete_rep_Acclamator_Assault">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S4.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_Acclamator_Assault </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_Acclamator_Assault">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M9.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Assault </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_Acclamator_Assault">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S4.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S5.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S6.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_Acclamator_Assault </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_Acclamator_Assault">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Assault </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_Acclamator_Assault">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\move\M9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Assault </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_Acclamator_Assault">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\attack\A4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Assault </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_Acclamator_Assault">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\attack\A4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Assault </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_Acclamator_Assault">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S4.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S5.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_Assault\select\S6.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Assault </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_Acclamator_Assault">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Assault </Overlap_Test>
+				</SFXEvent>	
+				
+				
+				
+			<!-- Republic Acclamator Carrier -->
+			
+
+	<SFXEvent Name="Unit_Complete_rep_Acclamator_Carrier">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\Acclamator_carrier\select\S1.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_Acclamator_Carrier </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_Acclamator_Carrier">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m4.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Carrier </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_Acclamator_Carrier">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\select\S3.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_Acclamator_Carrier </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_Acclamator_Carrier">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Carrier </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_Acclamator_Carrier">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\move\m4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Carrier </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_Acclamator_Carrier">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\attack\A4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Carrier </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_Acclamator_Carrier">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\attack\A4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Carrier </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_Acclamator_Carrier">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Acclamator_carrier\select\S3.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Carrier </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_Acclamator_Carrier">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Acclamator_Carrier </Overlap_Test>
+				</SFXEvent>	
 
 
 
 
+			<!-- Republic DHC  -->
+			
+
+	<SFXEvent Name="Unit_Complete_rep_DHC">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\DHC\select\S2.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_DHC </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_DHC">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\DHC\move\M1.wav
+						Data\Audio\SFX\space_units\republic\DHC\move\M2.wav
+						Data\Audio\SFX\space_units\republic\DHC\move\M3.wav
+						Data\Audio\SFX\space_units\republic\DHC\move\M4.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DHC </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_DHC">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\DHC\select\S1.wav
+						Data\Audio\SFX\space_units\republic\DHC\select\S2.wav
+						Data\Audio\SFX\space_units\republic\DHC\select\S3.wav
+						Data\Audio\SFX\space_units\republic\DHC\select\S4.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_DHC </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_DHC">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\DHC\move\M1.wav
+						Data\Audio\SFX\space_units\republic\DHC\move\M2.wav
+						Data\Audio\SFX\space_units\republic\DHC\move\M3.wav
+						Data\Audio\SFX\space_units\republic\DHC\move\M4.wav	
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DHC </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_DHC">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\DHC\move\M1.wav
+						Data\Audio\SFX\space_units\republic\DHC\move\M2.wav
+						Data\Audio\SFX\space_units\republic\DHC\move\M3.wav
+						Data\Audio\SFX\space_units\republic\DHC\move\M4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DHC </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_DHC">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\DHC\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\DHC\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\DHC\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\DHC\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\DHC\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\DHC\attack\A6.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DHC </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_DHC">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\DHC\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\DHC\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\DHC\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\DHC\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\DHC\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\DHC\attack\A6.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DHC </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_DHC">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\DHC\select\S1.wav
+						Data\Audio\SFX\space_units\republic\DHC\select\S2.wav
+						Data\Audio\SFX\space_units\republic\DHC\select\S3.wav
+						Data\Audio\SFX\space_units\republic\DHC\select\S4.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DHC </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_DHC">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DHC </Overlap_Test>
+				</SFXEvent>
+				
+				
+				
+			<!-- Republic Arquitens  -->
+			
+
+	<SFXEvent Name="Unit_Complete_rep_Arquitens">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\Arquitens\select\S4.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_Arquitens </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_Arquitens">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M9.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Arquitens </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_Arquitens">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S4.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S5.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S6.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_Arquitens </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_Arquitens">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Arquitens </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_Arquitens">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\move\M9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Arquitens </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_Arquitens">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Arquitens </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_Arquitens">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\attack\A9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Arquitens </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_Arquitens">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S4.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S5.wav
+						Data\Audio\SFX\space_units\republic\Arquitens\select\S6.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Arquitens </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_Arquitens">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Arquitens </Overlap_Test>
+				</SFXEvent>
+				
+				
+				
+				<!-- Republic LAC - Consular  -->
+				
+			<SFXEvent Name="Unit_Complete_rep_LAC">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\LAC\move\M5.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_LAC </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_LAC">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\LAC\move\M1.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M2.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M3.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M4.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M5.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M6.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_LAC </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_LAC">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\LAC\select\S1.wav
+						Data\Audio\SFX\space_units\republic\LAC\select\S2.wav
+						Data\Audio\SFX\space_units\republic\LAC\select\S3.wav
+						Data\Audio\SFX\space_units\republic\LAC\select\S4.wav
+						Data\Audio\SFX\space_units\republic\LAC\select\S5.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_LAC </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_LAC">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\LAC\move\M1.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M2.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M3.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M4.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M5.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M6.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_LAC </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_LAC">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\LAC\move\M1.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M2.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M3.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M4.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M5.wav
+						Data\Audio\SFX\space_units\republic\LAC\move\M6.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_LAC </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_LAC">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\LAC\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_LAC </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_LAC">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\LAC\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\LAC\attack\A9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_LAC </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_LAC">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\LAC\select\S1.wav
+						Data\Audio\SFX\space_units\republic\LAC\select\S2.wav
+						Data\Audio\SFX\space_units\republic\LAC\select\S3.wav
+						Data\Audio\SFX\space_units\republic\LAC\select\S4.wav
+						Data\Audio\SFX\space_units\republic\LAC\select\S5.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_LAC </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_LAC">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_LAC </Overlap_Test>
+				</SFXEvent>
 
 
+
+			<!-- Republic CR90 - Blockaderunner  -->
+				
+			<SFXEvent Name="Unit_Complete_rep_CR90">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\CR90\select\S3.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_CR90 </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_CR90">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\CR90\move\M1.wav
+						Data\Audio\SFX\space_units\republic\CR90\move\M2.wav
+						Data\Audio\SFX\space_units\republic\CR90\move\M3.wav
+						Data\Audio\SFX\space_units\republic\CR90\move\M4.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_CR90 </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_CR90">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\CR90\select\S1.wav
+						Data\Audio\SFX\space_units\republic\CR90\select\S2.wav
+						Data\Audio\SFX\space_units\republic\CR90\select\S3.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_CR90 </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_CR90">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\CR90\move\M1.wav
+						Data\Audio\SFX\space_units\republic\CR90\move\M2.wav
+						Data\Audio\SFX\space_units\republic\CR90\move\M3.wav
+						Data\Audio\SFX\space_units\republic\CR90\move\M4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_CR90 </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_CR90">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\CR90\move\M1.wav
+						Data\Audio\SFX\space_units\republic\CR90\move\M2.wav
+						Data\Audio\SFX\space_units\republic\CR90\move\M3.wav
+						Data\Audio\SFX\space_units\republic\CR90\move\M4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_CR90 </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_CR90">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\CR90\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\CR90\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\CR90\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\CR90\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\CR90\attack\A5.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_CR90 </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_CR90">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\CR90\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\CR90\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\CR90\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\CR90\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\CR90\attack\A5.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_CR90 </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_CR90">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\CR90\select\S1.wav
+						Data\Audio\SFX\space_units\republic\CR90\select\S2.wav
+						Data\Audio\SFX\space_units\republic\CR90\select\S3.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_CR90 </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_CR90">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_CR90 </Overlap_Test>
+				</SFXEvent>
+				
+				<SFXEvent Name="Unit_ability_rep_CR90">
+				<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\CR90\move\M2.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> No </Play_Sequentially>
+					<Text_ID>TEXT_SFX_OBI_GUARD_1, TEXT_SFX_OBI_GUARD_2</Text_ID>
+				<Overlap_Test> Unit_rep_CR90</Overlap_Test>
+			</SFXEvent>
+				
+				
+				
+					<!-- Republic Corvette - DP20 -->
+			
+			
+
+			<SFXEvent Name="Unit_Complete_rep_DP20">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\DP20\move\M2.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_DP20 </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_DP20">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\DP20\move\M1.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M2.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M3.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M4.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M5.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M6.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M7.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M8.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M9.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DP20 </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_DP20">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\DP20\select\S1.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S2.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S3.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S4.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S5.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S6.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S7.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S8.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S9.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_DP20 </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_DP20">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\DP20\move\M1.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M2.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M3.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M4.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M5.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M6.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M7.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M8.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DP20 </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_DP20">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\DP20\move\M1.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M2.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M3.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M4.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M5.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M6.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M7.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M8.wav
+						Data\Audio\SFX\space_units\republic\DP20\move\M9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DP20 </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_DP20">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\DP20\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DP20 </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_DP20">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\DP20\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\DP20\attack\A9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DP20 </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_DP20">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\DP20\select\S1.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S2.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S3.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S4.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S5.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S6.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S7.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S8.wav
+						Data\Audio\SFX\space_units\republic\DP20\select\S9.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DP20 </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_DP20">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_DP20 </Overlap_Test>
+				</SFXEvent>	
+							
+			<!-- Republic Carrack Crusier -->
+
+			<SFXEvent Name="Unit_Complete_rep_Carrack">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\Carrack\select\S2.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_Carrack </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_Carrack">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Carrack\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Carrack\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Carrack\move\M1.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Carrack </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_Carrack">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\Carrack\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Carrack\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Carrack\select\S3.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_Carrack </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_Carrack">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Carrack\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Carrack\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Carrack\move\M1.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Carrack </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_Carrack">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Carrack\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Carrack\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Carrack\move\M1.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Carrack </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_Carrack">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+							Data\Audio\SFX\space_units\republic\Carrack\attack\A1.wav
+							Data\Audio\SFX\space_units\republic\Carrack\attack\A2.wav
+							Data\Audio\SFX\space_units\republic\Carrack\attack\A3.wav
+							Data\Audio\SFX\space_units\republic\Carrack\attack\A4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Carrack</Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_Carrack">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\Carrack\attack\A1.wav
+							Data\Audio\SFX\space_units\republic\Carrack\attack\A2.wav
+							Data\Audio\SFX\space_units\republic\Carrack\attack\A3.wav
+							Data\Audio\SFX\space_units\republic\Carrack\attack\A4.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Carrack </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_Carrack">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Carrack\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Carrack\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Carrack\select\S3.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Carrack </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_Carrack">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Carrack	 </Overlap_Test>
+				</SFXEvent>	
+				
+				
+				
+			<!-- Republic Secutor -->
+				
+			<SFXEvent Name="Unit_Complete_rep_Secutor">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\Secutor\select\S11.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_Secutor </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_Secutor">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Secutor\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M9.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M10.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M11.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Secutor </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_Secutor">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\Secutor\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S4.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S5.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S6.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S7.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S8.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S9.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S10.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S11.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_Secutor </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_Secutor">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Secutor\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M9.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M10.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M11.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Secutor </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_Secutor">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Secutor\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M9.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M10.wav
+						Data\Audio\SFX\space_units\republic\Secutor\move\M11.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Secutor </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_Secutor">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A9.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A10.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A11.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A12.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Secutor </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_Secutor">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A9.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A10.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A11.wav
+						Data\Audio\SFX\space_units\republic\Secutor\attack\A12.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Secutor </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_Secutor">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Secutor\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S4.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S5.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S6.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S7.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S8.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S9.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S10.wav
+						Data\Audio\SFX\space_units\republic\Secutor\select\S11.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Secutor </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_Secutor">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Secutor </Overlap_Test>
+				</SFXEvent>	
+				
+				
+				
+				
+			<!-- Republic Tector -->
+				
+			<SFXEvent Name="Unit_Complete_rep_Tector">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\Tector\select\S5.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_Tector </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_Tector">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Tector\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M9.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Tector </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_Tector">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\Tector\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S4.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S5.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S6.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S7.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_Tector </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_Tector">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Tector\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Tector </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_Tector">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Tector\move\M1.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M2.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M3.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M4.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M5.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M6.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M7.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M8.wav
+						Data\Audio\SFX\space_units\republic\Tector\move\M9.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Tector </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_Tector">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\Tector\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A9.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A10.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A11.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Tector </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_Tector">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\Tector\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A8.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A9.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A10.wav
+						Data\Audio\SFX\space_units\republic\Tector\attack\A11.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Tector </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_Tector">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\Tector\select\S1.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S2.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S3.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S4.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S5.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S6.wav
+						Data\Audio\SFX\space_units\republic\Tector\select\S7.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Tector </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_Tector">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_Tector </Overlap_Test>
+				</SFXEvent>	
+				
+				
+
+			<!-- Republic Star Destroyer - SD -->
+			
+			
+
+			<SFXEvent Name="Unit_Complete_rep_SD">
+			<Use_Preset>Preset_UR</Use_Preset>
+				<Samples>
+					Data\Audio\SFX\space_units\republic\SD\select\S2.wav
+				</Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+					<Text_ID></Text_ID>
+					<Overlap_Test> Unit_rep_SD </Overlap_Test>
+		</SFXEvent>
+		
+		
+		<SFXEvent Name="Unit_Fleet_Move_rep_SD">
+					  <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\SD\move\M1.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M2.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M3.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M4.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M5.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M6.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M7.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M8.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M9.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M10.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_SD </Overlap_Test>
+				</SFXEvent>
+
+	
+		<SFXEvent Name="Unit_Select_rep_SD">
+			<Use_Preset>Preset_UR</Use_Preset>
+					 <Samples>
+						Data\Audio\SFX\space_units\republic\SD\select\S1.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S2.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S3.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S4.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S5.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S6.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S7.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S8.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S9.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S10.wav
+					 </Samples>
+					<Localize> Yes </Localize>
+					<Play_Sequentially> Yes </Play_Sequentially>
+				<Text_ID></Text_ID>
+			<Overlap_Test> Unit_rep_SD </Overlap_Test>
+		</SFXEvent>
+ 
+				
+		 <SFXEvent Name="Unit_Move_rep_SD">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\SD\move\M1.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M2.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M3.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M4.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M5.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M6.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M7.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M8.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M9.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M10.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_SD </Overlap_Test>
+				</SFXEvent>
+				
+		<SFXEvent Name="Unit_Assist_Move_rep_SD">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\SD\move\M1.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M2.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M3.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M4.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M5.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M6.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M7.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M8.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M9.wav
+						Data\Audio\SFX\space_units\republic\SD\move\M10.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_SD </Overlap_Test>
+				</SFXEvent>
+				
+				
+		<SFXEvent Name="Unit_Attack_rep_SD">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples>
+						Data\Audio\SFX\space_units\republic\SD\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A8.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> Yes </Play_Sequentially>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_SD </Overlap_Test>
+				</SFXEvent>
+				
+		  <SFXEvent Name="Unit_Assist_Attack_rep_SD">
+					  <Use_Preset>Preset_UR</Use_Preset>
+						  <Samples> 
+						Data\Audio\SFX\space_units\republic\SD\attack\A1.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A2.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A3.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A4.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A5.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A6.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A7.wav
+						Data\Audio\SFX\space_units\republic\SD\attack\A8.wav
+						  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>60</Probability>
+						<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_SD </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Guard_rep_SD">
+					 <Use_Preset>Preset_UR</Use_Preset>
+					  <Samples>
+						Data\Audio\SFX\space_units\republic\SD\select\S1.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S2.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S3.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S4.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S5.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S6.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S7.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S8.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S9.wav
+						Data\Audio\SFX\space_units\republic\SD\select\S10.wav
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_SD </Overlap_Test>
+				</SFXEvent>
+				
+			<SFXEvent Name="Unit_Death_rep_SD">
+					 <Use_Preset>Preset_EXP</Use_Preset>
+					  <Samples>
+					  
+					  
+					  </Samples>
+						  <Localize> Yes </Localize>
+						  <Play_Sequentially> No </Play_Sequentially>
+						  <Probability>20</Probability>
+							<Text_ID></Text_ID>
+					  <Overlap_Test> Unit_rep_SD </Overlap_Test>
+				</SFXEvent>	
+							
 </SFXEvents>

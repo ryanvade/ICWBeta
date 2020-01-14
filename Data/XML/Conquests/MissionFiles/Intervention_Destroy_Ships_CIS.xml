@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+
+<Story>
+	<Event Name="Destroy_Ships_00">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Kill_Units_Tag_00</Story_Tag>
+	</Event>
+	
+	<Event Name="Destroy_Ships_01">
+		<Event_Type>STORY_DESTROY</Event_Type>
+		<Event_Param1>Arquitens</Event_Param1>
+		<Event_Param2>Rebel</Event_Param2>
+		<Event_Param3>5</Event_Param3>
+		<Prereq>Destroy_Ships_00</Prereq>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Kill_Units_Tag_00</Reward_Param1>
+		<Story_Chapter>1</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+	</Event>
+	
+
+	<Event Name="Destroy_Ships_02">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Prereq>Destroy_Ships_01</Prereq>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>DESTROY_SHIPS_NOTIFICATION_00</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+	</Event>
+	
+	<Event Name="Destroy_Ships_03">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>UPGRADE_SPACE_STATION_NOTIFICATION_ABORT</Event_Param2>
+		<Reward_Type>REMOVE_STORY_GOAL</Reward_Type>
+		<Reward_Param1>Kill_Units_Tag_00</Reward_Param1>
+	</Event>
+	
+	<Event Name="Destroy_Ships_04">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Prereq>Destroy_Ships_01</Prereq>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Dummy_Intervention_Hunt</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+	</Event>
+
+	
+	
+</Story>

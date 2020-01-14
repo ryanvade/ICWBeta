@@ -21,21 +21,17 @@
 	<Event Name="Upgrade_Space_Station_02">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Prereq>Upgrade_Space_Station_01</Prereq>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>UPGRADE_SPACE_STATION_NOTIFICATION_00</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
 	</Event>	
 	
 	<Event Name="Upgrade_Space_Station_03">
 		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Prereq>Upgrade_Space_Station_03</Prereq>
-		<Reward_Type>TRIGGER_AI</Reward_Type>
-		<Reward_Param1>UPGRADE_SPACE_STATION_NOTIFICATION_00</Reward_Param1>
+		<Prereq>Upgrade_Space_Station_01</Prereq>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Dummy_Intervention_Shipyard</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
 	</Event>
-	
-	<Event Name="Upgrade_Space_Station_04">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>UPGRADE_SPACE_STATION_NOTIFICATION_ABORT</Event_Param2>
-		<Reward_Type>REMOVE_STORY_GOAL</Reward_Type>
-		<Reward_Param1>Upgrade_Space_Station_Tag_00</Reward_Param1>
-	</Event>
-	
 	
 </Story>

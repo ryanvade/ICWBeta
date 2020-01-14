@@ -12,11 +12,7 @@ end
 
 function MissionRepBuildShipyards:begin()
 
-	if BuildShipyardsObserverThread then
-
-	else
-
-
+	if not BuildShipyardsObserverThread then
 
 		dialog = "MISSION_DIALOG_REP_BUILD_SHIPYARDS"
 		

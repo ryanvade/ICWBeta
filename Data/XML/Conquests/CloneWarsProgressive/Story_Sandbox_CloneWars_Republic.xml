@@ -396,6 +396,7 @@
 		<Prereq>Unlock_Venator_Forced</Prereq>
 		<Prereq>Unlock_Venator_AI</Prereq>
 		<Prereq>Unlock_Venator</Prereq>
+		<Branch>Era_Two</Branch>
 	</Event>
 	
 	<Event Name="Spawn_Yularen">
@@ -406,6 +407,7 @@
 		<Prereq>Unlock_Venator_Forced</Prereq>
 		<Prereq>Unlock_Venator_AI</Prereq>
 		<Prereq>Unlock_Venator</Prereq>
+		<Branch>Era_Two</Branch>
 	</Event>
 	
 	<Event Name="Spawn_Tarkin">
@@ -416,16 +418,18 @@
 		<Prereq>Unlock_Venator_Forced</Prereq>
 		<Prereq>Unlock_Venator_AI</Prereq>
 		<Prereq>Unlock_Venator</Prereq>
+		<Branch>Era_Two</Branch>
 	</Event>	
 	
 	<Event Name="Spawn_Coburn">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Wieler_Triumphant</Reward_Param1>
+		<Reward_Param1> Coburn_Triumphant</Reward_Param1>
 		<Reward_Param2>Kuat</Reward_Param2>
 		<Prereq>Unlock_Venator_Forced</Prereq>
 		<Prereq>Unlock_Venator_AI</Prereq>
 		<Prereq>Unlock_Venator</Prereq>
+		<Branch>Era_Two</Branch>
 	</Event>
 	
 	
@@ -677,8 +681,8 @@
 		<Reward_Param1>Generic_Victory_Destroyer</Reward_Param1>
 		<Prereq>Republic_Enters_Tech_03</Prereq>
 		<Prereq>Republic_Enters_Tech_04</Prereq>
+		<Prereq>GC_Start_Force_Level_Three</Prereq>
 		<Prereq>GC_Start_Force_Level_Four</Prereq>
-		<Prereq>GC_Start_Force_Level_Ffive</Prereq>
 		<Branch>Faction_Branch_CIS</Branch>
 	</Event>
 
@@ -697,6 +701,7 @@
 		<Reward_Param2>Eriadu</Reward_Param2>
 		<Prereq>Unlock_Victory_Force</Prereq>
 		<Prereq>Unlock_Victory</Prereq>
+		<Prereq>GC_Progress_04</Prereq>
 	</Event>	
 	
 	<Event Name="Spawn_Arlionne">
@@ -706,6 +711,7 @@
 		<Reward_Param2>Kuat</Reward_Param2>
 		<Prereq>Unlock_Victory_Force</Prereq>
 		<Prereq>Unlock_Victory</Prereq>
+		<Prereq>GC_Progress_04</Prereq>
 	</Event>
 	
 	

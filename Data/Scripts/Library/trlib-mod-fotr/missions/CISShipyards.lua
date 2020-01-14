@@ -12,12 +12,11 @@ end
 
 function MissionCISBuildShipyards:begin()
 
-	if CISBuildShipyardsObserverThread then
-
-	else
+	if not CISBuildShipyardsObserverThread then
 		dialog = "MISSION_DIALOG_CIS_BUILD_SHIPYARDS"
 		
 		plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Upgrade_Space_Station_CIS.xml")
+
 
 		shipyard_type = Find_Object_Type("NR_Star_Base_2")
 		shipyard_count = 2	
@@ -51,19 +50,25 @@ end
 
 function ShipyardMission_Observer_CIS()
 
-	while not Check_Story_Flag(Find_Player("Rebel"), "UPGRADE_SPACE_STATION_NOTIFICATION_00", nil, true) do
+	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Upgrade_Space_Station_CIS.xml")
+	cis = Find_Player("Rebel")
+
+	while not Find_First_Object("Dummy_Intervention_Shipyard") do
 		Sleep(1)
 	end	
+
+	object = Find_First_Object("Dummy_Intervention_Shipyard")
+	object.Despawn()
 	
-	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Upgrade_Space_Station_CIS.xml")
-	
-	cis = Find_Player("Rebel")
 	reward_location = StoryUtil.FindFriendlyPlanet(Find_Player("Rebel"))
 	spawn_list_reward = { "MTT_Company" , "MTT_Company" }
 	SpawnList(spawn_list_reward, reward_location, cis, true, false)
 
-	currentSupport = GlobalValue.Get("TradeFedApprovalRating")
-	GlobalValue.Set("TradeFedApprovalRating", currentSupport + 5)
+	currentSupport = GlobalValue.Get("CommerceApprovalRating")
+	GlobalValue.Set("CommerceApprovalRating", currentSupport + 5)
+
+	StoryUtil.ShowScreenText("BOARDING_UNAVAILABLE", 5)
+
 
 	plot.Suspend()
 

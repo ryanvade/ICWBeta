@@ -5,6 +5,8 @@
 
 		<Is_Debug_Switchable_To> Yes </Is_Debug_Switchable_To>
 		<Create_Player_In_Multiplayer_Games> No </Create_Player_In_Multiplayer_Games>
+		
+				<Displayed_Tech_Level_Adjustment> +1 </Displayed_Tech_Level_Adjustment>
 
 		<Text_ID> TEXT_FACTION_CIS </Text_ID>
 		<Icon_Name> i_icon_rebel.tga </Icon_Name>
@@ -52,8 +54,7 @@
 
 		<!-- Unlike the Empire, the Rebel's tech levels go from 0-3 instead of 1-4. It needs to be adjusted
 		before displaying it to the player otherwise it won't match the tech tree we show in-game. -->
-		<Displayed_Tech_Level_Adjustment> +1 </Displayed_Tech_Level_Adjustment>
-
+		
 		<Infantry_Icon_Name>I_BUTTON_B1.TGA</Infantry_Icon_Name>
 		<Vehicle_Icon_Name>i_r_vehicle.tga</Vehicle_Icon_Name>
 		<Carrier_Icon_Name>i_r_carrier.tga</Carrier_Icon_Name>
@@ -180,8 +181,8 @@
 			  the campaign by defeating Mon Mothma and capturing Alderaan.
 			<Home_Planet>Alderaan</Home_Planet>
 		-->
-		<Faction_Leader>Mon_Mothma</Faction_Leader>
-		<Faction_Leader_Company>Mon_Mothma_Team</Faction_Leader_Company>
+		<Faction_Leader></Faction_Leader>
+		<Faction_Leader_Company></Faction_Leader_Company>
 
 
 		<!-- Overlay ring used by Obiwan when targeting with his "force distact" ping ability, this is the ring around the cursor location to show victims in range of click -->
@@ -231,28 +232,28 @@
 		<!-- ============================================= -->
 
 		<!-- Specific vs. Factions -->
-		<Music_Event_Tactical_Win_Vs_Faction> Empire,     Rebel_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
-		<Music_Event_Tactical_Win_Vs_Faction> Pirates,    Rebel_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
-		<Music_Event_Tactical_Win_Vs_Faction> Underworld, Rebel_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Empire,     CIS_Victory </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Pirates,    CIS_Victory </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Underworld, CIS_Victory </Music_Event_Tactical_Win_Vs_Faction>
 
-		<Music_Event_Tactical_Lose_Vs_Faction> Empire,     Lose_To_Empire_Event </Music_Event_Tactical_Lose_Vs_Faction>
-		<Music_Event_Tactical_Lose_Vs_Faction> Pirates,     Lose_To_Underworld_Event </Music_Event_Tactical_Lose_Vs_Faction>
-		<Music_Event_Tactical_Lose_Vs_Faction> Underworld, Lose_To_Underworld_Event</Music_Event_Tactical_Lose_Vs_Faction>
-		<Music_Event_Tactical_Lose_Vs_Faction> Rebel,        Lose_To_Rebel_Event</Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Empire,     CIS_Defeat </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Pirates,     CIS_Defeat </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Underworld, CIS_Defeat</Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Rebel,        CIS_Defeat</Music_Event_Tactical_Lose_Vs_Faction>
 
 		<Music_Event_Strategic_Win_Vs_Faction> Empire,     Rebel_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
 		<Music_Event_Strategic_Win_Vs_Faction> Pirates,    Rebel_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
 		<Music_Event_Strategic_Win_Vs_Faction> Underworld, Rebel_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
 
-		<Music_Event_Strategic_Lose_Vs_Faction> Empire,     Lose_To_Empire_Event</Music_Event_Strategic_Lose_Vs_Faction>
-		<Music_Event_Strategic_Lose_Vs_Faction> Pirates,    Lose_To_Underworld_Event</Music_Event_Strategic_Lose_Vs_Faction>
-		<Music_Event_Strategic_Lose_Vs_Faction> Underworld, Lose_To_Underworld_Event</Music_Event_Strategic_Lose_Vs_Faction>
-		<Music_Event_Strategic_Lose_Vs_Faction> Rebel,       Lose_To_Rebel_Event</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Empire,     CIS_Defeat</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Pirates,    CIS_Defeat</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Underworld, CIS_Defeat</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Rebel,       CIS_Defeat</Music_Event_Strategic_Lose_Vs_Faction>
 
 
 		<!-- Generic -->
-		<Music_Event_Tactical_Win> Rebel_Win_Tactical_Event </Music_Event_Tactical_Win>
-		<Music_Event_Tactical_Lose> Rebel_Lose_Tactical_Event </Music_Event_Tactical_Lose>
+		<Music_Event_Tactical_Win> CIS_Victory </Music_Event_Tactical_Win>
+		<Music_Event_Tactical_Lose> CIS_Defeat </Music_Event_Tactical_Lose>
 		<Music_Event_Strategic_Win> Rebel_Win_Strategic_Event </Music_Event_Strategic_Win>
 		<Music_Event_Strategic_Lose> Rebel_Lose_Strategic_Event </Music_Event_Strategic_Lose>
 
@@ -742,6 +743,7 @@
 
 		<Is_Debug_Switchable_To> Yes </Is_Debug_Switchable_To>
 		<Create_Player_In_Multiplayer_Games> No </Create_Player_In_Multiplayer_Games>
+		
 
 		<Text_ID> TEXT_FACTION_REPUBLIC </Text_ID>
 		<Icon_Name> i_icon_empire.tga </Icon_Name>
@@ -781,7 +783,7 @@
 		<Corruption_Tactical_Build_Pad_Price_Multipliers> 1.0, 1.0 </Corruption_Tactical_Build_Pad_Price_Multipliers>
 		<Easily_Bribed> Yes </Easily_Bribed>
 
-		<Scatters_From_Crushers> false </Scatters_From_Crushers>
+		<Scatters_From_Crushers> true </Scatters_From_Crushers>
 
 		<Infantry_Icon_Name>I_BUTTON_CLONEP1.TGA</Infantry_Icon_Name>
 		<Vehicle_Icon_Name>i_e_vehicle.tga</Vehicle_Icon_Name>
@@ -963,28 +965,28 @@
 		<!-- ============================================== -->
 
 		<!-- Specific vs. Factions -->
-		<Music_Event_Tactical_Win_Vs_Faction> Rebel,      Empire_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
-		<Music_Event_Tactical_Win_Vs_Faction> Pirates,    Empire_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
-		<Music_Event_Tactical_Win_Vs_Faction> Underworld, Empire_Win_Tactical_Event </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Rebel,      REP_Victory </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Pirates,    REP_Victory </Music_Event_Tactical_Win_Vs_Faction>
+		<Music_Event_Tactical_Win_Vs_Faction> Underworld, REP_Victory </Music_Event_Tactical_Win_Vs_Faction>
 
-		<Music_Event_Tactical_Lose_Vs_Faction> Rebel,      Lose_To_Rebel_Event </Music_Event_Tactical_Lose_Vs_Faction>
-		<Music_Event_Tactical_Lose_Vs_Faction> Pirates,    Lose_To_Underworld_Event </Music_Event_Tactical_Lose_Vs_Faction>
-		<Music_Event_Tactical_Lose_Vs_Faction> Underworld, Lose_To_Underworld_Event </Music_Event_Tactical_Lose_Vs_Faction>
-		<Music_Event_Tactical_Lose_Vs_Faction> Empire,    Lose_To_Empire_Event </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Rebel,     REP_Defeat </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Pirates,    REP_Defeat </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Underworld, REP_Defeat </Music_Event_Tactical_Lose_Vs_Faction>
+		<Music_Event_Tactical_Lose_Vs_Faction> Empire,    REP_Defeat </Music_Event_Tactical_Lose_Vs_Faction>
 
-		<Music_Event_Strategic_Win_Vs_Faction> Rebel,      Empire_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
-		<Music_Event_Strategic_Win_Vs_Faction> Pirates,    Empire_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
-		<Music_Event_Strategic_Win_Vs_Faction> Underworld, Empire_Win_Strategic_Event </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Rebel,      REP_Victory </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Pirates,    REP_Victory </Music_Event_Strategic_Win_Vs_Faction>
+		<Music_Event_Strategic_Win_Vs_Faction> Underworld, REP_Victory </Music_Event_Strategic_Win_Vs_Faction>
 
-		<Music_Event_Strategic_Lose_Vs_Faction> Rebel,      Lose_To_Rebel_Event </Music_Event_Strategic_Lose_Vs_Faction>
-		<Music_Event_Strategic_Lose_Vs_Faction> Pirates,    Lose_To_Underworld_Event</Music_Event_Strategic_Lose_Vs_Faction>
-		<Music_Event_Strategic_Lose_Vs_Faction> Underworld, Lose_To_Underworld_Event </Music_Event_Strategic_Lose_Vs_Faction>
-		<Music_Event_Strategic_Lose_Vs_Faction> Empire,    Lose_To_Empire_Event </Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Rebel,      REP_Defeat </Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Pirates,    REP_Defeat</Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Underworld, REP_Defeat </Music_Event_Strategic_Lose_Vs_Faction>
+		<Music_Event_Strategic_Lose_Vs_Faction> Empire,    REP_Defeat </Music_Event_Strategic_Lose_Vs_Faction>
 
 
 		<!-- Generic -->
-		<Music_Event_Tactical_Win> Empire_Win_Tactical_Event </Music_Event_Tactical_Win>
-		<Music_Event_Tactical_Lose> Empire_Lose_Tactical_Event </Music_Event_Tactical_Lose>
+		<Music_Event_Tactical_Win> REP_Victory </Music_Event_Tactical_Win>
+		<Music_Event_Tactical_Lose> REP_Defeat </Music_Event_Tactical_Lose>
 		<Music_Event_Strategic_Win> Empire_Win_Strategic_Event </Music_Event_Strategic_Win>
 		<Music_Event_Strategic_Lose> Empire_Lose_Strategic_Event </Music_Event_Strategic_Lose>
 
@@ -1003,8 +1005,8 @@
 
 		<SFX_Event_Tactical_Land_Battle_Pending> EHD_Battle_Pending </SFX_Event_Tactical_Land_Battle_Pending>  	<!-- FILL IN EVENT HERE! -->
 		<SFX_Event_Tactical_Space_Battle_Pending> EHD_Battle_Pending </SFX_Event_Tactical_Space_Battle_Pending>	<!-- FILL IN EVENT HERE! -->
-		<Music_Event_Tactical_Land_Battle_Pending> Tactical_Battle_Loading_Loop_Event </Music_Event_Tactical_Land_Battle_Pending> 		<!-- Rebel_Lose_Tactical_Event = PLACEHOLDER TEST -->
-		<Music_Event_Tactical_Space_Battle_Pending> Tactical_Battle_Loading_Loop_Event </Music_Event_Tactical_Space_Battle_Pending>	<!-- Rebel_Lose_Tactical_Event = PLACEHOLDER TEST -->
+		<Music_Event_Tactical_Land_Battle_Pending> REP_tactical_battle </Music_Event_Tactical_Land_Battle_Pending> 		<!-- Rebel_Lose_Tactical_Event = PLACEHOLDER TEST -->
+		<Music_Event_Tactical_Space_Battle_Pending> REP_tactical_battle </Music_Event_Tactical_Space_Battle_Pending>	<!-- Rebel_Lose_Tactical_Event = PLACEHOLDER TEST -->
 
 		<!-- =============================================== -->
 		<!-- EMPIRE MAPS MUSIC EVENTS - AMBIENT (NON-BATTLE) -->
@@ -2366,7 +2368,7 @@
 		<Ship_Icon_Name> g_fleet.tga </Ship_Icon_Name>
 		<Squadron_Icon_Name> g_squad.tga </Squadron_Icon_Name>
 		<Color>  179, 148, 105, 255 </Color>
-		<No_Colorization_Color> 179, 148, 105, 255 </No_Colorization_Color>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
 		<Display_Font_Color>  179, 148, 105, 255 </Display_Font_Color>
 		<Big_Fleet_Color>  179, 148, 105, 255 </Big_Fleet_Color>
 		<Credits_Accumulation_Factor> 1.00 </Credits_Accumulation_Factor>
@@ -3089,7 +3091,7 @@
 		<Squadron_Icon_Name> g_squad.tga </Squadron_Icon_Name>
 
 		<Color>  255, 255, 255, 255 </Color>
-		<No_Colorization_Color> 225, 225, 125, 255 </No_Colorization_Color>
+		<No_Colorization_Color> 128, 133, 60, 255 </No_Colorization_Color>
 		<Display_Font_Color>  20, 255, 8, 255 </Display_Font_Color>
 		<Big_Fleet_Color>  20, 255, 8, 255 </Big_Fleet_Color>
 
@@ -3123,7 +3125,7 @@
 
 		<Scatters_From_Crushers> false </Scatters_From_Crushers>
 
-		<Infantry_Icon_Name>i_button_storm_trooper.tga</Infantry_Icon_Name>
+		<Infantry_Icon_Name>I_BUTTON_B1.tga</Infantry_Icon_Name>
 		<Vehicle_Icon_Name>i_e_vehicle.tga</Vehicle_Icon_Name>
 		<Carrier_Icon_Name>i_e_carrier.tga</Carrier_Icon_Name>
 		<Frigate_Icon_Name>i_e_frigate.tga</Frigate_Icon_Name>
@@ -3813,7 +3815,7 @@
 		<Ship_Icon_Name> g_fleet.tga </Ship_Icon_Name>
 		<Squadron_Icon_Name> g_squad.tga </Squadron_Icon_Name>
 		<Color> 55, 64, 184, 255 </Color>
-		<No_Colorization_Color> 55, 64, 184, 255 </No_Colorization_Color>
+		<No_Colorization_Color> 48, 92, 46, 255 </No_Colorization_Color>
 		<Display_Font_Color> 55, 64, 184, 255 </Display_Font_Color>
 		<Big_Fleet_Color> 55, 64, 184, 255 </Big_Fleet_Color>
 		<Credits_Accumulation_Factor> 1.00 </Credits_Accumulation_Factor>
@@ -3846,7 +3848,7 @@
 
 		<Scatters_From_Crushers> false </Scatters_From_Crushers>
 
-		<Infantry_Icon_Name>i_button_storm_trooper.tga</Infantry_Icon_Name>
+		<Infantry_Icon_Name>I_BUTTON_B1.tga</Infantry_Icon_Name>
 		<Vehicle_Icon_Name>i_e_vehicle.tga</Vehicle_Icon_Name>
 		<Carrier_Icon_Name>i_e_carrier.tga</Carrier_Icon_Name>
 		<Frigate_Icon_Name>i_e_frigate.tga</Frigate_Icon_Name>
@@ -4516,7 +4518,7 @@
 		<Ship_Icon_Name> g_fleet.tga </Ship_Icon_Name>
 		<Squadron_Icon_Name> g_squad.tga </Squadron_Icon_Name>
 		<Color> 20, 250, 50, 255 </Color>
-		<No_Colorization_Color> 20, 250, 50, 255 </No_Colorization_Color>
+		<No_Colorization_Color> 66, 179, 160, 255 </No_Colorization_Color>
 		<Display_Font_Color> 255, 20, 50, 144 </Display_Font_Color>
 		<Big_Fleet_Color> 255, 20, 50, 144 </Big_Fleet_Color>
 		<Credits_Accumulation_Factor> 1.00 </Credits_Accumulation_Factor>
@@ -4550,7 +4552,7 @@
 
 		<Scatters_From_Crushers> false </Scatters_From_Crushers>
 
-		<Infantry_Icon_Name>i_button_storm_trooper.tga</Infantry_Icon_Name>
+		<Infantry_Icon_Name>I_BUTTON_B1.tga</Infantry_Icon_Name>
 		<Vehicle_Icon_Name>i_e_vehicle.tga</Vehicle_Icon_Name>
 		<Carrier_Icon_Name>i_e_carrier.tga</Carrier_Icon_Name>
 		<Frigate_Icon_Name>i_e_frigate.tga</Frigate_Icon_Name>

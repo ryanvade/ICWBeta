@@ -57,7 +57,7 @@
 		<!-- <Reward_Param1>DEBUG_TEXT_PROGRESSIVE_START_ONE</Reward_Param1> -->
 		<!-- <Reward_Param2>15</Reward_Param2> -->
 	</Event>		
-
+	
 	<Event Name="GC_Starts_02">
 		<Event_Type>STORY_TECH_LEVEL</Event_Type>
 		<Event_Param1>2</Event_Param1>
@@ -105,6 +105,11 @@
 	<!-- **************************************************** -->
 	<!-- ******* LUA Tells the script which era started *****-->
 	<!-- **************************************************** -->
+	
+	<Event Name="GC_Start_Force_Level_One">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_LEVEL_01</Event_Param2>
+	</Event>
 	
 	<Event Name="GC_Start_Force_Level_Two">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
@@ -369,7 +374,23 @@
 	<!--******************** UNIVERSAL EVENTS *********************-->
 	<!--***********************************************************-->	
 	<!--***********************************************************-->	
-
+		
+	 <Event Name="R_Level_Two">
+  		<Event_Type>STORY_TRIGGER</Event_Type>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>	
+		<Prereq>GC_Start_Force_Level_One</Prereq>
+	</Event> 
+	
+	<Event Name="C_Level_Two">
+  		<Event_Type>STORY_TRIGGER</Event_Type>
+ 		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+  		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>	
+		<Prereq>GC_Start_Force_Level_One</Prereq>	
+	</Event>
+	
 	<Event Name="Trigger_Era_Three">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>2080</Event_Param1>

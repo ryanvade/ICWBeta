@@ -314,6 +314,26 @@
 		<Score_Cost_Credits> 400 </Score_Cost_Credits>
         <Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
 	</GroundVehicle>
+	
+	<GroundVehicle Name="OG9_Death_Clone">
+
+		<Variant_Of_Existing_Type>OG9</Variant_Of_Existing_Type>
+
+		<Land_Model_Name>og-9_homing_spider_droid_dc.alo</Land_Model_Name>
+
+		<IsDeathCloneObstacle>true</IsDeathCloneObstacle>
+
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+
+		<Death_Persistence_Duration> 30 </Death_Persistence_Duration>
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+
+	</GroundVehicle>
+	
 	<GroundCompany Name="OG9_Company">
 		<Text_ID>TEXT_UNIT_OG9_COMPANY</Text_ID>
 		<!--<Encyclopedia_Good_Against> T2B_Tank MPTL Pod_Walker </Encyclopedia_Good_Against>-->
@@ -483,7 +503,6 @@
 		<Tactical_Bribe_Cost>300</Tactical_Bribe_Cost>
 
 <Death_Persistence_Duration> 30 </Death_Persistence_Duration>
-        <Death_Clone>Damage_Normal, Magna_Death_Clone</Death_Clone>
 		<Score_Cost_Credits> 400 </Score_Cost_Credits>
         <Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
 	</GroundVehicle>

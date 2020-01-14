@@ -68,7 +68,9 @@ function Find_Faction(message)
 
         techLevel = p_republic.Get_Tech_Level()
 
-        if techLevel == 2 then
+        if techLevel == 1 then
+            Story_Event("START_LEVEL_01")
+        elseif techLevel == 2  then
             Story_Event("START_LEVEL_02")
         elseif techLevel == 3 then
             Story_Event("START_LEVEL_03")
@@ -159,7 +161,7 @@ function Determine_Start_Era(message)
                     start_planet = StoryUtil.FindFriendlyPlanet(p_cis)
                 end
                 if start_planet then
-                    spawn_list = { "Grievous_Team", "Sora_Bulq_Team", "Dooku_Team", "Ventress_Team", "SevRance_Team" }
+                    spawn_list = { "Grievous_Team_Recusant", "Sora_Bulq_Team", "Dooku_Team", "Ventress_Team", "SevRance_Team" }
                     SpawnList(spawn_list, start_planet, p_cis, true, false)
                 end
             end
@@ -198,6 +200,21 @@ function Determine_Start_Era(message)
             end  
       
         elseif techLevel == 3 then
+
+            currentSupport = GlobalValue.Get("TechnoApprovalRating")
+            GlobalValue.Set("TechnoApprovalRating", currentSupport + 25)
+
+            currentSupport = GlobalValue.Get("TradeFedApprovalRating")
+            GlobalValue.Set("TradeFedApprovalRating", currentSupport + 25)
+
+            currentSupport = GlobalValue.Get("CommerceApprovalRating")
+            GlobalValue.Set("CommerceApprovalRating", currentSupport + 25)
+
+            currentSupport = GlobalValue.Get("IGBCApprovalRating")
+            GlobalValue.Set("IGBCApprovalRating", currentSupport + 25)
+
+            currentSupport = GlobalValue.Get("RepublicApprovalRating")
+            GlobalValue.Set("RepublicApprovalRating", currentSupport + 5)
           
             -- Republic
 			if spawn_location_table["CORUSCANT"] then
@@ -317,12 +334,27 @@ function Determine_Start_Era(message)
                     start_planet = StoryUtil.FindFriendlyPlanet(p_cis)
                 end
                 if start_planet then
-                    spawn_list = { "Gunray_Team", "Durd_Team", "Tuuk_Procurer" }
+                    spawn_list = { "Gunray_Team" }
                     SpawnList(spawn_list, start_planet, p_cis, true, false)
                 end
             end  
  
         elseif techLevel >= 4 then
+
+            currentSupport = GlobalValue.Get("TechnoApprovalRating")
+            GlobalValue.Set("TechnoApprovalRating", currentSupport + 35)
+
+            currentSupport = GlobalValue.Get("TradeFedApprovalRating")
+            GlobalValue.Set("TradeFedApprovalRating", currentSupport + 35)
+
+            currentSupport = GlobalValue.Get("CommerceApprovalRating")
+            GlobalValue.Set("CommerceApprovalRating", currentSupport + 35)
+
+            currentSupport = GlobalValue.Get("IGBCApprovalRating")
+            GlobalValue.Set("IGBCApprovalRating", currentSupport + 35)
+
+            currentSupport = GlobalValue.Get("RepublicApprovalRating")
+            GlobalValue.Set("RepublicApprovalRating", currentSupport + 10)
            
              -- Republic
             if spawn_location_table["CORUSCANT"] then
@@ -442,7 +474,7 @@ function Determine_Start_Era(message)
                     start_planet = StoryUtil.FindFriendlyPlanet(p_cis)
                 end
                 if start_planet then
-                    spawn_list = { "Gunray_Team", "Durd_Team", "Tuuk_Procurer" }
+                    spawn_list = { "Gunray_Team" }
                     SpawnList(spawn_list, start_planet, p_cis, true, false)
                 end
             end  
