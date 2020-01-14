@@ -50,12 +50,12 @@ end
 
 function ShipyardMission_Observer_CIS()
 
-	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Upgrade_Space_Station_CIS.xml")
-	cis = Find_Player("Rebel")
-
 	while not Find_First_Object("Dummy_Intervention_Shipyard") do
 		Sleep(1)
 	end	
+
+	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Upgrade_Space_Station_CIS.xml")
+	cis = Find_Player("Rebel")
 
 	object = Find_First_Object("Dummy_Intervention_Shipyard")
 	object.Despawn()
@@ -67,11 +67,7 @@ function ShipyardMission_Observer_CIS()
 	currentSupport = GlobalValue.Get("CommerceApprovalRating")
 	GlobalValue.Set("CommerceApprovalRating", currentSupport + 5)
 
-	StoryUtil.ShowScreenText("BOARDING_UNAVAILABLE", 5)
-
-
 	plot.Suspend()
-
 	plot.Reset()	
 
 	if CISBuildShipyardsObserverThread then

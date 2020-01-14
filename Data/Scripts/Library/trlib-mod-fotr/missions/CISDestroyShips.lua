@@ -51,9 +51,6 @@ function DestroyShips_Observer_CIS()
 
 	object = Find_First_Object("Dummy_Intervention_Hunt")
 	object.Despawn()
-
-
-	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Destroy_Ships_CIS.xml")
 	
 	cis = Find_Player("Rebel")
 	reward_location = StoryUtil.FindFriendlyPlanet(Find_Player("Rebel"))
@@ -65,7 +62,7 @@ function DestroyShips_Observer_CIS()
 
 	plot.Suspend()
 
-	plot.Reset()	
+	plot.Reset()
 
 	if CISDestroyShipsObserverThread then
 		Thread.Kill(CISDestroyShipsObserverThread)
