@@ -105,7 +105,7 @@ PlanetLibrary = {
   ["EBAQ"] = {Structures = {}},
   ["EIATTU"] = {Structures = {}},
   ["ELROOD"] = {Structures = {}},
-  ["EMBERLINE"] = {Structures = {}},
+  ["EMBERLENE"] = {Structures = {}},
   ["EMMER"] = {Structures = {}},
   ["EMPRESS"] = {Structures = {}},
   ["ENARC"] = {Structures = {}},

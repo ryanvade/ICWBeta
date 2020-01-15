@@ -63,7 +63,7 @@ function DestroyShips_Observer_CIS()
 	plot.Suspend()
 
 	plot.Reset()
-
+	
 	if CISDestroyShipsObserverThread then
 		Thread.Kill(CISDestroyShipsObserverThread)
 		CISDestroyShipsObserverThread = nil

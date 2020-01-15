@@ -35,7 +35,105 @@ GameObjectLibrary = {
         "Display_Nine",
         "Display_Ten"
     },
-    OrbitalStructures = {},
+    OrbitalStructures={
+        ["EMPRESS_STATION"]={
+            Text="TEXT_DISPLAY_EMPRESS",
+            Equation = "Planet_Has_Empress"
+        },
+        ["EMPIRE_GOLAN_THREE_STRATEGIC"]={
+            Text="TEXT_DISPLAY_GOLAN_THREE_STATION",
+            Equation = "Planet_Has_Golan_Three"
+        },
+        ["REBEL_GOLAN_ONE"]={
+            Text="TEXT_DISPLAY_GOLAN_ONE_STATION",
+            Equation = "Planet_Has_Golan_One"
+        },
+        ["OTO"]={
+            Text="TEXT_DISPLAY_OTO",
+            Equation = "Planet_Has_Oto"
+        },
+        ["BRASK"]={
+            Text="TEXT_DISPLAY_BRASK",
+            Equation = "Planet_Has_Brask"
+        },
+        ["VISVIA"]={
+            Text="TEXT_DISPLAY_VISVIA",
+            Equation = "Planet_Has_Visvia"
+        },
+        ["REBEL_GOLAN_THREE_STRATEGIC"]={
+            Text="TEXT_DISPLAY_GOLAN_THREE_STATION",
+            Equation = "Planet_Has_Golan_Three"
+        },
+        ["EMPIRE_GOLAN_TWO"]={
+            Text="TEXT_DISPLAY_GOLAN_TWO_STATION",
+            Equation = "Planet_Has_Golan_Two"
+        },
+        ["GENERIC_TRADESTATION"]={
+            Text="TEXT_DISPLAY_TRADE",
+            Equation = "Planet_Has_Trade_Station",
+            Modifier = PlanetModifiers.trade_port_credit_boost
+        },
+        ["REBEL_GOLAN_TWO_STRATEGIC"]={
+            Text="TEXT_DISPLAY_GOLAN_TWO_STATION",
+            Equation = "Planet_Has_Golan_Two"
+        },
+        ["PIRATE_BASE"]={
+            Text="TEXT_DISPLAY_TAVIRA",
+            Equation = "Planet_Has_Pirate_Base"
+        },
+        ["REBEL_GOLAN_TWO"]={
+            Text="TEXT_DISPLAY_GOLAN_TWO_STATION",
+            Equation = "Planet_Has_Golan_Two"
+        },
+        ["EMPIRE_GOLAN_THREE"]={
+            Text="TEXT_DISPLAY_GOLAN_THREE_STATION",
+            Equation = "Planet_Has_Golan_Three"
+        },
+        ["REBEL_GOLAN_THREE"]={
+            Text="TEXT_DISPLAY_GOLAN_THREE_STATION",
+            Equation = "Planet_Has_Golan_Three"
+        },
+        ["VALIDUSIA"]={
+            Text="TEXT_DISPLAY_VALIDUSIA",
+            Equation = "Planet_Has_Validusia"
+        },
+        ["EMPIRE_GOLAN_ONE"]={
+            Text="TEXT_DISPLAY_GOLAN_ONE_STATION",
+            Equation = "Planet_Has_Golan_One"
+        },
+        ["EMPIRE_GOLAN_TWO_STRATEGIC"]={
+            Text="TEXT_DISPLAY_GOLAN_TWO_STATION",
+            Equation = "Planet_Has_Golan_Two"
+        },
+        ["RANCOR_BASE"]={
+            Text="TEXT_DISPLAY_RANCOR_BASE",
+            Equation = "Planet_Has_Rancor_Base"
+        },
+        ["BLACK_15"]={
+            Text="TEXT_DISPLAY_BLACK15",
+            Equation = "Planet_Has_Black_Fifteen"
+        },
+        ["SLAYN_KORPIL"]={
+            Text="TEXT_DISPLAY_SLAYN_KORPIL",
+            Equation = "Planet_Has_Slayn_Korpil"
+        },
+    --  ["CREW_RESOURCE_DUMMY"]={
+    --      Text="TEXT_DISPLAY_SLAYN_KORPIL"
+    --  },
+    --    ["PLACEHOLDER_CATEGORY_DUMMY"]={
+    --        Text="TEXT_DISPLAY_PLACEHOLDER_CATEGORY_DUMMY"
+    --    },
+    --    ["NON_CAPITAL_CATEGORY_DUMMY"]={
+    --        Text="TEXT_DISPLAY_NON_CAPITAL_CATEGORY_DUMMY"
+    --    },
+    --    ["CAPITAL_CATEGORY_DUMMY"]={
+    --        Text="TEXT_DISPLAY_CAPITAL_CATEGORY_DUMMY"
+    --    },
+    --    ["STRUCTURE_CATEGORY_DUMMY"]={
+    --        Text="TEXT_DISPLAY_STRUCTURE_CATEGORY_DUMMY"
+    --    }
+
+    },
     Units = {
         ["CC7700"] = {
             Scripts = {

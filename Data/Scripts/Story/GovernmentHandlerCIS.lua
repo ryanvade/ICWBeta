@@ -58,21 +58,18 @@ function Support_IGBC(message)
 end
 
 function Absorb_IGBC()
-    for _, planet in pairs(FindPlanet.Get_All_Planets()) do
-        if planet.Get_Owner() == Find_Player("Pentastar") then      
-	    	ChangePlanetOwnerAndReplace(planet, p_cis)
-		end
-    end
-
-    local allUnitsPerOwner = {}
-    local owner = Find_Player("Pentastar")
-    allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
-    local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
-    for i,unit in pairs(allUnitsOfCurrentOwner) do
-        unit.Despawn()
-    end    
 
     Story_Event("IGBC_ABSORBED")
+
+    -- local allUnitsPerOwner = {}
+    -- local owner = Find_Player("Pentastar")
+    -- allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
+    -- local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
+    -- for i,unit in pairs(allUnitsOfCurrentOwner) do
+    --     unit.Despawn()
+    -- end    
+
+    
 
     start_planet = StoryUtil.FindFriendlyPlanet(p_cis)
     if start_planet then
@@ -81,6 +78,14 @@ function Absorb_IGBC()
     end
     if p_cis.Is_Human() then
         Story_Event("IGBC_JOINS_SPEECH")
+    end
+
+    Sleep(10)
+
+    for _, planet in pairs(FindPlanet.Get_All_Planets()) do
+        if planet.Get_Owner() == Find_Player("Pentastar") then      
+	    	ChangePlanetOwnerAndReplace(planet, p_cis)
+		end
     end
 end
 
@@ -99,23 +104,29 @@ function Support_Techno(message)
 end
 
 function Absorb_Techno()   
+
+    Story_Event("TECHNO_ABSORBED")
+
+
+    -- local allUnitsPerOwner = {}
+    -- local owner = Find_Player("Hutts")
+    -- allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
+    -- local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
+    -- for i,unit in pairs(allUnitsOfCurrentOwner) do
+    --     unit.Despawn()
+    -- end   
+   
+    
+    if p_cis.Is_Human() then
+        Story_Event("TECHNO_JOINS_SPEECH")
+    end
+
+    Sleep(10)
+
     for _, planet in pairs(FindPlanet.Get_All_Planets()) do
         if planet.Get_Owner() == Find_Player("Hutts") then
     	    	ChangePlanetOwnerAndReplace(planet, p_cis)
 		end
-    end
-
-    local allUnitsPerOwner = {}
-    local owner = Find_Player("Hutts")
-    allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
-    local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
-    for i,unit in pairs(allUnitsOfCurrentOwner) do
-        unit.Despawn()
-    end   
-
-    Story_Event("TECHNO_ABSORBED")
-    if p_cis.Is_Human() then
-        Story_Event("TECHNO_JOINS_SPEECH")
     end
 end
 
@@ -133,24 +144,28 @@ function Support_Commerce(message)
     end
 end
 
-function Absorb_Commerce()   
+function Absorb_Commerce() 
+    
+    Story_Event("COMMERCE_ABSORBED")
+    -- local allUnitsPerOwner = {}
+    -- local owner = Find_Player("Teradoc")
+    -- allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
+    -- local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
+    -- for i,unit in pairs(allUnitsOfCurrentOwner) do
+    --     unit.Despawn()
+    -- end  
+
+    
+    if p_cis.Is_Human() then
+        Story_Event("COMMERCE_JOINS_SPEECH")
+    end
+
+    Sleep(10)
+        
     for _, planet in pairs(FindPlanet.Get_All_Planets()) do
         if planet.Get_Owner() == Find_Player("Teradoc") then
             ChangePlanetOwnerAndReplace(planet, p_cis)
 		end
-    end
-
-    local allUnitsPerOwner = {}
-    local owner = Find_Player("Teradoc")
-    allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
-    local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
-    for i,unit in pairs(allUnitsOfCurrentOwner) do
-        unit.Despawn()
-    end  
-
-    Story_Event("COMMERCE_ABSORBED")
-    if p_cis.Is_Human() then
-        Story_Event("COMMERCE_JOINS_SPEECH")
     end
 end
 
@@ -169,21 +184,16 @@ function Support_TradeFed(message)
 end
 
 function Absorb_TradeFed()   
-    for _, planet in pairs(FindPlanet.Get_All_Planets()) do
-        if planet.Get_Owner() == Find_Player("Pirates") then
-            ChangePlanetOwnerAndReplace(planet, p_cis)
-        end
-    end
-
-    local allUnitsPerOwner = {}
-    local owner = Find_Player("Pirates")
-    allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
-    local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
-    for i,unit in pairs(allUnitsOfCurrentOwner) do
-        unit.Despawn()
-    end   
-
     Story_Event("TRADEFED_ABSORBED")
+
+
+    -- local allUnitsPerOwner = {}
+    -- local owner = Find_Player("Pirates")
+    -- allUnitsPerOwner[owner] = Find_All_Objects_Of_Type(owner)
+    -- local allUnitsOfCurrentOwner = allUnitsPerOwner[owner]
+    -- for i,unit in pairs(allUnitsOfCurrentOwner) do
+    --     unit.Despawn()
+    -- end   
 
     start_planet = StoryUtil.FindFriendlyPlanet(p_cis)
     if start_planet then
@@ -192,5 +202,12 @@ function Absorb_TradeFed()
     end
     if p_cis.Is_Human() then
         Story_Event("TRADEFED_JOINS_SPEECH")
+    end
+
+    Sleep(10)
+    for _, planet in pairs(FindPlanet.Get_All_Planets()) do
+        if planet.Get_Owner() == Find_Player("Pirates") then
+            ChangePlanetOwnerAndReplace(planet, p_cis)
+        end
     end
 end

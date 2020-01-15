@@ -45,6 +45,15 @@
 		<Reward_Param10>0</Reward_Param10>
 	</Event>
 	
+	<Event Name="Change_AI_IGBC">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Pentastar</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Lock_Support_IGBC</Prereq>
+	</Event>
+	
+	
 	<!--******	Techno Union Events *****-->
 
 	<Event Name="Buy_Support_Techno">
@@ -64,6 +73,15 @@
 		<Reward_Param1>Stimulus_TECHNO</Reward_Param1>
 	</Event>
 	
+	<Event Name="Change_AI_Techno">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Hutts</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Lock_Support_Techno</Prereq>
+	</Event>
+	
+	
 	<!--******	Commerce Guild Events *****-->
 	
 	<Event Name="Buy_Support_Commerce">
@@ -81,6 +99,15 @@
 		<Event_Param2>COMMERCE_ABSORBED</Event_Param2>
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Stimulus_Commerce</Reward_Param1>
+	</Event>
+	
+		
+	<Event Name="Change_AI_Commerce">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Teradoc</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Lock_Support_Commerce</Prereq>
 	</Event>
 	
 	<Event Name="Unlock_Recusant_Dreadbought">
@@ -115,6 +142,15 @@
 		<Reward_Type>LOCK_UNIT</Reward_Type>
 		<Reward_Param1>Stimulus_TradeFed</Reward_Param1>
 	</Event>
+	
+	<Event Name="Change_AI_TradeFed">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Pirates</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Lock_Support_TradeFed</Prereq>
+	</Event>
+	
 	
 	<!--******	General Events *****-->
 	
