@@ -27,6 +27,8 @@ function Definitions()
     DebugMessage("%s -- In Definitions", tostring(Script))
 
     StoryModeEvents = {
+        Start_AI = Find_Faction,
+        Ratchet_Up = Support_AI,
         Buy_Support_IGBC = Support_IGBC,
         Buy_Support_Techno = Support_Techno,
         Buy_Support_TradeFed = Support_TradeFed,
@@ -34,7 +36,69 @@ function Definitions()
         Exit_Function = Safeguard
     }
 
-    p_cis = Find_Player("Rebel")
+   p_cis = Find_Player("Rebel")
+
+end
+
+function Find_Faction(message)
+    if message == OnEnter then
+
+        local p_republic = Find_Player("Empire")
+
+        if p_republic.Is_Human() then
+            Story_Event("CIS_IS_AI")
+        end
+
+        
+
+    end
+end
+
+function Support_AI(message)
+    if message == OnEnter then
+
+
+        if p_cis.Get_Difficulty() == "Easy" then
+            increaseAmount = 15
+        elseif p_cis.Get_Difficulty() == "Hard" then
+            increaseAmount = 35
+        else
+            increaseAmount = 25
+        end
+
+        currentSupport = GlobalValue.Get("IGBCApprovalRating")
+        GlobalValue.Set("IGBCApprovalRating", currentSupport + increaseAmount)
+
+        currentSupport = GlobalValue.Get("IGBCApprovalRating")
+        if currentSupport > 99 then
+            Absorb_IGBC()
+        end  
+        
+        currentSupport = GlobalValue.Get("TechnoApprovalRating")
+        GlobalValue.Set("TechnoApprovalRating", currentSupport + increaseAmount)
+
+        currentSupport = GlobalValue.Get("TechnoApprovalRating")
+        if currentSupport > 99 then
+            Absorb_Techno()
+        end 
+        
+        currentSupport = GlobalValue.Get("CommerceApprovalRating")
+        GlobalValue.Set("CommerceApprovalRating", currentSupport + increaseAmount)
+
+        currentSupport = GlobalValue.Get("CommerceApprovalRating")
+        if currentSupport > 99 then
+            Absorb_Commerce()
+        end    
+
+        currentSupport = GlobalValue.Get("TradeFedApprovalRating")
+        GlobalValue.Set("TradeFedApprovalRating", currentSupport + increaseAmount)
+
+        currentSupport = GlobalValue.Get("TradeFedApprovalRating")
+        if currentSupport > 99 then
+            Absorb_TradeFed()
+        end    
+
+    end
 end
 
 function Safeguard(message)

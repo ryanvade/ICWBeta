@@ -152,6 +152,20 @@
 	</Event>
 	
 	
+	<!--******	For the AI *****-->
+	
+	<Event Name="Start_AI">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>CIS_IS_AI</Event_Param2>
+	</Event>
+	
+	<Event Name="Ratchet_Up">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>600</Event_Param1>
+		<Prereq>Start_AI</Prereq>
+	</Event>
+	
+	
 	<!--******	General Events *****-->
 	
 	<Event Name="Exit_Function">
