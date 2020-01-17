@@ -34,7 +34,11 @@ function Definitions()
         Rebels_Enter_Tech_04 = Increase_Support,
         Buy_LoveMeRepublic = Increase_Support,
         Support_Mothma = Mothma_Support,
-        Exit_Function = Safeguard
+        Exit_Function = Safeguard,
+        Support_Mothma = Mothma_Support,
+        Republic_Enter_Tech_03 = Absorb_Sectors,
+        Republic_Enter_Tech_04 = Absorb_Sectors,
+        Republic_Enter_Tech_05 = Absorb_Sectors
     }
 end
 
@@ -42,6 +46,20 @@ function Increase_Support(message)
     if message == OnEnter then
         currentSupport = GlobalValue.Get("RepublicApprovalRating")
         GlobalValue.Set("RepublicApprovalRating", currentSupport + 5)
+    end
+end
+
+function Absorb_Sectors()
+
+    republic_player = Find_Player("Empire")
+    if republic_player.Is_Human() then
+        Story_Event("SECTOR_FORCE_ABSORBED_SPEECH")
+    end
+
+    for _, planet in pairs(FindPlanet.Get_All_Planets()) do
+        if planet.Get_Owner() == Find_Player("Corporate_Sector") then      
+	    	ChangePlanetOwnerAndReplace(planet, republic_player)
+		end
     end
 end
 

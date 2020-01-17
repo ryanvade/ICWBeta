@@ -50,22 +50,13 @@ end
 
 function ShipyardMission_Observer_Rep()
 
-	while not Check_Story_Flag(Find_Player("Empire"), "UPGRADE_SPACE_STATION_NOTIFICATION_00", nil, true) do
+	while not Find_First_Object("Dummy_Intervention_Shipyard") do
 		Sleep(1)
 	end	
 	
 	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Upgrade_Space_Station_Rep.xml")
 
 	reward_location = StoryUtil.FindFriendlyPlanet(Find_Player("Empire"))
-
-	event = plot.Get_Event("Upgrade_Space_Station_05")
-	event.Set_Event_Parameter(0, target)
-	event.Set_Reward_Parameter(0, reward_unit)
-	event.Set_Reward_Parameter(1, reward_location)
-	event.Set_Reward_Parameter(2, reward_count)
-	event.Set_Dialog(dialog)
-	event.Clear_Dialog_Text()
-	event.Add_Dialog_Text("TEXT_INTERVENTION_REWARD", reward_unit, reward_count)
 
 	republic = Find_Player("Empire")
 	spawn_list_reward = { "Arquitens" , "Arquitens" }

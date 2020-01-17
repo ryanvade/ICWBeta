@@ -49,6 +49,8 @@ function Story_Mode_Service()
             government_display_event.Add_Dialog_Text("STAT_SEPARATOR")
             government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_REPUBLIC_FUNCTION")
             government_display_event.Add_Dialog_Text("TEXT_TOOLTIP_NONE")  
+            government_display_event.Add_Dialog_Text("STAT_SEPARATOR")
+            government_display_event.Add_Dialog_Text("TEXT_GOVERNMENT_REPUBLIC_SECTORFORCES")
       
         elseif Find_Player("Rebel").Is_Human() then
             government_display_event.Add_Dialog_Text("STAT_SEPARATOR")

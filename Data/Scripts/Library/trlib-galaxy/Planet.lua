@@ -263,6 +263,12 @@ function Planet:update_influence_information()
             self.gameObject.Attach_Particle_Effect("Display_Influence_" .. tostring(self.ownerInfluence))
         end
 
+        if self:get_owner() == Find_Player("Empire") then
+            self.gameObject.Attach_Particle_Effect("Republic_Allies")
+        elseif self:get_owner() == Find_Player("Corporate_Sector") then
+            self.gameObject.Attach_Particle_Effect("Republic_Allies")
+        end
+
         self:apply_loyalty_modifiers()
     end
 end

@@ -1676,7 +1676,7 @@ GameObjectLibrary = {
                         Initial = 2
                     }					
                 },
-                ["TRIFIGHTER_SQUADRON"] = {
+                ["SCARAB_SQUADRON"] = {
                     ["PIRATES"] = {
                         Reserve = 0,
                         Initial = 2
@@ -1722,7 +1722,7 @@ GameObjectLibrary = {
                         Initial = 2
                     }					
                 },
-                ["TRIFIGHTER_SQUADRON"] = {
+                ["SCARAB_SQUADRON"] = {
                     ["PIRATES"] = {
                         Reserve = 0,
                         Initial = 2
@@ -1768,7 +1768,7 @@ GameObjectLibrary = {
                         Initial = 2
                     }					
                 },
-                ["TRIFIGHTER_SQUADRON"] = {
+                ["SCARAB_SQUADRON"] = {
                     ["PIRATES"] = {
                         Reserve = 0,
                         Initial = 2

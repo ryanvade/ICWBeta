@@ -61,9 +61,9 @@ function Support_AI(message)
         if p_cis.Get_Difficulty() == "Easy" then
             increaseAmount = 15
         elseif p_cis.Get_Difficulty() == "Hard" then
-            increaseAmount = 35
+            increaseAmount = 45
         else
-            increaseAmount = 25
+            increaseAmount = 35
         end
 
         currentSupport = GlobalValue.Get("IGBCApprovalRating")
