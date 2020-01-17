@@ -53,6 +53,9 @@ function ShipyardMission_Observer_Rep()
 	while not Find_First_Object("Dummy_Intervention_Shipyard") do
 		Sleep(1)
 	end	
+
+	object = Find_First_Object("Dummy_Intervention_Shipyard")
+	object.Despawn()
 	
 	plot = Get_Story_Plot("Conquests\\MissionFiles\\Intervention_Upgrade_Space_Station_Rep.xml")
 
